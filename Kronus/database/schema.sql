@@ -1,7 +1,11 @@
 -- ============================================================================
--- SINISTER STATE: COMPLETE SUPABASE SCHEMA
--- Run in Supabase SQL Editor to initialize all tables.
+-- SINISTER STATE: COMPLETE SUPABASE SCHEMA + FUNCTIONS + SEED DATA
+-- Paste into Supabase SQL Editor and run ONCE.
+-- https://supabase.com/dashboard/project/yqfzaugbrwoluhkddcsh/sql/new
 -- ============================================================================
+
+-- 0. Enable required extensions
+CREATE EXTENSION IF NOT EXISTS pgcrypto WITH SCHEMA public;
 
 -- 1. Discord ↔ FiveM Identity Linking
 CREATE TABLE IF NOT EXISTS public.discord_players (
@@ -254,32 +258,82 @@ CREATE TABLE IF NOT EXISTS public.tebex_purchases (
 );
 
 -- ============================================================================
--- ENABLE ROW LEVEL SECURITY
+-- ENABLE ROW LEVEL SECURITY + POLICIES
+-- service_role bypasses RLS automatically. These policies block anon/authenticated.
 -- ============================================================================
-ALTER TABLE public.discord_players ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.characters ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.player_economy ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.transactions ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.businesses ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.business_employees ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.criminal_records ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.warrants ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.mdt_reports ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.strikes ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.bans ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.kronus_logs ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.kronus_outcomes ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.kronus_policies ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.kronus_prompts ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.kronus_metrics ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.bot_config ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.rcon_commands ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.discord_channels ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.chronicle_entries ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.weazel_metrics ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.tebex_purchases ENABLE ROW LEVEL SECURITY;
+DO $$
+DECLARE
+    tbl TEXT;
+BEGIN
+    FOR tbl IN
+        SELECT tablename FROM pg_tables WHERE schemaname = 'public'
+        AND tablename IN (
+            'discord_players','characters','player_economy','transactions',
+            'businesses','business_employees','criminal_records','warrants',
+            'mdt_reports','strikes','bans','kronus_logs','kronus_outcomes',
+            'kronus_policies','kronus_prompts','kronus_metrics','bot_config',
+            'rcon_commands','discord_channels','chronicle_entries',
+            'weazel_metrics','tebex_purchases'
+        )
+    LOOP
+        EXECUTE format('ALTER TABLE public.%I ENABLE ROW LEVEL SECURITY', tbl);
+        EXECUTE format('DROP POLICY IF EXISTS service_all ON public.%I', tbl);
+        EXECUTE format(
+            'CREATE POLICY service_all ON public.%I FOR ALL TO service_role USING (true) WITH CHECK (true)',
+            tbl
+        );
+    END LOOP;
+END $$;
 
 -- ============================================================================
--- SERVICE ROLE BYPASSES RLS (standard Supabase behavior)
--- Kronus uses the service_role key, so all access is unrestricted.
+-- DATABASE FUNCTIONS
 -- ============================================================================
+
+CREATE OR REPLACE FUNCTION add_funds(p_citizenid TEXT, p_amount BIGINT, p_account TEXT DEFAULT 'bank')
+RETURNS void AS $$
+BEGIN
+    IF p_account = 'bank' THEN
+        UPDATE player_economy SET bank = bank + p_amount, updated_at = now()
+        WHERE citizenid = p_citizenid;
+    ELSIF p_account = 'cash' THEN
+        UPDATE player_economy SET cash = cash + p_amount, updated_at = now()
+        WHERE citizenid = p_citizenid;
+    ELSIF p_account = 'crypto' THEN
+        UPDATE player_economy SET crypto = crypto + p_amount, updated_at = now()
+        WHERE citizenid = p_citizenid;
+    ELSIF p_account = 'dirty_money' THEN
+        UPDATE player_economy SET dirty_money = dirty_money + p_amount, updated_at = now()
+        WHERE citizenid = p_citizenid;
+    END IF;
+
+    IF NOT FOUND THEN
+        INSERT INTO player_economy (citizenid, bank, cash, crypto, dirty_money)
+        VALUES (p_citizenid,
+            CASE WHEN p_account = 'bank' THEN p_amount ELSE 0 END,
+            CASE WHEN p_account = 'cash' THEN p_amount ELSE 0 END,
+            CASE WHEN p_account = 'crypto' THEN p_amount ELSE 0 END,
+            CASE WHEN p_account = 'dirty_money' THEN p_amount ELSE 0 END
+        );
+    END IF;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+-- ============================================================================
+-- SEED DATA
+-- ============================================================================
+INSERT INTO public.bot_config (key, value) VALUES
+    ('ban_strike_threshold', '3'),
+    ('inflation_wealth_threshold_pct', '25'),
+    ('delinquency_days', '14'),
+    ('market_ticker_interval_minutes', '30'),
+    ('payroll_interval_hours', '1'),
+    ('max_jobs_per_player', '3'),
+    ('server_name', 'Sinister State')
+ON CONFLICT (key) DO NOTHING;
+
+INSERT INTO public.kronus_prompts (purpose, prompt_text, version) VALUES
+    ('judge_ruling', 'You are the SYNIX STATE AI judge. Review evidence and render verdicts.', 1),
+    ('event_narration', 'You are a news broadcaster for Sinister State.', 1),
+    ('economy_audit', 'You are the SYNIX STATE economy auditor.', 1),
+    ('policy_review', 'You are the SYNIX STATE policy reviewer.', 1)
+ON CONFLICT (purpose) DO NOTHING;
