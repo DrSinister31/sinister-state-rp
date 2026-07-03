@@ -2,7 +2,7 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "cd Kronus/kronus_economy && pip install -r requirements.txt -r ../shared/requirements.txt && python main.py"
+startCommand = "PYTHONPATH=Kronus python Kronus/kronus_economy/main.py"
 
 [service]
 name = "kronus-economy"

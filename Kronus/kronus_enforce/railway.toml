@@ -2,7 +2,7 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "cd Kronus/kronus_enforce && pip install -r requirements.txt -r ../shared/requirements.txt && python main.py"
+startCommand = "PYTHONPATH=Kronus python Kronus/kronus_enforce/main.py"
 
 [service]
 name = "kronus-enforce"
