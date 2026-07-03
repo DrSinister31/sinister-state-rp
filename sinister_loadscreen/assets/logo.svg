@@ -63,7 +63,7 @@
   <!-- Cities -->
   <text x="400" y="336" text-anchor="middle"
         font-family="Georgia, serif" font-size="10" letter-spacing="5"
-        fill="rgba(255,255,255,0.35)">HOUSTON  &bull;  FORT WORTH  &bull;  KILLEEN</text>
+        fill="rgba(255,255,255,0.35)">HOUSTON  |  FORT WORTH  |  KILLEEN</text>
 
   <!-- Bottom red accent -->
   <rect x="0" y="402" width="800" height="18" fill="#BF0A30" opacity="0.4"/>
