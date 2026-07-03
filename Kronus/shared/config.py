@@ -1,5 +1,16 @@
 import os
+from pathlib import Path
 from dataclasses import dataclass, field
+
+try:
+    from dotenv import load_dotenv
+    env_path = Path(__file__).resolve().parent.parent / ".env"
+    if env_path.exists():
+        load_dotenv(env_path)
+    else:
+        load_dotenv()
+except ImportError:
+    pass
 
 
 @dataclass
@@ -37,21 +48,21 @@ class Config:
             supabase_url=get("SUPABASE_URL"),
             supabase_key=get("SUPABASE_SERVICE_KEY"),
             discord_token=get("DISCORD_TOKEN"),
-            discord_guild_id=int(get("DISCORD_GUILD_ID", "0")),
+            discord_guild_id=int(get("DISCORD_GUILD_ID") or "0"),
             deepseek_api_key=get("DEEPSEEK_API_KEY"),
-            owner_discord_id=int(get("OWNER_ID", "0")),
-            admin_discord_ids=[int(x.strip()) for x in get("ADMIN_IDS", "").split(",") if x.strip()],
+            owner_discord_id=int(get("OWNER_ID") or "0"),
+            admin_discord_ids=[int(x.strip()) for x in (get("ADMIN_IDS") or "").split(",") if x.strip()],
             rcon_host=get("RCON_HOST"),
-            rcon_port=int(get("RCON_PORT", "30120")),
+            rcon_port=int(get("RCON_PORT") or "30120"),
             rcon_password=get("RCON_PASSWORD"),
-            redis_url=get("REDIS_URL", "redis://localhost:6379"),
-            log_channel_id=int(get("LOG_CHANNEL_ID", "0")),
-            chronicles_channel_id=int(get("CHRONICLES_CHANNEL_ID", "0")),
-            support_channel_id=int(get("SUPPORT_CHANNEL_ID", "0")),
-            business_owner_role_id=int(get("BUSINESS_OWNER_ROLE_ID", "0")),
-            business_employee_role_id=int(get("BUSINESS_EMPLOYEE_ROLE_ID", "0")),
-            staff_role_id=int(get("STAFF_ROLE_ID", "0")),
-            tebex_secret=get("TEBEX_SECRET", ""),
+            redis_url=get("REDIS_URL") or "redis://localhost:6379",
+            log_channel_id=int(get("LOG_CHANNEL_ID") or "0"),
+            chronicles_channel_id=int(get("CHRONICLES_CHANNEL_ID") or "0"),
+            support_channel_id=int(get("SUPPORT_CHANNEL_ID") or "0"),
+            business_owner_role_id=int(get("BUSINESS_OWNER_ROLE_ID") or "0"),
+            business_employee_role_id=int(get("BUSINESS_EMPLOYEE_ROLE_ID") or "0"),
+            staff_role_id=int(get("STAFF_ROLE_ID") or "0"),
+            tebex_secret=get("TEBEX_SECRET") or "",
         )
         if missing:
             raise EnvironmentError(f"Missing required environment variables: {', '.join(missing)}")
