@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
   <defs>
     <filter id="glow">
       <feGaussianBlur stdDeviation="3" result="blur"/>
@@ -8,63 +8,66 @@
       <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <linearGradient id="vignette" x1="0.5" y1="0.5" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.6"/>
+    </linearGradient>
   </defs>
 
-  <!-- Base black -->
-  <rect width="800" height="420" fill="#0d0c0a"/>
+  <!-- Texas flag full-bleed -->
+  <rect width="1000" height="600" fill="#0d0c0a"/>
 
-  <!-- TEXAS FLAG: Blue canton (left 1/3) -->
-  <rect x="0" y="0" width="200" height="420" fill="#002868" opacity="1"/>
+  <!-- Blue canton (1/3 left) -->
+  <rect x="0" y="0" width="333" height="600" fill="#002868" opacity="0.95"/>
 
-  <!-- White upper stripe -->
-  <rect x="200" y="0" width="600" height="210" fill="#FFFFFF" opacity="0.35"/>
+  <!-- White stripe -->
+  <rect x="333" y="0" width="667" height="300" fill="#FFFFFF" opacity="0.40"/>
 
-  <!-- Red lower stripe -->
-  <rect x="200" y="210" width="600" height="210" fill="#BF0A30" opacity="0.40"/>
+  <!-- Red stripe -->
+  <rect x="333" y="300" width="667" height="300" fill="#BF0A30" opacity="0.45"/>
+
+  <!-- Stripe divider -->
+  <rect x="333" y="298" width="667" height="4" fill="#000" opacity="0.25"/>
 
   <!-- Texas lone star -->
-  <polygon points="100,100 118,150 172,152 128,186 143,238 100,204 57,238 72,186 28,152 82,150"
-           fill="#FFFFFF" opacity="0.65" filter="url(#glow)"/>
+  <polygon points="166,150 196,230 278,234 214,285 237,370 166,326 95,370 118,285 54,234 136,230"
+           fill="#FFFFFF" opacity="0.7" filter="url(#glow)"/>
 
-  <!-- Flag stripe dividers -->
-  <rect x="200" y="208" width="600" height="4" fill="#000" opacity="0.3"/>
-  
   <!-- HOUSTON NAVY BAR -->
-  <rect x="0" y="246" width="800" height="42" fill="#001a4d" opacity="0.9"/>
+  <rect x="0" y="390" width="1000" height="50" fill="#001a4d" opacity="0.85"/>
 
   <!-- Houston twin stars -->
-  <polygon points="80,267 84,273 92,273 86,277 88,285 80,280 72,285 74,277 68,273 76,273"
+  <polygon points="100,415 104,421 112,421 106,425 108,433 100,428 92,433 94,425 88,421 96,421"
            fill="#FFFFFF" opacity="0.7"/>
-  <polygon points="720,267 724,273 732,273 726,277 728,285 720,280 712,285 714,277 708,273 716,273"
+  <polygon points="900,415 904,421 912,421 906,425 908,433 900,428 892,433 894,425 888,421 896,421"
            fill="#FFFFFF" opacity="0.7"/>
 
-  <!-- BRAND TEXT -->
-  <text x="500" y="168" text-anchor="middle"
-        font-family="Georgia, serif"
-        font-size="76" font-weight="bold" letter-spacing="18"
+  <!-- Center lone star (smaller) -->
+  <polygon points="500,415 506,427 520,428 510,436 513,450 500,442 487,450 490,436 480,428 494,427"
+           fill="#FFFFFF" opacity="0.6"/>
+
+  <!-- SINISTER STATE text -->
+  <text x="500" y="242" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="90" font-weight="bold" letter-spacing="22"
         fill="#FFFFFF" filter="url(#strongGlow)"
         opacity="0.95">SINISTER</text>
 
-  <rect x="340" y="186" width="320" height="2" fill="#FFFFFF" opacity="0.4" filter="url(#glow)"/>
+  <rect x="330" y="262" width="340" height="2" fill="#FFFFFF" opacity="0.4" filter="url(#glow)"/>
 
-  <text x="500" y="226" text-anchor="middle"
-        font-family="Georgia, serif"
-        font-size="36" font-weight="normal" letter-spacing="24"
-        fill="#FFFFFF" opacity="0.75" filter="url(#glow)">STATE</text>
+  <text x="500" y="306" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="42" font-weight="normal" letter-spacing="28"
+        fill="#FFFFFF" opacity="0.8" filter="url(#glow)">STATE</text>
 
-  <!-- Roleplay text in Houston bar -->
-  <text x="400" y="279" text-anchor="middle"
-        font-family="Georgia, serif" font-size="13" letter-spacing="10"
-        fill="#FFFFFF" opacity="0.8">TEXAS ROLEPLAY</text>
+  <!-- TEXAS ROLEPLAY in Houston bar -->
+  <text x="500" y="426" text-anchor="middle"
+        font-family="Georgia, serif" font-size="16" letter-spacing="12"
+        fill="#FFFFFF" opacity="0.85">TEXAS ROLEPLAY</text>
 
-  <!-- Divider -->
-  <rect x="300" y="306" width="400" height="1" fill="#FFFFFF" opacity="0.15"/>
+  <!-- Bottom red bar -->
+  <rect x="0" y="578" width="1000" height="22" fill="#BF0A30" opacity="0.45"/>
 
-  <!-- Cities -->
-  <text x="400" y="336" text-anchor="middle"
-        font-family="Georgia, serif" font-size="10" letter-spacing="5"
-        fill="rgba(255,255,255,0.35)">HOUSTON  |  FORT WORTH  |  KILLEEN</text>
-
-  <!-- Bottom red accent -->
-  <rect x="0" y="402" width="800" height="18" fill="#BF0A30" opacity="0.4"/>
+  <!-- Vignette overlay -->
+  <rect width="1000" height="600" fill="url(#vignette)" opacity="0.7"/>
 </svg>
