@@ -108,12 +108,12 @@ html, body {
 
 /* ── Logo ── */
 .logo-wrap img {
-    max-width: min(560px, 85vw);
+    max-width: min(620px, 90vw);
     height: auto;
     margin: 0 auto;
     display: block;
-    filter: drop-shadow(0 0 50px rgba(191,87,0,0.25))
-            drop-shadow(0 0 100px rgba(63,33,31,0.45));
+    filter: drop-shadow(0 0 50px rgba(191,87,0,0.20))
+            drop-shadow(0 0 100px rgba(63,33,31,0.35));
 }
 
 /* ── Tagline ── */
