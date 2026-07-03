@@ -108,7 +108,7 @@ html, body {
 
 /* ── Logo ── */
 .logo-wrap img {
-    max-width: min(460px, 80vw);
+    max-width: min(560px, 85vw);
     height: auto;
     margin: 0 auto;
     display: block;

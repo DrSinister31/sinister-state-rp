@@ -13,5 +13,6 @@ files {
     'style.css',
     'script.js',
     'assets/*.png',
+    'assets/*.svg',
     'assets/*.mp3',
 }
