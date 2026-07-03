@@ -5,27 +5,38 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 from datetime import datetime
 import discord
 from discord.ext import commands
-from shared.config import Config
 from shared.supabase_client import get_supabase
 
 
 class Chronicles(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
-        self.config = Config.from_env()
-        self.supabase = get_supabase(self.config)
+        self.supabase = get_supabase()
         self.volume_index = 1
+        self._channel_id = 0
+
+    async def _get_channel_id(self) -> int:
+        if self._channel_id:
+            return self._channel_id
+        r = self.supabase.table("bot_config").select("value").eq("key", "chronicles_channel_id").execute()
+        if r.data:
+            self._channel_id = int(r.data[0]["value"])
+        return self._channel_id
 
     async def publish_event(self, score: int, title: str, description: str,
                             involved_citizenids: list, involved_discord_ids: list):
         if score < 15:
             return
 
-        is_major = score >= 23
-        channel = self.bot.get_channel(self.config.chronicles_channel_id)
+        channel_id = await self._get_channel_id()
+        if not channel_id:
+            return
+
+        channel = self.bot.get_channel(channel_id)
         if not channel:
             return
 
+        is_major = score >= 23
         embed = discord.Embed(
             title=title,
             description=description[:4096],
