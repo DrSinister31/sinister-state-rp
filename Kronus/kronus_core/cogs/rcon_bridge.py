@@ -4,7 +4,6 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
 import asyncio
 from discord.ext import commands
-from gamercon import GameRCON
 from shared.config import Config
 from shared.supabase_client import get_supabase
 
