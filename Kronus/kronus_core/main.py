@@ -95,8 +95,9 @@ async def on_ready():
     staff_role = await _find_or_create_role(guild, "Staff", "staff_role_id", discord.Color.red())
     print(f"  Staff role: {staff_role}")
 
-    await bot.tree.sync()
-    print("[kronus-core] Slash commands synced. Auto-config complete.")
+    await asyncio.sleep(2)
+    await bot.tree.sync(guild=discord.Object(id=config.discord_guild_id))
+    print(f"[kronus-core] Slash commands synced to guild. Auto-config complete.")
 
 
 @bot.event
