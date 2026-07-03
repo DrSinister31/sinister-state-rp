@@ -2,6 +2,7 @@ import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
+import re
 from collections import defaultdict
 from datetime import datetime, timedelta
 import discord
@@ -14,7 +15,8 @@ from cogs.assistant_data import SYSTEM_PROMPT
 
 MAX_HISTORY = 15
 MAX_TOKENS = 800
-RATE_LIMIT_SECONDS = 5
+RATE_LIMIT_SECONDS = 4
+OWNER_ID = 1370770707507708047
 
 
 class AssistantCog(commands.Cog):
@@ -29,7 +31,7 @@ class AssistantCog(commands.Cog):
         self.history: dict[int, list[dict]] = defaultdict(list)
         self.last_call: dict[int, datetime] = {}
         self.daily_calls = 0
-        self.daily_limit = 100
+        self.daily_limit = 200
         self.day = datetime.utcnow().date()
 
     def _reset_daily(self):
@@ -49,7 +51,7 @@ class AssistantCog(commands.Cog):
         return True
 
     def _clean_history(self, channel_id: int):
-        cutoff = datetime.utcnow() - timedelta(hours=1)
+        cutoff = datetime.utcnow() - timedelta(hours=2)
         self.history[channel_id] = [
             h for h in self.history[channel_id]
             if h.get("_time", datetime.min) > cutoff
@@ -71,22 +73,55 @@ class AssistantCog(commands.Cog):
             )
             reply = response.choices[0].message.content or ""
         except Exception as e:
-            reply = f"_Having trouble thinking right now. Try again in a moment._\n||error: {str(e)[:100]}||"
+            reply = f"> _Having trouble thinking right now. Try again in a moment._\n> ||{str(e)[:80]}||"
 
         now = datetime.utcnow()
-        self.history[channel_id].append({
-            "role": "user", "content": f"{username}: {user_msg}",
-            "_time": now
-        })
-        self.history[channel_id].append({
-            "role": "assistant", "content": reply,
-            "_time": now
-        })
+        self.history[channel_id].append({"role": "user", "content": f"{username}: {user_msg}", "_time": now})
+        self.history[channel_id].append({"role": "assistant", "content": reply, "_time": now})
         self.history[channel_id] = self.history[channel_id][-MAX_HISTORY:]
-
         self.daily_calls += 1
         self.last_call[user_id or channel_id] = now
         return reply
+
+    async def _execute_actions(self, reply: str, message: discord.Message) -> str:
+        """Parse [ACTION:...] tags and execute Discord actions. Returns cleaned reply text."""
+        guild = message.guild
+        if not guild:
+            return reply
+
+        for m in re.finditer(r'\[ACTION:(\w+):([^:]+)(?::(.+?))?\]', reply):
+            action_type = m.group(1)
+            target = m.group(2).strip()
+            body = (m.group(3) or "").strip()
+            try:
+                if action_type == "announce":
+                    for ch in guild.text_channels:
+                        if ch.name == "announcements":
+                            await ch.send(f"@everyone\n\n{body}")
+                            print(f"[assistant] Announced: {body[:80]}")
+                            break
+                elif action_type == "send":
+                    for ch in guild.text_channels:
+                        if ch.name == target:
+                            await ch.send(body[:2000])
+                            print(f"[assistant] Sent to #{target}: {body[:80]}")
+                            break
+                elif action_type == "edit":
+                    for ch in guild.text_channels:
+                        if ch.name == target:
+                            await ch.edit(topic=body[:1024])
+                            print(f"[assistant] Edited #{target}")
+                            break
+                elif action_type == "mention":
+                    for member in guild.members:
+                        if member.name == target or member.display_name == target:
+                            await message.channel.send(f"<@{member.id}> {body[:1500]}")
+                            print(f"[assistant] Mentioned @{target}")
+                            break
+            except Exception as e:
+                print(f"[assistant] Action failed [{action_type}:{target}]: {e}")
+
+        return re.sub(r'\[ACTION:.*?\]', '', reply).strip()
 
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
@@ -95,28 +130,30 @@ class AssistantCog(commands.Cog):
         if not message.guild:
             return
 
-        should_respond = False
-        trigger = ""
+        content = message.content
+        mentioned = self.bot.user in message.mentions
+        is_dm = isinstance(message.channel, discord.DMChannel)
+        is_owner = message.author.id == OWNER_ID
 
-        if self.bot.user in message.mentions:
-            should_respond = True
-            trigger = message.content.replace(f"<@{self.bot.user.id}>", "").strip()
-            if not trigger:
-                trigger = "Hello Kronus!"
-
-        if message.channel.name == "general-chat" and self.bot.user.mentioned_in(message):
+        should_respond = mentioned
+        if is_dm:
             should_respond = True
 
         if not should_respond:
             return
 
+        clean = content.replace(f"<@{self.bot.user.id}>", "").strip()
+        if not clean:
+            clean = "Hey Kronus"
+
         user_id = message.author.id
-        if not self._rate_check(user_id):
-            await message.reply("_Give me a moment to process..._", mention_author=False)
+        if not self._rate_check(user_id) and not is_owner:
+            await message.reply("> _One moment, let me catch up..._", mention_author=False)
             return
 
         async with message.channel.typing():
-            reply = self._query(message.channel.id, trigger or message.content, message.author.display_name)
+            reply = self._query(message.channel.id, clean, message.author.display_name)
+            reply = await self._execute_actions(reply, message)
 
         chunks = [reply[i:i+1900] for i in range(0, len(reply), 1900)]
         for i, chunk in enumerate(chunks):
@@ -125,36 +162,33 @@ class AssistantCog(commands.Cog):
             else:
                 await message.channel.send(chunk)
 
-    @app_commands.command(name="ask", description="Ask Kronus anything about FiveM or Sinister State")
-    @app_commands.describe(question="What do you want to know?")
+    @app_commands.command(name="ask", description="Ask Kronus anything")
     async def ask(self, interaction: discord.Interaction, question: str):
         if not self._rate_check(interaction.user.id):
-            await interaction.response.send_message("_One moment, processing another request..._", ephemeral=True)
+            await interaction.response.send_message("> _One moment..._", ephemeral=True)
             return
-
         await interaction.response.defer()
         reply = self._query(interaction.channel_id, question, interaction.user.display_name)
-        await interaction.followup.send(reply)
+        await interaction.followup.send(reply[:2000])
 
-    @app_commands.command(name="chat", description="Start a conversation with Kronus in this channel")
-    async def chat(self, interaction: discord.Interaction):
-        await interaction.response.send_message(
-            f"> Hey {interaction.user.mention}, I'm listening. Ask me anything about FiveM, GTA, Qbox, txAdmin, or Sinister State. "
-            f"I'm also just here to chat.\n\n"
-            f"**Quick commands:**\n"
-            f"`/ask` — one-off question\n"
-            f"`/ping` — check if I'm online\n"
-            f"`@Kronus` — mention me in any message",
-            ephemeral=False
-        )
-
-    @app_commands.command(name="ping", description="Check if Kronus is online")
+    @app_commands.command(name="ping", description="Check Kronus status")
     async def ping(self, interaction: discord.Interaction):
         self._reset_daily()
         await interaction.response.send_message(
-            f"> Online and operational. **#general-chat** is open for conversation.\n"
-            f"> Daily Deepseek calls: {self.daily_calls}/{self.daily_limit}",
+            f"> **Online** | Calls today: {self.daily_calls}/{self.daily_limit} | "
+            f"> Server: Sinister State (Qbox, 102 resources)",
             ephemeral=True
+        )
+
+    @app_commands.command(name="chat", description="Start a conversation with Kronus")
+    async def chat(self, interaction: discord.Interaction):
+        await interaction.response.send_message(
+            f"> I'm listening, {interaction.user.mention}. I can help with:\n"
+            f"> **FiveM/Qbox** — scripting, config, troubleshooting\n"
+            f"> **Server management** — rules, announcements, moderation\n"
+            f"> **GTA mechanics** — natives, game systems, vehicle data\n"
+            f"> **Discord** — channel editing, role management, pinning\n"
+            f"> Or just talk. Use `/ask` for one-off questions."
         )
 
 
