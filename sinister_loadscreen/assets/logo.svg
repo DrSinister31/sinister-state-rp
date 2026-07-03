@@ -1,85 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
   <defs>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="glow">
       <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="strongGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="10" result="blur"/>
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <!-- Texas flag colors -->
-    <!-- Blue: #002868  Red: #BF0A30  White: #FFFFFF -->
-    <!-- Houston flag: Navy blue + white star -->
   </defs>
 
-  <!-- Full-bleed Texas flag backdrop (muted/dark for cinema) -->
-  <rect x="0" y="0" width="800" height="420" fill="#0d0c0a"/>
+  <!-- Dark background -->
+  <rect width="800" height="420" fill="#0d0c0a"/>
 
-  <!-- Left blue bar (Texas flag style) -->
-  <rect x="0" y="0" width="200" height="420" fill="#001a4d" opacity="0.7"/>
+  <!-- ===== TEXAS FLAG (visible, muted for cinema) ===== -->
 
-  <!-- White horizontal stripe -->
-  <rect x="200" y="0" width="600" height="210" fill="#e8e0d5" opacity="0.12"/>
+  <!-- Blue canton (vertical 1/3 left side) -->
+  <rect x="0" y="0" width="200" height="420" fill="#002868" opacity="0.85"/>
 
-  <!-- Red horizontal stripe -->
-  <rect x="200" y="210" width="600" height="210" fill="#7a051c" opacity="0.15"/>
+  <!-- White upper stripe -->
+  <rect x="200" y="0" width="600" height="210" fill="#d4d0ca" opacity="0.18"/>
 
-  <!-- Texas lone star in blue canton -->
-  <polygon points="100,100 118,150 170,152 128,185 142,235 100,200 58,235 72,185 30,152 82,150"
-           fill="#ffffff" opacity="0.3" filter="url(#glow)"/>
+  <!-- Red lower stripe -->
+  <rect x="200" y="210" width="600" height="210" fill="#BF0A30" opacity="0.22"/>
 
-  <!-- Houston lone star (smaller, lower) -->
-  <polygon points="100,280 112,310 144,312 120,334 128,364 100,346 72,364 80,334 56,312 88,310"
-           fill="#ffffff" opacity="0.2" filter="url(#glow)"/>
+  <!-- Texas lone star in the blue canton -->
+  <polygon points="100,100 118,150 172,152 128,186 143,238 100,204 57,238 72,186 28,152 82,150"
+           fill="#FFFFFF" opacity="0.50" filter="url(#glow)"/>
 
-  <!-- ============ BRAND TEXT ============ -->
+  <!-- ===== HOUSTON CITY FLAG REFERENCE ===== -->
+  
+  <!-- Navy horizontal bar across the middle -->
+  <rect x="0" y="248" width="800" height="44" fill="#001a4d" opacity="0.75"/>
 
-  <!-- SINISTER -->
-  <text x="500" y="170" text-anchor="middle"
+  <!-- Twin Houston stars -->
+  <polygon points="80,270 84,276 92,276 86,280 88,288 80,283 72,288 74,280 68,276 76,276"
+           fill="#FFFFFF" opacity="0.55"/>
+  <polygon points="720,270 724,276 732,276 726,280 728,288 720,283 712,288 714,280 708,276 716,276"
+           fill="#FFFFFF" opacity="0.55"/>
+
+  <!-- ===== BRAND TEXT ===== -->
+
+  <text x="500" y="168" text-anchor="middle"
         font-family="Georgia, 'Times New Roman', serif"
-        font-size="78" font-weight="bold" letter-spacing="20"
-        fill="#e8e0d5" filter="url(#strongGlow)"
-        opacity="0.9">SINISTER</text>
+        font-size="76" font-weight="bold" letter-spacing="18"
+        fill="#d4d0ca" filter="url(#strongGlow)"
+        opacity="0.92">SINISTER</text>
 
-  <!-- Accent line -->
-  <rect x="350" y="188" width="300" height="2"
-        fill="#e8e0d5" opacity="0.4" filter="url(#glow)"/>
+  <rect x="340" y="186" width="320" height="2" fill="#d4d0ca" opacity="0.35" filter="url(#glow)"/>
 
-  <!-- STATE -->
-  <text x="500" y="230" text-anchor="middle"
+  <text x="500" y="226" text-anchor="middle"
         font-family="Georgia, 'Times New Roman', serif"
-        font-size="38" font-weight="normal" letter-spacing="26"
-        fill="#e8e0d5" opacity="0.6" filter="url(#glow)">STATE</text>
+        font-size="36" font-weight="normal" letter-spacing="24"
+        fill="#d4d0ca" opacity="0.65" filter="url(#glow)">STATE</text>
 
-  <!-- TEXAS badge - Houston city flag inspired (navy + white star) -->
-  <rect x="300" y="255" width="400" height="36" rx="3"
-        fill="#001a4d" stroke="#e8e0d5" stroke-width="1"
-        opacity="0.7" filter="url(#glow)"/>
+  <!-- TEXAS ROLEPLAY in Houston bar -->
+  <text x="400" y="282" text-anchor="middle"
+        font-family="Georgia, serif" font-size="14" letter-spacing="10"
+        fill="#d4d0ca" opacity="0.75">TEXAS ROLEPLAY</text>
 
-  <!-- Houston-style lone star in badge -->
-  <polygon points="340,273 344,279 350,279 346,283 348,289 340,285 332,289 334,283 330,279 336,279"
-           fill="#e8e0d5" opacity="0.6"/>
-  <polygon points="660,273 664,279 670,279 666,283 668,289 660,285 652,289 654,283 650,279 656,279"
-           fill="#e8e0d5" opacity="0.6"/>
-
-  <text x="500" y="281" text-anchor="middle"
-        font-family="Georgia, serif" font-size="15" letter-spacing="10"
-        fill="#e8e0d5" opacity="0.7" filter="url(#glow)">TEXAS ROLEPLAY</text>
-
-  <!-- Bottom stripe -->
-  <rect x="300" y="300" width="400" height="1"
-        fill="#e8e0d5" opacity="0.15"/>
+  <!-- Divider -->
+  <rect x="300" y="308" width="400" height="1" fill="#d4d0ca" opacity="0.12"/>
 
   <!-- Cities -->
-  <text x="500" y="328" text-anchor="middle"
+  <text x="400" y="338" text-anchor="middle"
         font-family="Georgia, serif" font-size="10" letter-spacing="4"
-        fill="rgba(232,224,213,0.25)" opacity="0.5">HOUSTON  &bull;  FORT WORTH  &bull;  KILLEEN</text>
+        fill="rgba(212,208,202,0.28)">HOUSTON  &bull;  FORT WORTH  &bull;  KILLEEN</text>
 
-  <!-- Bottom bar with Texas red -->
-  <rect x="0" y="360" width="800" height="60" fill="none"/>
-  <rect x="0" y="405" width="800" height="15" fill="#7a051c" opacity="0.15"/>
-
-  <!-- Flag pin stripe accent -->
-  <rect x="0" y="407" width="800" height="1" fill="#e8e0d5" opacity="0.08"/>
+  <!-- Bottom Texas red bar -->
+  <rect x="0" y="405" width="800" height="15" fill="#BF0A30" opacity="0.25"/>
 </svg>
