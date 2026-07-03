@@ -38,32 +38,32 @@ class Config:
     @classmethod
     def from_env(cls) -> "Config":
         missing = []
-        def get(key: str, default=None) -> str:
-            val = os.getenv(key, default)
-            if val is None and default is None:
+        def require(key: str) -> str:
+            val = os.getenv(key)
+            if not val:
                 missing.append(key)
-            return val
+            return val or ""
 
         cfg = cls(
-            supabase_url=get("SUPABASE_URL"),
-            supabase_key=get("SUPABASE_SERVICE_KEY"),
-            discord_token=get("DISCORD_TOKEN"),
-            discord_guild_id=int(get("DISCORD_GUILD_ID") or "0"),
-            deepseek_api_key=get("DEEPSEEK_API_KEY"),
-            owner_discord_id=int(get("OWNER_ID") or "0"),
-            admin_discord_ids=[int(x.strip()) for x in (get("ADMIN_IDS") or "").split(",") if x.strip()],
-            rcon_host=get("RCON_HOST"),
-            rcon_port=int(get("RCON_PORT") or "30120"),
-            rcon_password=get("RCON_PASSWORD"),
-            redis_url=get("REDIS_URL") or "redis://localhost:6379",
-            log_channel_id=int(get("LOG_CHANNEL_ID") or "0"),
-            chronicles_channel_id=int(get("CHRONICLES_CHANNEL_ID") or "0"),
-            support_channel_id=int(get("SUPPORT_CHANNEL_ID") or "0"),
-            business_owner_role_id=int(get("BUSINESS_OWNER_ROLE_ID") or "0"),
-            business_employee_role_id=int(get("BUSINESS_EMPLOYEE_ROLE_ID") or "0"),
-            staff_role_id=int(get("STAFF_ROLE_ID") or "0"),
-            tebex_secret=get("TEBEX_SECRET") or "",
+            supabase_url=require("SUPABASE_URL"),
+            supabase_key=require("SUPABASE_SERVICE_KEY"),
+            discord_token=require("DISCORD_TOKEN"),
+            discord_guild_id=int(require("DISCORD_GUILD_ID") or "0"),
+            deepseek_api_key=require("DEEPSEEK_API_KEY"),
+            owner_discord_id=int(require("OWNER_ID") or "0"),
+            admin_discord_ids=[int(x.strip()) for x in (require("ADMIN_IDS")).split(",") if x.strip()],
+            rcon_host=require("RCON_HOST"),
+            rcon_port=int(require("RCON_PORT") or "30120"),
+            rcon_password=require("RCON_PASSWORD"),
+            redis_url=os.getenv("REDIS_URL") or "redis://localhost:6379",
+            log_channel_id=int(os.getenv("LOG_CHANNEL_ID") or "0"),
+            chronicles_channel_id=int(os.getenv("CHRONICLES_CHANNEL_ID") or "0"),
+            support_channel_id=int(os.getenv("SUPPORT_CHANNEL_ID") or "0"),
+            business_owner_role_id=int(os.getenv("BUSINESS_OWNER_ROLE_ID") or "0"),
+            business_employee_role_id=int(os.getenv("BUSINESS_EMPLOYEE_ROLE_ID") or "0"),
+            staff_role_id=int(os.getenv("STAFF_ROLE_ID") or "0"),
+            tebex_secret=os.getenv("TEBEX_SECRET") or "",
         )
         if missing:
-            raise EnvironmentError(f"Missing required environment variables: {', '.join(missing)}")
+            raise EnvironmentError(f"Missing: {', '.join(missing)}")
         return cfg

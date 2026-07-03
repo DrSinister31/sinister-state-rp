@@ -2,7 +2,7 @@ import json
 from datetime import datetime, timedelta
 from shared.supabase_client import get_supabase
 from shared.config import Config
-from .brain import get_brain
+from brain import get_brain
 
 config = Config.from_env()
 supabase = get_supabase(config)
