@@ -116,6 +116,7 @@ async def main():
         "cogs.rcon_bridge",
         "cogs.chronicles",
         "cogs.assistant",
+        "cogs.tickets",
     ]
     for cog in cogs:
         try:

@@ -257,6 +257,18 @@ CREATE TABLE IF NOT EXISTS public.tebex_purchases (
     created_at TIMESTAMPTZ DEFAULT now() NOT NULL
 );
 
+-- 13. Discord Ticket System
+CREATE TABLE IF NOT EXISTS public.tickets (
+    id SERIAL PRIMARY KEY,
+    channel_id TEXT NOT NULL,
+    creator_id TEXT NOT NULL,
+    ticket_type TEXT NOT NULL,
+    status TEXT DEFAULT 'open',
+    claimed_by TEXT,
+    created_at TIMESTAMPTZ DEFAULT now() NOT NULL,
+    closed_at TIMESTAMPTZ
+);
+
 -- ============================================================================
 -- ENABLE ROW LEVEL SECURITY + POLICIES
 -- service_role bypasses RLS automatically. These policies block anon/authenticated.
@@ -273,7 +285,7 @@ BEGIN
             'mdt_reports','strikes','bans','kronus_logs','kronus_outcomes',
             'kronus_policies','kronus_prompts','kronus_metrics','bot_config',
             'rcon_commands','discord_channels','chronicle_entries',
-            'weazel_metrics','tebex_purchases'
+            'weazel_metrics','tebex_purchases','tickets'
         )
     LOOP
         EXECUTE format('ALTER TABLE public.%I ENABLE ROW LEVEL SECURITY', tbl);
