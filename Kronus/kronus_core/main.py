@@ -96,8 +96,10 @@ async def on_ready():
     print(f"  Staff role: {staff_role}")
 
     await asyncio.sleep(2)
-    await bot.tree.sync(guild=discord.Object(id=config.discord_guild_id))
-    print(f"[kronus-core] Slash commands synced to guild. Auto-config complete.")
+    guild_obj = discord.Object(id=config.discord_guild_id)
+    bot.tree.copy_global_to(guild=guild_obj)
+    synced = await bot.tree.sync(guild=guild_obj)
+    print(f"[kronus-core] {len(synced)} slash commands synced. Auto-config complete.")
 
 
 @bot.event
