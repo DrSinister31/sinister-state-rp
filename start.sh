@@ -1,22 +1,26 @@
 #!/bin/bash
 set -e
+cd "$(dirname "$0")"
 
-cd Kronus
+export PYTHONPATH=Kronus:$PYTHONPATH
 
 echo "[kronus] Starting all services..."
 
-python kronus_core/main.py &
+python Kronus/kronus_core/main.py &
 PID1=$!
+echo "  kronus-core PID=$PID1"
 
-python kronus_ai/main.py &
+python Kronus/kronus_ai/main.py &
 PID2=$!
+echo "  kronus-ai PID=$PID2"
 
-python kronus_economy/main.py &
+python Kronus/kronus_economy/main.py &
 PID3=$!
+echo "  kronus-economy PID=$PID3"
 
-python kronus_enforce/main.py &
+python Kronus/kronus_enforce/main.py &
 PID4=$!
+echo "  kronus-enforce PID=$PID4"
 
-echo "[kronus] All services running (PIDs: $PID1 $PID2 $PID3 $PID4)"
-
+echo "[kronus] All 4 services launched"
 wait -n
