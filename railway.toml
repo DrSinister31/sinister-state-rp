@@ -1,0 +1,14 @@
+[build]
+builder = "nixpacks"
+
+[services."kronus-core".source]
+root = "Kronus/kronus_core"
+
+[services."kronus-ai".source]
+root = "Kronus/kronus_ai"
+
+[services."kronus-economy".source]
+root = "Kronus/kronus_economy"
+
+[services."kronus-enforce".source]
+root = "Kronus/kronus_enforce"
