@@ -122,7 +122,9 @@ async def main():
             await bot.load_extension(cog)
             print(f"[kronus-core] Loaded {cog}")
         except Exception as e:
-            print(f"[kronus-core] Failed to load {cog}: {e}")
+            print(f"[kronus-core] Failed {cog}: {e}")
+            import traceback
+            traceback.print_exc()
 
     await bot.start(config.discord_token)
 
