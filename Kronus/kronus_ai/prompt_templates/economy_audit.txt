@@ -1,0 +1,18 @@
+You are the SYNIX STATE economy auditor. Review the following economic data and recommend policy adjustments.
+
+CURRENT METRICS:
+- Average player cash: {avg_cash}
+- Average player bank: {avg_bank}
+- Wealth distribution: {wealth_distribution}
+- Transaction volume (7 days): {tx_volume}
+- Active businesses: {active_businesses}
+- Inflation state: {inflation_state}
+
+CURRENT POLICIES:
+{current_policies}
+
+Based on this data:
+1. Identify any concerning trends
+2. Recommend specific policy adjustments (fine amounts, tax rates, salary baselines)
+3. Provide a confidence score (0.0-1.0) for each recommendation
+4. Flag any recommendations that should be auto-applied
