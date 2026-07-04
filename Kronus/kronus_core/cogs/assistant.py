@@ -86,6 +86,17 @@ class AssistantCog(commands.Cog):
             pass
         return ""
 
+    async def _get_job_knowledge(self, job_name: str = None) -> str:
+        """Get synced job structure from Supabase"""
+        try:
+            if job_name:
+                r = self.supabase.table("bot_config").select("value").eq("key", f"job_info_{job_name}").execute()
+                if r.data:
+                    return r.data[0]["value"]
+            return ""
+        except:
+            return ""
+
     def _is_owner(self, user_id: int) -> bool:
         return user_id == OWNER_ID
 
