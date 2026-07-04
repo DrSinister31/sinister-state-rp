@@ -1,17 +1,10 @@
-fx_version 'cerulean'
-game 'gta5'
-lua54 'yes'
-author 'Sinister State'
-description 'Phone apps — Business Banking, Texas Browser, syntok'
-version '1.0.0'
+fx_version("cerulean")
+game("gta5")
+description("Sinister Apps — Business Banking, TX Browser, syntok for NPWD")
 
-ui_page 'html/index.html'
+server_script("dist/server/server.js")
+client_script("dist/client/client.js")
 
-server_scripts { 'server/main.lua' }
-client_scripts { 'client/main.lua' }
+files({ "dist/web/app.js" })
 
-files {
-    'html/index.html',
-    'html/style.css',
-    'html/script.js',
-}
+dependency({ "npwd" })

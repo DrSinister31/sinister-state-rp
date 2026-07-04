@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@client/*": ["client/*"],
+      "@server/*": ["server/*"]
+    }
+  },
+  "include": ["client/**/*", "server/**/*", "web/src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
