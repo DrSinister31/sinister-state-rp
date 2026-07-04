@@ -1,31 +1,39 @@
-// Sinister Apps — Client-side NUI callbacks for proxy communication
+// Sinister Apps — Client-side
+var pendingCallbacks = {};
+var isOpen = false;
 
-interface ProxyPayload {
-  id: number;
-  app: string;
-  payload: any;
-}
-
-const pendingCallbacks: Record<number, (data: any) => void> = {};
-
-onNet("sinister_apps:proxyResponse", (requestId: number, result: any) => {
-  const cb = pendingCallbacks[requestId];
-  if (cb) {
-    delete pendingCallbacks[requestId];
-    cb(result);
-  }
+onNet("sinister_apps:proxyResponse", function(requestId, result) {
+  var cb = pendingCallbacks[requestId];
+  if (cb) { delete pendingCallbacks[requestId]; cb(result); }
 });
 
 RegisterNuiCallbackType("proxyRequest");
-on("__cfx_nui:proxyRequest", (data: ProxyPayload, cb: (result: any) => void) => {
-  const requestId = data.id;
+on("__cfx_nui:proxyRequest", function(data, cb) {
+  var requestId = data.id;
   pendingCallbacks[requestId] = cb;
   emitNet("sinister_apps:proxyRequest", requestId, data.app, data.payload);
-
-  setTimeout(() => {
-    if (pendingCallbacks[requestId]) {
-      delete pendingCallbacks[requestId];
-      cb({ _error: "Request timed out" });
-    }
+  setTimeout(function() {
+    if (pendingCallbacks[requestId]) { delete pendingCallbacks[requestId]; cb({ _error: "Request timed out" }); }
   }, 15000);
+});
+
+RegisterNuiCallbackType("setGPS");
+on("__cfx_nui:setGPS", function(data, cb) {
+  SetNewWaypoint(data.x, data.y);
+  cb("ok");
+});
+
+// Open/close via command /apps
+RegisterCommand("apps", function() {
+  SetNuiFocus(true, true);
+  isOpen = true;
+  SendNUIMessage({ type: "open" });
+}, false);
+
+// Close with Backspace
+setTick(function() {
+  if (isOpen && IsControlJustPressed(0, 177)) {
+    SetNuiFocus(false, false);
+    isOpen = false;
+  }
 });

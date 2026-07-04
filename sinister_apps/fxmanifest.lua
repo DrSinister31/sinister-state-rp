@@ -1,10 +1,14 @@
 fx_version("cerulean")
 game("gta5")
-description("Sinister Apps — Business Banking, TX Browser, syntok for NPWD")
+description("Sinister Apps — Business Banking, TX Browser, syntok")
 
-server_script("dist/server/server.js")
-client_script("dist/client/client.js")
+ui_page("html/index.html")
 
-files({ "dist/web/app.js" })
+server_script("dist/server.js")
+client_script("dist/client.js")
 
-dependency({ "npwd" })
+files({
+    "html/index.html",
+    "html/style.css",
+    "html/script.js",
+})

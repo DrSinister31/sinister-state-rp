@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinister Apps</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="phone">
+  <div class="phone-header">
+    <span class="time" id="clock">12:00</span>
+    <span class="icons">📶 🔋</span>
+  </div>
+  <div id="app-root"></div>
+  <div class="phone-footer">
+    <button class="foot-btn active" onclick="switchTab('banking')" id="btn-banking">🏦 Bank</button>
+    <button class="foot-btn" onclick="switchTab('browser')" id="btn-browser">🌐 Browse</button>
+    <button class="foot-btn" onclick="switchTab('syntok')" id="btn-syntok">📱 Tok</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
