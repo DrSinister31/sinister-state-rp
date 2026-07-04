@@ -92,20 +92,41 @@
     // ── Loading progress ──
     window.addEventListener('message', function(e) {
         var data = e.data;
-        if (!data || data.eventName !== 'loadProgress') return;
-        
-        var fraction = data.loadFraction || 0;
-        for (var i = loadingSteps.length - 1; i >= 0; i--) {
-            if (fraction >= loadingSteps[i].at && i !== currentStep) {
-                currentStep = i;
-                if (statusEl) {
-                    statusEl.textContent = loadingSteps[i].text;
-                    statusEl.style.opacity = '0.6';
-                    setTimeout(function() {
-                        if (statusEl) statusEl.style.opacity = '0.3';
-                    }, 2000);
+        if (!data) return;
+
+        if (data.eventName === 'loadProgress') {
+            var fraction = data.loadFraction || 0;
+            for (var i = loadingSteps.length - 1; i >= 0; i--) {
+                if (fraction >= loadingSteps[i].at && i !== currentStep) {
+                    currentStep = i;
+                    if (statusEl) {
+                        statusEl.textContent = loadingSteps[i].text;
+                        statusEl.style.opacity = '0.6';
+                        setTimeout(function() {
+                            if (statusEl) statusEl.style.opacity = '0.3';
+                        }, 2000);
+                    }
+                    break;
                 }
-                break;
+            }
+        }
+    });
+
+    // Auto-shutdown when loading completes via FiveM native event
+    window.addEventListener('message', function(e) {
+        var data = e.data;
+        if (data && data.eventName === 'loadProgress') {
+            var fraction = data.loadFraction || 0;
+            // Near 100% complete — fade out
+            if (fraction >= 0.98) {
+                var overlay = document.querySelector('.loading-overlay');
+                if (overlay && overlay.style.display !== 'none') {
+                    overlay.style.opacity = '0';
+                    overlay.style.transition = 'opacity 0.5s';
+                    setTimeout(function() {
+                        overlay.style.display = 'none';
+                    }, 600);
+                }
             }
         }
     });
