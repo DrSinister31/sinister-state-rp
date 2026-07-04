@@ -32,6 +32,7 @@ from gangs import process_gang_income
 from tariffs import update_luxury_tariffs
 from missions import generate_dispatch_events, run_mission_cycle
 from government import run_election_cycle
+from payroll import run_universal_payroll
 
 
 async def weekly_tax_discord_report():
@@ -97,6 +98,7 @@ async def main():
     scheduler.add_job(update_luxury_tariffs, "interval", hours=1)
     scheduler.add_job(run_mission_cycle, "interval", minutes=15)
     scheduler.add_job(run_election_cycle, "interval", hours=6)
+    scheduler.add_job(run_universal_payroll, "cron", minute=30)
 
     supabase.table("kronus_logs").insert({
         "service": "kronus-economy",
