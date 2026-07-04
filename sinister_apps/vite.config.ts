@@ -11,28 +11,14 @@ export default defineConfig({
     federation({
       name: name,
       filename: "remoteEntry.js",
-      exposes: {
-        "./config": "./npwd.config.ts",
-      },
-      shared: [
-        "react",
-        "react-dom",
-        "@emotion/react",
-        "react-router-dom",
-      ],
+      exposes: { "./config": "./npwd.config.ts" },
+      shared: ["react", "react-dom", "react/jsx-runtime"],
     }),
     topLevelAwait({
       promiseExportName: "__tla",
       promiseImportName: (i) => `__tla_${i}`,
     }),
   ],
-  define: {
-    process: {
-      env: {
-        VITE_REACT_APP_IN_GAME: process.env.VITE_REACT_APP_IN_GAME,
-      },
-    },
-  },
   build: {
     outDir: "web/dist",
     emptyOutDir: true,
