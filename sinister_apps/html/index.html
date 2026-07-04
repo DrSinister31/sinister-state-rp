@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinister Apps</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app-container">
+    <div id="home" class="screen active">
+        <div class="app-header">Sinister Apps</div>
+        <div class="app-grid">
+            <div class="app-icon" onclick="openApp('banking')">
+                <span class="icon">🏦</span><span>Business Bank</span></div>
+            <div class="app-icon" onclick="openApp('browser')">
+                <span class="icon">🌐</span><span>TX Browser</span></div>
+            <div class="app-icon" onclick="openApp('syntok')">
+                <span class="icon">📱</span><span>syntok</span></div>
+        </div>
+    </div>
+    <iframe id="banking-frame" class="app-frame" src="banking.html"></iframe>
+    <iframe id="browser-frame" class="app-frame" src="browser.html"></iframe>
+    <iframe id="syntok-frame" class="app-frame" src="syntok.html"></iframe>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

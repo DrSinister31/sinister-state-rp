@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head><body class="app-page">
+<div class="app-header">📱 syntok — Sinister Clips</div>
+<div id="syntok-feed">
+    <div class="clip-card">
+        <div class="clip-author">📸 Screenshot Gallery</div>
+        <div class="clip-placeholder">Take screenshots with F12<br>They appear here automatically<br>Share with the community</div>
+    </div>
+    <div class="clip-card">
+        <div class="clip-author">🎬 Submit a Clip</div>
+        <div class="clip-placeholder">Record your gameplay<br>Submit to Kronus for review<br>Featured clips earn rewards!</div>
+    </div>
+    <div class="clip-card">
+        <div class="clip-author">🏆 Top Clips This Week</div>
+        <div class="clip-placeholder">No clips submitted yet<br>Be the first — earn $500 per featured clip</div>
+    </div>
+</div>
+<script>
+window.addEventListener('message', e => { if (e.data.type === 'loadSyntok') { fetch(`${e.data.supabaseUrl}/rest/v1/chronicle_entries?select=title,description&order=created_at.desc&limit=5`,{headers:{apikey:e.data.supabaseKey,Authorization:'Bearer '+e.data.supabaseKey}}).then(r=>r.json()).then(d=>{ let feed = document.getElementById('syntok-feed'); feed.innerHTML = d.map(c=>`<div class="clip-card"><div class="clip-author">📰 ${c.title}</div><div class="clip-placeholder">${(c.description||'').substring(0,150)}</div></div>`).join('') + '<div class="clip-card"><div class="clip-author">📸 Submit yours</div><div class="clip-placeholder">F12 to screenshot</div></div>' }) } });
+</script>
+</body></html>

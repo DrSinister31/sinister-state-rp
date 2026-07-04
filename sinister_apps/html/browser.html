@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head><body class="app-page">
+<div class="app-header">🌐 Texas Browser</div>
+<div class="browser-bar"><input type="text" placeholder="Search Sinister State..." id="browser-search" onkeydown="if(event.key==='Enter')search()"><button onclick="search()">Go</button></div>
+<div id="browser-results">
+    <div class="result-card" onclick="setGPS('City Hall', -540.58, -212.02)"><b>🏛️ City Hall</b><br>Get ID, licenses, apply for jobs<br><span class="gps-hint">GPS: Downtown Houston</span></div>
+    <div class="result-card" onclick="setGPS('Mosley Auto Shop', 540, -200)"><b>🔧 Mosley's Auto & Chop Shop</b><br>Vehicle repair, mods, chop shop<br><span class="gps-hint">GPS: Davis Ave</span></div>
+    <div class="result-card" onclick="setGPS('Lone Star Grill', 440, -980)"><b>🍔 Lone Star Grill</b><br>Texas burgers, open 24/7<br><span class="gps-hint">GPS: Mission Row</span></div>
+    <div class="result-card" onclick="setGPS('Bucky\'s Stop & Shop', 640.66, 276.22)"><b>⛽ Bucky's Stop & Shop</b><br>Gas, snacks, Texas-sized<br><span class="gps-hint">GPS: Route 68</span></div>
+    <div class="result-card" onclick="setGPS('Travis County Courthouse', 243.5, -1086.0)"><b>⚖️ Travis County Courthouse</b><br>Legal services, marriage licenses<br><span class="gps-hint">GPS: Downtown</span></div>
+    <div class="result-card" onclick="setGPS('Houston Intl Airport', -1050, -2800)"><b>✈️ Houston International Airport</b><br>Flights, ATC, airfield ownership<br><span class="gps-hint">GPS: LSIA</span></div>
+    <div class="result-card" onclick="setGPS('Fort Zancudo', -2200, 3250)"><b>🎖️ Fort Zancudo — Texas National Guard</b><br>Restricted access. Authorized personnel only.<br><span class="gps-hint">GPS: Fort Zancudo</span></div>
+</div>
+<script>
+function search() { let q = document.getElementById('browser-search').value.toLowerCase(); let cards = document.querySelectorAll('.result-card'); cards.forEach(c=>c.style.display=c.textContent.toLowerCase().includes(q)?'block':'none'); }
+function setGPS(name,x,y) { fetch(`https://${document.location.hostname}/setGPS`,{method:'POST',body:JSON.stringify({name,x,y})}); window.parent.postMessage({type:'closeApp'},'*'); }
+</script>
+</body></html>
