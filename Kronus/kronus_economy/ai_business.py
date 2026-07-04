@@ -61,5 +61,5 @@ async def replace_ai_business(business_id, player_citizenid):
     supabase.table("businesses").update({
         "owner_citizenid": player_citizenid,
         "ai_placeholder": False,
-        "name": None  -- Player will rename
+        "name": None
     }).eq("id", business_id).eq("ai_placeholder", True).execute()
