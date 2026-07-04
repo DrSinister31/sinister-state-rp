@@ -24,6 +24,11 @@ from ai_business import run_ai_business_check
 from taxation import collect_income_tax, collect_business_tax, collect_sales_tax
 from budget import allocate_city_budget
 from tax_report import generate_weekly_tax_report, format_tax_report_embed
+from drugs import apply_drug_xp_decay
+from arms import rotate_arms_stock
+from chopshop import decay_chop_heat
+from fronts import run_front_audit_check
+from gangs import process_gang_income
 
 
 async def weekly_tax_discord_report():
@@ -80,6 +85,11 @@ async def main():
     scheduler.add_job(collect_sales_tax, "interval", hours=1)
     scheduler.add_job(allocate_city_budget, "interval", hours=6)
     scheduler.add_job(weekly_tax_discord_report, "cron", day_of_week="sun", hour=2)
+    scheduler.add_job(apply_drug_xp_decay, "interval", hours=24)
+    scheduler.add_job(rotate_arms_stock, "interval", hours=2)
+    scheduler.add_job(decay_chop_heat, "interval", hours=1)
+    scheduler.add_job(run_front_audit_check, "interval", hours=6)
+    scheduler.add_job(process_gang_income, "interval", hours=1)
 
     supabase.table("kronus_logs").insert({
         "service": "kronus-economy",
