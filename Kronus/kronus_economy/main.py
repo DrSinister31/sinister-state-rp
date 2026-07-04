@@ -20,6 +20,7 @@ from expenses import bill_weekly_expenses
 from pnl import send_weekly_pnl
 from ai_density import run_ai_density_update
 from perks import run_wealth_perks
+from ai_business import run_ai_business_check
 
 config = Config.from_env()
 supabase = get_supabase(config)
@@ -49,6 +50,7 @@ async def main():
     scheduler.add_job(send_weekly_pnl, "cron", day_of_week="sun", hour=1)
     scheduler.add_job(run_ai_density_update, "interval", minutes=5)
     scheduler.add_job(run_wealth_perks, "interval", hours=6)
+    scheduler.add_job(run_ai_business_check, "interval", hours=1)
 
     supabase.table("kronus_logs").insert({
         "service": "kronus-economy",
