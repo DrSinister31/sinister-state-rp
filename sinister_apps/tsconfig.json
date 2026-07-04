@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "jsx": "react-jsx",
@@ -13,10 +13,9 @@
     "rootDir": ".",
     "baseUrl": ".",
     "paths": {
-      "@client/*": ["client/*"],
-      "@server/*": ["server/*"]
+      "@npwd/types": ["./node_modules/@npwd/types"]
     }
   },
-  "include": ["client/**/*", "server/**/*", "web/src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*", "npwd.config.ts", "index.tsx"],
+  "exclude": ["node_modules", "web"]
 }

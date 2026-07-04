@@ -1,14 +1,17 @@
-fx_version("cerulean")
-game("gta5")
-description("Sinister Apps — Business Banking, TX Browser, syntok")
+fx_version "cerulean"
+game "gta5"
 
-ui_page("html/index.html")
+description "Sinister Apps for NPWD — Business Banking, TX Browser, syntok"
+version "1.0.0"
 
-server_script("dist/server.js")
-client_script("dist/client.js")
+client_script "client/client.lua"
+server_script "server/server.lua"
 
-files({
-    "html/index.html",
-    "html/style.css",
-    "html/script.js",
-})
+ui_page "web/dist/index.html"
+
+files {
+    "web/dist/**/*",
+}
+
+lua54 "yes"
+use_experimental_fxv2_oal "yes"
