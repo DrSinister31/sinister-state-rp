@@ -41,7 +41,7 @@ CreateThread(function()
 
         -- ===== STATEWIDE =====
         { name = "Texas DPS Headquarters",             coords = vec3(2400.0, 3100.0, 48.0),    sprite = 60,  color = 0,  scale = 0.8 },
-        { name = "Fort Zancudo — Texas National Guard",coords = vec3(-2200.0, 3250.0, 32.0),   sprite = 137, color = 26, scale = 0.9 },
+{ name = "Lackland AFB",                      coords = vec3(-2200.0, 3250.0, 32.0),   sprite = 137, color = 26, scale = 0.9 },
         { name = "Texas Fire & Rescue HQ",             coords = vec3(210.0, -1650.0, 29.0),    sprite = 942, color = 1,  scale = 0.8 },
         { name = "ATC Tower (Houston Intl)",           coords = vec3(-1050.0, -2800.0, 13.0),  sprite = 307, color = 0,  scale = 0.8 },
 
