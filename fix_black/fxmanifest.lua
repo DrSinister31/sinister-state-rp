@@ -1,0 +1,6 @@
+fx_version "cerulean"
+game "gta5"
+description "Emergency teleport — server-side"
+version "1.0.0"
+server_script "server.lua"
+lua54 "yes"
