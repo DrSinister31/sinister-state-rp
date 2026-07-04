@@ -105,13 +105,19 @@ async def run_delinquency_check():
 
 
 async def process_payroll():
-    businesses = supabase.table("businesses").select("id, name, owner_citizenid, revenue").eq("active", True).execute()
+    businesses = supabase.table("businesses").select("id, name, owner_citizenid, revenue, bank_account").eq("active", True).execute()
     for biz in (businesses.data or []):
-        employees = supabase.table("business_employees").select("citizenid, salary").eq("business_id", biz["id"]).execute()
+        employees = supabase.table("business_employees").select("citizenid, salary, is_ai, hourly_wage").eq("business_id", biz["id"]).execute()
+        biz_bank = biz.get("bank_account", 0)
         for emp in (employees.data or []):
-            salary = emp.get("salary", 0)
-            if salary > 0:
+            if emp.get("is_ai"):
+                salary = int((emp.get("hourly_wage", 100) or 100) * 0.33)
+            else:
+                salary = emp.get("salary", 0)
+            if salary > 0 and biz_bank >= salary:
                 supabase.rpc("add_funds", {"p_citizenid": emp["citizenid"], "p_amount": salary, "p_account": "bank"}).execute()
+                supabase.table("businesses").update({"bank_account": biz_bank - salary}).eq("id", biz["id"]).execute()
+                biz_bank -= salary
                 supabase.table("transactions").insert({
                     "from_citizenid": biz["owner_citizenid"],
                     "to_citizenid": emp["citizenid"],
@@ -121,3 +127,34 @@ async def process_payroll():
                     "channel": "payroll",
                     "business_id": biz["id"]
                 }).execute()
+
+
+async def apply_market_ticker():
+    result = supabase.table("bot_config").select("value").eq("key", "active_market_event").execute()
+    if not (result.data and result.data[0].get("value")):
+        return
+    import json
+    event = json.loads(result.data[0]["value"])
+    modifier = event.get("modifier", 1.0)
+    if modifier == 1.0:
+        return
+
+    businesses = supabase.table("businesses").select("id, revenue, bank_account").eq("active", True).execute()
+    for biz in (businesses.data or []):
+        current = biz.get("revenue", 0)
+        adjusted = int(current * modifier)
+        supabase.table("businesses").update({"revenue": adjusted}).eq("id", biz["id"]).execute()
+
+
+async def process_delinquency_takeovers():
+    from datetime import datetime, timedelta
+    cutoff = datetime.utcnow() - timedelta(days=7)
+    delinquent = supabase.table("businesses").select("id, name, owner_citizenid, delinquent_since").eq("delinquent", True).lte("delinquent_since", cutoff.isoformat()).execute()
+    for biz in (delinquent.data or []):
+        supabase.table("businesses").update({"active": False, "ai_placeholder": True}).eq("id", biz["id"]).execute()
+        supabase.table("kronus_logs").insert({
+            "service": "kronus-economy",
+            "action": "takeover",
+            "context_json": {"business_id": str(biz["id"]), "business_name": biz["name"], "owner": biz.get("owner_citizenid")},
+            "result": "foreclosed"
+        }).execute()
