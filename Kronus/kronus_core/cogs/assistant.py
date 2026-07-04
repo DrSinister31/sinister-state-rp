@@ -76,6 +76,16 @@ class AssistantCog(commands.Cog):
         except:
             return ""
 
+    async def _get_channel_knowledge(self) -> str:
+        """Get compacted channel purposes for system prompt context"""
+        try:
+            r = self.supabase.table("bot_config").select("value").eq("key", "kronus_channel_knowledge").execute()
+            if r.data and r.data[0].get("value"):
+                return r.data[0]["value"]
+        except:
+            pass
+        return ""
+
     def _is_owner(self, user_id: int) -> bool:
         return user_id == OWNER_ID
 
@@ -199,6 +209,9 @@ If the message is boring or doesn't deserve a response, say exactly: SKIP"""
             extra += chronicles_ctx + "\n"
         if player_ctx:
             extra += player_ctx + "\n"
+        channel_knowledge = await self._get_channel_knowledge()
+        if channel_knowledge:
+            extra += "\n## Current Discord Channel Purposes\n" + channel_knowledge + "\n"
 
         system_prompt = SYSTEM_PROMPT + extra
         messages = [{"role": "system", "content": system_prompt}]

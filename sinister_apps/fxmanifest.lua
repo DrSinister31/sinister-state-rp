@@ -12,9 +12,6 @@ client_scripts { 'client/main.lua' }
 
 files {
     'html/index.html',
-    'html/banking.html',
-    'html/browser.html',
-    'html/syntok.html',
     'html/style.css',
     'html/script.js',
 }

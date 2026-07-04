@@ -14,7 +14,8 @@ POLICE_VEHICLES = { "police", "police2", "police3", "sheriff", "sheriff2" }
 function SpawnPolicePatrol(agency, count)
     local points = POLICE_SPAWN_POINTS[agency]
     if not points then return end
-    for i = 1, count do
+    local maxCount = GetDensityCapped(count)
+    for i = 1, maxCount do
         local spawn = points[(i % #points) + 1]
         local model = POLICE_MODELS[(i % #POLICE_MODELS) + 1]
         local hash = GetHashKey(model)
@@ -87,6 +88,6 @@ end
 
 AddEventHandler("onResourceStart", function(resource)
     if resource == GetCurrentResourceName() then
-        print("^2[sinister_ai] ^7Police AI ready — awaiting Kronus density commands")
+        print("^2[sinister_ai] ^7Police AI ready — density-aware")
     end
 end)

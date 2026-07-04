@@ -7,6 +7,7 @@ CIVILIAN_MODELS = {
 }
 
 function SpawnCivilian(coords)
+    if not AI_ENABLED then return end
     local model = CIVILIAN_MODELS[(math.random(#CIVILIAN_MODELS))]
     local hash = GetHashKey(model)
     RequestModel(hash)
@@ -22,7 +23,8 @@ function SpawnCivilian(coords)
 end
 
 function SpawnCivilianCluster(center, count)
-    for i = 1, count do
+    local maxCount = GetDensityCapped(count)
+    for i = 1, maxCount do
         SpawnCivilian(center)
     end
 end
@@ -30,8 +32,9 @@ end
 -- Cleanup old civilians to prevent entity overflow
 Citizen.CreateThread(function()
     while true do
-        Wait(300000) -- Every 5 minutes
-        local maxCivs = 30
+        Wait(300000)
+        local maxCivs = math.floor(30 * AI_DENSITY)
+        if maxCivs < 1 then maxCivs = 1 end
         while #AI_POOLS.civilian_walker > maxCivs do
             local ped = table.remove(AI_POOLS.civilian_walker, 1)
             if DoesEntityExist(ped) then DeleteEntity(ped) end
@@ -39,4 +42,4 @@ Citizen.CreateThread(function()
     end
 end)
 
-print("^2[sinister_ai] ^7Civilian AI ready")
+print("^2[sinister_ai] ^7Civilian AI ready — density-aware")

@@ -70,3 +70,11 @@ async def run_ai_density_update():
         "value": float(total),
         "recorded_at": "now()"
     }).execute()
+
+    enabled = await is_enabled("ai_workers_enabled")
+    toggle_val = "true" if enabled else "false"
+    supabase.table("rcon_commands").insert({
+        "command": f"set sinister_ai:global_density {density}; set sinister_ai:ai_toggle {toggle_val}",
+        "source": "kronus_economy",
+        "status": "pending"
+    }).execute()

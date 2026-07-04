@@ -14,6 +14,7 @@ BOOST_SPOTS = {
 }
 
 function SpawnStreetDealer()
+    if not AI_ENABLED then return end
     local spot = DEALER_SPOTS[(math.random(#DEALER_SPOTS))]
     local hash = GetHashKey("g_m_y_mexgoon_03")
     RequestModel(hash)
@@ -38,6 +39,7 @@ function SpawnStreetDealer()
 end
 
 function SpawnBooster()
+    if not AI_ENABLED then return end
     local spot = BOOST_SPOTS[(math.random(#BOOST_SPOTS))]
     local hash = GetHashKey("g_m_y_lost_02")
     RequestModel(hash)
@@ -51,4 +53,4 @@ function SpawnBooster()
     AI_POOLS.criminal_booster[#AI_POOLS.criminal_booster + 1] = ped
 end
 
-print("^2[sinister_ai] ^7Criminal AI ready")
+print("^2[sinister_ai] ^7Criminal AI ready — density-aware")

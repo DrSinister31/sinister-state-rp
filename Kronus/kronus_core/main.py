@@ -102,16 +102,6 @@ async def on_ready():
     print(f"[kronus-core] {len(synced)} slash commands synced. Auto-config complete.")
 
 
-@bot.event
-async def on_guild_channel_create(channel):
-    pass
-
-
-@bot.event
-async def on_guild_role_create(role):
-    pass
-
-
 async def main():
     cogs = [
         "cogs.channel_manager",
@@ -121,6 +111,7 @@ async def main():
         "cogs.assistant",
         "cogs.tickets",
         "cogs.staff",
+        "cogs.channel_memory",
     ]
     for cog in cogs:
         try:
