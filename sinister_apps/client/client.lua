@@ -20,6 +20,20 @@ RegisterNUICallback("sinister_proxy", function(data, cb)
     end)
 end)
 
+RegisterNUICallback("checkAuth", function(_, cb)
+    local player = exports.qbx_core:GetPlayer(cache.playerId)
+    if not player then cb({ authorized = false, job = nil, type = nil }); return end
+    local job = player.PlayerData.job
+    cb({
+        authorized = true,
+        job = job.name,
+        jobType = job.type,
+        grade = job.grade and job.grade.level or 0,
+        onDuty = job.onduty or false,
+        citizenid = player.PlayerData.citizenid,
+    })
+end)
+
 RegisterNUICallback("setGPS", function(data, cb)
     SetNewWaypoint(data.x, data.y)
     cb("ok")

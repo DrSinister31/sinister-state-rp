@@ -1,12 +1,7 @@
-import React, { useState } from "react";
-import { ThemeProvider, createTheme, CssBaseline, Box, Typography, Paper, Button, TextField, CircularProgress } from "@mui/material";
+import React, { useState, useEffect } from "react";
 
 const RESOURCE = "sinister_cad";
-const theme = createTheme({
-  palette: { mode: "dark", primary: { main: "#1565C0" }, background: { default: "#0d1117", paper: "#161b22" } },
-  typography: { fontFamily: "'Segoe UI',sans-serif", fontSize: 13 },
-  components: { MuiPaper: { styleOverrides: { root: { backgroundImage: "none" } } } },
-});
+const LEO_JOBS = ["police","bcso","sasp","fib","military","judge","prosecutor","publicdefender","bailiff"];
 
 async function nuiFetch(event: string, data: any = {}): Promise<any> {
   try {
@@ -16,142 +11,67 @@ async function nuiFetch(event: string, data: any = {}): Promise<any> {
     return await resp.json();
   } catch { return { _error: "Failed" }; }
 }
-
 function proxy(payload: any) { return nuiFetch("cad_proxy", { id: Date.now(), payload }); }
 
+const s = {
+  root: { height:"100%", width:"100%", display:"flex", flexDirection:"column" as const, background:"#0d1117", color:"#c9d1d9", fontFamily:"'Segoe UI',sans-serif", fontSize:11, overflow:"hidden" },
+  tabs: { display:"flex", background:"#08080f", borderBottom:"1px solid #1a1a28", flexShrink:0 },
+  tab: (a:boolean) => ({ flex:1, padding:"8px 2px", textAlign:"center" as const, cursor:"pointer", color:a?"#1565C0":"#484f58", border:"none", background:"transparent", borderBottom:a?"2px solid #1565C0":"2px solid transparent", fontSize:11, fontWeight:700 }),
+  body: { flex:1, overflowY:"auto" as const, padding:8, overflowX:"hidden" as const },
+  card: { background:"#161b22", borderRadius:8, padding:"10px 12px", marginBottom:6, border:"1px solid #21262d", wordBreak:"break-word" as const },
+  hdr: { color:"#58a6ff", fontWeight:700, fontSize:13, marginBottom:4 },
+  big: { fontSize:36, fontWeight:700, textAlign:"center" as const, margin:"8px 0" },
+  sub: { fontSize:10, color:"#8b949e", marginTop:2, wordBreak:"break-word" as const },
+  btn: { width:"100%", background:"#1f6feb", color:"white", border:"none", padding:"10px", borderRadius:6, fontWeight:700, cursor:"pointer", fontSize:12, marginBottom:8 },
+  inp: { flex:1, background:"#0d1117", color:"#c9d1d9", border:"1px solid #30363d", padding:"7px 10px", borderRadius:6, fontSize:12 },
+  btnS: { background:"#21262d", color:"#c9d1d9", border:"1px solid #30363d", padding:"7px 14px", borderRadius:6, fontWeight:700, cursor:"pointer", fontSize:12, flexShrink:0 },
+  flex: { display:"flex", gap:4, marginBottom:8 },
+  row: { padding:"4px 0", borderBottom:"1px solid #21262d", fontSize:10, wordBreak:"break-word" as const, overflow:"hidden" as const },
+  deny: { textAlign:"center" as const, padding:"30px 10px", color:"#484f58", fontSize:12 },
+};
+
 export default function App() {
-  const [tab, setTab] = useState(0);
+  const [auth,setAuth]=useState<any>(null);
+  const [tab,setTab]=useState(0);
+
+  useEffect(()=>{nuiFetch("checkAuth").then(a=>setAuth(a));},[]);
+
+  if(!auth) return <div style={s.root}><div style={s.body}><div style={s.deny}>Loading...</div></div></div>;
+  if(!LEO_JOBS.includes(auth.job)) return <div style={s.root}><div style={s.body}><div style={s.deny}><b>ACCESS DENIED</b><br/>LEO personnel only.<br/>Your job: {auth.job||"none"}</div></div></div>;
+
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Box sx={{ height: "100%", display: "flex", flexDirection: "column", bgcolor: "background.default" }}>
-        <Box sx={{ display: "flex", borderBottom: 1, borderColor: "divider" }}>
-          {["Scanner", "Radar"].map((l, i) => (
-            <Button key={i} fullWidth sx={{
-              color: tab === i ? "primary.main" : "text.disabled", borderBottom: tab === i ? 2 : 0,
-              borderColor: "primary.main", borderRadius: 0, py: 1.5, fontSize: 13, fontWeight: 600
-            }} onClick={() => setTab(i)}>{l}</Button>
-          ))}
-        </Box>
-        <Box sx={{ flex: 1, overflow: "auto", p: 1.5 }}>
-          {tab === 0 && <Scanner />}
-          {tab === 1 && <Radar />}
-        </Box>
-        <Typography variant="caption" color="textDisabled" textAlign="center" sx={{ py: 1, borderTop: 1, borderColor: "divider" }}>
-          Full MDT: /cad &bull; distortedz_cad
-        </Typography>
-      </Box>
-    </ThemeProvider>
+    <div style={s.root}>
+      <div style={s.tabs}>{["Scanner","Radar"].map((l,i)=><button key={i} style={s.tab(tab===i)} onClick={()=>setTab(i)}>{l}</button>)}</div>
+      <div style={s.body}>{tab===0?<Scanner/>:<Radar/>}</div>
+      <div style={{padding:"6px 8px",borderTop:"1px solid #21262d",textAlign:"center",fontSize:9,color:"#484f58"}}>Full MDT: /cad &bull; {auth.job||"?"}</div>
+    </div>
   );
 }
 
 function Scanner() {
-  const [scan, setScan] = useState<any>(null);
-  const [lookup, setLookup] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
-  const [manual, setManual] = useState("");
+  const [scan,setScan]=useState<any>(null); const [lookup,setLookup]=useState<any>(null);
+  const [ld,setLd]=useState(false); const [manual,setManual]=useState("");
 
-  async function doScan() {
-    setLoading(true); setLookup(null);
-    const s = await nuiFetch("cad:scanPlate", {});
-    setScan(s);
-    if (s.plate) { const r = await proxy({ action: "plateLookup", plate: s.plate }); setLookup(r); }
-    setLoading(false);
-  }
+  async function doScan() { setLd(true); setLookup(null); const sc=await nuiFetch("cad:scanPlate",{}); setScan(sc); if(sc.plate){const r=await proxy({action:"plateLookup",plate:sc.plate});setLookup(r);} setLd(false); }
+  async function doManual() { if(!manual)return; setLd(true); setScan({plate:manual}); const r=await proxy({action:"plateLookup",plate:manual});setLookup(r); setLd(false); }
 
-  async function doManual() {
-    if (!manual) return;
-    setLoading(true); setScan({ plate: manual });
-    const r = await proxy({ action: "plateLookup", plate: manual }); setLookup(r);
-    setLoading(false);
-  }
-
-  return (
-    <Box>
-      <Button variant="contained" fullWidth onClick={doScan} disabled={loading} sx={{ mb: 1 }}>
-        {loading ? <CircularProgress size={20} /> : "Scan Nearby Vehicle"}
-      </Button>
-      <Box sx={{ display: "flex", gap: 1, mb: 1 }}>
-        <TextField size="small" fullWidth placeholder="Or type plate..." value={manual} onChange={e => setManual(e.target.value)} />
-        <Button variant="outlined" size="small" onClick={doManual} sx={{ minWidth: 80 }}>Lookup</Button>
-      </Box>
-
-      {scan?.error && <Typography color="error" sx={{ my: 1 }}>{scan.error}</Typography>}
-
-      {scan?.plate && (
-        <Paper sx={{ p: 1.5, mb: 1 }}>
-          <Typography color="primary" fontWeight={700}>Scanned Vehicle</Typography>
-          <Typography variant="body2"><b>Plate:</b> {scan.plate}</Typography>
-          <Typography variant="body2"><b>Model:</b> {scan.model || "Unknown"}</Typography>
-          <Typography variant="body2"><b>Speed:</b> {scan.speed} km/h</Typography>
-        </Paper>
-      )}
-
-      {lookup?.registry?.plate && (
-        <Paper sx={{ p: 1.5, mb: 1, border: 1, borderColor: lookup.registry.stolen ? "error.main" : lookup.registry.flagged ? "warning.main" : "divider" }}>
-          <Typography color="primary" fontWeight={700}>Registry</Typography>
-          <Typography variant="body2"><b>Owner:</b> {lookup.registry.owner_name || "Unknown"}</Typography>
-          <Typography variant="body2"><b>CID:</b> {lookup.registry.owner_citizenid || "N/A"}</Typography>
-          <Typography variant="body2" color={lookup.registry.stolen ? "error" : lookup.registry.flagged ? "warning.main" : "success.main"}>
-            {lookup.registry.stolen ? "STOLEN" : lookup.registry.flagged ? `Flagged: ${lookup.registry.flag_reason}` : "Clean"}
-          </Typography>
-        </Paper>
-      )}
-
-      {lookup?.warrants?.length > 0 && (
-        <Paper sx={{ p: 1.5, mb: 1, border: 1, borderColor: "error.main" }}>
-          <Typography color="error" fontWeight={700}>Active Warrants ({lookup.warrants.length})</Typography>
-          {lookup.warrants.map((w: any, i: number) => (
-            <Typography key={i} variant="caption" display="block">{w.reason} — {w.issued_at?.substring(0, 10)}</Typography>
-          ))}
-        </Paper>
-      )}
-
-      {lookup?.records?.length > 0 && (
-        <Paper sx={{ p: 1.5 }}>
-          <Typography color="primary" fontWeight={700}>Criminal History ({lookup.records.length})</Typography>
-          {lookup.records.slice(0, 5).map((r: any, i: number) => (
-            <Box key={i} sx={{ py: 0.5, borderBottom: 1, borderColor: "divider" }}>
-              <Typography variant="caption" display="block"><b>{r.charge}</b> — {r.severity} — {r.convicted ? "Convicted" : "Pending"}</Typography>
-            </Box>
-          ))}
-        </Paper>
-      )}
-    </Box>
-  );
+  return <div>
+    <button style={s.btn} onClick={doScan} disabled={ld}>{ld?"Scanning...":"Scan Nearby Vehicle"}</button>
+    <div style={s.flex}><input style={s.inp} placeholder="Or type plate..." value={manual} onChange={e=>setManual(e.target.value)}/><button style={s.btnS} onClick={doManual}>Lookup</button></div>
+    {scan?.error&&<div style={{...s.card,color:"#f85149"}}>{scan.error}</div>}
+    {scan?.plate&&<div style={s.card}><div style={s.hdr}>Vehicle</div><div style={s.sub}><b>Plate:</b> {scan.plate}</div><div style={s.sub}><b>Model:</b> {scan.model||"?"}</div></div>}
+    {lookup?.registry?.plate&&<div style={{...s.card,borderColor:lookup.registry.stolen?"#f85149":lookup.registry.flagged?"#d29922":"#21262d"}}><div style={s.hdr}>Registry</div><div style={s.sub}><b>Owner:</b> {lookup.registry.owner_name||"?"}</div><div style={s.sub}><b>CID:</b> {lookup.registry.owner_citizenid||"N/A"}</div><div style={{...s.sub,color:lookup.registry.stolen?"#f85149":lookup.registry.flagged?"#d29922":"#3fb950"}}>{lookup.registry.stolen?"STOLEN":lookup.registry.flagged?`Flagged: ${lookup.registry.flag_reason}`:"Clean"}</div></div>}
+    {lookup?.warrants?.length>0&&<div style={{...s.card,borderColor:"#f85149"}}><div style={{...s.hdr,color:"#f85149"}}>Warrants ({lookup.warrants.length})</div>{lookup.warrants.map((w:any,i:number)=><div key={i} style={s.row}>{w.reason} — {w.issued_at?.substring(0,10)}</div>)}</div>}
+    {lookup?.records?.length>0&&<div style={s.card}><div style={s.hdr}>Records ({lookup.records.length})</div>{lookup.records.slice(0,5).map((r:any,i:number)=><div key={i} style={s.row}><b>{r.charge}</b> — {r.severity}</div>)}</div>}
+  </div>;
 }
 
 function Radar() {
-  const [radar, setRadar] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
-
-  async function checkSpeed() {
-    setLoading(true);
-    const r = await nuiFetch("cad:getSpeed", {});
-    setRadar(r);
-    if (r.speed && r.plate) {
-      proxy({ action: "speedLog", plate: r.plate, speed: r.speed, limit_speed: r.limit, location: r.location, officer_citizenid: "" });
-    }
-    setLoading(false);
-  }
-
-  return (
-    <Box>
-      <Button variant="contained" fullWidth onClick={checkSpeed} disabled={loading} sx={{ mb: 2 }}>
-        {loading ? <CircularProgress size={20} /> : "Check Speed"}
-      </Button>
-      {radar?.error && <Typography color="error">{radar.error}</Typography>}
-      {radar?.speed && (
-        <Paper sx={{ p: 2, textAlign: "center", border: 2, borderColor: radar.over ? "error.main" : "success.main" }}>
-          <Typography variant="h3" fontWeight={700} color={radar.over ? "error" : "success.main"}>{radar.speed}</Typography>
-          <Typography variant="body2" color="textSecondary">KM/H</Typography>
-          <Box sx={{ mt: 1 }}>
-            <Typography variant="body2"><b>Limit:</b> {radar.limit} km/h</Typography>
-            <Typography variant="body2"><b>Plate:</b> {radar.plate}</Typography>
-            <Typography variant="caption" color="textDisabled">{radar.location}</Typography>
-          </Box>
-        </Paper>
-      )}
-    </Box>
-  );
+  const [radar,setRadar]=useState<any>(null); const [ld,setLd]=useState(false);
+  async function check() { setLd(true); const r=await nuiFetch("cad:getSpeed",{}); setRadar(r); if(r.speed&&r.plate){proxy({action:"speedLog",plate:r.plate,speed:r.speed,limit_speed:r.limit,location:r.location,officer_citizenid:""});} setLd(false); }
+  return <div>
+    <button style={s.btn} onClick={check} disabled={ld}>{ld?"Checking...":"Check Speed"}</button>
+    {radar?.error&&<div style={{...s.card,color:"#f85149"}}>{radar.error}</div>}
+    {radar?.speed&&<div style={{...s.card,textAlign:"center",borderColor:radar.over?"#f85149":"#3fb950"}}><div style={{...s.big,color:radar.over?"#f85149":"#3fb950"}}>{radar.speed}</div><div style={s.sub}>KM/H</div><div style={{marginTop:8}}><div style={s.sub}><b>Limit:</b> {radar.limit} km/h</div><div style={s.sub}><b>Plate:</b> {radar.plate}</div><div style={s.sub}>{radar.location}</div></div></div>}
+  </div>;
 }

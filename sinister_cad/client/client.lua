@@ -14,6 +14,18 @@ RegisterNUICallback("cad_proxy", function(data, cb)
     end)
 end)
 
+RegisterNUICallback("checkAuth", function(_, cb)
+    local player = exports.qbx_core:GetPlayer(cache.playerId)
+    if not player then cb({ authorized = false, job = nil, type = nil }); return end
+    local job = player.PlayerData.job
+    cb({
+        authorized = true,
+        job = job.name,
+        jobType = job.type,
+        grade = job.grade and job.grade.level or 0,
+    })
+end)
+
 RegisterNUICallback("cad:scanPlate", function(_, cb)
     local ped = PlayerPedId(); local coords = GetEntityCoords(ped)
     local vehicle = GetClosestVehicle(coords.x, coords.y, coords.z, 15.0, 0, 71)
