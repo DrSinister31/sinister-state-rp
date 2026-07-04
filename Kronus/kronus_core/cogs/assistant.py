@@ -354,6 +354,88 @@ If the message is boring or doesn't deserve a response, say exactly: SKIP"""
             ephemeral=True
         )
 
+    @commands.Cog.listener()
+    async def on_raw_reaction_add(self, payload: discord.RawReactionActionEvent):
+        if payload.user_id == self.bot.user.id:
+            return
+
+        REACTION_MAP = {
+            "\u2705": "approved",
+            "\u274c": "denied",
+            "\u2753": "review",
+            "\u2754": "review",
+        }
+
+        emoji_name = str(payload.emoji)
+        outcome = REACTION_MAP.get(emoji_name)
+        if not outcome:
+            return
+
+        guild = self.bot.get_guild(payload.guild_id)
+        if not guild:
+            return
+
+        member = guild.get_member(payload.user_id)
+        if not member:
+            return
+
+        is_admin = self._is_admin_roles(member)
+        if not is_admin:
+            return
+
+        channel = guild.get_channel(payload.channel_id)
+        if not channel:
+            return
+
+        try:
+            message = await channel.fetch_message(payload.message_id)
+        except Exception:
+            return
+
+        labels = {"approved": "Approved", "denied": "Denied", "review": "Needs Review"}
+
+        self.supabase.table("kronus_logs").insert({
+            "service": "kronus-core",
+            "action": f"reaction_{outcome}",
+            "context_json": {
+                "reactor": str(payload.user_id),
+                "reactor_name": member.display_name,
+                "channel": channel.name,
+                "message_id": str(payload.message_id),
+                "message_preview": (message.content or "[no text]")[:200],
+                "message_author": str(message.author.id),
+            },
+            "result": outcome
+        }).execute()
+
+        embed_color = {"approved": 0x4CAF50, "denied": 0xe53935, "review": 0xFF9800}
+        embed = discord.Embed(
+            title=f"{emoji_name} {labels[outcome]}",
+            description=f"[Jump to message]({message.jump_url})",
+            color=embed_color[outcome],
+            timestamp=datetime.utcnow(),
+        )
+        embed.add_field(name="By", value=member.mention, inline=True)
+        embed.add_field(name="Channel", value=channel.mention, inline=True)
+        embed.set_footer(text="Kronus Reaction Tracker")
+
+        await channel.send(embed=embed, delete_after=60)
+
+    def _is_admin_roles(self, member: discord.Member) -> bool:
+        if self._is_owner(member.id):
+            return True
+        if not self._admin_role_id:
+            r = self.supabase.table("bot_config").select("value").eq("key", "staff_role_id").execute()
+            if r.data:
+                self._admin_role_id = int(r.data[0]["value"])
+        if member.get_role(self._admin_role_id):
+            return True
+        admin_names = {"Administrator", "Head Administrator", "Server Owner", "Co-Owner", "Staff"}
+        for role in member.roles:
+            if role.name in admin_names:
+                return True
+        return False
+
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(AssistantCog(bot))
