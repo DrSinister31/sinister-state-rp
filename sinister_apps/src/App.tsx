@@ -49,7 +49,7 @@ const s = {
 // ---- MAIN ----
 export default function App() {
   const [tab, setTab] = useState(0);
-  const labels = ["Banking", "Browser", "syntok"];
+  const labels = ["Banking", "Browser"];
   return (
     <div style={s.root}>
       <div style={s.tabs}>

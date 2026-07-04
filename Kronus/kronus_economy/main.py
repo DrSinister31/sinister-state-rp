@@ -37,6 +37,7 @@ from job_sync import sync_jobs_to_supabase
 from housing import process_insurance_renewals
 from auctions import generate_luxury_auctions, close_expired_auctions
 from hijacking import generate_trailer_contract
+from underworld import run_org_slot_check, ai_gang_war, run_drug_spot_cycle
 
 
 async def weekly_tax_discord_report():
@@ -108,6 +109,9 @@ async def main():
     scheduler.add_job(generate_luxury_auctions, "interval", hours=4)
     scheduler.add_job(close_expired_auctions, "interval", hours=1)
     scheduler.add_job(generate_trailer_contract, "interval", minutes=45)
+    scheduler.add_job(run_org_slot_check, "interval", minutes=30)
+    scheduler.add_job(ai_gang_war, "interval", minutes=15)
+    scheduler.add_job(run_drug_spot_cycle, "interval", minutes=5)
 
     await sync_jobs_to_supabase()
 
