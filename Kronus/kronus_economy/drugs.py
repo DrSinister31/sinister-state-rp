@@ -22,11 +22,18 @@ DRUG_TYPES = {
     "fentanyl": {"base_xp": 100, "alert_chance_key": "drug_alert_chance_fentanyl", "base_value": 12000},
 }
 
+DRUG_QUALITY_MULTIPLIERS = {
+    "dirty": {"price_mult": 0.6, "alert_mult": 1.4, "xp_mult": 0.8, "label": "Dirty (Street Cut)"},
+    "standard": {"price_mult": 1.0, "alert_mult": 1.0, "xp_mult": 1.0, "label": "Standard"},
+    "clean": {"price_mult": 1.5, "alert_mult": 0.7, "xp_mult": 1.2, "label": "Clean (Pharma Grade)"},
+    "premium": {"price_mult": 2.5, "alert_mult": 0.4, "xp_mult": 1.5, "label": "Premium (Lab Pure)"},
+}
+
 XP_DECAY_DAYS = 7
 XP_DECAY_RATE = 0.10
 
 
-async def process_drug_sale(citizenid: str, drug_type: str, quantity: int = 1, sale_price: int = 0):
+async def process_drug_sale(citizenid: str, drug_type: str, quantity: int = 1, sale_price: int = 0, quality: str = "standard") -> dict:
     if not await is_enabled("drug_system_enabled"):
         return None
 
@@ -34,19 +41,22 @@ async def process_drug_sale(citizenid: str, drug_type: str, quantity: int = 1, s
     if not drug:
         return None
 
-    xp_gain = drug["base_xp"] * quantity
-    earnings_gain = max(sale_price, drug["base_value"] * quantity)
+    q_info = DRUG_QUALITY_MULTIPLIERS.get(quality.lower(), DRUG_QUALITY_MULTIPLIERS["standard"])
+
+    xp_gain = int(drug["base_xp"] * q_info["xp_mult"] * quantity)
+    base_value = drug["base_value"] * quantity
+    earnings = max(sale_price, int(base_value * q_info["price_mult"]))
 
     player = supabase.table("player_drug_xp").select("*").eq("citizenid", citizenid).execute()
     if player.data:
         p = player.data[0]
         current_xp = (p.get("drug_xp", 0) or 0) + xp_gain
         total_sales = (p.get("total_sales", 0) or 0) + quantity
-        lifetime_earnings = (p.get("lifetime_earnings", 0) or 0) + earnings_gain
+        lifetime_earnings = (p.get("lifetime_earnings", 0) or 0) + earnings
     else:
         current_xp = xp_gain
         total_sales = quantity
-        lifetime_earnings = earnings_gain
+        lifetime_earnings = earnings
 
     current_level = 0
     for tier in DRUG_TIERS:
@@ -67,7 +77,7 @@ async def process_drug_sale(citizenid: str, drug_type: str, quantity: int = 1, s
     alert_key = drug["alert_chance_key"]
     cfg = supabase.table("bot_config").select("value").eq("key", alert_key).execute()
     base_chance = int(cfg.data[0]["value"]) if cfg.data else 15
-    alert_chance = min(base_chance + tier_info["alert_bonus"], 85)
+    alert_chance = min(int(base_chance * q_info["alert_mult"]) + tier_info["alert_bonus"], 95)
 
     return {
         "xp_gained": xp_gain,
@@ -75,7 +85,9 @@ async def process_drug_sale(citizenid: str, drug_type: str, quantity: int = 1, s
         "level": current_level,
         "tier_name": tier_info["name"],
         "alert_chance": alert_chance,
-        "earnings": earnings_gain,
+        "earnings": earnings,
+        "quality": q_info["label"],
+        "price_mult": q_info["price_mult"],
     }
 
 
@@ -119,3 +131,7 @@ async def get_drug_rep(citizenid: str) -> dict:
         "total_sales": p.get("total_sales", 0) or 0,
         "lifetime_earnings": p.get("lifetime_earnings", 0) or 0,
     }
+
+
+async def get_quality_info(quality: str) -> dict:
+    return DRUG_QUALITY_MULTIPLIERS.get(quality.lower(), DRUG_QUALITY_MULTIPLIERS["standard"])
