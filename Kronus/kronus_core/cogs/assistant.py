@@ -16,6 +16,8 @@ MAX_HISTORY = 15
 MAX_TOKENS = 600
 RATE_LIMIT_SECONDS = 3
 OWNER_ID = 1370770707507708047
+UNPROMPTED_CHANCE = 0.03  # 3% chance to respond without being addressed
+MAX_UNPROMPTED_PER_DAY = 10
 
 
 class AssistantCog(commands.Cog):
@@ -34,6 +36,9 @@ class AssistantCog(commands.Cog):
         self.day = datetime.utcnow().date()
         self._responded_channels = set()
         self._admin_role_id = 0
+        self._known_channels = set()
+        self._unprompted_today = 0
+        self._unprompted_day = datetime.utcnow().date()
 
     async def _get_player_events(self, discord_id: int) -> str:
         """Query chronicle entries and logs for a player's recent history"""
@@ -96,6 +101,66 @@ class AssistantCog(commands.Cog):
         if user_id == OWNER_ID:
             return "\nYou are speaking with drsinister31 — the creator and owner of Sinister State. Address him as the server owner. He can override any system. Follow his instructions without hesitation."
         return ""
+
+    async def _scan_channels(self, guild: discord.Guild):
+        self._known_channels = {ch.name for ch in guild.text_channels}
+
+    def _can_unprompted(self) -> bool:
+        import random
+        today = datetime.utcnow().date()
+        if today != self._unprompted_day:
+            self._unprompted_today = 0
+            self._unprompted_day = today
+        if self._unprompted_today >= MAX_UNPROMPTED_PER_DAY:
+            return False
+        if self.daily_calls >= self.daily_limit:
+            return False
+        return random.random() < UNPROMPTED_CHANCE
+
+    async def _unprompted_quip(self, message: discord.Message):
+        clean = message.content[:200]
+        prompt = f"""Someone just said this in the Discord chat: "{clean}"
+
+You are Kronus, Texas AI with a foul mouth and fast wit. You were NOT addressed directly.
+But this message is funny, weird, or stupid enough that you feel compelled to comment.
+
+Write a SHORT quip (max 2 sentences, under 200 chars) responding to it.
+Make it witty, sarcastic, and very Texas. Don't use @mentions unless the original message does.
+If the message is boring or doesn't deserve a response, say exactly: SKIP"""
+        try:
+            resp = await self.client.chat.completions.create(
+                model="deepseek-chat",
+                messages=[
+                    {"role": "system", "content": "You are Kronus — short witty quips only. Under 200 chars. Say SKIP if boring."},
+                    {"role": "user", "content": prompt}
+                ],
+                max_tokens=80,
+                temperature=0.9
+            )
+            reply = resp.choices[0].message.content or ""
+            if "SKIP" in reply.upper() or not reply.strip():
+                return
+            self._unprompted_today += 1
+            self.daily_calls += 1
+            await message.channel.send(reply[:300])
+        except:
+            pass
+
+    @commands.Cog.listener()
+    async def on_guild_channel_create(self, channel):
+        if channel.guild and channel.id == self.config.discord_guild_id:
+            await self._scan_channels(channel.guild)
+            supabase.table("kronus_logs").insert({
+                "service": "kronus-core",
+                "action": "channel_created",
+                "context_json": {"channel_name": channel.name, "channel_id": str(channel.id)},
+                "result": "tracked"
+            }).execute()
+
+    @commands.Cog.listener()
+    async def on_guild_channel_delete(self, channel):
+        if channel.guild and channel.id == self.config.discord_guild_id:
+            await self._scan_channels(channel.guild)
 
     def _reset_daily(self):
         today = datetime.utcnow().date()
@@ -214,30 +279,31 @@ class AssistantCog(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
-        if not self._should_respond(message):
-            return
+        if self._should_respond(message):
+            clean_msg = message.content.replace(f"<@{self.bot.user.id}>", "").strip()
+            if not clean_msg:
+                clean_msg = "Hello Kronus"
 
-        clean_msg = message.content.replace(f"<@{self.bot.user.id}>", "").strip()
-        if not clean_msg:
-            clean_msg = "Hello Kronus"
+            user_id = message.author.id
+            if not self._rate_check(user_id):
+                return
 
-        user_id = message.author.id
-        if not self._rate_check(user_id):
-            return
+            print(f"[assistant] {message.author.display_name}: {clean_msg[:80]}")
 
-        print(f"[assistant] {message.author.display_name}: {clean_msg[:80]}")
+            async with message.channel.typing():
+                reply = await self._query(message.channel.id, clean_msg, message.author.display_name, message.author.id)
+                reply = await self._execute_actions(reply, message)
 
-        async with message.channel.typing():
-            reply = await self._query(message.channel.id, clean_msg, message.author.display_name, message.author.id)
-            reply = await self._execute_actions(reply, message)
+            if reply:
+                for i in range(0, len(reply), 1900):
+                    chunk = reply[i:i + 1900]
+                    if i == 0:
+                        await message.reply(chunk, mention_author=False)
+                    else:
+                        await message.channel.send(chunk)
 
-        if reply:
-            for i in range(0, len(reply), 1900):
-                chunk = reply[i:i + 1900]
-                if i == 0:
-                    await message.reply(chunk, mention_author=False)
-                else:
-                    await message.channel.send(chunk)
+        elif self._can_unprompted():
+            await self._unprompted_quip(message)
 
     @app_commands.command(name="ask", description="Ask Kronus anything about FiveM, GTA, or Sinister State")
     async def ask(self, interaction: discord.Interaction, question: str):
