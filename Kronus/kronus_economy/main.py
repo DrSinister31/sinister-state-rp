@@ -36,6 +36,7 @@ from payroll import run_universal_payroll
 from job_sync import sync_jobs_to_supabase
 from housing import process_insurance_renewals
 from auctions import generate_luxury_auctions, close_expired_auctions
+from hijacking import generate_trailer_contract
 
 
 async def weekly_tax_discord_report():
@@ -106,6 +107,7 @@ async def main():
     scheduler.add_job(process_insurance_renewals, "interval", hours=6)
     scheduler.add_job(generate_luxury_auctions, "interval", hours=4)
     scheduler.add_job(close_expired_auctions, "interval", hours=1)
+    scheduler.add_job(generate_trailer_contract, "interval", minutes=45)
 
     await sync_jobs_to_supabase()
 
