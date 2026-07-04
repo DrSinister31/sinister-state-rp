@@ -78,3 +78,46 @@ async def run_ai_density_update():
         "source": "kronus_economy",
         "status": "pending"
     }).execute()
+
+
+async def run_ai_worth_ratio():
+    if not await is_enabled("ai_sector_throttle_enabled"):
+        return
+
+    players = supabase.table("player_economy").select("citizenid, cash, bank").eq("wealth_bracket", "not_null").execute()
+    total_worth = 0
+    active_count = 0
+    for p in (players.data or []):
+        w = (p.get("cash", 0) or 0) + (p.get("bank", 0) or 0)
+        if w > 0:
+            total_worth += w
+            active_count += 1
+
+    avg_player_worth = total_worth / max(active_count, 1)
+
+    ai_businesses = supabase.table("businesses").select("revenue").eq("ai_placeholder", True).execute()
+    total_ai_revenue = sum((b.get("revenue", 0) or 0) for b in (ai_businesses.data or []))
+
+    ai_count = supabase.table("businesses").select("id", count="exact").eq("ai_placeholder", True).execute()
+    ai_biz_count = max(ai_count.count, 1) if ai_count else 1
+    avg_ai_revenue = total_ai_revenue / ai_biz_count
+
+    ratio = avg_player_worth / max(avg_ai_revenue, 1)
+    sector_throttle = min(1.0, 1.0 / max(ratio, 1.0)) if ratio > 0 else 1.0
+
+    supabase.table("kronus_metrics").insert({
+        "metric_name": "ai_worth_ratio",
+        "value": float(ratio),
+        "metadata_json": {
+            "avg_player_worth": avg_player_worth,
+            "avg_ai_revenue": avg_ai_revenue,
+            "sector_throttle": sector_throttle,
+        },
+        "recorded_at": "now()"
+    }).execute()
+
+    supabase.table("rcon_commands").insert({
+        "command": f"set sinister_ai:worth_ratio {ratio:.4f}; set sinister_ai:sector_throttle {sector_throttle:.4f}",
+        "source": "kronus_economy",
+        "status": "pending"
+    }).execute()

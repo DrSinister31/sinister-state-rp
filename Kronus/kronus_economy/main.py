@@ -18,7 +18,7 @@ from processor import (
 )
 from expenses import bill_weekly_expenses
 from pnl import send_weekly_pnl
-from ai_density import run_ai_density_update
+from ai_density import run_ai_density_update, run_ai_worth_ratio
 from perks import run_wealth_perks
 from ai_business import run_ai_business_check
 from taxation import collect_income_tax, collect_business_tax, collect_sales_tax
@@ -29,6 +29,7 @@ from arms import rotate_arms_stock
 from chopshop import decay_chop_heat
 from fronts import run_front_audit_check
 from gangs import process_gang_income
+from tariffs import update_luxury_tariffs
 
 
 async def weekly_tax_discord_report():
@@ -78,6 +79,7 @@ async def main():
     scheduler.add_job(bill_weekly_expenses, "cron", day_of_week="sun", hour=0)
     scheduler.add_job(send_weekly_pnl, "cron", day_of_week="sun", hour=1)
     scheduler.add_job(run_ai_density_update, "interval", minutes=5)
+    scheduler.add_job(run_ai_worth_ratio, "interval", minutes=15)
     scheduler.add_job(run_wealth_perks, "interval", hours=6)
     scheduler.add_job(run_ai_business_check, "interval", hours=1)
     scheduler.add_job(collect_income_tax, "interval", hours=1)
@@ -90,6 +92,7 @@ async def main():
     scheduler.add_job(decay_chop_heat, "interval", hours=1)
     scheduler.add_job(run_front_audit_check, "interval", hours=6)
     scheduler.add_job(process_gang_income, "interval", hours=1)
+    scheduler.add_job(update_luxury_tariffs, "interval", hours=1)
 
     supabase.table("kronus_logs").insert({
         "service": "kronus-economy",

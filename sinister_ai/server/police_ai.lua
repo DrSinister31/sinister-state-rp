@@ -88,6 +88,42 @@ end
 
 AddEventHandler("onResourceStart", function(resource)
     if resource == GetCurrentResourceName() then
-        print("^2[sinister_ai] ^7Police AI ready — density-aware")
+        print("^2[sinister_ai] ^7Police AI ready — density-aware + cop fallback")
+    end
+end)
+
+-- =====================================================================
+-- VANILLA COP AI FALLBACK
+-- When LEO duty count < threshold, enable GTA V native police
+-- When LEO count >= threshold, disable vanilla cops
+-- =====================================================================
+local COP_FALLBACK_THRESHOLD = 3
+local vanillaCopsEnabled = false
+
+Citizen.CreateThread(function()
+    if not AI_ENABLED then return end
+    while true do
+        Wait(15000)
+
+        local leoCount = 0
+        local players = GetActivePlayers()
+        for _, pid in ipairs(players) do
+            local p = exports.qbx_core:GetPlayer(pid)
+            if p and p.PlayerData.job and p.PlayerData.job.type == "leo" and p.PlayerData.job.onduty then
+                leoCount = leoCount + 1
+            end
+        end
+
+        if leoCount < COP_FALLBACK_THRESHOLD and not vanillaCopsEnabled then
+            SetDispatchCopsForPlayer(PlayerId(), true)
+            SetMaxWantedLevel(5)
+            vanillaCopsEnabled = true
+            print("^3[sinister_ai] ^7Vanilla cop AI ENABLED — LEO count: " .. leoCount)
+        elseif leoCount >= COP_FALLBACK_THRESHOLD and vanillaCopsEnabled then
+            SetMaxWantedLevel(0)
+            ClearPlayerWantedLevel(PlayerId())
+            vanillaCopsEnabled = false
+            print("^2[sinister_ai] ^7Vanilla cop AI DISABLED — LEO count: " .. leoCount)
+        end
     end
 end)

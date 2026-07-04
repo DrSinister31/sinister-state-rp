@@ -76,9 +76,10 @@ RegisterNetEvent("sinister_ai:despawnAll", function(ai_type)
 end)
 
 -- === DENSITY CONTROLLER ===
--- Reads convars set by Kronus via RCON bridge
 AI_ENABLED = true
 AI_DENSITY = 1.0
+AI_WORTH_RATIO = 1.0
+SECTOR_THROTTLE = 1.0
 
 Citizen.CreateThread(function()
     while true do
@@ -86,13 +87,17 @@ Citizen.CreateThread(function()
         AI_ENABLED = (toggle == "true")
         local density = GetConvar("sinister_ai:global_density", "1.0")
         AI_DENSITY = tonumber(density) or 1.0
+        local ratio = GetConvar("sinister_ai:worth_ratio", "1.0")
+        AI_WORTH_RATIO = tonumber(ratio) or 1.0
+        local throttle = GetConvar("sinister_ai:sector_throttle", "1.0")
+        SECTOR_THROTTLE = tonumber(throttle) or 1.0
         Wait(10000)
     end
 end)
 
 function GetDensityCapped(count)
     if not AI_ENABLED then return 0 end
-    local capped = math.floor(count * AI_DENSITY)
+    local capped = math.floor(count * AI_DENSITY * SECTOR_THROTTLE)
     return math.max(0, capped)
 end
 

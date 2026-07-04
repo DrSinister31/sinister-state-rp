@@ -11,6 +11,7 @@ server_scripts {
     'server/police_ai.lua',
     'server/criminal_ai.lua',
     'server/civilian_ai.lua',
+    'server/medical_ai.lua',
 }
 
 client_scripts {
