@@ -269,29 +269,55 @@ If the message is boring or doesn't deserve a response, say exactly: SKIP"""
         if not guild:
             return reply
 
+        def _find_channel(target: str):
+            target_lower = target.strip().lower().replace("#", "").replace("-", "").replace("_", "").replace(" ", "")
+            for ch in guild.text_channels:
+                ch_name = ch.name.lower().replace("-", "").replace("_", "").replace(" ", "")
+                if ch_name == target_lower:
+                    return ch
+            for ch in guild.text_channels:
+                if target.strip().lower().replace("#", "") in ch.name.lower():
+                    return ch
+            return None
+
         clean = reply
-        for m in re.finditer(r'\[ACTION:(\w+):([^:]+)(?::(.+?))?\]', reply):
+        for m in re.finditer(r'\[ACTION:(\w+):([^:\]]+)(?::(.+?))?\]', reply):
             action_type = m.group(1)
             target = m.group(2).strip()
             body = (m.group(3) or "").strip()
             try:
                 if action_type == "announce":
-                    for ch in guild.text_channels:
-                        if ch.name == "announcements":
-                            await ch.send(f"@everyone\n\n{body[:2000]}")
-                            break
+                    ch = _find_channel("announcements")
+                    if ch:
+                        await ch.send(f"@everyone\n\n{body[:2000]}")
                 elif action_type == "send":
-                    for ch in guild.text_channels:
-                        if ch.name == target:
-                            await ch.send(body[:2000])
-                            break
+                    ch = _find_channel(target)
+                    if ch:
+                        await ch.send(body[:2000])
+                        await message.channel.send(f"> Posted to {ch.mention}", delete_after=10)
+                    else:
+                        await message.channel.send(f"> Couldn't find channel `{target}`. Available: {', '.join([c.name for c in guild.text_channels[:10]])}...", delete_after=15)
                 elif action_type == "mention":
+                    found = False
                     for member in guild.members:
                         if member.name == target or member.display_name == target:
                             await message.channel.send(f"<@{member.id}> {body[:1500]}")
+                            found = True
                             break
+                    if not found:
+                        for member in guild.members:
+                            if target.lower() in member.name.lower() or target.lower() in member.display_name.lower():
+                                await message.channel.send(f"<@{member.id}> {body[:1500]}")
+                                found = True
+                                break
             except Exception as e:
-                print(f"[assistant] action fail [{action_type}]: {e}")
+                print(f"[assistant] action fail [{action_type} {target}]: {e}")
+                self.supabase.table("kronus_logs").insert({
+                    "service": "kronus-core",
+                    "action": "action_failed",
+                    "context_json": {"action_type": action_type, "target": target, "error": str(e)[:200]},
+                    "result": "failed"
+                }).execute()
             clean = clean.replace(m.group(0), "")
         return clean.strip()
 
