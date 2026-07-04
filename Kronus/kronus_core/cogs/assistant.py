@@ -236,6 +236,23 @@ If the message is boring or doesn't deserve a response, say exactly: SKIP"""
         self.last_call[user_id or channel_id] = now
         return reply
 
+    def _strip_rp_actions(self, text: str) -> str:
+        import re
+        # Remove lines that are purely RP action (start and end with *)
+        text = re.sub(r'^\*[^*]+\*\s*$', '', text, flags=re.MULTILINE)
+        # Remove multi-word RP actions inline (*facepalms so hard it echoes*)
+        text = re.sub(r'\*(?:\w+\s+){2,}[\w\s\-\—\—,"\'.!?]*\*', '', text)
+        # Remove RP scene dividers (--- used as scene breaks)
+        text = re.sub(r'^---+\s*$', '', text, flags=re.MULTILINE)
+        # Remove signature blocks (*Signed,* / *Kronus — The AI...*)
+        text = re.sub(r'^\*\*?Signed,?\*\*?\s*$', '', text, flags=re.MULTILINE)
+        text = re.sub(r'^\*Kronus\s*—[^*]*\*\s*$', '', text, flags=re.MULTILINE)
+        # Remove emoji-header RP sections (lines starting with emoji that are titles)
+        text = re.sub(r'^[📜🖥️⚙️🔧🎯🔫💀🔥⚠️📋🔍📡]\s*\*{1,2}[^*]+\*{1,2}\s*$', '', text, flags=re.MULTILINE)
+        # Collapse multiple blank lines
+        text = re.sub(r'\n{3,}', '\n\n', text)
+        return text.strip()
+
     async def _execute_actions(self, reply: str, message: discord.Message) -> str:
         guild = message.guild
         if not guild:
@@ -306,6 +323,7 @@ If the message is boring or doesn't deserve a response, say exactly: SKIP"""
             async with message.channel.typing():
                 reply = await self._query(message.channel.id, clean_msg, message.author.display_name, message.author.id)
                 reply = await self._execute_actions(reply, message)
+                reply = self._strip_rp_actions(reply)
 
             if reply:
                 for i in range(0, len(reply), 1900):
@@ -325,6 +343,7 @@ If the message is boring or doesn't deserve a response, say exactly: SKIP"""
             return
         await interaction.response.defer()
         reply = await self._query(interaction.channel_id, question, interaction.user.display_name, interaction.user.id)
+        reply = self._strip_rp_actions(reply)
         await interaction.followup.send(reply[:2000])
 
     @app_commands.command(name="ping", description="Check if Kronus is online")
