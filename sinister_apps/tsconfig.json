@@ -16,6 +16,6 @@
       "@npwd/types": ["./node_modules/@npwd/types"]
     }
   },
-  "include": ["src/**/*", "npwd.config.ts", "index.tsx"],
+  "include": ["src/**/*", "npwd.config.ts"],
   "exclude": ["node_modules", "web"]
 }
