@@ -120,6 +120,7 @@ async def main():
         "cogs.chronicles",
         "cogs.assistant",
         "cogs.tickets",
+        "cogs.staff",
     ]
     for cog in cogs:
         try:
