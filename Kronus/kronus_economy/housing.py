@@ -82,7 +82,8 @@ async def purchase_insurance(holder_cid: str, policy_type: str) -> dict:
 
     template = INSURANCE_TYPES.get(policy_type.lower())
     if not template:
-        return {"error": f"Invalid type. Options: {list(INSURANCE_TYPES.keys())}")
+        opts = list(INSURANCE_TYPES.keys())
+        return {"error": "Invalid type. Options: " + str(opts)}
 
     existing = supabase.table("insurance_policies").select("id").eq("policy_holder_citizenid", holder_cid).eq("policy_type", policy_type).eq("active", True).execute()
     if existing.data:
