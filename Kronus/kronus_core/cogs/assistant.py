@@ -35,6 +35,42 @@ class AssistantCog(commands.Cog):
         self._responded_channels = set()
         self._admin_role_id = 0
 
+    async def _get_player_events(self, discord_id: int) -> str:
+        """Query chronicle entries and logs for a player's recent history"""
+        try:
+            r = self.supabase.table("discord_players").select("citizenid").eq("discord_id", discord_id).execute()
+            if not r.data:
+                return ""
+            cid = r.data[0]["citizenid"]
+
+            chronicles = self.supabase.table("chronicle_entries").select("score,title,description").contains("involved_discord_ids", [discord_id]).order("created_at", desc=True).limit(3).execute()
+
+            logs = self.supabase.table("kronus_logs").select("action,context_json,created_at").eq("service", "kronus-ai").order("created_at", desc=True).limit(5).execute()
+
+            parts = []
+            if chronicles.data:
+                for c in chronicles.data:
+                    parts.append(f"- Chronicle: {c['title']} (score: {c['score']}/30, {c.get('description','')[:100]})")
+
+            if not parts:
+                return ""
+            return "Recent events involving this player:\n" + "\n".join(parts)
+        except:
+            return ""
+
+    async def _get_recent_chronicles(self) -> str:
+        """Get last 5 chronicle entries for context"""
+        try:
+            r = self.supabase.table("chronicle_entries").select("score,title,description").order("created_at", desc=True).limit(5).execute()
+            if not r.data:
+                return ""
+            parts = []
+            for c in r.data:
+                parts.append(f"- {c['title']} (score: {c['score']}/30)")
+            return "\nRecent world events:\n" + "\n".join(parts)
+        except:
+            return ""
+
     def _is_owner(self, user_id: int) -> bool:
         return user_id == OWNER_ID
 
@@ -87,7 +123,19 @@ class AssistantCog(commands.Cog):
     async def _query(self, channel_id: int, user_msg: str, username: str, user_id: int = 0) -> str:
         self._clean_history(channel_id)
         owner_ctx = self._get_user_context(user_id)
-        system_prompt = SYSTEM_PROMPT + owner_ctx
+
+        chronicles_ctx = await self._get_recent_chronicles()
+        player_ctx = await self._get_player_events(user_id)
+
+        extra = ""
+        if owner_ctx:
+            extra += owner_ctx + "\n"
+        if chronicles_ctx:
+            extra += chronicles_ctx + "\n"
+        if player_ctx:
+            extra += player_ctx + "\n"
+
+        system_prompt = SYSTEM_PROMPT + extra
         messages = [{"role": "system", "content": system_prompt}]
         messages.extend(self.history[channel_id])
         messages.append({"role": "user", "content": f"{username}: {user_msg}"})
