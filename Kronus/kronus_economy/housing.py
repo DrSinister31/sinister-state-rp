@@ -34,8 +34,8 @@ async def officiate_marriage(spouse1_cid: str, spouse2_cid: str, officiant: str 
 
     char1 = supabase.table("characters").select("first_name, last_name").eq("citizenid", spouse1_cid).execute()
     char2 = supabase.table("characters").select("first_name, last_name").eq("citizenid", spouse2_cid).execute()
-    name1 = f"{char1.data[0].get('first_name','')} {char1.data[0].get('last_name','')}".strip() if char1.data else spouse1_cid
-    name2 = f"{char2.data[0].get('first_name','')} {char2.data[0].get('last_name','')}".strip() if char2.data else spouse2_cid
+    name1 = f"{char1.data[0].get('first_name','')} {char1.data[0].get('last_name','')}" .strip() if char1.data else spouse1_cid
+    name2 = f"{char2.data[0].get('first_name','')} {char2.data[0].get('last_name','')}" .strip() if char2.data else spouse2_cid
 
     supabase.table("chronicle_entries").insert({
         "score": 5,
@@ -82,7 +82,7 @@ async def purchase_insurance(holder_cid: str, policy_type: str) -> dict:
 
     template = INSURANCE_TYPES.get(policy_type.lower())
     if not template:
-        return {"error": f"Invalid type. Options: {list(INSURANCE_TYPES.keys())}")
+        return {"error": f"Invalid type. Options: {list(INSURANCE_TYPES.keys())}"}
 
     existing = supabase.table("insurance_policies").select("id").eq("policy_holder_citizenid", holder_cid).eq("policy_type", policy_type).eq("active", True).execute()
     if existing.data:
@@ -280,3 +280,4 @@ async def get_active_listings(property_type: str = None) -> list:
         q = q.eq("property_type", property_type)
     r = q.order("listed_at", desc=True).execute()
     return r.data or []
+
