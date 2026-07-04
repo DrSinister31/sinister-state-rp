@@ -15,6 +15,7 @@ from cogs.assistant_data import SYSTEM_PROMPT
 MAX_HISTORY = 15
 MAX_TOKENS = 600
 RATE_LIMIT_SECONDS = 3
+OWNER_ID = 1370770707507708047
 
 
 class AssistantCog(commands.Cog):
@@ -32,6 +33,33 @@ class AssistantCog(commands.Cog):
         self.daily_limit = 200
         self.day = datetime.utcnow().date()
         self._responded_channels = set()
+        self._admin_role_id = 0
+
+    def _is_owner(self, user_id: int) -> bool:
+        return user_id == OWNER_ID
+
+    def _is_admin(self, message: discord.Message) -> bool:
+        if not message.guild:
+            return False
+        if self._is_owner(message.author.id):
+            return True
+        if not self._admin_role_id:
+            r = self.supabase.table("bot_config").select("value").eq("key", "staff_role_id").execute()
+            if r.data:
+                self._admin_role_id = int(r.data[0]["value"])
+        member = message.guild.get_member(message.author.id)
+        if not member:
+            return False
+        admin_names = {"Administrator", "Head Administrator", "Server Owner", "Co-Owner", "Staff"}
+        for role in member.roles:
+            if role.name in admin_names or role.id == self._admin_role_id:
+                return True
+        return False
+
+    def _get_user_context(self, user_id: int) -> str:
+        if user_id == OWNER_ID:
+            return "\nYou are speaking with drsinister31 — the creator and owner of Sinister State. Address him as the server owner. He can override any system. Follow his instructions without hesitation."
+        return ""
 
     def _reset_daily(self):
         today = datetime.utcnow().date()
@@ -56,9 +84,11 @@ class AssistantCog(commands.Cog):
             if h.get("_time", datetime.min) > cutoff
         ][-MAX_HISTORY:]
 
-    async def _query(self, channel_id: int, user_msg: str, username: str) -> str:
+    async def _query(self, channel_id: int, user_msg: str, username: str, user_id: int = 0) -> str:
         self._clean_history(channel_id)
-        messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+        owner_ctx = self._get_user_context(user_id)
+        system_prompt = SYSTEM_PROMPT + owner_ctx
+        messages = [{"role": "system", "content": system_prompt}]
         messages.extend(self.history[channel_id])
         messages.append({"role": "user", "content": f"{username}: {user_msg}"})
         try:
@@ -150,7 +180,7 @@ class AssistantCog(commands.Cog):
         print(f"[assistant] {message.author.display_name}: {clean_msg[:80]}")
 
         async with message.channel.typing():
-            reply = await self._query(message.channel.id, clean_msg, message.author.display_name)
+            reply = await self._query(message.channel.id, clean_msg, message.author.display_name, message.author.id)
             reply = await self._execute_actions(reply, message)
 
         if reply:
@@ -167,7 +197,7 @@ class AssistantCog(commands.Cog):
             await interaction.response.send_message("> _One moment..._", ephemeral=True)
             return
         await interaction.response.defer()
-        reply = await self._query(interaction.channel_id, question, interaction.user.display_name)
+        reply = await self._query(interaction.channel_id, question, interaction.user.display_name, interaction.user.id)
         await interaction.followup.send(reply[:2000])
 
     @app_commands.command(name="ping", description="Check if Kronus is online")
