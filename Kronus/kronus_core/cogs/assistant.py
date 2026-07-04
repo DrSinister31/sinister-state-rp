@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 import discord
 from discord import app_commands
 from discord.ext import commands
-from openai import OpenAI
+from openai import AsyncOpenAI
 from shared.config import Config
 from shared.supabase_client import get_supabase
 from cogs.assistant_data import SYSTEM_PROMPT
@@ -22,7 +22,7 @@ class AssistantCog(commands.Cog):
         self.bot = bot
         self.config = Config.from_env()
         self.supabase = get_supabase(self.config)
-        self.client = OpenAI(
+        self.client = AsyncOpenAI(
             api_key=self.config.deepseek_api_key,
             base_url="https://api.deepseek.com/v1"
         )
@@ -56,13 +56,13 @@ class AssistantCog(commands.Cog):
             if h.get("_time", datetime.min) > cutoff
         ][-MAX_HISTORY:]
 
-    def _query(self, channel_id: int, user_msg: str, username: str) -> str:
+    async def _query(self, channel_id: int, user_msg: str, username: str) -> str:
         self._clean_history(channel_id)
         messages = [{"role": "system", "content": SYSTEM_PROMPT}]
         messages.extend(self.history[channel_id])
         messages.append({"role": "user", "content": f"{username}: {user_msg}"})
         try:
-            resp = self.client.chat.completions.create(
+            resp = await self.client.chat.completions.create(
                 model="deepseek-chat",
                 messages=messages,
                 max_tokens=MAX_TOKENS,
@@ -150,7 +150,7 @@ class AssistantCog(commands.Cog):
         print(f"[assistant] {message.author.display_name}: {clean_msg[:80]}")
 
         async with message.channel.typing():
-            reply = self._query(message.channel.id, clean_msg, message.author.display_name)
+            reply = await self._query(message.channel.id, clean_msg, message.author.display_name)
             reply = await self._execute_actions(reply, message)
 
         if reply:
@@ -167,7 +167,7 @@ class AssistantCog(commands.Cog):
             await interaction.response.send_message("> _One moment..._", ephemeral=True)
             return
         await interaction.response.defer()
-        reply = self._query(interaction.channel_id, question, interaction.user.display_name)
+        reply = await self._query(interaction.channel_id, question, interaction.user.display_name)
         await interaction.followup.send(reply[:2000])
 
     @app_commands.command(name="ping", description="Check if Kronus is online")
