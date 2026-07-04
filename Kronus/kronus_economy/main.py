@@ -21,6 +21,30 @@ from pnl import send_weekly_pnl
 from ai_density import run_ai_density_update
 from perks import run_wealth_perks
 from ai_business import run_ai_business_check
+from taxation import collect_income_tax, collect_business_tax, collect_sales_tax
+from budget import allocate_city_budget
+from tax_report import generate_weekly_tax_report, format_tax_report_embed
+
+
+async def weekly_tax_discord_report():
+    report = await generate_weekly_tax_report()
+    embed = format_tax_report_embed(report)
+
+    supabase.table("kronus_logs").insert({
+        "service": "kronus-economy",
+        "action": "weekly_tax_report",
+        "context_json": {"report": report, "embed": embed},
+        "result": "generated"
+    }).execute()
+
+    supabase.table("chronicle_entries").insert({
+        "score": 20,
+        "title": embed["title"],
+        "description": embed["description"],
+        "involved_citizenids": [],
+        "involved_discord_ids": [],
+        "volume_index": 0
+    }).execute()
 
 config = Config.from_env()
 supabase = get_supabase(config)
@@ -51,6 +75,11 @@ async def main():
     scheduler.add_job(run_ai_density_update, "interval", minutes=5)
     scheduler.add_job(run_wealth_perks, "interval", hours=6)
     scheduler.add_job(run_ai_business_check, "interval", hours=1)
+    scheduler.add_job(collect_income_tax, "interval", hours=1)
+    scheduler.add_job(collect_business_tax, "interval", hours=2)
+    scheduler.add_job(collect_sales_tax, "interval", hours=1)
+    scheduler.add_job(allocate_city_budget, "interval", hours=6)
+    scheduler.add_job(weekly_tax_discord_report, "cron", day_of_week="sun", hour=2)
 
     supabase.table("kronus_logs").insert({
         "service": "kronus-economy",
