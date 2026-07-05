@@ -383,7 +383,107 @@ If the message is boring or doesn't deserve a response, say exactly: SKIP"""
         reply = self._strip_rp_actions(reply)
         await interaction.followup.send(reply[:2000])
 
-    @app_commands.command(name="ping", description="Check if Kronus is online")
+    @app_commands.command(name="guide", description="Get a guide — jobs, commands, criminal, housing, gangs, tutorials")
+    @app_commands.describe(topic="Which guide? (jobs, commands, criminal, housing, gangs, tutorial, or a job name like police)")
+    async def guide(self, interaction: discord.Interaction, topic: str):
+        await interaction.response.defer()
+
+        # Load guide content from knowledge files
+        knowledge_dir = os.path.join(os.path.dirname(__file__), "..", "knowledge")
+        topic_lower = topic.lower().strip()
+
+        guide_map = {
+            "jobs": ("jobs_sop.md", "Job SOPs & Commands"),
+            "commands": ("commands.md", "Command Reference"),
+            "criminal": ("gangs_crime.md", "Criminal Economy & Territory"),
+            "housing": ("jobs_sop.md", "Housing Guide"),
+            "gangs": ("gangs_crime.md", "Gang System"),
+            "tutorial": ("jobs_sop.md", "Tutorial System"),
+            "police": ("jobs_sop.md", "Houston PD SOPs"),
+            "bcso": ("jobs_sop.md", "Ft. Worth Sheriff SOPs"),
+            "sasp": ("jobs_sop.md", "Texas DPS SOPs"),
+            "fib": ("jobs_sop.md", "FIB SOPs"),
+            "military": ("jobs_sop.md", "Texas National Guard SOPs"),
+            "ambulance": ("jobs_sop.md", "Texas EMS SOPs"),
+            "fire": ("jobs_sop.md", "Texas Fire & Rescue SOPs"),
+            "judge": ("jobs_sop.md", "Texas DOJ SOPs"),
+            "lawyer": ("jobs_sop.md", "Texas Bar SOPs"),
+            "lumberjack": ("jobs_sop.md", "Piney Woods Logging"),
+            "trucking": ("jobs_sop.md", "Lone Star Logistics"),
+            "trucker": ("jobs_sop.md", "Lone Star Logistics"),
+            "carwash": ("jobs_sop.md", "Texas Suds Car Wash"),
+            "oiljob": ("jobs_sop.md", "Texas Crude Co."),
+            "mover": ("jobs_sop.md", "Lone Star Movers"),
+            "dealing": ("gangs_crime.md", "Drug Dealing Guide"),
+            "racing": ("gangs_crime.md", "H-Town Midnight Runs"),
+            "graverob": ("gangs_crime.md", "Bayou Grave Diggin'"),
+        }
+
+        match = guide_map.get(topic_lower)
+        if not match:
+            await interaction.followup.send(
+                "No guide found for **" + topic + "**. Try: `jobs`, `commands`, `criminal`, `housing`, `gangs`, `tutorial`, or a job name like `police`, `ambulance`, `lumberjack`.",
+                ephemeral=True
+            )
+            return
+
+        filename, label = match
+        filepath = os.path.join(knowledge_dir, filename)
+        if not os.path.exists(filepath):
+            await interaction.followup.send("Guide file not found: " + filename, ephemeral=True)
+            return
+
+        with open(filepath, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        # Truncate to Discord embed limits
+        embed = discord.Embed(
+            title=label,
+            color=0xBF5700,
+            timestamp=datetime.utcnow(),
+        )
+        embed.set_footer(text="Sinister H-Town RP — Kronus Guide System")
+
+        # Extract relevant section based on topic
+        sections = content.split("## ")
+        relevant = []
+        search_terms = {
+            "police": "Houston PD", "bcso": "Ft. Worth Sheriff", "sasp": "Texas DPS",
+            "fib": "FIB", "military": "Texas National Guard", "ambulance": "Texas EMS",
+            "fire": "Texas Fire", "judge": "Texas DOJ", "lawyer": "Texas Bar",
+            "lumberjack": "Piney Woods", "trucking": "Lone Star Logistics",
+            "trucker": "Lone Star Logistics", "carwash": "Texas Suds",
+            "oiljob": "Texas Crude", "mover": "Lone Star Movers",
+            "dealing": "Drug", "racing": "H-Town Midnight", "graverob": "Bayou",
+            "housing": "APARTMENT", "gangs": "GANG SYSTEM",
+            "commands": "COMMANDS", "tutorial": "TUTORIAL",
+        }
+
+        search = search_terms.get(topic_lower, "")
+        for section in sections:
+            if not search or search.lower() in section.lower() or topic_lower in ("jobs", "criminal", "gangs"):
+                relevant.append(section[:800])
+
+        body = "\n".join(relevant[:3])[:4000]
+        if not body:
+            body = content[:4000]
+
+        embed.description = "Here's your guide for: **" + label + "**"
+
+        # Split into fields for readability
+        parts = body.split("\n\n")
+        current_field = ""
+        for part in parts:
+            if len(current_field) + len(part) < 1000:
+                current_field += part + "\n"
+            else:
+                if current_field:
+                    embed.add_field(name="", value=current_field[:1024], inline=False)
+                current_field = part + "\n"
+        if current_field:
+            embed.add_field(name="", value=current_field[:1024], inline=False)
+
+        await interaction.followup.send(embed=embed)
     async def ping(self, interaction: discord.Interaction):
         self._reset_daily()
         await interaction.response.send_message(

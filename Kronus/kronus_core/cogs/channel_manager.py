@@ -58,6 +58,48 @@ class ChannelManager(commands.Cog):
                 await ch.delete()
             await category.delete()
 
+    async def ensure_guide_channels(self, guild_id: int):
+        """Auto-create GUIDE category and read-only guide channels on startup."""
+        guild = self.bot.get_guild(guild_id)
+        if not guild:
+            return
+
+        category_name = "GUIDES"
+        category = discord.utils.get(guild.categories, name=category_name)
+        if not category:
+            category = await guild.create_category(category_name)
+
+        overwrites = {
+            guild.default_role: discord.PermissionOverwrite(
+                read_messages=True, send_messages=False, add_reactions=False
+            ),
+        }
+
+        guide_channels = [
+            ("job-guides", "SOPs and commands for all 22 Texas jobs. Use /tutorial [job] in-game."),
+            ("criminal-guides", "Drug economy, territory control, heists, racing, grave digging."),
+            ("business-guides", "Business ownership, boss panels, employee management."),
+            ("housing-guide", "Buying, renting, and selling apartments. /buyhouse /myhouses"),
+            ("gang-guide", "Gang creation, ranks, territory, gang bank, /gang commands."),
+            ("command-reference", "All 80+ player, job, and admin commands."),
+            ("faq", "Black screen? /fixme. Build 3570. Lost car? /garage. Phone? NPWD."),
+            ("tutorial-missions", "In-game tutorial walkthroughs: /tutorial police, ambulance, etc."),
+        ]
+
+        for ch_name, ch_topic in guide_channels:
+            existing = discord.utils.get(guild.text_channels, name=ch_name)
+            if not existing:
+                await guild.create_text_channel(
+                    ch_name, category=category, topic=ch_topic, overwrites=overwrites
+                )
+            else:
+                if existing.category != category:
+                    await existing.edit(category=category)
+                if existing.topic != ch_topic:
+                    await existing.edit(topic=ch_topic)
+
+        return category.id
+
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(ChannelManager(bot))

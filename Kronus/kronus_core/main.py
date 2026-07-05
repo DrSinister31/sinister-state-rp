@@ -95,6 +95,12 @@ async def on_ready():
     staff_role = await _find_or_create_role(guild, "Staff", "staff_role_id", discord.Color.red())
     print(f"  Staff role: {staff_role}")
 
+    # Auto-create GUIDE category and channels
+    guide_cog = bot.get_cog("ChannelManager")
+    if guide_cog:
+        guide_cat_id = await guide_cog.ensure_guide_channels(config.discord_guild_id)
+        print(f"  GUIDE category: {guide_cat_id}")
+
     await asyncio.sleep(2)
     guild_obj = discord.Object(id=config.discord_guild_id)
     bot.tree.copy_global_to(guild=guild_obj)
