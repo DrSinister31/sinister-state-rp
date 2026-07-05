@@ -31,14 +31,11 @@ function SpawnMedicalAI(hospital)
     for i = 1, count do
         local modelName = MEDICAL_MODELS.doctor[(i % #MEDICAL_MODELS.doctor) + 1]
         local hash = GetHashKey(modelName)
-        RequestModel(hash)
-        while not HasModelLoaded(hash) do Wait(0) end
 
         local offsetX = math.random(-5, 5)
         local offsetY = math.random(-5, 5)
         local ped = CreatePed(0, hash, loc.x + offsetX, loc.y + offsetY, loc.z, loc.w, true, true)
         TagAI(ped, "medical", "doctor", hospital.label, 0.0)
-        TaskWanderStandard(ped, 10.0, 10)
 
         activeDoctors[#activeDoctors + 1] = { ped = ped, hospital = hospital }
     end
@@ -127,8 +124,7 @@ Citizen.CreateThread(function()
         end
 
         local emsOnline = 0
-        local players = GetActivePlayers()
-        for _, pid in ipairs(players) do
+        for _, pid in ipairs(GetPlayers()) do
             local p = exports.qbx_core:GetPlayer(pid)
             if p and p.PlayerData.job and p.PlayerData.job.type == "ems" and p.PlayerData.job.onduty then
                 emsOnline = emsOnline + 1
@@ -147,7 +143,7 @@ Citizen.CreateThread(function()
         if #activeDoctors == 0 or #activeDoctors < GetDensityCapped(3) then
             for _, h in ipairs(HOSPITAL_LOCATIONS) do
                 if #activeDoctors < GetDensityCapped(3) then
-                    SpawnMedicalAI(h)
+                    pcall(SpawnMedicalAI, h)
                 end
             end
         end

@@ -1,0 +1,232 @@
+================================================================================
+SINISTER H-TOWN RP — TEBEX STORE CONTENT (WORKER E)
+================================================================================
+Copy the sections below into your Tebex Creator Panel:
+  → https://creator.tebex.io → Game Servers → Your Server → Webstore
+
+================================================================================
+STORE HOMEPAGE
+================================================================================
+
+HEADLINE:
+  "Welcome to Sinister H-Town — Where Texas Runs Deep."
+
+SUBTITLE:
+  "Every dollar spent keeps the streets alive. Grab your gear, claim your stake."
+
+================================================================================
+CHECKOUT SUCCESS MESSAGE
+================================================================================
+
+  "Consider it done, partner — your order's been wrangled and roped, headed
+   your way faster than a jackrabbit on a hot skillet."
+
+================================================================================
+STORE TAGLINE (FOOTER)
+================================================================================
+
+  "Sinister H-Town RP — Built by Texans. Run by Texans. Made for Texans."
+
+================================================================================
+CATEGORY: STARTER PACKS
+================================================================================
+
+Title: "Fresh Off the Greyhound"
+Description: "Just rolled into H-Town? Grab a starter kit and hit the ground runnin'."
+
+Packages:
+
+  1. "Sixth Ward Hustler" ($5.00)
+     — $25k cash, a beat-up sedan, and a flip phone. Enough to get you started.
+     Commands:
+       give_money {username} cash 25000
+       give_item {username} phone 1
+
+  2. "Montrose Regular" ($15.00)
+     — $100k bank, a clean coupe, apartment keys, and a proper smartphone.
+     Commands:
+       give_money {username} bank 100000
+       give_item {username} phone 1
+       # Give apartment keys via housing script
+
+  3. "River Oaks Royalty" ($50.00)
+     — $500k, a luxury sedan, River Oaks apartment, import phone, and armor.
+     Commands:
+       give_money {username} bank 500000
+       give_item {username} phone 1
+       give_item {username} armor 1
+       # Give luxury sedan and River Oaks apartment keys
+
+================================================================================
+CATEGORY: RIDES
+================================================================================
+
+Title: "Texas Garage"
+Description: "Ain't no walkin' in Texas. Pick your horsepower."
+
+Packages:
+
+  1. "Killeen Crawler" ($10.00)
+     — Lifted off-road truck. Built for desert dust.
+     Commands:
+       give_vehicle {username} sandking {plate}
+
+  2. "Downtown Cruiser" ($15.00)
+     — Slick executive sedan. Valet-ready on Main Street.
+     Commands:
+       give_vehicle {username} schafter2 {plate}
+
+  3. "Paleto Workhorse" ($10.00)
+     — Heavy-duty utility truck. Ft. Worth tough.
+     Commands:
+       give_vehicle {username} contender {plate}
+
+  4. "Gulf Coast Speed" ($20.00)
+     — American muscle. Loud, fast, and unapologetic.
+     Commands:
+       give_vehicle {username} dominator {plate}
+
+================================================================================
+CATEGORY: BUSINESSES
+================================================================================
+
+Title: "Your Name on the Sign"
+Description: "Stop working for somebody else's dream. Own your piece of Texas."
+
+Packages:
+
+  1. "Business License" ($5.00)
+     — Legal right to open shop. The state says you're legit.
+     (Triggers business license grant by Kronus)
+
+  2. "Lone Star Logistics" ($25.00)
+     — Trucking company starter. Routes, rig, and reputation.
+     Commands:
+       give_vehicle {username} phantom {plate}
+       set_job {username} trucker 0
+
+  3. "Texas Suds Franchise" ($20.00)
+     — Car wash business. Suds, service, and steady income.
+     Commands:
+       set_job {username} carwash 0
+
+================================================================================
+CATEGORY: VIP
+================================================================================
+
+Title: "Inner Circle"
+Description: "Run with the ones who run the city."
+
+Packages:
+
+  1. "VIP — Bronze Star" ($10.00/mo)
+     — Priority queue, bronze nametag, reserved parking.
+     Commands:
+       (Assign VIP role via Discord bot / Kronus)
+
+  2. "VIP — Silver Spurs" ($20.00/mo)
+     — All bronze perks + $50k monthly stipend, custom phone background.
+     Commands (monthly payout):
+       give_money {username} bank 50000
+       (Assign VIP role, custom phone background via Kronus)
+
+  3. "VIP — Gold Badge" ($50.00/mo)
+     — All silver perks + $150k monthly, custom license plate, gold chat tag,
+       exclusive Discord channel.
+     Commands (monthly payout):
+       give_money {username} bank 150000
+       (Assign VIP role, gold chat tag, Discord channel access via Kronus)
+
+================================================================================
+CATEGORY: ARSENAL
+================================================================================
+
+Title: "Locked & Loaded"
+Description: "When words don't cut it. LEO-restricted items require active badge."
+
+Packages:
+
+  1. "Street Sweeper" ($10.00)
+     — SMG, two mags, and body armor. Keep your block clean.
+     Commands:
+       give_item {username} weapon_smg 1
+       give_item {username} smg_ammo 100
+       give_item {username} armor 1
+
+  2. "Ranch Hand" ($15.00)
+     — Pump shotgun, shells, and a machete. Farm defense.
+     Commands:
+       give_item {username} weapon_pumpshotgun 1
+       give_item {username} shotgun_shells 50
+
+  3. "Sheriff's Arsenal" ($15.00)
+     — Patrol rifle, duty ammo, and reinforced plates. Badge required.
+     Commands:
+       give_item {username} weapon_assaultrifle 1
+       give_item {username} rifle_ammo 150
+       give_item {username} armor 1
+
+================================================================================
+CATEGORY: SERVICES
+================================================================================
+
+Title: "Clerk's Window"
+Description: "Paperwork, fast-tracked. No DMV lines."
+
+Packages:
+
+  1. "Name Change" ($5.00)
+     — Rebrand yourself. New name, same record.
+     (Handled manually by staff or automated via Kronus)
+
+  2. "Business Name Change" ($10.00)
+     — New sign on the door. Keep the license.
+     (Handled manually by staff or automated via Kronus)
+
+  3. "VIP Transfer" ($15.00)
+     — Move your VIP status to a new character.
+     (Handled manually by staff or automated via Kronus)
+
+================================================================================
+DISCORD WEBHOOK WELCOME MESSAGE
+================================================================================
+
+For the #store-log channel when purchases post:
+
+  "🤠 New Sale, Y'all! {username} just picked up **{package_name}**
+   for ${price}. Someone's fixin' to have a good day."
+
+================================================================================
+COMMAND REFERENCE (FOR PACKAGE SETUP IN TEBEX PANEL)
+================================================================================
+
+Money:
+  give_money {username} cash {amount}
+  give_money {username} bank {amount}
+
+Items (ox_inventory):
+  give_item {username} armor 1
+  give_item {username} radio 1
+  give_item {username} phone 1
+  give_item {username} weapon_smg 1
+  give_item {username} smg_ammo 100
+  give_item {username} weapon_pumpshotgun 1
+  give_item {username} shotgun_shells 50
+  give_item {username} weapon_assaultrifle 1
+  give_item {username} rifle_ammo 150
+  give_item {username} advancedlockpick 2
+
+Vehicles:
+  give_vehicle {username} {spawncode} {plate}
+
+Jobs:
+  set_job {username} police 0
+  set_job {username} ambulance 0
+
+VIP Monthly Payout:
+  give_money {username} bank 50000   (Silver Spurs)
+  give_money {username} bank 150000  (Gold Badge)
+
+================================================================================
+END OF TEBEX STORE CONTENT — SINISTER H-TOWN RP — WORKER E
+================================================================================

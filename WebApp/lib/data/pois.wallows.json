@@ -1,0 +1,72 @@
+{
+  "_comment": "Gateway_v0.21 wallowing-hole (mud pool) coordinate data imported from wiredredman's Steam community guide 'Locations And POI's (GATEWAY)'. Cross-verified against two mirrors (gameplay.tips and bisecthosting.com) — all three sources agree on coord values. Author publishes coords in Unreal cm, same format the isle-overlay clipboard watcher captures. Z omitted from the emitted records here because pois.json uses (x, y) only; Z values retained in `_source_z` for optional future use. The guide contains 24 distinct wallowing-hole entries for Gateway; 'Vein Island South' shares byte-identical coords with 'Vein Island North' in the source text (a guide-author copy-paste error, faithfully preserved in mirrors), so only 23 unique coordinate points exist and Vein Island South is flagged `duplicate_coord_of_north: true`. No 'mud_pools' category exists as a distinct in-game feature — per evrimaquickguide.com/gameplay/health-statuses/wallowing, 'mud pool' and 'wallowing hole' are the same interactive object; Vulnona's mud_pools category is empty across Gateway_v0.21 data_1..data_4 for this reason.",
+  "source_attribution": {
+    "primary": "wiredredman, Steam Community Guide 'Locations And POI's (GATEWAY)', https://steamcommunity.com/sharedfiles/filedetails/?id=3065862163 (Wallowing Holes section), verbatim coord strings; verified 2026-04-16",
+    "cross_check_1": "gameplay.tips mirror of the same guide, https://gameplay.tips/guides/the-isle-locations-and-pois-gateway-map.html (Wallowing Holes section) — coords match source 1:1",
+    "cross_check_2": "bisecthosting.com/blog/the-isle-maps-locations-gateway-thenyaw-test-level — 22 wallow coords listed (omits Island Wallowing Hole and Vein Island South in its summary), those 22 match source exactly",
+    "mechanics_reference": "https://www.evrimaquickguide.com/gameplay/health-statuses/wallowing — confirms 'wallow' and 'mud pool' refer to the same mechanic"
+  },
+  "coordinate_system": "Unreal cm (east = +x, north historically = +y but Evrima uses +y = north positive per our map transform; matches isle-overlay clipboard watcher format)",
+  "naming_note": "Entries preserve the guide author's names (wiredredman's terminology) rather than remapping to the 23 placeholder names currently in pois.json. Placeholder names like 'Thunderdome Wallow', 'Central Plains Wallow', 'Jungle Wallow North/South', 'Coastal Jungle Wallow', 'Hidden Dam Wallow', 'Swamp Sanctuary Wallow', 'Delta Channel Wallow', 'River Delta Wallow West', and 'Big Island Pond Wallow' have no confidently-matching entry in wiredredman's guide; do NOT fabricate a mapping. The overlay maintainer should decide remapping case-by-case based on in-game verification or leave placeholders as-is.",
+  "placeholder_name_match_audit": {
+    "exact_or_high_confidence": [
+      {"placeholder": "Highlands Wallowing Hole", "guide_entry": "Highlands Wallowing Hole"},
+      {"placeholder": "Plains Pond Wallow", "guide_entry": "Plains Wallowing Hole (description: 'Next to the plains pond')"},
+      {"placeholder": "The Pit", "guide_entry": "The Pit"},
+      {"placeholder": "The Midpit", "guide_entry": "The Midpit"},
+      {"placeholder": "The Deep-pit", "guide_entry": "The Deep-pit"},
+      {"placeholder": "Water Access Wallow", "guide_entry": "Water Access Wallowing Hole"},
+      {"placeholder": "Falls Pond Wallow", "guide_entry": "Falls Pond Wallowing Hole"},
+      {"placeholder": "Pyramid Bridge Wallow", "guide_entry": "Pyramid Bridge Wallowing Hole"},
+      {"placeholder": "Vein Island Wallow", "guide_entry": "Vein Island North + Vein Island Mid (two entries, guide lists them separately)"}
+    ],
+    "possible_but_ambiguous_DO_NOT_auto_map": [
+      {"placeholder": "Big Island Pond Wallow", "candidate": "Island Wallowing Hole", "reason": "guide says 'island very close to mainland' but coord (-334275, -272587) is far southwest of the Plains biome; may or may not be the same feature as the placeholder named 'Big Island Pond'"},
+      {"placeholder": "Hidden Sanctuary Wallow", "candidate": "Access Sanctuary Wallowing Hole", "reason": "both are sanctuary-adjacent but names differ; Access Sanctuary is at Water Access, not the Hidden biome"},
+      {"placeholder": "Twin Bridges Wallow", "candidate": "Twin Wallowing Holes", "reason": "NAME COLLISION — guide's 'Twin Wallowing Holes' is described as 'closeby to the hidden pond and highlands', NOT near the Twin Bridges landmark. Do NOT auto-map; these are almost certainly different features."}
+    ],
+    "no_match_in_guide": [
+      "Jungle Wallow North",
+      "Jungle Wallow South",
+      "Jungle River Wallow",
+      "Coastal Jungle Wallow",
+      "River Delta Wallow East",
+      "River Delta Wallow West",
+      "Delta Channel Wallow",
+      "Hidden Dam Wallow",
+      "Thunderdome Wallow",
+      "Swamp Sanctuary Wallow",
+      "Central Plains Wallow"
+    ]
+  },
+  "wallows": [
+    {"name": "Island Wallowing Hole", "x": -334275.419, "y": -272587.422, "_source_z": 21053.386, "source": "wiredredman Steam guide; verified 2026-04-16 via Steam + gameplay.tips mirrors; description: 'island very close to the mainland'"},
+    {"name": "Vein Island North Wallowing Hole", "x": 192909.754, "y": 487928.988, "_source_z": 24428.046, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'northern side of Vein Island, off the swamp coast'"},
+    {"name": "Vein Island Mid Wallowing Hole", "x": 435924.62, "y": 471955.02, "_source_z": 23716.878, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'middle of Vein Island'"},
+    {"name": "Vein Island South Wallowing Hole", "x": 192909.754, "y": 487928.988, "_source_z": 24428.046, "duplicate_coord_of_north": true, "source": "wiredredman Steam guide — SOURCE TYPO: coord string identical to Vein Island North in the original guide text. Verified on multiple mirrors (Steam + gameplay.tips) — this is the guide author's copy-paste error, not a fetch artifact. Actual south-island coords are unknown; overlay maintainer should verify in-game before shipping this point. Description: 'south end of vein island near a salt lick'"},
+    {"name": "Hidden Wallowing Hole", "x": -301143.941, "y": -27991.157, "_source_z": 20444.621, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'near the water access pond, hidden in trees'"},
+    {"name": "Hidden Outpost Wallowing Hole", "x": -396757.688, "y": -20889.048, "_source_z": 27760.469, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'under a bridge at the Hidden Outpost'"},
+    {"name": "Water Access Wallowing Hole", "x": -248241.549, "y": 82180.051, "_source_z": 28278.775, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'directly by the water access pond'"},
+    {"name": "East Wallowing Hole", "x": -275764.663, "y": 504540.791, "_source_z": 20777.342, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'by the east checkpoint, small'"},
+    {"name": "The Pit", "x": 173047.9, "y": 175960.987, "_source_z": 20432.522, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'massive wallowing hole in swamp'"},
+    {"name": "The Midpit", "x": 237419.51, "y": 119480.69, "_source_z": 20312.579, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'middle of swamp, massive mudpit'"},
+    {"name": "The Deep-pit", "x": 303755.384, "y": 110852.681, "_source_z": 20320.305, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'largest swamp mudpit, furthest in'"},
+    {"name": "The Deepest Pit", "x": 312890.92, "y": 56984.365, "_source_z": 20365.992, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'gargantuan mudpit'"},
+    {"name": "Coastal Pit", "x": 347110.96, "y": 165408.35, "_source_z": 20600.256, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'next to the swamp coast'"},
+    {"name": "Southern Wallowing Hole", "x": 367141.302, "y": -225572.945, "_source_z": 22915.566, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'south of the southern pond, hidden in trees'"},
+    {"name": "Cliffside Wallowing Hole", "x": 225182.291, "y": -349979.086, "_source_z": 24726.073, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'along a cliff\u2019s edge'"},
+    {"name": "Plains Wallowing Hole", "x": 11178.131, "y": -290055.002, "_source_z": 29481.892, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'next to the plains pond, tiny'"},
+    {"name": "Highlands Wallowing Hole", "x": -147112.838, "y": -36123.372, "_source_z": 48374.786, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'at the highlands pond, decent size'"},
+    {"name": "Access Sanctuary Wallowing Hole", "x": -281490.019, "y": 189800.8, "_source_z": 34550.612, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'next to the water access sanctuary'"},
+    {"name": "Falls Pond Wallowing Hole", "x": -175773.94, "y": 325653.2, "_source_z": 21591.21, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'on top of falls pond'"},
+    {"name": "Pyramid Bridge Wallowing Hole", "x": -169891.927, "y": 158638.451, "_source_z": 23800.844, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'next to the Pyramid Bridge'"},
+    {"name": "Twin Wallowing Holes", "x": -80119.995, "y": 117688.838, "_source_z": 28502.209, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'close to hidden pond and highlands' (NOT the Twin Bridges landmark)"},
+    {"name": "Cave Wallowing Hole", "x": -50137.958, "y": 219473.103, "_source_z": 21792.925, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'small cave with two entrances, where Ravine River and the Water Access river meet'"},
+    {"name": "Delta Wallowing Hole", "x": 56113.211, "y": 103542.69, "_source_z": 20876.184, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'bordering the river delta towards swamp'"},
+    {"name": "Rocky Coasts Wallowing Holes", "x": -70137.611, "y": 469008.482, "_source_z": 24912.477, "source": "wiredredman Steam guide; verified 2026-04-16; description: 'close to one of the rocky coasts migration zones'"}
+  ],
+  "mud_pools": {
+    "status": "none found",
+    "explanation": "No source publishes a separate 'mud pool' category for Gateway. Vulnona's menu has a mud_pools entry but data_1..data_4.txt for Gateway_v0.21 contain zero entries. Per evrimaquickguide.com/gameplay/health-statuses/wallowing, 'mud pool' is the same in-game interactive object as 'wallowing hole' / 'wallow'. All 24 entries above double as the mud-pool dataset."
+  }
+}

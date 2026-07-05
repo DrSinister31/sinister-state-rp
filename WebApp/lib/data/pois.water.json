@@ -1,0 +1,275 @@
+{
+  "_meta": {
+    "schema_version": 1,
+    "generated_by": "Water Source Auditor (agent)",
+    "generated_date": "2026-04-16",
+    "verdict": "PARTIAL-GO",
+    "summary": "wiredredman's Steam Guide 3065862163 lists 12 named Gateway water bodies with verbatim Unreal-cm coords. 6 are NEW features absent from VulnonaMAP. 5 overlap existing Vulnona entries (likely same feature, different name and/or label-vs-water-edge offset). 1 entry (False Waterfall) is explicitly marked removed by the guide author and is NOT included. No additional source (Fandom, theisle.ru, islemaps, Reddit, evrimaquickguide) has structured coord data. 'Twin Lakes' and 'Great Falls' are V3-map (legacy Isle) features, NOT Gateway — confirmed via web search. Classifier sub-type warnings noted per entry."
+  },
+  "source_attribution": {
+    "primary": {
+      "author": "wiredredman",
+      "title": "Locations And POI's (GATEWAY)",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3065862163",
+      "section": "Water And Ponds",
+      "extraction_method": "WebFetch direct from Steam Community",
+      "license": "Fan-labor data, unclear reuse license — same posture as VulnonaMAP attribution already in project"
+    },
+    "verification_mirror_1": "https://gameplay.tips/guides/the-isle-locations-and-pois-gateway-map.html",
+    "verification_mirror_2": "https://www.bisecthosting.com/blog/the-isle-maps-locations-gateway-thenyaw-test-level"
+  },
+  "coordinate_system": "Unreal cm (matches isle-overlay clipboard watcher format; same as VulnonaMAP after *1000 scale)",
+
+  "drinking_water_river_pond": [
+    {
+      "name": "Water Access Pond West",
+      "x": -336765,
+      "y": -60536,
+      "_source_z": 24809,
+      "kind": "text",
+      "source": "wiredredman:steam_guide_3065862163",
+      "renderer_subtype": "pond",
+      "guide_description": "A pond on the northern coast not far from water access"
+    },
+    {
+      "name": "Water Access Pond East",
+      "x": -389047,
+      "y": 144116,
+      "_source_z": 29155,
+      "kind": "text",
+      "source": "wiredredman:steam_guide_3065862163",
+      "renderer_subtype": "pond",
+      "guide_description": "ANOTHER Pond on the northern coast not far from water access"
+    },
+    {
+      "name": "Access Sanctuary Pond",
+      "x": -294889,
+      "y": 188861,
+      "_source_z": 35478,
+      "kind": "text",
+      "source": "wiredredman:steam_guide_3065862163",
+      "renderer_subtype": "pond",
+      "guide_description": "A small pond by the water access sanctuary",
+      "note": "Distinct from Vulnona's 'Verdant Pond' (-255000, 167000) ~46km away."
+    },
+    {
+      "name": "Falls Pond",
+      "x": -175773,
+      "y": 325653,
+      "_source_z": 21591,
+      "kind": "text",
+      "source": "wiredredman:steam_guide_3065862163",
+      "renderer_subtype": "pond",
+      "renderer_warning": "AUTO-MISCLASSIFY RISK: classifyWaterType() in map.js checks /falls?|cascade/ BEFORE /pond/, so 'Falls Pond' will render as a waterfall label. This is a POND fed by Hollow Falls. Recommend either (a) renaming to 'Hollow Falls Pond' will not help — same regex hit; (b) reorder classifier to put pond/lake checks before waterfall when name contains both; OR (c) hardcode-override this entry to subtype:pond.",
+      "guide_description": "A decently sized pond formed from the river stemming from the lake by the great fence"
+    },
+    {
+      "name": "Little Island Pond",
+      "x": -146312,
+      "y": 493740,
+      "_source_z": 33488,
+      "kind": "text",
+      "source": "wiredredman:steam_guide_3065862163",
+      "renderer_subtype": "pond",
+      "guide_description": "A decently large pond near the Great Fence"
+    },
+    {
+      "name": "Axe Pond",
+      "x": -103643,
+      "y": -340391,
+      "_source_z": 32089,
+      "kind": "text",
+      "source": "wiredredman:steam_guide_3065862163",
+      "renderer_subtype": "pond",
+      "guide_description": "Replaced the western river, decently large lake",
+      "note": "Guide calls it a 'large lake' in description but names it 'Pond'. Renderer goes by name keyword, so it stays a pond. Consider whether actual feature should be 'Axe Lake' instead."
+    }
+  ],
+
+  "drinking_water_waterfall": [],
+
+  "duplicates_of_vulnona": [
+    {
+      "wiredredman_name": "Plains Pond",
+      "wiredredman_coords": [11178, -290055, 29481],
+      "vulnona_name": "West Pond",
+      "vulnona_coords": [20000, -277000],
+      "distance_km_in_unreal_cm": 14.3,
+      "verdict": "Likely same feature. Vulnona's 'West Pond' label position vs wiredredman's water-access (wallow) position. Same coords as 'Plains Wallowing Hole' (11178.131, -290055.002) in the wallow dataset, confirming this is the pond the wallow sits in.",
+      "action": "DO NOT add. Existing 'West Pond' entry already covers it."
+    },
+    {
+      "wiredredman_name": "Hidden Pond",
+      "wiredredman_coords": [-5305, 80684, 29871],
+      "vulnona_name": "Jungle Pond",
+      "vulnona_coords": [-2000, 82000],
+      "distance_km_in_unreal_cm": 3.7,
+      "verdict": "Same feature. Vulnona names it after the biome (Jungle), wiredredman after its terrain (Hidden behind highlands).",
+      "action": "DO NOT add. Optional rename suggestion: 'Jungle Pond (Hidden)' to capture both names. Low priority."
+    },
+    {
+      "wiredredman_name": "Southern Pond",
+      "wiredredman_coords": [305469, -136368, 25379],
+      "vulnona_name": "South Pond",
+      "vulnona_coords": [309000, -149000],
+      "distance_km_in_unreal_cm": 13.1,
+      "verdict": "Same feature. Naming variant only.",
+      "action": "DO NOT add. Existing 'South Pond' entry covers it."
+    },
+    {
+      "wiredredman_name": "Forks Pond",
+      "wiredredman_coords": [-163208, 248958, 22706],
+      "vulnona_name": "Forks Pond",
+      "vulnona_coords": [-179000, 238000],
+      "distance_km_in_unreal_cm": 19.2,
+      "verdict": "Same feature, name match. ~19km offset is Vulnona label-position vs wiredredman water-edge.",
+      "action": "DO NOT add. Existing entry covers it. (Optional: re-position Vulnona's coords to wiredredman's more precise water-access coords.)"
+    },
+    {
+      "wiredredman_name": "Highlands Lake",
+      "wiredredman_coords": [-147112, -36123, 48374],
+      "vulnona_name": "Highland Lake(north side)",
+      "vulnona_coords": [-135000, -22000],
+      "distance_km_in_unreal_cm": 18.6,
+      "verdict": "Same lake. Vulnona splits it into 'north side' / 'south side' labels around the lake's center; wiredredman gives the wallow access point on the lake edge (same coords as 'Highlands Wallowing Hole' confirms this).",
+      "action": "DO NOT add. Existing two-label coverage is more granular than the guide's single point."
+    }
+  ],
+
+  "explicitly_excluded": [
+    {
+      "name": "False Waterfall",
+      "reason": "Guide author wiredredman explicitly notes '(Has Since Been Removed Alongside The Whole River)'. Feature no longer exists in Gateway_v0.21.",
+      "_historical_coords": [-100153, -465306, 27272]
+    },
+    {
+      "name": "Twin Lakes",
+      "reason": "Confirmed via web search: 'Twin Lakes' is an Isle V3 (legacy) map feature, not Gateway. Watch-list item in the audit prompt is unfounded for Gateway."
+    },
+    {
+      "name": "Great Falls",
+      "reason": "Confirmed via web search: 'Great Falls' refers to V3-era / southern-area legacy map content, not Gateway. No Gateway coords in any source."
+    },
+    {
+      "name": "Big Island Pond",
+      "reason": "Mentioned in guide PROSE near Twin Bridges description but has NO dedicated coord entry. wiredredman uses it descriptively, not as a data point. Cannot be sourced as a coord. Possibly the same 'Island Wallowing Hole' (-334275, -272587) area but unconfirmed."
+    },
+    {
+      "name": "Lagoon (Saltwater Lake)",
+      "reason": "Already in Vulnona at (237000, -204000) under landmarks (NOT drinking_water). Saltwater = correctly excluded from drinkable water list."
+    }
+  ],
+
+  "naming_diffs": [
+    {
+      "current_name": "Highland Lake(north side)",
+      "issue": "Parenthetical without spaces; 'Lake' should ideally be 'Lake (north shore)' for label clarity. Cosmetic only.",
+      "priority": "low"
+    },
+    {
+      "current_name": "Pygmy's puddle",
+      "issue": "Vulnona marks this '(temp)' and 'small' — meaning seasonal/temporary water. Renderer correctly classifies as 'puddle' but UI doesn't surface temp status. Out of scope for this audit.",
+      "priority": "informational"
+    },
+    {
+      "current_name": "Shade puddle",
+      "issue": "Same as above — Vulnona '(temp)' marker not preserved in our import.",
+      "priority": "informational"
+    },
+    {
+      "current_name": "Volcano Cave",
+      "issue": "Vulnona data_3.txt revision flags this as part of '<s>Volcano Undrinkable ponds</s>' (struck through) — meaning Volcano Cave water may NOT be drinkable in current build. Worth in-game verification before relying on it as a water source. Position also differs: data_1 (-258000, 285000) vs data_3 (-263000, 293000). Our import uses data_1 values.",
+      "priority": "medium-flag-for-user"
+    }
+  ],
+
+  "reclassification_audit_existing_28": {
+    "verdict": "All 28 existing entries classify correctly under classifyWaterType() in map.js (lines 368-379).",
+    "details": [
+      {"name": "Cascades", "subtype": "waterfall", "correct": true},
+      {"name": "Hollow Falls", "subtype": "waterfall", "correct": true},
+      {"name": "Delta", "subtype": "marsh", "correct": true, "note": "Vulnona zones 'Delta' as a marshy region; classifier matches /delta/. Drinking-water array placement is correct because the delta channels are drinkable."},
+      {"name": "Delta River", "subtype": "river", "correct": true, "note": "matches /river/ before /delta/; classifier order falls through correctly."},
+      {"name": "Endorheic", "subtype": "specialty", "correct": true},
+      {"name": "Volcano Cave", "subtype": "cave_water", "correct": true},
+      {"name": "Volcano Chamber", "subtype": "cave_water", "correct": true},
+      {"name": "Pygmy's puddle", "subtype": "puddle", "correct": true},
+      {"name": "South Puddle", "subtype": "puddle", "correct": true},
+      {"name": "Shade puddle", "subtype": "puddle", "correct": true},
+      {"name": "Coastal Pond", "subtype": "pond", "correct": true},
+      {"name": "Dam Lake", "subtype": "lake", "correct": true},
+      {"name": "East Lake", "subtype": "lake", "correct": true},
+      {"name": "Forks Pond", "subtype": "pond", "correct": true},
+      {"name": "Gorge River", "subtype": "river", "correct": true},
+      {"name": "Highland Lake(north side)", "subtype": "lake", "correct": true},
+      {"name": "Highland Lake(south side)", "subtype": "lake", "correct": true},
+      {"name": "Jungle Pond", "subtype": "pond", "correct": true},
+      {"name": "Landslid Lake", "subtype": "lake", "correct": true},
+      {"name": "North Lake", "subtype": "lake", "correct": true},
+      {"name": "Pit Pond", "subtype": "pond", "correct": true},
+      {"name": "Plains River", "subtype": "river", "correct": true},
+      {"name": "Rock Pond", "subtype": "pond", "correct": true},
+      {"name": "South Pond", "subtype": "pond", "correct": true},
+      {"name": "Swamp East", "subtype": "marsh", "correct": true, "note": "matches /swamp/"},
+      {"name": "Swamp West", "subtype": "marsh", "correct": true},
+      {"name": "Verdant Pond", "subtype": "pond", "correct": true},
+      {"name": "West Pond", "subtype": "pond", "correct": true}
+    ]
+  },
+
+  "vulnona_data_3_vs_data_1_diff": {
+    "verdict": "data_3 is NOT a strict superset of data_1 for water. Re-confirms prior finding that data_3 is a partial revision, not a newer master.",
+    "differences": [
+      {"name": "South Pond", "data_1": [309000, -149000], "data_3": "ABSENT", "action_taken": "Keep our import from data_1 — wiredredman ('Southern Pond' at 305469,-136368) confirms it exists."},
+      {"name": "Cascades", "data_1": [-175000, 152000], "data_3": [-186000, 182000], "delta_km": 31.9, "action_taken": "Keep data_1 import. ~32km is large enough to investigate but no third source to arbitrate. wiredredman has no 'Cascades' entry."},
+      {"name": "East Lake", "data_1": [-137000, 460000], "data_3": [-130000, 460000], "delta_km": 7.0, "action_taken": "Keep data_1 import (minor)."},
+      {"name": "Volcano Cave", "data_1": [-258000, 285000], "data_3": [-263000, 293000], "data_3_label": "<s>Volcano Undrinkable ponds</s>", "action_taken": "Keep data_1 import. Flagged in naming_diffs above for user verification of drinkability."},
+      {"name": "Volcano Chamber", "data_1": [-283000, 256000], "data_3": [-283000, 256000], "data_3_label": "<s>Volcano</s>Chamber", "action_taken": "Position identical; no change."}
+    ]
+  },
+
+  "duplicate_data_findings": [
+    {
+      "type": "wiredredman_internal",
+      "description": "Unlike the wallow audit (where Vein Island South had a copy-paste typo of North's coords), the water entries in wiredredman's guide do NOT contain any byte-identical duplicate coord strings. All 12 water entries have unique (x,y,z) tuples.",
+      "verified": true
+    },
+    {
+      "type": "wiredredman_vs_wallow_dataset",
+      "description": "Three water entries share coords with wallow entries — confirming wiredredman captures both as the same single Copy-Location point: Plains Pond == Plains Wallowing Hole, Highlands Lake == Highlands Wallowing Hole, Falls Pond == Falls Pond Wallowing Hole. This is consistent (a wallow sits at the pond's edge), not a typo.",
+      "implication": "The 6 NEW water entries in this file are all water-only points (no wallow twin), so each adds genuine new data."
+    }
+  ],
+
+  "negative_results": {
+    "sources_with_no_new_data": [
+      "isle.fandom.com/wiki/Gateway (403 Forbidden via WebFetch — same as wallow audit)",
+      "isle.fandom.com/wiki/Water (403 Forbidden)",
+      "evrimaquickguide.com/gameplay/diet-food/water (404 — page does not exist at that URL)",
+      "theisle.ru/en/maps?map=evrima (interactive map; static fetch returns header only)",
+      "islemaps.com (placeholder page; asks for community contributions)",
+      "na.dinoden.gg/map (403 to WebFetch, same as wallow audit)",
+      "Reddit (no 'gateway water locations' threads with coords surfaced via WebSearch)",
+      "VulnonaMAP data_2.txt (no Water section — confirmed via Grep)",
+      "VulnonaMAP data_4.txt (Foods & Items only — no water section)",
+      "VulnonaMAP root listing (no Gateway version newer than v0.21)"
+    ],
+    "watch_list_items_unfounded": [
+      "Twin Lakes — V3 map feature, not Gateway",
+      "Great Falls — V3 / legacy feature, not Gateway",
+      "Hidden Lake — does not exist (only 'Hidden Pond' which == Jungle Pond)",
+      "Mountain streams — no source names any",
+      "Tide pools / coastal pools — no source enumerates any beyond Coastal Pond / Plains Pond",
+      "Volcano-related water beyond Cave + Chamber — none surfaced",
+      "Multiple jungle ponds — only one (Jungle Pond / Hidden Pond, same feature)",
+      "Additional gorge water beyond Gorge River — none surfaced"
+    ]
+  },
+
+  "todos_for_future_capture": [
+    "In-game verification: 'Volcano Cave' drinkability — Vulnona data_3 strikes through 'Undrinkable ponds' label; needs ground-truth check.",
+    "In-game capture: Big Island Pond near Twin Bridges — wiredredman mentions but no coords. Manual Copy-Location pass required.",
+    "Classifier hardening: when name contains both /falls/ and /pond/, prefer the more-specific noun (the head noun is the suffix, e.g. 'Falls Pond' = pond). Currently waterfall regex wins.",
+    "Possible repositioning: Forks Pond and Highland Lake centers could be repositioned to wiredredman's water-edge coords for more precise marker placement."
+  ]
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinister H-Town Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="chat-wrapper">
+        <div id="chat-header">
+            <span id="chat-title">Sinister H-Town RP</span>
+            <span id="online-count" class="accent-glow">0 online</span>
+        </div>
+
+        <div id="channel-tabs">
+            <button class="channel-tab active" data-channel="global" data-prefix="" data-label="Global">
+                <span class="tab-dot"></span>Global
+            </button>
+            <button class="channel-tab" data-channel="ooc" data-prefix="[OOC]" data-label="OOC">
+                <span class="tab-dot ooc-dot"></span>OOC
+            </button>
+            <button class="channel-tab" data-channel="me" data-prefix="" data-label="/me">
+                <span class="tab-dot me-dot"></span>/me
+            </button>
+            <button class="channel-tab" data-channel="do" data-prefix="" data-label="/do">
+                <span class="tab-dot do-dot"></span>/do
+            </button>
+            <button class="channel-tab" data-channel="twt" data-prefix="[TWT]" data-label="Twitter">
+                <span class="tab-dot twt-dot"></span>Twitter
+            </button>
+            <button class="channel-tab job-tab-trigger" id="job-tabs-btn" data-label="Jobs">
+                <span class="tab-dot job-dot"></span>Jobs ▾
+            </button>
+        </div>
+
+        <div id="job-subtabs" class="hidden">
+            <div id="job-tabs-container"></div>
+        </div>
+
+        <div id="messages">
+            <div id="messages-inner"></div>
+        </div>
+
+        <div id="suggestions" class="hidden">
+            <div id="suggestions-list"></div>
+        </div>
+
+        <div id="input-bar">
+            <span id="input-prefix"></span>
+            <input type="text" id="chat-input" placeholder="Type a message or /command..." maxlength="256" autocomplete="off" spellcheck="false" />
+            <button id="emoji-btn" title="Insert Emoji">😊</button>
+        </div>
+
+        <div id="emoji-popup" class="hidden">
+            <div id="emoji-grid"></div>
+        </div>
+
+        <div id="resize-handle"></div>
+    </div>
+
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="emoji.json" type="text/javascript"></script>
+    <script src="app.js"></script>
+</body>
+</html>

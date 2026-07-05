@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinister H-Town Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="config.js"></script>
+</head>
+<body>
+    <div id="app" class="store-container" style="display: none;">
+        <div class="pending-banner" id="pendingBanner">
+            <div class="pending-banner-content">
+                <span class="pending-icon">&#9888;</span>
+                <span id="pendingBannerText">You have <strong id="pendingCountBanner">0</strong> unredeemed purchase(s).</span>
+                <button class="btn btn-warning btn-sm" id="btnRedeemBanner">Redeem Now</button>
+            </div>
+        </div>
+
+        <header class="store-header">
+            <div class="header-left">
+                <h1 class="store-title">Sinister H-Town <span class="accent">Store</span></h1>
+            </div>
+            <div class="header-right">
+                <div class="player-info" id="playerInfo">
+                    <span class="player-name" id="playerName">Loading...</span>
+                    <span class="player-money" id="playerMoney">$0.00</span>
+                </div>
+                <button class="btn btn-icon" id="btnCartToggle" title="View Cart">
+                    <span class="cart-icon">&#128722;</span>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <button class="btn btn-icon" id="btnClose" title="Close Store">&times;</button>
+            </div>
+        </header>
+
+        <div class="store-body">
+            <aside class="sidebar">
+                <nav class="category-nav">
+                    <button class="category-btn active" data-category="all">
+                        <span class="cat-icon">&#9733;</span>
+                        <span class="cat-label">All Items</span>
+                    </button>
+                </nav>
+                <div class="sidebar-footer">
+                    <button class="btn btn-secondary btn-block" id="btnRedeem">
+                        <span>&#128230;</span> Redeem Purchases
+                    </button>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <div class="content-toolbar">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search packages..." />
+                    </div>
+                    <div class="sort-options">
+                        <select id="sortSelect">
+                            <option value="default">Default</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="name-asc">Name: A-Z</option>
+                            <option value="name-desc">Name: Z-A</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="product-grid" id="productGrid">
+                    <div class="empty-state" id="emptyState">
+                        <div class="empty-icon">&#128722;</div>
+                        <h3>Loading packages...</h3>
+                        <p>Please wait while we fetch the store items.</p>
+                    </div>
+                </div>
+            </main>
+
+            <aside class="cart-panel" id="cartPanel">
+                <div class="cart-panel-header">
+                    <h2>Your Cart</h2>
+                    <button class="btn btn-icon" id="btnCartClose">&times;</button>
+                </div>
+                <div class="cart-items" id="cartItems">
+                    <div class="cart-empty" id="cartEmpty">
+                        <div class="empty-icon">&#128722;</div>
+                        <p>Your cart is empty</p>
+                        <p class="text-muted">Browse the store and add some items!</p>
+                    </div>
+                </div>
+                <div class="cart-footer">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="cart-total-amount" id="cartTotal">$0.00</span>
+                    </div>
+                    <button class="btn btn-primary btn-block" id="btnCheckout" disabled>
+                        Checkout
+                    </button>
+                    <button class="btn btn-outline btn-block btn-sm" id="btnClearCart">
+                        Clear Cart
+                    </button>
+                </div>
+            </aside>
+        </div>
+
+        <div class="modal-overlay" id="confirmModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Confirm Purchase</h2>
+                    <button class="btn btn-icon modal-close" id="modalClose">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="confirm-details" id="confirmDetails"></div>
+                    <div class="confirm-total">
+                        <strong>Total:</strong>
+                        <span id="confirmTotal">$0.00</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline" id="btnCancelPurchase">Cancel</button>
+                    <button class="btn btn-primary" id="btnConfirmPurchase">Confirm Purchase</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toast-container" id="toastContainer"></div>
+    </div>
+
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p>Loading Sinister H-Town Store...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

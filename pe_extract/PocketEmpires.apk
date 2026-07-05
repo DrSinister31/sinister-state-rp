@@ -1,0 +1,574 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<meta name="msvalidate.01" content="4310B5537C97868F6EF77D2ECC16DE5E"/><meta name="norton-safeweb-site-verification" content="0usgcldswi7hc0y436md2fvfsm46sbcczs97ykve6lrvoyjhd8qxzrmuqqsu6ndmq9yfah35zvh-ujkiayarttbs5i0dt-gtsncpj8k2pxjz9hk93q68vgjkyw0yfbgb"/>
+<meta name="monetag" content="02af2fda66e858f7ef1920bcb67d1ed8">
+<meta name="theme-color" content="#00875f">
+<link rel="preconnect" href="//www.google-analytics.com">
+<link rel="preconnect" href="//play-lh.googleusercontent.com">
+<link rel="preconnect" href="//imgrs.apkcombo.org">
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="icon" href="/static/svg/apkcombo-icon.svg"/>
+<meta name="google" content="notranslate" />
+
+<title>APK Downloader - Download APK &amp; OBB (Latest Version)</title>
+<meta name="description" content="Download APK & OBB from Google Play Store™: ✔ Latest Version, ✔ Bypass Geo-restrictions and Incompatible - Best APK Downloader Online for Android, PC, Windows."/>
+<meta property="og:title" content="APK Downloader - Download APK &amp; OBB (Latest Version)"/>
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/apkcombo/cdn@master/screenshots/apkcombo_1350x650.png"/>
+<meta property="og:description" content="Download APK & OBB from Google Play Store™: ✔ Latest Version, ✔ Bypass Geo-restrictions and Incompatible - Best APK Downloader Online for Android, PC, Windows."/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="APKCombo.com"/>
+<meta property="og:url" content="https://apkcombo.com/downloader/"/>
+<script>function goHash(hash){location.hash = hash; location.reload()}</script>
+
+  <link rel="canonical" href="https://apkcombo.com/downloader/"/>
+  <link rel="alternate" href="https://apkcombo.com/downloader/" hreflang="x-default"/>
+  <link rel="alternate" href="https://apkcombo.com/downloader/" hreflang="en"/><link rel="alternate" href="https://apkcombo.com/pt/downloader/" hreflang="pt"/><link rel="alternate" href="https://apkcombo.com/es/downloader/" hreflang="es"/><link rel="alternate" href="https://apkcombo.com/id/downloader/" hreflang="id"/><link rel="alternate" href="https://apkcombo.com/ru/downloader/" hreflang="ru"/><link rel="alternate" href="https://apkcombo.com/vi/downloader/" hreflang="vi"/><link rel="alternate" href="https://apkcombo.com/th/downloader/" hreflang="th"/><link rel="alternate" href="https://apkcombo.com/ar/downloader/" hreflang="ar"/><link rel="alternate" href="https://apkcombo.com/tr/downloader/" hreflang="tr"/><link rel="alternate" href="https://apkcombo.com/it/downloader/" hreflang="it"/><link rel="alternate" href="https://apkcombo.com/fr/downloader/" hreflang="fr"/><link rel="alternate" href="https://apkcombo.com/de/downloader/" hreflang="de"/><link rel="alternate" href="https://apkcombo.com/ko/downloader/" hreflang="ko"/><link rel="alternate" href="https://apkcombo.com/ja/downloader/" hreflang="ja"/><link rel="alternate" href="https://apkcombo.com/nl/downloader/" hreflang="nl"/><link rel="alternate" href="https://apkcombo.com/pl/downloader/" hreflang="pl"/><link rel="alternate" href="https://apkcombo.com/hi/downloader/" hreflang="hi"/><link rel="alternate" href="https://apkcombo.com/zh/downloader/" hreflang="zh"/><link rel="alternate" href="https://apkcombo.com/tw/downloader/" hreflang="zh-TW"/>
+<script>
+  var hasWebP=!1;!function(){var A=new Image;A.onload=function(){hasWebP=!!(A.height>0&&A.width>0)},A.onerror=function(){hasWebP=!1},A.src="data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA"}();
+  function lazyScript(c,e){var n=document.createElement("script");n.async=!0,e&&(n.onload=e),document.head.appendChild(n),n.src=c}
+  function getCookie(e){for(var t=e+"=",n=document.cookie.split(";"),i=0;i<n.length;i++){for(var o=n[i];" "==o.charAt(0);)o=o.substring(1,o.length);if(0==o.indexOf(t))return o.substring(t.length,o.length)}return null}
+  function setCookie(e,t,n,i,o){var r=e+"="+t;if(n){var u=new Date;u.setTime(u.getTime()+24*n*60*60*1e3),r+="; expires="+u.toGMTString()}r+="; path=/",i&&(r+="; domain="+i),o&&(r+="; secure"),document.cookie=r}
+  function lazyImage(o){return function(){function r(e){e.onload=function(){e.classList.remove(o),e.classList.add("lazyloaded"),e.referrerPolicy="no-referrer"},e.dataset.lazybackground&&(e.style.backgroundImage="url(".concat(e.dataset.lazybackground,")")),e.referrerPolicy="no-referrer",e.getAttribute("data-src")&&(e.src=!hasWebP&&(e.dataset.src.indexOf("googleusercontent.com")||e.dataset.src.indexOf("ggpht.com"))?e.dataset.src.replace(/-rw$/,""):e.dataset.src,"IntersectionObserver"in window&&t.unobserve(e))}var t,e=document.querySelectorAll("."+o);if("IntersectionObserver"in window)t=new IntersectionObserver(function(e){e.forEach(function(e){0<e.intersectionRatio&&r(e.target)})},{rootMargin:"0px",threshold:0}),e.forEach(function(e){t.observe(e)});else for(var n=0;n<e.length;n++)r(e[n])}}
+  function sendEvent(e,a,n,t){var v=window.gtag;if(v){var g={};a&&(g.event_category=a),n&&(g.event_label=n),t&&(g.value=t),v("event",e,g)}}
+   </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131363738-1"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-7RHZ240CW7",{page_title:location.pathname,page_location:location.href})</script>
+<style>
+ i.icon,i.icon+span{display:table-cell}.navbar,html{background-color:#fff}.navbar,.navbar-burger,.navbar-item{position:relative}.tags.nowrap,.widget .content{scrollbar-width:none;scroll-direction:horizontal}.upper,.widget .more a,section .title{text-transform:uppercase}.content-gapps,.content-gapps>a>p:nth-child(2){-webkit-line-clamp:2;-webkit-box-orient:vertical}a,article,aside,b,body,code,div,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,html,i,img,ins,label,li,p,ul{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}*,::after,::before{box-sizing:inherit}.widget .content,html{box-sizing:border-box}a{text-decoration:none;color:inherit}html *{max-height:100000px}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";overflow-x:hidden}html{font-size:14px;font-weight:400;line-height:1.5;min-width:300px;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;min-height:101vh}i.icon{height:1em;width:1em}i.search,i.searchb{height:16px;width:16px}.navbar-item i+span{padding-left:6px}i.download{background:url(/static/svg/arrow-down-white.svg) center no-repeat;width:15px}i.bcat{background:url(/static/svg/fas-fa-th.svg) center no-repeat}i.downloader{background:url(/static/svg/fa-fa-download.svg) center no-repeat}i.location{background:url(/static/svg/fas-fa-globe-americas.svg) center no-repeat}i.search{background:url(/static/svg/fa-fa-searchw.svg) center no-repeat}i.searchb{background:url(/static/svg/fa-fa-search.svg) center no-repeat}hr{height:0!important;border:0!important;margin:15px 0}.breadcrumb p:not(:last-child) a,a.is-link{color:#1a73d6}.breadcrumb p a:hover,.hover-underline:hover,a.is-link:hover{text-decoration:underline}@media (hover:hover) and (pointer:fine){.beauty-scroll::-webkit-scrollbar{width:8px;height:8px}.beauty-scroll::-webkit-scrollbar-track{box-shadow:1px 1px 5px rgba(0,0,0,.3) inset;border-radius:8px}.beauty-scroll::-webkit-scrollbar-thumb{background-color:#6f6f6f;border-radius:8px}.beauty-scroll::-webkit-scrollbar-thumb:hover{background-color:#50555a}}.fs20{font-size:20px}.fw600{font-weight:600}.fw400,.widget .more a{font-weight:400}.section{padding:1rem}.columns{margin-left:-.75rem;margin-right:-.75rem;margin-top:-.75rem;flex-wrap:wrap}.columns:not(:last-child){margin-bottom:.75rem}.columns:last-child{margin-bottom:-.75rem}.column{display:block;flex-basis:0%;flex-grow:1;flex-shrink:1;padding:.75rem}.navbar{min-height:3.25rem;z-index:30;box-shadow:0 2px 0 0 #f5f5f5}.navbar>.container{align-items:stretch;display:flex;min-height:3.25rem;width:100%}.navbar-brand{align-items:stretch;display:-webkit-box;display:flex;flex-shrink:0;min-height:3.25rem}.navbar-brand a.navbar-item:hover{background-color:transparent}.navbar-burger{cursor:pointer;display:block;height:3.25rem;width:3.25rem;margin-left:auto}.navbar-burger span{background-color:currentColor;display:block;height:1px;left:14.75px;position:absolute;-webkit-transform-origin:center;transform-origin:center;transition-duration:86ms;transition-property:background-color,opacity,transform,-webkit-transform;transition-timing-function:ease-out;width:16px}.navbar-burger span:first-child{top:16.75px}.navbar-burger span:nth-child(2){top:21.75px}.navbar-burger span:nth-child(3){top:26.75px}.navbar-burger:hover{background-color:rgba(0,0,0,.05)}.navbar-burger.is-active span:first-child{-webkit-transform:translateY(5px) rotate(45deg);transform:translateY(5px) rotate(45deg)}.navbar-burger.is-active span:nth-child(2){opacity:0}.navbar-burger.is-active span:nth-child(3){-webkit-transform:translateY(-5px) rotate(-45deg);transform:translateY(-5px) rotate(-45deg)}.navbar-menu{display:none}.navbar-item{display:block;line-height:1.5;padding:.5rem .75rem;flex-grow:0;flex-shrink:0}.navbar.is-link .navbar-brand .navbar-link:hover,.navbar.is-link .navbar-brand>a.navbar-item:hover{background-color:#2366d1;color:#fff}.navbar-link,a.navbar-item{cursor:pointer;font-weight:600}@media screen and (min-width:1025px),print{.navbar-item,.navbar-link{align-items:center;display:flex}.navbar-item.is-hoverable:hover .navbar-dropdown{display:block}.navbar-dropdown{background-color:#fff;border-bottom-left-radius:6px;border-bottom-right-radius:6px;box-shadow:0 8px 8px rgba(10,10,10,.1);display:none;font-size:.875rem;right:0;min-width:100%;position:absolute;top:100%;z-index:20;margin-top:1px;width:320px;padding:1rem}.navbar-link:not(.is-arrowless)::after{border:3px solid transparent;border-radius:2px;border-right:0;border-top:0;content:" ";display:block;height:.625em;margin-top:-.4375em;pointer-events:none;position:absolute;top:50%;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:center;transform-origin:center;width:.625em}.navbar-link.is-active:not(:hover),a.navbar-item.is-active:not(:hover){background-color:transparent}.columns:not(.is-desktop){display:flex}.column.is-main{flex:none;width:calc(100% - 320px)}.column.is-nav{width:320px;min-width:320px;max-width:320px}}.ainput,.button{background-color:#fff;font-size:1em;-webkit-appearance:none}@media screen and (min-width:1025px){.navbar,.navbar-end,.navbar-menu,.navbar-start{align-items:stretch;display:flex}.navbar{min-height:3.25rem}.navbar-burger{display:none}.navbar-item{align-items:center;display:flex}.navbar-menu{flex-grow:1;flex-shrink:0}.navbar-start{justify-content:flex-start;margin-right:auto}.navbar-end{justify-content:flex-end;margin-left:auto;padding-left:3px}.navbar-item.has-dropdown:hover,.navbar-link:hover,a.navbar-item:hover{background-color:#f5f5f5!important;color:#333}.navbar>.container .navbar-brand{margin-left:-.75rem}.navbar>.container .navbar-menu{margin-right:-.75rem}.column.is-6{flex:none;width:50%}.column.is-12{flex:none;width:100%}.widget .content-apps{max-width:696px}.is-mobile-only{display:none!important}#nav-search{width:375px}.content.apps-side-bar{white-space:nowrap;max-height:315px;max-width:265px;overflow:hidden}ul.versions li{width:33%}ul.versions{max-height:unset}}@media screen and (min-width:1089px){.container{max-width:1048px;width:1048px}}@media screen and (min-width:1301px){.container{max-width:1200px;width:1200px}.widget .content-apps{max-width:870px}}.ainput,.button.is-fullwidth{width:100%}.breadcrumb{white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}.breadcrumb::-webkit-scrollbar{display:none}.breadcrumb>div{margin:0;padding:0}.breadcrumb p{display:inline-block;position:relative}.button,.tags a,.tags span{display:inline-flex;white-space:nowrap}.breadcrumb p:not(:first-child):before{content:"";border:solid #6f6f6f;border-width:0 2px 2px 0;display:inline-block;padding:3px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);margin:0 8px 0 2px}.button .icon,.tags a .icon{margin-right:4px}.button{padding:5px .75em;cursor:pointer;justify-content:center;text-align:center;vertical-align:top;border-radius:5px;z-index:1;position:relative;line-height:1.5rem;border:1px solid #ddd;transition:box-shadow .15s,background-color .15s,transform .1s,opacity .1s;align-items:baseline}.button .icon{top:1px}.button:focus,.button:hover{border-color:#b5b5b5}.button.is-large{padding:7px}.button.is-success{background-color:#198754;border-color:#198754;color:#fff;box-shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)}.button.is-link,.tags a.is-link{background-color:#1a73d6;color:#fff}.button.is-success:hover{color:#fff;background-color:#157347;border-color:#146c43}.button.is-link{border-color:transparent;box-shadow:none}.button.is-link:hover,.tags a.is-link:hover{background-color:#276cda;color:#fff;text-decoration:none}.button.button-search{margin:0 -1px;height:2.25em;border-bottom-left-radius:0;border-top-left-radius:0;box-shadow:none;float:right}.buttons .button{margin-bottom:.5rem;display:inline-block}.button[disabled]{background-color:#d6d6d6;border-color:#d6d6d6;box-shadow:none;color:#7a7a7a;cursor:not-allowed}.ainput{-moz-appearance:none;height:2.25em;padding:5px 8px;border:1px solid #a9a9a9;box-shadow:inset 0 1px 2px rgba(10,10,10,.1);margin:0;border-radius:4px 0 0 4px;outline:0}.ainput:-moz-placeholder,.ainput:-ms-input-placeholder,.ainput::-moz-placeholder,.ainput::-webkit-input-placeholder{color:#4a4a4a}.ainput[name=q]{border-right:0}.ainput:active,.ainput:focus{border-color:#1a73d6;box-shadow:0 0 0 .125em rgba(50,115,220,.25)}.tags{display:block;margin-top:0}.tags.nowrap{white-space:nowrap;overflow:auto;-ms-overflow-style:none}.tags.nowrap::-webkit-scrollbar{display:none}.tags a,.tags span{background-color:#f8f9fa;border:1px solid #a6b0b3;padding:4px 10px;color:#666;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;margin-right:5px;overflow:hidden;text-overflow:ellipsis;align-items:center;margin-bottom:7px}.tags a.is-link{border-color:transparent}.tags .more_tags:hover,.tags a:hover{background:rgba(166,176,179,.2)}.autocomplete-suggestions{text-align:left;cursor:default;border:1px solid #e5e5e5;border-top:0;background:#fff;box-shadow:-1px 1px 3px rgba(0,0,0,.1);position:absolute;display:none;z-index:9999;max-height:254px;overflow:hidden;overflow-y:auto;box-sizing:border-box}.autocomplete-suggestion{position:relative;padding:.75rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#333}.content-gapps a,.ver-item{white-space:normal;vertical-align:top;position:relative}.autocomplete-suggestion b{font-weight:600;color:#1a73d6}.autocomplete-suggestion.selected{background:#f0f0f0}ul.list-versions li{margin:0;padding:0;border:0;list-style:none}.ver-item{display:flex;padding:10px}.ver-item figure{width:48px;height:auto;display:flex;justify-content:center;align-items:center}.ver-item figure img{width:48px;height:48px;border-radius:20%;transition:.25s;-webkit-transition:.25s}.ver-item .info{overflow:hidden;margin-left:10px;display:flex;justify-content:center;flex-direction:column;position:relative;width:100%}.ver-item .description{color:#6f6f6f;font-size:13px;display:inline-flex;align-items:center;white-space:nowrap}.ver-item .name{margin-bottom:4px}.ver-item .description .spec{display:inline-flex;align-items:center;margin-right:7px}.content-gapps a,.vtype span,.widget .more a,.widget .more:after,section .title{display:inline-block}.ver-item .description .icon{margin-left:.5em;margin-right:2px}.ver-item .info .vername{color:#333;word-break:break-word}.ver-item:hover{background-color:#f5f7fa}.share-button:hover,.ver-item:hover img{transform:scale(1.1)}.vtype{vertical-align:text-bottom}.vtype span{background:#00875f;text-align:center;font-size:10px!important;color:#fff;border-radius:4px;min-width:28px;padding:0 5px}.vtype span+span{margin-left:4px}.vtype .type-apkobb,.vtype .type-apks,.vtype .type-xapk{background-color:#1a73d6}.vtype .type-zip{background-color:#a76906}.vtype .type-obb{background-color:#8e44ad}.container{margin:0 auto;position:relative}section .content{padding:10px 0 5px}section .title{color:#212121;font-size:18px;padding:20px 0 0}section h2.title{font-weight:500;word-break:break-word}.content-apps{font-size:0;overflow:hidden}.widget{position:relative;z-index:1;border-bottom:1px solid #e5e5e5;overflow:hidden}.widget .content{height:auto;overflow-x:auto;overflow-y:hidden;margin:0;white-space:nowrap;position:relative;-webkit-overflow-scrolling:touch;-ms-overflow-style:none}.widget .more{text-align:right}.widget .more a{color:#00875f;font-size:14px;-webkit-appearance:none;border:0;z-index:1;position:relative;background:0 0;cursor:pointer;padding:5px;margin-bottom:5px}.widget .more:after{content:"";border:solid #00875f;border-width:0 1px 1px 0;padding:3px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);top:-1px;margin-right:3px;position:relative}.widget .content::-webkit-scrollbar{display:none}.content-gapps a{padding:5px 5px 8px;line-height:1.2}.content-gapps a>figure{width:auto;margin-bottom:10px;text-align:center;cursor:pointer}.content-gapps a>figure img{width:75px;height:75px;border-radius:20%}.content-gapps>a>p:nth-child(2){color:#212121;font-size:13px;word-break:break-word;display:-webkit-box;min-height:32px;overflow:hidden}.content-gapps>a>p:nth-child(3){color:#737373;font-size:12px;margin-top:5px;display:-webkit-box;overflow:visible;line-height:1.5;white-space:nowrap}.content-gapps>a>p:nth-child(3):before{content:"";background:url(/static/svg/ic_download_count.svg?9) center/cover no-repeat;width:11px;height:11px;display:inline-block;position:relative;top:1px;margin-right:2px;vertical-align:baseline}.app_header{color:#333;z-index:1;position:relative;overflow:hidden;margin-bottom:14px}.footer-menu,.installer{margin-bottom:5px}.app_header>div{vertical-align:top}.app_header .avatar{height:auto;position:absolute}.app_header .avatar img{width:75px;height:75px;display:block;border-radius:20%}.app_header .info{margin-left:85px;height:75px;color:#333}.app_header .info h1{font-size:17px;line-height:1.2;word-break:break-all;display:-webkit-box;-webkit-line-clamp:1;height:21px;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;margin-bottom:8px;font-weight:600}.app_header .info .version{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#348402}.app_header .info>div{margin-top:3px}.app_header .info .author,.app_header .info .author a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.app_header .download{float:right;width:230px}.installer{width:auto;overflow:hidden;display:block;padding-bottom:0!important;margin-top:23px}.installer figure{padding:5px;position:absolute}.installer figure img{width:48px;height:48px}.installer .installer-info{margin-left:60px}.installer .installer-info>p{font-size:13px;color:#6f6f6f;margin-top:3px}.footer{background-color:#fafafa;padding:1.25rem}.footer-menu a{display:inline-block;margin:5px 0;color:#1a73d6!important}.footer .tags a{background-color:#fff!important}.a2a_kit .a2a_dd,.a2a_kit a{display:inline-block;float:none!important}.a2a_default_style{text-align:center;height:32px!important}.has-text-centered{text-align:center!important}.apk-badge{display:none!important;position:relative;top:-1px;font-size:9px;letter-spacing:.7px;border-radius:3px;padding:3px 4px;min-width:10px;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:middle;background-color:#777;cursor:default}.apk-badge.apks{background-color:#00875f}.icon{width:1em;height:1em;fill:currentColor;position:relative}.ltr{direction:ltr;display:inline-block}.st-btn>svg{height:32px!important;width:32px!important}.blur{color:#6f6f6f}.is-hidden{display:none!important}.inline-block,b{display:inline-block}.mb-17{margin-bottom:17px!important}.mb-20{margin-bottom:20px!important}.mt-20{margin-top:20px!important}.mb-14{margin-bottom:14px!important}.mt-14{margin-top:14px!important}.mb-0{margin-bottom:0!important}.mt-0{margin-top:0!important}.mt-10{margin-top:10px!important}.mb-10{margin-bottom:10px!important}.divider{display:block;border-top:1px solid #e5e5e5}b{font-weight:600}.inline-flex-center{display:inline-flex;align-items:center}.inline-flex-center .icon{margin-right:5px}.share-button{z-index:1000;cursor:pointer;height:40px;width:40px;position:fixed;bottom:110px;right:16px;border:none;background:url(/static/svg/share.svg) center/30px no-repeat #198754;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;box-shadow:2px 2px 3px 0 rgb(0 0 0 / 15%)}.fflg,.position-relative{position:relative}.navbar-dropdown ul{list-style:none}.navbar-dropdown ul li{width:50%;display:inline-block;padding-left:6px}.navbar-dropdown ul li a{line-height:28px;font-size:14px;padding:5px;display:block;-webkit-tap-highlight-color:transparent}.navbar-dropdown ul li:hover{background:#f5f5f5}.fflg{width:27px;height:17px;background:url(/static/images/css-flags-langs-sprite.png) 0 0/100% 2080.5% no-repeat;display:inline-block;overflow:hidden;box-sizing:content-box;vertical-align:sub}.fflg-ar{background-position:center 0}.fflg-br{background-position:center 5.558%}.fflg-cn{background-position:center 11.116%}.fflg-de{background-position:center 16.674%}.fflg-es{background-position:center 22.232%}.fflg-fr{background-position:center 27.79%}.fflg-id{background-position:center 33.348%}.fflg-in{background-position:center 38.906%}.fflg-it{background-position:center 44.464%}.fflg-jp{background-position:center 50.022%}.fflg-kr{background-position:center 55.58%}.fflg-nl{background-position:center 61.138%}.fflg-pl{background-position:center 66.696%}.fflg-ru{background-position:center 72.254%}.fflg-th{background-position:center 77.812%}.fflg-tr{background-position:center 83.37%}.fflg-tw{background-position:center 88.928%}.fflg-us{background-position:center 94.486%}.fflg-vn{background-position:center 100.044%}@media screen and (max-width:480px){.widget .more{text-align:center!important}}@media screen and (max-width:1024px){.navbar-menu.is-active,.navbar>.container{display:block}.navbar-brand .navbar-item{align-items:center;display:flex}.navbar-menu{background-color:#fff;box-shadow:0 8px 16px rgba(10,10,10,.1);padding:.5rem 0}.navbar-dropdown.section{margin-top:5px;padding-left:20px}#gallery-screenshots img.lzl{min-width:200px}.column+.column.is-nav{margin-top:20px}.is-desktop-only{display:none!important}}.share-wrap{height:37px;text-align:center}.share-reaction{height:80px}.widget.seo-widget>div{padding:5px 0 10px}.widget.seo-widget>div a{padding:6px 3px;display:inline-block}.trending-widget .content{display:flex;flex-wrap:wrap;margin-top:0}.trending-widget .content a{display:flex;align-items:center;margin:6px;transition:.25s;color:#000;font-size:13px;box-shadow:rgb(0 0 0 / 8%) 0 0 0 1px;border:none;padding:5px;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.trending-widget .content img{width:20px;height:20px;margin-right:5px;border-radius:20%}.trending-widget .content a:hover{transform:translateY(-2px);background:#f8f9fa}.power_stickybanner__wrapper:has(.adsbygoogle[data-ad-status=unfilled]){display:none!important}.content-gapps{white-space:unset!important;display:-webkit-box;overflow:hidden}.content-gapps a{width:33%!important}@media screen and (min-width:344px),print{.content-gapps a{width:25%!important}}@media screen and (min-width:475px),print{.content-gapps a{width:20%!important}}@media screen and (min-width:550px),print{.content-gapps a{width:16.66%!important}}@media screen and (min-width:650px),print{.content-gapps{white-space:nowrap!important;display:block!important;-webkit-line-clamp:unset!important;-webkit-box-orient:unset!important;overflow:hidden}.content-gapps a{width:87px!important}}
+ .ad-holder2,.ad-pss{overflow:hidden}.adsbypubpower,.diseanmevrtt{text-align:center;position:relative}.ad-holder2,.ad-pss{margin:0 auto}.diseanmevrtt{color:#6f6f6f;font-size:10px;top:0;right:0;z-index:1}.adsbypubpower{display:block}.ad-holder2{left:0;right:0;top:0;bottom:0;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;border:1px solid #e6e7e8;width:320px;height:250px;background:#fff;position:absolute;z-index:-1}.ad-holder2::after{content:"SPONSORED AD";background-color:transparent;border-radius:2px;color:#dadae0;font-size:16px;line-height:1;padding:3px 4px 1px;position:absolute}.ad-pss .ad-pss-bottom-right,.ad-pss.ad-pss-header,.ad-pss.ad-pss-middle{width:100%!important}.ad-pss-header .ad-holder2,.ad-pss.ad-pss-header{width:320px;height:100px}.ad-pss .ad-pss-bottom-right,.ad-pss-bottom-right .ad-holder2,.ad-pss-middle .ad-holder2,.ad-pss.ad-pss-middle{width:320px;height:250px}.ad-pss-header .da2s{width:320px;height:100px;flex-direction:column}.ad-pss-header .da2s .btn{display:none}@media screen and (min-width:770px){.ad-pss-header .ad-holder2,.ad-pss-middle .ad-holder2,.ad-pss.ad-pss-header,.ad-pss.ad-pss-middle{text-align:left;width:100%;height:90px}.ad-pss-bottom-right .ad-holder2,.ad-pss.ad-pss-bottom-right{width:320px;height:250px}.ad-pss-header .da2s .btn{display:block}.ad-pss-header .da2s,.ad-pss-middle .da2s{text-align:left;width:100%;height:90px;flex-direction:row}.ad-pss-header .da2s .btn,.ad-pss-middle .da2s .btn{padding-top:unset;margin-bottom:unset;width:unset}.ad-pss-header .da2s .des,.ad-pss-middle .da2s .des{margin-top:2px}}@media screen and (min-width:1025px){.ad-pss-header .ad-holder2,.ad-pss.ad-pss-header{width:320px;height:100px}.ad-pss-middle .ad-holder2,.ad-pss.ad-pss-middle{width:100%;height:250px}.ad-pss-bottom-right .ad-holder2,.ad-pss.ad-pss-bottom-right{width:320px;height:250px}.ad-pss-header .da2s{width:320px;height:100px;flex-direction:column}.ad-pss-header .da2s .btn{display:none}.ad-pss-middle .da2s{width:320px;height:250px;flex-direction:column}.ad-pss-header .da2s .btn,.ad-pss-middle .da2s .btn{padding-top:20px;margin-bottom:35px;width:100%}.ad-pss-header .da2s .des,.ad-pss-middle .da2s .des{margin-top:10px}}@media screen and (min-width:1095px){.ad-pss-header .ad-holder2,.ad-pss-middle .ad-holder2,.ad-pss.ad-pss-header,.ad-pss.ad-pss-middle{text-align:left;width:100%;height:90px}.ad-pss-bottom-right .ad-holder2,.ad-pss.ad-pss-bottom-right{width:320px;height:250px}.ad-pss-header .da2s .btn{display:block}.ad-pss-header .da2s,.ad-pss-middle .da2s{text-align:left;width:100%;height:90px;flex-direction:row}.ad-pss-header .da2s .btn,.ad-pss-middle .da2s .btn{padding-top:unset;margin-bottom:unset;width:unset}.ad-pss-header .da2s .des,.ad-pss-middle .da2s .des{margin-top:2px}}
+.da2s,.da2s .btn{background-color:#fff}.da2s,.da2s .btn,.da2s .text,.da2s .text .des,.da2s .text .tit{line-height:1.3;box-sizing:border-box}.da2s{padding:20px;border:1px solid #e6e7e8;display:flex;flex-direction:column;font-size:10px;top:0;left:0;width:320px;height:250px;overflow:hidden;margin:0 auto;max-width:728px;cursor:pointer;align-items:center;flex-grow:1}.da2s .text{display:flex;flex-direction:column;justify-content:center;flex-grow:1}.da2s .text .tit{font-size:20px;padding:0;color:rgba(0,0,0,.79);font-weight:500;letter-spacing:.02em;display:flex;align-items:center}.da2s .text .tit svg{width:1.75rem;margin-right:5px}.da2s .text .des{font-size:15px;padding:2.4px 0 0;color:rgba(0,0,0,.6);font-weight:400;letter-spacing:.02em;margin-top:5px}.da2s .btn{color:#fff;padding:10px 25px 0;margin-bottom:25px;width:100%}.da2s .btn a,.da2s .btn span{font-size:14px;padding:0 6.8px;height:35px;line-height:35px;max-height:35px;margin:0;min-width:165.87px;text-decoration:none;background-color:#08f;border-radius:4px;box-shadow:0 6px 12px rgb(134 140 150 / 65%);font-weight:400;text-align:center;text-transform:capitalize;display:block}
+.bg-container-1130326237f iframe {max-height: 100px ! IMPORTANT;transform: scaleY(0.8); transform-origin: bottom right;} .bg-container-1130326237f {right: 0px !important} .bgad-1130326237f-close { right: 0px !important;top: -10px !important}
+.calc-container{position:relative;overflow:hidden;margin:auto}.calc-box-horizontal{height:250px;width:100%;max-width:728px;margin-bottom:20px}.calc-box-square{height:250px;width:300px;margin-bottom:10px}@media (max-width:767px){.calc-box-horizontal{width:300px}}@media screen and (min-width:925px){.calc-box-horizontal{height:90px}}@media screen and (min-width:1024px){.calc-box-horizontal{height:90px}}@media screen and (min-width:1100px){.calc-box-horizontal{height:90px}}.calc-container .adsbygoogle,.calc-placeholder{position:absolute;top:0;left:0;width:100%;height:100%}.calc-placeholder{display:flex;justify-content:center;align-items:center;z-index:1;border:1px solid #e5e7eb}.calc-text{color:#8b8b8b;text-align:center}.adsbygoogle{z-index:2}.adsbygoogle[data-ad-status=filled]+.calc-placeholder{display:none}.calc-en::after{content:"SPONSORED AD"}ins.adsbygoogle[data-ad-status=filled] .calc-placeholder,ins.adsbygoogle[data-ad-status=unfilled]{display:none!important}
+.bottom-ad{height:60px;width:calc(100vw - 10px);transition:opacity .8s}@media (min-width:480px) and (max-width:519px){.bottom-ad{width:415px}}@media (min-width:520px) and (max-width:700px){.bottom-ad{width:468px}}@media (min-width:701px) and (max-width:1200px){.bottom-ad{width:680px}}@media (min-width:1201px){.bottom-ad{width:900px}}.adsense-wrapper{background:#fff;height:60px;position:fixed;bottom:0;left:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:0;z-index:9999;box-shadow:0 -2px 8px rgba(0,0,0,.1);opacity:0;transform:translateY(30px);transition:none}.adsense-wrapper:has(img){animation:.6s ease-out forwards fadeUp}@media (max-width:280px){.adsense-wrapper{display:none}}.close-button{display:none;position:absolute;right:5px;top:-15px;background:#000;color:#fff;border-radius:20px;padding:2px 8px 4px;font-size:14px;text-decoration:none;border:0}.adsense-wrapper.closing{opacity:0;transform:translateY(60px);pointer-events:none}.adsense-wrapper:has(img) .close-button{display:block!important}.adsense-container{margin:auto;max-width:100%}.bottom-ads .adsbygoogle{position:unset!important;display:flex;justify-content:center}.bottom-ads ins.adsbygoogle[data-ad-status=unfilled]{display:none!important}@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+ .download-loading,.error{border:1px solid #e5e5e5;text-align:center}.tabs a,ol{color:#4a4a4a}ol ul li,ul.list-check li{line-height:2}.tree ul,ul.list-check{list-style:none}.aselect,.tree,.tree ul li,ul.list-check li{position:relative}.tree ul li:after,.tree ul li:before{background-color:#dadce0;left:0;position:absolute}.aselect,.tabs a,.variant{vertical-align:top}.configs .options,.variant .info{overflow:hidden}.tabs,form label{white-space:nowrap}.dropdown-content li,.tree ul a:hover{text-decoration:none}.dropbtn,.tabs li,.tree ul a,a.is-link:hover{cursor:pointer}.download-loading,.error,.title.heading,h1{text-align:center}code{word-break:break-all;overflow-wrap:break-word}strong{font-weight:600}.tree,.tree .blur,h1{font-weight:400}.abutton.download span:before{content:'';background:url(/static/svg/arrow-down-white.svg?v=2) center no-repeat;margin-right:1px;width:14px;height:14px;display:inline-block;top:1px;position:relative}.title.heading{font-size:32px;display:block;padding-top:0}.description .content{color:#4a4a4a;line-height:2}ul.list-check{padding-left:9px}ul.list-check li:before{content:'✓';padding-right:4px}.download-loading{padding:20px 0}.configs,.error,.variant{padding:10px}.grecaptcha-badge{display:none}.error{margin-top:20px}.aselect{display:inline-block;width:100%}.tabs,.tabs a{display:block}.aselect select{background-color:#fff;font-size:1em;width:100%;-moz-appearance:none;-webkit-appearance:none;border:1px solid #a9a9a9;border-radius:4px;line-height:1.5;padding:4.25px 7.75px;outline:0}.aselect select:hover{border-color:#00a977}.aselect:after{right:1.125em;z-index:4;border:3px solid;border-radius:2px;border-right:0;border-top:0;content:" ";display:block;height:.625em;margin-top:-.4375em;pointer-events:none;position:absolute;top:50%;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:center;transform-origin:center;width:.625em}.aselect select:active,.aselect select:focus{border-color:#1a73d6}.spinner{-webkit-animation:1.4s linear infinite rotator;animation:1.4s linear infinite rotator}@-webkit-keyframes rotator{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(270deg);transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;-webkit-transform-origin:center;transform-origin:center;-webkit-animation:1.4s ease-in-out infinite dash,5.6s ease-in-out infinite colors;animation:1.4s ease-in-out infinite dash,5.6s ease-in-out infinite colors}@-webkit-keyframes colors{0%,100%{stroke:#4285f4}25%{stroke:#de3e35}50%{stroke:#f7c223}75%{stroke:#1b9a59}}@keyframes colors{0%,100%{stroke:#4285f4}25%{stroke:#de3e35}50%{stroke:#f7c223}75%{stroke:#1b9a59}}@-webkit-keyframes dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;-webkit-transform:rotate(135deg);transform:rotate(135deg)}100%{stroke-dashoffset:187;-webkit-transform:rotate(450deg);transform:rotate(450deg)}}@keyframes dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;-webkit-transform:rotate(135deg);transform:rotate(135deg)}100%{stroke-dashoffset:187;-webkit-transform:rotate(450deg);transform:rotate(450deg)}}@-webkit-keyframes spinAround{from{transform:rotate(0)}to{transform:rotate(359deg)}}.tabs{-webkit-overflow-scrolling:touch;align-items:stretch;font-size:1rem;overflow:hidden;overflow-x:auto}.tabs a{align-items:center;border-bottom:.1875rem solid #0000;border-left:.1875rem solid #0000;border-right:.1875rem solid #0000;margin-bottom:-1px;padding:.5em .6em}.configs .option,.configs legend{padding-right:5px;padding-left:5px}.tabs a:hover{color:#363636}.tabs li{display:inline-block}.tabs li.is-active a{border-bottom:.1875rem solid #1a73d6;color:#1a73d6}.tabs ul{align-items:center;border-bottom:1px solid #e5e5e5;display:flex;flex-grow:1;flex-shrink:0;justify-content:flex-start;padding-left:0;margin:0}.download-button,.variant figure{justify-content:center;display:flex}.content-tab{animation:.8s fadeEffect!important}@keyframes fadeEffect{from{opacity:0}to{opacity:1}}ol{margin:0 auto}ol,ol ul{padding-left:25px;margin-top:0;margin-bottom:0}ol ul{padding-left:10px}ol ul li{padding-left:5px;list-style-type:"+"}ol>ul{list-style:outside}.tree{background:#fff;line-height:1.5;color:#212529;margin-top:10px}.apk-description,ol li{line-height:2}.tree ul li{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.tree ul li:before{top:16.5px;width:10px;height:1px;margin:auto}.tree ul li:after{top:0;bottom:0;width:1px;height:100%}.tree ul li:last-child:after{height:16.5px}.tree>ul>li{padding-top:5px;padding-bottom:5px}.tree ul.file-list li::before{top:50%!important}.tree ul.file-list li:last-child:after{height:50%!important}.tree .icon.apk-icon-sdk{top:3px;margin-right:5px;fill:currentColor}.download-button{margin-left:auto;flex-direction:column;position:absolute;right:0;top:40%;top:calc(50% - 12px)}.dropdown,.mirror-list,.variant,.variant .info{position:relative}.ic-download-right{font-size:24px;color:#1a73d6c7}.variant{white-space:normal;display:flex}.variant figure{width:64px;height:auto;align-items:center}.variant figure img{width:64px;height:64px;border-radius:20%}.variant .info{margin-left:10px;display:flex;justify-content:center;flex-direction:column}.variant .description{color:#6f6f6f;font-size:13px;display:inline-flex;align-items:center;white-space:nowrap}.variant .header{margin-bottom:4px;margin-right:14px}.variant .description .spec{display:inline-flex;align-items:center;margin-right:7px}.variant .description .icon{margin-right:2px}.variant .info .vername{color:#1a73d6;word-break:break-word;font-weight:600}.variant .info .vercode{font-size:13px;color:#737373}.variant:hover{background-color:#f5f7fa}#form input[name=package]{border:2px solid #7ed214;height:40px;border-radius:5px}#form input[name=package]:active,#form input[name=package]:focus{box-shadow:none!important}#form input[type=submit]{display:block;width:250px;margin:20px auto;padding:8px}.configs{margin-top:20px;border:1px solid #e5e5e5}.configs .option{width:33%;float:left}.advanced-options{margin-top:10px}.advanced-options legend{font-size:14px;margin-bottom:5px;text-align:right}.advanced-options legend a{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}form label{display:block;margin-bottom:5px}form .aselect select{padding:4.25px}.mirror-list{margin-bottom:10px;background-color:#effaf3;border-color:#48c774!important}.dropdown{display:inline-block}.dropdown-content{display:none;position:absolute;min-width:160px;overflow:auto;background-color:#fff;border-radius:8px;box-shadow:0 2px 10px 0 rgb(0 0 0 / 20%);z-index:1000;right:-55px;margin-top:12px;color:#333}.dropdown-content li{padding:8px 8px 8px 25px;display:block;border-bottom:1px solid #eee;text-align:left;cursor:pointer}.dropdown-content li.is-active{background-image:url(/static/images/checkmark.png);background-position:left center;background-repeat:no-repeat}.dropbtn{display:inline-block;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:relative;margin-left:5px;font-weight:600}.show,h1{display:block}.dropbtn:after{content:'';border-color:#70757a transparent;border-style:solid;border-width:5px 5px 0;width:0;height:0;margin-left:5px;position:absolute;bottom:7px}.dropdown-content li:hover{background-color:rgba(0,0,0,.1)}.has-text-right{text-align:right}#download-tab.invisible{visibility:hidden;opacity:0}.mirror-list .mirror-list-body{border-radius:4px;border-style:solid;border-width:0 0 0 4px;padding:.75em;border-color:#48c774;color:#257942;position:relative;display:inline-block}@media screen and (max-width:480px){.configs{font-size:14px}.configs .option{padding-left:3px;padding-right:3px}.tags.downloader-tags a{font-size:13px}form .aselect:after{display:none}#form input[name=package]{height:35px}}@media screen and (min-width:768px){.variant figure,.variant figure img{width:48px;height:48px}.download-button{margin-left:auto;display:flex;justify-content:center;flex-direction:column;position:relative;right:inherit;top:inherit}.variant .header{margin-right:0}}ol li{list-style:auto;padding:5px 0 5px 5px}.apk-description .content{padding:0!important}.card{position:relative;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid #00000020;border-radius:.25rem}.card-header{font-size:16px;padding:.75rem 1.25rem;margin-bottom:0;background-color:#00000008;border-bottom:1px solid #00000020}.card-body{-ms-flex:1 1 auto;flex:1 1 auto;min-height:1px;padding:1.25rem}.tags::-webkit-scrollbar{display:none}h1{font-size:26px;padding:0;text-transform:uppercase;margin-bottom:25px}.app_header .info h1{text-align:left!important;text-transform:unset!important}.loading-overlay{display:none;background:rgba(255,255,255,.7);position:absolute;bottom:0;left:0;right:0;top:0;z-index:9998;align-items:center;justify-content:center}#download-tab,.loader{position:relative}.loading-overlay.is-active{display:flex}.loader,.loader:after,.loader:before{border-radius:50%;width:2.5em;height:2.5em;-webkit-animation:1.8s ease-in-out infinite load7;animation:1.8s ease-in-out infinite load7}.loader{color:#e5e5e5;font-size:10px;margin:80px auto;text-indent:-9999em;-webkit-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0);-webkit-animation-delay:-.16s;animation-delay:-.16s}.loader:after,.loader:before{content:"";position:absolute;top:0}.loader:before{left:-3.5em;-webkit-animation-delay:-.32s;animation-delay:-.32s}.loader:after{left:3.5em}@-webkit-keyframes load7{0%,100%,80%{box-shadow:0 2.5em 0 -1.3em}40%{box-shadow:0 2.5em 0 0}}@keyframes load7{0%,100%,80%{box-shadow:0 2.5em 0 -1.3em}40%{box-shadow:0 2.5em 0 0}}
+.lapps-nav{display:flex;flex-wrap:wrap}@media only screen and (min-width:601px){.lapps-nav{display:flex;flex-wrap:wrap}.lapps-nav a{width:50%}}@media only screen and (min-width:960px){.lapps-nav a{width:100%}}.lapp{width:100%;padding:10px;display:inline-block;vertical-align:top;white-space:normal;position:relative;line-height:1.2;transition:all .25s ease}.lapp:hover{background:#f5f7fa}.lapp figure{width:56px;height:56px;position:absolute}.lapp figure img{width:56px;height:56px;border-radius:20%;transition:transform .2s ease}@media (hover:hover){.lapp:hover figure img{transform:scale(1.1)}}.lapp .info{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-left:65px;height:56px}.lapp .info>span{display:block;overflow:hidden;text-overflow:ellipsis;line-height:1.5;margin-bottom:3px}.lapp .info .name{font-size:1rem;height:1.6rem;line-height:1.6rem;color:#333}.lapp .info .author{color:#6f6f6f;font-size:12px;line-height:18px}
+ </style>
+
+<link rel="manifest" crossorigin="anonymous" href="/manifest.json?v=3"> </head>
+
+<body>
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item" style="color: inherit !important;margin-right: auto;">
+        <span class="fs20 fw600" style="display: flex;align-items: center;color: #00875F"><img src="/static/svg/apkcombo-icon.svg" alt="logo" style="width: 24px;margin-right: 6px;vertical-align: baseline;" aria-hidden="true"><strong style="font-weight: 700 !important;">APK</strong>Combo</span>
+      </a>
+            <a aria-label="Search" role="button" href="javascript:void(0)" onclick="toggleNavbar();document.querySelector('input[name=q]').focus()" class="navbar-item is-mobile-only"><i class="icon searchb" aria-hidden="true"></i></a>
+            <div class="navbar-burger burger" data-target="apkcombo-menu" style="margin-left: 0;" onclick="toggleNavbar()"><span></span><span></span><span></span></div>
+    </div>
+
+    <div id="apkcombo-menu" class="navbar-menu">
+      <div class="navbar-start"><div class="navbar-item" id="nav-search"><form class="position-relative" action="/search" method="GET">
+  <button aria-label="Search" class="button button-search is-link">
+    <svg class="icon ic-search"><use xlink:href="#ic-search-btn"></use></svg><span class="is-desktop-only">Search</span>
+  </button>
+  <div class="center awesomplete" style="overflow: hidden">
+    <input name="q" value="" placeholder="Search APK" required aria-label="Name" class="ainput" type="search"  autocomplete="off" autocapitalize="none">
+  </div>
+</form>
+</div></div>
+      <div class="navbar-end">
+        <a href="/topic/jigsawquiz/" class="navbar-item"><span>🧩 JIGSAWQUIZ</span></a>
+        <a href="/how-to-install/?utm_source=nav" class="navbar-item"><span>❤️ XAPK INSTALLER</span></a>
+        <a href="/downloader/" class="navbar-item"><i class="icon downloader" aria-hidden="true"></i><span>APK DOWNLOADER</span></a>
+        <a class="navbar-item" href="/category/"><i class="icon bcat"></i><span>CATEGORIES</span></a>
+        <a class="navbar-item is-mobile-only" href="javascript:void(0)" role="button"><i class="icon location" aria-hidden="true" role="button"></i><span><strong class="upper">Language</strong>: ENGLISH</span></a>
+        <div id="locale-control" class="navbar-item has-dropdown is-hoverable" aria-label="Language">
+          <div class="navbar-link is-desktop-only"><span class="fflg fflg-us" style="margin-right: 3px"></span> <span>ENGLISH</span></div>
+          <div class="navbar-dropdown">
+            <ul><li onclick="setLangCookie('en')"><a href="/downloader/"><span class="fflg fflg-us"></span> English</a></li><li onclick="setLangCookie('pt')"><a href="/pt/downloader/"><span class="fflg fflg-br"></span> Português</a></li><li onclick="setLangCookie('es')"><a href="/es/downloader/"><span class="fflg fflg-es"></span> Español</a></li><li onclick="setLangCookie('id')"><a href="/id/downloader/"><span class="fflg fflg-id"></span> Indonesia</a></li><li onclick="setLangCookie('ru')"><a href="/ru/downloader/"><span class="fflg fflg-ru"></span> Pусский</a></li><li onclick="setLangCookie('vi')"><a href="/vi/downloader/"><span class="fflg fflg-vn"></span> Tiếng Việt</a></li><li onclick="setLangCookie('th')"><a href="/th/downloader/"><span class="fflg fflg-th"></span> ภาษาไทย</a></li><li onclick="setLangCookie('ar')"><a href="/ar/downloader/"><span class="fflg fflg-ar"></span> العربية</a></li><li onclick="setLangCookie('tr')"><a href="/tr/downloader/"><span class="fflg fflg-tr"></span> Türkiye</a></li><li onclick="setLangCookie('it')"><a href="/it/downloader/"><span class="fflg fflg-it"></span> Italiano</a></li><li onclick="setLangCookie('fr')"><a href="/fr/downloader/"><span class="fflg fflg-fr"></span> Français</a></li><li onclick="setLangCookie('de')"><a href="/de/downloader/"><span class="fflg fflg-de"></span> Deutsch</a></li><li onclick="setLangCookie('ko')"><a href="/ko/downloader/"><span class="fflg fflg-kr"></span> 한국어</a></li><li onclick="setLangCookie('ja')"><a href="/ja/downloader/"><span class="fflg fflg-jp"></span> 日本語</a></li><li onclick="setLangCookie('nl')"><a href="/nl/downloader/"><span class="fflg fflg-nl"></span> Nederlands</a></li><li onclick="setLangCookie('pl')"><a href="/pl/downloader/"><span class="fflg fflg-pl"></span> Polski</a></li><li onclick="setLangCookie('hi')"><a href="/hi/downloader/"><span class="fflg fflg-in"></span> हिन्दी</a></li><li onclick="setLangCookie('zh')"><a href="/zh/downloader/"><span class="fflg fflg-cn"></span> 中文(简体)</a></li><li onclick="setLangCookie('tw')"><a href="/tw/downloader/"><span class="fflg fflg-tw"></span> 中文(繁體)</a></li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</nav>
+<section id="main" class="section">
+  <div class="container">
+    <div class="columns">
+  <main class="column is-main">
+        <div class="calc-container calc-box-square" id="ads-mid" style="overflow: unset!important;">
+      <script async data-cfasync="false" data-size="300x250" data-category="common" data-id="dl-banner-300x250" data-zone="10280618" src="//a-zzz.com/btag.min.js"></script>
+    </div>
+
+    <h1><a href="/downloader/">APK Downloader</a></h1>
+        <div class="tags downloader-tags" style="margin-top: 1em;white-space: nowrap;overflow-x: auto;overflow-y: hidden;margin-bottom: 7px">
+  <a href="#package=com.zhiliaoapp.musically" onclick="return goHash('#package=com.zhiliaoapp.musically')" rel="nofollow" class="tag">TikTok</a>
+  <a href="#package=com.twitter.android" onclick="return goHash('#package=com.twitter.android')" rel="nofollow" class="tag">Twitter</a>
+  <a href="#package=com.facebook.lite" onclick="return goHash('#package=com.facebook.lite')" rel="nofollow" class="tag">Facebook Lite</a>
+</div>
+
+<form id="form" class="mb-20" method="get" action="/downloader/">
+  <input id="package" class="ainput" name="package" type="text" autofocus title="Name or Package Name or Play Store URL" placeholder="Name or Package Name or Play Store URL" value="">
+  <fieldset class="configs">
+    <legend>Android Device Configuration</legend>
+
+        <div class="options">
+      <div class="option">
+        <label for="device">Device</label>
+        <div class="aselect">
+          <select name="device" id="device">
+            <option value="default" selected>Default</option>
+            <option value="phone">Phone</option>
+            <option value="tablet">Tablet</option>
+            <option value="tv">TV</option>
+          </select>
+        </div>
+      </div>
+
+            <div class="option">
+        <label for="arches">Architecture</label>
+        <div class="aselect">
+          <select name="arches" id="arches" class="aselect">
+            <option value="default" selected>Default</option>
+            <option value="armeabi-v7a">armeabi-v7a</option>
+            <option value="arm64-v8a">arm64-v8a</option>
+            <option value="x86">x86</option>
+            <option value="x86_64">x86_64</option>
+          </select>
+        </div>
+      </div>
+
+            <div class="option">
+        <label for="sdk">Android</label>
+        <div class="aselect">
+          <select name="sdk" id="sdk">
+            <option value="default" selected>Default</option>
+            <option value="19"> 4.4</option>>
+            <option value="21"> 5.0</option>>
+            <option value="22"> 5.1</option>>
+            <option value="23"> 6.0</option>>
+            <option value="24"> 7.0</option>>
+            <option value="25"> 7.1</option>>
+            <option value="26"> 8.0</option>>
+            <option value="27"> 8.1</option>>
+            <option value="28"> 9.0</option>>
+            <option value="29"> 10</option>>
+            <option value="30"> 11</option>>
+            <option value="31"> 12</option>>
+            <option value="32"> 13</option>>
+          </select>
+        </div>
+      </div>
+    </div>
+
+        <div class="advanced-options">
+      <fieldset>
+        <legend><a class="is-link" role="button" onclick="toggleMoreSettings()">Advanced options</a></legend>
+        <div id="advanced-options-content" class="options is-hidden">
+                    <div class="option">
+            <label for="type">File type</label>
+            <div class="aselect">
+              <select name="type" id="type">
+                <option value="apk" selected>APK</option>
+                <option value="apks">Split APKs</option>
+              </select>
+            </div>
+          </div>
+
+                    <div class="option">
+            <label for="dpi">DPI</label>
+            <div class="aselect">
+              <select name="dpi" id="dpi">
+                <option value="120">ldpi (120)</option>
+                <option value="160">mdpi (160)</option>
+                <option value="240">hdpi (240)</option>
+                <option value="320">xhdpi (320)</option>
+                <option value="480" selected>xxhdpi (480)</option>
+                <option value="640">xxxhdpi (640)</option>
+                <option value="213">tvdpi (213)</option>
+              </select>
+            </div>
+          </div>
+
+                    <div class="option">
+            <label for="lang">Language</label>
+            <div class="aselect">
+              <select name="lang" id="lang">
+                <option value="en" selected>English (en)</option>
+                <option value="ar" >العربية (ar)</option>
+                <option value="es" >Español (es)</option>
+                <option value="de" >Deutsch (de)</option>
+                <option value="pt" >Português (pt)</option>
+                <option value="fr" >Français (fr)</option>
+                <option value="ru" >Pусский (ru)</option>
+                <option value="hi" >हिन्दी (hi)</option>
+                <option value="id" >Indonesia (id)</option>
+                <option value="it" >Italiano (it)</option>
+                <option value="ja" >日本語 (ja)</option>
+                <option value="ko" >한국어 (ko)</option>
+                <option value="nl" >Nederlands (nl)</option>
+                <option value="vi" >Tiếng Việt (vi)</option>
+                <option value="pl" >Polski (pl)</option>
+                <option value="tr" >Türkiye (tr)</option>
+                <option value="th" >ภาษาไทย (th)</option>
+                <option value="tw" >中文(繁體) (zh_TW)</option>
+                <option value="zh" >中文(简体) (zh_CN)</option>
+              </select>
+            </div>
+          </div>
+          <input type="hidden" id="gl">
+          <div style="clear: both;"></div>
+          <legend style="margin-top: 8px"><a class="is-link" onclick="return goHash(state.get('package') ? ('package=' + state.get('package')) : '')">Restore default settings</a></legend>
+        </div>
+      </fieldset>
+    </div>
+  </fieldset>
+    <input type="submit" class="button is-link" id="apksumbit" value="⚡ Generate Download Link →"/>
+</form>
+    <div id="download-loading" class="download-loading mb-20" style="display: none">
+  <div class="loading">
+    <svg class="spinner" width="27px" height="27px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg>
+    <p style="color: #6F6F6F">Downloading. Just a sec…</p>
+  </div>
+</div>
+<div id="download-result" class="mb-20"></div>
+        <div class="apk-description card">
+  <h2 class="card-header"><strong>APK Downloader Features:</strong></h2>
+  <div class="card-body">
+        <div class="content">
+      <ol style="margin-top: 5px; padding-left: 15px">
+        <li>Download <strong>original APK & OBB</strong> file from <a href="https://play.google.com/store/apps/" rel="nofollow" target="_blank"><strong>Google Play Store</strong></a>.</li>
+        <li>Always get the APK <strong>Latest Version</strong> from Google Play updates.</li>
+        <li>Bypass <strong>Geo-restrictions</strong> and <Strong>Incompatible</Strong>.</li>
+        <li>
+          <p>Support for multiple <strong>APK Variants</strong> by:</p>
+          <ul>
+            <li> Device: Android Phone, Android Tablet, Android Smart TV</li>
+            <li> Android Version: 4.4, 5.0, 5.1, 6.0, 7.0, 7.1, 8.0, 8.1, 9.0, 10, 11, 12</li>
+            <li> CPU Architecture: armeabi-v7a, arm64-v8a, x86, x86_64</li>
+            <li> DPI: 120dpi (ldpi), 160dpi (mdpi), 240dpi (hdpi), 320dpi (xhdpi), 480dpi (xxhdpi), 640dpi (xxxhdpi)</li>
+          </ul>
+        </li>
+        <li> Support: APK Downloader for PC
+          , <a href="https://chrome.google.com/webstore/detail/apk-downloader/idkigghdjmipnppaeahkpcoaiphjdccm" rel="nofollow" target="_blank">Chrome Extensions</a>
+          , <a href="https://addons.mozilla.org/firefox/addon/direct-apk-downloader-2018/" rel="nofollow" target="_blank">Firefox Addons</a>.</li>
+        <li> APK Downloader <strong>alternative</strong>: Evozi, APKPure, APKMirror, Uptodown ...</li>
+        <li><strong>Safety</strong> is confirmed <a href="https://safeweb.norton.com/report/show?url=apkcombo.com" rel="nofollow" target="_blank"><strong>Norton™ Safe Web</strong></a> and <strong>VirusTotal</strong>.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+  </main>
+  <aside class="column is-nav">
+        <p class="diseanmevrtt is-mobile-only">Advertisement</p>
+<div class="ad-pss ad-pss-bottom-right apkcombo_desktop_300x250_right apkcombo_mobile_300x250_bottom" style="height: 255px;margin-bottom: 10px;"><div class="adsbypubpower"><a class="da2s" href="https://apkcombo.app/android-emulator/" target="_blank" rel="nofollow sponsored" title="⚔️ Android Emulator for PC"><div class="text"> <div class="tit">⚔️ Android Emulator for PC</div><div class="des">Play the best Android Games on PC with Android Gaming Emulator</div></div><div class="btn"><span>Download Now!</span></div></a></div></div>
+        <div class="widget is-desktop-only">
+  <a href="https://apkcombo.com/android-emulator/" class="installer" style="margin-top: 0; margin-bottom: 10px" title="The Best Android Emulator for PC" aria-label="Android Emulator" target="_blank" rel="nofollow">
+    <figure><img src="/1.gif" data-src="/static/images/android-emulator.png" class="lzl" alt="Android Emulator"></figure>
+    <div class="installer-info">
+      <strong class="name">LD Player - #1 Android Emulator</strong>
+      <p class="description">The Best Android Emulator for PC</p>
+    </div>
+  </a>
+  <div class="more"><a href="https://apkcombo.com/android-emulator/" target="_blank" rel="nofollow">Free Download</a></div>
+</div>
+    <section name="item-row-section" class="widget">
+  <div class="item-section-anchor">
+    <a href="/category/game/hot/"><h2 class="title" >Games · Hot</h2></a>
+  </div>
+  <div class="content lapps-nav">
+      <a class="lapp" href="/toca-world/com.tocaboca.tocalifeworld/" title="Toca World APK">
+      <figure><img src="/1.gif" width="56" height="56" data-src="https://play-lh.googleusercontent.com/FindnWJcVLEkWKxJPm1P4NA07WJkLd2BrkHschg7gjQ_CFJ_9DUkS2nBwywXPxQkdWokX2UG_0v8hGbuq9t_=s75-rw" class="lzl" alt="icon"></figure>
+      <p class="info">
+        <span class="name">Toca World</span>
+        <span class="author">Toca Boca · Educational</span>
+      </p>
+    </a>
+      <a class="lapp" href="/roblox/com.roblox.client/" title="Roblox APK">
+      <figure><img src="/1.gif" width="56" height="56" data-src="https://play-lh.googleusercontent.com/7cIIPlWm4m7AGqVpEsIfyL-HW4cQla4ucXnfalMft1TMIYQIlf2vqgmthlZgbNAQoaQ=s75-rw" class="lzl" alt="icon"></figure>
+      <p class="info">
+        <span class="name">Roblox</span>
+        <span class="author">Roblox Corporation · Adventure</span>
+      </p>
+    </a>
+      <a class="lapp" href="/free-fire/com.dts.freefireth/" title="Garena Free Fire APK">
+      <figure><img src="/1.gif" width="56" height="56" data-src="https://play-lh.googleusercontent.com/pXooT00frDwY1CVPeN_Qiz1R4_UyHqhjdXQgP1-e8bf7VUGtYIly6K0R0p39jeoD80Yu3dPg7hqO4hi4oUVz=s75-rw" class="lzl" alt="icon"></figure>
+      <p class="info">
+        <span class="name">Garena Free Fire</span>
+        <span class="author">GARENA INTERNATIONAL I · Action</span>
+      </p>
+    </a>
+      <a class="lapp" href="/bus-rush-park-match-quest/bus.park.matching.adventure/" title="Bus Rush - Park &amp; Match Quest APK">
+      <figure><img src="/1.gif" width="56" height="56" data-src="https://play-lh.googleusercontent.com/UNqkXB5IgxsMtubT-7UNuFqcMBNFhC5ysxkEsAO-9N3673_YvXG1NdsL0XRPPcWxCKuJ39jmN_1ifWR5PKdR=s75-rw" class="lzl" alt="icon"></figure>
+      <p class="info">
+        <span class="name">Bus Rush - Park &amp; Match Quest</span>
+        <span class="author">Oogway Apps · Puzzle</span>
+      </p>
+    </a>
+      <a class="lapp" href="/jaya-slot-apk/com.skyairplane.jsfly/" title="Jaya Slot  APK APK">
+      <figure><img src="/1.gif" width="56" height="56" data-src="https://play-lh.googleusercontent.com/KezjydPMEkYqqHutbfd1xcfXcouAPCr2bbfxVEJ3AAdqsRQC_s5oipeiIT-cMolejA=s75-rw" class="lzl" alt="icon"></figure>
+      <p class="info">
+        <span class="name">Jaya Slot  APK</span>
+        <span class="author">BÙI VĂN KHẮC · Casual</span>
+      </p>
+    </a>
+  </div>
+  <div class="more"><a href="/category/game/hot/" title="Games · Hot">See more</a></div>
+</section>
+    <section class="item-section widget">
+  <div class="item-section-anchor">
+    <a href="/category/app/hot/"><h2 class="title">Apps · Hot</h2></a>
+  </div>
+  <div class="content lapps-nav">
+      <a class="lapp" href="/apkcombo-installer/com.apkcombo.app/" title="APKCombo Installer APK">
+      <figure><img src="/1.gif" width="56" height="56" data-src="https://imgrs.apkcombo.com/SbDaJZ7zpWYhi-Mlzt_5NKZG-wYIFZfGOVCbfBBmgmU/rs:fit:75:0:0/g:sm/Y29tLmFwa2NvbWJvLmFwcC9pY29uLnBuZw.png" class="lzl" alt="icon"></figure>
+      <p class="info">
+        <span class="name">APKCombo Installer</span>
+        <span class="author">APKCombo · Tools</span>
+      </p>
+    </a>
+      <a class="lapp" href="/chrome/com.android.chrome/" title="Chrome APK">
+      <figure><img src="/1.gif" width="56" height="56" data-src="https://play-lh.googleusercontent.com/QRRGW2tMZ4-FNw0XWk6WWiXHaQCGxuwM-92HrBhlA4WOd_AGmjVmQkiHyAqQjW2yByc=s75-rw" class="lzl" alt="icon"></figure>
+      <p class="info">
+        <span class="name">Chrome</span>
+        <span class="author">Google LLC · Communication</span>
+      </p>
+    </a>
+      <a class="lapp" href="/google-play-store/com.android.vending/" title="Google Play Store APK">
+      <figure><img src="/1.gif" width="56" height="56" data-src="https://imgrs.apkcombo.com/J56xAyAuraxipvl30rKh0rHfBStkbxJlsOLWTA2HA8U/rs:fit:75:0:0/g:sm/Y29tLmFuZHJvaWQudmVuZGluZy9pY29uLnBuZw.png" class="lzl" alt="icon"></figure>
+      <p class="info">
+        <span class="name">Google Play Store</span>
+        <span class="author">Google LLC · Tools</span>
+      </p>
+    </a>
+      <a class="lapp" href="/facebook/com.facebook.katana/" title="Facebook APK">
+      <figure><img src="/1.gif" width="56" height="56" data-src="https://play-lh.googleusercontent.com/12KEJDhgk6oyE1VgmfCuFzFrQripZ_endElbvEhU1rZawQgV3RI-v3II8fDslI1sdC_WKBkmtxS3jxuIihk33Q=s75-rw" class="lzl" alt="icon"></figure>
+      <p class="info">
+        <span class="name">Facebook</span>
+        <span class="author">Meta Platforms, Inc. · Social</span>
+      </p>
+    </a>
+      <a class="lapp" href="/binmanager-bin-generator/com.bin.manager/" title="BinManager: BIN Generator APK">
+      <figure><img src="/1.gif" width="56" height="56" data-src="https://play-lh.googleusercontent.com/Ohz-gjxh5yhD0Bn_4AzstTfrC1BHT5mXof7CJLGuR4kiAi1DBlSHqV2bY43keKbyUik=s75-rw" class="lzl" alt="icon"></figure>
+      <p class="info">
+        <span class="name">BinManager: BIN Generator</span>
+        <span class="author">LazyBucket Ltd. · Tools</span>
+      </p>
+    </a>
+  </div>
+  <div class="more"><a href="/category/app/hot/" title="Apps · Hot">See more</a></div>
+</section>
+        <div class="widget">
+  <a href="/how-to-install/" class="installer" title="Download APKCombo Installer" aria-label="APKCombo Installer APK">
+    <figure><img src="/1.gif" data-src="/static/svg/apkcombo-icon.svg" class="lzl" alt="Apkcombo Installer APK"></figure>
+    <div class="installer-info">
+      <strong class="name">APKCombo Installer</strong>
+      <p class="description">How to install XAPK, APKS, OBB?</p>
+    </div>
+  </a>
+  <div class="more"><a href="/how-to-install/">See more</a></div>
+</div>
+  </aside>
+</div>
+<script>
+      var state = {
+    ids: ["package", "device", "sdk", "arches", "type", "dpi", "lang", "gl"],
+    init() {
+      var query = location.hash.slice(1);
+      var params = parseQuery(query);
+
+      for (var i = 0; i < state.ids.length; i++) {
+        (function() {
+          var id = state.ids[i];
+          var element = document.getElementById(id);
+          if(!element) return;
+          state[id] = element.value;
+          if (params[id]) {
+            console.log(`set state ${id} -> ${params[id]}`);
+            state.set(id, params[id])
+            if(id === "package" && !state.init_package){
+              state.init_package = params[id];
+            }
+          }
+          document.getElementById(id).addEventListener("change", function (event){
+            var value = event.target.value;
+            if(id === "package" && value && (value.startsWith("https://play.google.com/store/apps/details") || value.startsWith("http://play.google.com/store/apps/details"))) {
+              try{
+                var uparams = parseQuery(value.split("?").slice(1)[0])
+                if(uparams["id"]) value=uparams["id"];
+                if(uparams["gl"] && uparams["gl"].length === 2) {
+                  console.log('change state gl -> ' + uparams["gl"] );
+                  state.gl= uparams["gl"]
+                }
+              }catch (e){}
+            }
+
+            state[id] = value;
+            console.log('change state ' + id +  ' -> ' + value);
+            document.getElementById('download-result').style.display = "none"
+          });
+        })()
+      }
+    },
+    get: function(id) {
+      return state[id]
+    },
+    set: function(id, value) {
+      var e = document.getElementById(id);
+      if (e){
+        state[id]= value;
+        e.value = value
+      }
+      return value;
+    },
+    getQuery(){
+      var query  = "";
+      for (var i = 0; i < state.ids.length; i++){
+        var id = state.ids[i];
+        var value = this.get(id)
+
+        if(id === "device" && value === "default") continue
+        if(id === "arches" && value === "default") continue
+        if(id === "android" && value === "default") continue
+        if(id === "sdk" && value === "default") continue
+        if(id === "type" && value === "apk") continue
+        if(id === "dpi" && value === "480") continue
+        if(id === "lang" && value === "en") continue
+        if(id === "gl" && (!value || value.length !== 2)) continue
+
+        query += ((query ? "&" : "") + id + "="+ encodeURIComponent(value))
+      }
+      return query;
+    }
+  }
+
+      state.init()
+  if(state.get("package")){
+    document.getElementById("download-result").style.display = "none"
+    document.getElementById("download-loading").style.display = "block"
+    document.getElementById("apksumbit").disabled = true;
+    lazyScript("https://www.google.com/recaptcha/api.js?onload=submit&render=6LffOIUUAAAAACDGY5pUGox0yBGBUvRD8aT8c2J0")
+  }
+
+  var window_onpopstate = window.onpopstate
+  window.onpopstate = function(event) {
+    window_onpopstate && window_onpopstate.call(event);
+    if(parseQuery(location.hash.slice(1))['package']){
+        location.reload()
+    }
+  }
+
+    document.getElementById("form").onsubmit = function (event){
+    event.preventDefault();
+    if(!state.get("package")){
+      location.reload();
+      return false;
+    }
+
+    if(state.init_package && state.init_package !== state.package){
+      state.set("gl", "")
+    }
+    location.hash = state.getQuery();
+    location.reload();
+    return false;
+  };
+
+  function submit(){
+    grecaptcha.execute('6LffOIUUAAAAACDGY5pUGox0yBGBUvRD8aT8c2J0', {action: 'apk_downloader'}).then(function(token) {
+      var url = location.pathname + "?" + state.getQuery() + "&ajax=1";
+      var httpRequest = new XMLHttpRequest();
+      httpRequest.open("GET", url);
+      httpRequest.setRequestHeader("token", token);
+      httpRequest.onreadystatechange = function (){
+        if (httpRequest.readyState === 4 ){
+          if (httpRequest.status === 403) window.ga && window.ga("send", "event", "recaptcha", "apk_downloader", "403", "");
+          document.getElementById("download-result").innerHTML = httpRequest.responseText;
+          document.getElementById("download-result").style.display = "block"
+          document.getElementById("download-loading").style.display = "none"
+          document.getElementById("apksumbit").disabled = false;
+          typeof window.octs === "function" && window.octs();
+        }
+      }
+      httpRequest.send();
+    });
+  }
+
+      function parseQuery(query){
+    var params = {};
+    if(!query) return params;
+    var parts = query.split("&");
+    for(let i = 0; i < parts.length; i++) {
+      var pairs = parts[i].split("=");
+      if(pairs.length === 2) params[pairs[0]] = pairs[1]
+    }
+    return params;
+  }
+
+  function toggleMoreSettings() {
+    var $option = document.getElementById("advanced-options-content")
+    var isHidden = $option.classList.contains("is-hidden");
+    localStorage && localStorage.setItem("moreSettings", isHidden + '')
+    document.getElementById("advanced-options-content").classList.toggle("is-hidden");
+  }
+
+  if(localStorage && localStorage.getItem("moreSettings")==="true"){
+    toggleMoreSettings();
+  }
+
+</script>
+<script>function openTab(e,t){for(var a,s=document.getElementsByClassName("content-tab"),l=0;l<s.length;l++)s[l].style.display="none";for(a=document.getElementsByClassName("tab"),l=0;l<s.length;l++)a[l].className=a[l].className.replace(" is-active","");document.getElementById(t).style.display="block",e.currentTarget.className+=" is-active"}</script>
+<script>function octs(){var a="https://apkcombo.com/checkin",s=new XMLHttpRequest;function n(e){for(var t=document.querySelectorAll(".variant"),a=0;a<t.length;++a){var s=t[a];if(s.classList.contains("octs"))return;s.classList.add("octs"),s.href&&(s.href=s.href+"&"+e)}}s.addEventListener("readystatechange",function(){var e,t;4===s.readyState&&(200===s.status?(n(s.responseText),(e=document.querySelector("#download-tab .loading-overlay"))&&e.classList.remove("is-active")):((t=new XMLHttpRequest).addEventListener("readystatechange",function(){var e;4===t.readyState&&(200===t.status?n(t.responseText):n("error="+t.status),(e=document.querySelector("#download-tab .loading-overlay"))&&e.classList.remove("is-active"))}),t.open("POST",a),t.send()))}),s.open("POST",a),s.send()}</script>
+  </div>
+  <div id="elgoogybsda2" class="adsbygoogle" style="width: 1px; height: 1px; background-color: transparent"></div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <p class="footer-menu">
+      <span>© 2018-2026 <a href="/">APKCombo</a></span>
+      | <a href="/about" rel="nofollow">About Us</a>
+      | <a href="/terms" rel="nofollow">Term of Use</a>
+      | <a href="/privacy-policy" rel="nofollow">Privacy Policy</a>
+        <span id="apkm_consent_holder"></span>
+      | <a href="/dmca" rel="nofollow">DMCA Disclaimer</a>
+      | <a href="mailto:support@apkcombo.com" rel="nofollow">Contact Us</a>
+      | <a href="https://chrome.google.com/webstore/detail/apk-downloader-for-google/idkigghdjmipnppaeahkpcoaiphjdccm" rel="nofollow noopener" target="_blank">Chrome Extension</a>
+      | <a href="/vpn">APKCombo VPN</a>
+      | <a href="https://soundinstants.com?utm_source=apkcombo" target="_blank" title="Top #1 sound buttons, memes, sound effects, and soundboards!">SoundInstants</a>
+      | <a href="https://jigsawquiz.com?utm_source=apkcombo" target="_blank" title="JigsawQuiz - Free online jigsaw puzzles">JigsawQuiz</a>
+      | <a href="/system-apps/xiaomi-system-apps?utm_source=footer" title="Xiaomi · System Apps">Xiaomi · System Apps</a>
+      | <a href="/system-apps/samsung-system-apps?utm_source=footer" title="Samsung · System Apps">Samsung · System Apps</a>
+      | <a href="/latest-updates/feed">Latest Updates (RSS)</a>
+      | <a href="/new-releases/feed">New Releases (RSS)</a>
+    </p>
+  </div>
+  </footer>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="ic-search-btn" viewBox="0 0 1792 1792"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></symbol>
+  <symbol id="icon-playstore" viewBox="0 0 512 512"><path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" ></path></symbol>
+<symbol id="apk-icon-arch" viewBox="0 0 1024 1024"><path d="M1022.933 461.867v-122.667h-113.067v-119.467c0-52.267-43.733-96-96-96h-128v-123.733h-122.667v123.733h-103.467v-123.733h-117.333v123.733h-119.467c-52.267 0-93.867 43.733-93.867 96v119.467h-128v122.667h126.933v103.467h-126.933v117.333h126.933v129.067c0 52.267 41.6 90.667 93.867 90.667h119.467v121.6h118.4v-121.6h103.467v121.6h122.667v-121.6h129.067c52.267 0 96-38.4 96-90.667v-129.067h112v-117.333h-113.067v-103.467h113.067zM792.533 793.6h-565.333v-565.333h565.333v565.333zM673.067 346.667h-327.467v327.467h327.467v-327.467zM566.4 568.533h-118.4v-118.4h118.4v118.4z"></path></symbol>
+<symbol id="apk-icon-info" viewBox="0 0 512 512"><path d="M452.515 237l31.843-18.382c9.426-5.441 13.996-16.542 11.177-27.054-11.404-42.531-33.842-80.547-64.058-110.797-7.68-7.688-19.575-9.246-28.985-3.811l-31.785 18.358a196.276 196.276 0 0 0-32.899-19.02V39.541a24.016 24.016 0 0 0-17.842-23.206c-41.761-11.107-86.117-11.121-127.93-.001-10.519 2.798-17.844 12.321-17.844 23.206v36.753a196.276 196.276 0 0 0-32.899 19.02l-31.785-18.358c-9.41-5.435-21.305-3.877-28.985 3.811-30.216 30.25-52.654 68.265-64.058 110.797-2.819 10.512 1.751 21.613 11.177 27.054L59.485 237a197.715 197.715 0 0 0 0 37.999l-31.843 18.382c-9.426 5.441-13.996 16.542-11.177 27.054 11.404 42.531 33.842 80.547 64.058 110.797 7.68 7.688 19.575 9.246 28.985 3.811l31.785-18.358a196.202 196.202 0 0 0 32.899 19.019v36.753a24.016 24.016 0 0 0 17.842 23.206c41.761 11.107 86.117 11.122 127.93.001 10.519-2.798 17.844-12.321 17.844-23.206v-36.753a196.34 196.34 0 0 0 32.899-19.019l31.785 18.358c9.41 5.435 21.305 3.877 28.985-3.811 30.216-30.25 52.654-68.266 64.058-110.797 2.819-10.512-1.751-21.613-11.177-27.054L452.515 275c1.22-12.65 1.22-25.35 0-38zm-52.679 63.019l43.819 25.289a200.138 200.138 0 0 1-33.849 58.528l-43.829-25.309c-31.984 27.397-36.659 30.077-76.168 44.029v50.599a200.917 200.917 0 0 1-67.618 0v-50.599c-39.504-13.95-44.196-16.642-76.168-44.029l-43.829 25.309a200.15 200.15 0 0 1-33.849-58.528l43.819-25.289c-7.63-41.299-7.634-46.719 0-88.038l-43.819-25.289c7.85-21.229 19.31-41.049 33.849-58.529l43.829 25.309c31.984-27.397 36.66-30.078 76.168-44.029V58.845a200.917 200.917 0 0 1 67.618 0v50.599c39.504 13.95 44.196 16.642 76.168 44.029l43.829-25.309a200.143 200.143 0 0 1 33.849 58.529l-43.819 25.289c7.631 41.3 7.634 46.718 0 88.037zM256 160c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 144c-26.468 0-48-21.532-48-48 0-26.467 21.532-48 48-48s48 21.533 48 48c0 26.468-21.532 48-48 48z"></path></symbol>
+<symbol id="apk-icon-phone" viewBox="0 0 27.442 27.442"> <g> <path d="M19.494,0H7.948C6.843,0,5.951,0.896,5.951,1.999v23.446c0,1.102,0.892,1.997,1.997,1.997h11.546 c1.103,0,1.997-0.895,1.997-1.997V1.999C21.491,0.896,20.597,0,19.494,0z M10.872,1.214h5.7c0.144,0,0.261,0.215,0.261,0.481 s-0.117,0.482-0.261,0.482h-5.7c-0.145,0-0.26-0.216-0.26-0.482C10.612,1.429,10.727,1.214,10.872,1.214z M13.722,25.469 c-0.703,0-1.275-0.572-1.275-1.276s0.572-1.274,1.275-1.274c0.701,0,1.273,0.57,1.273,1.274S14.423,25.469,13.722,25.469z M19.995,21.1H7.448V3.373h12.547V21.1z"></path> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </symbol>
+<symbol id="apk-icon-tv" viewBox="0 0 24 24"> <path d="M0 0h24v24H0z" fill="none"></path> <path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"></path> </symbol>
+<symbol id="apk-icon-wear" viewBox="0 0 24 24"> <path d="M0 0h24v24H0z" fill="none" opacity=".1"></path> <path d="M20 12c0-2.54-1.19-4.81-3.04-6.27L16 0H8l-.95 5.73C5.19 7.19 4 9.45 4 12s1.19 4.81 3.05 6.27L8 24h8l.96-5.73C18.81 16.81 20 14.54 20 12zM6 12c0-3.31 2.69-6 6-6s6 2.69 6 6-2.69 6-6 6-6-2.69-6-6z"></path> </symbol>
+<symbol id="apk-icon-download" viewBox="0 0 384 512"><path fill="#i70757a" d="M348.5 232.1l-148 148.4c-4.7 4.7-12.3 4.7-17 0l-148-148.4c-4.7-4.7-4.7-12.3 0-17l19.6-19.6c4.8-4.8 12.5-4.7 17.1.2l93.7 97.1V44c0-6.6 5.4-12 12-12h28c6.6 0 12 5.4 12 12v248.8l93.7-97.1c4.7-4.8 12.4-4.9 17.1-.2l19.6 19.6c4.9 4.7 4.9 12.3.2 17zM372 428H12c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h360c6.6 0 12-5.4 12-12v-28c0-6.6-5.4-12-12-12z"></path></symbol>
+<symbol id="ic-download-right" viewBox="0 0 24 24"><path fill="currentColor" d="M16.59 9H15V4c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v5H7.41c-.89 0-1.34 1.08-.71 1.71l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.63-.63.19-1.71-.7-1.71zM5 19c0 .55.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1z"></path></symbol>
+<symbol id="ic-apk-downloader" viewBox="0 0 576 512"><path d="M528 288h-92.1l46.1-46.1c30.1-30.1 8.8-81.9-33.9-81.9h-64V48c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v112h-64c-42.6 0-64.2 51.7-33.9 81.9l46.1 46.1H48c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V336c0-26.5-21.5-48-48-48zm-400-80h112V48h96v160h112L288 368 128 208zm400 256H48V336h140.1l65.9 65.9c18.8 18.8 49.1 18.7 67.9 0l65.9-65.9H528v128zm-88-64c0-13.3 10.7-24 24-24s24 10.7 24 24-10.7 24-24 24-24-10.7-24-24z" class=""></path></symbol>
+<symbol id="ic-apk-downloader" viewBox="0 0 576 512"><path d="M528 288h-92.1l46.1-46.1c30.1-30.1 8.8-81.9-33.9-81.9h-64V48c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v112h-64c-42.6 0-64.2 51.7-33.9 81.9l46.1 46.1H48c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V336c0-26.5-21.5-48-48-48zm-400-80h112V48h96v160h112L288 368 128 208zm400 256H48V336h140.1l65.9 65.9c18.8 18.8 49.1 18.7 67.9 0l65.9-65.9H528v128zm-88-64c0-13.3 10.7-24 24-24s24 10.7 24 24-10.7 24-24 24-24-10.7-24-24z" class=""></path></symbol>
+<symbol id="ic-minsdk" viewBox="0 0 550.8 550.8"> <g> <g id="adb"> <path d="M96.9,372.3c0,99.45,79.05,178.5,178.5,178.5s178.5-79.05,178.5-178.5v-102h-357V372.3z M379.95,76.5l53.55-53.55 L413.1,2.55L354.45,61.2c-22.95-12.75-51-20.4-79.05-20.4s-56.1,7.65-79.05,17.85L137.7,0l-20.4,22.95l53.55,53.55 c-45.9,30.6-73.95,84.15-73.95,142.8v25.5h357v-25.5C453.9,160.65,425.85,107.1,379.95,76.5z M198.9,193.8 c-15.3,0-25.5-10.2-25.5-25.5s10.2-25.5,25.5-25.5s25.5,10.2,25.5,25.5S214.2,193.8,198.9,193.8z M351.9,193.8 c-15.3,0-25.5-10.2-25.5-25.5s10.2-25.5,25.5-25.5s25.5,10.2,25.5,25.5S367.2,193.8,351.9,193.8z"></path> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </symbol>
+<symbol id="ic-dpi" viewBox="0 0 1024 1024"><path class="path1" d="M743.467 0h-462.933c-51.2 0-92.8 41.6-92.8 92.8v837.333c0 51.2 41.6 92.8 92.8 92.8h464c52.267 0 92.8-41.6 92.8-92.8v-837.333c0-51.2-40.533-92.8-93.867-92.8v0zM280.533 836.267v-651.733h464v97.067h-138.667v46.933h138.667v91.733h-371.2v46.933h371.2v89.6h-138.667v46.933h138.667v88.533h-138.667v46.933h138.667v97.067h-464z"></path></symbol>
+<symbol id="ic-filesize" viewBox="0 0 1024 1024"><path class="path1" d="M948.267 0h-873.6c-41.6 0-74.667 33.067-74.667 74.667v301.867c0 41.6 33.067 76.8 74.667 76.8h873.6c41.6 0 74.667-34.133 74.667-76.8v-301.867c0-41.6-33.067-74.667-74.667-74.667v0zM218.667 344.533c-66.133 0-117.333-54.4-117.333-116.267 0-67.2 51.2-121.6 117.333-121.6 62.933 0 116.267 54.4 116.267 121.6 0 61.867-53.333 116.267-116.267 116.267v0zM948.267 572.8h-873.6c-41.6 0-74.667 32-74.667 73.6v302.933c0 41.6 33.067 74.667 74.667 74.667h873.6c41.6 0 74.667-33.067 74.667-74.667v-302.933c0-41.6-33.067-73.6-74.667-73.6v0zM218.667 917.333c-66.133 0-117.333-54.4-117.333-118.4 0-65.067 51.2-118.4 117.333-118.4 62.933 0 116.267 54.4 116.267 118.4s-53.333 118.4-116.267 118.4z"></path></symbol>
+</svg>
+<script>
+  document.addEventListener('DOMContentLoaded',lazyImage('lzl'));
+  function setLangCookie(hl){setCookie("__apkcombo_lang",hl,300, location.host)}
+    for(var $searchInputs=document.querySelectorAll("input[name=q]"),onSearchInputClick=function(e){window.searchOptions={gl:"us",hl:"en",locale_path:""},lazyScript("/static/js/autocomplete.min.js?b");for(var t=0;t<$searchInputs.length;t++)$searchInputs[t].removeEventListener("focus",onSearchInputClick)},i=0;i<$searchInputs.length;i++)$searchInputs[i].addEventListener("focus",onSearchInputClick);
+    function toggleNavbar(){document.querySelectorAll('.navbar-burger')[0].classList.toggle('is-active');document.getElementById('apkcombo-menu').classList.toggle('is-active')}
+  if (/googleweblight/i.test(navigator.userAgent)){var $e = document.querySelector(".gallery");$e&&($e.style.display = "none")}
+      </script>
+<script>
+  setTimeout(function () {
+        if ('serviceWorker' in navigator) navigator.serviceWorker.register('/serviceworker.js?v=1');
+      }, 1);
+</script>
+<script >!function(){var i,o,t;!(navigator&&navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i))&&"serviceWorker"in navigator&&"showNotification"in ServiceWorkerRegistration.prototype&&"PushManager"in window&&"Notification"in window?(i="__wp_last_subscribed_at",o=Date.now(),t=parseInt(localStorage.getItem(i)||"0",10),"denied"!==Notification.permission?"granted"===Notification.permission&&o-t<6048e5||"lazyScript"in window&&lazyScript("/static/js/subscription.min.js",function(){"function"==typeof window.webpushInit&&window.webpushInit({onSubscribed:function(){localStorage.setItem(i,o.toString())}})}):localStorage.removeItem(i)):console.log("!supportPushNotification")}();
+</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","name":"APKCombo","url":"https://apkcombo.com/","potentialAction":{"@type":"SearchAction","target":"https://apkcombo.com/search?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"Corporation","name":"APKCombo","url":"https://apkcombo.com/","logo":"https://cdn.jsdelivr.net/gh/apkcombo/cdn@master/i./re/v2/icon-128.png","sameAs":["https://www.facebook.com/apkcombo","https://twitter.com/apkcombo"]}</script>
+<script type="application/ld+json">{"@context": "http://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 1,"item": { "@id": "https://apkcombo.com/", "name": "Home" }},{"@type": "ListItem","position": 2,"item": { "@id": "https://apkcombo.com/downloader/", "name": "APK Downloader" }}]}</script></body>
+</html>

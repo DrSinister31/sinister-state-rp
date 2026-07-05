@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Piney Woods Logging Co.</title>
+</head>
+<body>
+    <div id="hud" class="hidden">
+        <div class="hud-header">PINEY WOODS LOGGING CO.</div>
+        <div class="hud-stats">
+            <span>Level <b id="hudLevel">0</b></span>
+            <span>XP: <b id="hudXP">0</b></span>
+            <span>Logs: <b id="hudLogs">0</b>/<span id="hudMaxLogs">12</span></span>
+            <span>Hand: <b id="hudHand">0</b></span>
+            <span>Crew: <b id="hudCrew">1</b></span>
+            <span id="hudStatus">Idle</span>
+        </div>
+    </div>
+
+    <div id="minigame" class="hidden">
+        <div class="mg-container">
+            <div class="mg-title" id="mgTreeName">Chopping Tree...</div>
+            <div class="mg-instructions">Click in the moving circle to swing your axe!</div>
+            <div class="mg-ring">
+                <div class="mg-outer-ring"></div>
+                <div class="mg-target-circle" id="mgTarget"></div>
+                <div class="mg-hit-zone" id="mgHitZone"></div>
+            </div>
+            <div class="mg-health-bar">
+                <div class="mg-health-fill" id="mgHealthFill"></div>
+            </div>
+            <div class="mg-cancel">Press ESC or click outside to cancel</div>
+        </div>
+    </div>
+
+    <div id="treeFelled" class="hidden">
+        <div class="felled-text">TREE FELLED!</div>
+        <div class="felled-sub" id="felledSub">+2 logs earned</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+local ChessTableBones = {    [1] = {        name = "board",        offset = vec3(0.0, 0.0, 0.400)    }}

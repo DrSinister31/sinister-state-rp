@@ -1,0 +1,1 @@
+   ["waiting"] = {"bzzz_chess_animations", "bzzz_chess_sit_a", "Waiting for opponent", AnimationOptions =   {       EmoteMoving = false,       EmoteLoop = true   }},   ["playing"] = {"bzzz_chess_animations", "bzzz_chess_sit_b", "Making a move", AnimationOptions =   {       EmoteMoving = false,       EmoteLoop = false   }},

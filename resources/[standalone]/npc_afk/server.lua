@@ -1,0 +1,1 @@
+-- Optional: AFK logs, or syncing to other players (empty for now)

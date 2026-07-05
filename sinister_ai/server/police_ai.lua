@@ -19,8 +19,6 @@ function SpawnPolicePatrol(agency, count)
         local spawn = points[(i % #points) + 1]
         local model = POLICE_MODELS[(i % #POLICE_MODELS) + 1]
         local hash = GetHashKey(model)
-        RequestModel(hash)
-        while not HasModelLoaded(hash) do Wait(0) end
         
         local ped = CreatePed(0, hash, spawn.x, spawn.y, spawn.z, spawn.w, true, true)
         TagAI(ped, "police", "patrol", agency, 0.2)
@@ -31,8 +29,6 @@ function SpawnPolicePatrol(agency, count)
         -- Spawn vehicle
         local vehModel = POLICE_VEHICLES[(i % #POLICE_VEHICLES) + 1]
         local vHash = GetHashKey(vehModel)
-        RequestModel(vHash)
-        while not HasModelLoaded(vHash) do Wait(0) end
         local veh = CreateVehicle(vHash, spawn.x, spawn.y + 5.0, spawn.z, spawn.w, true, true)
         TaskWarpPedIntoVehicle(ped, veh, -1)
         
@@ -106,8 +102,7 @@ Citizen.CreateThread(function()
         Wait(15000)
 
         local leoCount = 0
-        local players = GetActivePlayers()
-        for _, pid in ipairs(players) do
+        for _, pid in ipairs(GetPlayers()) do
             local p = exports.qbx_core:GetPlayer(pid)
             if p and p.PlayerData.job and p.PlayerData.job.type == "leo" and p.PlayerData.job.onduty then
                 leoCount = leoCount + 1

@@ -1,0 +1,11 @@
+{
+  "repositories": [
+    { "name": "brain-bot", "path": "C:\\Users\\Dilla\\OneDrive\\Desktop\\Aura", "language": "typescript" },
+    { "name": "sps-bot", "path": "C:\\Users\\Dilla\\OneDrive\\Desktop\\Sinister_Project_Master\\DiscordBot", "language": "python" },
+    { "name": "web-dashboard", "path": "C:\\Users\\Dilla\\OneDrive\\Desktop\\Sinister_Project_Master\\WebApp", "language": "javascript" },
+    { "name": "chat-ui", "path": "C:\\Users\\Dilla\\OneDrive\\Desktop\\clawchat", "language": "typescript" },
+    { "name": "exile-voice", "path": "C:\\Users\\Dilla\\OneDrive\\Desktop\\the-isle-exile-voice", "language": "python" },
+    { "name": "mumble-installer", "path": "C:\\Users\\Dilla\\OneDrive\\Desktop\\Sinister-s-Park-Mumble", "language": "shell" },
+    { "name": "python-backup", "path": "C:\\Users\\Dilla\\OneDrive\\Desktop\\Aura_Python_Backup", "language": "python" }
+  ]
+}

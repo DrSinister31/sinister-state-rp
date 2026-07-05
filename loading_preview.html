@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sinister State TX</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @font-face {
+            font-family: 'Cinematic';
+            src: local('Georgia'), local('Times New Roman');
+        }
+
+        body {
+            font-family: 'Cinematic', Georgia, serif;
+            height: 100vh;
+            background: #0d0c0a;
+            overflow: hidden;
+        }
+
+        .cinema {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 40%, #694943 0%, #3f211f 30%, #191916 60%, #0d0c0a 85%, #000 100%);
+            z-index: 0;
+        }
+
+        .film-grain {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            background: repeating-radial-gradient(circle at 50% 50%, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 1px, transparent 1px, transparent 2px);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .letterbox-top, .letterbox-bottom {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            height: 8vh;
+            background: #000;
+            z-index: 2;
+        }
+        .letterbox-top { top: 0; }
+        .letterbox-bottom { bottom: 0; }
+
+        .smoke {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(105,73,67,0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(63,33,31,0.2) 0%, transparent 50%);
+            animation: breathe 8s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
+            to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        }
+
+        .logo-container img {
+            max-width: 500px;
+            height: auto;
+            filter: drop-shadow(0 0 60px rgba(191,87,0,0.3)) 
+                    drop-shadow(0 0 120px rgba(63,33,31,0.5));
+        }
+
+        .tagline {
+            margin-top: 30px;
+            color: rgb(245, 235, 220);
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            opacity: 0.7;
+            animation: fadeIn 3s ease-out;
+        }
+
+        .cities-line {
+            margin-top: 12px;
+            color: rgba(191,87,0,0.6);
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            animation: fadeIn 3.5s ease-out;
+        }
+
+        .accent-line {
+            position: fixed;
+            bottom: 12vh;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(191,87,0,0.6), transparent);
+            z-index: 3;
+            animation: fadeIn 3s ease-out;
+        }
+
+        .credits {
+            position: fixed;
+            bottom: 6vh;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            color: rgba(245,235,220,0.25);
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: fadeIn 4s ease-out;
+        }
+
+        .warm-edge {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            box-shadow: inset 0 0 200px 100px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="cinema"></div>
+    <div class="smoke"></div>
+    <div class="warm-edge"></div>
+    <div class="film-grain"></div>
+    <div class="letterbox-top"></div>
+    <div class="letterbox-bottom"></div>
+    
+    <div class="logo-container">
+        <img src="file:///C:/Users/Dilla/OneDrive/Desktop/Sinister_Project_Master/sinister_loadscreen/assets/logo.svg">
+        <div class="tagline">Sinister State &bull; Texas</div>
+        <div class="cities-line">Houston &bull; Fort Worth &bull; Killeen</div>
+    </div>
+
+    <div class="accent-line"></div>
+    <div class="credits">Entering the State of Texas</div>
+</body>
+</html>

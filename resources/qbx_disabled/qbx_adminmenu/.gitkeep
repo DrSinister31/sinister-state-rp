@@ -1,0 +1,3 @@
+qbx_adminmenu has been moved here from migration/qbox_download/[qbx]/qbx_adminmenu/.
+This resource is disabled and replaced by easyadmin in resources/[standalone]/easyadmin/.
+To re-enable, move this folder back to a monitored resources directory and remove easyadmin.

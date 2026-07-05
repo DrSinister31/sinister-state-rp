@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head><style>
+* { margin:0; padding:0; }
+body { background:#0d0c0a; display:flex; justify-content:center; align-items:center; height:100vh; flex-direction:column; }
+h2 { color:#888; font-family:sans-serif; margin-bottom:20px; }
+img { max-width:700px; width:90vw; border:1px solid #333; }
+</style></head>
+<body>
+<h2>SVG Logo Preview</h2>
+<img src="file:///C:/Users/Dilla/OneDrive/Desktop/Sinister_Project_Master/sinister_loadscreen/assets/logo.svg">
+<script>
+document.querySelector('img').onerror = function() {
+    document.querySelector('h2').textContent = 'FAILED - SVG not rendering';
+    document.querySelector('h2').style.color = 'red';
+};
+document.querySelector('img').onload = function() {
+    document.querySelector('h2').textContent = 'SVG loaded OK';
+    document.querySelector('h2').style.color = 'green';
+};
+</script>
+</body>
+</html>

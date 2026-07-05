@@ -1,6 +1,19 @@
 local SUPABASE_URL = GetConvar("sinister_apps:supabase_url", "")
 local SUPABASE_KEY = GetConvar("sinister_apps:supabase_key", "")
 
+local defaultTerritories = {
+    Eastside = "Ballas",
+    ["South Central"] = "Vagos",
+    ["West End"] = "Cartel",
+    Northside = "Uncontrolled",
+    Downtown = "Uncontrolled",
+    Harbor = "Uncontrolled",
+    ["Little Seoul"] = "Uncontrolled",
+    ["Mirror Park"] = "Uncontrolled",
+}
+
+GlobalState["underworld:territories"] = GlobalState["underworld:territories"] or defaultTerritories
+
 local function httpGet(endpoint)
     local p = promise.new()
     PerformHttpRequest(SUPABASE_URL .. "/rest/v1/" .. endpoint, function(code, data)
@@ -30,6 +43,9 @@ RegisterNetEvent("sinister_underworld:proxyRequest", function(requestId, payload
     elseif payload.action == "loadHeists" then
         local r = httpGet("robbery_incidents?select=*&order=occurred_at.desc&limit=10")
         result = (r.code == 200 and r.data and json.decode(r.data) or {})
+    elseif payload.action == "getTerritories" then
+        local territories = GlobalState["underworld:territories"] or defaultTerritories
+        result = { territories = territories }
     else
         result = { _error = "Unknown action" }
     end

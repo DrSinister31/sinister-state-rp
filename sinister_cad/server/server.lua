@@ -1,6 +1,21 @@
 local SUPABASE_URL = GetConvar("sinister_apps:supabase_url", "")
 local SUPABASE_KEY = GetConvar("sinister_apps:supabase_key", "")
 
+GlobalState["cad:officer_zones"] = {}
+
+AddStateBagChangeHandler("cad:officer_zone", nil, function(bagName, _, value)
+    local player = GetPlayerFromStateBagName(bagName)
+    if not player then return end
+    local src = player
+    local zones = GlobalState["cad:officer_zones"] or {}
+    local newZones = {}
+    for k, v in pairs(zones) do
+        if k ~= tostring(src) then newZones[k] = v end
+    end
+    if value then newZones[tostring(src)] = value end
+    GlobalState["cad:officer_zones"] = newZones
+end)
+
 local function httpGet(endpoint)
     local p = promise.new()
     PerformHttpRequest(SUPABASE_URL .. "/rest/v1/" .. endpoint, function(code, data)
@@ -60,6 +75,25 @@ RegisterNetEvent("sinister_cad:proxyRequest", function(requestId, payload)
         })
         Citizen.Await(p)
         result = { ok = true }
+    elseif payload.action == "loadOfficerRoster" then
+        local officers = {}
+        local allZones = GlobalState["cad:officer_zones"] or {}
+        for _, playerId in ipairs(GetPlayers()) do
+            local ply = exports.qbx_core:GetPlayer(tonumber(playerId))
+            if ply then
+                local job = ply.PlayerData.job
+                if job and job.type == "leo" and job.onduty then
+                    officers[#officers + 1] = {
+                        citizenid = ply.PlayerData.citizenid,
+                        name = ply.PlayerData.charinfo and (ply.PlayerData.charinfo.firstname .. " " .. ply.PlayerData.charinfo.lastname) or "Unknown",
+                        callsign = ply.PlayerData.metadata and ply.PlayerData.metadata.callsign or "",
+                        grade = job.grade and job.grade.level or 0,
+                        zone = allZones[tostring(playerId)] or "Unknown",
+                    }
+                end
+            end
+        end
+        result = officers
     else
         result = { _error = "Unknown action" }
     end

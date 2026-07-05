@@ -1,0 +1,16 @@
+Are the props not working?
+Add the file "bzzz_test_chess_ymap.ymap" to stream folder on your server that is started and restart the server.
+
+Coords: 
+x = 243.4
+y = -267.7
+z = 68.3
+
+If the props are not spawned at these coordinates, you are starting the wrong resource or ytyp file.
+
+
+
+Crashing?
+Are you teleporting to the coordinates and your game is crashing? 
+Please use coordinates with decimal values. 
+Some game builds may crash if you use 243, -267, 68.
