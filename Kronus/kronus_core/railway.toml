@@ -1,5 +1,7 @@
 [build]
 builder = "nixpacks"
+buildCommand = "pip install -r Kronus/requirements.txt"
+aptPackages = ["ffmpeg", "mpv"]
 
 [deploy]
 startCommand = "PYTHONPATH=Kronus python Kronus/kronus_core/main.py"

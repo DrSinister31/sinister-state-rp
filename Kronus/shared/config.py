@@ -26,6 +26,18 @@ class Config:
     rcon_port: int
     rcon_password: str
 
+    dm_session_role_id: int = 0
+    dm_voice_channel_id: int = 0
+    dm_text_channel_id: int = 0
+    dnd_category_id: int = 0
+    campaign_channel_prefix: str = "rp"
+    character_sheets_channel_id: int = 0
+    dm_dice_channel_id: int = 0
+    dm_create_vc_channel_id: int = 0
+    dm_create_cmd_channel_id: int = 0
+    dm_role_id: int = 0
+    dm_guide_channel_id: int = 0
+
     redis_url: str = "redis://localhost:6379"
     log_channel_id: int = 0
     chronicles_channel_id: int = 0
@@ -55,6 +67,17 @@ class Config:
             rcon_host=require("RCON_HOST"),
             rcon_port=int(require("RCON_PORT") or "30120"),
             rcon_password=require("RCON_PASSWORD"),
+            dm_session_role_id=int(os.getenv("DM_SESSION_ROLE_ID") or "0"),
+            dm_voice_channel_id=int(os.getenv("DM_VOICE_CHANNEL_ID") or "0"),
+            dm_text_channel_id=int(os.getenv("DM_TEXT_CHANNEL_ID") or "0"),
+            dnd_category_id=int(os.getenv("DND_CATEGORY_ID") or "0"),
+            campaign_channel_prefix=os.getenv("CAMPAIGN_CHANNEL_PREFIX") or "rp",
+            character_sheets_channel_id=int(os.getenv("CHARACTER_SHEETS_CHANNEL_ID") or "0"),
+            dm_dice_channel_id=int(os.getenv("DM_DICE_CHANNEL_ID") or "0"),
+            dm_create_vc_channel_id=int(os.getenv("DM_CREATE_VC_CHANNEL_ID") or "0"),
+            dm_create_cmd_channel_id=int(os.getenv("DM_CREATE_CMD_CHANNEL_ID") or "0"),
+            dm_role_id=int(os.getenv("DM_ROLE_ID") or "0"),
+            dm_guide_channel_id=int(os.getenv("DM_GUIDE_CHANNEL_ID") or "0"),
             redis_url=os.getenv("REDIS_URL") or "redis://localhost:6379",
             log_channel_id=int(os.getenv("LOG_CHANNEL_ID") or "0"),
             chronicles_channel_id=int(os.getenv("CHRONICLES_CHANNEL_ID") or "0"),

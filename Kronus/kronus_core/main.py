@@ -10,10 +10,117 @@ from shared.supabase_client import get_supabase
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
+intents.voice_states = True
+intents.voice_states = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 config = Config.from_env()
 supabase = get_supabase(config)
+
+GUIDE_EMBED = discord.Embed(
+    title="📜 Solis-Grave Player Guide — How to Play",
+    description=(
+        "Welcome to **Solis-Grave: Shadows of the Crown**, a dark fantasy D&D 5e campaign "
+        "set in a world where dragon blood determines your fate. Here's how everything works.\n\n"
+        "**I am your AI Dungeon Master, powered by DeepSeek.** I narrate the story, control NPCs, "
+        "resolve combat, and track your party's progress. You play your character — I handle everything else."
+    ),
+    color=0x8B0000
+)
+GUIDE_EMBED.add_field(
+    name="🔰 Getting Started — Your First Session",
+    value=(
+        "1️⃣ **Create your character.** Type `/create` in the character creation channel. I'll guide you through race, age, purity, class, and backstory.\n"
+        "2️⃣ **Check your sheet.** Use `/character_mine` to view your full character sheet in DMs. `/character_list` shows the party.\n"
+        "3️⃣ **Start a session.** The DM uses `/session_start` to begin. All actions typed in the session channel go to me.\n"
+        "4️⃣ **Play!** Type your character's actions naturally. I respond in-character, roll dice, and advance the story."
+    ),
+    inline=False
+)
+GUIDE_EMBED.add_field(
+    name="🎲 Rolling Dice & Taking Actions",
+    value=(
+        "• **Combat:** I track initiative, HP, conditions, and monster stats behind the screen. "
+        "Tell me what you do — \"I swing my sword at the guard\" — and I handle the math.\n"
+        "• **Skill checks:** I'll ask for DC checks. \"Give me a DC 15 Perception check.\"\n"
+        "• **Rolling:** Use the dice bot in <#1514245057350209597>. I read the results automatically.\n"
+        "• **Saving throws & reactions:** Describe them and I resolve. \"I dive behind the pillar!\""
+    ),
+    inline=False
+)
+GUIDE_EMBED.add_field(
+    name="📈 Leveling Up & XP",
+    value=(
+        "All characters start at **Level 1**. You gain XP through:\n"
+        "⚔️ **Combat** — defeating enemies\n"
+        "🎯 **Quests** — completing missions and discovering secrets\n"
+        "🎭 **Roleplay** — staying true to your character's personality, flaws, and alignment "
+        "earns hidden bonus XP\n\n"
+        "Check your progress anytime with `/xp`."
+    ),
+    inline=False
+)
+GUIDE_EMBED.add_field(
+    name="🗣️ Voice Chat & Narration",
+    value=(
+        "• **TTS Narration:** The DM can speak scene descriptions aloud in voice chat. Use `/dm_join` to invite me.\n"
+        "• **Voice-switching:** Different NPCs get different voices automatically — guards, nobles, children, monsters.\n"
+        "• **Stream detection:** I detect when you go live and can read dice from screenshots.\n"
+        "• **Voice-to-voice (experimental):** Set `DM_WHISPER_ENABLED=1` to enable speech recognition."
+    ),
+    inline=False
+)
+GUIDE_EMBED.add_field(
+    name="🛡️ Combat Rules",
+    value=(
+        "• Initiative is tracked automatically. Use `/initiative <name> <roll>`.\n"
+        "• I track your HP, AC, conditions, death saves, and spell slots.\n"
+        "• Use `/character_longrest` or `/character_shortrest` to recover resources.\n"
+        "• Combat is cinematic — I narrate hits, misses, and kills. The math stays behind the screen."
+    ),
+    inline=False
+)
+GUIDE_EMBED.add_field(
+    name="🧬 Blood Purity & Magic",
+    value=(
+        "Magic comes from **dragon blood purity** — a percentage revealed on your 15th birthday (Day of Ascension).\n"
+        "• **0% (Blank):** No magic. Resistant to spells targeting you.\n"
+        "• **1-14% (Common):** No magic. Standard citizen.\n"
+        "• **15-39% (Lesser Blood):** Cantrips + low-level magic. Spell Safety checks required.\n"
+        "• **40-85% (Archon):** Full magic. Noble status. Reduced Spell Safety DC.\n"
+        "• **90%+ (Scion/Sovereign):** Cataclysmic power. Hidden. Hunted.\n\n"
+        "Casting spells without sufficient purity causes **Aether Burn** — internal damage that ignores resistances. "
+        "Use `/lore aether burn` for the full rules."
+    ),
+    inline=False
+)
+GUIDE_EMBED.add_field(
+    name="🏛️ The World",
+    value=(
+        "Solis-Grave is a brutal feudal continent governed by **six Great Houses** descended from ancient Sovereign Dragons. "
+        "The **Church of the Five Skulls** maintains order through Inquisitors who hunt illegal spellcasters.\n\n"
+        "You begin at the **Citadel of the Dragon-Garrison**, a cutthroat military academy. "
+        "Your blood purity determines your caste. Your choices determine your fate.\n\n"
+        "Use `/lore <topic>` to search the compendium anytime."
+    ),
+    inline=False
+)
+GUIDE_EMBED.add_field(
+    name="⚙️ Useful Commands",
+    value=(
+        "`/help` — Full command list\n"
+        "`/create` — Make a character\n"
+        "`/character_view <name>` — View any sheet\n"
+        "`/character_mine` — Your full sheet in DMs\n"
+        "`/xp` — Check level progress\n"
+        "`/roll 2d6+3` — Roll dice\n"
+        "`/lore <query>` — Compendium lookup\n"
+        "`/session_start` / `/session_end` — Control sessions\n"
+        "`/dm_voices` — Preview TTS voices"
+    ),
+    inline=False
+)
+GUIDE_EMBED.set_footer(text="Solis-Grave: Shadows of the Crown · AI Dungeon Master powered by DeepSeek")
 
 
 async def _read_config(key: str, default: int = 0) -> int:
@@ -107,6 +214,17 @@ async def on_ready():
     synced = await bot.tree.sync(guild=guild_obj)
     print(f"[kronus-core] {len(synced)} slash commands synced. Auto-config complete.")
 
+    if config.dm_guide_channel_id:
+        guide_ch = guild.get_channel(config.dm_guide_channel_id)
+        if guide_ch and isinstance(guide_ch, discord.TextChannel):
+            try:
+                msgs = [m async for m in guide_ch.history(limit=5)]
+                if not any("Solis-Grave Player Guide" in (m.content or "") for m in msgs):
+                    await guide_ch.send(embed=GUIDE_EMBED)
+                    print(f"  Posted player guide to #{guide_ch.name}")
+            except Exception as e:
+                print(f"  Guide post skipped: {e}")
+
 
 async def main():
     cogs = [
@@ -118,6 +236,10 @@ async def main():
         "cogs.tickets",
         "cogs.staff",
         "cogs.channel_memory",
+        "cogs.compendium",
+        "cogs.dm_voice",
+        "cogs.dm_session",
+        "cogs.dm_sheets",
     ]
     for cog in cogs:
         try:

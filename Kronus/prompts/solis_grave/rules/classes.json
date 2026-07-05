@@ -1,0 +1,127 @@
+{
+  "classes": {
+    "Vanguard": {
+      "base_classes": ["Fighter", "Barbarian", "Monk"],
+      "hit_die": 10,
+      "purity_required": 0,
+      "spellcasting": false,
+      "description": "Blanks who rely purely on physical conditioning. Represents 0% purity warriors.",
+      "solo_mode": "Gains an NPC companion (Fighter or Cleric sidekick) at session start.",
+      "group_mode": "Standard party member.",
+      "subclasses": {
+        "Blank Juggernaut (Fighter)": {
+          "level_3": {
+            "Aether Resilience": "Advantage on saving throws against spells cast within 15 feet of you.",
+            "Grit Over Flow": "When failing an attack/Athletics due to modifier penalty, take 1d4 bludgeoning to reroll the d20."
+          }
+        }
+      }
+    },
+    "Strider-Garrison": {
+      "base_classes": ["Rogue", "Ranger"],
+      "hit_die": 8,
+      "purity_required": 0,
+      "spellcasting": true,
+      "description": "Scouts, assassins, core-thieves who harvest Aether-Cores from slain monsters.",
+      "solo_mode": "Gains an NPC companion (Ranger or Druid sidekick) at session start.",
+      "group_mode": "Standard party member.",
+      "subclasses": {
+        "Core-Thief (Rogue)": {
+          "level_3": {
+            "Surgical Extraction": "Proficiency with Alchemist's Supplies. Add prof bonus to DEX check when harvesting Aether-Cores.",
+            "Core Injection": "Bonus action — crush Fractured core onto weapon. Next Sneak Attack deals +1d6 elemental damage."
+          }
+        }
+      }
+    },
+    "Archon Caster": {
+      "base_classes": ["Wizard", "Sorcerer"],
+      "hit_die": 6,
+      "purity_required": 15,
+      "spellcasting": true,
+      "description": "Noble magic users. Access to full arcane magic. Spell Safety DC applies.",
+      "solo_mode": "Gains an NPC companion (Fighter bodyguard) at session start.",
+      "group_mode": "Standard party member.",
+      "subclasses": {
+        "Blood Purist (Wizard)": {
+          "level_2": {
+            "Blood Focus": "Use your own blood as an arcane focus. Reduces Spell Safety DC by 2 but costs 1 HP per spell level cast."
+          }
+        }
+      }
+    },
+    "Ordained": {
+      "base_classes": ["Cleric", "Paladin"],
+      "hit_die": 8,
+      "purity_required": 0,
+      "spellcasting": true,
+      "description": "Church-sanctioned divine casters. Draconic Retribution at level 2.",
+      "solo_mode": "Gains an NPC companion (Paladin or Cleric sidekick) at session start.",
+      "group_mode": "Standard party member.",
+      "subclasses": {
+        "Inquisitor (Paladin)": {
+          "level_2": {
+            "Draconic Retribution": "Add 1d4 elemental damage to melee weapon attacks."
+          }
+        }
+      }
+    },
+    "Penitent": {
+      "base_classes": ["Warlock"],
+      "hit_die": 8,
+      "purity_required": 0,
+      "spellcasting": true,
+      "description": "Pact magic users. The Fervor Risk available. Illegal in most regions. Cult of the Sixth operatives.",
+      "solo_mode": "Gains an NPC companion (Cultist or Rogue sidekick) at session start.",
+      "group_mode": "Standard party member. Cult membership is SECRET from other players.",
+      "subclasses": {
+        "Zealot": {
+          "level_1": {
+            "The Fervor Risk": "Bonus action — gain advantage on melee attacks for 1 minute, but take 1d4 necrotic at start of each turn. End as bonus action."
+          }
+        }
+      }
+    },
+    "Sovereign": {
+      "secret": true,
+      "hidden_from_players": true,
+      "reveal_level": 20,
+      "hit_die": 10,
+      "purity_required": 95,
+      "spellcasting": true,
+      "description": "SECRET CLASS — not available at character creation. Revealed at level 20 to the Nyx vessel.",
+      "solo_mode": "N/A — endgame reveal only.",
+      "group_mode": "N/A — endgame reveal only.",
+      "spell_count_target": 180,
+      "signature_spells": [
+        "Void Step", "Cycle of Pain", "Tail's Grasp", "Maw's Hunger",
+        "Sovereign's Command", "Unmake", "Ouroboros Reversal", "Essence Scatter",
+        "Dual Heartbeat", "Void Sight", "Sleeper's Dream", "Crownbreaker"
+      ]
+    }
+  },
+  "campaign_rules": {
+    "solo_mode": {
+      "description": "A single player campaigns alone with NPC companions.",
+      "channel_creation": "Bot creates a private channel under DND_CATEGORY_ID named 'solo-{username}'.",
+      "npc_party": "3 NPC companions auto-generated at session start.",
+      "channel_deletion": "Channel deleted when session ends or campaign completes."
+    },
+    "group_mode": {
+      "description": "Multiple players in a shared session channel.",
+      "channel_creation": "Uses the configured DM_TEXT_CHANNEL_ID.",
+      "npc_party": "No NPC companions unless party is under 3 players.",
+      "channel_deletion": "Channel persists between sessions."
+    },
+    "cross_party": {
+      "description": "Solo players can interact with group players.",
+      "mechanics": "NPC companion acts as messenger. Bot relays between channels. Shared quests possible."
+    },
+    "campaign_completion": {
+      "description": "When a campaign ends.",
+      "chronicle": "Bot generates a campaign chronicle saved to dm_game_state.episode_log.",
+      "channel_cleanup": "Solo channels deleted. Group channel kept.",
+      "character_sheets": "Sheets archived in Supabase. Players can reference past campaigns."
+    }
+  }
+}
