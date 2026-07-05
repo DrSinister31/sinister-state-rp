@@ -5,9 +5,15 @@
     "rarity": "common",
     "cost": "5 GC",
     "weight": "2 lb.",
-    "description": "A handaxe forged in House Pyre's blast furnaces. The edge retains heat long after forging — the blade is warm to the touch. Standard simple melee weapon: 1d6 slashing, light, thrown (range 20/60).",
-    "properties": { "damage": "1d6 slashing", "properties": "light, thrown (20/60)" },
-    "source_tags": ["solis-grave", "pyre"]
+    "description": "A handaxe forged in House Pyre's blast furnaces. The edge retains heat long after forging \u2014 the blade is warm to the touch. Standard simple melee weapon: 1d6 slashing, light, thrown (range 20/60).",
+    "properties": {
+      "damage": "1d6 slashing",
+      "properties": "light, thrown (20/60)"
+    },
+    "source_tags": [
+      "solis-grave",
+      "pyre"
+    ]
   },
   {
     "name": "True Steel Longsword",
@@ -15,9 +21,16 @@
     "rarity": "uncommon",
     "cost": "50 GC",
     "weight": "3 lb.",
-    "description": "A masterwork longsword forged with pre-Five-Sovereign techniques. The blade carries a faint silver sheen that never tarnishes. This is the sword the border lord gave to Silas — wrapped in burlap, hidden in the drainage tunnel. Martial melee weapon: 1d8 slashing, versatile (1d10). Identifies as standard to casual inspection but any Stone-Blood smith or experienced weaponsmith will recognize the forging technique as 500+ years old.",
-    "properties": { "damage": "1d8 slashing", "properties": "versatile (1d10)" },
-    "source_tags": ["solis-grave", "pyre", "plot-item"]
+    "description": "A masterwork longsword forged with pre-Five-Sovereign techniques. The blade carries a faint silver sheen that never tarnishes. This is the sword the border lord gave to Silas \u2014 wrapped in burlap, hidden in the drainage tunnel. Martial melee weapon: 1d8 slashing, versatile (1d10). Identifies as standard to casual inspection but any Stone-Blood smith or experienced weaponsmith will recognize the forging technique as 500+ years old.",
+    "properties": {
+      "damage": "1d8 slashing",
+      "properties": "versatile (1d10)"
+    },
+    "source_tags": [
+      "solis-grave",
+      "pyre",
+      "plot-item"
+    ]
   },
   {
     "name": "Obsidian Glass-Blade Rapier",
@@ -25,9 +38,15 @@
     "rarity": "rare",
     "cost": "250 GC",
     "weight": "2 lb.",
-    "description": "A rapier with a blade forged from refined Blood Crystal — the same material used in Ascension testing. The blade is translucent crimson, and when it cuts living flesh, it briefly glows with the victim's purity reading. Finesse, 1d8 piercing. On a critical hit, the wielder learns the target's Blood Purity percentage. Favored by House Obsidian Blood-Judges and high-ranking Inquisitors.",
-    "properties": { "damage": "1d8 piercing", "properties": "finesse, reveals purity on crit" },
-    "source_tags": ["solis-grave", "obsidian"]
+    "description": "A rapier with a blade forged from refined Blood Crystal \u2014 the same material used in Ascension testing. The blade is translucent crimson, and when it cuts living flesh, it briefly glows with the victim's purity reading. Finesse, 1d8 piercing. On a critical hit, the wielder learns the target's Blood Purity percentage. Favored by House Obsidian Blood-Judges and high-ranking Inquisitors.",
+    "properties": {
+      "damage": "1d8 piercing",
+      "properties": "finesse, reveals purity on crit"
+    },
+    "source_tags": [
+      "solis-grave",
+      "obsidian"
+    ]
   },
   {
     "name": "Ferrum Iron-Bound Plate",
@@ -35,9 +54,18 @@
     "rarity": "rare",
     "cost": "1,500 GC",
     "weight": "65 lb.",
-    "description": "Full plate armor forged by House Ferrum's master smiths. Each plate is individually fitted and inscribed with the wearer's name in dwarven runes along the inner collar. Heavy armor, AC 18, STR 15 required, disadvantage on Stealth. Once per long rest, when struck by a critical hit, the wearer can use their reaction to turn it into a normal hit instead — the plate absorbs the blow.",
-    "properties": { "ac": 18, "type": "heavy", "str_req": 15, "stealth": "disadvantage", "special": "negate critical hit 1/LR" },
-    "source_tags": ["solis-grave", "ferrum"]
+    "description": "Full plate armor forged by House Ferrum's master smiths. Each plate is individually fitted and inscribed with the wearer's name in dwarven runes along the inner collar. Heavy armor, AC 18, STR 15 required, disadvantage on Stealth. Once per long rest, when struck by a critical hit, the wearer can use their reaction to turn it into a normal hit instead \u2014 the plate absorbs the blow.",
+    "properties": {
+      "ac": 18,
+      "type": "heavy",
+      "str_req": 15,
+      "stealth": "disadvantage",
+      "special": "negate critical hit 1/LR"
+    },
+    "source_tags": [
+      "solis-grave",
+      "ferrum"
+    ]
   },
   {
     "name": "Vortex Scout-Weave",
@@ -45,9 +73,16 @@
     "rarity": "common",
     "cost": "45 GC",
     "weight": "13 lb.",
-    "description": "Studded leather armor woven by House Vortex crafters. The studs are aerodynamically shaped — reducing wind resistance during flight. Light armor, AC 12 + DEX. Wearer ignores the first 10 feet of falling damage when falling from a height of 60 feet or less.",
-    "properties": { "ac": "12 + DEX", "type": "light", "special": "10 ft. fall damage reduction" },
-    "source_tags": ["solis-grave", "vortex"]
+    "description": "Studded leather armor woven by House Vortex crafters. The studs are aerodynamically shaped \u2014 reducing wind resistance during flight. Light armor, AC 12 + DEX. Wearer ignores the first 10 feet of falling damage when falling from a height of 60 feet or less.",
+    "properties": {
+      "ac": "12 + DEX",
+      "type": "light",
+      "special": "10 ft. fall damage reduction"
+    },
+    "source_tags": [
+      "solis-grave",
+      "vortex"
+    ]
   },
   {
     "name": "Blaze-Infused Weapon",
@@ -56,8 +91,16 @@
     "cost": "+200 GC",
     "weight": "as base weapon",
     "description": "A weapon enchanted with House Ignis forging techniques. Requires 10%+ Blood Purity to activate. When drawn, the blade glows faint orange and is warm to the touch. On a successful hit, deals +1d4 fire damage. The enchantment is dormant in the hands of anyone with less than 10% purity.",
-    "properties": { "enchantment_tier": "Minor", "purity_req": 10, "effect": "+1d4 fire damage" },
-    "source_tags": ["solis-grave", "ignis", "enchantment"]
+    "properties": {
+      "enchantment_tier": "Minor",
+      "purity_req": 10,
+      "effect": "+1d4 fire damage"
+    },
+    "source_tags": [
+      "solis-grave",
+      "ignis",
+      "enchantment"
+    ]
   },
   {
     "name": "Storm-Channeled Weapon",
@@ -66,8 +109,16 @@
     "cost": "+200 GC",
     "weight": "as base weapon",
     "description": "A thrown weapon enchanted by House Vortex. Requires 10%+ Blood Purity to activate. The weapon returns to the wielder's hand immediately after being thrown. Range increases by 20 feet. Electrical sparks dance along the blade when in flight.",
-    "properties": { "enchantment_tier": "Minor", "purity_req": 10, "effect": "returning, +20 ft. thrown range" },
-    "source_tags": ["solis-grave", "vortex", "enchantment"]
+    "properties": {
+      "enchantment_tier": "Minor",
+      "purity_req": 10,
+      "effect": "returning, +20 ft. thrown range"
+    },
+    "source_tags": [
+      "solis-grave",
+      "vortex",
+      "enchantment"
+    ]
   },
   {
     "name": "Void-Touched Weapon",
@@ -75,9 +126,17 @@
     "rarity": "rare",
     "cost": "+2,000 GC",
     "weight": "as base weapon",
-    "description": "A weapon forged in House Tenebris flesh-labs. Requires 25%+ Blood Purity to activate. Deals +1d6 necrotic damage on hit. On a critical hit, the target cannot regain hit points until the start of your next turn — the void energy suppresses healing. The blade absorbs light; shadows pool around it unnaturally. Prolonged use may cause disturbing dreams.",
-    "properties": { "enchantment_tier": "Greater", "purity_req": 25, "effect": "+1d6 necrotic, anti-heal on crit" },
-    "source_tags": ["solis-grave", "tenebris", "enchantment"]
+    "description": "A weapon forged in House Tenebris flesh-labs. Requires 25%+ Blood Purity to activate. Deals +1d6 necrotic damage on hit. On a critical hit, the target cannot regain hit points until the start of your next turn \u2014 the void energy suppresses healing. The blade absorbs light; shadows pool around it unnaturally. Prolonged use may cause disturbing dreams.",
+    "properties": {
+      "enchantment_tier": "Greater",
+      "purity_req": 25,
+      "effect": "+1d6 necrotic, anti-heal on crit"
+    },
+    "source_tags": [
+      "solis-grave",
+      "tenebris",
+      "enchantment"
+    ]
   },
   {
     "name": "Sovereign's Edge",
@@ -85,9 +144,17 @@
     "rarity": "very rare",
     "cost": "+20,000 GC",
     "weight": "as base weapon",
-    "description": "A weapon enchanted using lost Sovereign forging techniques. Requires 50%+ Blood Purity to activate. +2 to attack and damage rolls. When you cast a spell through this weapon (using it as a focus), reduce the Spell Safety DC by 2. The blade hums with dormant draconic resonance — other dragons can sense it within 300 feet. Possession of this weapon marks you as either a bloodline heir or a grave robber of the highest order.",
-    "properties": { "enchantment_tier": "Sovereign", "purity_req": 50, "effect": "+2 atk/dmg, Spell Safety DC -2" },
-    "source_tags": ["solis-grave", "enchantment", "legendary"]
+    "description": "A weapon enchanted using lost Sovereign forging techniques. Requires 50%+ Blood Purity to activate. +2 to attack and damage rolls. When you cast a spell through this weapon (using it as a focus), reduce the Spell Safety DC by 2. The blade hums with dormant draconic resonance \u2014 other dragons can sense it within 300 feet. Possession of this weapon marks you as either a bloodline heir or a grave robber of the highest order.",
+    "properties": {
+      "enchantment_tier": "Sovereign",
+      "purity_req": 50,
+      "effect": "+2 atk/dmg, Spell Safety DC -2"
+    },
+    "source_tags": [
+      "solis-grave",
+      "enchantment",
+      "legendary"
+    ]
   },
   {
     "name": "Aether-Warded Armor",
@@ -96,8 +163,16 @@
     "cost": "+300 GC",
     "weight": "as base armor",
     "description": "Armor lined with crushed Blood Crystal powder. Requires 10%+ Blood Purity to activate. Reduce Aether Burn damage taken by 1d6. Once per long rest, the wearer can reroll a failed Spell Safety save. The armor emits a faint hum when ambient magic is high.",
-    "properties": { "enchantment_tier": "Minor", "purity_req": 10, "effect": "Aether Burn -1d6, reroll 1 Spell Safety/LR" },
-    "source_tags": ["solis-grave", "enchantment", "pyre"]
+    "properties": {
+      "enchantment_tier": "Minor",
+      "purity_req": 10,
+      "effect": "Aether Burn -1d6, reroll 1 Spell Safety/LR"
+    },
+    "source_tags": [
+      "solis-grave",
+      "enchantment",
+      "pyre"
+    ]
   },
   {
     "name": "Blood Crystal Testing Kit",
@@ -105,9 +180,17 @@
     "rarity": "uncommon",
     "cost": "50 GC",
     "weight": "2 lb.",
-    "description": "A portable Blood Crystal for field purity testing. Single-use — the crystal cloudes permanently after one reading. Accuracy: 95%. Provides the subject's Blood Purity percentage within 30 seconds. Illegal to own without an Obsidian-issued permit. Possession carries a minimum sentence of 5 years indentured service (if Common) or execution (if Blank). More expensive kits (Pristine Blood Crystal, 750 GC) are reusable and 99% accurate.",
-    "properties": { "uses": 1, "accuracy": "95%", "illegal": true },
-    "source_tags": ["solis-grave", "obsidian", "restricted"]
+    "description": "A portable Blood Crystal for field purity testing. Single-use \u2014 the crystal cloudes permanently after one reading. Accuracy: 95%. Provides the subject's Blood Purity percentage within 30 seconds. Illegal to own without an Obsidian-issued permit. Possession carries a minimum sentence of 5 years indentured service (if Common) or execution (if Blank). More expensive kits (Pristine Blood Crystal, 750 GC) are reusable and 99% accurate.",
+    "properties": {
+      "uses": 1,
+      "accuracy": "95%",
+      "illegal": true
+    },
+    "source_tags": [
+      "solis-grave",
+      "obsidian",
+      "restricted"
+    ]
   },
   {
     "name": "Aether Purifier (Potion)",
@@ -115,9 +198,16 @@
     "rarity": "uncommon",
     "cost": "50 GC",
     "weight": "1/2 lb.",
-    "description": "A viscous silver liquid that removes 2d4+2 Aether Burn damage already taken. Does not prevent future Aether Burn. Tastes like copper and regret. Drinking more than one per hour causes the second dose to be ineffective. Sump-Bloods find the taste nostalgic; everyone else gags. Brewed from diluted Sovereign essence — a closely guarded Church secret.",
-    "properties": { "effect": "heals 2d4+2 Aether Burn", "cooldown": "1 hour" },
-    "source_tags": ["solis-grave", "church", "consumable"]
+    "description": "A viscous silver liquid that removes 2d4+2 Aether Burn damage already taken. Does not prevent future Aether Burn. Tastes like copper and regret. Drinking more than one per hour causes the second dose to be ineffective. Sump-Bloods find the taste nostalgic; everyone else gags. Brewed from diluted Sovereign essence \u2014 a closely guarded Church secret.",
+    "properties": {
+      "effect": "heals 2d4+2 Aether Burn",
+      "cooldown": "1 hour"
+    },
+    "source_tags": [
+      "solis-grave",
+      "church",
+      "consumable"
+    ]
   },
   {
     "name": "Core Injector Kit",
@@ -126,18 +216,31 @@
     "cost": "25 GC",
     "weight": "3 lb.",
     "description": "A spring-loaded device that crushes a Fractured Aether-Core and sprays the contents onto a weapon blade as a bonus action. The weapon's next hit deals +1d4 elemental damage matching the core's type. Three uses before the mechanism requires replacement (a new kit). Loaded cores are consumed regardless of whether the attack hits. Standard issue for Strider-Garrison scouts operating in monster-heavy territory.",
-    "properties": { "uses": 3, "effect": "bonus action, +1d4 elemental for next hit" },
-    "source_tags": ["solis-grave", "strider-garrison", "consumable"]
+    "properties": {
+      "uses": 3,
+      "effect": "bonus action, +1d4 elemental for next hit"
+    },
+    "source_tags": [
+      "solis-grave",
+      "strider-garrison",
+      "consumable"
+    ]
   },
   {
     "name": "Dragon-Bone Charm",
     "type": "wondrous",
     "rarity": "common",
     "cost": "10 GC",
-    "weight": "—",
-    "description": "A small charm carved from genuine dragon bone (typically Drake or Wyvern). When worn, grants advantage on one Spell Safety save per long rest. The charm crumbles to dust after this use — it burns through its residual dragon essence to protect the wearer once. Commoners save for years to buy one for their Ascension Day, hoping their child's first spell doesn't kill them.",
-    "properties": { "effect": "advantage on 1 Spell Safety save/LR, consumed" },
-    "source_tags": ["solis-grave", "common", "consumable"]
+    "weight": "\u2014",
+    "description": "A small charm carved from genuine dragon bone (typically Drake or Wyvern). When worn, grants advantage on one Spell Safety save per long rest. The charm crumbles to dust after this use \u2014 it burns through its residual dragon essence to protect the wearer once. Commoners save for years to buy one for their Ascension Day, hoping their child's first spell doesn't kill them.",
+    "properties": {
+      "effect": "advantage on 1 Spell Safety save/LR, consumed"
+    },
+    "source_tags": [
+      "solis-grave",
+      "common",
+      "consumable"
+    ]
   },
   {
     "name": "Citadel Cadet Uniform",
@@ -145,8 +248,234 @@
     "rarity": "common",
     "cost": "15 GC",
     "weight": "4 lb.",
-    "description": "The standard-issue uniform of the Citadel of the Dragon-Garrison. Gray wool tunic, black leather boots, and a brass pin bearing the Citadel crest (a dragon coiled around a sword). Identifies the wearer as an academy recruit. Reduces hazing from instructors (they know you've paid). Increases hazing from senior cadets (they know you're new meat). Required attire for all Citadel functions. Replacement cost is docked from your first deployment pay — don't lose it.",
-    "properties": { "type": "clothing", "faction": "Citadel Academy" },
-    "source_tags": ["solis-grave", "citadel"]
+    "description": "The standard-issue uniform of the Citadel of the Dragon-Garrison. Gray wool tunic, black leather boots, and a brass pin bearing the Citadel crest (a dragon coiled around a sword). Identifies the wearer as an academy recruit. Reduces hazing from instructors (they know you've paid). Increases hazing from senior cadets (they know you're new meat). Required attire for all Citadel functions. Replacement cost is docked from your first deployment pay \u2014 don't lose it.",
+    "properties": {
+      "type": "clothing",
+      "faction": "Citadel Academy"
+    },
+    "source_tags": [
+      "solis-grave",
+      "citadel"
+    ]
+  },
+  {
+    "name": "Aether Purifier Greater",
+    "type": "potion",
+    "rarity": "uncommon",
+    "cost": "120 gp",
+    "weight": "0.5 lb.",
+    "description": "A swirling silver liquid that cleanses the body of lingering magical corruption. When consumed, you end all diseases and one curse affecting you. Additionally, you gain advantage on saving throws against necrotic damage for 1 hour.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "+1 Sword",
+    "type": "weapon",
+    "rarity": "uncommon",
+    "cost": "300 gp",
+    "weight": "3 lb.",
+    "description": "A straight-bladed longsword etched with faint geometric runes that pulse with pale light. You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "+1 Shield",
+    "type": "armor",
+    "rarity": "uncommon",
+    "cost": "250 gp",
+    "weight": "6 lb.",
+    "description": "A heavy steel shield bearing a raised crest of interlocking sunbursts. While wielding this shield, you gain a +1 bonus to your Armor Class. This bonus is in addition to the shield's normal AC bonus.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Ring of Spell Safety",
+    "type": "wondrous",
+    "rarity": "rare",
+    "cost": "600 gp",
+    "weight": "\u2014",
+    "description": "A band of dark iron set with a pale opal. When you would be affected by a spell cast by an ally, you can use your reaction to make the spell harmless to you. This property can be used once per short rest.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Cloak of Sump Camouflage",
+    "type": "wondrous",
+    "rarity": "common",
+    "cost": "80 gp",
+    "weight": "1 lb.",
+    "description": "A drab, mud-stained cloak woven from marsh fibers. While worn in swamps, bogs, or marshes, you have advantage on Dexterity (Stealth) checks. The cloak also masks your scent from predators native to such environments.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Boots of the Ridge",
+    "type": "wondrous",
+    "rarity": "uncommon",
+    "cost": "200 gp",
+    "weight": "2 lb.",
+    "description": "Sturdy leather boots reinforced with iron plates along the sole and heel. You ignore difficult terrain caused by rocky or uneven ground, and you have advantage on ability checks to resist being knocked prone while climbing.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Amulet of Void Resistance",
+    "type": "wondrous",
+    "rarity": "rare",
+    "cost": "800 gp",
+    "weight": "0.5 lb.",
+    "description": "A glossy black amulet set with a fragment of crystallized void-stone. While wearing it, you have resistance to necrotic damage. Additionally, you cannot be aged magically or by planar effects.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Gauntlets of Forge Strength",
+    "type": "wondrous",
+    "rarity": "uncommon",
+    "cost": "350 gp",
+    "weight": "4 lb.",
+    "description": "Heavy brass gauntlets engraved with hammer-and-anvil motifs. While worn, your Strength score becomes 19 if it is lower than that. These gauntlets also grant immunity to non-magical fire damage from forge or smithing work.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Circlet of Purity Sight",
+    "type": "wondrous",
+    "rarity": "rare",
+    "cost": "750 gp",
+    "weight": "\u2014",
+    "description": "A slender silver circlet with a single diamond suspended above the wearer's brow. You can see the true form of shapechangers and illusions within 60 feet, provided they are not created by a spell of 6th level or higher.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Aether-Sack",
+    "type": "wondrous",
+    "rarity": "uncommon",
+    "cost": "400 gp",
+    "weight": "15 lb.",
+    "description": "A cloth sack lined with shimmering aether-thread. This bag functions as a bag of holding, with an interior capacity of 64 cubic feet and a maximum weight limit of 500 pounds. The sack weighs 15 pounds regardless of contents.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Hemp Rope (50 ft)",
+    "type": "gear",
+    "rarity": "common",
+    "cost": "1 gp",
+    "weight": "10 lb.",
+    "description": "A braided rope of rough, smoke-cured hemp, stained with old blood and caked with grave-dust. The fibers whisper faintly when taut, as if remembering the weight of the hanged.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Crowbar",
+    "type": "gear",
+    "rarity": "common",
+    "cost": "2 gp",
+    "weight": "5 lb.",
+    "description": "A heavy iron lever, its claw bent and scarred from prying open sarcophagi and splintering coffin lids. The handle is wrapped in salt-crusted leather to ward against things that cling.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Hammer",
+    "type": "gear",
+    "rarity": "common",
+    "cost": "1 gp",
+    "weight": "3 lb.",
+    "description": "A blacksmith\u2019s hammer with a head forged from a broken grave-marker. Each strike rings with a dull, hollow chime, and the wood handle is etched with crude prayers against resurrection.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Pitons (10)",
+    "type": "gear",
+    "rarity": "common",
+    "cost": "5 sp",
+    "weight": "5 lb.",
+    "description": "Ten rusted iron spikes, their tips filed into jagged barbs. Each piton is grooved to hold a drop of blessed salt, and the heads are stamped with the mark of the Last Warden.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Rations (10 days)",
+    "type": "gear",
+    "rarity": "common",
+    "cost": "5 gp",
+    "weight": "20 lb.",
+    "description": "A wax-sealed satchel of hardtack, dried blood-sausage, and salt-crusted root vegetables. Each ration is wrapped in black parchment inscribed with a verse from the Book of Final Night.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Waterskin",
+    "type": "gear",
+    "rarity": "common",
+    "cost": "2 sp",
+    "weight": "5 lb. (full)",
+    "description": "A cured leather waterskin stitched with sinew from a storm-beast. The stopper is a polished tooth, and the water within is always faintly bitter, tasting of ash and memory.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Tinderbox",
+    "type": "gear",
+    "rarity": "common",
+    "cost": "5 sp",
+    "weight": "1 lb.",
+    "description": "A small iron box filled with char-cloth and flint shaved from a meteorite. The striker is a fingerbone from a pyre-cleaner, and the box lid is etched with a ward against the creeping dark.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Torch (10)",
+    "type": "gear",
+    "rarity": "common",
+    "cost": "1 cp each",
+    "weight": "1 lb. each",
+    "description": "A bundle of ten torches, each a length of gnarled yew wrapped in oil-soaked burial shroud. They burn with a pale, smokeless flame that reveals faint handprints on stone and metal.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Backpack",
+    "type": "gear",
+    "rarity": "common",
+    "cost": "2 gp",
+    "weight": "5 lb.",
+    "description": "A heavy canvas pack lined with waxed leather and secured with brass clasps shaped like crying faces. The straps are strung with fingerbones, and a hidden pocket holds a pinch of grave-soil for good luck.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Bedroll",
+    "type": "gear",
+    "rarity": "common",
+    "cost": "1 gp",
+    "weight": "7 lb.",
+    "description": "A tightly rolled blanket of moth-eaten wool and oilcloth, patched with scraps of funeral shrouds. Sleepers often dream of cold earth and distant bells, but it keeps the damp of the barrow at bay.",
+    "source_tags": [
+      "solis-grave"
+    ]
   }
 ]

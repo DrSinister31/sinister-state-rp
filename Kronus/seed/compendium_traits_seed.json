@@ -1,0 +1,47 @@
+{
+  "personality_traits": [
+    "I judge others by their bloodline before their actions.",
+    "I carry myself with the cold pride of a pureblood noble.",
+    "I flinch at the sight of a Blank, as if their stain could rub off.",
+    "I speak of the Church's doctrine as though it were absolute fact.",
+    "I hoard secrets about lineage and use them as leverage.",
+    "I am quick to offer a prayer to Solis before any undertaking.",
+    "I treat House loyalty as the highest form of virtue.",
+    "I never refuse a chance to prove my blood's superiority."
+  ],
+  "ideals": [
+    "Purity. The blood must be kept clean, or all is lost.",
+    "Order. The caste system is divine law, not human cruelty.",
+    "Faith. The Church's word is the only truth I need.",
+    "House. My family's name is my shield and my sword.",
+    "Hope. The Cult promises a world without the stain of caste.",
+    "Survival. In the end, only the clever and strong endure."
+  ],
+  "bonds": [
+    "I would die for the matriarch of my House without hesitation.",
+    "I owe a debt to a priest who once hid my tainted birth.",
+    "A Blank child once saved my life; I protect them in secret.",
+    "I carry a relic of my House that must never fall into enemy hands.",
+    "My sibling was taken by the Inquisition; I will find them.",
+    "I am sworn to a blood oath against a rival House."
+  ],
+  "flaws": [
+    "I cannot trust anyone whose lineage I do not know.",
+    "I obsessively check for stains or blemishes on my own skin.",
+    "I am quick to believe rumors of taint in others.",
+    "I freeze in the presence of high-ranking clergy, afraid to offend.",
+    "I hoard wealth and favors, terrified of being cast down.",
+    "I secretly envy the freedom of the Blanks I despise."
+  ],
+  "alignments": {
+    "Lawful Good": "Upholds purity caste as divine order.",
+    "Neutral Good": "Helps where they can, survival first.",
+    "Chaotic Good": "Breaks unjust laws for right causes.",
+    "Lawful Neutral": "Purity is law. Church is order.",
+    "True Neutral": "Stays neutral. Lives day to day.",
+    "Chaotic Neutral": "Trusts no faction. Own survival above all.",
+    "Lawful Evil": "Uses purity system to dominate. Archon supremacy.",
+    "Neutral Evil": "Exploits weakness. Blank or Archon all the same.",
+    "Chaotic Evil": "Burns it all. The system is a lie."
+  }
+}

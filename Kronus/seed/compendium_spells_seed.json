@@ -396,5 +396,1169 @@
     "source_tags": [
       "solis-grave"
     ]
+  },
+  {
+    "name": "Aether Missile",
+    "level": 0,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "120 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You launch a bolt of pale aether energy at a target. Make a ranged spell attack. On a hit, the target takes 1d8 force damage. This spell's damage increases by 1d8 when you reach 5th (2d8), 11th (3d8), and 17th level (4d8).",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Void Shield",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 Reaction, which you take when you are hit by an attack",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "1 round",
+    "description": "A shimmering void of absolute darkness interposes itself between you and the attack. You gain resistance to bludgeoning, piercing, and slashing damage from that attack until the start of your next turn.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Blood Sacrifice",
+    "level": 2,
+    "school": "Necromancy",
+    "casting_time": "1 Bonus Action",
+    "range": "Self",
+    "components": "V, S, M (a ceremonial dagger stained with blood)",
+    "duration": "Instantaneous",
+    "description": "You cut yourself, taking 2d6 necrotic damage. Choose one spell you have prepared of 1st level or lower. You regain one expended spell slot of that spell's level. The damage cannot be reduced in any way.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Dragon's Breath",
+    "level": 3,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "Self (15-foot cone)",
+    "components": "V, S, M (a scale from a dragon)",
+    "duration": "Instantaneous",
+    "description": "You exhale a torrent of elemental energy. Each creature in a 15-foot cone must make a Dexterity saving throw, taking 6d6 damage on a failed save, or half as much on a success. Choose acid, cold, fire, lightning, or poison when you cast this spell.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Inquisitor's Verdict",
+    "level": 4,
+    "school": "Divination",
+    "casting_time": "1 Action",
+    "range": "60 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You pronounce judgment upon a target you can see. It must make a Charisma saving throw. On a failure, it takes 8d8 radiant damage and is stunned until the end of your next turn. If it is a fiend or undead, it takes 12d8 radiant damage instead.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Cult Prophecy",
+    "level": 2,
+    "school": "Divination",
+    "casting_time": "1 Minute",
+    "range": "Self",
+    "components": "V, S, M (a bloodstained parchment)",
+    "duration": "8 hours",
+    "description": "You scry the skeins of fate for a dark omen. When you complete the casting, you gain a vision of one future event within the next 8 hours. The DM chooses a single clue (a phrase, image, or name) that will become relevant, but not the specifics of the event.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Flesh Graft",
+    "level": 3,
+    "school": "Necromancy",
+    "casting_time": "1 Action",
+    "range": "Touch",
+    "components": "V, S, M (a piece of flesh from a creature of the same type as the target)",
+    "duration": "Concentration, up to 1 hour",
+    "description": "You graft a piece of flesh onto an allied creature you touch. The target gains 20 temporary hit points and, while the spell lasts, can use a bonus action to make one unarmed strike that deals 1d6 + Strength modifier necrotic damage.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Storm Cloak",
+    "level": 4,
+    "school": "Transmutation",
+    "casting_time": "1 Action",
+    "range": "Self",
+    "components": "V, S, M (a scrap of a storm giant's cloak)",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "A howling vortex of wind and lightning wraps around you. You gain a flying speed of 40 feet. Any creature that hits you with a melee attack takes 2d8 lightning damage. Once per turn, you can launch a bolt of lightning at a target within 60 feet, dealing 3d8 lightning damage on a hit (ranged spell attack).",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Iron Skin",
+    "level": 2,
+    "school": "Abjuration",
+    "casting_time": "1 Action",
+    "range": "Self",
+    "components": "V, S, M (a handful of iron filings)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "Your skin hardens and turns metallic. You gain resistance to bludgeoning, piercing, and slashing damage. Additionally, your unarmed strikes deal 1d4 + Strength modifier bludgeoning damage.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Pyre Forge",
+    "level": 5,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "60 feet",
+    "components": "V, S, M (a lump of charcoal)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "A 20-foot-radius sphere of infernal flames erupts at a point within range. Each creature in the area must make a Dexterity saving throw, taking 8d6 fire damage on a failed save, or half as much on a success. The flames linger for the duration, and any creature that enters the area for the first time on a turn or ends its turn there takes 4d6 fire damage. The ground in the area becomes difficult terrain.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Sump Mist",
+    "level": 1,
+    "school": "Conjuration",
+    "casting_time": "1 Action",
+    "range": "60 feet",
+    "components": "V, S, M (a vial of swamp water)",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "A thick, fetid mist fills a 20-foot-radius sphere centered on a point within range. The area is heavily obscured. Creatures that start their turn in the mist must succeed on a Constitution saving throw or be poisoned until the start of their next turn.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Ash Storm",
+    "level": 3,
+    "school": "Conjuration",
+    "casting_time": "1 Action",
+    "range": "120 feet",
+    "components": "V, S, M (a handful of ashes)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "A swirling storm of hot ash and cinders fills a 40-foot-radius cylinder, 20 feet high, centered on a point within range. The area is heavily obscured. Creatures that start their turn in the area take 2d6 fire damage and must succeed on a Strength saving throw or have their speed halved until the end of their next turn.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Drake's Blood",
+    "level": 1,
+    "school": "Transmutation",
+    "casting_time": "1 Bonus Action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "1 minute",
+    "description": "You infuse your veins with draconic vitality. You gain temporary hit points equal to 1d10 + your spellcasting modifier. Additionally, for the duration, you have resistance to a damage type of your choice: acid, cold, fire, lightning, or poison.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Bone Cage",
+    "level": 4,
+    "school": "Necromancy",
+    "casting_time": "1 Action",
+    "range": "60 feet",
+    "components": "V, S, M (a fragment of a skeleton)",
+    "duration": "Concentration, up to 1 hour",
+    "description": "Razor-sharp bones erupt from the ground in a 10-foot-radius circle around a point you choose. The area becomes difficult terrain. A creature in the area when it appears must make a Dexterity saving throw, taking 4d12 piercing damage on a failed save, or half as much on a success. A creature that enters the area for the first time on a turn or ends its turn there takes 4d12 piercing damage. The bones form a wall that provides half cover.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Crystal Lance",
+    "level": 6,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "Self (120-foot line)",
+    "components": "V, S, M (a shard of crystal)",
+    "duration": "Instantaneous",
+    "description": "A lance of shimmering crystal shoots from your hand in a line 120 feet long and 5 feet wide. Each creature in the line must make a Dexterity saving throw, taking 8d8 piercing damage on a failed save, or half as much on a success. On a failure, the creature is impaled and restrained until the end of your next turn.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Sovereigns Wrath",
+    "level": 6,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "Self (30-foot radius)",
+    "components": "V, S, M (a shattered crown)",
+    "duration": "Instantaneous",
+    "description": "You unleash a blast of divine retribution. All creatures of your choice in a 30-foot radius must make a Constitution saving throw. On a failure, they take 8d8 radiant damage and are stunned until the end of your next turn. On a success, they take half damage and are not stunned. Undead and fiends have disadvantage on the save.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Tenebris Corruption",
+    "level": 5,
+    "school": "Necromancy",
+    "casting_time": "1 Action",
+    "range": "60 feet",
+    "components": "V, S, M (a vial of shadow essence)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "A target creature must make a Constitution saving throw. On a failure, it becomes corrupted, taking 4d10 necrotic damage at the start of each of its turns and gaining vulnerability to necrotic damage. It can repeat the save at the end of each turn, ending the effect on a success.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Ferrum Stand",
+    "level": 4,
+    "school": "Abjuration",
+    "casting_time": "1 Bonus Action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "You become an immovable bulwark. You gain resistance to bludgeoning, piercing, and slashing damage, and your speed is halved. When a creature within 5 feet hits you with a melee attack, you can use your reaction to force it to make a Strength saving throw. On a failure, it is knocked prone.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Vortex Tornado",
+    "level": 5,
+    "school": "Conjuration",
+    "casting_time": "1 Action",
+    "range": "120 feet",
+    "components": "V, S, M (a small whirlwind of dust)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "A 20-foot-radius, 40-foot-high cylinder of swirling wind forms at a point you choose. Creatures in the area must make a Strength saving throw. On a failure, they take 6d6 bludgeoning damage and are restrained. On a success, half damage and are not restrained. The vortex moves 20 feet per turn on your command, dragging restrained creatures.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Obsidian Gavel",
+    "level": 7,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "60 feet",
+    "components": "V, S, M (a black marble gavel)",
+    "duration": "Instantaneous",
+    "description": "A massive obsidian hammer slams down on a point you can see. Each creature in a 15-foot-radius, 30-foot-tall cylinder must make a Dexterity saving throw. On a failure, they take 10d10 bludgeoning damage and are knocked prone. On a success, they take half damage and are not knocked prone. Structures take double damage.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Ignis Inferno",
+    "level": 6,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "150 feet",
+    "components": "V, S, M (a pinch of sulfur and brimstone)",
+    "duration": "Instantaneous",
+    "description": "A searing blast of hellfire erupts in a 40-foot-radius sphere. Creatures in the area must make a Dexterity saving throw. On a failure, they take 10d8 fire damage and are set ablaze, taking 2d8 fire damage at the start of each of their turns until they use an action to douse the flames. On a success, half damage and not ablaze.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Core Explosion",
+    "level": 8,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "Self (60-foot radius)",
+    "components": "V, S, M (a shard of obsidian)",
+    "duration": "Instantaneous",
+    "description": "You trigger a cataclysmic blast of gravity and fire from your core. All creatures and objects in a 60-foot radius must make a Constitution saving throw. On a failure, they take 12d10 force damage and are knocked prone. On a success, half damage. The spell destroys unattended objects and structures.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Aetheric Flood",
+    "level": 7,
+    "school": "Transmutation",
+    "casting_time": "1 Action",
+    "range": "90 feet",
+    "components": "V, S, M (a vial of liquid starlight)",
+    "duration": "Instantaneous",
+    "description": "A wave of shimmering aether sweeps across a 30-foot-radius sphere. Creatures in the area must make a Wisdom saving throw. On a failure, they take 8d10 radiant damage and are blinded until the end of your next turn. On a success, half damage. The area becomes difficult terrain for 1 minute as reality ripples.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Blanks Fury",
+    "level": 5,
+    "school": "Enchantment",
+    "casting_time": "1 Action",
+    "range": "Self (30-foot cone)",
+    "components": "V",
+    "duration": "Instantaneous",
+    "description": "You unleash a psychic scream of pure nihilism. Creatures in a 30-foot cone must make an Intelligence saving throw. On a failure, they take 6d8 psychic damage and become stunned until the end of your next turn. On a success, half damage and not stunned. Creatures with an Intelligence score of 3 or lower are immune.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Penitents Gambit",
+    "level": 4,
+    "school": "Abjuration",
+    "casting_time": "1 Reaction, which you take when you take damage",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "1 round",
+    "description": "You channel the pain into a retributive aura. Until the start of your next turn, any creature that hits you with a melee attack takes 3d8 necrotic damage, and you regain hit points equal to half the damage dealt. This effect can trigger multiple times.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Void Walk",
+    "level": 6,
+    "school": "Conjuration",
+    "casting_time": "1 Action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You step into the void and reappear in a space you can see within 120 feet. When you vanish, each creature within 10 feet of your starting location must make a Charisma saving throw. On a failure, they take 6d8 cold damage and are frightened until the end of your next turn. On a success, half damage.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Cycle Break",
+    "level": 5,
+    "school": "Abjuration",
+    "casting_time": "1 Action",
+    "range": "30 feet",
+    "components": "V, S, M (a shattered hourglass)",
+    "duration": "Instantaneous",
+    "description": "You target a creature you can see. It must make a Wisdom saving throw. On a failure, it loses any immunity to damage or conditions, and any ongoing magical effects on it (such as haste or invisibility) end. For 1 minute, it cannot gain temporary hit points or advantage on saving throws.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Crown Shatter",
+    "level": 8,
+    "school": "Enchantment",
+    "casting_time": "1 Action",
+    "range": "60 feet",
+    "components": "V, S, M (a broken crown)",
+    "duration": "Instantaneous",
+    "description": "You strike at the will of a target creature. It must make a Charisma saving throw. On a failure, it takes 6d10 psychic damage and suffers a random form of short-term madness (DMG table). On a success, half damage and no madness. If the target has legendary resistances, it must expend one or the spell pierces.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Sleeper Rise",
+    "level": 3,
+    "school": "Necromancy",
+    "casting_time": "1 Action",
+    "range": "90 feet",
+    "components": "V, S, M (a handful of grave dirt)",
+    "duration": "Instantaneous",
+    "description": "You animate the dead in a 30-foot-radius area. Up to five corpses or skeletons rise as zombies or skeletons under your control for 1 hour. They obey your verbal commands, and their maximum hit points are doubled. They crumble to dust after the duration.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Maw Open",
+    "level": 7,
+    "school": "Conjuration",
+    "casting_time": "1 Action",
+    "range": "120 feet",
+    "components": "V, S, M (a tooth of a great predator)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "A 40-foot-deep, 20-foot-diameter maw of shadow opens in the ground. Creatures in the area must make a Dexterity saving throw. On a failure, they take 8d10 piercing damage and are grappled at the maw's bottom. On a success, half damage and they escape to the edge. Grappled creatures take 4d10 necrotic damage at the start of your turns.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Void-Touch",
+    "level": 0,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "S, M (a sliver of obsidian)",
+    "duration": "Instantaneous",
+    "description": "Make a melee spell attack against a creature. On a hit, the target takes 1d8 necrotic damage and cannot regain hit points until the start of your next turn. This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Dragon-Spark",
+    "level": 0,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "A mote of primordial draconic fire streaks toward a creature within range. Make a ranged spell attack. On a hit, the target takes 1d10 fire damage. On a critical hit, the target ignites, taking 1d4 fire damage at the start of each of its turns until it uses an action to douse the flames. This spell's damage increases by 1d10 at 5th (2d10), 11th (3d10), and 17th level (4d10).",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Flesh-Knit",
+    "level": 0,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "Tendrils of gristly flesh reweave wounds. One creature you touch regains hit points equal to 1d6 + your spellcasting ability modifier. This spell has no effect on undead or constructs. This spell's healing increases by 1d6 at 5th (2d6), 11th (3d6), and 17th level (4d6).",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Blood-Read",
+    "level": 0,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "S, M (a drop of the target's blood)",
+    "duration": "Concentration, up to 1 round",
+    "description": "You taste a creature's blood and glimpse its secrets. Choose one of the following: you learn the target's current hit points and any conditions afflicting it; or you learn its deepest fear (useful for intimidation); or you learn one damage resistance or vulnerability it possesses. The target must be willing or incapacitated.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Storm-Snap",
+    "level": 0,
+    "school": "Evocation",
+    "casting_time": "1 bonus action",
+    "range": "Self (30-foot line)",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You snap your fingers, releasing a crackling line of lightning. Each creature in a 30-foot long, 5-foot wide line must succeed on a Dexterity saving throw or take 1d6 lightning damage. This spell's damage increases by 1d6 at 5th (2d6), 11th (3d6), and 17th level (4d6).",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Aether-Ward",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 reaction, which you take when you or a creature within 30 feet takes damage",
+    "range": "30 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You weave thin aetheric strands around the target, reducing the triggering damage by 2d6 + your spellcasting ability modifier. If this reduces the damage to 0, the ward flares and grants the target temporary hit points equal to the amount prevented.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Sovereigns-Presence",
+    "level": 1,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "Self (20-foot radius)",
+    "components": "V, S, M (a fragment of a fallen monarch's crown)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You exude an aura of dread authority. Hostile creatures within 20 feet must make a Wisdom saving throw. On a failure, they have disadvantage on attack rolls against you and cannot take reactions. On a success, they are immune for 24 hours.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Inquisitors-Chains",
+    "level": 1,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a rusted iron link)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "Phantom chains erupt from the ground to restrain a creature you can see. The target must succeed on a Strength saving throw or be restrained for the duration. A restrained creature takes 1d6 psychic damage at the start of each of its turns. The chains are immune to all damage but can be destroyed by a successful DC 15 Strength check.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Cultists-Secret",
+    "level": 1,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V, S, M (a bloodstained parchment)",
+    "duration": "Instantaneous",
+    "description": "You scry the forbidden lore hidden in a cult's rites. Choose one creature type (aberration, fiend, undead) or a specific cult you can name. You learn one vulnerability, resistance, or immunity common among them, or the general location of their nearest hidden sanctum.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Ferrum-Plate",
+    "level": 2,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a strip of hammered iron)",
+    "duration": "1 hour",
+    "description": "The touched creature's skin hardens into dark, metallic iron. For the duration, the target gains a +2 bonus to AC. Additionally, when a creature hits the target with a melee attack, the attacker takes 1d6 piercing damage from the jagged metal.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Ignis-Cataclysm",
+    "level": 4,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "components": "V, S, M (a pinch of sulfur and a ruby worth 500 gp)",
+    "duration": "Instantaneous",
+    "description": "A pillar of black-and-crimson fire erupts in a 20-foot-radius sphere centered on a point you choose. Each creature in the area must make a Dexterity saving throw. On a failure, they take 10d6 fire damage and are blinded until the end of your next turn. On a success, they take half damage and are not blinded.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Vortex-Rift",
+    "level": 5,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "components": "V, S, M (a shard of obsidian from the Void)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You tear a rift to the Void at a point you can see. The rift is a 20-foot-radius sphere of absolute darkness. It heavily obscures vision and extinguishes nonmagical light. Any creature that starts its turn in the rift takes 4d10 necrotic damage. A creature that enters the rift for the first time on a turn must succeed on a Strength saving throw or be pulled 10 feet toward its center.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Obsidian-Decree",
+    "level": 5,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a polished obsidian slab)",
+    "duration": "Instantaneous",
+    "description": "You speak a decree of absolute finality. One creature you can see must make a Constitution saving throw. On a failure, it takes 8d8 necrotic damage and is cursed: if it dies within the next minute, its soul is trapped in the obsidian slab, preventing resurrection. On a success, it takes half damage and is not cursed.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Tenebris-Undo",
+    "level": 6,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V, S, M (a black diamond worth 1,000 gp)",
+    "duration": "Instantaneous",
+    "description": "You unravel a single magical effect within 60 feet of you. Choose one spell of 5th level or lower, or one curse, or one planar binding effect. It is dispelled or suppressed for 1 minute. If the effect is a spell of 6th level or higher, make a spellcasting ability check with a DC of 12 + the spell's level. On a success, it is suppressed for 1 round.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Flesh-Tide",
+    "level": 6,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Self (30-foot cone)",
+    "components": "V, S, M (a handful of raw flesh)",
+    "duration": "Instantaneous",
+    "description": "A wave of sentient, living flesh erupts from you in a 30-foot cone. Each creature in the area must make a Strength saving throw. On a failure, they take 8d8 bludgeoning damage and are knocked prone. Additionally, they must succeed on a Constitution saving throw or be stunned until the end of their next turn as the flesh tries to merge with them.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Dragons-Awakening",
+    "level": 7,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a scale from an ancient dragon, worth 5,000 gp)",
+    "duration": "Concentration, up to 1 hour",
+    "description": "You touch a willing creature, awakening the slumbering dragon within. The target gains a +2 bonus to AC and immunity to fire damage. Additionally, once per turn when it hits with a melee attack, it can deal an extra 4d8 fire damage. Finally, the target can use an action to exhale a 60-foot cone of fire, dealing 12d8 fire damage (Dexterity save for half).",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Crown-Shatter",
+    "level": 8,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S, M (a shard of a shattered crown)",
+    "duration": "Instantaneous",
+    "description": "You target a creature you can see. That creature must make a Wisdom saving throw. On a failure, its mind shatters under the weight of authority. The target is stunned for 1 minute. At the end of each of its turns, it can repeat the saving throw. On a success, it takes 8d8 psychic damage instead. Creatures with legendary actions have advantage on the saving throw.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Void-Apocalypse",
+    "level": 9,
+    "school": "Conjuration",
+    "casting_time": "1 minute",
+    "range": "1 mile",
+    "components": "V, S, M (an obsidian orb worth 25,000 gp, which the spell consumes)",
+    "duration": "Instantaneous",
+    "description": "You tear open a permanent rift to the Void at a point you can see. The rift is a 100-foot-radius sphere of absolute darkness and silence. The area becomes a dead magic zone (no spells or magical effects can function). Creatures inside the rift when it opens must make a Constitution saving throw. On a failure, they are annihilated (reduced to 0 hit points and cannot be resurrected except by a wish spell). On a success, they take 20d10 necrotic damage and are blinded permanently. The rift remains for 1d4 days before collapsing.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Blood-Crystal-Locate",
+    "level": 1,
+    "school": "Divination",
+    "ritual": true,
+    "casting_time": "1 minute",
+    "range": "Self",
+    "components": [
+      "V",
+      "S",
+      "M (a drop of blood from a creature you have seen, which is consumed)"
+    ],
+    "duration": "Concentration, up to 1 hour",
+    "description": "You touch a blood-smeared crystal shard and whisper the name of a creature whose blood you possess. For the duration, you know the direction to that creature if it is on the same plane of existence. If the creature is dead or shielded by a 3rd-level or higher abjuration spell, the crystal remains dark and you learn nothing.",
+    "higher_levels": "When cast at 3rd level or higher, the duration increases by 1 hour for each slot level above 2nd."
+  },
+  {
+    "name": "Purify-Aether",
+    "level": 2,
+    "school": "Abjuration",
+    "ritual": true,
+    "casting_time": "10 minutes",
+    "range": "30 feet",
+    "components": [
+      "V",
+      "S",
+      "M (a pinch of salt and a vial of distilled water)"
+    ],
+    "duration": "Instantaneous",
+    "description": "You draw the tainted aether from a 20-foot-radius sphere within range. All nonmagical poisons, diseases, and corrupt vapors (including thick smoke or miasma) are neutralized. Magical corruption (such as from a 2nd-level or lower necromancy spell) is dispelled. This spell cannot remove curses or demonic taint."
+  },
+  {
+    "name": "Forge-Heat",
+    "level": 1,
+    "school": "Transmutation",
+    "ritual": true,
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M (a metal tool or weapon)"
+    ],
+    "duration": "1 hour",
+    "description": "You touch a ferrous metal object no larger than a longsword. It glows with a dull red heat, shedding dim light in a 5-foot radius. For the duration, the object is hot enough to ignite dry wood and deals 1d4 fire damage on a melee hit, but cannot melt or deform. You can end the spell early by pressing the object into water or snow."
+  },
+  {
+    "name": "Storm-Sense",
+    "level": 2,
+    "school": "Divination",
+    "ritual": true,
+    "casting_time": "1 minute",
+    "range": "Self",
+    "components": [
+      "V",
+      "S",
+      "M (a copper wire and a glass bead)"
+    ],
+    "duration": "Concentration, up to 1 hour",
+    "description": "You attune your senses to the pressure and static of the air. For the duration, you know the exact distance and direction to any storm (rain, snow, sandstorm, or magical tempest) within 10 miles, and you can predict its arrival within the next hour to the nearest minute. You also gain advantage on Survival checks to navigate during foul weather."
+  },
+  {
+    "name": "Flesh-Recall",
+    "level": 3,
+    "school": "Conjuration",
+    "ritual": true,
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M (a preserved piece of flesh from a willing creature)"
+    ],
+    "duration": "Instantaneous",
+    "description": "You touch a willing creature and merge a small sample of its flesh (taken beforehand) into your own. Until you cast this spell again, you can as an action recall that creature from any location on the same plane to an unoccupied space within 5 feet of you, provided you both consent. The recalled creature arrives with all its possessions and is disoriented for 1 round (can act but has disadvantage on attacks)."
+  },
+  {
+    "name": "Iron-Anchor",
+    "level": 2,
+    "school": "Abjuration",
+    "ritual": true,
+    "casting_time": "10 minutes",
+    "range": "60 feet",
+    "components": [
+      "V",
+      "S",
+      "M (a small iron ingot)"
+    ],
+    "duration": "8 hours",
+    "description": "You designate a point on the ground within range. A 10-foot-radius, 20-foot-tall cylinder of shimmering iron energy appears. Creatures in the area have their speed halved and cannot be teleported or involuntarily moved except by magical means of 4th level or higher. The anchor persists even if the ingot is destroyed."
+  },
+  {
+    "name": "Shadow-Pass",
+    "level": 3,
+    "school": "Conjuration",
+    "ritual": true,
+    "casting_time": "1 minute",
+    "range": "Self",
+    "components": [
+      "V",
+      "S",
+      "M (a piece of obsidian and a drop of ink)"
+    ],
+    "duration": "Instantaneous",
+    "description": "You step into a shadow you can see within 5 feet and emerge from a shadow within 120 feet of your starting point. The target shadow must be large enough to cover your body (at least 5 feet across). If no such shadow exists at the destination, the spell fails. You can bring one willing creature of your size or smaller with you."
+  },
+  {
+    "name": "Ash-Breath",
+    "level": 1,
+    "school": "Transmutation",
+    "ritual": true,
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": [
+      "V",
+      "S",
+      "M (a pinch of ash from a funeral pyre)"
+    ],
+    "duration": "Concentration, up to 1 minute",
+    "description": "Your mouth fills with fine ash. For the duration, you can exhale a cloud of ashen dust in a 15-foot cone once per round as a bonus action. Creatures in the cone must succeed on a Constitution saving throw or be blinded until the end of your next turn. The dust also extinguishes nonmagical flames of Small size or smaller."
+  },
+  {
+    "name": "Sump-Breathe",
+    "level": 2,
+    "school": "Transmutation",
+    "ritual": true,
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M (a gill from a fish and a clean rag)"
+    ],
+    "duration": "1 hour",
+    "description": "You touch a willing creature and alter its lungs to breathe foul water or thick sludge. For the duration, the creature can breathe in any liquid that is not acidic or magical poison, ignoring any noxious vapors dissolved in the liquid. It retains normal breathing ability as well."
+  },
+  {
+    "name": "Scale-Armor",
+    "level": 1,
+    "school": "Transmutation",
+    "ritual": true,
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M (a scale from a lizard or dragon)"
+    ],
+    "duration": "1 hour",
+    "description": "You touch a willing creature and its skin becomes covered in thin, overlapping scales. The creature's AC becomes 13 + its Dexterity modifier (if unarmored) or gains a +1 bonus to AC if already wearing armor. The scales shed water and grant advantage on saving throws against effects that would cause the creature to be grappled or restrained."
+  },
+  {
+    "name": "Bone-Mend",
+    "level": 2,
+    "school": "Necromancy",
+    "ritual": true,
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M (a piece of bone from a humanoid, which is consumed)"
+    ],
+    "duration": "Instantaneous",
+    "description": "You touch a broken bone or shattered skeleton and channel necromantic energy to knit the fractures. If the target is a creature, it regains 2d8 hit points and one broken limb is fully healed. If the target is an undead or a corpse, it regains 2d6 hit points (if a creature with hit points) or is stabilized if it has the 'broken' condition."
+  },
+  {
+    "name": "Drake-Speed",
+    "level": 3,
+    "school": "Transmutation",
+    "ritual": true,
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M (a scale from a dragon or drake)"
+    ],
+    "duration": "Concentration, up to 10 minutes",
+    "description": "You touch a willing creature and infuse it with dragon-like swiftness. For the duration, the creature's speed increases by 20 feet, it gains a climbing speed equal to its walking speed, and it does not provoke opportunity attacks when it moves. Additionally, the creature can take the Dash action as a bonus action."
+  },
+  {
+    "name": "Crystal-Sight",
+    "level": 2,
+    "school": "Divination",
+    "ritual": true,
+    "casting_time": "1 minute",
+    "range": "Self",
+    "components": [
+      "V",
+      "S",
+      "M (a crystal lens worth at least 50 gp)"
+    ],
+    "duration": "Concentration, up to 1 hour",
+    "description": "You peer through a polished crystal and gain the ability to see invisible creatures and objects within 60 feet. You also see the faint magical auras of enchantments and illusions, though you do not learn their school. This sight does not penetrate solid objects."
+  },
+  {
+    "name": "Void-Whisper",
+    "level": 4,
+    "school": "Enchantment",
+    "ritual": true,
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M (a shard of obsidian and a drop of your blood)"
+    ],
+    "duration": "24 hours",
+    "description": "You whisper a secret message into a willing creature's mind. The message is no longer than 25 words. The creature can recall the message perfectly at any time but cannot be forced to reveal it by magical or mundane means (including truth spells) for the duration. If the creature tries to repeat the message, its voice becomes a voiceless whisper that only the intended recipient can hear."
+  },
+  {
+    "name": "Crown-Oath",
+    "level": 5,
+    "school": "Abjuration",
+    "ritual": true,
+    "casting_time": "10 minutes",
+    "range": "30 feet",
+    "components": [
+      "V",
+      "S",
+      "M (a circlet of gold and iron worth at least 500 gp, which is consumed)"
+    ],
+    "duration": "1 year",
+    "description": "You designate up to six willing creatures within range and bind them with a solemn oath. For the duration, if any oath-bound creature breaks a specified rule you declare (such as 'never harm an innocent' or 'always obey the crown'), it suffers a curse: it gains one level of exhaustion that can only be removed by a greater restoration or by completing a quest to atone. The oath can be a single sentence of up to 10 words. This spell cannot be cast again on the same creature until the previous oath is fulfilled."
+  },
+  {
+    "name": "Ignis-Strike",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "A bolt of sickly orange flame erupts from your hand. Make a ranged spell attack against a target. On a hit, the target takes 2d8 fire damage and must succeed on a Constitution saving throw or be blinded until the end of your next turn as ash clings to their eyes.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st."
+  },
+  {
+    "name": "Vortex-Bolt",
+    "level": 2,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "components": "V, S, M (a tiny whirlpool of ink)",
+    "duration": "Instantaneous",
+    "description": "You hurl a spiraling bolt of compressed void-stuff. Make a ranged spell attack against a target. On a hit, the target takes 3d6 force damage and is pulled 10 feet toward you. If the target is Large or larger, it has advantage on the saving throw to resist the pull.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
+  },
+  {
+    "name": "Obsidian-Shard",
+    "level": 2,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (30-foot line)",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You create a razor-sharp shard of volcanic glass that tears through foes. Each creature in a 30-foot long, 5-foot wide line must make a Dexterity saving throw. A creature takes 3d10 slashing damage on a failed save, or half as much on a successful one. The ground in the line becomes difficult terrain until the start of your next turn.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d10 for each slot level above 2nd."
+  },
+  {
+    "name": "Tenebris-Grasp",
+    "level": 3,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a dried spider leg)",
+    "duration": "Instantaneous, 1 minute (secondary effect)",
+    "description": "Shadowy tendrils erupt from the ground and clutch at a creature you can see. The target must make a Strength saving throw. On a failure, it takes 4d8 necrotic damage and is restrained until the end of your next turn. On a success, it takes half damage and is not restrained. While restrained, the target takes 1d8 necrotic damage at the start of each of its turns.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 4th level or higher, the initial damage increases by 1d8 for each slot level above 3rd."
+  },
+  {
+    "name": "Ferrum-Bash",
+    "level": 1,
+    "school": "Transmutation",
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "1 minute (concentration)",
+    "description": "Your arm or weapon becomes reinforced with jagged iron. The next time you hit a creature with a melee weapon attack before the spell ends, the attack deals an extra 2d6 bludgeoning damage and the target must succeed on a Strength saving throw or be knocked prone.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level above 1st."
+  },
+  {
+    "name": "Pyre-Blast",
+    "level": 3,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (20-foot radius sphere)",
+    "components": "V, S, M (a pinch of sulfur and a drop of blood)",
+    "duration": "Instantaneous",
+    "description": "A burst of greasy, clinging flame expands from you. Each creature of your choice within 20 feet must make a Dexterity saving throw. A creature takes 6d6 fire damage on a failed save, or half as much on a successful one. Creatures that fail the save are also set on fire, taking 1d4 fire damage at the start of each of their turns until they use an action to extinguish the flames.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 4th level or higher, the initial damage increases by 1d6 for each slot level above 3rd."
+  },
+  {
+    "name": "Void-Lance",
+    "level": 4,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "components": "V, S, M (a sliver of obsidian)",
+    "duration": "Instantaneous",
+    "description": "You conjure a lance of pure negation from the void. Make a ranged spell attack against a target. On a hit, the target takes 7d8 force damage and its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th."
+  },
+  {
+    "name": "Flesh-Whip",
+    "level": 2,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S, M (a strip of cured leather)",
+    "duration": "Instantaneous",
+    "description": "A tendril of animated muscle and sinew lashes out from your hand. Make a melee spell attack against a target within range. On a hit, the target takes 3d6 slashing damage and must succeed on a Constitution saving throw or be poisoned until the end of your next turn as necrotic energy seeps into the wound.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
+  },
+  {
+    "name": "Storm-Chain",
+    "level": 5,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (60-foot line)",
+    "components": "V, S, M (a link of rusted iron chain)",
+    "duration": "Instantaneous",
+    "description": "A crackling chain of sickly green lightning arcs from you to a point you can see within range. Each creature in a 60-foot long, 5-foot wide line must make a Dexterity saving throw. A creature takes 8d6 lightning damage on a failed save, or half as much on a successful one. Creatures wearing metal armor have disadvantage on this saving throw.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d6 for each slot level above 5th."
+  },
+  {
+    "name": "Crystal-Burst",
+    "level": 4,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "components": "V, S, M (a handful of broken glass)",
+    "duration": "Instantaneous",
+    "description": "A cluster of jagged crystals explodes outward from a point you choose. Each creature in a 15-foot radius sphere centered on that point must make a Dexterity saving throw. A creature takes 5d8 piercing damage on a failed save, or half as much on a successful one. Shards of crystal litter the area, making it difficult terrain until cleared.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th."
+  },
+  {
+    "name": "Ash-Scatter",
+    "level": 3,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "Self (30-foot cone)",
+    "components": "V, S, M (a pinch of ash from a funeral pyre)",
+    "duration": "Instantaneous",
+    "description": "A cloud of hot, choking ash erupts from your hands. Each creature in a 30-foot cone must make a Constitution saving throw. A creature takes 4d8 fire damage and is blinded until the end of your next turn on a failed save, or half as much damage and not blinded on a successful one.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd."
+  },
+  {
+    "name": "Bone-Spear",
+    "level": 1,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a splinter of bone)",
+    "duration": "Instantaneous",
+    "description": "You conjure a spear of jagged bone and hurl it at a creature. Make a ranged spell attack. On a hit, the target takes 2d10 piercing damage. If the target is a creature of flesh and blood, the spear leaves a wound that bleeds profusely, and the target takes 1d4 necrotic damage at the start of its next turn.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the initial damage increases by 1d10 for each slot level above 1st."
+  },
+  {
+    "name": "Sovereigns-Fury",
+    "level": 7,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (60-foot radius sphere)",
+    "components": "V, S, M (a crown of black iron worth 500 gp, which the spell consumes)",
+    "duration": "Instantaneous",
+    "description": "You unleash the wrath of a forgotten tyrant. Each creature of your choice within 60 feet must make a Constitution saving throw. A creature takes 12d8 fire damage and 4d8 necrotic damage on a failed save, or half as much of each on a successful one. Creatures that fail the save are also frightened for 1 minute. They can repeat the saving throw at the end of each of their turns, ending the effect on a success."
+  },
+  {
+    "name": "Inquisitors-Smite",
+    "level": 4,
+    "school": "Evocation",
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "1 minute (concentration)",
+    "description": "Your weapon glows with a pale, judgmental light. The next time you hit a creature with a melee weapon attack during the spell's duration, the attack deals an extra 6d8 radiant damage. Additionally, the target must succeed on a Wisdom saving throw or be paralyzed until the end of your next turn, as they are wracked with guilt and pain.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the extra damage increases by 1d8 for each slot level above 4th."
+  },
+  {
+    "name": "Cultists-Venom",
+    "level": 2,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a vial of black bile)",
+    "duration": "Instantaneous, 1 minute (poison effect)",
+    "description": "You shoot a stream of corrosive venom at a target. Make a ranged spell attack. On a hit, the target takes 3d6 acid damage and must make a Constitution saving throw. On a failed save, it is poisoned for 1 minute. While poisoned this way, the target takes 1d6 poison damage at the start of each of its turns. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success.",
+    "at_higher_levels": "When you cast this spell using a spell slot of 3rd level or higher, the initial acid damage increases by 1d6 for each slot level above 2nd."
+  },
+  {
+    "name": "Aether-Shell",
+    "level": 2,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a shard of translucent crystal)",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "A shimmering shell of aetheric energy envelops a willing creature you touch. For the duration, the target gains resistance to force damage and has advantage on saving throws against spells and magical effects that would banish, teleport, or forcibly move it. Additionally, the shell sheds dim light in a 5-foot radius."
+  },
+  {
+    "name": "Blood-Barrier",
+    "level": 3,
+    "school": "Abjuration",
+    "casting_time": "1 bonus action",
+    "range": "Self (30-foot radius)",
+    "components": "V, S, M (a drop of the caster's blood)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You sacrifice a portion of your vitality to create a defensive barrier. When you cast this spell, you take 2d6 necrotic damage which cannot be reduced. For the duration, you and up to 5 friendly creatures within range gain temporary hit points equal to 2d10 + your spellcasting ability modifier. Each time a protected creature is hit by an attack, the barrier flashes crimson, and the attacker must make a Constitution saving throw or take 1d8 necrotic damage (once per round per attacker)."
+  },
+  {
+    "name": "Dragons-Scale",
+    "level": 4,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a scale from a true dragon)",
+    "duration": "Concentration, up to 1 hour",
+    "description": "You touch a willing creature and cause shimmering draconic scales to grow across its skin. The target's AC becomes 18 (if its natural AC is lower) and gains resistance to one damage type of your choice: acid, cold, fire, lightning, or poison. Additionally, the target can use its reaction to add +2 to a saving throw against a breath weapon or similar area effect that deals that damage type."
+  },
+  {
+    "name": "Inquisitors-Bulwark",
+    "level": 4,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Self (10-foot radius)",
+    "components": "V, S, M (a holy symbol or badge of office)",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "You create a glowing barrier of divine judgment that expands outward from you. The area becomes difficult terrain for hostile creatures. When a hostile creature enters the area for the first time on a turn or starts its turn there, it must make a Wisdom saving throw. On a failure, it takes 3d8 radiant damage and cannot benefit from invisibility, shapeshifting, or illusions while inside the barrier. Allies within the barrier gain a +2 bonus to AC."
+  },
+  {
+    "name": "Flesh-Knit-Greater",
+    "level": 4,
+    "school": "Necromancy (healing)",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a roll of bandages and a vial of holy water)",
+    "duration": "Instantaneous",
+    "description": "You channel potent regenerative energy into a wounded creature you touch. The target regains 4d8 + 10 hit points. If the target has any severed body parts (fingers, toes, limbs), the spell reattaches them instantly. This spell also ends one effect causing ongoing damage, such as a sword of wounding or a similar magical bleeding effect."
+  },
+  {
+    "name": "Storm-Wall",
+    "level": 5,
+    "school": "Abjuration (evocation)",
+    "casting_time": "1 action",
+    "range": "Self (60-foot line or 20-foot radius circle)",
+    "components": "V, S, M (a small lightning rod)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You conjure a wall of churning storm energy. Choose a line 60 feet long and 10 feet high, or a circle 20 feet in diameter and 10 feet high. The wall provides half cover to creatures behind it. Any creature that passes through the wall must make a Dexterity saving throw, taking 6d8 lightning damage on a failed save, or half on a success. The wall also deflects ranged spell attacks: any ranged spell attack that targets a creature behind the wall has disadvantage."
+  },
+  {
+    "name": "Iron-Skin",
+    "level": 5,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a pinch of iron filings)",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "You transform the flesh of a willing creature into living iron. The target gains resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks. Additionally, the target\u2019s AC becomes 20 (if its natural AC is lower) and it has advantage on saving throws against being poisoned, paralyzed, or stunned. The target\u2019s speed is reduced by 10 feet, and it has disadvantage on Dexterity (Stealth) checks."
+  },
+  {
+    "name": "Crystal-Cage",
+    "level": 5,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a small piece of quartz)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You trap a creature of your choice within a shimmering crystalline prison. The target must make a Dexterity saving throw or be enclosed in an indestructible cage of magical crystal (20-foot cube). The cage blocks all forms of movement, teleportation, and planar travel. A creature trapped inside cannot be targeted by attacks or effects from outside the cage. The cage has no effect on creatures that are ethereal or incorporeal. On a successful save, the target is instead briefly crystallized and unable to take reactions until the end of its next turn."
+  },
+  {
+    "name": "Ash-Cloak",
+    "level": 3,
+    "school": "Abjuration (illusion)",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V, S, M (ash from a burned creature)",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "You wrap yourself in a swirling cloak of grey ash and shadow. For the duration, you are heavily obscured in dim light or darkness. You have resistance to fire and necrotic damage. When a creature hits you with a melee attack, the ash billows outward, forcing the attacker to make a Constitution saving throw or be blinded for 1 round. Additionally, you can use a bonus action to teleport up to 30 feet to an unoccupied space you can see, leaving behind a cloud of ash that lightly obscures a 10-foot radius until the start of your next turn."
+  },
+  {
+    "name": "Bone-Shield",
+    "level": 2,
+    "school": "Necromancy (abjuration)",
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "components": "V, S, M (a piece of bone)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "Skeletal plates of bone erupt from your body, forming a protective shield. You gain 10 temporary hit points. While the shield is active, when a creature you can see hits you with a melee attack, the attacker takes 1d8 piercing damage from shattering bone spikes. As a bonus action on your turn, you can expend 5 temporary hit points from this shield to cause a burst of bone shards in a 15-foot cone; each creature in the area must make a Dexterity saving throw or take 2d8 piercing damage."
+  },
+  {
+    "name": "Void-Shroud",
+    "level": 6,
+    "school": "Abjuration (illusion)",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V, S, M (a fragment of obsidian from the Plane of Shadow)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You shroud yourself in a mantle of absolute darkness and silence. You become invisible and immune to all forms of divination and scrying. You gain resistance to all damage except psychic. While shrouded, you have a flying speed of 30 feet and can move through other creatures and objects as if they were difficult terrain, but you take 1d10 force damage if you end your turn inside an object. When the spell ends, you explode in a burst of void energy, forcing all creatures within 20 feet to make a Strength saving throw or be pushed 15 feet away and knocked prone."
+  },
+  {
+    "name": "Crown-Protection",
+    "level": 5,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a circlet of gold worth at least 500 gp)",
+    "duration": "8 hours",
+    "description": "You place a shimmering, invisible crown upon the head of a willing creature. For the duration, the target is immune to being frightened or charmed. Additionally, once before the spell ends, when the target would take damage, the crown absorbs up to 50 points of damage and then shatters, ending the spell. The target also gains a +3 bonus to its AC for the duration."
+  },
+  {
+    "name": "Purify-Curse",
+    "level": 4,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a vial of holy water and a sprig of vervain)",
+    "duration": "Instantaneous",
+    "description": "You channel purifying light through a creature you touch, removing one curse, one disease, or one madness effect afflicting it. If the effect is caused by a cursed item, the item is disenchanted and becomes nonmagical (or simply mundane if it was already magical). This spell also ends the effect of the Bestow Curse spell and similar magical afflictions. If the target is under the effect of a lycanthropic curse, the curse is removed permanently."
+  },
+  {
+    "name": "Mend-Soul",
+    "level": 6,
+    "school": "Necromancy (healing)",
+    "casting_time": "1 hour",
+    "range": "Touch",
+    "components": "V, S, M (a diamond worth at least 1,000 gp, which is consumed)",
+    "duration": "Instantaneous",
+    "description": "You touch a creature that has been dead for no longer than 10 days, or a creature that has suffered a permanent reduction to its maximum hit points (such as from a shadow\u2019s Strength drain or a vampire\u2019s bite). If the creature is dead, it is restored to life with all its hit points, and any missing body parts are regrown. If the creature is alive, its maximum hit points are fully restored, and it regains all hit points. This spell ends any effect that prevents the target from being resurrected, such as the Soul Cage or Magic Jar spells."
+  },
+  {
+    "name": "Sanctuary-Flame",
+    "level": 1,
+    "school": "Abjuration (evocation)",
+    "casting_time": "1 bonus action",
+    "range": "Self (10-foot radius)",
+    "components": "V, S, M (a wick from a candle blessed by a cleric)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You ignite a ring of golden, warding flames around you. The flames shed bright light in a 10-foot radius and dim light for an additional 10 feet. Any creature you designate (up to 5 creatures of your choice) that starts its turn inside the bright light regains 1d4 hit points. Any hostile creature that enters the bright light for the first time on a turn or starts its turn there must make a Dexterity saving throw, taking 1d6 fire damage on a failed save. You can use a bonus action on your turn to move the fire's center up to 20 feet."
   }
 ]

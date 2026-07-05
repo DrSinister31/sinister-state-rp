@@ -1,0 +1,247 @@
+```json
+[
+  {
+    "name": "Abomination Bloated",
+    "cr": 6,
+    "type": "Aberration",
+    "armor_class": 14,
+    "hit_points": 136,
+    "speed": "20 ft.",
+    "abilities": {
+      "str": 18,
+      "dex": 8,
+      "con": 20,
+      "int": 3,
+      "wis": 10,
+      "cha": 6
+    },
+    "saving_throws": { "con": +8, "wis": +3 },
+    "damage_vulnerabilities": "fire",
+    "damage_resistances": "bludgeoning, piercing from nonmagical attacks",
+    "damage_immunities": "poison, psychic",
+    "condition_immunities": "poisoned, frightened",
+    "senses": "darkvision 60 ft., passive Perception 10",
+    "languages": "understands Common but cannot speak",
+    "special_abilities": [
+      { "name": "Stench of Decay", "description": "Any creature that starts its turn within 10 ft. of the bloated abomination must succeed on a DC 16 Constitution saving throw or be poisoned until the start of its next turn." },
+      { "name": "Eruptive Death", "description": "When the abomination dies, it explodes. Creatures within 15 ft. must make a DC 16 Dexterity saving throw, taking 28 (8d6) acid damage on a failed save, or half as much on a success." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "description": "The abomination makes two slam attacks." },
+      { "name": "Slam", "description": "Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 14 (2d10 + 4) bludgeoning damage plus 7 (2d6) acid damage." },
+      { "name": "Putrid Belch (Recharge 5-6)", "description": "The abomination spews a 30 ft. cone of bile. Creatures in the area must make a DC 16 Dexterity saving throw, taking 21 (6d6) acid damage on a fail, or half on a success." }
+    ]
+  },
+  {
+    "name": "Inquisitor Strike-Captain",
+    "cr": 7,
+    "type": "Humanoid",
+    "armor_class": 18,
+    "hit_points": 102,
+    "speed": "30 ft.",
+    "abilities": { "str": 16, "dex": 14, "con": 16, "int": 12, "wis": 18, "cha": 14 },
+    "saving_throws": { "wis": +7, "cha": +5 },
+    "skills": { "perception": +7, "intimidation": +5, "insight": +7 },
+    "damage_resistances": "radiant",
+    "condition_immunities": "frightened",
+    "senses": "truesight 30 ft., passive Perception 17",
+    "languages": "Common, Infernal",
+    "special_abilities": [
+      { "name": "Aura of Judgment", "description": "Hostile creatures within 15 ft. have disadvantage on saving throws against being frightened." },
+      { "name": "Smite the Unclean (Recharge 5-6)", "description": "When the strike-captain hits a creature with a melee weapon attack, it can deal an extra 13 (3d8) radiant damage." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "description": "The strike-captain makes two greatsword attacks." },
+      { "name": "Greatsword", "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage plus 9 (2d8) radiant damage." },
+      { "name": "Bolt of Condemnation", "description": "Ranged Spell Attack: +7 to hit, range 120 ft., one target. Hit: 18 (4d8) radiant damage, and the target must succeed on a DC 15 Wisdom saving throw or be blinded until the end of its next turn." }
+    ]
+  },
+  {
+    "name": "Vortex Storm-Mage",
+    "cr": 8,
+    "type": "Humanoid",
+    "armor_class": 12,
+    "hit_points": 78,
+    "speed": "30 ft.",
+    "abilities": { "str": 8, "dex": 14, "con": 14, "int": 18, "wis": 12, "cha": 10 },
+    "saving_throws": { "int": +7, "wis": +6 },
+    "skills": { "arcana": +7, "history": +7 },
+    "damage_resistances": "lightning, thunder",
+    "senses": "passive Perception 11",
+    "languages": "Common, Primordial",
+    "special_abilities": [
+      { "name": "Storm Infusion", "description": "The mage's spell attacks ignore resistance to lightning or thunder damage." },
+      { "name": "Vortex Shield (Recharge 5-6)", "description": "As a reaction when hit by an attack, the mage becomes partially ethereal until the start of its next turn, gaining resistance to all damage." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "description": "The mage makes two Lightning Lash attacks." },
+      { "name": "Lightning Lash", "description": "Melee or Ranged Spell Attack: +7 to hit, reach 10 ft. or range 60 ft., one target. Hit: 13 (3d8) lightning damage." },
+      { "name": "Storm Burst (Recharge 5-6)", "description": "The mage creates a whirlwind centered on a point within 120 ft. Each creature within a 20 ft. radius must make a DC 15 Strength saving throw. On a failure, they take 21 (6d6) bludgeoning damage and are knocked prone; on a success, half damage and not prone." }
+    ]
+  },
+  {
+    "name": "Ferrum Shield-Captain",
+    "cr": 8,
+    "type": "Humanoid",
+    "armor_class": 20,
+    "hit_points": 130,
+    "speed": "30 ft.",
+    "abilities": { "str": 20, "dex": 12, "con": 18, "int": 10, "wis": 14, "cha": 12 },
+    "saving_throws": { "str": +8, "con": +7 },
+    "skills": { "athletics": +8, "intimidation": +5 },
+    "damage_resistances": "fire, cold",
+    "condition_immunities": "charmed",
+    "senses": "blindsight 10 ft., passive Perception 12",
+    "languages": "Common",
+    "special_abilities": [
+      { "name": "Shield Wall", "description": "The shield-captain can use a bonus action to grant a +2 bonus to AC to itself and one adjacent ally until the start of its next turn." },
+      { "name": "Ferrum's Vengeance (Recharge 6)", "description": "When the shield-captain is hit by a melee attack, it can make one shield bash attack against the attacker as a reaction." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "description": "The shield-captain makes two warhammer attacks and one shield bash attack." },
+      { "name": "Warhammer", "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 10 (1d10 + 5) bludgeoning damage." },
+      { "name": "Shield Bash", "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 7 (1d4 + 5) bludgeoning damage, and the target must succeed on a DC 16 Strength saving throw or be knocked prone." }
+    ]
+  },
+  {
+    "name": "Tenebris Flesh-Golem",
+    "cr": 7,
+    "type": "Construct",
+    "armor_class": 16,
+    "hit_points": 142,
+    "speed": "30 ft.",
+    "abilities": { "str": 20, "dex": 10, "con": 18, "int": 3, "wis": 10, "cha": 1 },
+    "damage_immunities": "necrotic, poison, psychic",
+    "condition_immunities": "charmed, exhaustion, frightened, paralyzed, poisoned",
+    "senses": "darkvision 60 ft., passive Perception 10",
+    "languages": "understands the languages of its creator but cannot speak",
+    "special_abilities": [
+      { "name": "Necrotic Absorption", "description": "Whenever the flesh-golem is subjected to necrotic damage, it takes no damage and instead regains hit points equal to half the necrotic damage dealt." },
+      { "name": "Berserk", "description": "If the golem starts its turn with 40 hit points or fewer, it must succeed on a DC 10 Wisdom saving throw or go berserk. On each of its turns while berserk, it attacks the nearest creature it can see. It can end this state if it is affected by a calm emotions spell." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "description": "The flesh-golem makes two slam attacks." },
+      { "name": "Slam", "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) bludgeoning damage plus 7 (2d6) necrotic damage." },
+      { "name": "Terrorhowl (Recharge 5-6)", "description": "The golem emits a dreadful howl. Each creature within 30 ft. must succeed on a DC 15 Wisdom saving throw or be frightened for 1 minute. The frightened creature can repeat the save at the end of each of its turns." }
+    ]
+  },
+  {
+    "name": "Penitent Whisper-Priest",
+    "cr": 5,
+    "type": "Humanoid",
+    "armor_class": 13,
+    "hit_points": 71,
+    "speed": "30 ft.",
+    "abilities": { "str": 10, "dex": 14, "con": 14, "int": 12, "wis": 18, "cha": 16 },
+    "saving_throws": { "wis": +7, "cha": +6 },
+    "skills": { "deception": +6, "stealth": +5, "religion": +4 },
+    "damage_resistances": "psychic",
+    "senses": "darkvision 30 ft., passive Perception 14",
+    "languages": "Common, Abyssal",
+    "special_abilities": [
+      { "name": "Whispered Compulsion", "description": "The priest can use a bonus action to force one creature within 30 ft. to make a DC 15 Wisdom saving throw. On a failure, the creature must use its reaction to move up to half its speed toward the priest." },
+      { "name": "Penitent's Aura", "description": "Creatures of the priest's choice within 10 ft. have disadvantage on saving throws against being charmed or frightened." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "description": "The priest makes two ritual dagger attacks." },
+      { "name": "Ritual Dagger", "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 2) piercing damage plus 10 (3d6) psychic damage." },
+      { "name": "Word of Sorrow (Recharge 5-6)", "description": "The priest utters a word of such sorrow that it deals 21 (6d6) psychic damage to all creatures within 20 ft. that can hear it. A successful DC 15 Wisdom saving throw reduces damage by half." }
+    ]
+  },
+  {
+    "name": "Adult Sump Drake",
+    "cr": 9,
+    "type": "Dragon",
+    "armor_class": 17,
+    "hit_points": 168,
+    "speed": "40 ft., swim 40 ft.",
+    "abilities": { "str": 20, "dex": 14, "con": 18, "int": 6, "wis": 12, "cha": 10 },
+    "saving_throws": { "dex": +6, "con": +8, "wis": +5 },
+    "skills": { "perception": +5, "stealth": +6 },
+    "damage_resistances": "acid, poison",
+    "condition_immunities": "poisoned",
+    "senses": "darkvision 90 ft., blindsight 30 ft., passive Perception 15",
+    "languages": "Draconic",
+    "special_abilities": [
+      { "name": "Amphibious", "description": "The drake can breathe air and water." },
+      { "name": "Sump Stench", "description": "Any creature that starts its turn within 10 ft. of the drake must succeed on a DC 16 Constitution saving throw or be poisoned until the start of its next turn." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "description": "The drake makes one bite and two claw attacks." },
+      { "name": "Bite", "description": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 16 (2d10 + 5) piercing damage plus 7 (2d6) acid damage." },
+      { "name": "Claw", "description": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage." },
+      { "name": "Caustic Breath (Recharge 5-6)", "description": "The drake exhales a 30 ft. cone of acidic sludge. Creatures in that area must make a DC 16 Dexterity saving throw, taking 42 (12d6) acid damage on a failure, or half on a success." }
+    ]
+  },
+  {
+    "name": "Ridge Tyrant Drake",
+    "cr": 10,
+    "type": "Dragon",
+    "armor_class": 18,
+    "hit_points": 195,
+    "speed": "40 ft., climb 40 ft.",
+    "abilities": { "str": 22, "dex": 12, "con": 20, "int": 8, "wis": 14, "cha": 14 },
+    "saving_throws": { "str": +10, "con": +9, "wis": +6 },
+    "skills": { "athletics": +10, "intimidation": +6, "perception": +6 },
+    "damage_resistances": "fire, cold",
+    "senses": "darkvision 120 ft., passive Perception 16",
+    "languages": "Draconic",
+    "special_abilities": [
+      { "name": "Mountain Shaker", "description": "The drake can dig through solid rock at half its climbing speed." },
+      { "name": "Ridge Roar (Recharge 5-6)", "description": "As a bonus action, the drake emits a deafening roar. Each creature within 30 ft. must succeed on a DC 17 Constitution saving throw or be deafened and stunned until the end of its next turn." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "description": "The drake makes one bite and two claw attacks." },
+      { "name": "Bite", "description": "Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit: 18 (2d12 + 6) piercing damage." },
+      { "name": "Claw", "description": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 6) slashing damage." },
+      { "name": "Shattering Screech (Recharge 6)", "description": "The drake unleashes a sonic wave in a 60 ft. cone. Creatures in the area must make a DC 17 Constitution saving throw, taking 45 (10d8) thunder damage on a failure, or half on a success. Structures take double damage." }
+    ]
+  },
+  {
+    "name": "Aether-Warped Troll",
+    "cr": 7,
+    "type": "Monstrosity",
+    "armor_class": 15,
+    "hit_points": 126,
+    "speed": "30 ft.",
+    "abilities": { "str": 18, "dex": 12, "con": 18, "int": 6, "wis": 10, "cha": 7 },
+    "skills": { "perception": +3 },
+    "damage_resistances": "force, psychic",
+    "senses": "darkvision 60 ft., passive Perception 13",
+    "languages": "Giant, understands Common but cannot speak",
+    "special_abilities": [
+      { "name": "Regeneration", "description": "The troll regains 10 hit points at the start of its turn. If the troll takes fire damage, this trait doesn't function at the start of the troll's next turn. The troll dies only if it starts its turn with 0 hit points and doesn't regenerate." },
+      { "name": "Aetheric Instability", "description": "When the troll is hit by a spell, it can use its reaction to teleport up to 30 ft. to an unoccupied space it can see." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "description": "The troll makes two claw attacks and one bite attack." },
+      { "name": "Claw", "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage plus 5 (1d10) force damage." },
+      { "name": "Bite", "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) piercing damage." },
+      { "name": "Aether Burst (Recharge 5-6)", "description": "The troll emits a burst of unstable aether. Each creature within 10 ft. must succeed on a DC 15 Dexterity saving throw or take 27 (5d10) force damage and be pushed 10 ft. away." }
+    ]
+  },
+  {
+    "name": "Crystal Guardian",
+    "cr": 9,
+    "type": "Construct",
+    "armor_class": 19,
+    "hit_points": 152,
+    "speed": "20 ft.",
+    "abilities": { "str": 20, "dex": 8, "con": 20, "int": 3, "wis": 14, "cha": 1 },
+    "damage_immunities": "poison, psychic, radiant",
+    "condition_immunities": "charmed, exhaustion, frightened, paralyzed, petrified, poisoned",
+    "senses": "blindsight 60 ft., passive Perception 12",
+    "languages": "understands the language of its creator but cannot speak",
+    "special_abilities": [
+      { "name": "Crystalline Structure", "description": "The guardian has advantage on saving throws against spells that deal bludgeoning, piercing, or slashing damage." },
+      { "name": "Reflective Carapace", "description": "If the guardian is the target of a spell that requires a ranged spell attack roll, roll a d6. On a 1-3, the spell misses and has no effect. On a 4-6, the spell is reflected back at the caster as though it originated from the guardian." },
+      { "name": "Immutable Form", "description": "The guardian is immune to any spell or effect that would alter its form." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "description": "The guardian makes two slam attacks." },
+      { "name": "Slam", "description": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 15 (2d8 + 6) bludgeoning damage plus 9 (2d8) radiant damage." },
+      { "name": "Prism Blast (Recharge 5-6)", "description": "The guardian shoots a beam of crystallized light at one target within 90 ft. The target must make a DC 16 Dexterity saving throw, taking 42 (12d6) radiant damage on a failure, or half on a success. A creature that fails the save is blinded for 1 minute." }
+    ]
+  }
+]
+```

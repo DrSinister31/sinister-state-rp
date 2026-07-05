@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Blank-Laborer",
+    "skill_proficiencies": "Athletics, Survival",
+    "tool_proficiencies": "Carpenter's tools",
+    "languages": "Common",
+    "equipment": "Common clothes, shovel, 5 CP",
+    "feature": "Unseen and Unnoticed",
+    "feature_desc": "Nobles ignore you as furniture. Move through noble districts unnoticed.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Archon-Noble",
+    "skill_proficiencies": "Persuasion, History",
+    "tool_proficiencies": "Calligrapher's supplies",
+    "languages": "Common, Celestial",
+    "equipment": "Fine clothes, signet ring, 25 GP",
+    "feature": "Voice of the Archonate",
+    "feature_desc": "You may call upon the authority of your noble house. Guards and officials of the Archonate grant you audience and minimal deference, provided you do not openly defy them.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Cult-Recruit",
+    "skill_proficiencies": "Deception, Religion",
+    "tool_proficiencies": "Herbalism kit",
+    "languages": "Common, Abyssal",
+    "equipment": "Ritual robes, a bone-handled knife, 2 GP",
+    "feature": "Hidden Congregation",
+    "feature_desc": "You know the secret signs and meeting places of your cult. You can always find a safe house or a fellow cultist in any settlement, though trust is fickle.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Inquisitor-Cadet",
+    "skill_proficiencies": "Investigation, Intimidation",
+    "tool_proficiencies": "Disguise kit",
+    "languages": "Common, Infernal",
+    "equipment": "Leather armor, hooded cloak, iron badge, 10 GP",
+    "feature": "Badge of Authority",
+    "feature_desc": "Your Inquisitor-Cadet badge grants you limited authority. You may detain commoners for questioning and enter most public buildings without hindrance.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Sump-Runner",
+    "skill_proficiencies": "Stealth, Acrobatics",
+    "tool_proficiencies": "Thieves' tools",
+    "languages": "Common, Thieves' Cant",
+    "equipment": "Dark clothes, crowbar, a coil of rope, 10 SP",
+    "feature": "Sump-Knowledge",
+    "feature_desc": "You know the hidden tunnels, sewers, and forgotten waterways beneath the city. You can navigate these areas with ease and avoid common hazards.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "House-Retainer",
+    "skill_proficiencies": "Insight, Perception",
+    "tool_proficiencies": "Cook's utensils",
+    "languages": "Common, one other of your choice",
+    "equipment": "Servant's uniform, a set of keys, a locket with a family crest, 5 SP",
+    "feature": "Ears of the House",
+    "feature_desc": "Your position allows you to overhear private conversations. You have advantage on Insight checks to detect lies or hidden motives in social situations involving your employer's household.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Core-Thief-Apprentice",
+    "skill_proficiencies": "Sleight of Hand, Arcana",
+    "tool_proficiencies": "Tinker's tools",
+    "languages": "Common, Dwarvish",
+    "equipment": "Dark leather apron, lockpicks, a cracked glow-crystal, 2 GP",
+    "feature": "Arcane Fingerprint",
+    "feature_desc": "You can sense the faint magical residue left on objects that have been enchanted or used in rituals. This allows you to identify valuable or dangerous magical items at a touch.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Ash-Walker-Outcast",
+    "skill_proficiencies": "Survival, Nature",
+    "tool_proficiencies": "Alchemist's supplies",
+    "languages": "Common, Primordial",
+    "equipment": "Tattered cloak, gas mask, a pouch of ash, 5 CP",
+    "feature": "Ash-Born Resilience",
+    "feature_desc": "You are inured to the toxic ash and fumes of the wastelands. You have resistance to poison damage and advantage on saving throws against inhaling harmful substances.",
+    "source_tags": [
+      "solis-grave"
+    ]
+  }
+]
