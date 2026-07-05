@@ -86,7 +86,7 @@ class CompendiumGenerator:
 
         try:
             response = self.client.chat.completions.create(
-                model="deepseek-chat",
+                model="deepseek-v4-flash",
                 messages=[
                     {"role": "system", "content": self.system_prompt},
                     {"role": "user", "content": user_prompt}

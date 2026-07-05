@@ -119,7 +119,7 @@ Valid JSON array of {spell_count} spell objects:"""
 
         try:
             response = self.client.chat.completions.create(
-                model="deepseek-chat",
+                model="deepseek-v4-flash",
                 messages=[{"role": "user", "content": prompt}],
                 max_tokens=8192,
                 temperature=0.7

@@ -360,7 +360,7 @@ class DMSessionCog(commands.Cog):
         )
         try:
             response = await self.ai.chat.completions.create(
-                model="deepseek-chat",
+                model="deepseek-v4-flash",
                 messages=[{"role": "user", "content": prompt}],
                 max_tokens=800
             )
@@ -661,7 +661,7 @@ class DMSessionCog(commands.Cog):
                 history.append({"role": "user", "content": f"[{message.author.display_name}]: {message.content}"})
 
                 response = await self.ai.chat.completions.create(
-                    model="deepseek-chat",
+                    model="deepseek-v4-flash",
                     messages=history,
                     max_tokens=800
                 )
