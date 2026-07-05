@@ -7,10 +7,13 @@
     "range": "30 feet",
     "components": "V, S",
     "duration": "1 Hour",
-    "description": "You speak a word of tactical authority backed by your draconic heritage. The target must pass a Wisdom saving throw (DC 13) or be temporarily pacified, regarding you and your allies as non-hostile for the duration. The target will not attack or take harmful actions against you, though it may defend itself if attacked. This is a Strider-Garrison maneuver — it works best when delivered with the confidence of command.",
+    "description": "You speak a word of tactical authority backed by your draconic heritage. The target must pass a Wisdom saving throw (DC 13) or be temporarily pacified, regarding you and your allies as non-hostile for the duration. The target will not attack or take harmful actions against you, though it may defend itself if attacked. This is a Strider-Garrison maneuver \u2014 it works best when delivered with the confidence of command.",
     "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the DC increases by 1 for each slot level above 1st. At 3rd level, you may target one additional creature within range.",
     "classes": "Strider-Garrison (Ranger), Archon Caster",
-    "source_tags": ["solis-grave", "strider-garrison"]
+    "source_tags": [
+      "solis-grave",
+      "strider-garrison"
+    ]
   },
   {
     "name": "Calibrated Burst",
@@ -23,7 +26,10 @@
     "description": "You snap your fingers, flash-igniting the space around a target you can see. Make a ranged spell attack using Dexterity + Proficiency bonus to hit. On a hit, the target takes 1d10 Fire damage. The ignition is brief but intense, producing a sharp flash of light and heat. This spell was developed by Strider-Garrison scouts who needed a silent, somatic-only offensive option that wouldn't give away their position with verbal components.",
     "higher_levels": "At 5th level, the damage increases to 2d10. At 11th level, 3d10. At 17th level, 4d10.",
     "classes": "Strider-Garrison (Ranger, Rogue - Core-Thief)",
-    "source_tags": ["solis-grave", "strider-garrison"]
+    "source_tags": [
+      "solis-grave",
+      "strider-garrison"
+    ]
   },
   {
     "name": "Draconic Retribution",
@@ -33,10 +39,13 @@
     "range": "Self",
     "components": "V",
     "duration": "Concentration, up to 1 minute",
-    "description": "You channel your Blood Purity into your weapon. For the duration, your melee weapon attacks deal an additional 1d4 damage of your draconic element (fire, lightning, cold, acid, or necrotic — chosen at time of casting based on your bloodline). This is the signature combat spell of the Church of the Five Skulls' Inquisitors. Every ordained Inquisitor learns this before any other spell.",
+    "description": "You channel your Blood Purity into your weapon. For the duration, your melee weapon attacks deal an additional 1d4 damage of your draconic element (fire, lightning, cold, acid, or necrotic \u2014 chosen at time of casting based on your bloodline). This is the signature combat spell of the Church of the Five Skulls' Inquisitors. Every ordained Inquisitor learns this before any other spell.",
     "higher_levels": "When you cast this spell using a spell slot of 2nd level, the bonus damage increases to 1d6. At 4th level, 1d8. At 6th level, 1d10.",
     "classes": "Ordained (Paladin, Cleric - War Domain)",
-    "source_tags": ["solis-grave", "church"]
+    "source_tags": [
+      "solis-grave",
+      "church"
+    ]
   },
   {
     "name": "Aetheric Backlash",
@@ -49,7 +58,10 @@
     "description": "Your unstable blood lashes out at an attacker. Make a ranged spell attack. On a hit, the target takes 2d10 damage of a type matching your draconic element. Additionally, if the triggering attack was a spell, the caster must make a Spell Safety check (Constitution saving throw) with disadvantage as your Aetheric interference destabilizes their casting. This spell is innate to Ash-Walkers, whose unstable blood makes them living weapons against other casters.",
     "higher_levels": "When cast at 2nd level or higher, damage increases by 1d10 per slot level above 1st.",
     "classes": "Ash-Walker (racial), Penitent (Warlock)",
-    "source_tags": ["solis-grave", "ash-walker"]
+    "source_tags": [
+      "solis-grave",
+      "ash-walker"
+    ]
   },
   {
     "name": "Purity Sight",
@@ -59,10 +71,14 @@
     "range": "Self",
     "components": "V, S, M (a fragment of Blood Crystal worth 10 GC)",
     "duration": "Concentration, up to 10 minutes",
-    "description": "Your eyes take on the crimson glow of a Blood Crystal. For the duration, you can see the exact Blood Purity percentage of any creature you look at, displayed as a glowing number visible only to you above their head. You also learn their dragon classification (Blank, Common, Lesser Blood, Archon, Scion, Sovereign). Creatures with 95%+ purity appear as 0% unless they have voluntarily revealed their true nature to you. This spell is restricted — possession of the material component without Church authorization is a crime in Obsidian territories.",
+    "description": "Your eyes take on the crimson glow of a Blood Crystal. For the duration, you can see the exact Blood Purity percentage of any creature you look at, displayed as a glowing number visible only to you above their head. You also learn their dragon classification (Blank, Common, Lesser Blood, Archon, Scion, Sovereign). Creatures with 95%+ purity appear as 0% unless they have voluntarily revealed their true nature to you. This spell is restricted \u2014 possession of the material component without Church authorization is a crime in Obsidian territories.",
     "higher_levels": "At 4th level, the duration increases to 1 hour and you can detect magically altered or forged purity readings. At 6th level, you can also sense a creature's House affiliation and whether they have cast a spell in the last 24 hours.",
     "classes": "Ordained (Cleric, Paladin - Inquisitor), Archon Caster (Wizard - Divination)",
-    "source_tags": ["solis-grave", "church", "obsidian"]
+    "source_tags": [
+      "solis-grave",
+      "church",
+      "obsidian"
+    ]
   },
   {
     "name": "Soul-Meld Beacon",
@@ -72,9 +88,313 @@
     "range": "Touch",
     "components": "V, S, M (two living creatures, one Pristine Aether-Core worth 1,000 GC)",
     "duration": "Instantaneous",
-    "description": "You attempt the forbidden soul-meld ritual — fusing two living souls into a single vessel. Both subjects must be willing or incapacitated. Each subject makes a DC 20 Charisma saving throw. If both succeed, their souls merge into a new entity with Blood Purity equal to the average of both subjects. If only one succeeds, that soul dominates; the other is consumed. If both fail, both subjects die and the caster takes 10d10 necrotic damage from the backlash. The resulting entity is a Scion (90-94% purity). This ritual is the highest heresy in the Church of the Five Skulls. Performing it is punishable by eternal Inquisitorial Smite — no trial, no appeal, no mercy.",
+    "description": "You attempt the forbidden soul-meld ritual \u2014 fusing two living souls into a single vessel. Both subjects must be willing or incapacitated. Each subject makes a DC 20 Charisma saving throw. If both succeed, their souls merge into a new entity with Blood Purity equal to the average of both subjects. If only one succeeds, that soul dominates; the other is consumed. If both fail, both subjects die and the caster takes 10d10 necrotic damage from the backlash. The resulting entity is a Scion (90-94% purity). This ritual is the highest heresy in the Church of the Five Skulls. Performing it is punishable by eternal Inquisitorial Smite \u2014 no trial, no appeal, no mercy.",
     "higher_levels": "At 7th level, the resulting Scion may achieve 95%+ purity (Sovereign-class). At 9th level, the caster may attempt to merge their own soul with a subject. The caster makes the Charisma save with disadvantage.",
     "classes": "Penitent (Warlock - Cult of the Sixth), Archon Caster (Wizard - Necromancy, forbidden)",
-    "source_tags": ["solis-grave", "forbidden", "cult"]
+    "source_tags": [
+      "solis-grave",
+      "forbidden",
+      "cult"
+    ]
+  },
+  {
+    "name": "Void-Ward Grasp",
+    "level": 0,
+    "school": "Abjuration",
+    "casting_time": "1 Action",
+    "range": "Touch",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "Your hand wreathes in null-light. Make a melee spell attack. On hit, the target takes 1d8 necrotic damage and cannot regain hit points until the start of your next turn. The spell's damage increases by 1d8 at 5th, 11th, and 17th levels.",
+    "higher_levels": "",
+    "classes": "Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Blood-Drop Spark",
+    "level": 0,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "30 feet",
+    "components": "V, S, M (a drop of blood)",
+    "duration": "Instantaneous",
+    "description": "You fling a bead of vitriolic blood. Make a ranged spell attack. On hit, the target takes 1d6 fire damage. If the target is a creature, it must succeed on a Constitution saving throw or take an additional 1d6 acid damage at the start of your next turn. The initial damage increases by 1d6 at 5th, 11th, and 17th levels.",
+    "higher_levels": "",
+    "classes": "Sorcerer, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Inquisition's Gaze",
+    "level": 0,
+    "school": "Divination",
+    "casting_time": "1 Action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "Concentration, up to 1 minute",
+    "description": "Your eyes glow with pale gold light. For the duration, you gain darkvision out to 60 feet, and you can see any magical auras within that range as faint outlines. You have advantage on Insight checks against creatures you can see.",
+    "higher_levels": "",
+    "classes": "Cleric, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Thief's Quiet",
+    "level": 0,
+    "school": "Illusion",
+    "casting_time": "1 Action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "1 minute",
+    "description": "You draw a shroud of silent void around yourself. For the duration, you make no sound from your movements\u2014footsteps, rustling armor, or opening doors. You have advantage on Dexterity (Stealth) checks. The effect ends if you attack or cast a spell.",
+    "higher_levels": "",
+    "classes": "Rogue, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Scarlet Lash",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 Bonus Action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "1 minute",
+    "description": "Your blood coalesces into a whip of crimson energy. For the duration, you can make a melee spell attack as an action, dealing 2d6 necrotic damage on a hit. You regain hit points equal to half the damage dealt. The whip disappears if you let go of it.",
+    "higher_levels": "At Higher Levels. The damage increases by 1d6 for each slot level above 1st.",
+    "classes": "Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Null-Flame Bolt",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "120 feet",
+    "components": "V, S, M (a shard of obsidian)",
+    "duration": "Instantaneous",
+    "description": "You hurl a bolt of void-touched fire. Make a ranged spell attack. On hit, the target takes 2d6 fire damage and 1d6 necrotic damage. If the target is a construct or undead, the necrotic damage becomes 2d6 instead.",
+    "higher_levels": "At Higher Levels. The fire damage increases by 1d6 for each slot level above 1st.",
+    "classes": "Wizard, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Aether Stitch",
+    "level": 1,
+    "school": "Conjuration",
+    "casting_time": "1 Action",
+    "range": "Touch",
+    "components": "V, S, M (a threaded needle worth 1 gp)",
+    "duration": "Instantaneous",
+    "description": "You weave a strand of aether through a wound or tear. One creature you touch regains 2d8 + your spellcasting ability modifier hit points. Alternatively, you can repair a nonmagical object up to 1 foot in any dimension, restoring all tears or breaks.",
+    "higher_levels": "At Higher Levels. The healing increases by 1d8 for each slot level above 1st.",
+    "classes": "Cleric, Artificer",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Dragon's Whisper",
+    "level": 1,
+    "school": "Enchantment",
+    "casting_time": "1 Action",
+    "range": "60 feet",
+    "components": "V, S",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You speak a single word of Draconic command. One creature that can hear you must succeed on a Wisdom saving throw or be charmed by you. While charmed, it regards you as a trusted ally. The effect ends if you or your allies attack it.",
+    "higher_levels": "At Higher Levels. You can target one additional creature for each slot level above 1st.",
+    "classes": "Bard, Sorcerer",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Inquisition's Brand",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 Action",
+    "range": "Touch",
+    "components": "V, S, M (a silver holy symbol)",
+    "duration": "8 hours",
+    "description": "You sear a glowing symbol onto a willing creature's skin. For the duration, the brand sheds dim light in a 5-foot radius. Once before the spell ends, when the branded creature is targeted by a spell from an enemy, it can use its reaction to gain resistance to that spell's damage.",
+    "higher_levels": "At Higher Levels. The brand grants resistance to one additional spell per slot level above 1st (maximum 3 uses).",
+    "classes": "Cleric, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Blood Pact",
+    "level": 1,
+    "school": "Necromancy",
+    "casting_time": "1 Minute",
+    "range": "Touch",
+    "components": "V, S, M (a silver dagger worth 50 gp)",
+    "duration": "Instantaneous",
+    "description": "You draw blood from yourself and a willing creature, linking your life forces. For the next 24 hours, when one of you takes damage, the other can use a reaction to reduce that damage by half, suffering the reduced amount themselves. The pact ends if you are both reduced to 0 hit points.",
+    "higher_levels": "At Higher Levels. The duration extends by 24 hours for each slot level above 1st.",
+    "classes": "Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Void Step",
+    "level": 2,
+    "school": "Conjuration",
+    "casting_time": "1 Bonus Action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You step into a rift of void and reappear in an unoccupied space you can see within 30 feet. After teleporting, you become invisible until the start of your next turn. You cannot use this spell again until you finish a short rest.",
+    "higher_levels": "At Higher Levels. The range increases by 10 feet for each slot level above 2nd.",
+    "classes": "Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Aether Cage",
+    "level": 2,
+    "school": "Abjuration",
+    "casting_time": "1 Action",
+    "range": "60 feet",
+    "components": "V, S, M (a shard of crystal)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You create a shimmering cage of aether around a creature you can see within range. The target must succeed on a Strength saving throw or be restrained for the duration. While restrained, it takes 1d6 force damage at the start of each of its turns. At the end of each of its turns, it can repeat the save.",
+    "higher_levels": "At Higher Levels. You can target one additional creature for each slot level above 2nd.",
+    "classes": "Artificer, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Core-Thief's Scouring",
+    "level": 2,
+    "school": "Transmutation",
+    "casting_time": "1 Action",
+    "range": "Touch",
+    "components": "V, S, M (a piece of rusted metal)",
+    "duration": "Instantaneous",
+    "description": "Your hand glows with fey-stealing energy. Make a melee spell attack against a creature. On hit, the target takes 4d6 psychic damage, and you learn one of its damage resistances or immunities (your choice). The target cannot regain hit points from any source until the end of its next turn.",
+    "higher_levels": "At Higher Levels. The damage increases by 1d6 for each slot level above 2nd.",
+    "classes": "Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Dragonfire Breath",
+    "level": 2,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "Self (15-foot cone)",
+    "components": "V, S, M (a scale from a dragon)",
+    "duration": "Instantaneous",
+    "description": "You exhale a blast of draconic flame. Each creature in a 15-foot cone must make a Dexterity saving throw, taking 4d6 fire damage on a failure, or half as much on a success. The fire ignites unattended flammable objects.",
+    "higher_levels": "At Higher Levels. The damage increases by 1d6 for each slot level above 2nd.",
+    "classes": "Sorcerer, Druid",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Blank's Resilience",
+    "level": 2,
+    "school": "Abjuration",
+    "casting_time": "1 Reaction, which you take when you or a creature within 30 feet fails a saving throw",
+    "range": "30 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You channel the null-mind of the Blank. The triggering creature rerolls the failed saving throw and gains a bonus to the roll equal to your spellcasting ability modifier (minimum +1). It must use the new roll.",
+    "higher_levels": "At Higher Levels. You can target one additional creature within range for each slot level above 2nd.",
+    "classes": "Cleric, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Sanguine Storm",
+    "level": 3,
+    "school": "Necromancy",
+    "casting_time": "1 Action",
+    "range": "Self (30-foot radius)",
+    "components": "V, S, M (a vial of blood)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "A crimson mist erupts from you, filling a 30-foot radius. All creatures in the area must make a Constitution saving throw at the start of your turn, taking 3d6 necrotic damage on a failure, or half on success. You regain hit points equal to half the total damage dealt each turn.",
+    "higher_levels": "At Higher Levels. The damage increases by 1d6 for each slot level above 3rd.",
+    "classes": "Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Void Rift",
+    "level": 3,
+    "school": "Conjuration",
+    "casting_time": "1 Action",
+    "range": "120 feet",
+    "components": "V, S, M (a cracked mirror)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You tear open a rift to the Void at a point you can see. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw, taking 4d6 force damage and 2d6 necrotic damage on a failure, or half on a success. The rift pulls any creature that starts its turn within 10 feet of its center 10 feet toward it (no save).",
+    "higher_levels": "At Higher Levels. The force damage increases by 1d6 for each slot level above 3rd.",
+    "classes": "Wizard, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Inquisition's Pyre",
+    "level": 3,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "60 feet",
+    "components": "V, S, M (a pinch of ash)",
+    "duration": "Instantaneous",
+    "description": "A pillar of golden-white flame erupts from a creature you designate. The target must make a Constitution saving throw, taking 6d8 fire damage on a failure, or half on a success. If the target is a fiend, undead, or shapechanger, it takes an additional 4d8 radiant damage.",
+    "higher_levels": "At Higher Levels. The fire damage increases by 1d8 for each slot level above 3rd.",
+    "classes": "Cleric, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Aether Pulse",
+    "level": 4,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "Self (60-foot line)",
+    "components": "V, S, M (a crystal rod worth 100 gp)",
+    "duration": "Instantaneous",
+    "description": "You release a pulse of raw aether in a 60-foot-long, 5-foot-wide line. Each creature in that line must make a Strength saving throw, taking 8d6 force damage on a failure, or half on a success. Creatures of Large size or smaller are pushed 15 feet away from you on a failed save.",
+    "higher_levels": "At Higher Levels. The damage increases by 2d6 for each slot level above 4th.",
+    "classes": "Artificer, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Blood Dominion",
+    "level": 4,
+    "school": "Necromancy",
+    "casting_time": "1 Action",
+    "range": "60 feet",
+    "components": "V, S, M (a drop of your own blood)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You seize control of a creature's blood. One target must make a Constitution saving throw. On a failure, the target is incapacitated and takes 4d6 necrotic damage at the start of each of your turns. On each of its turns, it can repeat the save to break free. You can use a bonus action to force the target to move up to half its speed in a direction of your choice.",
+    "higher_levels": "At Higher Levels. The necrotic damage increases by 1d6 for each slot level above 4th.",
+    "classes": "Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ]
   }
 ]
