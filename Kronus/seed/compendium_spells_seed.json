@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Majestic Command",
+    "level": 1,
+    "school": "Enchantment",
+    "casting_time": "1 Action",
+    "range": "30 feet",
+    "components": "V, S",
+    "duration": "1 Hour",
+    "description": "You speak a word of tactical authority backed by your draconic heritage. The target must pass a Wisdom saving throw (DC 13) or be temporarily pacified, regarding you and your allies as non-hostile for the duration. The target will not attack or take harmful actions against you, though it may defend itself if attacked. This is a Strider-Garrison maneuver — it works best when delivered with the confidence of command.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the DC increases by 1 for each slot level above 1st. At 3rd level, you may target one additional creature within range.",
+    "classes": "Strider-Garrison (Ranger), Archon Caster",
+    "source_tags": ["solis-grave", "strider-garrison"]
+  },
+  {
+    "name": "Calibrated Burst",
+    "level": 0,
+    "school": "Evocation",
+    "casting_time": "1 Action",
+    "range": "120 feet",
+    "components": "S",
+    "duration": "Instantaneous",
+    "description": "You snap your fingers, flash-igniting the space around a target you can see. Make a ranged spell attack using Dexterity + Proficiency bonus to hit. On a hit, the target takes 1d10 Fire damage. The ignition is brief but intense, producing a sharp flash of light and heat. This spell was developed by Strider-Garrison scouts who needed a silent, somatic-only offensive option that wouldn't give away their position with verbal components.",
+    "higher_levels": "At 5th level, the damage increases to 2d10. At 11th level, 3d10. At 17th level, 4d10.",
+    "classes": "Strider-Garrison (Ranger, Rogue - Core-Thief)",
+    "source_tags": ["solis-grave", "strider-garrison"]
+  },
+  {
+    "name": "Draconic Retribution",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 Bonus Action",
+    "range": "Self",
+    "components": "V",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You channel your Blood Purity into your weapon. For the duration, your melee weapon attacks deal an additional 1d4 damage of your draconic element (fire, lightning, cold, acid, or necrotic — chosen at time of casting based on your bloodline). This is the signature combat spell of the Church of the Five Skulls' Inquisitors. Every ordained Inquisitor learns this before any other spell.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level, the bonus damage increases to 1d6. At 4th level, 1d8. At 6th level, 1d10.",
+    "classes": "Ordained (Paladin, Cleric - War Domain)",
+    "source_tags": ["solis-grave", "church"]
+  },
+  {
+    "name": "Aetheric Backlash",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 Reaction (taken when you are hit by a spell or melee attack)",
+    "range": "60 feet",
+    "components": "S",
+    "duration": "Instantaneous",
+    "description": "Your unstable blood lashes out at an attacker. Make a ranged spell attack. On a hit, the target takes 2d10 damage of a type matching your draconic element. Additionally, if the triggering attack was a spell, the caster must make a Spell Safety check (Constitution saving throw) with disadvantage as your Aetheric interference destabilizes their casting. This spell is innate to Ash-Walkers, whose unstable blood makes them living weapons against other casters.",
+    "higher_levels": "When cast at 2nd level or higher, damage increases by 1d10 per slot level above 1st.",
+    "classes": "Ash-Walker (racial), Penitent (Warlock)",
+    "source_tags": ["solis-grave", "ash-walker"]
+  },
+  {
+    "name": "Purity Sight",
+    "level": 2,
+    "school": "Divination",
+    "casting_time": "1 Action",
+    "range": "Self",
+    "components": "V, S, M (a fragment of Blood Crystal worth 10 GC)",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "Your eyes take on the crimson glow of a Blood Crystal. For the duration, you can see the exact Blood Purity percentage of any creature you look at, displayed as a glowing number visible only to you above their head. You also learn their dragon classification (Blank, Common, Lesser Blood, Archon, Scion, Sovereign). Creatures with 95%+ purity appear as 0% unless they have voluntarily revealed their true nature to you. This spell is restricted — possession of the material component without Church authorization is a crime in Obsidian territories.",
+    "higher_levels": "At 4th level, the duration increases to 1 hour and you can detect magically altered or forged purity readings. At 6th level, you can also sense a creature's House affiliation and whether they have cast a spell in the last 24 hours.",
+    "classes": "Ordained (Cleric, Paladin - Inquisitor), Archon Caster (Wizard - Divination)",
+    "source_tags": ["solis-grave", "church", "obsidian"]
+  },
+  {
+    "name": "Soul-Meld Beacon",
+    "level": 5,
+    "school": "Necromancy",
+    "casting_time": "1 Hour",
+    "range": "Touch",
+    "components": "V, S, M (two living creatures, one Pristine Aether-Core worth 1,000 GC)",
+    "duration": "Instantaneous",
+    "description": "You attempt the forbidden soul-meld ritual — fusing two living souls into a single vessel. Both subjects must be willing or incapacitated. Each subject makes a DC 20 Charisma saving throw. If both succeed, their souls merge into a new entity with Blood Purity equal to the average of both subjects. If only one succeeds, that soul dominates; the other is consumed. If both fail, both subjects die and the caster takes 10d10 necrotic damage from the backlash. The resulting entity is a Scion (90-94% purity). This ritual is the highest heresy in the Church of the Five Skulls. Performing it is punishable by eternal Inquisitorial Smite — no trial, no appeal, no mercy.",
+    "higher_levels": "At 7th level, the resulting Scion may achieve 95%+ purity (Sovereign-class). At 9th level, the caster may attempt to merge their own soul with a subject. The caster makes the Charisma save with disadvantage.",
+    "classes": "Penitent (Warlock - Cult of the Sixth), Archon Caster (Wizard - Necromancy, forbidden)",
+    "source_tags": ["solis-grave", "forbidden", "cult"]
+  }
+]

@@ -1,0 +1,155 @@
+[
+  {
+    "name": "Blaze Smite",
+    "category": "house_trait",
+    "house": "House Ignis",
+    "prerequisite": "Affiliated with House Ignis, 15%+ Blood Purity",
+    "description": "# Blaze Smite — House Ignis Trait\n\n*\"Ash and Submission.\"*\n\nOnce per long rest, when you hit a creature with a melee weapon attack, you can channel your draconic blood into the strike, dealing an additional **1d4 fire damage**. This fire ignites the target — at the start of its next turn, it takes an additional 1 fire damage as the flames smolder.\n\nAt 11th level, the bonus damage increases to **1d6 fire** and the lingering burn deals 1d4 fire damage on the target's next turn.\n\n**House Ignis** is the ruling dynasty of Solis-Grave. Their words are \"Ash and Submission.\" They practice scorched-earth conquest and their signature Blaze Smite is taught to every Ignis soldier from childhood. The flames are said to be a direct echo of the Sovereign Flame Dragon's breath.",
+    "source_tags": ["solis-grave", "house-ignis"]
+  },
+  {
+    "name": "Rider's Instinct",
+    "category": "house_trait",
+    "house": "House Vortex",
+    "prerequisite": "Affiliated with House Vortex",
+    "description": "# Rider's Instinct — House Vortex Trait\n\n*\"We Rule the Wind.\"*\n\nYou gain **proficiency in Animal Handling**. If you already have proficiency, you gain expertise (double proficiency bonus).\n\nWhile mounted, your mount's speed increases by **+10 ft.** and you have advantage on saving throws to avoid being dismounted.\n\n**House Vortex** controls the skies of Solis-Grave through their airborne fleets and sky-mount cavalry. Their members are raised in the saddle — Hippogriff, Wyvern, or destrier — and their bond with their mount is nearly supernatural. A dismounted Vortex rider is a dead Vortex rider, so they train relentlessly to never fall.",
+    "source_tags": ["solis-grave", "house-vortex"]
+  },
+  {
+    "name": "Law-Bender",
+    "category": "house_trait",
+    "house": "House Obsidian",
+    "prerequisite": "Affiliated with House Obsidian",
+    "description": "# Law-Bender — House Obsidian Trait\n\n*\"Law Bends to the Pure.\"*\n\nYou gain **+2 to Deception checks** and **+2 to Insight checks**. These bonuses stack with proficiency.\n\nAdditionally, you can tell when a creature within 30 feet is speaking a deliberate falsehood by making a DC 15 Wisdom (Insight) check as a bonus action. On a success, you know they are lying — but not the truth.\n\n**House Obsidian** administers imperial law and runs the blood purity courts. Their Inquisitors judge, execute, and record every legal proceeding in Solis-Grave. The Law-Bender trait represents years of training in reading testimony, spotting forged purity claims, and — when necessary — manipulating the law to serve House interests. They know every loophole because they wrote them.",
+    "source_tags": ["solis-grave", "house-obsidian"]
+  },
+  {
+    "name": "Flesh Anchor",
+    "category": "house_trait",
+    "house": "House Tenebris",
+    "prerequisite": "Affiliated with House Tenebris",
+    "description": "# Flesh Anchor — House Tenebris Trait\n\n*\"Truth Bleeds in the Dark.\"*\n\nYou have **advantage on saving throws against poison and acid**. Additionally, when you take poison or acid damage, you can use your reaction to reduce that damage by an amount equal to your Constitution modifier + your proficiency bonus.\n\nYour body has been conditioned — through alchemical exposure, grafting rituals, or simply surviving Tenebris laboratories — to treat toxins as nutrients and acid as a mild irritant.\n\n**House Tenebris** operates the flesh-fusion labs of the northern wastes. They graft, stitch, and experiment on living tissue in pursuit of biological perfection. Most of their subjects don't survive the process. Those who do emerge with bodies that reject poison as easily as a healthy immune system rejects a cold.",
+    "source_tags": ["solis-grave", "house-tenebris"]
+  },
+  {
+    "name": "Ferrum Defiance",
+    "category": "house_trait",
+    "house": "House Ferrum",
+    "prerequisite": "Affiliated with House Ferrum",
+    "description": "# Ferrum Defiance — House Ferrum Trait\n\n*\"Iron Endures the Storm.\"*\n\nOnce per long rest, when you are reduced to 0 hit points but not killed outright, you can choose to drop to **1 hit point instead**. You remain conscious. For the next minute, you have advantage on Constitution saving throws.\n\nThis is not regeneration — it is sheer, iron-willed refusal to fall. Ferrum soldiers are trained to plant their feet and die standing. The trait represents decades of shield-wall conditioning: your body keeps fighting long after any reasonable person's would have quit.\n\n**House Ferrum** mans the frontline shield-walls of Solis-Grave. Their infantry is legendary for holding positions against overwhelming odds, sometimes found dead on their feet with shields still raised. Every Ferrum conscript hears the same words: \"You don't fall until the wall falls. And the wall doesn't fall.\"",
+    "source_tags": ["solis-grave", "house-ferrum"]
+  },
+  {
+    "name": "Foundry Hardened",
+    "category": "house_trait",
+    "house": "House Pyre",
+    "prerequisite": "Affiliated with House Pyre",
+    "description": "# Foundry Hardened — House Pyre Trait\n\n*\"Forged in Blood.\"*\n\nYou gain **permanent resistance to fire damage**. Additionally, when a creature within 5 feet hits you with a melee attack, you can use your reaction to deal **1d4 fire damage** to the attacker as your forge-heated blood splashes onto them.\n\nDecades of working dragon-fire forges have permanently altered your physiology. Your skin radiates faint warmth. You can comfortably hold red-hot metal with your bare hands. Frost and cold environments cause you discomfort but no mechanical penalty.\n\n**House Pyre** runs the industrial blast furnaces of Solis-Grave. Every weapon, every suit of armor, every Blood Crystal testing pedestal comes from a Pyre forge. Their smiths are as much forged as forging — burns cover their bodies as badges of honor, not injury.",
+    "source_tags": ["solis-grave", "house-pyre"]
+  },
+  {
+    "name": "Aether-Tempered",
+    "category": "general_feat",
+    "prerequisite": "15%+ Blood Purity, Constitution 13+",
+    "description": "# Aether-Tempered\n\nYour body has adapted to channeling magic beyond your bloodline's natural limits. Through painful experience — or careful conditioning — you've raised your tolerance for raw Aether.\n\n- Your **Spell Safety DC is reduced by 3**.\n- When you take Aether Burn damage, you can use your reaction to roll a Constitution saving throw (DC = 10 + spell level). On a success, halve the Aether Burn damage.\n\nThis feat is common among Lesser Blood casters who refuse to accept their limits. It is also seen in Archon casters who push into spell levels normally reserved for higher purity. The Church of the Five Skulls considers excessive use of this feat to be \"straining divine order\" and may investigate individuals who survive too many failed Spell Safety saves.\n\n**Lore:** The first Aether-Tempered were Stone-Blood smiths who learned to work near Pyre's dragon-fire forges. They discovered that steady, controlled exposure to Aether could toughen the body against it — like calluses on a laborer's hands.",
+    "source_tags": ["solis-grave", "general-feat"]
+  },
+  {
+    "name": "Crystal-Reader",
+    "category": "general_feat",
+    "prerequisite": "Proficiency in Arcana or Medicine",
+    "description": "# Crystal-Reader\n\nYou have mastered the art of reading Blood Crystals — faster, more accurately, and in conditions that would foil lesser testers.\n\n- You can use a Blood Crystal to test a creature's purity as a **bonus action** instead of an action.\n- When you administer a Blood Crystal test, you can add your proficiency bonus to the accuracy. A standard crystal (95% accurate) becomes 95% + your proficiency modifier (e.g., +2 at level 1 = 97% accurate).\n- You can identify whether a Blood Crystal is **flawed, active, or pristine** by touch alone — no check required.\n- You have advantage on Intelligence (Arcana) checks to detect forged purity readings.\n\n**Lore:** Crystal-Readers are in high demand. Every Ascension Day ceremony needs at least one. House Obsidian employs full-time Readers in every courtroom. The Cult of the Sixth pays enormous sums to Readers willing to falsify results. A Reader who can be bought is worth more than a Reader who's skilled — but the best Readers are both.",
+    "source_tags": ["solis-grave", "general-feat"]
+  },
+  {
+    "name": "Blank's Luck",
+    "category": "general_feat",
+    "prerequisite": "0% Blood Purity (Blank caste only)",
+    "description": "# Blank's Luck\n\nThe universe doesn't want you dead — it barely notices you exist. Blanks are dead zones for magic, voids that the Aether flows around. This makes them extremely hard to target with spells... and sometimes, hard to target with anything.\n\n- Once per short rest, when a creature hits you with an attack roll, you can force that creature to **reroll the attack** and take the new result.\n- Once per short rest, when you fail a saving throw against a spell, you can reroll the save. You must use the new result.\n- You have **advantage on death saving throws**. Death, like magic, struggles to find purchase on a Blank.\n\n**Lore:** Blanks survive because nothing wastes effort on them. Spells slide off. Arrows veer. Killing a Blank is like trying to stab smoke — possible, but never worth the effort. Some Blanks claim they can feel the universe's indifference like a cold blanket. It's not comforting. But it keeps them alive.",
+    "source_tags": ["solis-grave", "general-feat", "blank"]
+  },
+  {
+    "name": "Core-Thief",
+    "category": "general_feat",
+    "prerequisite": "Strider-Garrison class or proficiency in Survival",
+    "description": "# Core-Thief\n\nYou've learned to extract Aether-Cores from slain monsters with surgical precision — and to use them in combat on the fly.\n\n- Harvesting an Aether-Core from a dead monster is a **bonus action** (normally an action).\n- When you harvest a core, you can identify its element and tier (Fractured/Intact/Pristine/Sovereign-Fragment) without a check.\n- As a bonus action on your turn, you can apply a harvested Aether-Core to your weapon as a coating. The next attack you hit with that weapon before the end of your next turn deals an additional **1d4 elemental damage** matching the core's element. The core is consumed.\n- You have **advantage on Dexterity (Sleight of Hand)** checks to hide harvested cores on your person.\n\n**Lore:** Core-Thieves are a specialized branch of the Strider-Garrison — scouts trained to hunt monsters not just for bounties, but for their Aether-Cores. A good Core-Thief can field-dress a Wyvern in under a minute and walk away with three intact cores worth more than most soldiers make in a year. They're viewed as scavengers by noble houses and as valuable assets by black-market alchemists.",
+    "source_tags": ["solis-grave", "general-feat", "strider-garrison"]
+  },
+  {
+    "name": "Inquisitor's Gaze",
+    "category": "general_feat",
+    "prerequisite": "Proficiency in Insight, 15%+ Blood Purity or Ordained class",
+    "description": "# Inquisitor's Gaze\n\nYou have been trained — or have trained yourself — in the observational techniques of the Obsidian Inquisition. Nothing escapes your notice.\n\n- As a bonus action, you can study a creature within 30 feet. Make a Wisdom (Insight) check (DC = 10 + target's Charisma modifier). On a success, you learn one of the following (your choice): **approximate Blood Purity tier**, whether the creature has **cast a spell in the last hour**, or whether the creature is **currently under a magical effect**.\n- You have **advantage on Wisdom (Perception) checks** to detect hidden creatures.\n- You can read a creature's House affiliation by their clothing, signet, and bearing (no check required, unless they are deliberately concealing it — then DC 15 Insight).\n\n**Lore:** The Obsidian Inquisition trains its members from childhood in the art of reading people. Posture, pupil dilation, the faint shimmer of Aether residue on fingertips — every detail is evidence. Most Inquisitors develop an unsettling habit of staring too long at strangers, cataloging sins before any word is spoken.",
+    "source_tags": ["solis-grave", "general-feat", "obsidian"]
+  },
+  {
+    "name": "Sovereign's Whisper",
+    "category": "general_feat",
+    "prerequisite": "95%+ Blood Purity, currently Dormant (unawakened Sovereign)",
+    "description": "# Sovereign's Whisper\n\nYou don't know what you are. But sometimes, in moments of extreme stress, something inside you stirs — and for a single heartbeat, the world listens.\n\n- Once per long rest, when you make an ability check, attack roll, or saving throw, you can reduce your **Dormancy Penalty from -4 to -2** for that single roll. This represents a brief, uncontrolled flare of your latent Sovereign essence.\n- Additionally, you can communicate simple concepts (danger, safety, follow, flee) to any creature with dragon blood within 60 feet. They understand you regardless of language. This does not reveal your purity.\n- You have **advantage on Wisdom (Animal Handling)** checks against creatures with known draconic ancestry.\n\n**Lore:** Sovereigns don't know they're Sovereigns. Before awakening, they only feel wrong — clumsy, weak, as if their body is fighting itself. But animals with dragon blood know. Horses bow. Wyverns won't attack. A stable-master once watched a Dormant Sovereign walk past his prized war-drake and saw the beast lower its head in submission — the first time it had done so for anyone but its rider.\n\n**DM Note:** This feat exists to give Dormant Sovereign players *something* to work with before their awakening. The penalty reduction is minor but narratively significant. The animal communication feature is meant to foreshadow their true nature without revealing it.",
+    "source_tags": ["solis-grave", "general-feat", "sovereign"]
+  },
+  {
+    "name": "Sump-Rat",
+    "category": "general_feat",
+    "prerequisite": "Dexterity 13+, must have spent significant time in urban underground or Sump-canals",
+    "description": "# Sump-Rat\n\nYou grew up in the canals, tunnels, and crawlspaces beneath the great cities. The sump-water is your birthright. The dark is your home.\n\n- You gain a **climb speed of 20 feet**. You can climb difficult surfaces, including upside down on ceilings, without making an ability check.\n- You have **advantage on Dexterity (Stealth) checks** made in urban environments, underground passages, and Sump-canals.\n- You can **squeeze through spaces** as narrow as 1 foot wide without penalty. Your speed is not reduced by non-magical difficult terrain in urban or underground environments.\n- You know the layout of any city's underground within 1 week of exploration. After that time, you cannot become lost in that city's Sump-network.\n\n**Lore:** Sump-Rats are the children of the undercity — orphans, runaways, and those born too poor for the surface. They navigate the Sump-canals by touch and smell, knowing routes through the city that no map records. Surface-dwellers dismiss them as vermin. Smart surface-dwellers hire them as guides. The smartest surface-dwellers never go underground at all.",
+    "source_tags": ["solis-grave", "general-feat", "urban"]
+  },
+  {
+    "name": "Blood of the Forge",
+    "category": "general_feat",
+    "prerequisite": "Stone-Blood",
+    "description": "# Blood of the Forge\n\nYou are a true child of the Stone-Blood forges — your affinity for metal and flame goes beyond training into instinct.\n\n- Increase your **Strength or Constitution by 1**, to a maximum of 20.\n- You gain **resistance to fire damage**. (This does not stack if you already have fire resistance from another source.)\n- You gain **proficiency with Smith's Tools**. If already proficient, your proficiency bonus is doubled for any check using them.\n- As an action, you can touch a non-magical metal object no larger than 5 feet in any dimension and heat it to forging temperature. The object deals 1d4 fire damage to any creature touching it for the next minute. You can use this feature a number of times equal to your Constitution modifier per long rest (minimum 1).\n\n**Lore:** The greatest Stone-Blood smiths don't need a forge. Their hands are the forge. Legend says the first Stone-Blood was shaped from cooled magma by the Sovereign of the Mountain — and every Stone-Blood carries a spark of that creation-fire in their blood.",
+    "source_tags": ["solis-grave", "general-feat", "stone-blood"]
+  },
+  {
+    "name": "Dual Heritage",
+    "category": "general_feat",
+    "prerequisite": "Half-Breed",
+    "description": "# Dual Heritage\n\nYour mixed blood isn't a weakness — it's a bridge. You've learned to draw from both your human adaptability and Deep-Blood legacy simultaneously.\n\n- Increase **one ability score of your choice by 1**, to a maximum of 20.\n- You gain **proficiency in one skill of your choice**.\n- You gain **one additional language** from: Draconic, Deep-Tongue (Dwarvish), Sump-Cant, or Abyssal.\n- Once per long rest, when you make an ability check using a skill you are not proficient in, you can add half your proficiency bonus (rounded down) to the roll. This represents your hybrid adaptability — you pick things up faster than either parent race.\n\n**Lore:** Half-Breeds are treated as lesser by both humans and Deep-Bloods. Humans fear their longevity. Deep-Bloods see them as diluted. But Half-Breeds have something neither parent race possesses: stability. Their hybrid blood doesn't decay with age (unlike full Deep-Bloods) and carries more magical potential than humans. The greatest diplomats and spies in Solis-Grave history have been Half-Breeds — they speak both worlds' languages because neither world fully accepts them.",
+    "source_tags": ["solis-grave", "general-feat", "half-breed"]
+  },
+  {
+    "name": "Cult Initiate",
+    "category": "general_feat",
+    "prerequisite": "Penitent class or Charisma 13+",
+    "description": "# Cult Initiate\n\nYou have been inducted into the Cult of the Sixth — not as a full operative, but as someone who has heard the prophecy and cannot un-hear it. A fragment of the Sixth Sovereign's essence grants you forbidden power.\n\n- You learn **one 1st-level Warlock spell** of your choice from the Warlock spell list.\n- You can cast this spell **once per long rest without expending a spell slot**. Charisma is your spellcasting ability.\n- You gain the ability to communicate telepathically with any creature within 30 feet that shares your Cult affiliation. The creature understands you regardless of language, but must share a language to respond verbally.\n- **Risk:** If you are discovered carrying Cult paraphernalia or using Cult-granted magic in Obsidian territory, you are subject to immediate Inquisitorial Smite — no trial, no appeal.\n\n**Lore:** The Cult of the Sixth believes a sixth Sovereign Dragon was betrayed and killed by the Five before they could anchor reality. Its essence, scattered and dormant, awaits collection in a single vessel. Cult initiates are given a single drop of something they're told is Sovereign blood — a communion that grants a spark of forbidden power. Whether that drop is truly Sovereign blood or something else entirely... the Cult doesn't encourage that question.",
+    "source_tags": ["solis-grave", "general-feat", "cult"]
+  },
+  {
+    "name": "Bone-Warden",
+    "category": "general_feat",
+    "prerequisite": "Bone-Wrought",
+    "description": "# Bone-Warden\n\nYour construction was reinforced beyond standard specifications — whether by a particularly skilled House Pyre forge-master, your own modifications over centuries, or the lingering will of the Sovereign whose bones form your core.\n\n- While wearing your **Integrated Armor**, you gain a **+1 bonus to AC** (stacks with Integrated Armor's natural +1 and Bone-Core Resonance).\n- You have **advantage on saving throws** to avoid being grappled, shoved, or moved against your will.\n- Your carrying capacity is **doubled**.\n- Once per long rest, as a reaction to taking damage, you can gain **temporary hit points equal to your level + your Constitution modifier**.\n\n**Lore:** Most Bone-Wrought are built as servants and soldiers — expendable constructs with a 50-year operational lifespan. But some are built better, by masters who poured decades of craft into a single creation. Others have simply lasted long enough — 300, 400 years — to have replaced every original component through self-maintenance. The oldest Bone-Wrought are walking museums of forge-craft from centuries past, each repair telling the story of who fixed them and why.",
+    "source_tags": ["solis-grave", "general-feat", "bone-wrought"]
+  },
+  {
+    "name": "Dragon-Touched",
+    "category": "general_feat",
+    "prerequisite": "15%+ Blood Purity, cannot be Dracon-Kin",
+    "description": "# Dragon-Touched\n\nYour dragon blood runs closer to the surface than most. You've learned to manifest a fragment of draconic power — a minor breath weapon, the faintest echo of the Sovereigns' original gift.\n\n- Increase your **Constitution or Charisma by 1**, to a maximum of 20.\n- As an action, you can exhale a **15-foot cone** of elemental energy. Choose one damage type when you take this feat: **fire, cold, lightning, acid, or poison** (poison represents Void-tainted blood). Creatures in the cone must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failure, they take **2d6 damage** of the chosen type. On a success, half damage. You can use this feature **once per short rest**.\n- The damage increases to **3d6 at 6th level**, **4d6 at 11th level**, and **5d6 at 16th level**.\n\n**Lore:** Every human carries dragon blood. Most never feel it. A few — the Dragon-Touched — develop a physical manifestation: a tickle in the throat before anger, warmth spreading through their chest during battle, the taste of ash or ozone on their tongue. It's not full Dracon-Kin physiology. It's a whisper of what humanity could have been if the Sovereigns had chosen to sire rather than sacrifice.",
+    "source_tags": ["solis-grave", "general-feat"]
+  },
+  {
+    "name": "Unbroken",
+    "category": "general_feat",
+    "prerequisite": "None",
+    "description": "# Unbroken\n\nSome people survive what should kill them. You've done it enough times that it's become a defining trait rather than luck.\n\n- Increase your **Constitution by 1**, to a maximum of 20.\n- When you are reduced to 0 hit points, you can immediately make a **DC 10 Constitution saving throw**. On a success, you remain at 1 hit point instead and gain temporary hit points equal to your level. Once you use this feature, you cannot use it again until you complete a long rest.\n- You have **advantage on saving throws against being frightened**. You've faced death and walked away — what's left to be afraid of?\n\n**Lore:** The world of Solis-Grave is brutal. Monsters, Inquisitors, Aether Burn, back-alley knives — death comes in a hundred forms daily. Most people die the first time one of those forms catches them. The Unbroken are the ones who didn't. Who crawled out of the sump-canal with a knife in their ribs, who walked away from a failed Spell Safety save with nothing but new scars, who stood back up after a Wyvern's tail sent them through a stone wall. They're not stronger than anyone else. They just refuse to accept that the story ends here.",
+    "source_tags": ["solis-grave", "general-feat"]
+  },
+  {
+    "name": "House Retainer",
+    "category": "general_feat",
+    "prerequisite": "Character level 4+, cannot be a Blank (0% purity) unless adopted/servant of a House",
+    "description": "# House Retainer\n\nYou are not born to a Great House — but you have earned your place in one. Through service, marriage, or extraordinary merit, a House has formally recognized you as one of their own.\n\n- Choose one of the **six Great Houses** (Ignis, Vortex, Obsidian, Tenebris, Ferrum, Pyre). You gain that House's **Trait feat** as if you were born to it.\n- You gain **proficiency in one skill** associated with your adopted House:\n  - Ignis: Intimidation\n  - Vortex: Animal Handling\n  - Obsidian: Insight\n  - Tenebris: Medicine\n  - Ferrum: Athletics\n  - Pyre: Smith's Tools\n- You are recognized by other members of your adopted House and may access House resources (lodging, basic equipment, minor political favors) in that House's territory.\n\n**Lore:** House affiliation is normally a matter of blood — you're born to it or you're not. But every House has its retainers: commoners elevated for exceptional service, merchants who married in, soldiers who saved a noble's life. Retainers are never fully accepted — the blood-born will always remind them of their origin — but a signet ring opens doors that birth never could. The most dangerous people in any House are its retainers. They have everything to prove.",
+    "source_tags": ["solis-grave", "general-feat", "house"]
+  },
+  {
+    "name": "Aether-Scarred",
+    "category": "general_feat",
+    "prerequisite": "Must have survived at least 20 total points of Aether Burn damage (cumulative, across your lifetime)",
+    "description": "# Aether-Scarred\n\nYour body is a roadmap of magical failure. Every scar tells the story of a spell that nearly killed you. But scar tissue is tougher than fresh skin — and your relationship with magic has changed.\n\n- You have **resistance to Aether Burn damage**. (Normally, Aether Burn ignores all resistances. This feat overrides that rule for you.)\n- Your maximum hit points increase by an amount equal to your level, and increase by 1 each time you gain a level.\n- You can sense the **approximate Blood Purity** of a creature that has cast a spell within 30 feet of you in the last minute. (Blank/Common/Lesser/Archon — not the exact percentage.)\n- **Visible effect:** Your veins glow faintly when magic is cast near you (within 30 feet). This cannot be concealed and may draw unwanted attention from Inquisitors.\n\n**Lore:** Most casters who survive repeated Aether Burn do so by becoming more careful. Aether-Scarred casters do the opposite — they keep casting, keep burning, keep surviving, until their bodies learn to treat the burn as background noise. Ash-Walkers are born from parents who reached this state. Aether-Scarred individuals are one generation away from producing Ash-Walker children. The Church considers them \"preadapted\" — and watches them closely.",
+    "source_tags": ["solis-grave", "general-feat", "aether-burn"]
+  }
+]

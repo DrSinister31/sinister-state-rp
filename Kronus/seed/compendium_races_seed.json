@@ -1,0 +1,459 @@
+[
+  {
+    "name": "Human",
+    "category": "standard",
+    "description": "Humans are the dominant race of Ourobora, comprising the vast majority of the population across all castes. Their blood purity spans the full spectrum — from Blanks consigned to labor camps to Archons ruling noble houses. The Day of Ascension at age 15 determines everything: caste, legal rights, social standing, and access to magic. A human's blood is their destiny, and every human lives in the shadow of their purity reading.",
+    "lifespan": "60-80 years average, maximum ~100 years",
+    "ascension_age": 15,
+    "blood_purity": {
+      "method": "DM-assigned or special Session Zero roll (d100)",
+      "range_min": 0,
+      "range_max": 100
+    },
+    "ability_score_increase": "+1 to all six ability scores (Standard), OR +1 to any two ability scores plus one feat of choice (Variant)",
+    "size": "Medium",
+    "speed": 30,
+    "languages": ["Common", "One regional dialect"],
+    "traits": [
+      {
+        "name": "Blood is Destiny",
+        "desc": "Your starting blood purity is determined by the DM or a special roll during Session Zero. It determines your starting caste, social standing, and access to magic classes. You may not choose your purity at character creation."
+      },
+      {
+        "name": "Caste Adaptation",
+        "desc": "Based on your blood purity percentage, you gain one of the following caste traits. Your caste is determined by your purity and cannot be changed.",
+        "subtraits": [
+          {
+            "condition": "Blank (0%)",
+            "desc": "You are a dead zone for magic. Gain advantage on all saving throws against spells. You cannot cast spells of any kind, including cantrips. Allied magical healing within 15 feet requires the caster to succeed on a DC 15 Spellcasting check to 'push through' your dead zone."
+          },
+          {
+            "condition": "Common (1-14%)",
+            "desc": "No special traits. You are a standard human with full legal rights but no magical aptitude."
+          },
+          {
+            "condition": "Lesser Blood (15-39%)",
+            "desc": "You may cast cantrips without restriction. Casting spells of 1st level or higher requires a Spell Safety saving throw against Aether Burn. You may legally cast cantrips; 1st+ level spells require a Church permit."
+          },
+          {
+            "condition": "Archon (40-85%)",
+            "desc": "Reduce your Spell Safety DC by 2. You know one elemental cantrip of your choice. You may cast magic freely. You may own Blanks. You may serve in government."
+          },
+          {
+            "condition": "Scion (90-94%)",
+            "desc": "The Co-Core awakens — you have a second, draconic heartbeat. Dual-Heartbeat Stability checks (hidden d20, triggers on 1-5 during combat initiative or Inquisitor-adjacent stealth/deception) begin immediately. Gain +1 to any one ability score of your choice. Immediate Church custody is legally mandated."
+          },
+          {
+            "condition": "Sovereign (95-100%)",
+            "desc": "Dormancy Penalty: -4 to all standard physical, social, and magical skill checks. Sovereign Surge: hidden +9 Purity Modifier on all fauna and raw magic interactions. Dual-Heartbeat active at all times. Cannot cast any spells while unawakened — your mind subconsciously blocks magical access. You appear as 0% Blank to all purity detection methods while dormant."
+          }
+        ]
+      }
+    ],
+    "subraces": [],
+    "age_restrictions": {
+      "min": 15,
+      "max": 50
+    },
+    "source_tags": ["solis-grave", "core", "phb-equivalent"]
+  },
+  {
+    "name": "Dracon-Kin",
+    "category": "standard",
+    "description": "Dracon-Kin are humanoids bearing visible draconic features — scales, slit pupils, and elemental breath. They are the 'lesser pure' of Ourobora, respected above common humans but forever beneath true Archons. Natural soldiers, enforcers, and elemental specialists, Dracon-Kin serve the noble houses as elite troops and elemental operatives. Their blood is never Blank — a source of immense pride and the foundation of their martial culture.",
+    "lifespan": "70-90 years average",
+    "ascension_age": 12,
+    "blood_purity": {
+      "method": "Roll 1d75+25",
+      "range_min": 26,
+      "range_max": 100,
+      "notes": "Can never be Blank; minimum 25% purity at Ascension"
+    },
+    "ability_score_increase": "+2 Strength, +1 Charisma",
+    "size": "Medium (6-7 ft., stocky build)",
+    "speed": 30,
+    "languages": ["Common", "Draconic"],
+    "traits": [
+      {
+        "name": "Draconic Ancestry",
+        "desc": "Choose one elemental bloodline: Flame, Storm, Frost, Acid, or Void. You gain resistance to the corresponding damage type (fire, lightning, cold, acid, or necrotic). Your ancestry determines your breath weapon shape and damage type."
+      },
+      {
+        "name": "Breath Weapon",
+        "desc": "Once per short rest, you may exhale destructive energy as an action. Damage: 2d6 at level 1, increasing by +1d6 at levels 6, 11, and 16. Saving Throw DC = 8 + your Constitution modifier + your proficiency bonus. Shape depends on ancestry: Flame, Frost, Void = 15 ft. cone; Storm, Acid = 30 ft. line (5 ft. wide). A creature takes full damage on a failed save or half on a success."
+      },
+      {
+        "name": "Blood-Proud",
+        "desc": "Your minimum starting blood purity is 25%. You can never be Blank. Your purity is determined by rolling 1d75+25 at character creation."
+      },
+      {
+        "name": "Elemental Affinity",
+        "desc": "When you cast a spell whose damage type matches your draconic ancestry element, reduce the Spell Safety DC for that casting by 2."
+      }
+    ],
+    "subraces": [
+      {
+        "name": "Flame-Kin",
+        "desc": "Common in House Ignis territories. Fire resistance. Breath weapon: 15 ft. cone of fire. Additional ability score: +1 Constitution.",
+        "ability_bonus": "+1 Constitution",
+        "element": "Flame",
+        "breath_shape": "15 ft. cone",
+        "damage_type": "fire",
+        "resistance": "fire"
+      },
+      {
+        "name": "Storm-Kin",
+        "desc": "Common in House Vortex territories. Lightning resistance. Breath weapon: 30 ft. line of lightning. Additional ability score: +1 Dexterity.",
+        "ability_bonus": "+1 Dexterity",
+        "element": "Storm",
+        "breath_shape": "30 ft. line",
+        "damage_type": "lightning",
+        "resistance": "lightning"
+      },
+      {
+        "name": "Frost-Kin",
+        "desc": "Common in the northern wastes. Cold resistance. Breath weapon: 15 ft. cone of cold. Additional ability score: +1 Constitution.",
+        "ability_bonus": "+1 Constitution",
+        "element": "Frost",
+        "breath_shape": "15 ft. cone",
+        "damage_type": "cold",
+        "resistance": "cold"
+      },
+      {
+        "name": "Acid-Kin",
+        "desc": "Common in House Tenebris territories. Acid resistance. Breath weapon: 30 ft. line of acid. Additional ability score: +1 Dexterity.",
+        "ability_bonus": "+1 Dexterity",
+        "element": "Acid",
+        "breath_shape": "30 ft. line",
+        "damage_type": "acid",
+        "resistance": "acid"
+      },
+      {
+        "name": "Void-Kin",
+        "desc": "Rare; often affiliated with the Cult of the Sixth. Necrotic resistance. Breath weapon: 15 ft. cone of necrotic energy. Additional ability score: +1 Wisdom.",
+        "ability_bonus": "+1 Wisdom",
+        "element": "Void",
+        "breath_shape": "15 ft. cone",
+        "damage_type": "necrotic",
+        "resistance": "necrotic"
+      }
+    ],
+    "age_restrictions": {
+      "min": 12,
+      "max": 50
+    },
+    "source_tags": ["solis-grave", "core", "phb-equivalent"]
+  },
+  {
+    "name": "Stone-Blood",
+    "category": "standard",
+    "description": "Stone-Bloods are a short, stocky race adapted to underground life over millennia. Their physiology naturally resists Aether Burn — their bodies are 'dense' to raw magic, making them the finest smiths, miners, and forgers in Ourobora. They supply House Pyre with raw materials and crafted armaments. Their blood purity is naturally moderate and rarely reaches high levels, but their resilience to magical backlash makes them invaluable in industrial and military applications.",
+    "lifespan": "300-400 years average",
+    "ascension_age": 25,
+    "blood_purity": {
+      "method": "Roll 1d20+10",
+      "range_min": 11,
+      "range_max": 30,
+      "notes": "Naturally moderate purity; rarely exceeds 30%"
+    },
+    "ability_score_increase": "+2 Constitution, +1 Wisdom",
+    "size": "Medium (4-5 ft., dense build)",
+    "speed": 25,
+    "languages": ["Common", "Dwarvish (Deep-Tongue)"],
+    "traits": [
+      {
+        "name": "Darkvision",
+        "desc": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray."
+      },
+      {
+        "name": "Aether-Resistant Physiology",
+        "desc": "You have advantage on all Constitution saving throws against Aether Burn. Additionally, reduce all Aether Burn damage you take by your Constitution modifier (minimum 1 point of reduction)."
+      },
+      {
+        "name": "Stone-Blood Resilience",
+        "desc": "You have advantage on saving throws against poison, and you have resistance to poison damage."
+      },
+      {
+        "name": "Forge-Kin",
+        "desc": "You have proficiency with Smith's Tools. You can identify the purity and forging house of any metal weapon or armor by touch alone."
+      },
+      {
+        "name": "Underground Adaptation",
+        "desc": "You instinctively know the exact depth you are at when underground. You cannot become lost in natural or constructed cave systems."
+      }
+    ],
+    "subraces": [
+      {
+        "name": "Mountain-Blood",
+        "desc": "Surface-dwelling warriors and guardians. Additional ability score: +1 Strength. Proficiency with battleaxe and warhammer. Heavy armor proficiency.",
+        "ability_bonus": "+1 Strength",
+        "proficiencies": ["battleaxe", "warhammer", "heavy armor"]
+      },
+      {
+        "name": "Forge-Blood",
+        "desc": "Master smiths who work metal with their bare hands. Additional ability score: +1 Intelligence. You can heat metal with your bare hands sufficiently for forging purposes. Fire resistance.",
+        "ability_bonus": "+1 Intelligence",
+        "features": ["Heat metal with bare hands (forging only)", "Fire resistance"]
+      },
+      {
+        "name": "Deep-Blood",
+        "desc": "Subterranean dwellers who rarely see sunlight. Superior Darkvision 120 ft. Tremorsense 10 ft. (detects movement on stone surfaces). Sunlight sensitivity: disadvantage on attack rolls and Wisdom (Perception) checks relying on sight when you or your target are in direct sunlight.",
+        "ability_bonus": null,
+        "features": ["Superior Darkvision 120 ft.", "Tremorsense 10 ft.", "Sunlight sensitivity"]
+      }
+    ],
+    "age_restrictions": {
+      "min": 25,
+      "max": 200
+    },
+    "source_tags": ["solis-grave", "core", "phb-equivalent"]
+  },
+  {
+    "name": "Ash-Walker",
+    "category": "standard",
+    "description": "Ash-Walkers are born to parents who survived catastrophic Aether Burn. The magical scarring passes to the offspring — their skin is perpetually ashen, their eyes smolder with inner heat, and their veins glow faintly when magic is nearby. Their blood purity is wildly unstable: two Ash-Walker siblings could be Blank and Archon. They are feared as bad omens, pitied as victims, and often blamed for magical disasters. Society treats them as cursed, and they learn early to hide their true nature.",
+    "lifespan": "100-140 years average",
+    "ascension_age": 15,
+    "blood_purity": {
+      "method": "Roll 1d100 once, result is FINAL",
+      "range_min": 1,
+      "range_max": 100,
+      "notes": "Unstable bloodline. Roll is made at Ascension and the result CANNOT be changed by any means — no rerolls, no magic, no divine intervention. This simulates the chaotic nature of your bloodline."
+    },
+    "ability_score_increase": "+2 Charisma, +1 Intelligence",
+    "size": "Medium",
+    "speed": 30,
+    "languages": ["Common", "One of: Abyssal, Draconic, or Deep-Tongue"],
+    "traits": [
+      {
+        "name": "Unstable Blood",
+        "desc": "Your starting blood purity is determined by rolling 1d100 during Session Zero. This result is FINAL — it cannot be changed by any means, magical or otherwise. Your bloodline is chaotic and defies prediction."
+      },
+      {
+        "name": "Aether-Touched",
+        "desc": "You know the Thaumaturgy cantrip. At 3rd level, you can cast Hellish Rebuke (re-flavored as 'Aetheric Backlash') once per long rest. At 5th level, you can cast Darkness once per long rest. Charisma is your spellcasting ability for these spells.",
+        "spells": {
+          "cantrip": "Thaumaturgy",
+          "3rd_level": { "spell": "Hellish Rebuke (Aetheric Backlash)", "uses": 1, "recharge": "long rest" },
+          "5th_level": { "spell": "Darkness", "uses": 1, "recharge": "long rest" }
+        }
+      },
+      {
+        "name": "Fire Resistance",
+        "desc": "You have resistance to fire damage. Your blood has already burned — what's a little more fire?"
+      },
+      {
+        "name": "Caste Outcast",
+        "desc": "You have disadvantage on Persuasion checks with Church officials and members of House Obsidian. You have advantage on Deception checks made to hide your blood purity status."
+      }
+    ],
+    "subraces": [],
+    "age_restrictions": {
+      "min": 15,
+      "max": 80
+    },
+    "source_tags": ["solis-grave", "core", "phb-equivalent"]
+  },
+  {
+    "name": "Deep-Blood",
+    "category": "standard",
+    "description": "Deep-Bloods are ancient beings whose bloodlines predate the Five Sovereigns. Their dragon blood purity is uniquely tied to their age — it is highest in youth and slowly decays over centuries. A 500-year-old Deep-Blood may have begun life as an Archon-level caster and faded to Lesser Blood by old age. This gives them a profound and often tragic relationship with mortality and magic. They are elegant, long-lived, and carry the weight of centuries in their bearing.",
+    "lifespan": "650-800 years average",
+    "ascension_age": 30,
+    "blood_purity": {
+      "method": "Age-based rolling table",
+      "range_min": 1,
+      "range_max": 80,
+      "notes": "Purity decays with age. After character creation, purity continues to decay at approximately 1% per 10 years.",
+      "age_table": [
+        { "age_range": "30-100", "roll": "2d20+40", "purity_range": "42-80%" },
+        { "age_range": "101-250", "roll": "2d20+20", "purity_range": "22-60%" },
+        { "age_range": "251-400", "roll": "2d20+5", "purity_range": "7-45%" },
+        { "age_range": "401-500", "roll": "1d20", "purity_range": "1-20%" }
+      ]
+    },
+    "ability_score_increase": "+2 Dexterity, +1 Intelligence",
+    "size": "Medium (5-6 ft., slender build)",
+    "speed": 35,
+    "languages": ["Common", "Elvish", "One ancient language"],
+    "traits": [
+      {
+        "name": "Darkvision",
+        "desc": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light."
+      },
+      {
+        "name": "Keen Senses",
+        "desc": "You have proficiency in the Perception skill."
+      },
+      {
+        "name": "Fey Ancestry",
+        "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep."
+      },
+      {
+        "name": "Trance",
+        "desc": "You do not need to sleep. Instead, you enter a meditative trance for 4 hours each day, gaining the same benefit as 8 hours of sleep."
+      },
+      {
+        "name": "Decaying Purity",
+        "desc": "Your starting blood purity is determined by your chosen starting age, using the Deep-Blood Purity Age Table. After character creation, your purity continues to decay at a rate of approximately 1% per 10 years of in-game time. This decay is permanent and irreversible, representing the slow fading of your draconic heritage."
+      }
+    ],
+    "subraces": [
+      {
+        "name": "High Deep-Blood",
+        "desc": "Scholars and mages who preserve ancient texts. Additional ability score: +1 Intelligence. You know one wizard cantrip of your choice. Intelligence is your spellcasting ability for it.",
+        "ability_bonus": "+1 Intelligence",
+        "features": ["One wizard cantrip (INT)"]
+      },
+      {
+        "name": "Shadow Deep-Blood",
+        "desc": "Reclusive underground-dwellers. Additional ability score: +1 Wisdom. Mask of the Wild: you can attempt to hide even when you are only lightly obscured by natural phenomena such as foliage, heavy rain, falling snow, mist, and other natural occurrences.",
+        "ability_bonus": "+1 Wisdom",
+        "features": ["Mask of the Wild"]
+      },
+      {
+        "name": "Decayed Deep-Blood",
+        "desc": "Your purity has already faded significantly due to extreme age. Additional ability score: +1 Constitution. You are immune to further purity decay — your blood has stabilized at its low level. You start at 1-20% purity but gain the Blank's advantage on saving throws against spells. You cannot cast spells but are protected from them.",
+        "ability_bonus": "+1 Constitution",
+        "features": ["Immune to purity decay", "Advantage on saving throws against spells", "Cannot cast spells", "Starting purity: 1-20%"]
+      }
+    ],
+    "age_restrictions": {
+      "min": 30,
+      "max": 500
+    },
+    "source_tags": ["solis-grave", "core", "phb-equivalent"]
+  },
+  {
+    "name": "Sump-Blood",
+    "category": "standard",
+    "description": "Sump-Bloods are short, hardy human offshoots who adapted over generations to the toxic sump-waters and underground canals beneath Ourobora's great cities. Constant exposure to waste Aether runoff made them completely immune to Aether Burn — but also incapable of generating high blood purity. They are the eternal underclass: laborers, canal-runners, smugglers, and the backbone of the underground economy. No Sump-Blood has ever risen above Lesser Blood status, and their race bears that limitation with a mix of resignation and defiant pride.",
+    "lifespan": "120-180 years average",
+    "ascension_age": 15,
+    "blood_purity": {
+      "method": "Roll 1d15",
+      "range_min": 1,
+      "range_max": 15,
+      "notes": "Maximum possible blood purity is 15% — you will never be more than Lesser Blood. This is a biological limitation, not a social one."
+    },
+    "ability_score_increase": "+2 Dexterity, +1 Constitution",
+    "size": "Small (3-4 ft.)",
+    "speed": 25,
+    "languages": ["Common", "Sump-Cant (Thieves' Cant variant)", "One regional dialect"],
+    "traits": [
+      {
+        "name": "Aether-Immune",
+        "desc": "You are completely immune to Aether Burn. You take zero damage from failed spell casting, regardless of the spell's level or your blood purity. However, your maximum possible blood purity is permanently capped at 15% — you can never exceed Lesser Blood caste. Cantrips are the highest level of magic you can safely cast; 1st+ level spells are impossible due to purity limitations, not Aether Burn."
+      },
+      {
+        "name": "Lucky",
+        "desc": "When you roll a 1 on a d20 for an attack roll, ability check, or saving throw, you may reroll the die. You must use the new roll, even if it is another 1."
+      },
+      {
+        "name": "Naturally Stealthy",
+        "desc": "You can attempt to Hide even when obscured only by a creature that is at least one size larger than you. You have advantage on Dexterity (Stealth) checks made in urban and underground environments."
+      },
+      {
+        "name": "Sump-Runner",
+        "desc": "You can move through the space of any creature that is size Medium or larger without penalty. Difficult terrain in urban and underground environments does not cost you extra movement."
+      }
+    ],
+    "subraces": [],
+    "age_restrictions": {
+      "min": 15,
+      "max": 100
+    },
+    "source_tags": ["solis-grave", "core", "phb-equivalent"]
+  },
+  {
+    "name": "Bone-Wrought",
+    "category": "exotic",
+    "description": "Bone-Wrought are constructed beings built from dragon bone, alchemical binding agents, and forged metal. Created by House Tenebris and House Pyre as servants, soldiers, and experimental vessels, they have no biological blood and thus no blood purity. They cannot cast magic — but their dragon-bone cores resonate with enchanted items, making them uniquely capable wielders of magical weapons and armor. The oldest known Bone-Wrought was 400 years old before deactivation. They are property under Ouroboran law, though some have earned or seized their freedom.",
+    "lifespan": "Technically immortal (oldest known: 400 years before deactivation)",
+    "ascension_age": null,
+    "blood_purity": {
+      "method": "N/A — constructed, not born",
+      "range_min": 0,
+      "range_max": 0,
+      "notes": "Bone-Wrought have no biological blood and therefore no blood purity. Their purity is always 0% and cannot be changed."
+    },
+    "ability_score_increase": "+2 Constitution, +1 Strength",
+    "size": "Medium or Small (chosen at creation)",
+    "speed": 30,
+    "languages": ["Common", "One creator House language (Pyre, Tenebris, or Obsidian)"],
+    "traits": [
+      {
+        "name": "Construct Nature",
+        "desc": "You do not need to eat, drink, breathe, or sleep. You are immune to disease. You have advantage on saving throws against being poisoned, and you have resistance to poison damage."
+      },
+      {
+        "name": "Integrated Armor",
+        "desc": "You have a natural +1 bonus to Armor Class. You can don or doff armor by integrating it into your body during a long rest. Armor integrated in this way cannot be forcibly removed against your will."
+      },
+      {
+        "name": "Magic Void",
+        "desc": "You have 0% blood purity permanently — you are a Blank construct. You cannot cast any spells. You are completely immune to Aether Burn, as you have no blood to burn. However, you CAN use enchanted weapons and magic items — your dragon-bone core resonates with enchantments, bypassing the purity requirement that living casters face."
+      },
+      {
+        "name": "Bone-Core Resonance",
+        "desc": "When you use an enchanted (magical) weapon, you add +1 to attack rolls and damage rolls made with that weapon. When you wear enchanted (magical) armor, that armor grants an additional +1 bonus to AC. This bonus stacks with the +1 from Integrated Armor."
+      },
+      {
+        "name": "Creator's Mark",
+        "desc": "You were built by a specific Great House. Choose one creator House, gaining the corresponding damage resistance: House Pyre (fire resistance), House Tenebris (necrotic resistance), or House Obsidian (psychic resistance)."
+      }
+    ],
+    "subraces": [],
+    "age_restrictions": {
+      "min": 0,
+      "max": 999,
+      "notes": "Constructed beings have no biological age. A Bone-Wrought could be 400 years old at campaign start. Minimum 'age' is 0 (newly created)."
+    },
+    "source_tags": ["solis-grave", "core", "exotic"]
+  },
+  {
+    "name": "Half-Breed",
+    "category": "standard",
+    "description": "Half-Breeds are the children of Human and Deep-Blood pairings. Viewed as lesser by both races — humans fear their unnatural longevity, while Deep-Bloods see them as diluted half-lives. Their hybrid biology gives them a unique advantage: their blood purity is more stable than a Deep-Blood's (it does not decay with age) but more flexible than a human's (higher natural minimum). Half-Breeds are natural diplomats, wanderers, and bridge-builders between the races — or bitter outcasts who belong to neither world.",
+    "lifespan": "150-220 years average",
+    "ascension_age": 18,
+    "blood_purity": {
+      "method": "Roll 1d50+10",
+      "range_min": 11,
+      "range_max": 60,
+      "notes": "Hybrid stability — purity does not decay with age, unlike full Deep-Bloods. Weighted toward moderate purity."
+    },
+    "ability_score_increase": "+2 Charisma, +1 to any two other ability scores of your choice",
+    "size": "Medium",
+    "speed": 30,
+    "languages": ["Common", "Elvish", "One additional language of your choice"],
+    "traits": [
+      {
+        "name": "Darkvision",
+        "desc": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light."
+      },
+      {
+        "name": "Fey Ancestry",
+        "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep. This trait is inherited from your Deep-Blood parent."
+      },
+      {
+        "name": "Dual Heritage",
+        "desc": "You count as both Human and Deep-Blood for the purpose of meeting racial prerequisites for feats, magic items, and class options. You are eligible for anything that requires either race."
+      },
+      {
+        "name": "Stable Hybrid Purity",
+        "desc": "Your blood purity does not decay with age, unlike a full Deep-Blood's. Your starting purity is determined by rolling 1d50+10, giving a range of 11-60%. Once determined, this value remains stable for your entire lifetime."
+      },
+      {
+        "name": "Cultural Adaptation",
+        "desc": "You gain proficiency in any two skills of your choice, reflecting your ability to adapt to either parent culture — or forge your own path between them."
+      }
+    ],
+    "subraces": [],
+    "age_restrictions": {
+      "min": 18,
+      "max": 120
+    },
+    "source_tags": ["solis-grave", "core", "phb-equivalent"]
+  }
+]

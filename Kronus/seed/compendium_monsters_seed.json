@@ -1,0 +1,364 @@
+[
+  {
+    "name": "Sovereign Flame Dragon",
+    "size": "Gargantuan",
+    "type": "Dragon (Sovereign)",
+    "alignment": "Lawful Neutral",
+    "ac": 22,
+    "hp": "546 (28d20+252)",
+    "speed": "40 ft., fly 80 ft., burrow 40 ft.",
+    "stats": { "str": 30, "dex": 10, "con": 29, "int": 22, "wis": 18, "cha": 25 },
+    "saving_throws": { "str": 17, "con": 16, "wis": 11, "cha": 14 },
+    "skills": { "perception": 18, "insight": 11, "persuasion": 14 },
+    "damage_vulnerabilities": null,
+    "damage_resistances": null,
+    "damage_immunities": "fire",
+    "condition_immunities": null,
+    "senses": "blindsight 60 ft., darkvision 120 ft., passive Perception 28",
+    "languages": "Common, Draconic, Primordial",
+    "cr": 24,
+    "xp": 62000,
+    "traits": [
+      { "name": "Sovereign Presence", "desc": "Any creature with less than 95% Blood Purity that starts its turn within 120 feet of the dragon must make a DC 22 Wisdom saving throw or be frightened for 1 minute. Creatures with 95%+ purity are immune." },
+      { "name": "Purity Sight", "desc": "The dragon automatically knows the exact Blood Purity percentage of any creature it can see." },
+      { "name": "Legendary Resistance (3/Day)", "desc": "If the dragon fails a saving throw, it can choose to succeed instead." },
+      { "name": "Magic Resistance", "desc": "The dragon has advantage on saving throws against spells and other magical effects." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "desc": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws." },
+      { "name": "Bite", "desc": "Melee Weapon Attack: +17 to hit, reach 15 ft., one target. Hit: 21 (2d10+10) piercing damage plus 14 (4d6) fire damage." },
+      { "name": "Claw", "desc": "Melee Weapon Attack: +17 to hit, reach 10 ft., one target. Hit: 17 (2d6+10) slashing damage." },
+      { "name": "Tail", "desc": "Melee Weapon Attack: +17 to hit, reach 20 ft., one target. Hit: 19 (2d8+10) bludgeoning damage." },
+      { "name": "Sovereign Flame Breath (Recharge 5-6)", "desc": "The dragon exhales fire in a 90-foot cone. Each creature in that area must make a DC 24 Dexterity saving throw, taking 91 (26d6) fire damage on a failed save, or half as much on a successful one. This damage ignores fire resistance and treats immunity as resistance." },
+      { "name": "Frightful Presence", "desc": "Each creature of the dragon's choice within 120 feet must make a DC 22 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns." }
+    ],
+    "legendary_actions": [
+      { "name": "Detect", "desc": "The dragon makes a Wisdom (Perception) check." },
+      { "name": "Tail Attack", "desc": "The dragon makes a tail attack." },
+      { "name": "Wing Attack (Costs 2 Actions)", "desc": "The dragon beats its wings. Each creature within 15 feet must succeed on a DC 25 Dexterity saving throw or take 17 (2d6+10) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed." }
+    ],
+    "lair_actions": [
+      { "name": "Magma Surge", "desc": "A 20-foot radius pool of magma erupts at a point the dragon can see within 120 feet. Creatures in the area take 10 (3d6) fire damage per turn." },
+      { "name": "Volcanic Gases", "desc": "Poisonous gas fills a 30-foot radius sphere. Heavily obscured. Creatures entering or starting their turn there must make a DC 15 Constitution saving throw or be poisoned." }
+    ],
+    "lore": "The Sovereign Flame Dragon is one of the five original Sovereigns who sacrificed their physical manifestations to anchor reality. Fragments of their essence persist in the deepest volcanic chambers of Ourobora. They recognize those of 95%+ purity as peers and will not attack unless provoked. Their flame breath bypasses all mortal resistance — only a fellow Sovereign can withstand it fully.",
+    "source_tags": ["solis-grave", "mountain", "ruins"]
+  },
+  {
+    "name": "Scion Soul-Meld",
+    "size": "Large",
+    "type": "Dragon (Scion)",
+    "alignment": "Chaotic Neutral",
+    "ac": 19,
+    "hp": "250 (20d10+140)",
+    "speed": "40 ft., fly 60 ft.",
+    "stats": { "str": 22, "dex": 18, "con": 24, "int": 14, "wis": 12, "cha": 20 },
+    "saving_throws": { "str": 11, "dex": 9, "con": 12, "cha": 10 },
+    "skills": { "perception": 11, "stealth": 9 },
+    "damage_vulnerabilities": null,
+    "damage_resistances": "bludgeoning, piercing, and slashing from nonmagical attacks",
+    "damage_immunities": null,
+    "condition_immunities": "charmed",
+    "senses": "darkvision 120 ft., passive Perception 21",
+    "languages": "Common, Draconic",
+    "cr": 16,
+    "xp": 15000,
+    "traits": [
+      { "name": "Co-Core Heartbeat", "desc": "The Scion possesses a double heartbeat — a physical echo of the forbidden soul-meld ritual that created it. It has advantage on Constitution saving throws and death saving throws." },
+      { "name": "Purity Hunter", "desc": "The Scion can sense creatures with 95%+ Blood Purity within 1 mile. It covets their essence and will prioritize attacking them above all other targets. Against such targets, its attacks score a critical hit on a roll of 19-20." },
+      { "name": "Cataclysmic Strikes", "desc": "The Scion's weapon attacks are magical. When it hits with a melee attack, it deals an additional 9 (2d8) damage of a random type (roll d4: 1=fire, 2=lightning, 3=cold, 4=necrotic)." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "desc": "The Scion makes two Rend attacks and one Bite attack." },
+      { "name": "Bite", "desc": "Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 17 (2d10+6) piercing damage plus 7 (2d6) elemental damage." },
+      { "name": "Rend", "desc": "Melee Weapon Attack: +11 to hit, reach 5 ft., one target. Hit: 13 (2d6+6) slashing damage." },
+      { "name": "Soul Shriek (Recharge 5-6)", "desc": "The Scion emits a psychic wail in a 60-foot cone. Each creature in the area must make a DC 18 Wisdom saving throw, taking 45 (10d8) psychic damage on a failed save, or half as much on a successful one. Creatures with 95%+ Blood Purity have disadvantage on this save (the Scion's cry resonates with their essence)." }
+    ],
+    "legendary_actions": null,
+    "lair_actions": null,
+    "lore": "Scions are the tragic products of the forbidden soul-meld ritual — an attempt to fuse two draconic souls into a single vessel. Born with 90-94% purity, they are cataclysmic in power but forever incomplete, driven by an insatiable hunger for the pure essence of a true Sovereign. Their double heartbeat is both their gift and their curse: it sustains them beyond mortal limits, but also marks them as hunted abominations to the Church of the Five Skulls.",
+    "source_tags": ["solis-grave", "any", "ruins"]
+  },
+  {
+    "name": "Ignis Archon Dragon",
+    "size": "Huge",
+    "type": "Dragon (Archon)",
+    "alignment": "Lawful Evil",
+    "ac": 18,
+    "hp": "189 (14d12+98)",
+    "speed": "40 ft., fly 80 ft.",
+    "stats": { "str": 24, "dex": 10, "con": 24, "int": 16, "wis": 14, "cha": 18 },
+    "saving_throws": { "str": 12, "con": 12, "cha": 9 },
+    "skills": { "perception": 12, "intimidation": 9 },
+    "damage_vulnerabilities": null,
+    "damage_resistances": null,
+    "damage_immunities": "fire",
+    "condition_immunities": null,
+    "senses": "blindsight 30 ft., darkvision 120 ft., passive Perception 22",
+    "languages": "Common, Draconic",
+    "cr": 13,
+    "xp": 10000,
+    "traits": [
+      { "name": "Blind to Sovereigns", "desc": "The Archon cannot detect Blood Purity above 90% — it perceives such beings as 0% Blanks. It is completely unable to recognize a Sovereign or Scion." },
+      { "name": "Elemental Affinity (Fire)", "desc": "When the Archon casts a spell that deals fire damage, it adds its Charisma modifier (+4) to the damage." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "desc": "The Archon makes two attacks: one Bite and one Claw." },
+      { "name": "Bite", "desc": "Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 18 (2d10+7) piercing damage plus 7 (2d6) fire damage." },
+      { "name": "Claw", "desc": "Melee Weapon Attack: +12 to hit, reach 5 ft., one target. Hit: 14 (2d6+7) slashing damage." },
+      { "name": "Ignis Breath (Recharge 5-6)", "desc": "The dragon exhales fire in a 60-foot cone. Each creature in that area must make a DC 20 Dexterity saving throw, taking 63 (18d6) fire damage on a failed save, or half as much on a successful one." }
+    ],
+    "legendary_actions": null,
+    "lair_actions": null,
+    "lore": "Ignis Archons are the ruling elite's enforcers — fire-aligned dragons in service to House Ignis. They maintain order through scorched-earth tactics, burning entire villages suspected of harboring Cult of the Sixth sympathizers. Despite their power, they are tragically limited: their biology prevents them from sensing true Sovereign purity. An awakened Sovereign could walk among them unnoticed, a fact the Church suppresses at all costs.",
+    "source_tags": ["solis-grave", "mountain", "urban"]
+  },
+  {
+    "name": "Aegis-Inquisitor",
+    "size": "Medium",
+    "type": "Humanoid (Archon)",
+    "alignment": "Lawful Neutral",
+    "ac": 18,
+    "hp": "110 (13d8+52)",
+    "speed": "30 ft.",
+    "stats": { "str": 16, "dex": 12, "con": 18, "int": 14, "wis": 18, "cha": 16 },
+    "saving_throws": { "wis": 8, "cha": 7 },
+    "skills": { "perception": 8, "insight": 8, "intimidation": 7 },
+    "damage_vulnerabilities": null,
+    "damage_resistances": null,
+    "damage_immunities": null,
+    "condition_immunities": "frightened",
+    "senses": "darkvision 60 ft., passive Perception 18",
+    "languages": "Common, Draconic",
+    "cr": 8,
+    "xp": 3900,
+    "traits": [
+      { "name": "Draconic Retribution", "desc": "When the Inquisitor hits with a melee weapon attack, it adds 1d4 fire or lightning damage (its choice). This is a manifestation of its 40-60% Blood Purity." },
+      { "name": "Purity Sight", "desc": "As a bonus action, the Inquisitor can read the exact Blood Purity percentage of a creature it can see within 30 feet. This ability requires concentration." },
+      { "name": "Spell Safety (40% Purity)", "desc": "The Inquisitor's Spell Safety DC is 12. When casting a spell of 1st level or higher, it rolls a Constitution saving throw against DC 12. On failure, it takes 1d6 fire damage per spell level (ignores resistance). It has advantage on this save." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "desc": "The Inquisitor makes two Longsword attacks." },
+      { "name": "Longsword", "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 8 (1d8+3) slashing damage plus 2 (1d4) fire damage." },
+      { "name": "Inquisitorial Smite (1/Day)", "desc": "The Inquisitor channels divine fury into a melee attack. On a hit, the target takes an additional 27 (6d8) radiant damage and must make a DC 16 Wisdom saving throw or be stunned until the end of the Inquisitor's next turn. This ability is reserved for capital crimes: illegal spellcasting or harboring a false purity reading." }
+    ],
+    "legendary_actions": null,
+    "lair_actions": null,
+    "lore": "Aegis-Inquisitors are the Church of the Five Skulls' enforcers — Paladin-War Cleric hybrids ordained to hunt illegal casters and suppress heresy. Each Inquisitor carries a portable Blood Crystal for field purity testing. They are trained from childhood in House Obsidian's judicial academies, where they learn that mercy is weakness and purging the impure is the highest form of worship.",
+    "source_tags": ["solis-grave", "urban", "civilized"]
+  },
+  {
+    "name": "Penitent Zealot",
+    "size": "Medium",
+    "type": "Humanoid (Common)",
+    "alignment": "Chaotic Good",
+    "ac": 14,
+    "hp": "45 (7d8+14)",
+    "speed": "35 ft.",
+    "stats": { "str": 14, "dex": 16, "con": 14, "int": 10, "wis": 12, "cha": 8 },
+    "saving_throws": { "dex": 5, "con": 4 },
+    "skills": { "stealth": 5, "religion": 2, "sleight_of_hand": 5 },
+    "damage_vulnerabilities": null,
+    "damage_resistances": null,
+    "damage_immunities": null,
+    "condition_immunities": null,
+    "senses": "passive Perception 11",
+    "languages": "Common, Sump-Cant",
+    "cr": 3,
+    "xp": 700,
+    "traits": [
+      { "name": "The Fervor Risk", "desc": "As a bonus action, the Zealot can enter a state of reckless fervor. For 1 minute, it gains advantage on all melee attack rolls, but takes 1d4 necrotic damage at the start of each of its turns. This damage cannot be reduced or prevented. The Zealot can end this state as a bonus action." },
+      { "name": "Cult Conditioning", "desc": "The Zealot has advantage on saving throws against being charmed or frightened by Church authorities or Inquisitors. It has been conditioned to resist their influence through years of underground resistance." }
+    ],
+    "actions": [
+      { "name": "Sump-Forged Blade", "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d6+3) slashing damage. When the Zealot's Fervor Risk is active, this attack scores a critical hit on a roll of 19-20." },
+      { "name": "Throwing Dagger", "desc": "Ranged Weapon Attack: +5 to hit, range 20/60 ft., one target. Hit: 5 (1d4+3) piercing damage." },
+      { "name": "Desperate Smite (Recharges after Fervor Risk ends)", "desc": "While Fervor Risk is active, the Zealot can channel its pain into a single devastating strike. Make a melee weapon attack. On a hit, the target takes an additional 14 (4d6) radiant damage, and the Zealot's Fervor Risk ends immediately. The Zealot takes 7 (2d6) necrotic damage from the feedback." }
+    ],
+    "legendary_actions": null,
+    "lair_actions": null,
+    "lore": "Penitent Zealots are the shock troops of the Cult of the Sixth — radicalized laborers, escaped Blanks, and those who've lost everything to the purity caste system. They fight with a desperate courage born of having nothing left to lose. The Fervor Risk is their signature technique: a controlled Aether Burn channeled into martial fury. They hum fragments of the 'Dig Deep' work chant as they fight, each verse a prayer for the Sixth Sovereign's return.",
+    "source_tags": ["solis-grave", "underground", "urban"]
+  },
+  {
+    "name": "Abomination — Stitched",
+    "size": "Large",
+    "type": "Abomination",
+    "alignment": "Chaotic Evil",
+    "ac": 13,
+    "hp": "85 (10d10+30)",
+    "speed": "30 ft.",
+    "stats": { "str": 20, "dex": 8, "con": 16, "int": 3, "wis": 6, "cha": 2 },
+    "saving_throws": { "con": 5 },
+    "skills": null,
+    "damage_vulnerabilities": null,
+    "damage_resistances": "bludgeoning, piercing",
+    "damage_immunities": null,
+    "condition_immunities": "charmed, frightened",
+    "senses": "darkvision 60 ft., passive Perception 8",
+    "languages": null,
+    "cr": 5,
+    "xp": 1800,
+    "traits": [
+      { "name": "Sovereign-Aggro", "desc": "If the Stitched can see a creature with 95%+ Blood Purity, it MUST attack that creature on its turn if able. It ignores all other targets. It has advantage on attack rolls against creatures with 95%+ purity." },
+      { "name": "Unstable Flesh", "desc": "When the Stitched takes slashing damage, creatures within 5 feet must succeed on a DC 13 Dexterity saving throw or take 3 (1d6) acid damage from sprayed alchemical fluids." },
+      { "name": "Regeneration", "desc": "The Stitched regains 5 hit points at the start of its turn if it has at least 1 hit point. This regeneration is suppressed for 1 round if the Stitched takes fire or radiant damage." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "desc": "The Stitched makes two Slam attacks. It may replace one with Graft-Tear." },
+      { "name": "Slam", "desc": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 14 (2d8+5) bludgeoning damage." },
+      { "name": "Graft-Tear", "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 12 (2d6+5) slashing damage, and the target must succeed on a DC 14 Constitution saving throw or have its maximum hit points reduced by the damage taken until it finishes a long rest. The Stitched absorbs the stolen vitality, gaining temporary hit points equal to the damage dealt." }
+    ],
+    "legendary_actions": null,
+    "lair_actions": null,
+    "lore": "Fresh Stitched Abominations are the results of recent illegal alchemical experiments — typically by House Tenebris flesh-shapers or rogue Cult scientists. They are mindless, driven solely by hunger and an instinctive homing sense toward uncorrupted Sovereign essence. A Stitched will bulldoze through walls, allies, and obstacles to reach a 95%+ purity being, making them both terrifying weapons and uncontrollable liabilities. Their bodies leak alchemical slurry that burns on contact.",
+    "source_tags": ["solis-grave", "underground", "abyss", "frozen"]
+  },
+  {
+    "name": "Abomination — Titan",
+    "size": "Huge",
+    "type": "Abomination",
+    "alignment": "Chaotic Evil",
+    "ac": 16,
+    "hp": "230 (20d12+100)",
+    "speed": "40 ft.",
+    "stats": { "str": 26, "dex": 12, "con": 22, "int": 6, "wis": 10, "cha": 4 },
+    "saving_throws": { "str": 12, "con": 10, "wis": 4 },
+    "skills": { "perception": 4 },
+    "damage_vulnerabilities": null,
+    "damage_resistances": "bludgeoning, piercing, and slashing from nonmagical attacks",
+    "damage_immunities": "acid, poison",
+    "condition_immunities": "charmed, frightened, poisoned, stunned",
+    "senses": "darkvision 120 ft., passive Perception 14",
+    "languages": null,
+    "cr": 16,
+    "xp": 15000,
+    "traits": [
+      { "name": "Sovereign-Aggro (Enhanced)", "desc": "The Titan can sense creatures with 95%+ Blood Purity within 500 feet. It MUST move toward and attack such a creature if able. It has advantage on all attack rolls against 95%+ purity targets and deals an additional 3d6 damage to them." },
+      { "name": "Titanic Regeneration", "desc": "The Titan regains 15 hit points at the start of its turn. Only radiant damage suppresses this regeneration until the end of the Titan's next turn." },
+      { "name": "Aether Absorption", "desc": "When the Titan is targeted by a spell, the caster must make a DC 18 Spell Safety check (Constitution saving throw). On a failure, the spell is absorbed — it has no effect, and the Titan regains hit points equal to twice the spell's level. This triggers regardless of the caster's Purity." },
+      { "name": "Unstoppable", "desc": "The Titan cannot be grappled, restrained, or shoved. It ignores difficult terrain." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "desc": "The Titan makes three attacks: one Bite and two Crushing Limbs." },
+      { "name": "Bite", "desc": "Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 22 (3d8+8) piercing damage plus 10 (3d6) acid damage." },
+      { "name": "Crushing Limb", "desc": "Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 18 (3d6+8) bludgeoning damage. If the target is Large or smaller, it must succeed on a DC 20 Strength saving throw or be grappled." },
+      { "name": "Acid Torrent (Recharge 5-6)", "desc": "The Titan vomits alchemical waste in a 30-foot cone. Each creature in the area must make a DC 18 Dexterity saving throw, taking 45 (10d8) acid damage on a failed save, or half as much on a successful one. The area becomes difficult terrain coated in corrosive sludge — creatures starting their turn there take 7 (2d6) acid damage." }
+    ],
+    "legendary_actions": [
+      { "name": "Charge", "desc": "The Titan moves up to half its speed toward the nearest creature with 95%+ Blood Purity without provoking opportunity attacks." },
+      { "name": "Regurgitate (Costs 2 Actions)", "desc": "The Titan ejects a smaller Abomination (Stitched, 1 HP remaining) into an unoccupied space within 20 feet. This creature acts on initiative count 0." }
+    ],
+    "lair_actions": null,
+    "lore": "Titans are the 'successful' Abominations — stable enough to function as war machines but insane enough to be uncontrollable. Created by House Tenebris during the Flesh Wars, each Titan was stitched from dozens of failed Archon candidates fused with animal tissue and alchemical binding agents. Only one in twenty survived the process with mobility; only one in fifty achieved the horrifying intelligence of a Titan. They were abandoned in the northern wastes when they proved more dangerous to their creators than their enemies. Titans retain one directive burned into what passes for their consciousness: CONSUME THE PURE.",
+    "source_tags": ["solis-grave", "frozen", "abyss"]
+  },
+  {
+    "name": "Obsidian Blood-Judge",
+    "size": "Medium",
+    "type": "Humanoid (Archon)",
+    "alignment": "Lawful Evil",
+    "ac": 16,
+    "hp": "90 (12d8+36)",
+    "speed": "30 ft.",
+    "stats": { "str": 12, "dex": 14, "con": 16, "int": 18, "wis": 20, "cha": 18 },
+    "saving_throws": { "int": 8, "wis": 9, "cha": 8 },
+    "skills": { "insight": 9, "perception": 9, "investigation": 8 },
+    "damage_vulnerabilities": null,
+    "damage_resistances": "psychic",
+    "damage_immunities": null,
+    "condition_immunities": "charmed",
+    "senses": "darkvision 60 ft., passive Perception 19",
+    "languages": "Common, Draconic, Deep-Tongue",
+    "cr": 9,
+    "xp": 5000,
+    "traits": [
+      { "name": "Purity Sight (Greater)", "desc": "As a bonus action, the Blood-Judge reads the exact Blood Purity percentage of any creature within 60 feet. It can also detect if a purity reading has been magically altered or forged." },
+      { "name": "Law-Bender", "desc": "The Blood-Judge has a permanent +2 bonus to all Deception and Insight checks. It can cast Zone of Truth (DC 16) at will without components or Spell Safety risk (this is a Church-granted ability, not spellcasting)." },
+      { "name": "Judicial Authority", "desc": "If the Blood-Judge declares a creature guilty of heresy or illegal spellcasting, all allied Inquisitors within 60 feet gain advantage on attack rolls against that creature for 1 minute." }
+    ],
+    "actions": [
+      { "name": "Glass-Blade Rapier", "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 8 (1d8+2) piercing damage plus 7 (2d6) psychic damage. The psychic damage represents the weight of judgment." },
+      { "name": "Sentence (Recharge 5-6)", "desc": "The Blood-Judge pronounces a sentence on a creature it can see within 60 feet. The target must make a DC 17 Wisdom saving throw. On failure, the Blood-Judge selects one: *Guilty* — target is paralyzed for 1 minute (save ends at end of each turn); *Impure* — target takes 28 (8d6) radiant damage and its Spell Safety DC increases by 5 for 1 hour; *Heretic* — target is marked. All Church-affiliated creatures have advantage on tracking and attacking it for 24 hours." }
+    ],
+    "legendary_actions": null,
+    "lair_actions": null,
+    "lore": "Blood-Judges are the legal arm of House Obsidian and the Church. They preside over Ascension ceremonies, purity hearings, and heresy trials. A Blood-Judge's word is execution — they can sentence anyone below Archon caste without trial. Above Archon, they must convene a tribunal of three Judges. Their glass-blade rapiers are forged from the same Blood Crystal material used in Ascension testing; each strike resonates with the victim's own purity, causing psychic backlash proportionate to how 'impure' the Judge has declared them.",
+    "source_tags": ["solis-grave", "urban", "civilized"]
+  },
+  {
+    "name": "Sump Drake",
+    "size": "Large",
+    "type": "Dragon (Drake)",
+    "alignment": "Unaligned",
+    "ac": 15,
+    "hp": "85 (10d10+30)",
+    "speed": "20 ft., swim 40 ft.",
+    "stats": { "str": 18, "dex": 14, "con": 16, "int": 4, "wis": 12, "cha": 6 },
+    "saving_throws": { "dex": 5, "con": 6 },
+    "skills": { "stealth": 5, "perception": 4 },
+    "damage_vulnerabilities": null,
+    "damage_resistances": "acid",
+    "damage_immunities": null,
+    "condition_immunities": null,
+    "senses": "darkvision 60 ft., passive Perception 14",
+    "languages": null,
+    "cr": 4,
+    "xp": 1100,
+    "traits": [
+      { "name": "Sovereign Cower", "desc": "If a creature with 95%+ Blood Purity is within 30 feet, the Drake must make a DC 14 Wisdom saving throw at the start of each of its turns. On failure, it is frightened and must use its movement to retreat. It repeats the save at the end of each turn." },
+      { "name": "Amphibious", "desc": "The Drake can breathe air and water." },
+      { "name": "Swamp Camouflage", "desc": "The Drake has advantage on Dexterity (Stealth) checks made to hide in swampy terrain or murky water." }
+    ],
+    "actions": [
+      { "name": "Bite", "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8+4) piercing damage." },
+      { "name": "Tail Sweep", "desc": "Melee Weapon Attack: +6 to hit, reach 10 ft., one target. Hit: 11 (2d6+4) bludgeoning damage. Target must succeed on a DC 14 Strength saving throw or be knocked prone." },
+      { "name": "Acid Spit (Recharge 5-6)", "desc": "Ranged Weapon Attack: +5 to hit, range 30/60 ft., one target. Hit: 18 (4d8) acid damage. The target's AC is reduced by 1 until it takes an action to wipe off the corrosive sludge." }
+    ],
+    "legendary_actions": null,
+    "lair_actions": null,
+    "lore": "Sump Drakes are the most common lesser dragon in the inhabited regions of Solis-Grave. They infest the canal systems, sump-pits, and underground waterways beneath the great cities. Adult Sump Drakes reach 12 feet in length and hunt in mated pairs, dragging prey into murky water to drown before feeding. Their instinctive terror of Sovereign-class beings is absolute — a quirk of their mutated draconic ancestry that even the Church cannot explain. Sump-Blood canal-runners have learned to carry Sovereign-fragments (counterfeit or real) as drake repellent.",
+    "source_tags": ["solis-grave", "swamp", "underground", "urban"]
+  },
+  {
+    "name": "Crystal-Bound Lich",
+    "size": "Medium",
+    "type": "Undead (Archon)",
+    "alignment": "Neutral Evil",
+    "ac": 17,
+    "hp": "150 (20d8+60)",
+    "speed": "30 ft.",
+    "stats": { "str": 10, "dex": 16, "con": 16, "int": 22, "wis": 14, "cha": 20 },
+    "saving_throws": { "con": 10, "int": 13, "wis": 9 },
+    "skills": { "arcana": 20, "history": 13, "perception": 9 },
+    "damage_vulnerabilities": null,
+    "damage_resistances": "cold, lightning, necrotic",
+    "damage_immunities": "poison; bludgeoning, piercing, and slashing from nonmagical attacks",
+    "condition_immunities": "charmed, exhaustion, frightened, paralyzed, poisoned",
+    "senses": "truesight 120 ft., passive Perception 19",
+    "languages": "Common, Draconic, Deep-Tongue, Primordial",
+    "cr": 17,
+    "xp": 18000,
+    "traits": [
+      { "name": "Crystal Phylactery", "desc": "The Lich's soul is bound to a Pristine Blood Crystal hidden somewhere in the world. If the Lich is destroyed, it reforms near its phylactery in 1d10 days unless the phylactery is shattered (requires a DC 20 Strength check or 50+ damage in a single strike)." },
+      { "name": "Turn Resistance", "desc": "The Lich has advantage on saving throws against any effect that turns undead." },
+      { "name": "Spell Safety Mastery (85% Purity)", "desc": "The Lich's Spell Safety DC is 3. It has advantage on Spell Safety checks. On the rare failure, Aether Burn damages its crystal phylactery instead of its body — adding a unique risk/reward to its spellcasting." }
+    ],
+    "actions": [
+      { "name": "Paralyzing Touch", "desc": "Melee Spell Attack: +13 to hit, reach 5 ft., one creature. Hit: 10 (3d6) cold damage. The target must succeed on a DC 20 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns." },
+      { "name": "Crystal Shard (Cantrip)", "desc": "Ranged Spell Attack: +13 to hit, range 120 ft., one target. Hit: 14 (4d6) piercing damage from crystallized Aether. No Spell Safety check required (cantrip)." },
+      { "name": "Aether Storm (Recharge 5-6, 5th-level)", "desc": "The Lich casts a storm of raw Aether in a 30-foot radius. Each creature in the area must make a DC 20 Dexterity saving throw, taking 45 (10d8) damage of a random type (d4: 1=fire, 2=lightning, 3=cold, 4=necrotic) on a failed save. The Lich must succeed on a DC 3 Spell Safety check (CON save, advantage) or the damage rebounds: half the damage dealt is also dealt to the Lich's phylactery (tracked separately by DM)." }
+    ],
+    "legendary_actions": [
+      { "name": "Cantrip", "desc": "The Lich casts Crystal Shard." },
+      { "name": "Phylactery Pulse (Costs 2 Actions)", "desc": "The Lich's phylactery pulses, healing the Lich for 15 hit points. If at full HP, it gains 15 temporary hit points instead." },
+      { "name": "Disrupt Purity (Costs 3 Actions)", "desc": "The Lich targets one creature it can see within 60 feet. The target must make a DC 20 Constitution saving throw. On failure, its effective Blood Purity is reduced by 20 (to a minimum of 0%) for 1 hour. If the target is casting a spell, the Spell Safety DC increases by 5 for this casting." }
+    ],
+    "lair_actions": [
+      { "name": "Crystal Resonance", "desc": "All Blood Crystals in the lair hum with unstable energy. Each creature with 15%+ Blood Purity takes 5 (1d10) psychic damage." },
+      { "name": "Summon Shards", "desc": "Animated Blood Crystal Shards (CR 4, see separate entry) rise from the floor in 1d4 unoccupied spaces." }
+    ],
+    "lore": "Crystal-Bound Liches are the ultimate expression of Archon hubris — ancient casters who bound their souls to Pristine Blood Crystals to cheat death. Unlike traditional liches who feed on souls, these undead sustain themselves through their crystal's connection to ambient Aether. They are not inherently evil, but centuries of isolation and the slow corruption of the crystal-phylactery drives most to madness. Their Aether Storm spell is legendary: a controlled Aether Burn directed outward. The risk that the damage rebounds to the phylactery is the Lich's eternal gamble — one day, the crystal will shatter.",
+    "source_tags": ["solis-grave", "ruins", "underground", "mountain"]
+  }
+]
