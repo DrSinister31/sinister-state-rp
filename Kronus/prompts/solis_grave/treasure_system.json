@@ -1,0 +1,468 @@
+{
+  "meta": {
+    "system": "Solis-Grave Treasure & Loot System",
+    "version": "1.0.0",
+    "agent": "Ourobora Hoard Architect",
+    "currency": {
+      "gold_imperial_crown": { "abbreviation": "GC", "value_in_ss": 100, "value_in_cf": 10000, "used_by": "Nobility, major purchases" },
+      "silver_scale": { "abbreviation": "SS", "value_in_cf": 100, "used_by": "Merchants, trade" },
+      "copper_sump_farthing": { "abbreviation": "CF", "base_unit": true, "used_by": "Commoners, daily needs" }
+    },
+    "aether_core_elements": ["Fire", "Storm", "Void", "Earth", "Frost", "Flesh", "Law", "Wild"]
+  },
+
+  "aether_core_elements_table": {
+    "description": "Roll d8 to determine Aether-Core element",
+    "die": "d8",
+    "entries": [
+      { "roll": 1, "element": "Fire", "color": "Crimson, hot", "found_in": "Drakes, Ignis constructs, mountain regions" },
+      { "roll": 2, "element": "Storm", "color": "Pulsing blue-white", "found_in": "Vortex beasts, coastal creatures, sky predators" },
+      { "roll": 3, "element": "Void", "color": "Absorbs light, cold", "found_in": "Abominations, Tenebris experiments, Abyss monsters" },
+      { "roll": 4, "element": "Earth", "color": "Brown, heavy, warm", "found_in": "Stone-Blood regions, mountain beasts, Ferrum constructs" },
+      { "roll": 5, "element": "Frost", "color": "Pale blue, cold mist", "found_in": "Northern wastes, Frost Drakes, Deep-Blood territories" },
+      { "roll": 6, "element": "Flesh", "color": "Pink-gray, pulses", "found_in": "Tenebris monsters, undead, flesh-grafted constructs" },
+      { "roll": 7, "element": "Law", "color": "Gold-white, hums", "found_in": "Obsidian constructs, Inquisitors, Church-blessed creatures" },
+      { "roll": 8, "element": "Wild", "color": "Unstable, shifts colors randomly", "found_in": "Aether-warped creatures, random encounters, chaotic zones" }
+    ]
+  },
+
+  "aether_core_tiers": [
+    { "tier": "Fractured", "source_cr": "1-4", "value_gc": "10-50", "use": "Cantrip focus, weapon coating (+1d4 elemental for 1 attack)" },
+    { "tier": "Intact", "source_cr": "5-10", "value_gc": "100-500", "use": "1st-3rd level spell focus, potion crafting" },
+    { "tier": "Pristine", "source_cr": "11-16", "value_gc": "1000-5000", "use": "4th-6th level spell focus, enchantment crafting" },
+    { "tier": "Sovereign-Fragment", "source_cr": "17-30", "value_gc": "10000+", "use": "7th-9th level spell focus, legendary item crafting" }
+  ],
+
+  "individual_treasure": {
+    "cr_0_4": {
+      "die": "d100",
+      "entries": [
+        { "roll": "01-30", "treasure": "Nothing" },
+        { "roll": "31-60", "treasure": "2d6 Copper Sump Farthings (CF)" },
+        { "roll": "61-70", "treasure": "1d6 Silver Scales (SS)" },
+        { "roll": "71-80", "treasure": "3d6 SS" },
+        { "roll": "81-90", "treasure": "1d4 Gold Crowns (GC)" },
+        { "roll": "91-95", "treasure": "1d4 GC + 3d6 SS + Fractured Aether-Core (roll d8 for element)" },
+        { "roll": "96-100", "treasure": "2d6 GC + 1d4 Intact Aether-Cores (CR 5+ monster drop)" }
+      ]
+    },
+    "cr_5_10": {
+      "die": "d100",
+      "entries": [
+        { "roll": "01-20", "treasure": "Nothing" },
+        { "roll": "21-40", "treasure": "4d6 SS" },
+        { "roll": "41-55", "treasure": "1d6 GC + 2d6 SS" },
+        { "roll": "56-70", "treasure": "2d6 GC" },
+        { "roll": "71-80", "treasure": "3d6 GC + Intact Aether-Core (roll d8 for element)" },
+        { "roll": "81-90", "treasure": "5d6 GC + 1d4 Intact Aether-Cores" },
+        { "roll": "91-95", "treasure": "2d6 GC + 1 minor magic item (roll on Magic Item Table A)" },
+        { "roll": "96-100", "treasure": "3d6 GC + 1 Intact Core + roll on Magic Item Table B" }
+      ]
+    },
+    "cr_11_16": {
+      "die": "d100",
+      "entries": [
+        { "roll": "01-10", "treasure": "Nothing" },
+        { "roll": "11-30", "treasure": "4d6 GC" },
+        { "roll": "31-50", "treasure": "2d6 GC + Pristine Aether-Core (roll d8 for element)" },
+        { "roll": "51-65", "treasure": "4d6 GC + 1d3 Pristine Cores" },
+        { "roll": "66-80", "treasure": "4d6 GC + roll on Magic Item Table C" },
+        { "roll": "81-90", "treasure": "4d6 GC + roll on Magic Item Table D" },
+        { "roll": "91-95", "treasure": "4d6 GC + roll on Magic Item Table E" },
+        { "roll": "96-100", "treasure": "4d6 GC + roll on Magic Item Table F + 1 Sovereign-Fragment Core" }
+      ]
+    },
+    "cr_17_plus": {
+      "die": "d100",
+      "entries": [
+        { "roll": "01-05", "treasure": "Nothing" },
+        { "roll": "06-25", "treasure": "3d6 GC + 1d3 Pristine Cores" },
+        { "roll": "26-45", "treasure": "5d6 GC + roll on Magic Item Table D" },
+        { "roll": "46-65", "treasure": "5d6 GC + roll on Magic Item Table E" },
+        { "roll": "66-80", "treasure": "5d6 GC + roll on Magic Item Table F" },
+        { "roll": "81-90", "treasure": "5d6 GC + roll on Magic Item Table G" },
+        { "roll": "91-95", "treasure": "5d6 GC + roll on Magic Item Table H" },
+        { "roll": "96-100", "treasure": "5d6 GC + roll on Magic Item Table I + 1d2 Sovereign-Fragment Cores" }
+      ]
+    }
+  },
+
+  "hoard_treasure": {
+    "dragon_hoards": [
+      {
+        "type": "Drake Lair",
+        "cr_range": "2-5",
+        "base_gc": "2d6 × 10 GC",
+        "cores": "1d4 Fractured",
+        "magic_items": "Roll on Magic Item Table A",
+        "art_objects": "1d4 Dragon-Bone Relics (25 GC each)"
+      },
+      {
+        "type": "Wyvern Nest",
+        "cr_range": "6-10",
+        "base_gc": "2d6 × 50 GC",
+        "cores": "1d6 Intact + 2d6 Fractured",
+        "magic_items": "Roll on Magic Item Table B",
+        "art_objects": "1d6 Art Objects (Table O)"
+      },
+      {
+        "type": "Archon Lair",
+        "cr_range": "8-14",
+        "base_gc": "2d6 × 100 GC",
+        "cores": "1d4 Pristine + 2d6 Intact",
+        "magic_items": "Roll on Magic Item Table D",
+        "art_objects": "2d4 Art Objects (Table O) + House Signet Ring"
+      },
+      {
+        "type": "Scion Sanctum",
+        "cr_range": "12-18",
+        "base_gc": "2d6 × 500 GC",
+        "cores": "1d3 Sovereign-Fragment + 2d4 Pristine",
+        "magic_items": "Roll on Magic Item Table G",
+        "art_objects": "2d6 Art Objects + 1 Legendary Map"
+      },
+      {
+        "type": "Sovereign Lair",
+        "cr_range": "18-30",
+        "base_gc": "2d6 × 1,000 GC",
+        "cores": "1d6 Sovereign-Fragment + 3d6 Pristine",
+        "magic_items": "Roll on Magic Item Tables H + I",
+        "art_objects": "4d6 Art Objects + 1 Artifact"
+      }
+    ],
+    "faction_hoards": [
+      { "faction": "House Ignis War Chest", "base_gc": "3d6 × 100 GC", "specialty_loot": "Flametongue weapons, military commissions, scorched-earth maps" },
+      { "faction": "House Obsidian Vault", "base_gc": "2d6 × 200 GC", "specialty_loot": "Inquisitor Seals, blood purity records, blackmail documents, Law-Bound weapons" },
+      { "faction": "House Ferrum Armory", "base_gc": "1d6 × 100 GC", "specialty_loot": "+1 armor, shield wall tactical manuals, uncut Aether-Cores" },
+      { "faction": "House Vortex Cache", "base_gc": "3d6 × 100 GC", "specialty_loot": "Sky-charts, navigation tools, Storm-Channeled weapons, imported goods" },
+      { "faction": "House Tenebris Lab", "base_gc": "2d6 × 50 GC (priceless specimens)", "specialty_loot": "Flesh-fusion components, Void-Touched weapons, illegal research notes, preserved body parts" },
+      { "faction": "Church of Five Skulls Vault", "base_gc": "2d6 × 200 GC", "specialty_loot": "Inquisitorial Smite scrolls, saint relics (Aether Purifier x10), tithing records" },
+      { "faction": "Cult of the Sixth Hideout", "base_gc": "1d6 × 10 GC (poor)", "specialty_loot": "Prophecy fragments, Penitent's Chains, illegal printing press, contact lists" }
+    ]
+  },
+
+  "region_loot": {
+    "ruins": {
+      "description": "Ancient Civilization ruins",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-5", "find": "Dragon-Bone Relic (25 GC art object)" },
+        { "roll": "6-8", "find": "Fractured Aether-Core (roll d8 element)" },
+        { "roll": "9-11", "find": "Ancient Text (historical lore, 50 GC to scholar)" },
+        { "roll": "12-13", "find": "Preserved Sovereign Scale (500 GC, enchanting component)" },
+        { "roll": "14-15", "find": "Map fragment to nearby dragon lair" },
+        { "roll": "16", "find": "Intact Aether-Core (roll element)" },
+        { "roll": "17", "find": "Roll on Magic Item Table B" },
+        { "roll": "18", "find": "Pre-Five-Sovereign Artifact (1,000+ GC, historical)" },
+        { "roll": "19", "find": "Cult of the Sixth prophecy fragment (plot item)" },
+        { "roll": "20", "find": "Roll on Magic Item Table D" }
+      ]
+    },
+    "urban": {
+      "description": "Urban / Noble Districts",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-5", "find": "2d6 GC in loose coins / forgotten purse" },
+        { "roll": "6-8", "find": "House Signet Ring (25-100 GC based on House)" },
+        { "roll": "9-10", "find": "Inquisitor's Seal (legal spellcasting permit)" },
+        { "roll": "11-12", "find": "Blackmail document (plot hook)" },
+        { "roll": "13-14", "find": "Minor enchanted jewelry (50 GC)" },
+        { "roll": "15-16", "find": "Trade contract worth 2d6 × 10 GC" },
+        { "roll": "17", "find": "Roll on Magic Item Table A" },
+        { "roll": "18", "find": "Blood purity record of a known NPC (plot info)" },
+        { "roll": "19", "find": "Forgery Kit with House seals" },
+        { "roll": "20", "find": "Roll on Magic Item Table C" }
+      ]
+    },
+    "wilderness": {
+      "description": "Wilderness / Forests",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-5", "find": "1d4 GC in coins dropped by travelers" },
+        { "roll": "6-8", "find": "Healing herbs (2d4 Potions of Healing equivalent)" },
+        { "roll": "9-10", "find": "Fractured Aether-Core (Wild element)" },
+        { "roll": "11-12", "find": "Abandoned campsite: 2d6 SS + 1d4 rations" },
+        { "roll": "13-14", "find": "Monster part (25-100 GC to alchemist)" },
+        { "roll": "15-16", "find": "Old shrine: 2d4 GC offering + 1 minor blessing" },
+        { "roll": "17", "find": "Roll on Magic Item Table A" },
+        { "roll": "18", "find": "Map to nearby dungeon entrance" },
+        { "roll": "19", "find": "Petrified dragon egg (500 GC, inert but valuable)" },
+        { "roll": "20", "find": "Roll on Magic Item Table B" }
+      ]
+    },
+    "underground": {
+      "description": "Underground / Sump-Canals / Abyss",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-5", "find": "3d6 CF (commoner trail)" },
+        { "roll": "6-8", "find": "Sump-Ration cache (7 days of food, terrible taste)" },
+        { "roll": "9-10", "find": "Cult of the Sixth pamphlet (illegal, plot info)" },
+        { "roll": "11-12", "find": "Intact Aether-Core (Void element)" },
+        { "roll": "13-14", "find": "Smuggler's stash: 2d6 GC + contraband goods" },
+        { "roll": "15-16", "find": "Dragon-Bone fragment (100 GC, spell component)" },
+        { "roll": "17", "find": "Roll on Magic Item Table B (Void-Touched items common)" },
+        { "roll": "18", "find": "Abandoned Tenebris lab equipment (Alchemist's Supplies, rare reagents)" },
+        { "roll": "19", "find": "Sump-Blood treasure map (leads to hidden cache)" },
+        { "roll": "20", "find": "Roll on Magic Item Table D" }
+      ]
+    },
+    "mountains": {
+      "description": "Mountains / Sulfur Wastes",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-5", "find": "1d6 GC in mineral flakes" },
+        { "roll": "6-8", "find": "Uncut gemstone (10-100 GC based on d10)" },
+        { "roll": "9-10", "find": "Fractured Aether-Core (Earth or Fire element)" },
+        { "roll": "11-12", "find": "Abandoned mining claim (tools, 3d6 GC in ore)" },
+        { "roll": "13-14", "find": "Fossilized dragon bone (250 GC, museum/library)" },
+        { "roll": "15-16", "find": "House Pyre forge-cache: Smith's Tools + 2d6 GC" },
+        { "roll": "17", "find": "Roll on Magic Item Table C (heavy armor/weapons)" },
+        { "roll": "18", "find": "Intact Aether-Core (Earth element)" },
+        { "roll": "19", "find": "Dragon chain fragment (plot item — who broke free?)" },
+        { "roll": "20", "find": "Roll on Magic Item Table E" }
+      ]
+    },
+    "coastal": {
+      "description": "Coastal / Islands",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-5", "find": "2d6 SS in trade coins" },
+        { "roll": "6-8", "find": "Imported exotic goods (50-200 GC value)" },
+        { "roll": "9-10", "find": "Vortex navigation chart (reveals hidden island)" },
+        { "roll": "11-12", "find": "Intact Aether-Core (Storm element)" },
+        { "roll": "13-14", "find": "Shipwreck salvage: 2d6 × 10 GC in trade goods" },
+        { "roll": "15-16", "find": "Storm-Channeled weapon (uncommon)" },
+        { "roll": "17", "find": "Roll on Magic Item Table B" },
+        { "roll": "18", "find": "Message in bottle — SOS from Vortex outpost" },
+        { "roll": "19", "find": "Pristine Aether-Core (Storm element)" },
+        { "roll": "20", "find": "Roll on Magic Item Table D" }
+      ]
+    },
+    "frozen_wastes": {
+      "description": "Frozen Wastes (North)",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-5", "find": "Frost-resistant ration cache (7 days)" },
+        { "roll": "6-8", "find": "Intact Aether-Core (Frost element)" },
+        { "roll": "9-10", "find": "Preserved ancient specimen (500 GC to Tenebris)" },
+        { "roll": "11-12", "find": "Abandoned House Tenebris flesh-lab: 2d6 × 10 GC in rare components" },
+        { "roll": "13-14", "find": "Frost-Walker pelt (250 GC, cold resistance cloak)" },
+        { "roll": "15-16", "find": "Map to frozen Sovereign grave (plot hook)" },
+        { "roll": "17", "find": "Roll on Magic Item Table B" },
+        { "roll": "18", "find": "Void-Touched weapon (uncommon, see equipment_guide.md Part 4 enchantments)" },
+        { "roll": "19", "find": "Living specimen in stasis (companion or danger)" },
+        { "roll": "20", "find": "Roll on Magic Item Table E" }
+      ]
+    }
+  },
+
+  "magic_items": {
+    "table_a": {
+      "description": "Minor Uncommon — CR 0-4 loot",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-3", "item": "Aether Purifier, Minor — Potion of Healing (2d4+2)", "ref": "equipment_guide.md §6" },
+        { "roll": "4-5", "item": "Scroll: Cantrip (any class, requires 15%+ purity to read)", "ref": "equipment_guide.md §4 scroll rules" },
+        { "roll": "6-7", "item": "Dragon-Bone Charm — Advantage on 1 Spell Safety save, crumbles after use", "ref": "equipment_guide.md §6" },
+        { "roll": "8-9", "item": "Pyre Lantern — Alchemical, burns indefinitely, 30 ft. bright / 60 ft. dim", "ref": "equipment_guide.md §6" },
+        { "roll": "10-11", "item": "+1 Arrow/Bolt (1d4 found, single-use +1 to attack and damage)", "ref": "equipment_guide.md §2" },
+        { "roll": "12-13", "item": "Core Injector Kit — Holds 3 Fractured cores, +1d4 elemental damage for 3 attacks as bonus action", "ref": "equipment_guide.md §6" },
+        { "roll": "14-15", "item": "Blood Crystal Testing Kit — Single-use portable Ascension test, 95% accuracy, illegal without Obsidian permit", "ref": "equipment_guide.md §6" },
+        { "roll": "16-17", "item": "Inquisitor's Seal — Legal spellcasting permit in Obsidian territory", "ref": "equipment_guide.md §6" },
+        { "roll": "18-19", "item": "Cloak of the Sump — Advantage on Stealth in urban/underground (re-flavored Cloak of Elvenkind)", "ref": "equipment_guide.md §6" },
+        { "roll": "20", "item": "Minor Enchanted Weapon — Blaze-Infused or Storm-Channeled (choose), requires 10% purity", "ref": "equipment_guide.md §4 weapon enchantments" }
+      ]
+    },
+    "table_b": {
+      "description": "Uncommon — CR 5-10 loot",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-2", "item": "2d4 Potions of Greater Healing (4d4+4) — Aether Purifier, Major", "ref": "equipment_guide.md §6" },
+        { "roll": "3-4", "item": "+1 Weapon (masterwork, no purity required)", "ref": "equipment_guide.md §2 weapons" },
+        { "roll": "5-6", "item": "+1 Shield — Ferrum standard-issue", "ref": "equipment_guide.md §3 shields" },
+        { "roll": "7-8", "item": "Scroll: 1st-level spell (15%+ purity to cast, Spell Safety applies)", "ref": "equipment_guide.md §4 scroll rules" },
+        { "roll": "9-10", "item": "Intact Aether-Core (choose element)", "ref": "equipment_guide.md §5" },
+        { "roll": "11-12", "item": "Boots of the Ridge — Ignore difficult terrain in mountains (re-flavored Boots of Striding and Springing)", "ref": "equipment_guide.md §6" },
+        { "roll": "13-14", "item": "Goggles of the Deep Sump — Darkvision 60 ft. (re-flavored Goggles of Night)", "ref": "equipment_guide.md §6" },
+        { "roll": "15-16", "item": "Aether-Sack — Bag of Holding, 500 lb. capacity, 64 cu. ft.", "ref": "equipment_guide.md §6" },
+        { "roll": "17-18", "item": "+1 Armor — Ferrum standard-issue", "ref": "equipment_guide.md §3 armor" },
+        { "roll": "19", "item": "Void-Touched Weapon — +1d6 necrotic, crit prevents target HP recovery for 1 round, 25% purity required", "ref": "equipment_guide.md §4 weapon enchantments" },
+        { "roll": "20", "item": "Aether-Warded Armor — Reduce Aether Burn by 1d6, 1/long rest reroll failed Spell Safety save, 10% purity required", "ref": "equipment_guide.md §4 armor enchantments" }
+      ]
+    },
+    "table_c": {
+      "description": "Rare — CR 5-10 hoards. +1 weapons with Minor enchants, Dragon-Scaled armor, Pristine cores, elemental resistance rings.",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-2", "item": "+1 Blaze-Infused Weapon — +1d4 fire damage, glows orange when drawn, 10% purity required. House Ignis forge.", "ref": "equipment_guide.md §4 Blaze-Infused" },
+        { "roll": "3-4", "item": "+1 Storm-Channeled Weapon — Returns when thrown, +20 ft. range, static crackle, 10% purity required. House Vortex forge.", "ref": "equipment_guide.md §4 Storm-Channeled" },
+        { "roll": "5-6", "item": "+1 Law-Bound Weapon — +1 vs chaotic-aligned, glows blue near lies, 10% purity required. House Obsidian forge.", "ref": "equipment_guide.md §4 Law-Bound" },
+        { "roll": "7-8", "item": "Dragon-Scaled Armor — +1 AC, resistance to one element (chosen at forging), 25% purity required.", "ref": "equipment_guide.md §4 Dragon-Scaled" },
+        { "roll": "9-10", "item": "Pristine Aether-Core (choose element from d8 table)", "ref": "equipment_guide.md §5" },
+        { "roll": "11-12", "item": "Ring of Elemental Warding — Resistance to one element (choose), 15% purity required. Re-flavored Ring of Resistance.", "ref": "equipment_guide.md §6 jewelry" },
+        { "roll": "13-14", "item": "Scroll: 2nd-level spell (25%+ purity to cast, Spell Safety DC applies)", "ref": "equipment_guide.md §4 scroll rules" },
+        { "roll": "15-16", "item": "Aether-Warded Shield — +1 AC, reduce Aether Burn by 1d6, 1/long rest reroll failed Spell Safety save.", "ref": "equipment_guide.md §3 shields + §4 Aether-Warded" },
+        { "roll": "17", "item": "Wand of the Sump-Seer — Detect magic at will as an action, 15% purity required.", "ref": "equipment_guide.md §6 wands" },
+        { "roll": "18", "item": "Sovereign-Era Gold Ring — +1 to all Spell Safety saves, 10% purity required.", "ref": "equipment_guide.md §6 jewelry" },
+        { "roll": "19", "item": "Void-Touched Armor — +1 AC, 1d6 necrotic damage to attacker on melee hit, 25% purity required. House Tenebris forge.", "ref": "equipment_guide.md §4 Void-Touched + §4 armor enchantments" },
+        { "roll": "20", "item": "Storm-Channeled +1 Weapon with Pristine Storm Core — Returns when thrown, +20 ft. range, +1 attack/damage, Pristine Storm Core included.", "ref": "equipment_guide.md §4 Storm-Channeled + §5" }
+      ]
+    },
+    "table_d": {
+      "description": "Rare — CR 11-16. +2 weapons, Greater enchants, Sovereign weapons, spell scrolls 2nd-3rd level.",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-2", "item": "+2 Weapon (masterwork, no purity required)", "ref": "equipment_guide.md §2 weapons" },
+        { "roll": "3-4", "item": "Sovereign's Edge Weapon — +2 attack/damage, reduce Spell Safety DC by 2 when used as focus, 50% purity required. Lost Sovereign technique.", "ref": "equipment_guide.md §4 Sovereign's Edge" },
+        { "roll": "5-6", "item": "Dragon-Scaled Armor +1 — +1 AC (base) + resistance to one element, 25% purity required.", "ref": "equipment_guide.md §4 Dragon-Scaled" },
+        { "roll": "7-8", "item": "Scroll: 3rd-level spell (25%+ purity to cast, Spell Safety DC applies)", "ref": "equipment_guide.md §4 scroll rules" },
+        { "roll": "9-10", "item": "1d3 Pristine Aether-Cores (choose elements from d8 table)", "ref": "equipment_guide.md §5" },
+        { "roll": "11-12", "item": "Mirage-Weave Cloak — Attacks against wearer have disadvantage until first hit each round. 10% purity. Re-flavored Cloak of Displacement.", "ref": "equipment_guide.md §6 clothing" },
+        { "roll": "13-14", "item": "Inquisitor's Ward-Ring — +1 AC and +1 to all saves. 15% purity required. Re-flavored Ring of Protection.", "ref": "equipment_guide.md §6 jewelry" },
+        { "roll": "15-16", "item": "Vortex Wind-Bracers — +2 damage on ranged weapon attacks, 10% purity required. Re-flavored Bracers of Archery.", "ref": "equipment_guide.md §6 bracers" },
+        { "roll": "17-18", "item": "Sovereign-Fragment Core (choose element from d8 table)", "ref": "equipment_guide.md §5" },
+        { "roll": "19", "item": "+2 Armor — Ferrum masterwork plate.", "ref": "equipment_guide.md §3 armor" },
+        { "roll": "20", "item": "Greater Void-Touched Weapon — +2 attack/damage, +2d6 necrotic on hit, 50% purity required. House Tenebris forge.", "ref": "equipment_guide.md §4 Void-Touched (upgraded)" }
+      ]
+    },
+    "table_e": {
+      "description": "Very Rare — CR 11-16 hoards. +2 armor, Sovereign-Mantle armor, legendary creature parts, spell scrolls 4th-5th level.",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-2", "item": "+2 Armor — Ferrum Iron-Bound masterwork plate.", "ref": "equipment_guide.md §3 armor" },
+        { "roll": "3-4", "item": "Sovereign Mantle Armor — +2 AC, when reduced to 0 HP drop to 1 HP instead (1/long rest), 50% purity required.", "ref": "equipment_guide.md §4 Sovereign Mantle" },
+        { "roll": "5-6", "item": "+2 Sovereign's Edge Weapon — +3 total, reduce Spell Safety DC by 2 when used as focus, 50% purity required.", "ref": "equipment_guide.md §4 Sovereign's Edge + §2" },
+        { "roll": "7-8", "item": "Scroll: 4th-level spell (50%+ purity to cast, Spell Safety DC applies)", "ref": "equipment_guide.md §4 scroll rules" },
+        { "roll": "9-10", "item": "Scroll: 5th-level spell (50%+ purity required, Spell Safety DC applies)", "ref": "equipment_guide.md §4 scroll rules" },
+        { "roll": "11-12", "item": "Preserved Sovereign Scale — 500 GC enchanting component. Used to craft Sovereign-tier enchantments.", "ref": "equipment_guide.md §5" },
+        { "roll": "13-14", "item": "Drake-Heart Amulet — Once per long rest, gain fire resistance for 1 hour. 25% purity required.", "ref": "equipment_guide.md §6 jewelry" },
+        { "roll": "15-16", "item": "+2 Shield with Aether-Warded enchantment — +3 AC total, reduce Aether Burn by 1d6, 1/long reroll Spell Safety.", "ref": "equipment_guide.md §3 shields + §4 Aether-Warded" },
+        { "roll": "17", "item": "Frost-Walker Pelt Cloak — Cold resistance permanently while worn, 25% purity required. Made from Frost-Walker hide.", "ref": "equipment_guide.md §6 clothing" },
+        { "roll": "18", "item": "Ring of Spell Storing — Holds up to 3 spell levels, 25% purity to store/retrieve. Re-flavored as 'Aether-Ring'.", "ref": "equipment_guide.md §6 jewelry" },
+        { "roll": "19", "item": "Vortex Sky-Mount Hippogriff Egg — Hatches in 2d4 weeks. Requires House Vortex license or face execution.", "ref": "equipment_guide.md §8 mounts" },
+        { "roll": "20", "item": "Wyvern-Scale Half Plate — AC 15 + DEX (max 2), fire resistance, 15% purity. Scion-hunter trophy armor.", "ref": "equipment_guide.md §3 + §4 Dragon-Scaled" }
+      ]
+    },
+    "table_f": {
+      "description": "Very Rare — CR 17+. +3 weapons, Pristine cores in quantity, attribute-boosting items (re-flavored).",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-3", "item": "+3 Weapon (masterwork, no purity required)", "ref": "equipment_guide.md §2 weapons" },
+        { "roll": "4-5", "item": "+3 Sovereign's Edge Weapon — +4 total, reduce Spell Safety DC by 2 when used as focus, 50% purity required.", "ref": "equipment_guide.md §4 Sovereign's Edge + §2" },
+        { "roll": "6-7", "item": "2d6 Pristine Aether-Cores (choose elements from d8 table)", "ref": "equipment_guide.md §5" },
+        { "roll": "8-9", "item": "Sovereign's Mantle Armor +1 — +3 AC total, 1/long rest survive fatal blow at 1 HP, 50% purity required.", "ref": "equipment_guide.md §4 Sovereign Mantle" },
+        { "roll": "10-11", "item": "Gauntlets of the Blood-Ogre — STR set to 19 while worn, 25% purity required. Stone-Blood lineage.", "ref": "equipment_guide.md §6 gauntlets" },
+        { "roll": "12-13", "item": "Circlet of the Archon — INT set to 19 while worn, 25% purity required. Citadel-crafted.", "ref": "equipment_guide.md §6 headwear" },
+        { "roll": "14-15", "item": "Amulet of the Sixth — CHA set to 19 while worn, 25% purity required. Cult of the Sixth origin (illegal to own).", "ref": "equipment_guide.md §6 jewelry" },
+        { "roll": "16-17", "item": "2d4 Sovereign-Kin Scales — 500 GC each, Sovereign-tier enchanting material.", "ref": "equipment_guide.md §5" },
+        { "roll": "18", "item": "+3 Shield — Ferrum Wall-Shield, masterwork.", "ref": "equipment_guide.md §3 shields" },
+        { "roll": "19", "item": "Pristine Aether-Core Set — One of each of the 8 elements (complete collection).", "ref": "equipment_guide.md §5" },
+        { "roll": "20", "item": "+3 Void-Touched Great Weapon — +3 attack/damage, +2d6 necrotic, crit prevents healing, 50% purity required. Tenebris masterwork.", "ref": "equipment_guide.md §4 Void-Touched + §2" }
+      ]
+    },
+    "table_g": {
+      "description": "Legendary — CR 17+ hoards. Sovereign's Edge weapons, God-Forged minor items, spell scrolls 6th-7th level.",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-2", "item": "God-Forged +3 Weapon — +3 attack/damage, ignores all damage resistances, DC 18 CON save or +3d6 elemental of wielder's draconic affinity on hit. Phases through non-living matter. 90% purity required. Priceless.", "ref": "equipment_guide.md §4 God-Forged" },
+        { "roll": "3-4", "item": "Sovereign's Edge +3 Greatsword (True Steel Blade) — +5 total, -2 Spell Safety DC as focus, 50% purity.", "ref": "equipment_guide.md §4 Sovereign's Edge + §2" },
+        { "roll": "5-6", "item": "Scroll: 6th-level spell (90%+ purity required, Spell Safety DC applies)", "ref": "equipment_guide.md §4 scroll rules" },
+        { "roll": "7-8", "item": "Scroll: 7th-level spell (90%+ purity required, Spell Safety DC applies)", "ref": "equipment_guide.md §4 scroll rules" },
+        { "roll": "9-10", "item": "1d4 Sovereign-Fragment Cores (choose elements from d8 table)", "ref": "equipment_guide.md §5" },
+        { "roll": "11-12", "item": "God-Forged Shield — +3 AC, immune to Aether Burn, 1/long rest cast 5th-level spell without Spell Safety check. 90% purity required.", "ref": "equipment_guide.md §4 God-Shroud + §3" },
+        { "roll": "13-14", "item": "Dragon-Sovereign Heart Core — Sovereign-Fragment tier, Fire element, usable as 9th-level spell focus. Glows with living flame.", "ref": "equipment_guide.md §5" },
+        { "roll": "15-16", "item": "Crown of the Sump-King — +2 to all CHA checks with underworld figures, commands respect in Sump-Canals. 25% purity. Unique.", "ref": "equipment_guide.md §6 headwear" },
+        { "roll": "17-18", "item": "Void-Walker's Stride Boots — Teleport 30 ft. as bonus action 3/long rest, 50% purity required. Tenebris artifact.", "ref": "equipment_guide.md §6 boots" },
+        { "roll": "19", "item": "Sovereign-Kin Egg (Petrified) — 7,500 GC art object. If reanimated... plot hook.", "ref": "equipment_guide.md §8 mounts" },
+        { "roll": "20", "item": "God-Forged Minor Item — Ring of the Sovereign Spark: Once per week, cast Wish with limited scope (DM's discretion). 90% purity required. Priceless.", "ref": "equipment_guide.md §6 jewelry + §4 God-Forged" }
+      ]
+    },
+    "table_h": {
+      "description": "Legendary — CR 17+. God-Shroud armor pieces, Sovereign-Fragment cores, artifact-quality items.",
+      "die": "d20",
+      "entries": [
+        { "roll": "1-2", "item": "God-Shroud Plate Armor — +3 AC, immune to Aether Burn, 1/long rest cast 5th-level spell without Spell Safety check. 90% purity required. Priceless.", "ref": "equipment_guide.md §4 God-Shroud" },
+        { "roll": "3-4", "item": "God-Shroud Half Plate — +3 AC (15 + DEX max 2 base), immune to Aether Burn, 1/long rest free 5th-level cast. 90% purity.", "ref": "equipment_guide.md §4 God-Shroud" },
+        { "roll": "5-6", "item": "2d4 Sovereign-Fragment Cores (choose elements from d8 table)", "ref": "equipment_guide.md §5" },
+        { "roll": "7-8", "item": "Sovereign Mantle +2 Full Plate — 20 AC base, survive fatal blow at 1 HP 1/long rest, 50% purity required.", "ref": "equipment_guide.md §4 Sovereign Mantle + §3" },
+        { "roll": "9-10", "item": "Sword of the Five Skulls — +3 longsword, casts Inquisitorial Smite (5th-level) on hit 1/long rest, 50% purity. Church of Five Skulls relic.", "ref": "equipment_guide.md §4 God-Forged tier" },
+        { "roll": "11-12", "item": "Mantle of the Abyss — +2 AC cloak, resistance to Void and Flesh damage, 50% purity. Tenebris masterwork.", "ref": "equipment_guide.md §4 Sovereign Mantle variant" },
+        { "roll": "13-14", "item": "The Iron Crown of Ferrum — +3 AC when worn with heavy armor, STR set to 23. 50% purity required. Ferrum house heirloom.", "ref": "equipment_guide.md §6 headwear" },
+        { "roll": "15-16", "item": "Storm-Sovereign's Vambrace — Cast Call Lightning (4th-level) 3/long rest, 50% purity required. Vortex artifact.", "ref": "equipment_guide.md §6 bracers" },
+        { "roll": "17", "item": "Pyre-Father's Anvil Gauntlets — Unarmed strikes deal 2d6 fire + 2d6 bludgeoning, 50% purity. Ignis artifact.", "ref": "equipment_guide.md §6 gauntlets" },
+        { "roll": "18", "item": "Obsidian Inquisition Seal (True) — Allows bearer to order one Inquisitorial Smite per week without Church approval. 25% purity.", "ref": "equipment_guide.md §6 seals" },
+        { "roll": "19", "item": "Compendium of the Sixth — Book containing fragments of all 5 Sovereigns' deaths. Reading costs 1d10 Aether Burn, reveals one campaign secret. Unique.", "ref": "equipment_guide.md §6 books" },
+        { "roll": "20", "item": "God-Shroud Heavy Shield — +5 AC total, immune to Aether Burn, 1/long rest 5th-level cast. 90% purity. Priceless.", "ref": "equipment_guide.md §4 God-Shroud + §3" }
+      ]
+    },
+    "table_i": {
+      "description": "Artifact — CR 20+. Campaign-defining artifacts, God-Forged weapons, wishes/fates-altering items.",
+      "die": "d20",
+      "entries": [
+        { "roll": "1", "item": "God-Forged Greatsword (True Steel Blade) — +3 attack/damage, ignores all resistances, DC 18 CON or +3d6 elemental per hit, phases through non-living matter. 90% purity. Priceless.", "ref": "equipment_guide.md §4 God-Forged + §2 Greatsword" },
+        { "roll": "2", "item": "The Crown of the First Sovereign — Wearer's blood purity becomes 100%. All Spell Safety DCs halved. 1/week cast Wish. Cursed: must make DC 20 WIS save weekly or be possessed by First Sovereign's echo.", "ref": "equipment_guide.md §6 headwear" },
+        { "roll": "3", "item": "God-Shroud Full Plate — +3 AC, immune to Aether Burn, 1/long rest free 5th-level cast. 90% purity. Priceless.", "ref": "equipment_guide.md §4 God-Shroud" },
+        { "roll": "4", "item": "The Five-Skull Scepter — Cast any Cleric spell up to 7th level 3/day. 50% purity. Church of Five Skulls ultimate relic.", "ref": "equipment_guide.md §6 scepters" },
+        { "roll": "5", "item": "Void-Heart of Tenebris — Sovereign-Fragment core that regenerates. Grants +2d6 Void damage to all spells. 50% purity. Cursed: each use adds 1 permanent Aether Burn.", "ref": "equipment_guide.md §5 cores" },
+        { "roll": "6", "item": "The Sky-Reaver (Vortex God-Forged Glaive) — +3 reach weapon, fly 60 ft. while wielded, 1/long rest cast Storm of Vengeance. 90% purity.", "ref": "equipment_guide.md §4 God-Forged + §2 Glaive" },
+        { "roll": "7", "item": "The Pyre-Heart Forge-Hammer — +3 warhammer, anything struck takes 4d6 fire and is instantly smelted. 90% purity. Ignis ultimate artifact.", "ref": "equipment_guide.md §4 God-Forged + §2 Warhammer" },
+        { "roll": "8", "item": "The Obsidian Decree — Scroll containing True Resurrection. Cast once, then crumbles. Cannot be copied. Church sealed.", "ref": "equipment_guide.md §4 scroll rules" },
+        { "roll": "9", "item": "The Penitent's True Chains — Restraints that suppress blood purity to 0% in any bound creature. Used to bind a Sovereign. Unique.", "ref": "equipment_guide.md §6 restraints" },
+        { "roll": "10", "item": "The Stone-Blood Heart — Earth-element Sovereign-Fragment core. Implanted, transforms blood to stone. +4 CON, -4 DEX. 50% purity to survive implant. Unique.", "ref": "equipment_guide.md §5 cores" },
+        { "roll": "11", "item": "The Shroud of the Sixth — Wearer becomes invisible to all divination magic. Cannot be detected by blood scans. 25% purity. Cult of the Sixth ultimate relic.", "ref": "equipment_guide.md §6 clothing" },
+        { "roll": "12", "item": "The Dragon-Garrison Banner — Standard that grants all allies within 300 ft. +2 to all saves. Unfurled, it declares war. Citadel's most guarded artifact.", "ref": "equipment_guide.md §6 banners" },
+        { "roll": "13", "item": "The Aether Forge (Portable) — Can enchant any weapon/armor to God-Forged tier with 10 Sovereign-Fragment Cores. Weighs 500 lb. One of three in existence.", "ref": "equipment_guide.md §7 tools" },
+        { "roll": "14", "item": "The Blood Mirror — Reveals true blood purity of any creature reflected in it. Ignores all magical concealment. Obsidian's most feared interrogation tool.", "ref": "equipment_guide.md §6 mirrors" },
+        { "roll": "15", "item": "Sovereign-Egg (Living) — Contains a true Sovereign dragon. Hatches in 1d100 years... or 1d4 days if bathed in Pristine Aether-Cores. Imprints on first creature it sees.", "ref": "equipment_guide.md §8 mounts" },
+        { "roll": "16", "item": "The Sixth Seal-Breaker — Key that opens any lock sealed by the Church of Five Skulls. Leaves no trace. Cult of the Sixth artifact.", "ref": "equipment_guide.md §6 keys" },
+        { "roll": "17", "item": "The Frost-Mourn Blade — +3 longsword, on hit target must DC 20 CON save or be frozen solid for 1 minute. 50% purity. Carved from the first Frost Sovereign's fang.", "ref": "equipment_guide.md §4 God-Forged tier" },
+        { "roll": "18", "item": "The Tome of Sovereign Blood — Records the lineage and location of every being with >50% purity alive. Updates magically. 25% purity to read. Priceless information.", "ref": "equipment_guide.md §6 books" },
+        { "roll": "19", "item": "The Eclipse Shard — A sliver of the dead moon. Negates all magic within 30 ft. when activated. 50% purity. Cannot distinguish friend from foe.", "ref": "equipment_guide.md §6 artifacts" },
+        { "roll": "20", "item": "The Dragon-God's Tear — Single-use: fully restores any one creature to life with all conditions removed and blood purity raised to 100%. No Spell Safety check. Consumed on use. Unique.", "ref": "equipment_guide.md §6 consumables" }
+      ]
+    }
+  },
+
+  "art_objects": {
+    "description": "Table O — Art Objects & Gems",
+    "die": "d20",
+    "entries": [
+      { "roll": 1, "item": "Silver House Signet Ring (minor house)", "value_gc": 25 },
+      { "roll": 2, "item": "Carved Dragon-Bone Dice", "value_gc": 25 },
+      { "roll": 3, "item": "Obsidian Judicial Seal (broken)", "value_gc": 25 },
+      { "roll": 4, "item": "Amber with Preserved Pre-Sovereign Insect", "value_gc": 50 },
+      { "roll": 5, "item": "Silver House Signet Ring (major house)", "value_gc": 50 },
+      { "roll": 6, "item": "Cult of the Sixth Prayer Beads (illegal)", "value_gc": 50 },
+      { "roll": 7, "item": "Small Blood Crystal (flawed, cannot test)", "value_gc": 50 },
+      { "roll": 8, "item": "Carved Stone-Blood Statuette", "value_gc": 100 },
+      { "roll": 9, "item": "Gold Tooth with Sovereign-Era Engraving", "value_gc": 100 },
+      { "roll": 10, "item": "Intact Dragon Scale (non-Sovereign)", "value_gc": 100 },
+      { "roll": 11, "item": "Silk Vortex Trade Cloth (bolt)", "value_gc": 100 },
+      { "roll": 12, "item": "Silver Ewer with Pyre Forge-Marks", "value_gc": 250 },
+      { "roll": 13, "item": "Illuminated Pre-Sovereign Manuscript Page", "value_gc": 250 },
+      { "roll": 14, "item": "Jeweled Inquisitor's Gavel", "value_gc": 250 },
+      { "roll": 15, "item": "Sovereign-Era Gold Coin (pre-Crowns)", "value_gc": 250 },
+      { "roll": 16, "item": "Deep-Blood Moonstone Pendant", "value_gc": 750 },
+      { "roll": 17, "item": "Wyvern Egg (petrified, decorative)", "value_gc": 750 },
+      { "roll": 18, "item": "Pristine Blood Crystal (functional, 99% accurate)", "value_gc": 750 },
+      { "roll": 19, "item": "Platinum House Crown (archduke level)", "value_gc": 2500 },
+      { "roll": 20, "item": "Sovereign-Era Crown Fragment (pre-Five-Skulls)", "value_gc": 7500 }
+    ]
+  },
+
+  "environment_reference": {
+    "description": "Treasure by Environment — Quick Reference for DM",
+    "entries": [
+      { "environment": "Dragon Lair", "currency_type": "GC + SS", "common_cores": "Based on dragon type", "common_items": "Weapons, armor, art" },
+      { "environment": "Noble Vault", "currency_type": "GC only", "common_cores": "None (nobles hoard gold, not cores)", "common_items": "Jewelry, deeds, blackmail" },
+      { "environment": "Monster Den", "currency_type": "SS + CF", "common_cores": "Fractured/Intact based on CR", "common_items": "Trade goods, previous victims' gear" },
+      { "environment": "Ruins", "currency_type": "GC + SS", "common_cores": "Ancient (any element)", "common_items": "Historical, Sovereign-era" },
+      { "environment": "Cult Hideout", "currency_type": "CF + SS", "common_cores": "Wild, Void", "common_items": "Prophecies, illegal goods, chains" },
+      { "environment": "Church Crypt", "currency_type": "GC", "common_cores": "Law element", "common_items": "Religious relics, seals, tithing" },
+      { "environment": "Sump-Canals", "currency_type": "CF", "common_cores": "Wild, Void (small)", "common_items": "Commoner goods, smuggled items" },
+      { "environment": "Battlefield", "currency_type": "Mixed (looted)", "common_cores": "Fractured (various)", "common_items": "Damaged weapons/armor, soldier pay" },
+      { "environment": "Academy", "currency_type": "GC (tuition)", "common_cores": "Minor (cadet training)", "common_items": "Training weapons, uniforms" },
+      { "environment": "Wilderness", "currency_type": "CF + SS", "common_cores": "Wild (natural deposits)", "common_items": "Herbs, monster parts, traveler remains" }
+    ]
+  }
+}

@@ -281,11 +281,18 @@ class DMSessionCog(commands.Cog):
         prompt = prompt.replace("{{session_type}}", session_type)
         prompt = prompt.replace("{{player_count}}", str(player_count))
 
-        try:
-            story_rules = open("prompts/solis_grave/rules/story_engine.md", "r").read()
-            prompt += "\n\n" + story_rules
-        except Exception:
-            pass
+        for lore_file in [
+            "prompts/solis_grave/rules/story_engine.md",
+            "prompts/solis_grave/rules/magic_system.md",
+            "prompts/solis_grave/sovereigns_and_gods.md",
+            "prompts/solis_grave/the_betrayed.md",
+            "prompts/solis_grave/ascension_system.md",
+        ]:
+            try:
+                content = open(lore_file, "r").read()
+                prompt += "\n\n" + content[:3000]
+            except Exception:
+                pass
 
         return prompt
 
