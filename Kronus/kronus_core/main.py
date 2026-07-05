@@ -173,7 +173,7 @@ async def _find_or_create_role(guild: discord.Guild, name: str, config_key: str,
 
 @bot.event
 async def on_ready():
-    dm_mode = os.getenv("DM_MODE", "0") == "1"
+    dm_mode = os.getenv("DM_MODE", "1") == "1"  # DM mode is DEFAULT
     print(f"[kronus-core] Online as {bot.user} on {len(bot.guilds)} guild(s) (DM Mode: {dm_mode})")
 
     guild = bot.get_guild(config.discord_guild_id)
@@ -230,7 +230,7 @@ async def on_ready():
 
 
 async def main():
-    dm_mode = os.getenv("DM_MODE", "0") == "1"
+    dm_mode = os.getenv("DM_MODE", "1") == "1"  # DM mode is DEFAULT
 
     if dm_mode:
         cogs = [
@@ -239,6 +239,7 @@ async def main():
             "cogs.dm_session",
             "cogs.dm_sheets",
         ]
+        print("[kronus-core] DM MODE — Loading D&D cogs only")
     else:
         cogs = [
             "cogs.channel_manager",
@@ -254,6 +255,7 @@ async def main():
             "cogs.dm_session",
             "cogs.dm_sheets",
         ]
+        print("[kronus-core] GTA MODE — Loading all cogs")
 
     for cog in cogs:
         try:

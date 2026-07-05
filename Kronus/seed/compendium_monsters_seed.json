@@ -1296,5 +1296,1143 @@
       "solis-grave",
       "urban"
     ]
+  },
+  {
+    "name": "Giant Rat (Aether-touched)",
+    "cr": 0.25,
+    "type": "beast",
+    "ac": 12,
+    "hp": 7,
+    "speed": "30 ft., climb 15 ft.",
+    "abilities": {
+      "str": 7,
+      "dex": 15,
+      "con": 11,
+      "int": 2,
+      "wis": 10,
+      "cha": 4
+    },
+    "senses": "darkvision 60 ft.",
+    "skills": "perception +2, stealth +4",
+    "traits": [
+      "Keen Smell: Advantage on perception checks involving smell.",
+      "Aether Resonance: Teleport 10 ft. as a bonus action (recharge 5-6)."
+    ],
+    "actions": [
+      "Bite: +4 to hit, 1 piercing + 1 force damage."
+    ]
+  },
+  {
+    "name": "Goblin Boss",
+    "cr": 0.5,
+    "type": "humanoid (goblinoid)",
+    "ac": 15,
+    "hp": 21,
+    "speed": "30 ft.",
+    "abilities": {
+      "str": 10,
+      "dex": 14,
+      "con": 12,
+      "int": 10,
+      "wis": 10,
+      "cha": 12
+    },
+    "senses": "darkvision 60 ft.",
+    "skills": "deception +3, stealth +4",
+    "traits": [
+      "Nimble Escape: Disengage or Hide as a bonus action.",
+      "Gang Up: Allies within 5 ft. have advantage on attack rolls."
+    ],
+    "actions": [
+      "Scimitar: +4 to hit, 1d6+2 slashing.",
+      "Shoot Arrow: +4 to hit, 1d6+2 piercing."
+    ]
+  },
+  {
+    "name": "Orc Eye of the Sixth",
+    "cr": 1,
+    "type": "humanoid (orc)",
+    "ac": 13,
+    "hp": 30,
+    "speed": "30 ft.",
+    "abilities": {
+      "str": 16,
+      "dex": 11,
+      "con": 14,
+      "int": 8,
+      "wis": 14,
+      "cha": 12
+    },
+    "senses": "darkvision 60 ft.",
+    "skills": "intimidation +3, perception +4",
+    "traits": [
+      "Aggressive: Move toward enemy as bonus action.",
+      "Sixth Sense: Advantage on initiative rolls."
+    ],
+    "spellcasting": {
+      "ability": "wis",
+      "spells": [
+        "guidance",
+        "true strike",
+        "bless",
+        "shield of faith"
+      ]
+    },
+    "actions": [
+      "Greatclub: +5 to hit, 1d8+3 bludgeoning."
+    ]
+  },
+  {
+    "name": "Cult Recruiter",
+    "cr": 0.5,
+    "type": "humanoid (any race)",
+    "ac": 12,
+    "hp": 16,
+    "speed": "30 ft.",
+    "abilities": {
+      "str": 10,
+      "dex": 12,
+      "con": 12,
+      "int": 14,
+      "wis": 13,
+      "cha": 16
+    },
+    "senses": "passive perception 11",
+    "skills": "deception +5, persuasion +5, insight +3",
+    "traits": [
+      "Silver Tongue: Persuasion and deception checks at advantage vs creatures who haven't attacked it."
+    ],
+    "actions": [
+      "Dagger: +3 to hit, 1d4+1 piercing."
+    ]
+  },
+  {
+    "name": "Ash-Walker Outcast",
+    "cr": 2,
+    "type": "elemental",
+    "ac": 14,
+    "hp": 52,
+    "speed": "40 ft.",
+    "abilities": {
+      "str": 14,
+      "dex": 16,
+      "con": 16,
+      "int": 8,
+      "wis": 12,
+      "cha": 8
+    },
+    "damage_resistances": "fire, bludgeoning from nonmagical weapons",
+    "damage_immunities": "poison",
+    "condition_immunities": "exhaustion, poisoned",
+    "senses": "darkvision 60 ft., passive perception 11",
+    "traits": [
+      "Ash Cloud: When hit, a cloud of ash blinds nearby creatures (DC 13 CON save) for 1 round."
+    ],
+    "actions": [
+      "Slam: +5 to hit, 2d6+3 bludgeoning + 1d6 fire.",
+      "Cinder Burst (Recharge 5-6): 15 ft. cone, DC 13 DEX, 3d6 fire damage."
+    ]
+  },
+  {
+    "name": "Stone-Blood Smith",
+    "cr": 1,
+    "type": "humanoid (dwarf)",
+    "ac": 18,
+    "hp": 32,
+    "speed": "25 ft.",
+    "abilities": {
+      "str": 16,
+      "dex": 8,
+      "con": 18,
+      "int": 10,
+      "wis": 12,
+      "cha": 10
+    },
+    "senses": "darkvision 60 ft., passive perception 11",
+    "skills": "athletics +5, smith's tools +4",
+    "traits": [
+      "Stone Endurance: Reduce damage taken by 1d12+2 once per short rest.",
+      "Forged Armor: +2 AC (included)."
+    ],
+    "actions": [
+      "Warhammer: +5 to hit, 1d10+3 bludgeoning."
+    ]
+  },
+  {
+    "name": "Bone-Wrought Drone",
+    "cr": 0.5,
+    "type": "construct",
+    "ac": 13,
+    "hp": 18,
+    "speed": "30 ft., fly 30 ft. (hover)",
+    "abilities": {
+      "str": 12,
+      "dex": 14,
+      "con": 14,
+      "int": 4,
+      "wis": 8,
+      "cha": 3
+    },
+    "damage_resistances": "piercing and slashing from nonmagical weapons",
+    "damage_immunities": "poison, psychic",
+    "condition_immunities": "charmed, exhaustion, frightened, poisoned",
+    "senses": "darkvision 60 ft., passive perception 9",
+    "traits": [
+      "Death Burst: Upon destruction, releases bone shards in a 5 ft. radius, DC 11 DEX, 2d4 piercing."
+    ],
+    "actions": [
+      "Claw: +3 to hit, 1d6+1 slashing."
+    ]
+  },
+  {
+    "name": "Sump-Canal Crocodile",
+    "cr": 2,
+    "type": "beast",
+    "ac": 14,
+    "hp": 39,
+    "speed": "20 ft., swim 40 ft.",
+    "abilities": {
+      "str": 17,
+      "dex": 10,
+      "con": 16,
+      "int": 2,
+      "wis": 10,
+      "cha": 5
+    },
+    "senses": "blindsight 30 ft., passive perception 12",
+    "skills": "stealth +4, perception +2",
+    "traits": [
+      "Ambusher: Advantage on initiative rolls.",
+      "Water Camouflage: Advantage on stealth in water."
+    ],
+    "actions": [
+      "Bite: +5 to hit, 1d10+3 piercing, target grappled (escape DC 14).",
+      "Death Roll: Grappled target takes 2d8+3 bludgeoning damage, and crocodile can't bite another until grapple ends."
+    ]
+  },
+  {
+    "name": "Ferrum Recruit",
+    "cr": 0.5,
+    "type": "humanoid (any)",
+    "ac": 16,
+    "hp": 19,
+    "speed": "30 ft.",
+    "abilities": {
+      "str": 15,
+      "dex": 12,
+      "con": 14,
+      "int": 8,
+      "wis": 10,
+      "cha": 10
+    },
+    "senses": "passive perception 10",
+    "skills": "athletics +4, intimidation +2",
+    "traits": [
+      "Iron Discipline: Allies within 10 ft. gain +1 to saving throws against fear."
+    ],
+    "actions": [
+      "Longsword: +4 to hit, 1d8+2 slashing.",
+      "Javelin: +4 to hit (range 30/120), 1d6+2 piercing."
+    ]
+  },
+  {
+    "name": "Pyre Apprentice",
+    "cr": 1,
+    "type": "humanoid (any)",
+    "ac": 12,
+    "hp": 27,
+    "speed": "30 ft.",
+    "abilities": {
+      "str": 8,
+      "dex": 12,
+      "con": 14,
+      "int": 14,
+      "wis": 10,
+      "cha": 16
+    },
+    "senses": "passive perception 10",
+    "skills": "arcana +4, religion +4",
+    "traits": [
+      "Burning Blood: When hit by a melee attack, attacker takes 1d4 fire damage."
+    ],
+    "spellcasting": {
+      "ability": "cha",
+      "spells": [
+        "fire bolt",
+        "mage hand",
+        "burning hands",
+        "scorching ray"
+      ]
+    },
+    "actions": [
+      "Dagger: +3 to hit, 1d4+1 piercing."
+    ]
+  },
+  {
+    "name": "Aether-Warped Ogre",
+    "cr": 3,
+    "type": "giant",
+    "ac": 15,
+    "hp": 95,
+    "abilities": {
+      "str": 19,
+      "dex": 8,
+      "con": 17,
+      "int": 5,
+      "wis": 7,
+      "cha": 8
+    },
+    "saving_throws": {
+      "con": "+5",
+      "wis": "+0"
+    },
+    "damage_resistances": "force",
+    "senses": "darkvision 60 ft., passive Perception 8",
+    "special_abilities": [
+      {
+        "name": "Aetheric Instability",
+        "description": "When reduced to 0 hit points, the ogre explodes in a burst of chaotic energy. Each creature within 10 feet must make a DC 13 Dexterity saving throw, taking 14 (4d6) force damage on a failed save, or half as much on a successful one."
+      },
+      {
+        "name": "Warped Strike",
+        "description": "The ogre's melee attacks deal an extra 7 (2d6) force damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The ogre makes two greatclub attacks."
+      },
+      {
+        "name": "Greatclub",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage plus 7 (2d6) force damage."
+      }
+    ]
+  },
+  {
+    "name": "Inquisitor War-Priest",
+    "cr": 4,
+    "type": "humanoid",
+    "ac": 18,
+    "hp": 78,
+    "abilities": {
+      "str": 14,
+      "dex": 10,
+      "con": 14,
+      "int": 12,
+      "wis": 18,
+      "cha": 16
+    },
+    "saving_throws": {
+      "wis": "+6",
+      "cha": "+5"
+    },
+    "skills": {
+      "insight": "+8",
+      "perception": "+8",
+      "religion": "+5"
+    },
+    "spellcasting": {
+      "caster_level": 5,
+      "spellcasting_ability": "wisdom",
+      "spells_known": [
+        "bane",
+        "command",
+        "detect evil and good",
+        "hold person",
+        "spiritual weapon",
+        "zone of truth"
+      ],
+      "slots": {
+        "1st": 4,
+        "2nd": 3,
+        "3rd": 2
+      }
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The priest makes two warhammer attacks."
+      },
+      {
+        "name": "Warhammer",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 2) bludgeoning damage plus 9 (2d8) radiant damage."
+      },
+      {
+        "name": "Inquisitor's Gaze (Recharge 5-6)",
+        "description": "One creature the priest can see within 30 feet must make a DC 14 Wisdom saving throw. On a failure, the target is paralyzed for 1 minute. It can repeat the save at the end of each of its turns, ending the effect on a success."
+      }
+    ]
+  },
+  {
+    "name": "Vortex Wind-Rider",
+    "cr": 5,
+    "type": "elemental",
+    "ac": 16,
+    "hp": 112,
+    "abilities": {
+      "str": 8,
+      "dex": 20,
+      "con": 16,
+      "int": 8,
+      "wis": 12,
+      "cha": 14
+    },
+    "damage_immunities": "poison",
+    "damage_resistances": "lightning, bludgeoning, piercing, slashing from nonmagical attacks",
+    "condition_immunities": "exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious",
+    "senses": "blindsight 60 ft., passive Perception 11",
+    "special_abilities": [
+      {
+        "name": "Air Form",
+        "description": "The wind-rider can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing."
+      },
+      {
+        "name": "Vortex Cloak",
+        "description": "Any creature that starts its turn within 10 feet of the wind-rider must make a DC 15 Strength saving throw or be pushed 10 feet away and knocked prone."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The wind-rider makes two gust slam attacks."
+      },
+      {
+        "name": "Gust Slam",
+        "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 12 (2d8 + 5) bludgeoning damage plus 7 (2d6) lightning damage, and the target is pulled 5 feet toward the wind-rider."
+      },
+      {
+        "name": "Whirlwind (Recharge 5-6)",
+        "description": "Each creature in the wind-rider's space must make a DC 15 Strength saving throw. On a failure, the target takes 21 (6d6) bludgeoning damage and is flung up to 30 feet in a random direction. On a success, it takes half damage and is not flung."
+      }
+    ]
+  },
+  {
+    "name": "Obsidian Truth-Seeker",
+    "cr": 5,
+    "type": "construct",
+    "ac": 17,
+    "hp": 102,
+    "abilities": {
+      "str": 18,
+      "dex": 10,
+      "con": 18,
+      "int": 4,
+      "wis": 12,
+      "cha": 1
+    },
+    "damage_immunities": "poison, psychic",
+    "condition_immunities": "charmed, exhaustion, frightened, paralyzed, petrified, poisoned",
+    "senses": "darkvision 120 ft., truesight 30 ft., passive Perception 11",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "description": "The seeker has advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Laser Gaze (Recharge 5-6)",
+        "description": "As a bonus action, the seeker can fire a beam of heat from its eyes at one creature within 60 feet. The target must make a DC 15 Dexterity saving throw, taking 28 (8d6) fire damage on a failed save, or half as much on a success."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 15 (2d10 + 4) bludgeoning damage plus 7 (2d6) fire damage."
+      }
+    ]
+  },
+  {
+    "name": "Tenebris Flesh-Hound Pack",
+    "cr": 4,
+    "type": "monstrosity",
+    "ac": 14,
+    "hp": 90,
+    "abilities": {
+      "str": 16,
+      "dex": 14,
+      "con": 15,
+      "int": 3,
+      "wis": 12,
+      "cha": 8
+    },
+    "skills": {
+      "perception": "+5",
+      "stealth": "+6"
+    },
+    "damage_immunities": "necrotic",
+    "senses": "darkvision 60 ft., passive Perception 15",
+    "special_abilities": [
+      {
+        "name": "Pack Tactics",
+        "description": "The pack has advantage on attack rolls against a creature if at least one of the pack's allies is within 5 feet of the creature and the ally isn't incapacitated."
+      },
+      {
+        "name": "Rending Bite",
+        "description": "If the pack hits a creature with both its bite attacks in the same turn, the creature must succeed on a DC 13 Constitution saving throw or take an extra 14 (4d6) necrotic damage and be unable to take reactions until the end of its next turn."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The pack makes two bite attacks."
+      },
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage plus 7 (2d6) necrotic damage."
+      }
+    ]
+  },
+  {
+    "name": "Penitent Firebrand",
+    "cr": 3,
+    "type": "humanoid",
+    "ac": 16,
+    "hp": 60,
+    "abilities": {
+      "str": 16,
+      "dex": 12,
+      "con": 14,
+      "int": 10,
+      "wis": 14,
+      "cha": 18
+    },
+    "saving_throws": {
+      "con": "+4",
+      "cha": "+6"
+    },
+    "skills": {
+      "intimidation": "+6",
+      "religion": "+2"
+    },
+    "spellcasting": {
+      "caster_level": 3,
+      "spellcasting_ability": "charisma",
+      "spells_known": [
+        "burning hands",
+        "command",
+        "hellish rebuke",
+        "scorching ray"
+      ],
+      "slots": {
+        "1st": 4,
+        "2nd": 2
+      }
+    },
+    "special_abilities": [
+      {
+        "name": "Aura of Penitence",
+        "description": "Any creature within 10 feet of the firebrand that deals damage to it with a melee attack takes 7 (2d6) fire damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The firebrand makes two attacks with its flaming mace."
+      },
+      {
+        "name": "Flaming Mace",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage plus 9 (2d8) fire damage."
+      },
+      {
+        "name": "Fire Blast (Recharge 5-6)",
+        "description": "The firebrand unleashes a cone of fire 15 feet long. Each creature in that area must make a DC 14 Dexterity saving throw, taking 21 (6d6) fire damage on a failed save, or half as much on a successful one."
+      }
+    ]
+  },
+  {
+    "name": "Wyvern Juvenile",
+    "cr": 3,
+    "type": "dragon",
+    "ac": 15,
+    "hp": 68,
+    "abilities": {
+      "str": 18,
+      "dex": 12,
+      "con": 17,
+      "int": 5,
+      "wis": 12,
+      "cha": 8
+    },
+    "skills": {
+      "perception": "+5"
+    },
+    "senses": "darkvision 60 ft., passive Perception 15",
+    "special_abilities": [
+      {
+        "name": "Leaping Charge",
+        "description": "If the wyvern moves at least 20 feet straight toward a creature and then hits it with a bite attack on the same turn, the target must succeed on a DC 14 Strength saving throw or be knocked prone."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The wyvern makes two attacks: one with its bite and one with its stinger."
+      },
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) piercing damage."
+      },
+      {
+        "name": "Stinger",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 9 (2d4 + 4) piercing damage. The target must make a DC 13 Constitution saving throw, taking 14 (4d6) poison damage on a failed save, or half as much on a successful one."
+      }
+    ]
+  },
+  {
+    "name": "Frost Drake",
+    "cr": 6,
+    "type": "dragon",
+    "ac": 17,
+    "hp": 142,
+    "abilities": {
+      "str": 20,
+      "dex": 14,
+      "con": 18,
+      "int": 6,
+      "wis": 12,
+      "cha": 12
+    },
+    "saving_throws": {
+      "dex": "+5",
+      "con": "+7",
+      "wis": "+4"
+    },
+    "damage_immunities": "cold",
+    "senses": "blindsight 30 ft., darkvision 120 ft., passive Perception 11",
+    "special_abilities": [
+      {
+        "name": "Frigid Aura",
+        "description": "Any creature that starts its turn within 10 feet of the frost drake takes 5 (1d10) cold damage."
+      },
+      {
+        "name": "Ice Walk",
+        "description": "The drake can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost extra movement."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The drake makes three attacks: one with its bite and two with its claws."
+      },
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 16 (2d10 + 5) piercing damage plus 7 (2d6) cold damage."
+      },
+      {
+        "name": "Claw",
+        "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage."
+      },
+      {
+        "name": "Frost Breath (Recharge 5-6)",
+        "description": "The drake exhales a 30-foot cone of freezing air. Each creature in that area must make a DC 15 Constitution saving throw, taking 49 (11d8) cold damage on a failed save, or half as much on a successful one."
+      }
+    ]
+  },
+  {
+    "name": "Crystal-Laced Bear",
+    "cr": 4,
+    "type": "monstrosity",
+    "ac": 16,
+    "hp": 95,
+    "abilities": {
+      "str": 20,
+      "dex": 10,
+      "con": 18,
+      "int": 2,
+      "wis": 12,
+      "cha": 8
+    },
+    "damage_resistances": "piercing, psychic",
+    "senses": "darkvision 60 ft., passive Perception 11",
+    "special_abilities": [
+      {
+        "name": "Crystal Shards",
+        "description": "Whenever the bear is hit by a melee attack, the attacker takes 3 (1d6) piercing damage from crystal shards."
+      },
+      {
+        "name": "Prismatic Glow",
+        "description": "As a bonus action, the bear can cause the crystals on its body to emit dazzling light. Each creature within 20 feet must succeed on a DC 14 Constitution saving throw or be blinded until the start of the bear's next turn."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The bear makes two attacks: one with its bite and one with its claws. If both attacks hit the same target, the target takes an extra 9 (2d8) psychic damage."
+      },
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 5) piercing damage."
+      },
+      {
+        "name": "Claws",
+        "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage."
+      }
+    ]
+  },
+  {
+    "name": "Iron Golem (Pyre)",
+    "cr": 7,
+    "type": "construct",
+    "ac": 20,
+    "hp": 152,
+    "abilities": {
+      "str": 24,
+      "dex": 9,
+      "con": 20,
+      "int": 3,
+      "wis": 11,
+      "cha": 1
+    },
+    "damage_immunities": "fire, poison, psychic, bludgeoning, piercing, slashing from nonmagical attacks not made with adamantine weapons",
+    "condition_immunities": "charmed, exhaustion, frightened, paralyzed, petrified, poisoned",
+    "senses": "darkvision 120 ft., passive Perception 10",
+    "special_abilities": [
+      {
+        "name": "Fire Absorption",
+        "description": "Whenever the golem is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt."
+      },
+      {
+        "name": "Molten Core",
+        "description": "Any creature that starts its turn within 5 feet of the golem takes 7 (2d6) fire damage."
+      },
+      {
+        "name": "Immutable Form",
+        "description": "The golem is immune to any spell or effect that would alter its form."
+      },
+      {
+        "name": "Magic Resistance",
+        "description": "The golem has advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The golem makes two slam attacks."
+      },
+      {
+        "name": "Slam",
+        "description": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 19 (2d12 + 7) bludgeoning damage plus 9 (2d8) fire damage."
+      },
+      {
+        "name": "Fire Breath (Recharge 5-6)",
+        "description": "The golem exhales fire in a 15-foot cone. Each creature in that area must make a DC 16 Dexterity saving throw, taking 45 (10d8) fire damage on a failed save, or half as much on a successful one."
+      }
+    ]
+  },
+  {
+    "name": "Sump-Ghoul",
+    "cr": 0.5,
+    "type": "undead",
+    "ac": 11,
+    "hp": 18,
+    "speed": "30 ft.",
+    "abilities": {
+      "str": 12,
+      "dex": 13,
+      "con": 14,
+      "int": 4,
+      "wis": 8,
+      "cha": 6
+    },
+    "skills": {
+      "stealth": 3
+    },
+    "damage_resistances": "necrotic",
+    "condition_immunities": "poisoned",
+    "senses": "darkvision 60 ft., passive Perception 9",
+    "languages": "understands Common but can't speak",
+    "traits": [
+      {
+        "name": "Stench of the Sump",
+        "description": "Any creature that starts its turn within 5 feet of the sump-ghoul must make a DC 12 Constitution saving throw or be poisoned until the start of its next turn."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Claws",
+        "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d6+2) slashing damage plus 2 (1d4) necrotic damage."
+      }
+    ]
+  },
+  {
+    "name": "Citadel Cadet",
+    "cr": 1,
+    "type": "humanoid",
+    "ac": 16,
+    "hp": 27,
+    "speed": "30 ft.",
+    "abilities": {
+      "str": 14,
+      "dex": 12,
+      "con": 14,
+      "int": 10,
+      "wis": 12,
+      "cha": 10
+    },
+    "skills": {
+      "athletics": 4,
+      "perception": 3
+    },
+    "senses": "passive Perception 13",
+    "languages": "Common",
+    "traits": [
+      {
+        "name": "Disciplined Formation",
+        "description": "The cadet has advantage on saving throws against being frightened while within 5 feet of an allied Citadel creature."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Shortsword",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d6+3) piercing damage."
+      },
+      {
+        "name": "Heavy Crossbow",
+        "description": "Ranged Weapon Attack: +3 to hit, range 100/400 ft., one target. Hit: 6 (1d10+1) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Blood Priest Acolyte",
+    "cr": 2,
+    "type": "humanoid",
+    "ac": 13,
+    "hp": 33,
+    "speed": "30 ft.",
+    "abilities": {
+      "str": 10,
+      "dex": 12,
+      "con": 14,
+      "int": 12,
+      "wis": 16,
+      "cha": 14
+    },
+    "skills": {
+      "medicine": 5,
+      "religion": 3
+    },
+    "damage_resistances": "necrotic",
+    "senses": "darkvision 60 ft., passive Perception 13",
+    "languages": "Common, Infernal",
+    "spellcasting": {
+      "caster_level": 3,
+      "spellcasting_ability": "wis",
+      "spells": {
+        "cantrips": [
+          "bleeding touch (homebrew: 1d4 necrotic)",
+          "guidance",
+          "resistance"
+        ],
+        "1st_level": [
+          "bless",
+          "cure wounds",
+          "inflict wounds"
+        ],
+        "2nd_level": [
+          "hold person",
+          "spiritual weapon"
+        ]
+      }
+    },
+    "actions": [
+      {
+        "name": "Sanguine Dagger",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4+2) piercing damage plus 3 (1d6) necrotic damage."
+      }
+    ]
+  },
+  {
+    "name": "Vortex Cargo-Hawk",
+    "cr": 1,
+    "type": "beast",
+    "ac": 14,
+    "hp": 22,
+    "speed": "10 ft., fly 60 ft.",
+    "abilities": {
+      "str": 6,
+      "dex": 18,
+      "con": 12,
+      "int": 3,
+      "wis": 14,
+      "cha": 8
+    },
+    "skills": {
+      "perception": 6,
+      "stealth": 6
+    },
+    "senses": "darkvision 60 ft., passive Perception 16",
+    "languages": "\u2014",
+    "traits": [
+      {
+        "name": "Keen Sight",
+        "description": "The cargo-hawk has advantage on Wisdom (Perception) checks that rely on sight."
+      },
+      {
+        "name": "Pack Tactics",
+        "description": "The cargo-hawk has advantage on attack rolls against a creature if at least one of the hawk's allies is within 5 feet of the creature and the ally isn't incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Talons",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (2d4+4) slashing damage. If the target is a Small or smaller creature, it is grappled (escape DC 12)."
+      }
+    ]
+  },
+  {
+    "name": "Ferrum Border-Scout",
+    "cr": 0.5,
+    "type": "humanoid",
+    "ac": 14,
+    "hp": 16,
+    "speed": "40 ft.",
+    "abilities": {
+      "str": 10,
+      "dex": 16,
+      "con": 12,
+      "int": 10,
+      "wis": 14,
+      "cha": 8
+    },
+    "skills": {
+      "perception": 4,
+      "stealth": 5,
+      "survival": 4
+    },
+    "senses": "darkvision 30 ft., passive Perception 14",
+    "languages": "Common, Ferrum cant",
+    "traits": [
+      {
+        "name": "Cautious Advance",
+        "description": "The border-scout can take the Disengage or Hide action as a bonus action."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Brass Knuckles",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4+3) bludgeoning damage."
+      },
+      {
+        "name": "Throwing Spike",
+        "description": "Ranged Weapon Attack: +5 to hit, range 30/120 ft., one target. Hit: 6 (1d6+3) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Obsidian Court-Scribe",
+    "cr": 3,
+    "type": "construct",
+    "ac": 15,
+    "hp": 45,
+    "speed": "30 ft.",
+    "abilities": {
+      "str": 10,
+      "dex": 14,
+      "con": 16,
+      "int": 18,
+      "wis": 12,
+      "cha": 10
+    },
+    "skills": {
+      "arcana": 6,
+      "history": 6,
+      "investigation": 6
+    },
+    "damage_resistances": "bludgeoning, piercing, and slashing from nonmagical attacks",
+    "condition_immunities": "charmed, exhaustion, frightened, paralyzed, petrified, poisoned",
+    "senses": "darkvision 120 ft., passive Perception 11",
+    "languages": "all languages known by its creator, telepathy 60 ft.",
+    "traits": [
+      {
+        "name": "Ink Blot Shield",
+        "description": "When the court-scribe is hit by an attack, it can use its reaction to release a cloud of magical ink, imposing disadvantage on the attack roll. It can use this trait three times per day."
+      },
+      {
+        "name": "Immutable Form",
+        "description": "The court-scribe is immune to any spell or effect that would alter its form."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Quill Stab",
+        "description": "Melee Weapon Attack: +4 to hit, reach 10 ft., one target. Hit: 7 (2d4+2) piercing damage plus 4 (1d8) psychic damage."
+      },
+      {
+        "name": "Commanding Word (Recharge 5-6)",
+        "description": "One creature within 60 feet that can hear the court-scribe must make a DC 14 Wisdom saving throw. On a failure, the creature is stunned until the end of its next turn."
+      }
+    ]
+  },
+  {
+    "name": "Tenebris Lab-Assistant",
+    "cr": 1,
+    "type": "humanoid",
+    "ac": 11,
+    "hp": 25,
+    "speed": "30 ft.",
+    "abilities": {
+      "str": 8,
+      "dex": 12,
+      "con": 12,
+      "int": 17,
+      "wis": 14,
+      "cha": 10
+    },
+    "skills": {
+      "arcana": 5,
+      "investigation": 5,
+      "medicine": 4
+    },
+    "damage_resistances": "acid, poison",
+    "senses": "darkvision 60 ft., passive Perception 12",
+    "languages": "Common, Tenebris cant",
+    "spellcasting": {
+      "caster_level": 2,
+      "spellcasting_ability": "int",
+      "spells": {
+        "cantrips": [
+          "acid splash",
+          "mage hand",
+          "poison spray"
+        ],
+        "1st_level": [
+          "grease",
+          "tasha's hideous laughter",
+          "ray of sickness"
+        ]
+      }
+    },
+    "actions": [
+      {
+        "name": "Syringe",
+        "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6+1) piercing damage plus 3 (1d6) poison damage."
+      }
+    ]
+  },
+  {
+    "name": "Cult Courier",
+    "cr": 0.5,
+    "type": "humanoid",
+    "ac": 13,
+    "hp": 14,
+    "speed": "40 ft.",
+    "abilities": {
+      "str": 8,
+      "dex": 16,
+      "con": 10,
+      "int": 12,
+      "wis": 10,
+      "cha": 14
+    },
+    "skills": {
+      "acrobatics": 5,
+      "deception": 4,
+      "stealth": 5
+    },
+    "senses": "darkvision 30 ft., passive Perception 10",
+    "languages": "Common, Thieves' cant",
+    "traits": [
+      {
+        "name": "Fleet of Foot",
+        "description": "The courier can take the Dash action as a bonus action."
+      },
+      {
+        "name": "Coded Message",
+        "description": "If the courier dies, any written message it carries is magically encrypted and requires a DC 15 Intelligence (Investigation) check to decipher."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Dagger",
+        "description": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4+3) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Pyre Forge-Worker",
+    "cr": 2,
+    "type": "humanoid",
+    "ac": 17,
+    "hp": 39,
+    "speed": "25 ft.",
+    "abilities": {
+      "str": 18,
+      "dex": 10,
+      "con": 16,
+      "int": 8,
+      "wis": 12,
+      "cha": 8
+    },
+    "skills": {
+      "athletics": 6,
+      "intimidation": 3
+    },
+    "damage_resistances": "fire",
+    "senses": "passive Perception 11",
+    "languages": "Common",
+    "traits": [
+      {
+        "name": "Heated Body",
+        "description": "A creature that touches the forge-worker or hits it with a melee attack while within 5 feet takes 3 (1d6) fire damage."
+      },
+      {
+        "name": "Searing Strike",
+        "description": "When the forge-worker hits with a melee weapon attack, it deals an extra 2 (1d4) fire damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Sledgehammer",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6+4) bludgeoning damage plus 2 (1d4) fire damage."
+      },
+      {
+        "name": "Bellows Blast (Recharge 5-6)",
+        "description": "The forge-worker exhales a 15-foot cone of hot embers. Each creature in that area must make a DC 13 Dexterity saving throw, taking 10 (3d6) fire damage on a failure, or half as much on a success."
+      }
+    ]
+  },
+  {
+    "name": "Ash-Runner Beast",
+    "cr": 1,
+    "type": "monstrosity",
+    "ac": 13,
+    "hp": 30,
+    "speed": "50 ft.",
+    "abilities": {
+      "str": 14,
+      "dex": 16,
+      "con": 14,
+      "int": 3,
+      "wis": 12,
+      "cha": 6
+    },
+    "skills": {
+      "perception": 5,
+      "stealth": 7
+    },
+    "damage_resistances": "fire",
+    "condition_immunities": "blinded",
+    "senses": "darkvision 60 ft., tremorsense 30 ft., passive Perception 15",
+    "languages": "\u2014",
+    "traits": [
+      {
+        "name": "Camouflage in Ash",
+        "description": "The ash-runner has advantage on Dexterity (Stealth) checks made to hide in areas of ash, soot, or smoke."
+      },
+      {
+        "name": "Pounce",
+        "description": "If the ash-runner moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the ash-runner can make one bite attack against it as a bonus action."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Claw",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6+3) slashing damage."
+      },
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (2d4+3) piercing damage."
+      }
+    ]
   }
 ]
