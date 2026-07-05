@@ -19,14 +19,12 @@ AddEventHandler("onResourceStart", function(resource)
     end
 end)
 
--- Target interaction for license desk
-exports["qb-target"]:AddBoxZone("license_desk", vec3(-552.0, -192.0, 38.0), 1.5, 1.5, {
-    name = "license_desk",
-    heading = 340,
-    debugPoly = false,
-    minZ = 36.0,
-    maxZ = 40.0,
-}, {
+-- Target interaction for license desk (uses ox_target)
+exports["ox_target"]:addBoxZone({
+    coords = vec3(-552.0, -192.0, 38.0),
+    size = vec3(1.5, 1.5, 4.0),
+    rotation = 340,
+    debug = false,
     options = {
         { event = "sinister_licenses:openMenu", icon = "fas fa-id-card", label = "Purchase License" },
     },
