@@ -8,3 +8,6 @@ startCommand = "PYTHONPATH=Kronus python Kronus/kronus_core/main.py"
 
 [service]
 name = "kronus-core"
+
+[variables]
+DM_MODE = "1"

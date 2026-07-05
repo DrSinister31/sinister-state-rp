@@ -173,40 +173,43 @@ async def _find_or_create_role(guild: discord.Guild, name: str, config_key: str,
 
 @bot.event
 async def on_ready():
-    print(f"[kronus-core] Online as {bot.user} on {len(bot.guilds)} guild(s)")
+    dm_mode = os.getenv("DM_MODE", "0") == "1"
+    print(f"[kronus-core] Online as {bot.user} on {len(bot.guilds)} guild(s) (DM Mode: {dm_mode})")
 
     guild = bot.get_guild(config.discord_guild_id)
     if not guild:
         print(f"[kronus-core] Guild {config.discord_guild_id} not found!")
         return
 
-    print(f"[kronus-core] Auto-configuring for guild: {guild.name}")
+    if not dm_mode:
+        print(f"[kronus-core] Auto-configuring for guild: {guild.name}")
 
-    chronicles_id = await _find_or_create_channel(guild, "chronicles", "chronicles_channel_id")
-    print(f"  chronicles channel: {chronicles_id}")
+        chronicles_id = await _find_or_create_channel(guild, "chronicles", "chronicles_channel_id")
+        print(f"  chronicles channel: {chronicles_id}")
 
-    logs_id = await _find_or_create_channel(guild, "kronus-logs", "log_channel_id")
-    print(f"  kronus-logs channel: {logs_id}")
+        logs_id = await _find_or_create_channel(guild, "kronus-logs", "log_channel_id")
+        print(f"  kronus-logs channel: {logs_id}")
 
-    support_id = await _find_or_create_channel(guild, "support", "support_channel_id")
-    print(f"  support channel: {support_id}")
+        support_id = await _find_or_create_channel(guild, "support", "support_channel_id")
+        print(f"  support channel: {support_id}")
 
-    owner_role = await _find_or_create_role(guild, "Business Owner", "business_owner_role_id",
-                                            discord.Color.gold())
-    print(f"  Business Owner role: {owner_role}")
+        owner_role = await _find_or_create_role(guild, "Business Owner", "business_owner_role_id",
+                                                discord.Color.gold())
+        print(f"  Business Owner role: {owner_role}")
 
-    emp_role = await _find_or_create_role(guild, "Business Employee", "business_employee_role_id",
-                                          discord.Color.blue())
-    print(f"  Business Employee role: {emp_role}")
+        emp_role = await _find_or_create_role(guild, "Business Employee", "business_employee_role_id",
+                                              discord.Color.blue())
+        print(f"  Business Employee role: {emp_role}")
 
-    staff_role = await _find_or_create_role(guild, "Staff", "staff_role_id", discord.Color.red())
-    print(f"  Staff role: {staff_role}")
+        staff_role = await _find_or_create_role(guild, "Staff", "staff_role_id", discord.Color.red())
+        print(f"  Staff role: {staff_role}")
 
-    # Auto-create GUIDE category and channels
-    guide_cog = bot.get_cog("ChannelManager")
-    if guide_cog:
-        guide_cat_id = await guide_cog.ensure_guide_channels(config.discord_guild_id)
-        print(f"  GUIDE category: {guide_cat_id}")
+        guide_cog = bot.get_cog("ChannelManager")
+        if guide_cog:
+            guide_cat_id = await guide_cog.ensure_guide_channels(config.discord_guild_id)
+            print(f"  GUIDE category: {guide_cat_id}")
+    else:
+        print(f"[kronus-core] DM Mode — skipping GTA RP auto-config")
 
     await asyncio.sleep(2)
     guild_obj = discord.Object(id=config.discord_guild_id)
@@ -227,20 +230,31 @@ async def on_ready():
 
 
 async def main():
-    cogs = [
-        "cogs.channel_manager",
-        "cogs.role_sync",
-        "cogs.rcon_bridge",
-        "cogs.chronicles",
-        "cogs.assistant",
-        "cogs.tickets",
-        "cogs.staff",
-        "cogs.channel_memory",
-        "cogs.compendium",
-        "cogs.dm_voice",
-        "cogs.dm_session",
-        "cogs.dm_sheets",
-    ]
+    dm_mode = os.getenv("DM_MODE", "0") == "1"
+
+    if dm_mode:
+        cogs = [
+            "cogs.compendium",
+            "cogs.dm_voice",
+            "cogs.dm_session",
+            "cogs.dm_sheets",
+        ]
+    else:
+        cogs = [
+            "cogs.channel_manager",
+            "cogs.role_sync",
+            "cogs.rcon_bridge",
+            "cogs.chronicles",
+            "cogs.assistant",
+            "cogs.tickets",
+            "cogs.staff",
+            "cogs.channel_memory",
+            "cogs.compendium",
+            "cogs.dm_voice",
+            "cogs.dm_session",
+            "cogs.dm_sheets",
+        ]
+
     for cog in cogs:
         try:
             await bot.load_extension(cog)
