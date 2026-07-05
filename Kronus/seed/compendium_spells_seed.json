@@ -1560,5 +1560,187 @@
     "components": "V, S, M (a wick from a candle blessed by a cleric)",
     "duration": "Concentration, up to 1 minute",
     "description": "You ignite a ring of golden, warding flames around you. The flames shed bright light in a 10-foot radius and dim light for an additional 10 feet. Any creature you designate (up to 5 creatures of your choice) that starts its turn inside the bright light regains 1d4 hit points. Any hostile creature that enters the bright light for the first time on a turn or starts its turn there must make a Dexterity saving throw, taking 1d6 fire damage on a failed save. You can use a bonus action on your turn to move the fire's center up to 20 feet."
+  },
+  {
+    "name": "Aether Storm",
+    "level": 6,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "components": {
+      "V": true,
+      "S": true,
+      "M": "a shard of crystallized aether worth at least 500 gp"
+    },
+    "duration": "Concentration, up to 1 minute",
+    "description": "You summon a roiling storm of chaotic aether in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. The area becomes difficult terrain and is heavily obscured. When the storm appears and at the start of each of your turns, each creature in the area must make a Dexterity saving throw. On a failure, they take 8d6 psychic damage and 8d6 radiant damage and become stunned until the start of your next turn. On a success, they take half as much damage and are not stunned. Additionally, any creature that starts its turn in the storm must succeed on a Wisdom saving throw or be afflicted with a short-term madness effect (see DMG). At Higher Levels: When you cast this spell using a spell slot of 7th level or higher, the psychic and radiant damage each increase by 1d6 for each slot level above 6th."
+  },
+  {
+    "name": "Dragons Awakening",
+    "level": 7,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": {
+      "V": true,
+      "S": true,
+      "M": "a scale from a dragon"
+    },
+    "duration": "Concentration, up to 1 minute",
+    "description": "You touch a willing creature and awaken the latent draconic fury within. For the duration, the target gains the following benefits: their size increases by one category (to a maximum of Gargantuan), their walking speed increases by 20 feet, and they gain a flying speed of 40 feet. They also gain a breath weapon that they can use once on each of their turns: a 60-foot line or 30-foot cone (your choice) that deals 10d8 damage of a type determined by the dragon scale used (acid, cold, fire, lightning, or poison). A creature targeted must make a Dexterity saving throw, taking half damage on a success. Additionally, the target has advantage on Strength checks and saving throws, and their melee weapon attacks deal an extra 2d8 damage of the same type. At Higher Levels: When you cast this spell using a spell slot of 8th level or higher, you can target one additional creature for each slot level above 7th."
+  },
+  {
+    "name": "Crown Shatter",
+    "level": 5,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": {
+      "V": true,
+      "S": true,
+      "M": "a broken piece of a royal seal"
+    },
+    "duration": "Concentration, up to 1 minute",
+    "description": "You target a humanoid that holds a title of authority (such as a lord, captain, priest, or monarch). That creature must make a Wisdom saving throw. On a failure, for the duration, it suffers the following effects: it has disadvantage on Charisma (Intimidation, Persuasion, and Performance) checks; it cannot benefit from legendary resistance or any feature that would make it immune to being charmed, frightened, or incapacitated; and once per turn when it takes damage from a creature, that creature has advantage on the next attack roll or saving throw it makes before the end of its next turn. If the target is a creature with a crown or similar symbol of office, that symbol shatters audibly whether the save succeeds or fails, drawing attention. At Higher Levels: When you cast this spell using a spell slot of 6th level or higher, you can target one additional creature for each slot level above 5th."
+  },
+  {
+    "name": "Void Walk",
+    "level": 5,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "Self (30-foot line)",
+    "components": {
+      "V": true,
+      "S": true,
+      "M": "a pinch of ash from the Shadowfell"
+    },
+    "duration": "Instantaneous",
+    "description": "You step into the void and emerge elsewhere, tearing reality as you pass. Choose a point within 60 feet that you can see; you teleport to that point, leaving a trail of darkness. Each creature in a 30-foot-long, 5-foot-wide line between your starting and ending positions must make a Dexterity saving throw. On a failure, they take 12d6 necrotic damage and are blinded until the end of their next turn. On a success, they take half damage and are not blinded. If the line passes through an area of magical darkness, you may instead treat the end point as any unoccupied space you have seen within 120 feet, but the line is then doubled in length."
+  },
+  {
+    "name": "Flesh Tide",
+    "level": 6,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "components": {
+      "V": true,
+      "S": true,
+      "M": "a piece of rotting flesh"
+    },
+    "duration": "Concentration, up to 1 minute",
+    "description": "You cause a 30-foot-radius sphere of writhing, animate flesh and bone to erupt from the ground at a point within range. The area becomes difficult terrain. When the flesh tide appears and at the start of each of your turns, each creature in the area must make a Strength saving throw. On a failure, they take 8d8 necrotic damage and are restrained by grasping limbs and flesh. On a success, they take half damage and are not restrained. A restrained creature can use its action to make a Strength (Athletics) check against your spell save DC to escape. While restrained, the creature takes 2d8 necrotic damage at the start of each of its turns. The flesh tide can be used to move corpses: as a bonus action, you can move up to three Medium or smaller corpses in the area up to 20 feet to any unoccupied space within the area. At Higher Levels: When you cast this spell using a spell slot of 7th level or higher, the initial damage and escaping damage both increase by 1d8 for each slot level above 6th."
+  },
+  {
+    "name": "Inquisitor's Final Smite",
+    "level": 5,
+    "school": "Evocation",
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "components": {
+      "V": true,
+      "S": true,
+      "M": "a holy symbol of a grimdark deity or order"
+    },
+    "duration": "Concentration, up to 1 minute",
+    "description": "You channel the unforgiving judgment of the Inquisition into your weapon. The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon flares with black fire and white radiance. The attack deals an extra 8d8 radiant damage and 8d8 fire damage to the target. If this damage reduces the target to 0 hit points, its soul is immediately consumed, and the creature cannot be restored to life by any means short of a wish spell. In addition, for the next minute, you have advantage on Charisma (Intimidation) checks against creatures that witnessed the smite. At Higher Levels: When you cast this spell using a spell slot of 6th level or higher, the radiant and fire damage each increase by 1d8 for each slot level above 5th."
+  },
+  {
+    "name": "Cult Prophecy Fulfilled",
+    "level": 7,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": {
+      "V": true,
+      "S": true,
+      "M": "a tattered parchment with a written prophecy worth at least 750 gp"
+    },
+    "duration": "Concentration, up to 1 minute",
+    "description": "You recite a dark prophecy, bending fate to your will. For the duration, once per turn when you or a creature you can see within 60 feet makes an attack roll, ability check, or saving throw, you can use your reaction to force that creature to reroll the d20 and use the new result. You choose whether to apply this before or after the roll is known. Additionally, when a creature you can see within 60 feet dies, you can use your reaction to bind its lingering spirit. The spirit appears as a shadowy, distorted version of the creature in an unoccupied space within 10 feet of its corpse. It obeys your verbal commands (no action required by you) and uses the statistics of a shadow, except it has a number of hit points equal to the dead creature's hit point maximum. The spirit remains for up to 1 hour, until it is reduced to 0 hit points, or until you dismiss it as a bonus action. You can have up to three such spirits bound at a time."
+  },
+  {
+    "name": "Pyre Cataclysm",
+    "level": 7,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "components": {
+      "V": true,
+      "S": true,
+      "M": "a handful of ash and a ruby worth 1,500 gp"
+    },
+    "duration": "Instantaneous",
+    "description": "You create a cataclysmic explosion of cursed fire and ash at a point within range. Each creature in a 60-foot-radius sphere centered on that point must make a Dexterity saving throw. On a failure, they take 12d6 fire damage and 12d6 necrotic damage, and are blinded for 1 minute. On a success, they take half as much damage and are not blinded. The area becomes covered in thick, smoldering ash that counts as difficult terrain and lightly obscures the area for 1 minute, after which the ash cools. Objects in the area take 12d6 fire damage (ignoring object immunities of nonmagical objects) and 12d6 necrotic damage. At Higher Levels: When you cast this spell using a spell slot of 8th level or higher, the fire damage increases by 2d6 and the necrotic damage increases by 2d6 for each slot level above 7th."
+  },
+  {
+    "name": "Obsidian Final Verdict",
+    "level": 7,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "Self (60-foot cone)",
+    "components": "V, S, M (a shard of obsidian carved with a skull)",
+    "duration": "Instantaneous",
+    "description": "You unleash a wave of absolute dark decree, condemning all in its path to oblivion. Each creature in a 60-foot cone must make a Wisdom saving throw. On a failure, they take 12d8 necrotic damage and are stunned until the end of your next turn. On a success, they take half damage and are not stunned. Creatures with 50 hit points or fewer that fail the save are instantly slain, and their bodies crumble to obsidian dust. This dust can be used as material components for necromancy spells of 5th level or lower."
+  },
+  {
+    "name": "Cycle Break",
+    "level": 8,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Self (60-foot radius)",
+    "components": "V, S, M (a broken hourglass filled with black sand)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You tear apart the threads of fate and causality, creating a zone where the normal cycle of life and death is suspended. For the duration, when a creature within 60 feet of you would regain hit points, it gains no benefit. Instead, each target of healing receives 4d10 necrotic damage. Additionally, any creature that dies within the area cannot be revived or restored to life by any means short of a wish spell until the spell ends. When the spell ends, all such creatures crumble to ash."
+  },
+  {
+    "name": "Tenebris Undoing",
+    "level": 8,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You call upon the primordial darkness that existed before light, unraveling the very essence of your enemies. Choose a point within range. Each creature in a 40-foot-radius sphere centered on that point must make a Constitution saving throw. On a failure, they take 15d8 psychic damage and are blinded for 1 minute. On a success, they take half damage and are not blinded. Creatures that are already blind or in magical darkness have disadvantage on the saving throw. The area is filled with magical darkness for 1 round, which cannot be dispelled by any light of lower than 8th level."
+  },
+  {
+    "name": "Void Apocalypse",
+    "level": 9,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "1 mile",
+    "components": "V, S, M (a sliver of a dying star)",
+    "duration": "Instantaneous",
+    "description": "You open a rift to the absolute void between realities, causing a cataclysmic eruption of nothingness. Choose a point within range. Each creature in a 100-foot-radius sphere centered on that point must make a Dexterity saving throw. On a failure, they take 20d10 force damage and are pulled into the void, disappearing forever. On a success, they take half damage and are not pulled. Structures and objects in the area are annihilated, leaving a smooth, featureless crater. The void rift persists for 1 minute, and any creature that enters the area for the first time on a turn or starts its turn there must succeed on a Strength saving throw or be drawn in and destroyed."
+  },
+  {
+    "name": "Sovereigns Awakening",
+    "level": 9,
+    "school": "Transmutation",
+    "casting_time": "1 minute",
+    "range": "Self",
+    "components": "V, S, M (a crown forged from the bones of a titan, worth at least 25,000 gp)",
+    "duration": "Instantaneous",
+    "description": "You undergo a terrible apotheosis, becoming a sovereign of the grimdark world. For the next hour, you gain the following benefits: your hit point maximum increases by 100, you have immunity to all bludgeoning, piercing, and slashing damage from nonmagical weapons, and you gain a flying speed of 60 feet. Additionally, once during this hour, you can use an action to utter a command that forces all creatures of your choice within 300 feet to make a Wisdom saving throw or be frightened of you for 1 minute. While frightened in this way, creatures cannot take reactions and must use their turn to move away from you. At the end of the hour, your hit point maximum returns to normal, but you do not lose current hit points unless they exceed the original maximum. If you die while under this effect, your body explodes in a 100-foot-radius burst of necrotic energy, dealing 15d10 necrotic damage to all creatures in the area."
+  },
+  {
+    "name": "Ignis Inferno World",
+    "level": 9,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "1 mile",
+    "components": "V, S, M (a droplet of blood from a solar dragon)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You ignite the very foundations of reality, transforming the landscape into a hellish inferno. Choose a point within range. For the duration, a 500-foot-radius sphere centered on that point becomes a zone of perpetual flame. The ground is covered in searing flames that deal 10d10 fire damage to any creature that starts its turn there or enters it for the first time on a turn. Creatures inside the area are also subject to a heat wave: at the start of each of your turns, they must make a Constitution saving throw or gain one level of exhaustion. The air is thick with ash, heavily obscuring the area and causing all creatures except you to be blinded. Any creature that dies within the area is incinerated, leaving only a charred skeleton."
+  },
+  {
+    "name": "Ferrum Final Stand",
+    "level": 9,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (100-foot radius)",
+    "components": "V, S, M (a iron ingot forged in a dying sun)",
+    "duration": "Instantaneous",
+    "description": "You call forth a storm of razor-sharp ferro-magical shards that tear through all but the most stalwart. Each creature of your choice within 100 feet must make a Dexterity saving throw. On a failure, they take 18d10 slashing damage, and their armor, if any, is destroyed (magical armor is not destroyed but becomes nonmagical for 1 hour). On a success, they take half damage and their armor is unaffected. Creatures not wearing armor take an additional 5d10 piercing damage on a failed save. The ground in the area becomes difficult terrain littered with metal fragments for 1 hour, dealing 1d4 slashing damage to any creature that moves through it."
   }
 ]

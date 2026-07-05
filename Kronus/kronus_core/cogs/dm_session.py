@@ -621,6 +621,34 @@ class DMSessionCog(commands.Cog):
             return
         self._reset_daily()
 
+        # Respond to @mentions anywhere
+        if self.bot.user and self.bot.user in message.mentions:
+            clean = message.content.replace(f'<@{self.bot.user.id}>', '').replace(f'<@!{self.bot.user.id}>', '').strip()
+            if clean:
+                async with message.channel.typing():
+                    try:
+                        response = await self.ai.chat.completions.create(
+                            model="deepseek-v4-flash",
+                            messages=[
+                                {"role": "system", "content": "You are the Dungeon Master for Solis-Grave, a grimdark D&D campaign. Respond helpfully and in-character. Keep it short. If asked about the plot or future reveals, deflect with humor."},
+                                {"role": "user", "content": f"[{message.author.display_name}]: {clean}"}
+                            ],
+                            max_tokens=400
+                        )
+                        self.daily_calls += 1
+                        reply = response.choices[0].message.content.strip()
+                        await message.reply(reply[:1800])
+                    except Exception:
+                        pass
+            else:
+                await message.reply(
+                    "🐉 **I am the Dungeon Master of Solis-Grave.**\n"
+                    "Use `/help` for how to play, `/create` to make a character, "
+                    "or `/session_start` to begin a campaign.\n"
+                    "Tag me with a question and I'll answer!"
+                )
+            return
+
         active_session = None
         for key, sess in self.sessions.items():
             if sess["channel_id"] == message.channel.id:
