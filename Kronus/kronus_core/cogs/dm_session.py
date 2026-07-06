@@ -682,11 +682,7 @@ class DMSessionCog(commands.Cog):
                     chronicle = await self._generate_chronicle(
                         self.sessions.get(sovereign_id, {}), user
                     )
-                    embed = discord.Embed(
-                        title="Campaign Chronicle",
-                        description=chronicle[:4000],
-                        color=0x8B0000
-                    )
+                    embed = discord.Embed(title="Campaign Chronicle", description=chronicle[:4000], color=0x8B0000)
                     embed.set_footer(text="Your journey in Solis-Grave. Until the next campaign...")
                     try:
                         await user.send(embed=embed)
@@ -695,6 +691,8 @@ class DMSessionCog(commands.Cog):
                         await user.send(file=discord.File(buf, filename="campaign_chronicle.md"))
                     except discord.Forbidden:
                         await interaction.followup.send(f"Could not DM {user.mention} their chronicle (DMs closed).", ephemeral=True)
+
+                    await self._post_campaign_story(interaction, [(user, chronicle)])
 
                     if session_channel_id:
                         channel = interaction.guild.get_channel(session_channel_id)
@@ -714,34 +712,102 @@ class DMSessionCog(commands.Cog):
                             players.append(msg.author)
                     players = list(set(players))[:5]
 
+                chronicles = []
                 for player in players:
                     chronicle = await self._generate_chronicle({"character": player.display_name}, player)
-                    embed = discord.Embed(
-                        title="Campaign Chronicle",
-                        description=chronicle[:4000],
-                        color=0x8B0000
-                    )
+                    chronicles.append((player, chronicle))
+                    embed = discord.Embed(title="Campaign Chronicle", description=chronicle[:4000], color=0x8B0000)
                     embed.set_footer(text=f"Your journey in Solis-Grave as {player.display_name}.")
                     try:
                         await player.send(embed=embed)
                     except discord.Forbidden:
                         pass
 
+                # Generate combined campaign story
+                all_chronicles = "\n\n".join(c[1] for c in chronicles)
+                campaign_story = await self._generate_campaign_story(all_chronicles, [p.display_name for p in players])
+
                 if session_channel_id and session_channel_id != interaction.channel_id:
                     ch = interaction.guild.get_channel(session_channel_id)
-                    if ch:
-                        await ch.delete(reason="Campaign completed")
+                    if ch: await ch.delete(reason="Campaign completed")
 
             self.supabase.table("dm_game_state").update({
                 "session_active": False, "session_type": "group",
                 "campaign_status": "completed"
             }).eq("id", 1).execute()
 
+            # Post campaign story to forum channel
+            await self._post_campaign_story(interaction, chronicles)
             self.sessions.clear()
-            await interaction.followup.send("Campaign ended. Chronicles have been sent to all players.")
+            await interaction.followup.send("Campaign ended. Chronicles sent. Story posted in the campaign-stories forum.")
 
         except Exception as e:
             await interaction.followup.send(f"Error ending session: {e}", ephemeral=True)
+
+    async def _generate_campaign_story(self, chronicles_text: str, player_names: list[str]) -> str:
+        try:
+            resp = await self.ai.chat.completions.create(
+                model="deepseek-v4-flash",
+                messages=[{"role":"user","content":(
+                    f"Write a narrative campaign story based on these D&D session chronicles from Solis-Grave. "
+                    f"Players: {', '.join(player_names)}. "
+                    f"Write in past tense, third person. 3-5 paragraphs. Include major battles, NPCs, locations, "
+                    f"key decisions, and the campaign's outcome. Dark fantasy tone. 600 words max.\n\n"
+                    f"Chronicles:\n{chronicles_text[:3000]}"
+                )}],
+                max_tokens=1200
+            )
+            return resp.choices[0].message.content.strip()
+        except Exception:
+            return f"*The chronicle of {' and '.join(player_names)} was lost to the Void.*"
+
+    async def _post_campaign_story(self, interaction: discord.Interaction, chronicles_text: str):
+        try:
+            guild = interaction.guild
+            forum = guild.get_channel(1523806143070343270)
+            if not forum: return
+
+            players_mention = " ".join(p.mention for p, _ in chronicles)
+            story = await self._generate_campaign_story(
+                "\n\n".join(c[1] for c in chronicles),
+                [p.display_name for p, _ in chronicles]
+            )
+
+            # Create HTML file
+            html = f"""<!DOCTYPE html><html><head><meta charset="utf-8"><title>Campaign Story</title>
+<style>body{{font-family:Georgia,serif;max-width:800px;margin:40px auto;padding:20px;color:#2C1810;background:#F5F0E8}}
+h1{{color:#8B0000;text-align:center;border-bottom:2px solid #8B0000;padding-bottom:10px}}
+h2{{color:#5C3A1E}}p{{text-align:justify;line-height:1.6}}
+.footer{{text-align:center;color:#8B7355;margin-top:30px}}</style></head><body>
+<h1>Solis-Grave Campaign Story</h1>
+<h2>Players: {', '.join(p.display_name for p, _ in chronicles)}</h2>
+{story.replace(chr(10),'<br>')}
+<p class="footer">Solis-Grave: Shadows of the Crown</p>
+</body></html>"""
+
+            import io
+            buf = io.BytesIO(html.encode("utf-8"))
+
+            # Post as a new thread in the forum
+            thread_name = f"Campaign: {chronicles[0][0].display_name}"
+            if len(chronicles) > 1:
+                thread_name += f" +{len(chronicles)-1} more"
+
+            thread, _ = await forum.create_thread(
+                name=thread_name[:100],
+                content=f"**{story[:1800]}**",
+                file=discord.File(buf, filename="campaign_story.html")
+            )
+
+            # Mention participants
+            await thread.send(f"Participants: {players_mention}")
+            self.supabase.table("campaign_chronicles").insert({
+                "discord_id": interaction.user.id, "campaign_type": "completed",
+                "chronicle_text": story, "character_name": chronicles[0][0].display_name,
+                "in_game_date_range": "See chronicle", "major_events": []
+            }).execute()
+        except Exception as e:
+            print(f"Campaign story post failed: {e}")
 
     @app_commands.command(name="session_state", description="[DM] View current campaign state")
     async def session_state(self, interaction: discord.Interaction):
