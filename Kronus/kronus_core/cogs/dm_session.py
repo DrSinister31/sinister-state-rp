@@ -51,9 +51,7 @@ The D&D 5e SRD provides MECHANICS (HP, AC, damage dice, spell effects). Solis-Gr
 {{compendium_context}}
 
 ## SESSION CONFIG
-Session type: {{session_type}}
-{{#if solo}}Player count: 1 (solo + NPC party). The player IS the Sovereign (Dragon-Heir) — they are the main character. Their bloodline will awaken through story events.
-{{#if group}}Player count: {{player_count}}. ONE randomly selected player is a dormant Sovereign — DO NOT reveal who. Drop subtle hints through blood scans, Inquisitor attention, or instinctive magical moments.
+Session type: {{session_type}}. {{player_context}}
 
 ## NARRATION RULES
 1. Narrate in SECOND PERSON, PRESENT TENSE. "The iron portcullis groans upward. Beyond it, torchlight flickers against wet stone..."
@@ -379,6 +377,45 @@ class DMSessionCog(commands.Cog):
         self.session_capped = False   # Has the $5 cap been hit?
         self.stream_safe = False       # Stream-safe mode toggle
 
+    def handle_voice_input(self, user_id: int, name: str, text: str):
+        """Called by DMVoiceCog when Whisper transcribes speech. Routes to active session."""
+        if not text or not text.strip(): return
+        for sess in self.sessions.values():
+            if sess.get("channel_id") == self.config.dm_text_channel_id:
+                msg = f"[VOICE — {name}]: {text}"
+                sess.setdefault("history", []).append({"role": "user", "content": msg})
+                asyncio.create_task(self._respond_async(sess.get("channel_id"), msg, sess))
+                return
+        ch = self.bot.get_channel(self.config.dm_text_channel_id)
+        if ch: asyncio.create_task(ch.send(f"🎙️ **{name}**: {text}"))
+
+    async def _respond_async(self, channel_id: int, user_msg: str, session: dict):
+        try:
+            history = session.get("history", [])
+            resp = await self.ai.chat.completions.create(model="deepseek-v4-flash", messages=history, max_tokens=800)
+            reply = resp.choices[0].message.content.strip()
+            history.append({"role": "assistant", "content": reply})
+            self.daily_calls += 1
+
+            narrate_text = ""
+            import re as _re
+            # Extract [NARRATE] tags
+            parts = _re.findall(r'\[NARRATE\](.*?)\[/NARRATE\]', reply, _re.DOTALL)
+            for p in parts: narrate_text += p + " "
+            cleaned = _re.sub(r'\[NARRATE\].*?\[/NARRATE\]', '', reply, flags=_re.DOTALL)
+            if not cleaned.strip(): cleaned = reply
+
+            ch = self.bot.get_channel(channel_id)
+            if ch:
+                for chunk in [cleaned[i:i+1990] for i in range(0, len(cleaned), 1990)]:
+                    await ch.send(chunk)
+            if narrate_text.strip():
+                voice_cog = self.bot.get_cog("DMVoiceCog")
+                if voice_cog: asyncio.create_task(voice_cog.narrate(narrate_text.strip()))
+        except Exception as e:
+            ch = self.bot.get_channel(channel_id)
+            if ch: await ch.send(f"*The weave falters...* ({e})")
+
     def _estimate_cost(self, prompt_chars: int, completion_chars: int) -> float:
         input_tokens = prompt_chars / 4
         output_tokens = completion_chars / 4
@@ -446,19 +483,29 @@ class DMSessionCog(commands.Cog):
             return ""
 
     def _build_system_prompt(self, session_type: str, player_count: int = 1) -> str:
+        from pathlib import Path
+        PROMPT_DIR = Path(__file__).resolve().parent.parent.parent / "prompts" / "solis_grave"
+
         prompt = DM_SYSTEM_PROMPT
         prompt = prompt.replace("{{session_type}}", session_type)
         prompt = prompt.replace("{{player_count}}", str(player_count))
 
+        # Inject correct player context for Mustache replacement
+        if "solo" in session_type:
+            pctx = "Solo campaign. Player is the Sovereign (Dragon-Heir) — main character. Bloodline awakens through story."
+        else:
+            pctx = f"Group campaign. {player_count} players. ONE randomly selected player is a dormant Sovereign — DO NOT reveal who."
+        prompt = prompt.replace("{{player_context}}", pctx)
+
         for lore_file, max_chars in [
-            ("prompts/solis_grave/rules/story_engine.md", 2000),
-            ("prompts/solis_grave/rules/magic_system.md", 1500),
-            ("prompts/solis_grave/sovereigns_and_gods.md", 1200),
-            ("prompts/solis_grave/the_betrayed.md", 1000),
-            ("prompts/solis_grave/ascension_system.md", 1500),
+            ("rules/story_engine.md", 2000),
+            ("rules/magic_system.md", 1500),
+            ("sovereigns_and_gods.md", 1200),
+            ("the_betrayed.md", 1000),
+            ("ascension_system.md", 1500),
         ]:
             try:
-                content = open(lore_file, "r").read()
+                content = (PROMPT_DIR / lore_file).read_text(encoding="utf-8")
                 prompt += "\n\n" + content[:max_chars]
             except Exception:
                 pass
@@ -692,7 +739,7 @@ class DMSessionCog(commands.Cog):
                     except discord.Forbidden:
                         await interaction.followup.send(f"Could not DM {user.mention} their chronicle (DMs closed).", ephemeral=True)
 
-                    await self._post_campaign_story(interaction, [(user, chronicle)])
+                    chronicles = [(user, chronicle)]  # Set for forum post below
 
                     if session_channel_id:
                         channel = interaction.guild.get_channel(session_channel_id)
@@ -723,21 +770,16 @@ class DMSessionCog(commands.Cog):
                     except discord.Forbidden:
                         pass
 
-                # Generate combined campaign story
-                all_chronicles = "\n\n".join(c[1] for c in chronicles)
-                campaign_story = await self._generate_campaign_story(all_chronicles, [p.display_name for p in players])
-
                 if session_channel_id and session_channel_id != interaction.channel_id:
                     ch = interaction.guild.get_channel(session_channel_id)
                     if ch: await ch.delete(reason="Campaign completed")
 
+            # Post campaign story to forum (once, for both solo and group)
+            if chronicles:
+                await self._post_campaign_story(interaction, chronicles)
             self.supabase.table("dm_game_state").update({
-                "session_active": False, "session_type": "group",
-                "campaign_status": "completed"
+                "session_active": False, "campaign_status": "completed"
             }).eq("id", 1).execute()
-
-            # Post campaign story to forum channel
-            await self._post_campaign_story(interaction, chronicles)
             self.sessions.clear()
             await interaction.followup.send("Campaign ended. Chronicles sent. Story posted in the campaign-stories forum.")
 
@@ -1196,7 +1238,7 @@ h2{{color:#5C3A1E}}p{{text-align:justify;line-height:1.6}}
             parts.append(f"Session cost: ${self.session_cost:.4f}")
         await interaction.response.send_message(f"[DM OOC]: {' | '.join(parts)}.", ephemeral=False)
 
-    @app_commands.command(name="create", description="Character creation — bot-guided or self-read")
+    @app_commands.command(name="create", description="Character creation guide — bot-guided or self-read from our books")
     async def create_command(self, interaction: discord.Interaction):
         await interaction.response.send_message(
             "🧬 **Character Creation for Solis-Grave**\n\n"
@@ -1259,7 +1301,8 @@ h2{{color:#5C3A1E}}p{{text-align:justify;line-height:1.6}}
     async def welcome_command(self, interaction: discord.Interaction, campaign_name: str = "Solis-Grave"):
         await interaction.response.defer(ephemeral=False)
         try:
-            template = open("prompts/solis_grave/welcome_template.md", "r").read()
+            from pathlib import Path
+            template = (Path(__file__).resolve().parent.parent.parent / "prompts" / "solis_grave" / "welcome_template.md").read_text(encoding="utf-8")
         except:
             template = "# WELCOME TO {{campaign_name}}\n\nWelcome to Solis-Grave."
 
@@ -1302,6 +1345,76 @@ h2{{color:#5C3A1E}}p{{text-align:justify;line-height:1.6}}
         embed.add_field(name="📝 After Sessions", value="I write session recaps for players.\nAfter a campaign ends, I generate a full story from real gameplay and post it in the `#campaign-stories` thread channel.", inline=False)
         embed.set_footer(text="Tag me (@Kronikle) anywhere and I'll respond.")
         await interaction.response.send_message(embed=embed, ephemeral=False)
+
+    @app_commands.command(name="xp", description="Check your XP and level progress")
+    async def xp_command(self, interaction: discord.Interaction):
+        try:
+            r = self.supabase.table("character_sheets").select("character_name,level,xp").ilike("character_name", f"%{interaction.user.display_name}%").limit(1).execute()
+            if r.data:
+                c = r.data[0]; lvl = c.get("level",1); xp = c.get("xp",0)
+                next_xp = {1:300,2:900,3:2700,4:6500,5:14000,6:23000,7:34000,8:48000,9:64000,10:85000,11:100000,12:120000,13:140000,14:165000,15:195000,16:225000,17:265000,18:305000,19:355000,20:0}.get(lvl,0)
+                bar = "█" * min(10, int(xp/next_xp*10 if next_xp else 10)) + "░" * max(0, 10-min(10,int(xp/next_xp*10 if next_xp else 10)))
+                await interaction.response.send_message(f"**{c['character_name']}** — Level {lvl} | {xp}/{next_xp} XP\n`{bar}`")
+            else:
+                await interaction.response.send_message("No character linked. Use `/create` or `/character_create`.", ephemeral=True)
+        except: await interaction.response.send_message("Could not fetch XP.", ephemeral=True)
+
+    @app_commands.command(name="help", description="List all DM bot commands and how to play")
+    async def help_command(self, interaction: discord.Interaction):
+        await interaction.response.send_message(embed=discord.Embed(
+            title="🐉 DM Bot Commands", color=0x8B0000,
+            description="**Sessions:** `/session_start active|async|solo`, `/session_end`, `/session_state`\n**Characters:** `/character_create`, `/character_view`, `/character_list`, `/character_mine`, `/character_edit`, `/character_longrest`, `/character_shortrest`\n**Play:** `/roll`, `/xp`, `/lore`, `/bestiary`, `/recap`, `/worldstate`, `/npc_list`\n**Modes:** `/ic`, `/ooc`, `/stream on|off`\n**Voice:** `/dm_join`, `/dm_leave`, `/dm_narrate`, `/dm_listen`\n**Ref:** `/books`, `/guide`, `/howto`, `/welcome`, `/help`\n**Admin:** `/dmbudget`\n\nType `((OOC question))` anytime to ask the DM directly. `/howto` for the full guide."
+        ))
+
+    @app_commands.command(name="turn", description="See whose turn it is in the active group session")
+    async def turn_command(self, interaction: discord.Interaction):
+        sess = None
+        for s in self.sessions.values():
+            if s.get("channel_id") == interaction.channel_id: sess = s; break
+        if not sess: await interaction.response.send_message("No active session in this channel.", ephemeral=True); return
+        q = sess.get("turn_queue", [])
+        cur = sess.get("current_turn", -1)
+        started = sess.get("turn_started")
+        if not q: await interaction.response.send_message("No turn queue yet. Start playing and I'll track turns!"); return
+        lines = [f"🎭 **Turn Order ({len(q)} players):**"]
+        for i, name in enumerate(q):
+            m = "▶️" if i == cur else f"{i+1}."
+            lines.append(f"{m} **{name}**")
+            if i == cur and started:
+                remain = max(0, sess.get("turn_window", 900) - (datetime.utcnow() - started).total_seconds())
+                lines.append(f"   {'⚠️ Overdue!' if remain <= 0 else f'⏱️ {int(remain//60)}m {int(remain%60)}s'}")
+        await interaction.response.send_message("\n".join(lines))
+
+    @app_commands.command(name="initiative", description="Track combat initiative order")
+    @app_commands.describe(character="Character name", roll="Initiative roll (d20 + modifier)")
+    async def initiative_command(self, interaction: discord.Interaction, character: str, roll: int):
+        if not hasattr(self, '_init_order'): self._init_order = []
+        self._init_order.append((character, roll))
+        self._init_order.sort(key=lambda x: x[1], reverse=True)
+        lines = ["⚔️ **Initiative Order:**"]
+        for i, (name, r) in enumerate(self._init_order):
+            lines.append(f"{'▶️' if i==0 else f'{i+1}.'} **{name}** — {r}")
+        await interaction.response.send_message("\n".join(lines))
+
+    @app_commands.command(name="dm_voices", description="Preview all available TTS voices and the current default")
+    async def dm_voices_command(self, interaction: discord.Interaction):
+        import os
+        cur = os.getenv("DM_TTS_VOICE", "en-US-EricNeural")
+        voices = [
+            ("en-US-EricNeural","Male — DM default. Rational, measured."),
+            ("en-US-GuyNeural","Male — Passion, news anchor style."),
+            ("en-US-ChristopherNeural","Male — Deep, reliable, authority."),
+            ("en-US-BrianNeural","Male — Casual, approachable."),
+            ("en-US-JennyNeural","Female — Warm, considerate."),
+            ("en-US-AriaNeural","Female — Confident, bright."),
+            ("en-US-AnaNeural","Female — Cute, cartoonish (child/fey)."),
+            ("en-GB-SoniaNeural","Female — British elegant (nobles)."),
+            ("en-GB-RyanNeural","Male — British, refined."),
+        ]
+        embed = discord.Embed(title="🎙️ TTS Voices", description=f"Current: **{cur}**. Set via `DM_TTS_VOICE` in env.", color=0x8B0000)
+        for v, d in voices:
+            embed.add_field(name=v, value=d, inline=False)
+        await interaction.response.send_message(embed=embed)
 
 
 async def setup(bot: commands.Bot):
