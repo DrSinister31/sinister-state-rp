@@ -539,13 +539,14 @@ class DMSessionCog(commands.Cog):
         except Exception:
             return f"*The chronicle of {character} was lost to the Void. Only fragments remain.*"
 
-    @app_commands.command(name="session_start", description="Begin a campaign session — group is default. Solo warns about usage.")
-    @app_commands.describe(mode="Group Campaign (default) or Solo + NPC party")
+    @app_commands.command(name="session_start", description="Begin a campaign — Active (15min turns), Async (12hr turns), or Solo")
+    @app_commands.describe(mode="How should turns work?")
     @app_commands.choices(mode=[
-        app_commands.Choice(name="Group Campaign (recommended)", value="group"),
-        app_commands.Choice(name="Solo + NPC Party (costs more credits)", value="solo")
+        app_commands.Choice(name="Active Group — everyone online, fast turns", value="active"),
+        app_commands.Choice(name="Async Group — play-by-post, 12hr windows", value="async"),
+        app_commands.Choice(name="Solo — all the spotlight, no waiting", value="solo")
     ])
-    async def session_start(self, interaction: discord.Interaction, mode: str = "group"):
+    async def session_start(self, interaction: discord.Interaction, mode: str = "active"):
         if not self._is_dm(interaction):
             await interaction.response.send_message("Only the DM can start sessions.", ephemeral=True)
             return
@@ -563,17 +564,19 @@ class DMSessionCog(commands.Cog):
 
             guild = interaction.guild
             if mode == "solo":
-                if not self.config.dnd_category_id:
-                    await interaction.followup.send("DND_CATEGORY_ID not set in .env. Cannot create solo channels.")
-                    return
                 await interaction.followup.send(
-                    "⚠️ **Solo campaigns** — running just for you.\n"
-                    "Solo sessions cost the same as group sessions per exchange, but you get all the spotlight. "
-                    "Group campaigns split the story across more players — richer drama, same credit cost.\n"
-                    "No hard limit. Play how you want. Setting up your channel now..."
+                    "**Solo Campaign** — you get all the spotlight.\n"
+                    "Without waiting for others, you may play longer sessions: 3-4 hours, 100+ exchanges.\n"
+                    "Each exchange costs the same as group — you'll just make more of them. No limit.\n"
+                    "*Active group mode shares the fun across players and creates richer drama.*\n\n"
+                    "Setting up your channel..."
                 )
                 await asyncio.sleep(2)
-                channel = await self._create_solo_channel(guild, interaction.user)
+                if not self.config.dnd_category_id:
+                    await interaction.followup.send("DND_CATEGORY_ID not set. Using this channel instead.")
+                    channel = interaction.channel
+                else:
+                    channel = await self._create_solo_channel(guild, interaction.user)
                 self.sessions[interaction.user.id] = {
                     "type": "solo", "channel_id": channel.id, "history": [], "sovereign_revealed": False
                 }
