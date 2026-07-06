@@ -1,4 +1,5 @@
-import sys, os, asyncio, subprocess, uuid
+import sys, os, asyncio, subprocess, uuid, time, wave, io, struct, threading, tempfile
+from collections import defaultdict
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
 import discord
@@ -7,11 +8,17 @@ from discord.ext import commands
 from shared.config import Config
 
 DM_VOICE = os.getenv("DM_TTS_VOICE", "en-US-EricNeural")
-WHISPER_ENABLED = os.getenv("DM_WHISPER_ENABLED", "0") == "1"
+WHISPER_ENABLED = os.getenv("DM_WHISPER_ENABLED", "1") == "1"
 WHISPER_MODEL = os.getenv("DM_WHISPER_MODEL", "tiny.en")
+SILENCE_THRESHOLD = 2.0      # seconds of silence to end utterance
+MAX_UTTERANCE_SECS = 45       # max seconds before forcing a cut
+SPEECH_RMS_FLOOR = 200        # RMS below this = silence
+SPEECH_CONFIDENCE_WINDOW = 3  # consecutive loud chunks to confirm speech started
+CHUNK_SECS = 0.5              # audio chunk duration in seconds
+
 
 class DMVoiceCog(commands.Cog):
-    """Voice: edge-tts narration with voice-switching, Whisper STT, stream detection."""
+    """Voice: edge-tts narration with voice-switching, dynamic Whisper STT, stream detection."""
 
     def __init__(self, bot: commands.Bot):
         self.bot = bot
@@ -27,6 +34,10 @@ class DMVoiceCog(commands.Cog):
         self._whisper_model = None
         self._temp_dir = os.path.join(os.environ.get("TEMP", "/tmp"), "opencode", "narration")
         os.makedirs(self._temp_dir, exist_ok=True)
+        self._user_buffers: dict[int, list[bytes]] = defaultdict(list)
+        self._user_silence: dict[int, float] = defaultdict(float)
+        self._user_speaking: dict[int, bool] = defaultdict(bool)
+        self._user_names: dict[int, str] = {}
         if WHISPER_ENABLED:
             self._init_whisper()
 
@@ -38,6 +49,7 @@ class DMVoiceCog(commands.Cog):
             print("[dm-voice] Whisper ready")
         except Exception as e:
             print(f"[dm-voice] Whisper failed: {e}")
+            self._whisper_model = None
 
     async def connect(self, channel: discord.VoiceChannel) -> bool:
         if self.voice_client and self.voice_client.is_connected():
@@ -47,6 +59,7 @@ class DMVoiceCog(commands.Cog):
             self.voice_client = await channel.connect()
             self.consumer_task = asyncio.create_task(self._narration_consumer())
             if WHISPER_ENABLED and self._whisper_model:
+                self._listen_enabled = True
                 self.listen_task = asyncio.create_task(self._voice_listener_loop())
             if self.idle_task: self.idle_task.cancel(); self.idle_task = None
             return True
@@ -55,10 +68,14 @@ class DMVoiceCog(commands.Cog):
             return False
 
     async def disconnect(self):
+        self._listen_enabled = False
         if self.consumer_task: self.consumer_task.cancel(); self.consumer_task = None
         if self.listen_task: self.listen_task.cancel(); self.listen_task = None
         self.narration_queue = asyncio.Queue()
         self.is_speaking = False
+        self._user_buffers.clear()
+        self._user_silence.clear()
+        self._user_speaking.clear()
         if self.voice_client and self.voice_client.is_connected():
             await self.voice_client.disconnect(); self.voice_client = None
 
@@ -118,44 +135,95 @@ class DMVoiceCog(commands.Cog):
             i += 1
         return segments or [(DM_VOICE, text.strip())]
 
+    # ──────────────── DYNAMIC VOICE LISTENING ────────────────
+
     async def _voice_listener_loop(self):
+        """Dynamically capture speech utterances, not fixed chunks.
+        Listens continuously, buffers while someone speaks, sends to Whisper
+        when they finish their thought (pause >= SILENCE_THRESHOLD seconds)."""
         while self._listen_enabled and self.voice_client and self.voice_client.is_connected():
             try:
-                import io, wave
                 sink = discord.sinks.WaveSink()
                 self.voice_client.start_recording(sink, lambda *a: None)
-                for user_id, audio in sink.audio_data.items():
-                    name = self.bot.get_user(user_id)
-                    name_str = name.display_name if name else str(user_id)
-                    audio.file.seek(0)
-                    wav_bytes = audio.file.read()
-                    loop = asyncio.get_event_loop()
-                    text = await loop.run_in_executor(None, self._transcribe, wav_bytes)
-                    if text:
-                        session_cog = self.bot.get_cog("DMSessionCog")
-                        if session_cog and session_cog.session_active:
-                            session_cog.handle_voice_input(user_id, name_str, text)
-                        else:
-                            ch = self.bot.get_channel(self.config.dm_text_channel_id)
-                            if ch: await ch.send(f"🎙️ **{name_str}**: {text}")
+
+                await asyncio.sleep(CHUNK_SECS)
                 self.voice_client.stop_recording()
+
+                now = time.time()
+                for user_id, audio in sink.audio_data.items():
+                    if not audio.file: continue
+                    audio.file.seek(0)
+                    if audio.file.getbuffer().nbytes < 500: continue  # skip tiny chunks
+
+                    wav_bytes = audio.file.read()
+
+                    name = self.bot.get_user(user_id)
+                    self._user_names[user_id] = name.display_name if name else str(user_id)
+
+                    rms = self._calc_rms(wav_bytes)
+
+                    if rms > SPEECH_RMS_FLOOR:
+                        self._user_speaking[user_id] = True
+                        self._user_silence[user_id] = 0.0
+                        self._user_buffers[user_id].append(wav_bytes)
+                    elif self._user_speaking.get(user_id, False):
+                        self._user_silence[user_id] = self._user_silence.get(user_id, 0.0) + CHUNK_SECS
+                        self._user_buffers[user_id].append(wav_bytes)
+
+                # Check for completed utterances (silence after speech)
+                for user_id in list(self._user_speaking.keys()):
+                    silence_dur = self._user_silence.get(user_id, 0.0)
+                    utterance_len = len(self._user_buffers.get(user_id, [])) * CHUNK_SECS
+
+                    if self._user_speaking.get(user_id) and (
+                        silence_dur >= SILENCE_THRESHOLD or utterance_len >= MAX_UTTERANCE_SECS
+                    ):
+                        chunks = self._user_buffers.pop(user_id, [])
+                        self._user_silence.pop(user_id, 0.0)
+                        self._user_speaking[user_id] = False
+
+                        if chunks and utterance_len >= 0.8:  # minimum 0.8 sec utterance
+                            combined = b"".join(chunks)
+                            name = self._user_names.get(user_id, "Unknown")
+                            text = await self._transcribe_async(combined)
+                            if text and len(text.strip()) > 1:
+                                print(f"[dm-voice] 🎤 {name}: {text}")
+                                session_cog = self.bot.get_cog("DMSessionCog")
+                                if session_cog and session_cog.session_active:
+                                    session_cog.handle_voice_input(user_id, name, text)
+                                else:
+                                    ch = self.bot.get_channel(self.config.dm_text_channel_id)
+                                    if ch: await ch.send(f"🎙️ **{name}**: {text}")
+
             except Exception as e:
                 print(f"[dm-voice] Listen error: {e}")
-            await asyncio.sleep(3)
+                await asyncio.sleep(0.5)
 
-    def _transcribe(self, wav_bytes: bytes) -> str | None:
+    async def _transcribe_async(self, wav_bytes: bytes) -> str | None:
         if not self._whisper_model: return None
         try:
-            import wave, tempfile
             tmp = tempfile.NamedTemporaryFile(suffix=".wav", delete=False)
             with wave.open(tmp.name, 'wb') as wf:
                 wf.setnchannels(1); wf.setsampwidth(2); wf.setframerate(16000)
                 wf.writeframes(wav_bytes)
-            result = self._whisper_model.transcribe(tmp.name, language="en", fp16=False)
+            loop = asyncio.get_event_loop()
+            result = await loop.run_in_executor(None, self._whisper_model.transcribe, tmp.name, dict(language="en", fp16=False))
             os.unlink(tmp.name)
             return result["text"].strip() or None
         except Exception as e:
             return None
+
+    @staticmethod
+    def _calc_rms(data: bytes) -> float:
+        count = len(data) // 2
+        if count < 10: return 0
+        try:
+            samples = struct.unpack(f"<{count}h", data[:count * 2])
+            return (sum(s * s for s in samples) / count) ** 0.5
+        except Exception:
+            return 0
+
+    # ──────────────── STREAM DETECTION ────────────────
 
     @commands.Cog.listener()
     async def on_voice_state_update(self, member: discord.Member, before: discord.VoiceState, after: discord.VoiceState):
@@ -179,13 +247,15 @@ class DMVoiceCog(commands.Cog):
         if not self.streaming_user_ids and not self.is_speaking and self.narration_queue.empty():
             await self.disconnect()
 
+    # ──────────────── COMMANDS ────────────────
+
     @app_commands.command(name="dm_join", description="Bot joins your voice channel")
     async def dm_join(self, interaction: discord.Interaction):
         if not interaction.user.voice or not interaction.user.voice.channel:
             await interaction.response.send_message("Join a voice channel first.", ephemeral=True); return
         await interaction.response.defer(ephemeral=True)
         ok = await self.connect(interaction.user.voice.channel)
-        await interaction.followup.send(f"✅ Joined **{interaction.user.voice.channel.name}** — I'll listen for narration and streams." if ok else "Failed to join.", ephemeral=True)
+        await interaction.followup.send(f"✅ Joined **{interaction.user.voice.channel.name}** — listening for speech." if ok else "Failed to join.", ephemeral=True)
 
     @app_commands.command(name="dm_leave", description="Bot leaves voice channel")
     async def dm_leave(self, interaction: discord.Interaction):
@@ -201,19 +271,21 @@ class DMVoiceCog(commands.Cog):
         await self.narrate(text)
         await interaction.followup.send("Queued.", ephemeral=True)
 
-    @app_commands.command(name="dm_listen", description="Enable voice-to-text listening (Whisper)")
+    @app_commands.command(name="dm_listen", description="Toggle voice-to-text listening")
     async def dm_listen(self, interaction: discord.Interaction):
         if not WHISPER_ENABLED:
-            await interaction.response.send_message("Set DM_WHISPER_ENABLED=1 in .env and restart.", ephemeral=True); return
+            await interaction.response.send_message("Set DM_WHISPER_ENABLED=1 in env.", ephemeral=True); return
         if not self._whisper_model:
-            await interaction.response.send_message("Whisper model failed to load. Check logs.", ephemeral=True); return
+            await interaction.response.send_message("Whisper model not loaded. Check logs.", ephemeral=True); return
         if not self.voice_client or not self.voice_client.is_connected():
-            await interaction.response.send_message("Bot is not in VC. Use /dm_join first.", ephemeral=True); return
-        await interaction.response.defer(ephemeral=True)
-        self._listen_enabled = True
-        if not self.listen_task:
-            self.listen_task = asyncio.create_task(self._voice_listener_loop())
-        await interaction.followup.send(f"🎙️ Listening enabled (Whisper `{WHISPER_MODEL}`).", ephemeral=True)
+            await interaction.response.send_message("Not in VC. Use /dm_join first.", ephemeral=True); return
+        self._listen_enabled = not self._listen_enabled
+        if self._listen_enabled:
+            if not self.listen_task:
+                self.listen_task = asyncio.create_task(self._voice_listener_loop())
+        else:
+            if self.listen_task: self.listen_task.cancel(); self.listen_task = None
+        await interaction.response.send_message(f"🎙️ Voice listening: **{'ON' if self._listen_enabled else 'OFF'}**", ephemeral=True)
 
 
 async def setup(bot: commands.Bot):
