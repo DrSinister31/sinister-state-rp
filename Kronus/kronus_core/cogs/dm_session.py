@@ -11,6 +11,14 @@ from shared.supabase_client import get_supabase
 MAX_HISTORY = 30
 RATE_LIMIT_SECONDS = 0.5
 CREATOR_ID = 1370770707507708047
+CREATOR_PATREON = "https://patreon.com/drsinister31"
+# DeepSeek v4-flash pricing per 1M tokens (USD)
+TOKEN_COST_INPUT = 0.14 / 1_000_000
+TOKEN_COST_OUTPUT = 0.28 / 1_000_000
+# Session cost thresholds (disabled by default)
+SESSION_WARN_USD = 2.00    # Warn at $2
+SESSION_CAP_USD = 5.00     # Hard cap at $5
+COST_TRACKING_ENABLED = False  # Toggle via /dmbudget
 SOVEREIGN_CLASSES = ["barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard"]
 DM_SYSTEM_PROMPT = """You are the Dungeon Master for "Solis-Grave," a dark fantasy D&D 5e campaign set in a world where magic comes exclusively from draconic bloodlines and the Inquisition hunts anyone with unregistered purity.
 
@@ -321,7 +329,36 @@ class DMSessionCog(commands.Cog):
     def _reset_daily(self):
         if datetime.utcnow().date() != self.day:
             self.daily_calls = 0
-            self.day = datetime.utcnow().date()
+        self.day = datetime.utcnow().date()
+        self.session_cost = 0.0       # USD cost this session
+        self.session_warned = False   # Has the $2 warning been shown?
+        self.session_capped = False   # Has the $5 cap been hit?
+
+    def _estimate_cost(self, prompt_chars: int, completion_chars: int) -> float:
+        input_tokens = prompt_chars / 4
+        output_tokens = completion_chars / 4
+        return (input_tokens * TOKEN_COST_INPUT) + (output_tokens * TOKEN_COST_OUTPUT)
+
+    def _check_cost_limits(self, message: discord.Message, estimated_cost: float) -> bool:
+        if not COST_TRACKING_ENABLED:
+            return True
+        self.session_cost += estimated_cost
+        if self.session_cost >= SESSION_CAP_USD and not self.session_capped:
+            self.session_capped = True
+            asyncio.create_task(message.reply(
+                f"🪙 **Session cap reached — ${SESSION_CAP_USD:.2f}.**\n"
+                f"The DM's power requires fuel. Support the campaign at {CREATOR_PATREON} "
+                f"to unlock unlimited sessions. The Creator can adjust limits with /dmbudget."
+            ))
+            return False
+        if self.session_cost >= SESSION_WARN_USD and not self.session_warned:
+            self.session_warned = True
+            asyncio.create_task(message.reply(
+                f"💡 **You've used ${self.session_cost:.2f} this session.**\n"
+                f"I'll keep going, but if you're enjoying Solis-Grave, consider supporting at {CREATOR_PATREON} "
+                f"to fuel the dragon's fire. The Creator can adjust limits with /dmbudget."
+            ))
+        return True
 
     def _is_dm(self, interaction: discord.Interaction) -> bool:
         if interaction.user.id == self.config.owner_discord_id:
@@ -473,6 +510,9 @@ class DMSessionCog(commands.Cog):
             return
 
         await interaction.response.defer(ephemeral=False)
+        self.session_cost = 0.0
+        self.session_warned = False
+        self.session_capped = False
 
         try:
             state = self.supabase.table("dm_game_state").select("session_active").eq("id", 1).execute()
@@ -955,19 +995,36 @@ class DMSessionCog(commands.Cog):
         if chars: embed.add_field(name="Party", value=chars[:1000], inline=False)
         await interaction.followup.send(embed=embed)
 
-    @app_commands.command(name="dmbudget", description="Set DeepSeek daily call limit (Creator only)")
-    @app_commands.describe(limit="Max daily calls (0 = unlimited)")
-    async def dmbudget(self, interaction: discord.Interaction, limit: int):
+    @app_commands.command(name="dmbudget", description="Set DeepSeek daily call limit or toggle cost tracking (Creator only)")
+    @app_commands.describe(limit="Max daily calls (0 = unlimited)", tracking="Enable session cost tracking ($2 warn, $5 cap)")
+    async def dmbudget(self, interaction: discord.Interaction, limit: int = -1, tracking: bool | None = None):
         if interaction.user.id != CREATOR_ID:
             await interaction.response.send_message(
                 "Only the Creator may adjust the budget. The DM's power is not for sale.",
                 ephemeral=True
             )
             return
-        self.budget_enabled = True
-        self.daily_limit = max(0, limit)
-        msg = f"Daily call limit set to **{self.daily_limit}** calls." if self.daily_limit > 0 else "Budget disabled — **no limit** on daily calls."
-        await interaction.response.send_message(f"[DM OOC]: {msg} Current count today: {self.daily_calls}.", ephemeral=False)
+        global COST_TRACKING_ENABLED
+        parts = []
+        if limit >= 0:
+            self.budget_enabled = True
+            self.daily_limit = limit
+            parts.append(f"Daily limit: **{self.daily_limit}** calls" if limit > 0 else "Daily limit: **unlimited**")
+        else:
+            parts.append(f"Daily limit: **{self.daily_limit}** calls" if self.daily_limit > 0 else "Daily limit: **unlimited**")
+        if tracking is not None:
+            COST_TRACKING_ENABLED = tracking
+            if tracking:
+                self.session_cost = 0.0
+                self.session_warned = False
+                self.session_capped = False
+            parts.append(f"Cost tracking: **{'ON — $2 warn / $5 cap' if tracking else 'OFF'}**")
+        else:
+            parts.append(f"Cost tracking: **{'ON' if COST_TRACKING_ENABLED else 'OFF'}**")
+        parts.append(f"Today's calls: {self.daily_calls}")
+        if COST_TRACKING_ENABLED:
+            parts.append(f"Session cost: ${self.session_cost:.4f}")
+        await interaction.response.send_message(f"[DM OOC]: {' | '.join(parts)}.", ephemeral=False)
 
 
 async def setup(bot: commands.Bot):
