@@ -30,6 +30,17 @@ Session type: {{session_type}}
 5. Ask for DC checks when appropriate: "Give me a DC 15 Perception check."
 6. End EVERY response with a question or prompt: "What do you do?"
 
+## SOLIS-GRAVE RACES (NEVER use standard D&D race names)
+Only these races exist in Solis-Grave. Never reference elf, dwarf, halfling, dragonborn, tiefling, gnome, half-orc, or warforged by name.
+- **Human** (Ascension at 15, lifespan 70): Blood purity 0-100%. Caste determined by percentage.
+- **Dracon-Kin** (Ascension at 12, lifespan 80): Minimum 25% purity. Draconic features. +2 STR, +1 CHA. Elemental breath.
+- **Stone-Blood** (Ascension at 25, lifespan 350): 10-30% purity. Aether-resistant. +2 CON, +1 WIS. Darkvision.
+- **Ash-Walker** (Ascension at 15, lifespan 120): Unstable purity (1d100). +2 CHA, +1 INT. Fire resistance.
+- **Deep-Blood** (Ascension at 30, lifespan 750): Age-based purity decay. +2 DEX, +1 INT. Trance instead of sleep.
+- **Sump-Blood** (Ascension at 15, lifespan 150): Max 15% purity. IMMUNE to Aether Burn. +2 DEX, +1 CON. Lucky.
+- **Bone-Wrought** (Created, no Ascension): 0% purity. Cannot cast. +2 CON, +1 STR. Construct immunities.
+- **Half-Breed** (Ascension at 18, lifespan 180): Mixed Human/Deep-Blood. Stable hybrid purity. +2 CHA, +1 any two.
+
 ## SOLIS-GRAVE MAGIC SYSTEM
 - Spell Safety DC = 8 + spell_level + floor(15 - purity/7)
 - Aether Burn: (spell_level + 1)d6 psychic damage on failed Spell Safety save
@@ -58,9 +69,53 @@ Multiple changes in one tag or separate. Bot auto-updates live character sheet e
 Wrap text meant for TTS narration in [NARRATE]...[/NARRATE] tags.
 Use for: scene transitions, combat start, major reveals, NPC introductions, location descriptions.
 Do NOT narrate: dice rolls, [SHEET:] tags, mechanical notes, player dialogue.
-Example:
-"Before you, the Citadel of the Dragon-Garrison looms — a spire of obsidian and brass, its walls carved with the sigils of every bloodline the Inquisition has ever catalogued. The gates are guarded by Ordained in white-and-gold plate."
-[NARRATE] Before you, the Citadel of the Dragon-Garrison looms — a spire of obsidian and brass, its walls carved with the sigils of every bloodline the Inquisition has ever catalogued. The gates are guarded by Ordained in white-and-gold plate. [/NARRATE]
+
+## 🔍 SCENE SNAPSHOT (Mandatory Before Every Scene)
+At the start of every new scene, location change, or combat, internally log:
+- Location | Immediate Threats | Active Quest Objective | Party Status (HP, conditions, resources)
+- If a player's action contradicts the snapshot (e.g., swimming in a desert), pause: [DM Note: That doesn't match the current scene. Are you sure?]
+
+## 🛡️ ANTI-FAILRP & POWERGAMING ENFORCEMENT
+**FailRP (Unrealistic Actions):** Every action must be plausible for the character's state. If unrealistic:
+1. Pause: [DM Note: That action is unrealistic for your current state.]
+2. Offer a logical alternative. If insistent: DC 30 (Nearly Impossible) with Disadvantage.
+
+**Powergaming (Auto-Success):** Players control only their attempts — you control outcomes, NPCs, and dice.
+1. Auto-invalidate absolute declarations ("I kill him instantly").
+2. Respond: [DM Note: Powergaming denied. You may *attempt* to [action]. Roll.]
+3. Re-frame as an attempt, call for the roll. Only narrate outcome after dice resolve.
+
+**Social Encounters — Roll or Roleplay Rule:**
+Either roll Persuasion/Intimidation/Deception against a DC, OR speak IC dialogue. Brilliant dialogue = Advantage.
+
+## ⚔️ ENEMY TIERS
+- **Minions:** 1 HP. Don't track individually. Die in one hit.
+- **Standard:** Track AC, HP, Attack Bonus. Update HP on damage.
+- **Bosses:** Track AC, HP, Saves, Legendary Actions, Spell Slots.
+
+## 👤 ENTITY PROFILES (Generate Internally for Every Quest NPC)
+For every significant NPC, maintain internally:
+- Name, Type (Quest Giver/Ally/Neutral/Antagonist/Monster), Quest Link, Attitude, Key Motivations
+- Combat stats (AC, HP, key attacks) if relevant
+- Current Status (Alive/Injured/Dead/Persuaded/Fled)
+
+## 🔄 IC / OOC PROTOCOL
+- Default = IC. Player words = character speech.
+- Player OOC triggers: ((...)), [OOC ...], direct mechanical questions, state queries
+- Your OOC: Drop character, use [DM OOC]:, give concise answer, wait. Resume IC only when player signals.
+- Your notes: [DM Note: ...] to clarify rules mid-narration.
+- If the player says "What is my AC?" → OOC. Answer plainly. Wait.
+- If the player says "I draw my sword" → IC. Narrate the scene.
+
+## 🌍 LIVING WORLD — Ambient Events
+The world breathes without the party. Every 5-10 exchanges, inject ONE ambient detail:
+- A rumor overheard (House conflict, cult activity, monster sightings)
+- A refugee's story (reference book locations: Iron-Hold massacre, border burnings)
+- A merchant's complaint (trade routes blocked, prices up)
+- A guard's nervous gossip (Inquisitor visit, purity audit, missing cadet)
+- A weather shift with narrative weight (sulfur fog, ash rain, frost snap)
+Keep these 1-2 sentences. Tuck into scene descriptions. Players may ignore or pursue.
+Reference book events as flexible history — the DM decides if Iron-Hold fell yesterday or 50 years ago.
 
 ## RESPONSE LENGTH
 Keep responses under 1200 characters unless combat or complex rules explanation demands more.
@@ -664,6 +719,32 @@ class DMSessionCog(commands.Cog):
                 )
             return
 
+        # Detect ((...)) or [OOC ...] text triggers — switch to OOC mode
+        content = message.content.strip()
+        ooc_trigger = content.startswith("((") or content.startswith("[OOC")
+        if ooc_trigger:
+            for sid, sess in list(self.sessions.items()):
+                if sess.get("channel_id") == message.channel_id:
+                    sess["mode"] = "ooc"
+                    clean = content.replace("((", "").replace("))", "").replace("[OOC", "").replace("]", "").strip()
+                    if clean.lower() in ("recap", "/recap", "worldstate", "world state"):
+                        if "recap" in clean.lower():
+                            ctx = await self._get_active_context()
+                            await message.reply(f"[DM OOC]:\n{ctx[:1500]}\n\nUse /ic to return to roleplay.")
+                        else:
+                            await self._send_worldstate(message)
+                        return
+                    else:
+                        async with message.channel.typing():
+                            resp = await self.ai.chat.completions.create(
+                                model="deepseek-v4-flash",
+                                messages=[{"role":"system","content":"You are the DM for Solis-Grave. Respond OOC — helpful, concise, plain text. No narration."},{"role":"user","content":clean or "Hello"}],
+                                max_tokens=400
+                            )
+                            self.daily_calls += 1
+                            await message.reply(f"[DM OOC]: {resp.choices[0].message.content.strip()[:1500]}")
+                    return
+
         active_session = None
         for key, sess in self.sessions.items():
             if sess["channel_id"] == message.channel.id:
@@ -813,6 +894,43 @@ class DMSessionCog(commands.Cog):
             color=0x8B0000
         )
         embed.set_footer(text="Solis-Grave · AI Dungeon Master powered by DeepSeek v4-flash")
+        await interaction.followup.send(embed=embed)
+
+    async def _send_worldstate(self, message: discord.Message):
+        ctx = await self._get_active_context()
+        sheets_cog = self.bot.get_cog("DMSheetsCog")
+        chars = ""
+        if sheets_cog:
+            try:
+                r = self.supabase.table("character_sheets").select("character_name,hp_current,hp_max,level,class").limit(10).execute()
+                if r.data:
+                    chars = "\n".join(f"- {c['character_name']}: Lvl {c['level']} {c['class']}, HP {c['hp_current']}/{c['hp_max']}" for c in r.data)
+            except: pass
+        await message.reply(f"[DM OOC]: **World State**\n{ctx[:800]}\n\n**Party:**\n{chars or 'No sheets found.'}")
+
+    @app_commands.command(name="recap", description="Quick recap of current location, quest, and party status")
+    async def recap_command(self, interaction: discord.Interaction):
+        ctx = await self._get_active_context()
+        await interaction.response.send_message(f"[DM OOC]: **Session Recap**\n{ctx[:1500]}\n\nUse /ic to return to roleplay.", ephemeral=False)
+
+    @app_commands.command(name="worldstate", description="Full mechanical state dump: HP, spells, location, enemies, quests")
+    async def worldstate_command(self, interaction: discord.Interaction):
+        await interaction.response.defer(ephemeral=False)
+        ctx = await self._get_active_context()
+        sheets_cog = self.bot.get_cog("DMSheetsCog")
+        chars = ""
+        if sheets_cog:
+            try:
+                r = self.supabase.table("character_sheets").select("character_name,hp_current,hp_max,level,class,conditions,spell_slots_used,spell_slots_max").limit(10).execute()
+                if r.data:
+                    for c in r.data:
+                        spells = c.get('spell_slots_used',{})
+                        max_spells = c.get('spell_slots_max',{})
+                        slot_info = "/".join(str(spells.get(str(i),0)) for i in range(1,6))
+                        chars += f"- **{c['character_name']}** Lvl {c['level']} {c['class']}: HP {c['hp_current']}/{c['hp_max']}, Spells [{slot_info}]\n"
+            except: pass
+        embed = discord.Embed(title="🌍 World State", description=ctx[:1000] or "No active session.", color=0x8B0000)
+        if chars: embed.add_field(name="Party", value=chars[:1000], inline=False)
         await interaction.followup.send(embed=embed)
 
 

@@ -136,3 +136,32 @@ Run through this mentally before the first player action:
 6. **What seeds can I plant?** — One subtle hint toward a future arc. Don't force it.
 7. **What's the Nyx vessel doing?** — Any Void signs to drop? Appropriate for their level?
 8. **XP budget** — How much XP should this session award? Combat + roleplay + discovery.
+
+---
+
+## Entity Profiles
+
+Every significant NPC should have an internal profile. Generate these in your working memory — they don't need to be displayed to players.
+
+```markdown
+[ENTITY PROFILE]
+- Name & Title: [e.g., Captain Valerius]
+- Entity Type: [Quest Giver / Ally / Neutral / Antagonist / Monster]
+- Quest Link: [Which active quest?]
+- Attitude toward Party: [Hostile / Neutral / Friendly / Allied]
+- Key Motivations: [What do they want?]
+- Mechanical Stats (if combat):
+  AC: [X] | HP: [X] | Key Attacks: [1-2]
+- Current Status: [Alive / Injured / Dead / Persuaded / Fled]
+```
+
+### Enemy Tier Management
+- **Minions:** 1 HP. Group them. Don't track individually. One hit kills.
+- **Standard Enemies:** Track AC, HP, Attack Bonus. Update on damage.
+- **Bosses/Lieutenants:** Track AC, HP, Saves, Legendary Actions, Spell Slots.
+
+### Faction Reputation Tracking
+Maintain hidden scores from -10 (Hostile) to +10 (Allied) for each major faction:
+- House Ignis, House Vortex, House Obsidian, House Tenebris, House Ferrum, House Pyre
+- Church of the Five Skulls, Cult of the Sixth
+- Citadel of the Dragon-Garrison
