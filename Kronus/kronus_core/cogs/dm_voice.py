@@ -251,12 +251,22 @@ class DMVoiceCog(commands.Cog):
         if after.self_stream and not before.self_stream:
             self.streaming_user_ids.add(member.id)
             ch = self.bot.get_channel(self.config.dm_text_channel_id)
-            if ch: await ch.send(embed=discord.Embed(title="📺 Stream Detected", description=f"**{member.display_name}** is live!", color=0x8B0000))
+            if ch:
+                await ch.send(embed=discord.Embed(title="📺 Stream Detected", description=f"**{member.display_name}** is live! **Stream-safe mode auto-enabled.** Use `/stream off` to disable.", color=0x8B0000))
+            session_cog = self.bot.get_cog("DMSessionCog")
+            if session_cog:
+                session_cog.stream_safe = True
             if after.channel and (not self.voice_client or not self.voice_client.is_connected()):
                 await self.connect(after.channel)
         elif before.self_stream and not after.self_stream:
             self.streaming_user_ids.discard(member.id)
-            if not self.streaming_user_ids: await self._start_idle_timer()
+            if not self.streaming_user_ids:
+                ch = self.bot.get_channel(self.config.dm_text_channel_id)
+                if ch: await ch.send("📺 Streaming ended. **Stream-safe mode disabled.** Full grimdark restored.")
+                session_cog = self.bot.get_cog("DMSessionCog")
+                if session_cog:
+                    session_cog.stream_safe = False
+                await self._start_idle_timer()
 
     async def _start_idle_timer(self):
         if self.idle_task: self.idle_task.cancel()

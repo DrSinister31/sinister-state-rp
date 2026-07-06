@@ -135,6 +135,20 @@ For every significant NPC, maintain internally:
 - If the player says "What is my AC?" → OOC. Answer plainly. Wait.
 - If the player says "I draw my sword" → IC. Narrate the scene.
 
+## ✍️ NARRATION STRUCTURE
+Follow this pattern for every action resolution:
+[Setting/Action] + [Character Reaction] + [Mechanic Trigger] + [Skill Name] + [Dice Roll]
+Example: "The orc's axe swings toward you. You step back, raising your shield. Roll a d20 — Dexterity (Acrobatics) to avoid the blow."
+
+## 🔴 STREAM MODE — Content Filter
+When stream_safe is active, apply these rules:
+- NO: racial slurs, explicit gore, foul language, sexual content
+- YES: implied violence, tension, atmosphere, dark themes — just describe consequences, not viscera
+- Replace profanity with in-world euphemisms: damned, filth, wretched, scum, vermin, bastard (acceptable)
+- Violence: "He falls" not "his skull splits open." "She's bleeding" not "her entrails spill."
+- Caste language: use proper terms only (Blank, Common, Lesser Blood) — zero slurs
+- TikTok-friendly: if you wouldn't say it in a monetized livestream, rephrase it
+
 ## 🌍 LIVING WORLD — Ambient Events
 The world breathes without the party. Every 5-10 exchanges, inject ONE ambient detail:
 - A rumor overheard (House conflict, cult activity, monster sightings)
@@ -352,6 +366,7 @@ class DMSessionCog(commands.Cog):
         self.session_cost = 0.0       # USD cost this session
         self.session_warned = False   # Has the $2 warning been shown?
         self.session_capped = False   # Has the $5 cap been hit?
+        self.stream_safe = False       # Stream-safe mode toggle
 
     def _estimate_cost(self, prompt_chars: int, completion_chars: int) -> float:
         input_tokens = prompt_chars / 4
@@ -428,7 +443,7 @@ class DMSessionCog(commands.Cog):
             ("prompts/solis_grave/rules/magic_system.md", 1500),
             ("prompts/solis_grave/sovereigns_and_gods.md", 1200),
             ("prompts/solis_grave/the_betrayed.md", 1000),
-            ("prompts/solis_grave/ascension_system.md", 800),
+            ("prompts/solis_grave/ascension_system.md", 1500),
         ]:
             try:
                 content = open(lore_file, "r").read()
@@ -1044,6 +1059,53 @@ class DMSessionCog(commands.Cog):
         if COST_TRACKING_ENABLED:
             parts.append(f"Session cost: ${self.session_cost:.4f}")
         await interaction.response.send_message(f"[DM OOC]: {' | '.join(parts)}.", ephemeral=False)
+
+    @app_commands.command(name="create", description="Start character creation for an active campaign")
+    async def create_command(self, interaction: discord.Interaction):
+        await interaction.response.send_message(
+            "🧬 **Character creation costs credits to run.**\n\n"
+            "Are you starting a Solis-Grave campaign? If so, use `/session_start solo` or `/session_start group` first, "
+            "then I'll guide you through character creation as part of your campaign.\n\n"
+            "If you're NOT starting a campaign, please use free online tools like D&D Beyond to create your character. "
+            "I only create characters for active campaign players.",
+            ephemeral=False
+        )
+
+    @app_commands.command(name="welcome", description="Post the campaign welcome embed with house lore and rules")
+    @app_commands.describe(campaign_name="Name of your campaign")
+    @app_commands.default_permissions(administrator=True)
+    async def welcome_command(self, interaction: discord.Interaction, campaign_name: str = "Solis-Grave"):
+        await interaction.response.defer(ephemeral=False)
+        try:
+            template = open("prompts/solis_grave/welcome_template.md", "r").read()
+        except:
+            template = "# WELCOME TO {{campaign_name}}\n\nWelcome to Solis-Grave."
+
+        text = template.replace("{{campaign_name}}", campaign_name)
+        text = text.replace("{{dm_name}}", interaction.user.display_name)
+        text = text.replace("{{starting_location_context}}", "Refugees from the northern border valleys flood the gates daily. An Inquisitorial audit is rumored for the coming moon.")
+        text = text.replace("{{inciting_incident}}", "The iron gates of the Citadel close behind you. The air smells of sulfur, drake-hide, and cold stone. A Ferrum border patrol staggers through the postern gate, wounded and shouting about black banners burning the northern valleys. The Citadel hums with tension. Your story begins now.")
+
+        for chunk in [text[i:i+2000] for i in range(0, len(text), 2000)]:
+            await interaction.followup.send(chunk)
+
+    @app_commands.command(name="stream", description="Toggle stream-safe mode (PG-13 filter)")
+    @app_commands.describe(mode="on to enable stream-safe, off to return to full grimdark")
+    @app_commands.choices(mode=[app_commands.Choice(name="on", value="on"), app_commands.Choice(name="off", value="off")])
+    async def stream_mode(self, interaction: discord.Interaction, mode: str):
+        if mode == "on":
+            self.stream_safe = True
+            await interaction.response.send_message(
+                "🔴 **Stream-safe mode ON.**\n"
+                "Foul language → in-world euphemisms. Graphic violence → implied only. "
+                "Caste slurs suppressed. TikTok-friendly terms active."
+            )
+        else:
+            self.stream_safe = False
+            await interaction.response.send_message(
+                "☠️ **Stream-safe mode OFF.**\n"
+                "Full grimdark restored. Foul language, graphic combat, and caste cruelty re-enabled."
+            )
 
 
 async def setup(bot: commands.Bot):
