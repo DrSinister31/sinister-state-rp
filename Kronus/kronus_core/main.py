@@ -229,12 +229,12 @@ async def on_ready():
                 print(f"  Guide post skipped: {e}")
 
     # Post intro in campaign-stories forum
-    story_forum = guild.get_channel(1523806143070343270)
-    if story_forum:
-        try:
-            existing = [t.name async for t in story_forum.archived_threads()]
-            existing += [t.name for t in story_forum.threads]
-            if not any("Welcome" in n for n in existing):
+    try:
+        story_forum = guild.get_channel(1523806143070343270)
+        if story_forum and hasattr(story_forum, 'create_thread'):
+            # Check if welcome thread already exists
+            welcome_exists = any("Welcome" in (t.name or "") for t in story_forum.threads)
+            if not welcome_exists:
                 await story_forum.create_thread(
                     name="📖 Welcome — Campaign Stories",
                     content=(
@@ -251,9 +251,9 @@ async def on_ready():
                         "**The Citadel remembers. So will we.**"
                     )
                 )
-                print("  Posted campaign-stories intro")
-        except Exception as e:
-            print(f"  Story forum intro skipped: {e}")
+                print("  Posted campaign-stories welcome thread")
+    except Exception as e:
+        print(f"  Story forum intro failed (non-critical): {e}")
 
 
 async def main():
