@@ -803,11 +803,13 @@ class DMSessionCog(commands.Cog):
         except Exception:
             return f"*The chronicle of {' and '.join(player_names)} was lost to the Void.*"
 
-    async def _post_campaign_story(self, interaction: discord.Interaction, chronicles_text: str):
+    async def _post_campaign_story(self, interaction: discord.Interaction, chronicles: list):
         try:
             guild = interaction.guild
             forum = guild.get_channel(1523806143070343270)
-            if not forum: return
+            if not forum:
+                await interaction.followup.send("⚠️ Campaign story forum not found. Story skipped.", ephemeral=True)
+                return
 
             players_mention = " ".join(p.mention for p, _ in chronicles)
             story = await self._generate_campaign_story(

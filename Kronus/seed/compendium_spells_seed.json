@@ -13,7 +13,9 @@
     "source_tags": [
       "solis-grave",
       "strider-garrison"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Calibrated Burst",
@@ -29,7 +31,9 @@
     "source_tags": [
       "solis-grave",
       "strider-garrison"
-    ]
+    ],
+    "purity_requirement": 0,
+    "aether_burn_risk": "None"
   },
   {
     "name": "Draconic Retribution",
@@ -45,7 +49,9 @@
     "source_tags": [
       "solis-grave",
       "church"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Aetheric Backlash",
@@ -61,7 +67,9 @@
     "source_tags": [
       "solis-grave",
       "ash-walker"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Purity Sight",
@@ -78,7 +86,9 @@
       "solis-grave",
       "church",
       "obsidian"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Soul-Meld Beacon",
@@ -95,7 +105,9 @@
       "solis-grave",
       "forbidden",
       "cult"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Void-Ward Grasp",
@@ -110,7 +122,9 @@
     "classes": "Sorcerer, Warlock",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 0,
+    "aether_burn_risk": "None"
   },
   {
     "name": "Blood-Drop Spark",
@@ -125,7 +139,9 @@
     "classes": "Sorcerer, Wizard",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 0,
+    "aether_burn_risk": "None"
   },
   {
     "name": "Inquisition's Gaze",
@@ -140,7 +156,9 @@
     "classes": "Cleric, Paladin",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 0,
+    "aether_burn_risk": "None"
   },
   {
     "name": "Thief's Quiet",
@@ -155,7 +173,9 @@
     "classes": "Rogue, Wizard",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 0,
+    "aether_burn_risk": "None"
   },
   {
     "name": "Scarlet Lash",
@@ -170,7 +190,9 @@
     "classes": "Sorcerer, Warlock",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Null-Flame Bolt",
@@ -185,7 +207,9 @@
     "classes": "Wizard, Warlock",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Aether Stitch",
@@ -200,7 +224,9 @@
     "classes": "Cleric, Artificer",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Dragon's Whisper",
@@ -215,7 +241,9 @@
     "classes": "Bard, Sorcerer",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Inquisition's Brand",
@@ -230,7 +258,9 @@
     "classes": "Cleric, Paladin",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Blood Pact",
@@ -245,7 +275,9 @@
     "classes": "Sorcerer, Warlock",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Void Step",
@@ -260,7 +292,9 @@
     "classes": "Warlock, Wizard",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Aether Cage",
@@ -275,7 +309,9 @@
     "classes": "Artificer, Wizard",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Core-Thief's Scouring",
@@ -290,7 +326,9 @@
     "classes": "Sorcerer, Warlock",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Dragonfire Breath",
@@ -305,7 +343,9 @@
     "classes": "Sorcerer, Druid",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Blank's Resilience",
@@ -320,7 +360,9 @@
     "classes": "Cleric, Paladin",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Sanguine Storm",
@@ -335,7 +377,9 @@
     "classes": "Sorcerer, Warlock",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Void Rift",
@@ -350,7 +394,9 @@
     "classes": "Wizard, Warlock",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Inquisition's Pyre",
@@ -365,7 +411,9 @@
     "classes": "Cleric, Paladin",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Aether Pulse",
@@ -380,7 +428,9 @@
     "classes": "Artificer, Wizard",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Blood Dominion",
@@ -395,7 +445,9 @@
     "classes": "Sorcerer, Warlock",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Aether Missile",
@@ -408,7 +460,9 @@
     "description": "You launch a bolt of pale aether energy at a target. Make a ranged spell attack. On a hit, the target takes 1d8 force damage. This spell's damage increases by 1d8 when you reach 5th (2d8), 11th (3d8), and 17th level (4d8).",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 0,
+    "aether_burn_risk": "None"
   },
   {
     "name": "Void Shield",
@@ -421,7 +475,9 @@
     "description": "A shimmering void of absolute darkness interposes itself between you and the attack. You gain resistance to bludgeoning, piercing, and slashing damage from that attack until the start of your next turn.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Blood Sacrifice",
@@ -434,7 +490,9 @@
     "description": "You cut yourself, taking 2d6 necrotic damage. Choose one spell you have prepared of 1st level or lower. You regain one expended spell slot of that spell's level. The damage cannot be reduced in any way.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Dragon's Breath",
@@ -447,7 +505,9 @@
     "description": "You exhale a torrent of elemental energy. Each creature in a 15-foot cone must make a Dexterity saving throw, taking 6d6 damage on a failed save, or half as much on a success. Choose acid, cold, fire, lightning, or poison when you cast this spell.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Inquisitor's Verdict",
@@ -460,7 +520,9 @@
     "description": "You pronounce judgment upon a target you can see. It must make a Charisma saving throw. On a failure, it takes 8d8 radiant damage and is stunned until the end of your next turn. If it is a fiend or undead, it takes 12d8 radiant damage instead.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Cult Prophecy",
@@ -473,7 +535,9 @@
     "description": "You scry the skeins of fate for a dark omen. When you complete the casting, you gain a vision of one future event within the next 8 hours. The DM chooses a single clue (a phrase, image, or name) that will become relevant, but not the specifics of the event.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Flesh Graft",
@@ -486,7 +550,9 @@
     "description": "You graft a piece of flesh onto an allied creature you touch. The target gains 20 temporary hit points and, while the spell lasts, can use a bonus action to make one unarmed strike that deals 1d6 + Strength modifier necrotic damage.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Storm Cloak",
@@ -499,7 +565,9 @@
     "description": "A howling vortex of wind and lightning wraps around you. You gain a flying speed of 40 feet. Any creature that hits you with a melee attack takes 2d8 lightning damage. Once per turn, you can launch a bolt of lightning at a target within 60 feet, dealing 3d8 lightning damage on a hit (ranged spell attack).",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Iron Skin",
@@ -512,7 +580,9 @@
     "description": "Your skin hardens and turns metallic. You gain resistance to bludgeoning, piercing, and slashing damage. Additionally, your unarmed strikes deal 1d4 + Strength modifier bludgeoning damage.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Pyre Forge",
@@ -525,7 +595,9 @@
     "description": "A 20-foot-radius sphere of infernal flames erupts at a point within range. Each creature in the area must make a Dexterity saving throw, taking 8d6 fire damage on a failed save, or half as much on a success. The flames linger for the duration, and any creature that enters the area for the first time on a turn or ends its turn there takes 4d6 fire damage. The ground in the area becomes difficult terrain.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Sump Mist",
@@ -538,7 +610,9 @@
     "description": "A thick, fetid mist fills a 20-foot-radius sphere centered on a point within range. The area is heavily obscured. Creatures that start their turn in the mist must succeed on a Constitution saving throw or be poisoned until the start of their next turn.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Ash Storm",
@@ -551,7 +625,9 @@
     "description": "A swirling storm of hot ash and cinders fills a 40-foot-radius cylinder, 20 feet high, centered on a point within range. The area is heavily obscured. Creatures that start their turn in the area take 2d6 fire damage and must succeed on a Strength saving throw or have their speed halved until the end of their next turn.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Drake's Blood",
@@ -564,7 +640,9 @@
     "description": "You infuse your veins with draconic vitality. You gain temporary hit points equal to 1d10 + your spellcasting modifier. Additionally, for the duration, you have resistance to a damage type of your choice: acid, cold, fire, lightning, or poison.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Bone Cage",
@@ -577,7 +655,9 @@
     "description": "Razor-sharp bones erupt from the ground in a 10-foot-radius circle around a point you choose. The area becomes difficult terrain. A creature in the area when it appears must make a Dexterity saving throw, taking 4d12 piercing damage on a failed save, or half as much on a success. A creature that enters the area for the first time on a turn or ends its turn there takes 4d12 piercing damage. The bones form a wall that provides half cover.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Crystal Lance",
@@ -590,7 +670,9 @@
     "description": "A lance of shimmering crystal shoots from your hand in a line 120 feet long and 5 feet wide. Each creature in the line must make a Dexterity saving throw, taking 8d8 piercing damage on a failed save, or half as much on a success. On a failure, the creature is impaled and restrained until the end of your next turn.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "6d6 fire (ignores resistance)"
   },
   {
     "name": "Sovereigns Wrath",
@@ -603,7 +685,9 @@
     "description": "You unleash a blast of divine retribution. All creatures of your choice in a 30-foot radius must make a Constitution saving throw. On a failure, they take 8d8 radiant damage and are stunned until the end of your next turn. On a success, they take half damage and are not stunned. Undead and fiends have disadvantage on the save.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "6d6 fire (ignores resistance)"
   },
   {
     "name": "Tenebris Corruption",
@@ -616,7 +700,9 @@
     "description": "A target creature must make a Constitution saving throw. On a failure, it becomes corrupted, taking 4d10 necrotic damage at the start of each of its turns and gaining vulnerability to necrotic damage. It can repeat the save at the end of each turn, ending the effect on a success.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Ferrum Stand",
@@ -629,7 +715,9 @@
     "description": "You become an immovable bulwark. You gain resistance to bludgeoning, piercing, and slashing damage, and your speed is halved. When a creature within 5 feet hits you with a melee attack, you can use your reaction to force it to make a Strength saving throw. On a failure, it is knocked prone.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Vortex Tornado",
@@ -642,7 +730,9 @@
     "description": "A 20-foot-radius, 40-foot-high cylinder of swirling wind forms at a point you choose. Creatures in the area must make a Strength saving throw. On a failure, they take 6d6 bludgeoning damage and are restrained. On a success, half damage and are not restrained. The vortex moves 20 feet per turn on your command, dragging restrained creatures.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Obsidian Gavel",
@@ -655,7 +745,9 @@
     "description": "A massive obsidian hammer slams down on a point you can see. Each creature in a 15-foot-radius, 30-foot-tall cylinder must make a Dexterity saving throw. On a failure, they take 10d10 bludgeoning damage and are knocked prone. On a success, they take half damage and are not knocked prone. Structures take double damage.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "7d6 fire (ignores resistance)"
   },
   {
     "name": "Ignis Inferno",
@@ -668,7 +760,9 @@
     "description": "A searing blast of hellfire erupts in a 40-foot-radius sphere. Creatures in the area must make a Dexterity saving throw. On a failure, they take 10d8 fire damage and are set ablaze, taking 2d8 fire damage at the start of each of their turns until they use an action to douse the flames. On a success, half damage and not ablaze.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "6d6 fire (ignores resistance)"
   },
   {
     "name": "Core Explosion",
@@ -681,7 +775,9 @@
     "description": "You trigger a cataclysmic blast of gravity and fire from your core. All creatures and objects in a 60-foot radius must make a Constitution saving throw. On a failure, they take 12d10 force damage and are knocked prone. On a success, half damage. The spell destroys unattended objects and structures.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "8d6 fire (ignores resistance)"
   },
   {
     "name": "Aetheric Flood",
@@ -694,7 +790,9 @@
     "description": "A wave of shimmering aether sweeps across a 30-foot-radius sphere. Creatures in the area must make a Wisdom saving throw. On a failure, they take 8d10 radiant damage and are blinded until the end of your next turn. On a success, half damage. The area becomes difficult terrain for 1 minute as reality ripples.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "7d6 fire (ignores resistance)"
   },
   {
     "name": "Blanks Fury",
@@ -707,7 +805,9 @@
     "description": "You unleash a psychic scream of pure nihilism. Creatures in a 30-foot cone must make an Intelligence saving throw. On a failure, they take 6d8 psychic damage and become stunned until the end of your next turn. On a success, half damage and not stunned. Creatures with an Intelligence score of 3 or lower are immune.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Penitents Gambit",
@@ -720,7 +820,9 @@
     "description": "You channel the pain into a retributive aura. Until the start of your next turn, any creature that hits you with a melee attack takes 3d8 necrotic damage, and you regain hit points equal to half the damage dealt. This effect can trigger multiple times.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Void Walk",
@@ -733,7 +835,9 @@
     "description": "You step into the void and reappear in a space you can see within 120 feet. When you vanish, each creature within 10 feet of your starting location must make a Charisma saving throw. On a failure, they take 6d8 cold damage and are frightened until the end of your next turn. On a success, half damage.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "6d6 fire (ignores resistance)"
   },
   {
     "name": "Cycle Break",
@@ -746,7 +850,9 @@
     "description": "You target a creature you can see. It must make a Wisdom saving throw. On a failure, it loses any immunity to damage or conditions, and any ongoing magical effects on it (such as haste or invisibility) end. For 1 minute, it cannot gain temporary hit points or advantage on saving throws.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Crown Shatter",
@@ -759,7 +865,9 @@
     "description": "You strike at the will of a target creature. It must make a Charisma saving throw. On a failure, it takes 6d10 psychic damage and suffers a random form of short-term madness (DMG table). On a success, half damage and no madness. If the target has legendary resistances, it must expend one or the spell pierces.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "8d6 fire (ignores resistance)"
   },
   {
     "name": "Sleeper Rise",
@@ -772,7 +880,9 @@
     "description": "You animate the dead in a 30-foot-radius area. Up to five corpses or skeletons rise as zombies or skeletons under your control for 1 hour. They obey your verbal commands, and their maximum hit points are doubled. They crumble to dust after the duration.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Maw Open",
@@ -785,7 +895,9 @@
     "description": "A 40-foot-deep, 20-foot-diameter maw of shadow opens in the ground. Creatures in the area must make a Dexterity saving throw. On a failure, they take 8d10 piercing damage and are grappled at the maw's bottom. On a success, half damage and they escape to the edge. Grappled creatures take 4d10 necrotic damage at the start of your turns.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "7d6 fire (ignores resistance)"
   },
   {
     "name": "Void-Touch",
@@ -798,7 +910,9 @@
     "description": "Make a melee spell attack against a creature. On a hit, the target takes 1d8 necrotic damage and cannot regain hit points until the start of your next turn. This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 0,
+    "aether_burn_risk": "None"
   },
   {
     "name": "Dragon-Spark",
@@ -811,7 +925,9 @@
     "description": "A mote of primordial draconic fire streaks toward a creature within range. Make a ranged spell attack. On a hit, the target takes 1d10 fire damage. On a critical hit, the target ignites, taking 1d4 fire damage at the start of each of its turns until it uses an action to douse the flames. This spell's damage increases by 1d10 at 5th (2d10), 11th (3d10), and 17th level (4d10).",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 0,
+    "aether_burn_risk": "None"
   },
   {
     "name": "Flesh-Knit",
@@ -824,7 +940,9 @@
     "description": "Tendrils of gristly flesh reweave wounds. One creature you touch regains hit points equal to 1d6 + your spellcasting ability modifier. This spell has no effect on undead or constructs. This spell's healing increases by 1d6 at 5th (2d6), 11th (3d6), and 17th level (4d6).",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 0,
+    "aether_burn_risk": "None"
   },
   {
     "name": "Blood-Read",
@@ -837,7 +955,9 @@
     "description": "You taste a creature's blood and glimpse its secrets. Choose one of the following: you learn the target's current hit points and any conditions afflicting it; or you learn its deepest fear (useful for intimidation); or you learn one damage resistance or vulnerability it possesses. The target must be willing or incapacitated.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 0,
+    "aether_burn_risk": "None"
   },
   {
     "name": "Storm-Snap",
@@ -850,7 +970,9 @@
     "description": "You snap your fingers, releasing a crackling line of lightning. Each creature in a 30-foot long, 5-foot wide line must succeed on a Dexterity saving throw or take 1d6 lightning damage. This spell's damage increases by 1d6 at 5th (2d6), 11th (3d6), and 17th level (4d6).",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 0,
+    "aether_burn_risk": "None"
   },
   {
     "name": "Aether-Ward",
@@ -863,7 +985,9 @@
     "description": "You weave thin aetheric strands around the target, reducing the triggering damage by 2d6 + your spellcasting ability modifier. If this reduces the damage to 0, the ward flares and grants the target temporary hit points equal to the amount prevented.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Sovereigns-Presence",
@@ -876,7 +1000,9 @@
     "description": "You exude an aura of dread authority. Hostile creatures within 20 feet must make a Wisdom saving throw. On a failure, they have disadvantage on attack rolls against you and cannot take reactions. On a success, they are immune for 24 hours.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Inquisitors-Chains",
@@ -889,7 +1015,9 @@
     "description": "Phantom chains erupt from the ground to restrain a creature you can see. The target must succeed on a Strength saving throw or be restrained for the duration. A restrained creature takes 1d6 psychic damage at the start of each of its turns. The chains are immune to all damage but can be destroyed by a successful DC 15 Strength check.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Cultists-Secret",
@@ -902,7 +1030,9 @@
     "description": "You scry the forbidden lore hidden in a cult's rites. Choose one creature type (aberration, fiend, undead) or a specific cult you can name. You learn one vulnerability, resistance, or immunity common among them, or the general location of their nearest hidden sanctum.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Ferrum-Plate",
@@ -915,7 +1045,9 @@
     "description": "The touched creature's skin hardens into dark, metallic iron. For the duration, the target gains a +2 bonus to AC. Additionally, when a creature hits the target with a melee attack, the attacker takes 1d6 piercing damage from the jagged metal.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Ignis-Cataclysm",
@@ -928,7 +1060,9 @@
     "description": "A pillar of black-and-crimson fire erupts in a 20-foot-radius sphere centered on a point you choose. Each creature in the area must make a Dexterity saving throw. On a failure, they take 10d6 fire damage and are blinded until the end of your next turn. On a success, they take half damage and are not blinded.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Vortex-Rift",
@@ -941,7 +1075,9 @@
     "description": "You tear a rift to the Void at a point you can see. The rift is a 20-foot-radius sphere of absolute darkness. It heavily obscures vision and extinguishes nonmagical light. Any creature that starts its turn in the rift takes 4d10 necrotic damage. A creature that enters the rift for the first time on a turn must succeed on a Strength saving throw or be pulled 10 feet toward its center.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Obsidian-Decree",
@@ -954,7 +1090,9 @@
     "description": "You speak a decree of absolute finality. One creature you can see must make a Constitution saving throw. On a failure, it takes 8d8 necrotic damage and is cursed: if it dies within the next minute, its soul is trapped in the obsidian slab, preventing resurrection. On a success, it takes half damage and is not cursed.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Tenebris-Undo",
@@ -967,7 +1105,9 @@
     "description": "You unravel a single magical effect within 60 feet of you. Choose one spell of 5th level or lower, or one curse, or one planar binding effect. It is dispelled or suppressed for 1 minute. If the effect is a spell of 6th level or higher, make a spellcasting ability check with a DC of 12 + the spell's level. On a success, it is suppressed for 1 round.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "6d6 fire (ignores resistance)"
   },
   {
     "name": "Flesh-Tide",
@@ -980,7 +1120,9 @@
     "description": "A wave of sentient, living flesh erupts from you in a 30-foot cone. Each creature in the area must make a Strength saving throw. On a failure, they take 8d8 bludgeoning damage and are knocked prone. Additionally, they must succeed on a Constitution saving throw or be stunned until the end of their next turn as the flesh tries to merge with them.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "6d6 fire (ignores resistance)"
   },
   {
     "name": "Dragons-Awakening",
@@ -993,7 +1135,9 @@
     "description": "You touch a willing creature, awakening the slumbering dragon within. The target gains a +2 bonus to AC and immunity to fire damage. Additionally, once per turn when it hits with a melee attack, it can deal an extra 4d8 fire damage. Finally, the target can use an action to exhale a 60-foot cone of fire, dealing 12d8 fire damage (Dexterity save for half).",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "7d6 fire (ignores resistance)"
   },
   {
     "name": "Crown-Shatter",
@@ -1006,7 +1150,9 @@
     "description": "You target a creature you can see. That creature must make a Wisdom saving throw. On a failure, its mind shatters under the weight of authority. The target is stunned for 1 minute. At the end of each of its turns, it can repeat the saving throw. On a success, it takes 8d8 psychic damage instead. Creatures with legendary actions have advantage on the saving throw.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "8d6 fire (ignores resistance)"
   },
   {
     "name": "Void-Apocalypse",
@@ -1019,7 +1165,9 @@
     "description": "You tear open a permanent rift to the Void at a point you can see. The rift is a 100-foot-radius sphere of absolute darkness and silence. The area becomes a dead magic zone (no spells or magical effects can function). Creatures inside the rift when it opens must make a Constitution saving throw. On a failure, they are annihilated (reduced to 0 hit points and cannot be resurrected except by a wish spell). On a success, they take 20d10 necrotic damage and are blinded permanently. The rift remains for 1d4 days before collapsing.",
     "source_tags": [
       "solis-grave"
-    ]
+    ],
+    "purity_requirement": 15,
+    "aether_burn_risk": "9d6 fire (ignores resistance)"
   },
   {
     "name": "Blood-Crystal-Locate",
@@ -1035,7 +1183,9 @@
     ],
     "duration": "Concentration, up to 1 hour",
     "description": "You touch a blood-smeared crystal shard and whisper the name of a creature whose blood you possess. For the duration, you know the direction to that creature if it is on the same plane of existence. If the creature is dead or shielded by a 3rd-level or higher abjuration spell, the crystal remains dark and you learn nothing.",
-    "higher_levels": "When cast at 3rd level or higher, the duration increases by 1 hour for each slot level above 2nd."
+    "higher_levels": "When cast at 3rd level or higher, the duration increases by 1 hour for each slot level above 2nd.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Purify-Aether",
@@ -1050,7 +1200,9 @@
       "M (a pinch of salt and a vial of distilled water)"
     ],
     "duration": "Instantaneous",
-    "description": "You draw the tainted aether from a 20-foot-radius sphere within range. All nonmagical poisons, diseases, and corrupt vapors (including thick smoke or miasma) are neutralized. Magical corruption (such as from a 2nd-level or lower necromancy spell) is dispelled. This spell cannot remove curses or demonic taint."
+    "description": "You draw the tainted aether from a 20-foot-radius sphere within range. All nonmagical poisons, diseases, and corrupt vapors (including thick smoke or miasma) are neutralized. Magical corruption (such as from a 2nd-level or lower necromancy spell) is dispelled. This spell cannot remove curses or demonic taint.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Forge-Heat",
@@ -1065,7 +1217,9 @@
       "M (a metal tool or weapon)"
     ],
     "duration": "1 hour",
-    "description": "You touch a ferrous metal object no larger than a longsword. It glows with a dull red heat, shedding dim light in a 5-foot radius. For the duration, the object is hot enough to ignite dry wood and deals 1d4 fire damage on a melee hit, but cannot melt or deform. You can end the spell early by pressing the object into water or snow."
+    "description": "You touch a ferrous metal object no larger than a longsword. It glows with a dull red heat, shedding dim light in a 5-foot radius. For the duration, the object is hot enough to ignite dry wood and deals 1d4 fire damage on a melee hit, but cannot melt or deform. You can end the spell early by pressing the object into water or snow.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Storm-Sense",
@@ -1080,7 +1234,9 @@
       "M (a copper wire and a glass bead)"
     ],
     "duration": "Concentration, up to 1 hour",
-    "description": "You attune your senses to the pressure and static of the air. For the duration, you know the exact distance and direction to any storm (rain, snow, sandstorm, or magical tempest) within 10 miles, and you can predict its arrival within the next hour to the nearest minute. You also gain advantage on Survival checks to navigate during foul weather."
+    "description": "You attune your senses to the pressure and static of the air. For the duration, you know the exact distance and direction to any storm (rain, snow, sandstorm, or magical tempest) within 10 miles, and you can predict its arrival within the next hour to the nearest minute. You also gain advantage on Survival checks to navigate during foul weather.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Flesh-Recall",
@@ -1095,7 +1251,9 @@
       "M (a preserved piece of flesh from a willing creature)"
     ],
     "duration": "Instantaneous",
-    "description": "You touch a willing creature and merge a small sample of its flesh (taken beforehand) into your own. Until you cast this spell again, you can as an action recall that creature from any location on the same plane to an unoccupied space within 5 feet of you, provided you both consent. The recalled creature arrives with all its possessions and is disoriented for 1 round (can act but has disadvantage on attacks)."
+    "description": "You touch a willing creature and merge a small sample of its flesh (taken beforehand) into your own. Until you cast this spell again, you can as an action recall that creature from any location on the same plane to an unoccupied space within 5 feet of you, provided you both consent. The recalled creature arrives with all its possessions and is disoriented for 1 round (can act but has disadvantage on attacks).",
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Iron-Anchor",
@@ -1110,7 +1268,9 @@
       "M (a small iron ingot)"
     ],
     "duration": "8 hours",
-    "description": "You designate a point on the ground within range. A 10-foot-radius, 20-foot-tall cylinder of shimmering iron energy appears. Creatures in the area have their speed halved and cannot be teleported or involuntarily moved except by magical means of 4th level or higher. The anchor persists even if the ingot is destroyed."
+    "description": "You designate a point on the ground within range. A 10-foot-radius, 20-foot-tall cylinder of shimmering iron energy appears. Creatures in the area have their speed halved and cannot be teleported or involuntarily moved except by magical means of 4th level or higher. The anchor persists even if the ingot is destroyed.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Shadow-Pass",
@@ -1125,7 +1285,9 @@
       "M (a piece of obsidian and a drop of ink)"
     ],
     "duration": "Instantaneous",
-    "description": "You step into a shadow you can see within 5 feet and emerge from a shadow within 120 feet of your starting point. The target shadow must be large enough to cover your body (at least 5 feet across). If no such shadow exists at the destination, the spell fails. You can bring one willing creature of your size or smaller with you."
+    "description": "You step into a shadow you can see within 5 feet and emerge from a shadow within 120 feet of your starting point. The target shadow must be large enough to cover your body (at least 5 feet across). If no such shadow exists at the destination, the spell fails. You can bring one willing creature of your size or smaller with you.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Ash-Breath",
@@ -1140,7 +1302,9 @@
       "M (a pinch of ash from a funeral pyre)"
     ],
     "duration": "Concentration, up to 1 minute",
-    "description": "Your mouth fills with fine ash. For the duration, you can exhale a cloud of ashen dust in a 15-foot cone once per round as a bonus action. Creatures in the cone must succeed on a Constitution saving throw or be blinded until the end of your next turn. The dust also extinguishes nonmagical flames of Small size or smaller."
+    "description": "Your mouth fills with fine ash. For the duration, you can exhale a cloud of ashen dust in a 15-foot cone once per round as a bonus action. Creatures in the cone must succeed on a Constitution saving throw or be blinded until the end of your next turn. The dust also extinguishes nonmagical flames of Small size or smaller.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Sump-Breathe",
@@ -1155,7 +1319,9 @@
       "M (a gill from a fish and a clean rag)"
     ],
     "duration": "1 hour",
-    "description": "You touch a willing creature and alter its lungs to breathe foul water or thick sludge. For the duration, the creature can breathe in any liquid that is not acidic or magical poison, ignoring any noxious vapors dissolved in the liquid. It retains normal breathing ability as well."
+    "description": "You touch a willing creature and alter its lungs to breathe foul water or thick sludge. For the duration, the creature can breathe in any liquid that is not acidic or magical poison, ignoring any noxious vapors dissolved in the liquid. It retains normal breathing ability as well.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Scale-Armor",
@@ -1170,7 +1336,9 @@
       "M (a scale from a lizard or dragon)"
     ],
     "duration": "1 hour",
-    "description": "You touch a willing creature and its skin becomes covered in thin, overlapping scales. The creature's AC becomes 13 + its Dexterity modifier (if unarmored) or gains a +1 bonus to AC if already wearing armor. The scales shed water and grant advantage on saving throws against effects that would cause the creature to be grappled or restrained."
+    "description": "You touch a willing creature and its skin becomes covered in thin, overlapping scales. The creature's AC becomes 13 + its Dexterity modifier (if unarmored) or gains a +1 bonus to AC if already wearing armor. The scales shed water and grant advantage on saving throws against effects that would cause the creature to be grappled or restrained.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Bone-Mend",
@@ -1185,7 +1353,9 @@
       "M (a piece of bone from a humanoid, which is consumed)"
     ],
     "duration": "Instantaneous",
-    "description": "You touch a broken bone or shattered skeleton and channel necromantic energy to knit the fractures. If the target is a creature, it regains 2d8 hit points and one broken limb is fully healed. If the target is an undead or a corpse, it regains 2d6 hit points (if a creature with hit points) or is stabilized if it has the 'broken' condition."
+    "description": "You touch a broken bone or shattered skeleton and channel necromantic energy to knit the fractures. If the target is a creature, it regains 2d8 hit points and one broken limb is fully healed. If the target is an undead or a corpse, it regains 2d6 hit points (if a creature with hit points) or is stabilized if it has the 'broken' condition.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Drake-Speed",
@@ -1200,7 +1370,9 @@
       "M (a scale from a dragon or drake)"
     ],
     "duration": "Concentration, up to 10 minutes",
-    "description": "You touch a willing creature and infuse it with dragon-like swiftness. For the duration, the creature's speed increases by 20 feet, it gains a climbing speed equal to its walking speed, and it does not provoke opportunity attacks when it moves. Additionally, the creature can take the Dash action as a bonus action."
+    "description": "You touch a willing creature and infuse it with dragon-like swiftness. For the duration, the creature's speed increases by 20 feet, it gains a climbing speed equal to its walking speed, and it does not provoke opportunity attacks when it moves. Additionally, the creature can take the Dash action as a bonus action.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Crystal-Sight",
@@ -1215,7 +1387,9 @@
       "M (a crystal lens worth at least 50 gp)"
     ],
     "duration": "Concentration, up to 1 hour",
-    "description": "You peer through a polished crystal and gain the ability to see invisible creatures and objects within 60 feet. You also see the faint magical auras of enchantments and illusions, though you do not learn their school. This sight does not penetrate solid objects."
+    "description": "You peer through a polished crystal and gain the ability to see invisible creatures and objects within 60 feet. You also see the faint magical auras of enchantments and illusions, though you do not learn their school. This sight does not penetrate solid objects.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Void-Whisper",
@@ -1230,7 +1404,9 @@
       "M (a shard of obsidian and a drop of your blood)"
     ],
     "duration": "24 hours",
-    "description": "You whisper a secret message into a willing creature's mind. The message is no longer than 25 words. The creature can recall the message perfectly at any time but cannot be forced to reveal it by magical or mundane means (including truth spells) for the duration. If the creature tries to repeat the message, its voice becomes a voiceless whisper that only the intended recipient can hear."
+    "description": "You whisper a secret message into a willing creature's mind. The message is no longer than 25 words. The creature can recall the message perfectly at any time but cannot be forced to reveal it by magical or mundane means (including truth spells) for the duration. If the creature tries to repeat the message, its voice becomes a voiceless whisper that only the intended recipient can hear.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Crown-Oath",
@@ -1245,7 +1421,9 @@
       "M (a circlet of gold and iron worth at least 500 gp, which is consumed)"
     ],
     "duration": "1 year",
-    "description": "You designate up to six willing creatures within range and bind them with a solemn oath. For the duration, if any oath-bound creature breaks a specified rule you declare (such as 'never harm an innocent' or 'always obey the crown'), it suffers a curse: it gains one level of exhaustion that can only be removed by a greater restoration or by completing a quest to atone. The oath can be a single sentence of up to 10 words. This spell cannot be cast again on the same creature until the previous oath is fulfilled."
+    "description": "You designate up to six willing creatures within range and bind them with a solemn oath. For the duration, if any oath-bound creature breaks a specified rule you declare (such as 'never harm an innocent' or 'always obey the crown'), it suffers a curse: it gains one level of exhaustion that can only be removed by a greater restoration or by completing a quest to atone. The oath can be a single sentence of up to 10 words. This spell cannot be cast again on the same creature until the previous oath is fulfilled.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Ignis-Strike",
@@ -1256,7 +1434,9 @@
     "components": "V, S",
     "duration": "Instantaneous",
     "description": "A bolt of sickly orange flame erupts from your hand. Make a ranged spell attack against a target. On a hit, the target takes 2d8 fire damage and must succeed on a Constitution saving throw or be blinded until the end of your next turn as ash clings to their eyes.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st."
+    "at_higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Vortex-Bolt",
@@ -1267,7 +1447,9 @@
     "components": "V, S, M (a tiny whirlpool of ink)",
     "duration": "Instantaneous",
     "description": "You hurl a spiraling bolt of compressed void-stuff. Make a ranged spell attack against a target. On a hit, the target takes 3d6 force damage and is pulled 10 feet toward you. If the target is Large or larger, it has advantage on the saving throw to resist the pull.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
+    "at_higher_levels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Obsidian-Shard",
@@ -1278,7 +1460,9 @@
     "components": "V, S",
     "duration": "Instantaneous",
     "description": "You create a razor-sharp shard of volcanic glass that tears through foes. Each creature in a 30-foot long, 5-foot wide line must make a Dexterity saving throw. A creature takes 3d10 slashing damage on a failed save, or half as much on a successful one. The ground in the line becomes difficult terrain until the start of your next turn.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d10 for each slot level above 2nd."
+    "at_higher_levels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d10 for each slot level above 2nd.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Tenebris-Grasp",
@@ -1289,7 +1473,9 @@
     "components": "V, S, M (a dried spider leg)",
     "duration": "Instantaneous, 1 minute (secondary effect)",
     "description": "Shadowy tendrils erupt from the ground and clutch at a creature you can see. The target must make a Strength saving throw. On a failure, it takes 4d8 necrotic damage and is restrained until the end of your next turn. On a success, it takes half damage and is not restrained. While restrained, the target takes 1d8 necrotic damage at the start of each of its turns.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 4th level or higher, the initial damage increases by 1d8 for each slot level above 3rd."
+    "at_higher_levels": "When you cast this spell using a spell slot of 4th level or higher, the initial damage increases by 1d8 for each slot level above 3rd.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Ferrum-Bash",
@@ -1300,7 +1486,9 @@
     "components": "V, S",
     "duration": "1 minute (concentration)",
     "description": "Your arm or weapon becomes reinforced with jagged iron. The next time you hit a creature with a melee weapon attack before the spell ends, the attack deals an extra 2d6 bludgeoning damage and the target must succeed on a Strength saving throw or be knocked prone.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level above 1st."
+    "at_higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level above 1st.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Pyre-Blast",
@@ -1311,7 +1499,9 @@
     "components": "V, S, M (a pinch of sulfur and a drop of blood)",
     "duration": "Instantaneous",
     "description": "A burst of greasy, clinging flame expands from you. Each creature of your choice within 20 feet must make a Dexterity saving throw. A creature takes 6d6 fire damage on a failed save, or half as much on a successful one. Creatures that fail the save are also set on fire, taking 1d4 fire damage at the start of each of their turns until they use an action to extinguish the flames.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 4th level or higher, the initial damage increases by 1d6 for each slot level above 3rd."
+    "at_higher_levels": "When you cast this spell using a spell slot of 4th level or higher, the initial damage increases by 1d6 for each slot level above 3rd.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Void-Lance",
@@ -1322,7 +1512,9 @@
     "components": "V, S, M (a sliver of obsidian)",
     "duration": "Instantaneous",
     "description": "You conjure a lance of pure negation from the void. Make a ranged spell attack against a target. On a hit, the target takes 7d8 force damage and its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th."
+    "at_higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Flesh-Whip",
@@ -1333,7 +1525,9 @@
     "components": "V, S, M (a strip of cured leather)",
     "duration": "Instantaneous",
     "description": "A tendril of animated muscle and sinew lashes out from your hand. Make a melee spell attack against a target within range. On a hit, the target takes 3d6 slashing damage and must succeed on a Constitution saving throw or be poisoned until the end of your next turn as necrotic energy seeps into the wound.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
+    "at_higher_levels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Storm-Chain",
@@ -1344,7 +1538,9 @@
     "components": "V, S, M (a link of rusted iron chain)",
     "duration": "Instantaneous",
     "description": "A crackling chain of sickly green lightning arcs from you to a point you can see within range. Each creature in a 60-foot long, 5-foot wide line must make a Dexterity saving throw. A creature takes 8d6 lightning damage on a failed save, or half as much on a successful one. Creatures wearing metal armor have disadvantage on this saving throw.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d6 for each slot level above 5th."
+    "at_higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d6 for each slot level above 5th.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Crystal-Burst",
@@ -1355,7 +1551,9 @@
     "components": "V, S, M (a handful of broken glass)",
     "duration": "Instantaneous",
     "description": "A cluster of jagged crystals explodes outward from a point you choose. Each creature in a 15-foot radius sphere centered on that point must make a Dexterity saving throw. A creature takes 5d8 piercing damage on a failed save, or half as much on a successful one. Shards of crystal litter the area, making it difficult terrain until cleared.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th."
+    "at_higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Ash-Scatter",
@@ -1366,7 +1564,9 @@
     "components": "V, S, M (a pinch of ash from a funeral pyre)",
     "duration": "Instantaneous",
     "description": "A cloud of hot, choking ash erupts from your hands. Each creature in a 30-foot cone must make a Constitution saving throw. A creature takes 4d8 fire damage and is blinded until the end of your next turn on a failed save, or half as much damage and not blinded on a successful one.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd."
+    "at_higher_levels": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Bone-Spear",
@@ -1377,7 +1577,9 @@
     "components": "V, S, M (a splinter of bone)",
     "duration": "Instantaneous",
     "description": "You conjure a spear of jagged bone and hurl it at a creature. Make a ranged spell attack. On a hit, the target takes 2d10 piercing damage. If the target is a creature of flesh and blood, the spear leaves a wound that bleeds profusely, and the target takes 1d4 necrotic damage at the start of its next turn.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the initial damage increases by 1d10 for each slot level above 1st."
+    "at_higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the initial damage increases by 1d10 for each slot level above 1st.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Sovereigns-Fury",
@@ -1387,7 +1589,9 @@
     "range": "Self (60-foot radius sphere)",
     "components": "V, S, M (a crown of black iron worth 500 gp, which the spell consumes)",
     "duration": "Instantaneous",
-    "description": "You unleash the wrath of a forgotten tyrant. Each creature of your choice within 60 feet must make a Constitution saving throw. A creature takes 12d8 fire damage and 4d8 necrotic damage on a failed save, or half as much of each on a successful one. Creatures that fail the save are also frightened for 1 minute. They can repeat the saving throw at the end of each of their turns, ending the effect on a success."
+    "description": "You unleash the wrath of a forgotten tyrant. Each creature of your choice within 60 feet must make a Constitution saving throw. A creature takes 12d8 fire damage and 4d8 necrotic damage on a failed save, or half as much of each on a successful one. Creatures that fail the save are also frightened for 1 minute. They can repeat the saving throw at the end of each of their turns, ending the effect on a success.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "7d6 fire (ignores resistance)"
   },
   {
     "name": "Inquisitors-Smite",
@@ -1398,7 +1602,9 @@
     "components": "V, S",
     "duration": "1 minute (concentration)",
     "description": "Your weapon glows with a pale, judgmental light. The next time you hit a creature with a melee weapon attack during the spell's duration, the attack deals an extra 6d8 radiant damage. Additionally, the target must succeed on a Wisdom saving throw or be paralyzed until the end of your next turn, as they are wracked with guilt and pain.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the extra damage increases by 1d8 for each slot level above 4th."
+    "at_higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the extra damage increases by 1d8 for each slot level above 4th.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Cultists-Venom",
@@ -1409,7 +1615,9 @@
     "components": "V, S, M (a vial of black bile)",
     "duration": "Instantaneous, 1 minute (poison effect)",
     "description": "You shoot a stream of corrosive venom at a target. Make a ranged spell attack. On a hit, the target takes 3d6 acid damage and must make a Constitution saving throw. On a failed save, it is poisoned for 1 minute. While poisoned this way, the target takes 1d6 poison damage at the start of each of its turns. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success.",
-    "at_higher_levels": "When you cast this spell using a spell slot of 3rd level or higher, the initial acid damage increases by 1d6 for each slot level above 2nd."
+    "at_higher_levels": "When you cast this spell using a spell slot of 3rd level or higher, the initial acid damage increases by 1d6 for each slot level above 2nd.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Aether-Shell",
@@ -1419,7 +1627,9 @@
     "range": "Touch",
     "components": "V, S, M (a shard of translucent crystal)",
     "duration": "Concentration, up to 10 minutes",
-    "description": "A shimmering shell of aetheric energy envelops a willing creature you touch. For the duration, the target gains resistance to force damage and has advantage on saving throws against spells and magical effects that would banish, teleport, or forcibly move it. Additionally, the shell sheds dim light in a 5-foot radius."
+    "description": "A shimmering shell of aetheric energy envelops a willing creature you touch. For the duration, the target gains resistance to force damage and has advantage on saving throws against spells and magical effects that would banish, teleport, or forcibly move it. Additionally, the shell sheds dim light in a 5-foot radius.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Blood-Barrier",
@@ -1429,7 +1639,9 @@
     "range": "Self (30-foot radius)",
     "components": "V, S, M (a drop of the caster's blood)",
     "duration": "Concentration, up to 1 minute",
-    "description": "You sacrifice a portion of your vitality to create a defensive barrier. When you cast this spell, you take 2d6 necrotic damage which cannot be reduced. For the duration, you and up to 5 friendly creatures within range gain temporary hit points equal to 2d10 + your spellcasting ability modifier. Each time a protected creature is hit by an attack, the barrier flashes crimson, and the attacker must make a Constitution saving throw or take 1d8 necrotic damage (once per round per attacker)."
+    "description": "You sacrifice a portion of your vitality to create a defensive barrier. When you cast this spell, you take 2d6 necrotic damage which cannot be reduced. For the duration, you and up to 5 friendly creatures within range gain temporary hit points equal to 2d10 + your spellcasting ability modifier. Each time a protected creature is hit by an attack, the barrier flashes crimson, and the attacker must make a Constitution saving throw or take 1d8 necrotic damage (once per round per attacker).",
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Dragons-Scale",
@@ -1439,7 +1651,9 @@
     "range": "Touch",
     "components": "V, S, M (a scale from a true dragon)",
     "duration": "Concentration, up to 1 hour",
-    "description": "You touch a willing creature and cause shimmering draconic scales to grow across its skin. The target's AC becomes 18 (if its natural AC is lower) and gains resistance to one damage type of your choice: acid, cold, fire, lightning, or poison. Additionally, the target can use its reaction to add +2 to a saving throw against a breath weapon or similar area effect that deals that damage type."
+    "description": "You touch a willing creature and cause shimmering draconic scales to grow across its skin. The target's AC becomes 18 (if its natural AC is lower) and gains resistance to one damage type of your choice: acid, cold, fire, lightning, or poison. Additionally, the target can use its reaction to add +2 to a saving throw against a breath weapon or similar area effect that deals that damage type.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Inquisitors-Bulwark",
@@ -1449,7 +1663,9 @@
     "range": "Self (10-foot radius)",
     "components": "V, S, M (a holy symbol or badge of office)",
     "duration": "Concentration, up to 10 minutes",
-    "description": "You create a glowing barrier of divine judgment that expands outward from you. The area becomes difficult terrain for hostile creatures. When a hostile creature enters the area for the first time on a turn or starts its turn there, it must make a Wisdom saving throw. On a failure, it takes 3d8 radiant damage and cannot benefit from invisibility, shapeshifting, or illusions while inside the barrier. Allies within the barrier gain a +2 bonus to AC."
+    "description": "You create a glowing barrier of divine judgment that expands outward from you. The area becomes difficult terrain for hostile creatures. When a hostile creature enters the area for the first time on a turn or starts its turn there, it must make a Wisdom saving throw. On a failure, it takes 3d8 radiant damage and cannot benefit from invisibility, shapeshifting, or illusions while inside the barrier. Allies within the barrier gain a +2 bonus to AC.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Flesh-Knit-Greater",
@@ -1459,7 +1675,9 @@
     "range": "Touch",
     "components": "V, S, M (a roll of bandages and a vial of holy water)",
     "duration": "Instantaneous",
-    "description": "You channel potent regenerative energy into a wounded creature you touch. The target regains 4d8 + 10 hit points. If the target has any severed body parts (fingers, toes, limbs), the spell reattaches them instantly. This spell also ends one effect causing ongoing damage, such as a sword of wounding or a similar magical bleeding effect."
+    "description": "You channel potent regenerative energy into a wounded creature you touch. The target regains 4d8 + 10 hit points. If the target has any severed body parts (fingers, toes, limbs), the spell reattaches them instantly. This spell also ends one effect causing ongoing damage, such as a sword of wounding or a similar magical bleeding effect.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Storm-Wall",
@@ -1469,7 +1687,9 @@
     "range": "Self (60-foot line or 20-foot radius circle)",
     "components": "V, S, M (a small lightning rod)",
     "duration": "Concentration, up to 1 minute",
-    "description": "You conjure a wall of churning storm energy. Choose a line 60 feet long and 10 feet high, or a circle 20 feet in diameter and 10 feet high. The wall provides half cover to creatures behind it. Any creature that passes through the wall must make a Dexterity saving throw, taking 6d8 lightning damage on a failed save, or half on a success. The wall also deflects ranged spell attacks: any ranged spell attack that targets a creature behind the wall has disadvantage."
+    "description": "You conjure a wall of churning storm energy. Choose a line 60 feet long and 10 feet high, or a circle 20 feet in diameter and 10 feet high. The wall provides half cover to creatures behind it. Any creature that passes through the wall must make a Dexterity saving throw, taking 6d8 lightning damage on a failed save, or half on a success. The wall also deflects ranged spell attacks: any ranged spell attack that targets a creature behind the wall has disadvantage.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Iron-Skin",
@@ -1479,7 +1699,9 @@
     "range": "Touch",
     "components": "V, S, M (a pinch of iron filings)",
     "duration": "Concentration, up to 10 minutes",
-    "description": "You transform the flesh of a willing creature into living iron. The target gains resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks. Additionally, the target\u2019s AC becomes 20 (if its natural AC is lower) and it has advantage on saving throws against being poisoned, paralyzed, or stunned. The target\u2019s speed is reduced by 10 feet, and it has disadvantage on Dexterity (Stealth) checks."
+    "description": "You transform the flesh of a willing creature into living iron. The target gains resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks. Additionally, the target\u2019s AC becomes 20 (if its natural AC is lower) and it has advantage on saving throws against being poisoned, paralyzed, or stunned. The target\u2019s speed is reduced by 10 feet, and it has disadvantage on Dexterity (Stealth) checks.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Crystal-Cage",
@@ -1489,7 +1711,9 @@
     "range": "60 feet",
     "components": "V, S, M (a small piece of quartz)",
     "duration": "Concentration, up to 1 minute",
-    "description": "You trap a creature of your choice within a shimmering crystalline prison. The target must make a Dexterity saving throw or be enclosed in an indestructible cage of magical crystal (20-foot cube). The cage blocks all forms of movement, teleportation, and planar travel. A creature trapped inside cannot be targeted by attacks or effects from outside the cage. The cage has no effect on creatures that are ethereal or incorporeal. On a successful save, the target is instead briefly crystallized and unable to take reactions until the end of its next turn."
+    "description": "You trap a creature of your choice within a shimmering crystalline prison. The target must make a Dexterity saving throw or be enclosed in an indestructible cage of magical crystal (20-foot cube). The cage blocks all forms of movement, teleportation, and planar travel. A creature trapped inside cannot be targeted by attacks or effects from outside the cage. The cage has no effect on creatures that are ethereal or incorporeal. On a successful save, the target is instead briefly crystallized and unable to take reactions until the end of its next turn.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Ash-Cloak",
@@ -1499,7 +1723,9 @@
     "range": "Self",
     "components": "V, S, M (ash from a burned creature)",
     "duration": "Concentration, up to 10 minutes",
-    "description": "You wrap yourself in a swirling cloak of grey ash and shadow. For the duration, you are heavily obscured in dim light or darkness. You have resistance to fire and necrotic damage. When a creature hits you with a melee attack, the ash billows outward, forcing the attacker to make a Constitution saving throw or be blinded for 1 round. Additionally, you can use a bonus action to teleport up to 30 feet to an unoccupied space you can see, leaving behind a cloud of ash that lightly obscures a 10-foot radius until the start of your next turn."
+    "description": "You wrap yourself in a swirling cloak of grey ash and shadow. For the duration, you are heavily obscured in dim light or darkness. You have resistance to fire and necrotic damage. When a creature hits you with a melee attack, the ash billows outward, forcing the attacker to make a Constitution saving throw or be blinded for 1 round. Additionally, you can use a bonus action to teleport up to 30 feet to an unoccupied space you can see, leaving behind a cloud of ash that lightly obscures a 10-foot radius until the start of your next turn.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "3d6 fire (ignores resistance)"
   },
   {
     "name": "Bone-Shield",
@@ -1509,7 +1735,9 @@
     "range": "Self",
     "components": "V, S, M (a piece of bone)",
     "duration": "Concentration, up to 1 minute",
-    "description": "Skeletal plates of bone erupt from your body, forming a protective shield. You gain 10 temporary hit points. While the shield is active, when a creature you can see hits you with a melee attack, the attacker takes 1d8 piercing damage from shattering bone spikes. As a bonus action on your turn, you can expend 5 temporary hit points from this shield to cause a burst of bone shards in a 15-foot cone; each creature in the area must make a Dexterity saving throw or take 2d8 piercing damage."
+    "description": "Skeletal plates of bone erupt from your body, forming a protective shield. You gain 10 temporary hit points. While the shield is active, when a creature you can see hits you with a melee attack, the attacker takes 1d8 piercing damage from shattering bone spikes. As a bonus action on your turn, you can expend 5 temporary hit points from this shield to cause a burst of bone shards in a 15-foot cone; each creature in the area must make a Dexterity saving throw or take 2d8 piercing damage.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "2d6 fire (ignores resistance)"
   },
   {
     "name": "Void-Shroud",
@@ -1519,7 +1747,9 @@
     "range": "Self",
     "components": "V, S, M (a fragment of obsidian from the Plane of Shadow)",
     "duration": "Concentration, up to 1 minute",
-    "description": "You shroud yourself in a mantle of absolute darkness and silence. You become invisible and immune to all forms of divination and scrying. You gain resistance to all damage except psychic. While shrouded, you have a flying speed of 30 feet and can move through other creatures and objects as if they were difficult terrain, but you take 1d10 force damage if you end your turn inside an object. When the spell ends, you explode in a burst of void energy, forcing all creatures within 20 feet to make a Strength saving throw or be pushed 15 feet away and knocked prone."
+    "description": "You shroud yourself in a mantle of absolute darkness and silence. You become invisible and immune to all forms of divination and scrying. You gain resistance to all damage except psychic. While shrouded, you have a flying speed of 30 feet and can move through other creatures and objects as if they were difficult terrain, but you take 1d10 force damage if you end your turn inside an object. When the spell ends, you explode in a burst of void energy, forcing all creatures within 20 feet to make a Strength saving throw or be pushed 15 feet away and knocked prone.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "6d6 fire (ignores resistance)"
   },
   {
     "name": "Crown-Protection",
@@ -1529,7 +1759,9 @@
     "range": "Touch",
     "components": "V, S, M (a circlet of gold worth at least 500 gp)",
     "duration": "8 hours",
-    "description": "You place a shimmering, invisible crown upon the head of a willing creature. For the duration, the target is immune to being frightened or charmed. Additionally, once before the spell ends, when the target would take damage, the crown absorbs up to 50 points of damage and then shatters, ending the spell. The target also gains a +3 bonus to its AC for the duration."
+    "description": "You place a shimmering, invisible crown upon the head of a willing creature. For the duration, the target is immune to being frightened or charmed. Additionally, once before the spell ends, when the target would take damage, the crown absorbs up to 50 points of damage and then shatters, ending the spell. The target also gains a +3 bonus to its AC for the duration.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Purify-Curse",
@@ -1539,7 +1771,9 @@
     "range": "Touch",
     "components": "V, S, M (a vial of holy water and a sprig of vervain)",
     "duration": "Instantaneous",
-    "description": "You channel purifying light through a creature you touch, removing one curse, one disease, or one madness effect afflicting it. If the effect is caused by a cursed item, the item is disenchanted and becomes nonmagical (or simply mundane if it was already magical). This spell also ends the effect of the Bestow Curse spell and similar magical afflictions. If the target is under the effect of a lycanthropic curse, the curse is removed permanently."
+    "description": "You channel purifying light through a creature you touch, removing one curse, one disease, or one madness effect afflicting it. If the effect is caused by a cursed item, the item is disenchanted and becomes nonmagical (or simply mundane if it was already magical). This spell also ends the effect of the Bestow Curse spell and similar magical afflictions. If the target is under the effect of a lycanthropic curse, the curse is removed permanently.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "4d6 fire (ignores resistance)"
   },
   {
     "name": "Mend-Soul",
@@ -1549,7 +1783,9 @@
     "range": "Touch",
     "components": "V, S, M (a diamond worth at least 1,000 gp, which is consumed)",
     "duration": "Instantaneous",
-    "description": "You touch a creature that has been dead for no longer than 10 days, or a creature that has suffered a permanent reduction to its maximum hit points (such as from a shadow\u2019s Strength drain or a vampire\u2019s bite). If the creature is dead, it is restored to life with all its hit points, and any missing body parts are regrown. If the creature is alive, its maximum hit points are fully restored, and it regains all hit points. This spell ends any effect that prevents the target from being resurrected, such as the Soul Cage or Magic Jar spells."
+    "description": "You touch a creature that has been dead for no longer than 10 days, or a creature that has suffered a permanent reduction to its maximum hit points (such as from a shadow\u2019s Strength drain or a vampire\u2019s bite). If the creature is dead, it is restored to life with all its hit points, and any missing body parts are regrown. If the creature is alive, its maximum hit points are fully restored, and it regains all hit points. This spell ends any effect that prevents the target from being resurrected, such as the Soul Cage or Magic Jar spells.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "6d6 fire (ignores resistance)"
   },
   {
     "name": "Sanctuary-Flame",
@@ -1559,7 +1795,9 @@
     "range": "Self (10-foot radius)",
     "components": "V, S, M (a wick from a candle blessed by a cleric)",
     "duration": "Concentration, up to 1 minute",
-    "description": "You ignite a ring of golden, warding flames around you. The flames shed bright light in a 10-foot radius and dim light for an additional 10 feet. Any creature you designate (up to 5 creatures of your choice) that starts its turn inside the bright light regains 1d4 hit points. Any hostile creature that enters the bright light for the first time on a turn or starts its turn there must make a Dexterity saving throw, taking 1d6 fire damage on a failed save. You can use a bonus action on your turn to move the fire's center up to 20 feet."
+    "description": "You ignite a ring of golden, warding flames around you. The flames shed bright light in a 10-foot radius and dim light for an additional 10 feet. Any creature you designate (up to 5 creatures of your choice) that starts its turn inside the bright light regains 1d4 hit points. Any hostile creature that enters the bright light for the first time on a turn or starts its turn there must make a Dexterity saving throw, taking 1d6 fire damage on a failed save. You can use a bonus action on your turn to move the fire's center up to 20 feet.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "1d6 fire (ignores resistance)"
   },
   {
     "name": "Aether Storm",
@@ -1573,7 +1811,9 @@
       "M": "a shard of crystallized aether worth at least 500 gp"
     },
     "duration": "Concentration, up to 1 minute",
-    "description": "You summon a roiling storm of chaotic aether in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. The area becomes difficult terrain and is heavily obscured. When the storm appears and at the start of each of your turns, each creature in the area must make a Dexterity saving throw. On a failure, they take 8d6 psychic damage and 8d6 radiant damage and become stunned until the start of your next turn. On a success, they take half as much damage and are not stunned. Additionally, any creature that starts its turn in the storm must succeed on a Wisdom saving throw or be afflicted with a short-term madness effect (see DMG). At Higher Levels: When you cast this spell using a spell slot of 7th level or higher, the psychic and radiant damage each increase by 1d6 for each slot level above 6th."
+    "description": "You summon a roiling storm of chaotic aether in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. The area becomes difficult terrain and is heavily obscured. When the storm appears and at the start of each of your turns, each creature in the area must make a Dexterity saving throw. On a failure, they take 8d6 psychic damage and 8d6 radiant damage and become stunned until the start of your next turn. On a success, they take half as much damage and are not stunned. Additionally, any creature that starts its turn in the storm must succeed on a Wisdom saving throw or be afflicted with a short-term madness effect (see DMG). At Higher Levels: When you cast this spell using a spell slot of 7th level or higher, the psychic and radiant damage each increase by 1d6 for each slot level above 6th.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "6d6 fire (ignores resistance)"
   },
   {
     "name": "Dragons Awakening",
@@ -1587,7 +1827,9 @@
       "M": "a scale from a dragon"
     },
     "duration": "Concentration, up to 1 minute",
-    "description": "You touch a willing creature and awaken the latent draconic fury within. For the duration, the target gains the following benefits: their size increases by one category (to a maximum of Gargantuan), their walking speed increases by 20 feet, and they gain a flying speed of 40 feet. They also gain a breath weapon that they can use once on each of their turns: a 60-foot line or 30-foot cone (your choice) that deals 10d8 damage of a type determined by the dragon scale used (acid, cold, fire, lightning, or poison). A creature targeted must make a Dexterity saving throw, taking half damage on a success. Additionally, the target has advantage on Strength checks and saving throws, and their melee weapon attacks deal an extra 2d8 damage of the same type. At Higher Levels: When you cast this spell using a spell slot of 8th level or higher, you can target one additional creature for each slot level above 7th."
+    "description": "You touch a willing creature and awaken the latent draconic fury within. For the duration, the target gains the following benefits: their size increases by one category (to a maximum of Gargantuan), their walking speed increases by 20 feet, and they gain a flying speed of 40 feet. They also gain a breath weapon that they can use once on each of their turns: a 60-foot line or 30-foot cone (your choice) that deals 10d8 damage of a type determined by the dragon scale used (acid, cold, fire, lightning, or poison). A creature targeted must make a Dexterity saving throw, taking half damage on a success. Additionally, the target has advantage on Strength checks and saving throws, and their melee weapon attacks deal an extra 2d8 damage of the same type. At Higher Levels: When you cast this spell using a spell slot of 8th level or higher, you can target one additional creature for each slot level above 7th.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "7d6 fire (ignores resistance)"
   },
   {
     "name": "Crown Shatter",
@@ -1601,7 +1843,9 @@
       "M": "a broken piece of a royal seal"
     },
     "duration": "Concentration, up to 1 minute",
-    "description": "You target a humanoid that holds a title of authority (such as a lord, captain, priest, or monarch). That creature must make a Wisdom saving throw. On a failure, for the duration, it suffers the following effects: it has disadvantage on Charisma (Intimidation, Persuasion, and Performance) checks; it cannot benefit from legendary resistance or any feature that would make it immune to being charmed, frightened, or incapacitated; and once per turn when it takes damage from a creature, that creature has advantage on the next attack roll or saving throw it makes before the end of its next turn. If the target is a creature with a crown or similar symbol of office, that symbol shatters audibly whether the save succeeds or fails, drawing attention. At Higher Levels: When you cast this spell using a spell slot of 6th level or higher, you can target one additional creature for each slot level above 5th."
+    "description": "You target a humanoid that holds a title of authority (such as a lord, captain, priest, or monarch). That creature must make a Wisdom saving throw. On a failure, for the duration, it suffers the following effects: it has disadvantage on Charisma (Intimidation, Persuasion, and Performance) checks; it cannot benefit from legendary resistance or any feature that would make it immune to being charmed, frightened, or incapacitated; and once per turn when it takes damage from a creature, that creature has advantage on the next attack roll or saving throw it makes before the end of its next turn. If the target is a creature with a crown or similar symbol of office, that symbol shatters audibly whether the save succeeds or fails, drawing attention. At Higher Levels: When you cast this spell using a spell slot of 6th level or higher, you can target one additional creature for each slot level above 5th.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Void Walk",
@@ -1615,7 +1859,9 @@
       "M": "a pinch of ash from the Shadowfell"
     },
     "duration": "Instantaneous",
-    "description": "You step into the void and emerge elsewhere, tearing reality as you pass. Choose a point within 60 feet that you can see; you teleport to that point, leaving a trail of darkness. Each creature in a 30-foot-long, 5-foot-wide line between your starting and ending positions must make a Dexterity saving throw. On a failure, they take 12d6 necrotic damage and are blinded until the end of their next turn. On a success, they take half damage and are not blinded. If the line passes through an area of magical darkness, you may instead treat the end point as any unoccupied space you have seen within 120 feet, but the line is then doubled in length."
+    "description": "You step into the void and emerge elsewhere, tearing reality as you pass. Choose a point within 60 feet that you can see; you teleport to that point, leaving a trail of darkness. Each creature in a 30-foot-long, 5-foot-wide line between your starting and ending positions must make a Dexterity saving throw. On a failure, they take 12d6 necrotic damage and are blinded until the end of their next turn. On a success, they take half damage and are not blinded. If the line passes through an area of magical darkness, you may instead treat the end point as any unoccupied space you have seen within 120 feet, but the line is then doubled in length.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Flesh Tide",
@@ -1629,7 +1875,9 @@
       "M": "a piece of rotting flesh"
     },
     "duration": "Concentration, up to 1 minute",
-    "description": "You cause a 30-foot-radius sphere of writhing, animate flesh and bone to erupt from the ground at a point within range. The area becomes difficult terrain. When the flesh tide appears and at the start of each of your turns, each creature in the area must make a Strength saving throw. On a failure, they take 8d8 necrotic damage and are restrained by grasping limbs and flesh. On a success, they take half damage and are not restrained. A restrained creature can use its action to make a Strength (Athletics) check against your spell save DC to escape. While restrained, the creature takes 2d8 necrotic damage at the start of each of its turns. The flesh tide can be used to move corpses: as a bonus action, you can move up to three Medium or smaller corpses in the area up to 20 feet to any unoccupied space within the area. At Higher Levels: When you cast this spell using a spell slot of 7th level or higher, the initial damage and escaping damage both increase by 1d8 for each slot level above 6th."
+    "description": "You cause a 30-foot-radius sphere of writhing, animate flesh and bone to erupt from the ground at a point within range. The area becomes difficult terrain. When the flesh tide appears and at the start of each of your turns, each creature in the area must make a Strength saving throw. On a failure, they take 8d8 necrotic damage and are restrained by grasping limbs and flesh. On a success, they take half damage and are not restrained. A restrained creature can use its action to make a Strength (Athletics) check against your spell save DC to escape. While restrained, the creature takes 2d8 necrotic damage at the start of each of its turns. The flesh tide can be used to move corpses: as a bonus action, you can move up to three Medium or smaller corpses in the area up to 20 feet to any unoccupied space within the area. At Higher Levels: When you cast this spell using a spell slot of 7th level or higher, the initial damage and escaping damage both increase by 1d8 for each slot level above 6th.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "6d6 fire (ignores resistance)"
   },
   {
     "name": "Inquisitor's Final Smite",
@@ -1643,7 +1891,9 @@
       "M": "a holy symbol of a grimdark deity or order"
     },
     "duration": "Concentration, up to 1 minute",
-    "description": "You channel the unforgiving judgment of the Inquisition into your weapon. The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon flares with black fire and white radiance. The attack deals an extra 8d8 radiant damage and 8d8 fire damage to the target. If this damage reduces the target to 0 hit points, its soul is immediately consumed, and the creature cannot be restored to life by any means short of a wish spell. In addition, for the next minute, you have advantage on Charisma (Intimidation) checks against creatures that witnessed the smite. At Higher Levels: When you cast this spell using a spell slot of 6th level or higher, the radiant and fire damage each increase by 1d8 for each slot level above 5th."
+    "description": "You channel the unforgiving judgment of the Inquisition into your weapon. The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon flares with black fire and white radiance. The attack deals an extra 8d8 radiant damage and 8d8 fire damage to the target. If this damage reduces the target to 0 hit points, its soul is immediately consumed, and the creature cannot be restored to life by any means short of a wish spell. In addition, for the next minute, you have advantage on Charisma (Intimidation) checks against creatures that witnessed the smite. At Higher Levels: When you cast this spell using a spell slot of 6th level or higher, the radiant and fire damage each increase by 1d8 for each slot level above 5th.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "5d6 fire (ignores resistance)"
   },
   {
     "name": "Cult Prophecy Fulfilled",
@@ -1657,7 +1907,9 @@
       "M": "a tattered parchment with a written prophecy worth at least 750 gp"
     },
     "duration": "Concentration, up to 1 minute",
-    "description": "You recite a dark prophecy, bending fate to your will. For the duration, once per turn when you or a creature you can see within 60 feet makes an attack roll, ability check, or saving throw, you can use your reaction to force that creature to reroll the d20 and use the new result. You choose whether to apply this before or after the roll is known. Additionally, when a creature you can see within 60 feet dies, you can use your reaction to bind its lingering spirit. The spirit appears as a shadowy, distorted version of the creature in an unoccupied space within 10 feet of its corpse. It obeys your verbal commands (no action required by you) and uses the statistics of a shadow, except it has a number of hit points equal to the dead creature's hit point maximum. The spirit remains for up to 1 hour, until it is reduced to 0 hit points, or until you dismiss it as a bonus action. You can have up to three such spirits bound at a time."
+    "description": "You recite a dark prophecy, bending fate to your will. For the duration, once per turn when you or a creature you can see within 60 feet makes an attack roll, ability check, or saving throw, you can use your reaction to force that creature to reroll the d20 and use the new result. You choose whether to apply this before or after the roll is known. Additionally, when a creature you can see within 60 feet dies, you can use your reaction to bind its lingering spirit. The spirit appears as a shadowy, distorted version of the creature in an unoccupied space within 10 feet of its corpse. It obeys your verbal commands (no action required by you) and uses the statistics of a shadow, except it has a number of hit points equal to the dead creature's hit point maximum. The spirit remains for up to 1 hour, until it is reduced to 0 hit points, or until you dismiss it as a bonus action. You can have up to three such spirits bound at a time.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "7d6 fire (ignores resistance)"
   },
   {
     "name": "Pyre Cataclysm",
@@ -1671,7 +1923,9 @@
       "M": "a handful of ash and a ruby worth 1,500 gp"
     },
     "duration": "Instantaneous",
-    "description": "You create a cataclysmic explosion of cursed fire and ash at a point within range. Each creature in a 60-foot-radius sphere centered on that point must make a Dexterity saving throw. On a failure, they take 12d6 fire damage and 12d6 necrotic damage, and are blinded for 1 minute. On a success, they take half as much damage and are not blinded. The area becomes covered in thick, smoldering ash that counts as difficult terrain and lightly obscures the area for 1 minute, after which the ash cools. Objects in the area take 12d6 fire damage (ignoring object immunities of nonmagical objects) and 12d6 necrotic damage. At Higher Levels: When you cast this spell using a spell slot of 8th level or higher, the fire damage increases by 2d6 and the necrotic damage increases by 2d6 for each slot level above 7th."
+    "description": "You create a cataclysmic explosion of cursed fire and ash at a point within range. Each creature in a 60-foot-radius sphere centered on that point must make a Dexterity saving throw. On a failure, they take 12d6 fire damage and 12d6 necrotic damage, and are blinded for 1 minute. On a success, they take half as much damage and are not blinded. The area becomes covered in thick, smoldering ash that counts as difficult terrain and lightly obscures the area for 1 minute, after which the ash cools. Objects in the area take 12d6 fire damage (ignoring object immunities of nonmagical objects) and 12d6 necrotic damage. At Higher Levels: When you cast this spell using a spell slot of 8th level or higher, the fire damage increases by 2d6 and the necrotic damage increases by 2d6 for each slot level above 7th.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "7d6 fire (ignores resistance)"
   },
   {
     "name": "Obsidian Final Verdict",
@@ -1681,7 +1935,9 @@
     "range": "Self (60-foot cone)",
     "components": "V, S, M (a shard of obsidian carved with a skull)",
     "duration": "Instantaneous",
-    "description": "You unleash a wave of absolute dark decree, condemning all in its path to oblivion. Each creature in a 60-foot cone must make a Wisdom saving throw. On a failure, they take 12d8 necrotic damage and are stunned until the end of your next turn. On a success, they take half damage and are not stunned. Creatures with 50 hit points or fewer that fail the save are instantly slain, and their bodies crumble to obsidian dust. This dust can be used as material components for necromancy spells of 5th level or lower."
+    "description": "You unleash a wave of absolute dark decree, condemning all in its path to oblivion. Each creature in a 60-foot cone must make a Wisdom saving throw. On a failure, they take 12d8 necrotic damage and are stunned until the end of your next turn. On a success, they take half damage and are not stunned. Creatures with 50 hit points or fewer that fail the save are instantly slain, and their bodies crumble to obsidian dust. This dust can be used as material components for necromancy spells of 5th level or lower.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "7d6 fire (ignores resistance)"
   },
   {
     "name": "Cycle Break",
@@ -1691,7 +1947,9 @@
     "range": "Self (60-foot radius)",
     "components": "V, S, M (a broken hourglass filled with black sand)",
     "duration": "Concentration, up to 1 minute",
-    "description": "You tear apart the threads of fate and causality, creating a zone where the normal cycle of life and death is suspended. For the duration, when a creature within 60 feet of you would regain hit points, it gains no benefit. Instead, each target of healing receives 4d10 necrotic damage. Additionally, any creature that dies within the area cannot be revived or restored to life by any means short of a wish spell until the spell ends. When the spell ends, all such creatures crumble to ash."
+    "description": "You tear apart the threads of fate and causality, creating a zone where the normal cycle of life and death is suspended. For the duration, when a creature within 60 feet of you would regain hit points, it gains no benefit. Instead, each target of healing receives 4d10 necrotic damage. Additionally, any creature that dies within the area cannot be revived or restored to life by any means short of a wish spell until the spell ends. When the spell ends, all such creatures crumble to ash.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "8d6 fire (ignores resistance)"
   },
   {
     "name": "Tenebris Undoing",
@@ -1701,7 +1959,9 @@
     "range": "150 feet",
     "components": "V, S",
     "duration": "Instantaneous",
-    "description": "You call upon the primordial darkness that existed before light, unraveling the very essence of your enemies. Choose a point within range. Each creature in a 40-foot-radius sphere centered on that point must make a Constitution saving throw. On a failure, they take 15d8 psychic damage and are blinded for 1 minute. On a success, they take half damage and are not blinded. Creatures that are already blind or in magical darkness have disadvantage on the saving throw. The area is filled with magical darkness for 1 round, which cannot be dispelled by any light of lower than 8th level."
+    "description": "You call upon the primordial darkness that existed before light, unraveling the very essence of your enemies. Choose a point within range. Each creature in a 40-foot-radius sphere centered on that point must make a Constitution saving throw. On a failure, they take 15d8 psychic damage and are blinded for 1 minute. On a success, they take half damage and are not blinded. Creatures that are already blind or in magical darkness have disadvantage on the saving throw. The area is filled with magical darkness for 1 round, which cannot be dispelled by any light of lower than 8th level.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "8d6 fire (ignores resistance)"
   },
   {
     "name": "Void Apocalypse",
@@ -1711,7 +1971,9 @@
     "range": "1 mile",
     "components": "V, S, M (a sliver of a dying star)",
     "duration": "Instantaneous",
-    "description": "You open a rift to the absolute void between realities, causing a cataclysmic eruption of nothingness. Choose a point within range. Each creature in a 100-foot-radius sphere centered on that point must make a Dexterity saving throw. On a failure, they take 20d10 force damage and are pulled into the void, disappearing forever. On a success, they take half damage and are not pulled. Structures and objects in the area are annihilated, leaving a smooth, featureless crater. The void rift persists for 1 minute, and any creature that enters the area for the first time on a turn or starts its turn there must succeed on a Strength saving throw or be drawn in and destroyed."
+    "description": "You open a rift to the absolute void between realities, causing a cataclysmic eruption of nothingness. Choose a point within range. Each creature in a 100-foot-radius sphere centered on that point must make a Dexterity saving throw. On a failure, they take 20d10 force damage and are pulled into the void, disappearing forever. On a success, they take half damage and are not pulled. Structures and objects in the area are annihilated, leaving a smooth, featureless crater. The void rift persists for 1 minute, and any creature that enters the area for the first time on a turn or starts its turn there must succeed on a Strength saving throw or be drawn in and destroyed.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "9d6 fire (ignores resistance)"
   },
   {
     "name": "Sovereigns Awakening",
@@ -1721,7 +1983,9 @@
     "range": "Self",
     "components": "V, S, M (a crown forged from the bones of a titan, worth at least 25,000 gp)",
     "duration": "Instantaneous",
-    "description": "You undergo a terrible apotheosis, becoming a sovereign of the grimdark world. For the next hour, you gain the following benefits: your hit point maximum increases by 100, you have immunity to all bludgeoning, piercing, and slashing damage from nonmagical weapons, and you gain a flying speed of 60 feet. Additionally, once during this hour, you can use an action to utter a command that forces all creatures of your choice within 300 feet to make a Wisdom saving throw or be frightened of you for 1 minute. While frightened in this way, creatures cannot take reactions and must use their turn to move away from you. At the end of the hour, your hit point maximum returns to normal, but you do not lose current hit points unless they exceed the original maximum. If you die while under this effect, your body explodes in a 100-foot-radius burst of necrotic energy, dealing 15d10 necrotic damage to all creatures in the area."
+    "description": "You undergo a terrible apotheosis, becoming a sovereign of the grimdark world. For the next hour, you gain the following benefits: your hit point maximum increases by 100, you have immunity to all bludgeoning, piercing, and slashing damage from nonmagical weapons, and you gain a flying speed of 60 feet. Additionally, once during this hour, you can use an action to utter a command that forces all creatures of your choice within 300 feet to make a Wisdom saving throw or be frightened of you for 1 minute. While frightened in this way, creatures cannot take reactions and must use their turn to move away from you. At the end of the hour, your hit point maximum returns to normal, but you do not lose current hit points unless they exceed the original maximum. If you die while under this effect, your body explodes in a 100-foot-radius burst of necrotic energy, dealing 15d10 necrotic damage to all creatures in the area.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "9d6 fire (ignores resistance)"
   },
   {
     "name": "Ignis Inferno World",
@@ -1731,7 +1995,9 @@
     "range": "1 mile",
     "components": "V, S, M (a droplet of blood from a solar dragon)",
     "duration": "Concentration, up to 1 minute",
-    "description": "You ignite the very foundations of reality, transforming the landscape into a hellish inferno. Choose a point within range. For the duration, a 500-foot-radius sphere centered on that point becomes a zone of perpetual flame. The ground is covered in searing flames that deal 10d10 fire damage to any creature that starts its turn there or enters it for the first time on a turn. Creatures inside the area are also subject to a heat wave: at the start of each of your turns, they must make a Constitution saving throw or gain one level of exhaustion. The air is thick with ash, heavily obscuring the area and causing all creatures except you to be blinded. Any creature that dies within the area is incinerated, leaving only a charred skeleton."
+    "description": "You ignite the very foundations of reality, transforming the landscape into a hellish inferno. Choose a point within range. For the duration, a 500-foot-radius sphere centered on that point becomes a zone of perpetual flame. The ground is covered in searing flames that deal 10d10 fire damage to any creature that starts its turn there or enters it for the first time on a turn. Creatures inside the area are also subject to a heat wave: at the start of each of your turns, they must make a Constitution saving throw or gain one level of exhaustion. The air is thick with ash, heavily obscuring the area and causing all creatures except you to be blinded. Any creature that dies within the area is incinerated, leaving only a charred skeleton.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "9d6 fire (ignores resistance)"
   },
   {
     "name": "Ferrum Final Stand",
@@ -1741,6 +2007,8 @@
     "range": "Self (100-foot radius)",
     "components": "V, S, M (a iron ingot forged in a dying sun)",
     "duration": "Instantaneous",
-    "description": "You call forth a storm of razor-sharp ferro-magical shards that tear through all but the most stalwart. Each creature of your choice within 100 feet must make a Dexterity saving throw. On a failure, they take 18d10 slashing damage, and their armor, if any, is destroyed (magical armor is not destroyed but becomes nonmagical for 1 hour). On a success, they take half damage and their armor is unaffected. Creatures not wearing armor take an additional 5d10 piercing damage on a failed save. The ground in the area becomes difficult terrain littered with metal fragments for 1 hour, dealing 1d4 slashing damage to any creature that moves through it."
+    "description": "You call forth a storm of razor-sharp ferro-magical shards that tear through all but the most stalwart. Each creature of your choice within 100 feet must make a Dexterity saving throw. On a failure, they take 18d10 slashing damage, and their armor, if any, is destroyed (magical armor is not destroyed but becomes nonmagical for 1 hour). On a success, they take half damage and their armor is unaffected. Creatures not wearing armor take an additional 5d10 piercing damage on a failed save. The ground in the area becomes difficult terrain littered with metal fragments for 1 hour, dealing 1d4 slashing damage to any creature that moves through it.",
+    "purity_requirement": 15,
+    "aether_burn_risk": "9d6 fire (ignores resistance)"
   }
 ]
