@@ -1,5 +1,9 @@
 [build]
 builder = "nixpacks"
+buildCommand = "pip install -r Kronus/requirements.txt"
 
 [deploy]
-startCommand = "cd Kronus && python kronus_compendium/main.py"
+startCommand = "PYTHONPATH=Kronus python Kronus/kronus_compendium/main.py"
+
+[service]
+name = "kronus-compendium"

@@ -1,0 +1,9 @@
+[build]
+builder = "nixpacks"
+buildCommand = "pip install -r gta/requirements.txt"
+
+[deploy]
+startCommand = "PYTHONPATH=Kronus:gta python gta/enforce/main.py"
+
+[service]
+name = "gta-enforce"

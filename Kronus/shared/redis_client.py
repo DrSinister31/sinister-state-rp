@@ -1,11 +1,15 @@
-import json
+# NOTE: This module is currently unused. Redis infrastructure is configured
+# in shared/config.py but no service currently imports or uses this client.
+# If/when real-time pub/sub is needed between services, this is ready to go.
+
 import redis.asyncio as aioredis
 from .config import Config
 
-_redis: aioredis.Redis | None = None
+
+_redis = None
 
 
-async def get_redis(config: Config | None = None) -> aioredis.Redis:
+async def get_redis(config: Config = None):
     global _redis
     if _redis is None:
         if config is None:
@@ -14,9 +18,9 @@ async def get_redis(config: Config | None = None) -> aioredis.Redis:
     return _redis
 
 
-async def publish(channel: str, data: dict):
+async def publish(channel: str, message: str):
     r = await get_redis()
-    await r.publish(channel, json.dumps(data))
+    await r.publish(channel, message)
 
 
 async def subscribe(channel: str):

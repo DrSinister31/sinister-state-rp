@@ -1,8 +1,0 @@
-[build]
-builder = "nixpacks"
-
-[deploy]
-startCommand = "PYTHONPATH=Kronus python Kronus/kronus_enforce/main.py"
-
-[service]
-name = "kronus-enforce"

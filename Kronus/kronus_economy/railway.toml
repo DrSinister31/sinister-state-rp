@@ -1,8 +1,0 @@
-[build]
-builder = "nixpacks"
-
-[deploy]
-startCommand = "PYTHONPATH=Kronus python Kronus/kronus_economy/main.py"
-
-[service]
-name = "kronus-economy"

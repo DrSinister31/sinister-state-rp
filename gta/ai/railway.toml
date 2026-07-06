@@ -1,0 +1,9 @@
+[build]
+builder = "nixpacks"
+buildCommand = "pip install -r gta/requirements.txt"
+
+[deploy]
+startCommand = "PYTHONPATH=Kronus:gta python gta/ai/main.py"
+
+[service]
+name = "gta-ai"

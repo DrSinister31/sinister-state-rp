@@ -1,0 +1,365 @@
+{
+  "system": "solis_grave",
+  "version": "1.0",
+  "spellcasting_types": {
+    "full": "Full caster — spells 0th through 9th. Spell slots: standard full progression.",
+    "half": "Half caster — spells 1st through 5th. Spell slots: half progression, starts at 2nd level.",
+    "third": "One-third caster — spells 1st through 4th. Limited slots, subclass-gated.",
+    "pact": "Pact Magic — spells 0th through 5th via short-rest slots. Mystic Arcanum for 6th-9th.",
+    "none": "Non-caster. May gain cantrips at 10%+ purity via Blood Awakening."
+  },
+  "classes": {
+    "barbarian": {
+      "name": "Barbarian",
+      "solis_grave_name": "War-Scion",
+      "spellcasting": "none",
+      "spellcasting_ability": null,
+      "default_purity": 10,
+      "max_spell_level": 0,
+      "can_cast_cantrips": true,
+      "description": "Warriors whose draconic blood manifests as primal rage rather than magic. At 10%+ purity, they can learn 2 cantrips from the druid list. Their rage IS their magic.",
+      "blood_awakening_level": 3,
+      "subclasses_with_spells": [],
+      "srd_class_ref": "barbarian",
+      "spell_list_count_target": 0
+    },
+    "bard": {
+      "name": "Bard",
+      "solis_grave_name": "Lore-Keeper",
+      "spellcasting": "full",
+      "spellcasting_ability": "charisma",
+      "default_purity": 25,
+      "max_spell_level": 9,
+      "can_cast_cantrips": true,
+      "description": "Keepers of the Old Tongue — the spoken history of the bloodlines, encoded in song and verse. Their magic weaves draconic words into performance.",
+      "blood_awakening_level": null,
+      "subclasses_with_spells": [],
+      "srd_class_ref": "bard",
+      "spell_list_count_target": 180
+    },
+    "cleric": {
+      "name": "Cleric",
+      "solis_grave_name": "Ordained",
+      "spellcasting": "full",
+      "spellcasting_ability": "wisdom",
+      "default_purity": 50,
+      "max_spell_level": 9,
+      "can_cast_cantrips": true,
+      "description": "Chosen champions of the Dragon-Gods. Their bloodline is recognized by the Citadel and sanctified. The only casters officially tolerated by the Inquisition.",
+      "blood_awakening_level": null,
+      "subclasses_with_spells": [],
+      "srd_class_ref": "cleric",
+      "spell_list_count_target": 170
+    },
+    "druid": {
+      "name": "Druid",
+      "solis_grave_name": "Wild-Blood",
+      "spellcasting": "full",
+      "spellcasting_ability": "wisdom",
+      "default_purity": 25,
+      "max_spell_level": 9,
+      "can_cast_cantrips": true,
+      "description": "Reclusive casters who found their bloodlines in the untamed wilds, far from Inquisitor eyes. Their magic draws from the primordial dragons who became the land itself.",
+      "blood_awakening_level": null,
+      "subclasses_with_spells": [],
+      "srd_class_ref": "druid",
+      "spell_list_count_target": 180
+    },
+    "fighter": {
+      "name": "Fighter",
+      "solis_grave_name": "Vanguard",
+      "spellcasting": "none",
+      "spellcasting_ability": "intelligence",
+      "default_purity": 10,
+      "max_spell_level": 4,
+      "can_cast_cantrips": true,
+      "description": "Frontline soldiers. Subclass: Eldritch Knight (one-third caster, wizard list). At 10%+ purity, can learn 2 cantrips from the wizard list.",
+      "blood_awakening_level": 3,
+      "subclasses_with_spells": ["Eldritch Knight (third caster, wizard spell list, max 4th level)"],
+      "srd_class_ref": "fighter",
+      "spell_list_count_target": 0
+    },
+    "monk": {
+      "name": "Monk",
+      "solis_grave_name": "Iron-Soul",
+      "spellcasting": "none",
+      "spellcasting_ability": null,
+      "default_purity": 10,
+      "max_spell_level": 0,
+      "can_cast_cantrips": true,
+      "description": "Disciplined warriors who suppress their bloodline through meditation and physical mastery. Their ki is suppressed draconic energy. At 10%+, learn 2 cantrips from the cleric list.",
+      "blood_awakening_level": 3,
+      "subclasses_with_spells": [],
+      "srd_class_ref": "monk",
+      "spell_list_count_target": 0
+    },
+    "paladin": {
+      "name": "Paladin",
+      "solis_grave_name": "Oath-Sworn",
+      "spellcasting": "half",
+      "spellcasting_ability": "charisma",
+      "default_purity": 50,
+      "max_spell_level": 5,
+      "can_cast_cantrips": false,
+      "description": "Holy knights bound by sacred oaths, recognized by the Citadel. Their purity is certified and unchallenged. Cantrips are beneath them — they channel raw sovereign power.",
+      "blood_awakening_level": null,
+      "subclasses_with_spells": ["Each Oath grants unique oath spells at 3rd, 5th, 9th, 13th, 17th"],
+      "srd_class_ref": "paladin",
+      "spell_list_count_target": 70
+    },
+    "ranger": {
+      "name": "Ranger",
+      "solis_grave_name": "Strider",
+      "spellcasting": "half",
+      "spellcasting_ability": "wisdom",
+      "default_purity": 25,
+      "max_spell_level": 5,
+      "can_cast_cantrips": false,
+      "description": "Wilderness scouts and monster hunters. Their bloodlines are thin but versatile — they learn practical magic for survival and tracking.",
+      "blood_awakening_level": null,
+      "subclasses_with_spells": ["Each Conclave grants bonus spells"],
+      "srd_class_ref": "ranger",
+      "spell_list_count_target": 75
+    },
+    "rogue": {
+      "name": "Rogue",
+      "solis_grave_name": "Shadow-Blood",
+      "spellcasting": "none",
+      "spellcasting_ability": "intelligence",
+      "default_purity": 10,
+      "max_spell_level": 4,
+      "can_cast_cantrips": true,
+      "description": "Operatives who weaponize their bloodline through stealth and deception. Subclass: Arcane Trickster (one-third caster, wizard list). At 10%+, learn 2 cantrips from the wizard list.",
+      "blood_awakening_level": 3,
+      "subclasses_with_spells": ["Arcane Trickster (third caster, wizard spell list, max 4th level)"],
+      "srd_class_ref": "rogue",
+      "spell_list_count_target": 0
+    },
+    "sorcerer": {
+      "name": "Sorcerer",
+      "solis_grave_name": "Archon",
+      "spellcasting": "full",
+      "spellcasting_ability": "charisma",
+      "default_purity": 50,
+      "max_spell_level": 9,
+      "can_cast_cantrips": true,
+      "description": "The most common name for a recognized spellcaster. Archons channel magic directly through their bloodline without study or prayer. Their power is innate, raw, and feared. They are the face of legal magic in Solis-Grave.",
+      "blood_awakening_level": null,
+      "subclasses_with_spells": [],
+      "srd_class_ref": "sorcerer",
+      "spell_list_count_target": 200
+    },
+    "warlock": {
+      "name": "Warlock",
+      "solis_grave_name": "Penitent",
+      "spellcasting": "pact",
+      "spellcasting_ability": "charisma",
+      "default_purity": 10,
+      "max_spell_level": 9,
+      "can_cast_cantrips": true,
+      "description": "Those with insufficient purity who made pacts with ancient Dragon-Gods, Void entities, or Sovereign spirits. Their magic is borrowed, bought with blood-debts. The Inquisition hunts them most aggressively.",
+      "blood_awakening_level": null,
+      "subclasses_with_spells": ["Each Patron grants expanded spell lists (1st-5th)"],
+      "srd_class_ref": "warlock",
+      "spell_list_count_target": 150
+    },
+    "wizard": {
+      "name": "Wizard",
+      "solis_grave_name": "Archon Caster",
+      "spellcasting": "full",
+      "spellcasting_ability": "intelligence",
+      "default_purity": 25,
+      "max_spell_level": 9,
+      "can_cast_cantrips": true,
+      "description": "Scholarly casters who study the Old Tongue and bloodline sigils intellectually rather than channeling instinctively. They learn spells from grimoires (bloodline records). The largest spell list — they can theoretically learn any spell.",
+      "blood_awakening_level": null,
+      "subclasses_with_spells": [],
+      "srd_class_ref": "wizard",
+      "spell_list_count_target": 350
+    },
+    "artificer": {
+      "name": "Artificer",
+      "solis_grave_name": "Aether-Smith",
+      "spellcasting": "half",
+      "spellcasting_ability": "intelligence",
+      "default_purity": 10,
+      "max_spell_level": 5,
+      "can_cast_cantrips": true,
+      "description": "Engineers who discovered that Aether-Cores can power mechanical devices. They store spells in inventions rather than casting from their bloodline directly. Cantrips are delivered via gadgets. Their 'spells' are prototypes.",
+      "blood_awakening_level": null,
+      "subclasses_with_spells": ["Each Specialist grants bonus spells"],
+      "srd_class_ref": "artificer",
+      "spell_list_count_target": 115
+    },
+    "blood_hunter": {
+      "name": "Blood Hunter",
+      "solis_grave_name": "Crimson Oath",
+      "spellcasting": "half",
+      "spellcasting_ability": "intelligence",
+      "default_purity": 25,
+      "max_spell_level": 5,
+      "can_cast_cantrips": true,
+      "description": "Witcher-like monster hunters who inject monster blood (Aether-Core essence) into their own veins to gain temporary purity. Their 'spells' are Blood Curses — self-damaging rituals that weaponize their own blood. Half-caster + unique hemocraft die mechanic.",
+      "blood_awakening_level": null,
+      "subclasses_with_spells": ["Each Order grants unique Blood Curses (1st-5th level equivalent)"],
+      "srd_class_ref": "blood_hunter",
+      "homebrew": true,
+      "spell_list_count_target": 70
+    },
+    "sovereign": {
+      "name": "Sovereign",
+      "solis_grave_name": "Dragon-Heir",
+      "spellcasting": "full",
+      "spellcasting_ability": "charisma",
+      "default_purity": 50,
+      "max_spell_level": 9,
+      "can_cast_cantrips": true,
+      "selectable": false,
+      "grant_type": "secret_chosen",
+      "max_per_campaign": 1,
+      "grant_method": "random",
+      "grant_description": "At campaign start, ONE player character is randomly selected by the DM bot to possess the dormant Sovereign bloodline. This is NOT revealed to the player immediately — the bloodline awakens through story events (first spell cast, Inquisitor encounter, blood scan, etc.). The player learns they are a Sovereign when the bot reveals it narratively. If playing solo, the main character gets it automatically.",
+      "description": "The dragon-blooded elite. Unlike Archons (sorcerers) whose bloodline is a random gift, Sovereigns trace their lineage directly to a named Ancient Dragon. Their bloodline IS their destiny. They gain purity progression as a class feature (+5% at levels 5, 10, 15, 20). Only class that can reach 100% purity. Signature abilities: Sovereign Surge (1/short rest, +15% purity for 1 min), Bloodline Severance (9th, permanently strip a creature's purity), Dragon Apotheosis (9th, transform into a dragon for 1 min). The Inquisition's primary target.",
+      "blood_awakening_level": null,
+      "subclasses_with_spells": ["Dragon-Blooded Lineages: Fire (cinder), Storm (tempest), Void (abyssal), Frost (rime), Flesh (primal), Law (celestial)"],
+      "srd_class_ref": null,
+      "homebrew": true,
+      "spell_list_count_target": 180
+    }
+  },
+  "blood_awakening": {
+    "description": "At 3rd level, non-caster classes (Barbarian, Fighter, Monk, Rogue) with 10%+ purity unlock Blood Awakening: learn 2 cantrips from their designated list. These cantrips are cast as if the character had a spellcasting ability modifier of +2, regardless of actual stats. The character's body channels ambient aether without formal training.",
+    "applies_to": ["barbarian", "fighter", "monk", "rogue"]
+  },
+  "class_spell_lists": {
+    "barbarian": { "blood_awakening_cantrips_from": "druid" },
+    "bard": { "source": "bard" },
+    "cleric": { "source": "cleric" },
+    "druid": { "source": "druid" },
+    "fighter": {
+      "blood_awakening_cantrips_from": "wizard",
+      "eldritch_knight_source": "wizard"
+    },
+    "monk": { "blood_awakening_cantrips_from": "cleric" },
+    "paladin": { "source": "paladin" },
+    "ranger": { "source": "ranger" },
+    "rogue": {
+      "blood_awakening_cantrips_from": "wizard",
+      "arcane_trickster_source": "wizard"
+    },
+    "sorcerer": { "source": "sorcerer" },
+    "warlock": { "source": "warlock" },
+    "wizard": { "source": "wizard" },
+    "artificer": { "source": "artificer" },
+    "blood_hunter": { "source": "blood_hunter" },
+    "sovereign": { "source": "sovereign" }
+  },
+  "play_modes": {
+    "description": "The DM bot supports two play modes. The bot asks the group which mode they prefer at session start.",
+    "modes": {
+      "solo_with_npcs": {
+        "name": "Solo + NPC Party",
+        "channel_creation": {
+          "enabled": true,
+          "category_name": "Dungeons & Dragons",
+          "channel_format": "solo-{player-name}",
+          "permissions": "Only the player, the bot, and users with DM_SESSION_ROLE_ID can view/send",
+          "description": "When a player chooses Solo mode, the bot creates a private channel under the Dungeons & Dragons category. The channel is named after the player (e.g. #solo-drsinister31). This channel is their personal campaign space — all NPC party interaction, combat, and narration happens here."
+        },
+        "description": "One player controls the main character. The bot generates 2-4 NPC companions with full character sheets, backstories, and personalities. The player issues commands to NPCs ('Tell the cleric to heal me'). The bot roleplays all NPC dialogue and controls them in combat. The solo player IS the Sovereign — they are the main character, no random selection.",
+        "party_size": "1 player + 2-4 AI-controlled NPCs",
+        "npc_creation": "Bot generates NPCs matching needed party roles (tank, healer, caster, scout). NPCs have simplified sheets (HP, AC, 3 signature abilities) but full personalities.",
+        "sovereign_assignment": "always_main_character"
+      },
+      "group": {
+        "name": "Group Play",
+        "description": "2-5 players each control their own character. Players roleplay with each other and the DM bot narrates the world, NPCs, and combat. The randomly selected Sovereign is one of the players (hidden, revealed through story).",
+        "party_size": "2-5 players",
+        "npc_creation": "None by default. The bot may introduce temporary NPC allies for specific quests.",
+        "sovereign_assignment": "random_one_player"
+      }
+    },
+    "campaign_completion": {
+      "description": "When a campaign is marked as finished (via /session_end with confirmation), the bot handles cleanup and archiving.",
+      "solo_cleanup": {
+        "channel_action": "Delete the player's private solo channel after sending the summary",
+        "summary_generation": "AI generates a 'Campaign Chronicle' — a narrative timeline of major events, NPCs met, quests completed, loot obtained, and the player's final character state",
+        "summary_format": "Discord embed sent to the player via DM, plus a downloadable .md file",
+        "summary_contents": ["In-game date range", "Player character final stats/level/gear", "NPC companions (alive and fallen)", "Major quests completed", "Key NPCs befriended or killed", "Timeline of significant events", "Epilogue narration from the DM bot"]
+      },
+      "group_cleanup": {
+        "channel_action": "Delete the group session channel after all summaries are sent",
+        "summary_generation": "AI generates individual 'Campaign Chronicles' for each participating player, personalized to their character's perspective",
+        "summary_format": "Discord embed sent to each player via DM, plus a downloadable .md file",
+        "summary_contents": ["Same fields as solo, personalized per character", "Party-wide timeline (shared section)", "Individual character's journey (personal section)"]
+      },
+      "archival": {
+        "database_action": "Campaign state is archived in Supabase (dm_game_state marked as completed with final context preserved)",
+        "document_storage": "Full timeline .md files are uploaded to a persistent storage location"
+      }
+    },
+    "cross_party_interaction": {
+      "enabled": true,
+      "description": "If two SOLO players are in the same geographic region and their mission generator determines compatible objectives, their parties MAY encounter each other. The DM bot handles this seamlessly — both players see the interaction from their perspective. This is an emergent feature, not guaranteed.",
+      "triggers": [
+        "Same region (within 10 hex miles)",
+        "Compatible mission types (both hunting same monster, both visiting same town, one fleeing/one pursuing)",
+        "DM bot rolls a d100 each in-game day — on 85+, cross-party event is queued"
+      ],
+      "rules": [
+        "Players cannot directly control the other player's character or NPCs",
+        "Combat between parties is possible but the DM bot warns both players first",
+        "Shared loot/trade is mediated by the DM bot",
+        "Cross-party sessions are temporary — parties separate after the shared mission/event"
+      ]
+    }
+  },
+  "npc_party_system": {
+    "description": "For solo players, the DM bot generates a balanced NPC party using these rules.",
+    "npc_templates": [
+      {
+        "role": "tank",
+        "classes": ["fighter", "paladin", "barbarian"],
+        "name_style": "grizzled veteran names (Steel-Gaze Korr, Shield-Maiden Brynn, Wrath-Bound Grok)",
+        "personality_traits": ["protective", "stoic", "loyal", "gruff", "honorable", "reckless"],
+        "combat_behavior": "Engages strongest enemy, draws aggro, protects wounded allies"
+      },
+      {
+        "role": "healer",
+        "classes": ["cleric", "druid", "bard"],
+        "name_style": "serene/spiritual names (Sister Aelindra, Root-Tender Fenn, Hymn-Singer Lio)",
+        "personality_traits": ["compassionate", "pious", "cautious", "wise", "pacifist", "secretive"],
+        "combat_behavior": "Prioritizes healing downed allies, stays at range, buffs before damage"
+      },
+      {
+        "role": "caster",
+        "classes": ["sorcerer", "wizard", "warlock"],
+        "name_style": "mystical/arcane names (Archon Thezzik, Grimoire-Bound Vesper, Pact-Sworn Nyx)",
+        "personality_traits": ["arrogant", "curious", "eccentric", "paranoid", "bookish", "volatile"],
+        "combat_behavior": "Area damage, crowd control, prioritizes enemy casters"
+      },
+      {
+        "role": "scout",
+        "classes": ["rogue", "ranger", "monk"],
+        "name_style": "shadowy/quick names (Shadow-Blood Silas, Trail-Walker Renn, Iron-Soul Mei)",
+        "personality_traits": ["sly", "independent", "observant", "cynical", "nimble", "quiet"],
+        "combat_behavior": "Flanks, targets isolated enemies, disengages frequently, scouts ahead"
+      }
+    ],
+    "npc_generation_rules": [
+      "NPCs start at same level as the player",
+      "NPCs have simplified character sheets: HP, AC, STR/DEX/CON/INT/WIS/CHA, 3 signature abilities/spells, 1 personality trait, 1 flaw, 1 bond",
+      "NPCs gain XP and level with the player",
+      "NPCs can die permanently — the bot will generate a replacement NPC in the next town/safe location",
+      "NPCs have their own inventory but the player can trade items with them",
+      "NPCs roll their own initiative and take their own turns in combat (controlled by the bot)",
+      "The player can issue simple commands: 'Attack that one', 'Heal me', 'Use your fire spell', 'Scout ahead', 'Stay back'"
+    ]
+  },
+  "purity_progression": {
+    "description": "Starting purity is determined by class. Additional purity can be gained through: leveling (Sovereign only: +5% at 5, 10, 15, 20), story events (DM discretion), Dragon Apotheosis wild surge (crit 100: permanent +5%), Blood Offering ritual (temporary 1 round per 1d4 self-damage), and legendary items (God-Shroud sets purity to 90% while worn).",
+    "permanent_gains": ["Sovereign class feature", "Dragon Apotheosis wild surge (d100=100)", "DM story milestone reward"],
+    "temporary_gains": ["Sovereign Surge class feature (+15%, 1 min)", "Blood Offering ritual (+5% per 1d4, 1 round)", "Dragon-Touched location (+10% while in area)"],
+    "penalties": ["Dormancy (suppressing bloodline: -20%)", "Inquisitor proximity (-10%)", "Aether Storm (-15%)", "Cursed items (varies)"]
+  }
+}

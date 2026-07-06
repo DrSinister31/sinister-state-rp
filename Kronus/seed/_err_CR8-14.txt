@@ -1,0 +1,204 @@
+[
+  {
+    "name": "Obsidian Crystal-Warden",
+    "size": "Large",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": 17,
+    "hit_points": "152 (16d10+64)",
+    "speed": "30 ft.",
+    "strength": 20,
+    "dexterity": 10,
+    "constitution": 18,
+    "intelligence": 6,
+    "wisdom": 14,
+    "charisma": 8,
+    "saving_throws": {
+      "strength": "+9",
+      "constitution": "+8"
+    },
+    "skills": {
+      "perception": "+6"
+    },
+    "damage_vulnerabilities": "thunder",
+    "damage_resistances": "bludgeoning, piercing, and slashing from nonmagical attacks",
+    "damage_immunities": "",
+    "condition_immunities": "charmed, exhaustion, frightened, paralyzed, petrified, poisoned",
+    "senses": "darkvision 60 ft., tremorsense 30 ft., passive Perception 16",
+    "languages": "Terran",
+    "challenge": "9 (5,000 XP)",
+    "traits": [
+      {
+        "name": "Crystalline Body",
+        "description": "The golem has resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks. It is vulnerable to thunder damage."
+      },
+      {
+        "name": "Reflective Surface",
+        "description": "When the golem is targeted by a spell that requires a ranged attack roll, the attacker must make a DC 16 Dexterity saving throw. On a failure, the spell is reflected back at the attacker, using the same attack roll or saving throw as originally intended."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The golem makes two slam attacks."
+      },
+      {
+        "name": "Slam",
+        "description": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 18 (3d8+5) bludgeoning damage."
+      },
+      {
+        "name": "Crystal Shards (Recharge 5-6)",
+        "description": "The golem fires a barrage of crystal shards in a 30-foot cone. Each creature in that area must make a DC 16 Dexterity saving throw, taking 28 (8d6) piercing damage on a failed save, or half as much on a success."
+      }
+    ],
+    "legendary_actions": []
+  },
+  {
+    "name": "Frost Drake Ancient",
+    "size": "Large",
+    "type": "dragon",
+    "alignment": "chaotic evil",
+    "armor_class": 18,
+    "hit_points": "200 (16d12+96)",
+    "speed": "40 ft., fly 80 ft.",
+    "strength": 24,
+    "dexterity": 14,
+    "constitution": 22,
+    "intelligence": 10,
+    "wisdom": 16,
+    "charisma": 14,
+    "saving_throws": {
+      "strength": "+12",
+      "dexterity": "+7",
+      "constitution": "+11",
+      "wisdom": "+8",
+      "charisma": "+7"
+    },
+    "skills": {
+      "perception": "+13",
+      "stealth": "+7",
+      "arcana": "+5"
+    },
+    "damage_vulnerabilities": "fire",
+    "damage_resistances": "",
+    "damage_immunities": "cold",
+    "condition_immunities": "",
+    "senses": "blindsight 60 ft., darkvision 120 ft., passive Perception 23",
+    "languages": "Common, Draconic",
+    "challenge": "13 (10,000 XP)",
+    "traits": [
+      {
+        "name": "Ice Walk",
+        "description": "The drake can move across icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow costs it no extra movement."
+      },
+      {
+        "name": "Freezing Blood",
+        "description": "When the drake takes damage from a melee attack, the attacker must succeed on a DC 17 Constitution saving throw or be restrained by ice until the end of its next turn."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The drake makes three attacks: one with its bite, one with its claws, and one with its tail."
+      },
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 18 (2d10+7) piercing damage plus 7 (2d6) cold damage."
+      },
+      {
+        "name": "Claw",
+        "description": "Melee Weapon Attack: +12 to hit, reach 5 ft., one target. Hit: 15 (2d8+7) slashing damage."
+      },
+      {
+        "name": "Tail",
+        "description": "Melee Weapon Attack: +12 to hit, reach 15 ft., one target. Hit: 13 (1d12+7) bludgeoning damage."
+      },
+      {
+        "name": "Cold Breath (Recharge 5-6)",
+        "description": "The drake exhales a 60-foot cone of freezing air. Each creature in that area must make a DC 18 Constitution saving throw, taking 56 (16d6) cold damage on a failed save, or half as much on a success."
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Detect",
+        "description": "The drake makes a Wisdom (Perception) check."
+      },
+      {
+        "name": "Tail Attack",
+        "description": "The drake makes a tail attack."
+      },
+      {
+        "name": "Wing Attack (Costs 2 Actions)",
+        "description": "The drake beats its wings. Each creature within 10 feet of the drake must succeed on a DC 18 Dexterity saving throw or take 13 (2d6+6) bludgeoning damage and be knocked prone. The drake can then fly up to half its flying speed."
+      }
+    ]
+  },
+  {
+    "name": "Sulfur Drake Adult",
+    "size": "Large",
+    "type": "dragon",
+    "alignment": "neutral evil",
+    "armor_class": 17,
+    "hit_points": "168 (16d10+80)",
+    "speed": "40 ft., fly 60 ft.",
+    "strength": 22,
+    "dexterity": 12,
+    "constitution": 20,
+    "intelligence": 8,
+    "wisdom": 14,
+    "charisma": 12,
+    "saving_throws": {
+      "strength": "+10",
+      "constitution": "+9",
+      "wisdom": "+6",
+      "charisma": "+5"
+    },
+    "skills": {
+      "perception": "+10",
+      "stealth": "+5"
+    },
+    "damage_vulnerabilities": "cold",
+    "damage_resistances": "fire",
+    "damage_immunities": "poison",
+    "condition_immunities": "poisoned",
+    "senses": "blindsight 30 ft., darkvision 120 ft., passive Perception 20",
+    "languages": "Draconic",
+    "challenge": "10 (5,900 XP)",
+    "traits": [
+      {
+        "name": "Sulfurous Aura",
+        "description": "At the start of each of the drake's turns, each creature within 5 feet of it takes 5 (1d10) fire damage. If the drake takes cold damage, this aura is suppressed until the end of its next turn."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The drake makes three attacks: one bite, one claw, and one tail."
+      },
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit: 16 (2d10+6) piercing damage plus 7 (2d6) fire damage."
+      },
+      {
+        "name": "Claw",
+        "description": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 13 (2d8+6) slashing damage plus 3 (1d6) fire damage."
+      },
+      {
+        "name": "Tail",
+        "description": "Melee Weapon Attack: +10 to hit, reach 15 ft., one target. Hit: 11 (1d12+6) bludgeoning damage."
+      },
+      {
+        "name": "Sulfur Breath (Recharge 5-6)",
+        "description": "The drake exhales a 30-foot cone of sulfurous gas. Each creature in that area must make a DC 16 Constitution saving throw. On a failed save, a creature takes 35 (10d6) fire damage and 35 (10d6) poison damage, and is poisoned for 1 minute. On a successful save, it takes half as much damage and is not poisoned. A poisoned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Detect",
+        "description": "The drake makes a Wisdom (Perception) check."
+      },
+      {
+        "name": "Tail Attack",
+        "description": "The drake makes a tail attack."
+      }
+    ]

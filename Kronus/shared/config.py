@@ -22,9 +22,6 @@ class Config:
     deepseek_api_key: str
     owner_discord_id: int
     admin_discord_ids: list[int]
-    rcon_host: str
-    rcon_port: int
-    rcon_password: str
 
     dm_session_role_id: int = 0
     dm_voice_channel_id: int = 0
@@ -45,7 +42,6 @@ class Config:
     business_owner_role_id: int = 0
     business_employee_role_id: int = 0
     staff_role_id: int = 0
-    tebex_secret: str = ""
 
     @classmethod
     def from_env(cls) -> "Config":
@@ -64,9 +60,6 @@ class Config:
             deepseek_api_key=require("DEEPSEEK_API_KEY"),
             owner_discord_id=int(require("OWNER_ID") or "0"),
             admin_discord_ids=[int(x.strip()) for x in (require("ADMIN_IDS")).split(",") if x.strip()],
-            rcon_host=require("RCON_HOST"),
-            rcon_port=int(require("RCON_PORT") or "30120"),
-            rcon_password=require("RCON_PASSWORD"),
             dm_session_role_id=int(os.getenv("DM_SESSION_ROLE_ID") or "0"),
             dm_voice_channel_id=int(os.getenv("DM_VOICE_CHANNEL_ID") or "0"),
             dm_text_channel_id=int(os.getenv("DM_TEXT_CHANNEL_ID") or "0"),
@@ -85,7 +78,6 @@ class Config:
             business_owner_role_id=int(os.getenv("BUSINESS_OWNER_ROLE_ID") or "0"),
             business_employee_role_id=int(os.getenv("BUSINESS_EMPLOYEE_ROLE_ID") or "0"),
             staff_role_id=int(os.getenv("STAFF_ROLE_ID") or "0"),
-            tebex_secret=os.getenv("TEBEX_SECRET") or "",
         )
         if missing:
             raise EnvironmentError(f"Missing: {', '.join(missing)}")
