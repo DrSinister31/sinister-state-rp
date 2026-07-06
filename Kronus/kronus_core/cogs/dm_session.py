@@ -694,8 +694,14 @@ class DMSessionCog(commands.Cog):
                 system_prompt = system_prompt.replace("{{compendium_context}}", compendium_context)
 
                 history = active_session.setdefault("history", [])
+                session_mode = active_session.get("mode", "ic")
+
                 if not history:
-                    history.append({"role": "system", "content": system_prompt})
+                    if session_mode == "ooc":
+                        sys_prompt = "You are the Dungeon Master for Solis-Grave, a grimdark D&D campaign. Respond as the DM — helpful, direct, out-of-character. Answer rules questions, help with character builds, explain lore. Keep it under 300 chars. Do NOT narrate in second person unless asked."
+                    else:
+                        sys_prompt = system_prompt
+                    history.append({"role": "system", "content": sys_prompt})
 
                 if len(history) > MAX_HISTORY:
                     history = [history[0]] + history[-(MAX_HISTORY - 1):]
@@ -760,6 +766,53 @@ class DMSessionCog(commands.Cog):
                       f"*{npc.get('personality_trait', '')}* | Bond: {npc.get('bond', '')}",
                 inline=False
             )
+        await interaction.followup.send(embed=embed)
+
+    @app_commands.command(name="ooc", description="Switch to Out-of-Character talk — I'll respond as the DM, not in-character")
+    async def ooc_mode(self, interaction: discord.Interaction):
+        for sid, sess in list(self.sessions.items()):
+            if sess.get("channel_id") == interaction.channel_id:
+                sess["mode"] = "ooc"
+                await interaction.response.send_message("🗣️ **OOC Mode** — I'll respond as your DM. Rules, questions, character talk welcome. Use `/ic` to return to roleplay.", ephemeral=False)
+                return
+        await interaction.response.send_message("Start a session first with `/session_start`.", ephemeral=True)
+
+    @app_commands.command(name="ic", description="Switch to In-Character roleplay — all messages treated as character actions")
+    async def ic_mode(self, interaction: discord.Interaction):
+        for sid, sess in list(self.sessions.items()):
+            if sess.get("channel_id") == interaction.channel_id:
+                sess["mode"] = "ic"
+                sess["history"] = []
+                await interaction.response.send_message("🎭 **In-Character Mode** — All messages are now treated as your character's actions. I'll narrate the world and NPCs. Use `/ooc` to step out.", ephemeral=False)
+                return
+        await interaction.response.send_message("Start a session first with `/session_start`.", ephemeral=True)
+
+    @app_commands.command(name="guide", description="Repost the player guide to this channel")
+    @app_commands.default_permissions(administrator=True)
+    async def repost_guide(self, interaction: discord.Interaction):
+        await interaction.response.defer(ephemeral=False)
+        embed = discord.Embed(
+            title="📜 Solis-Grave Player Guide",
+            description=(
+                "**Welcome to Solis-Grave: Shadows of the Crown.** I am your AI Dungeon Master.\n\n"
+                "**Getting Started:**\n"
+                "1. `/create` — Make a character in <#1514244983652094024>\n"
+                "2. `/session_start` — The DM begins a session\n"
+                "3. Type your actions naturally — I resolve everything\n\n"
+                "**Modes:**\n"
+                "`/ic` — In-Character roleplay. Everything you type is your character's action.\n"
+                "`/ooc` — Out-of-Character. Ask me rules, questions, or chat as yourself.\n\n"
+                "**Commands:** `/roll`, `/lore`, `/character_view`, `/character_mine`, `/xp`, `/help`\n"
+                "**Voice:** `/dm_join` to invite me to voice chat for TTS narration.\n"
+                "**Dice:** Use the dice bot in <#1514245057350209597>. I read your rolls automatically.\n\n"
+                "**The World:** Magic comes from dragon blood purity. The Church of the Five Skulls "
+                "rules through fear. Six Great Houses plot against each other. You start at the Citadel "
+                "of the Dragon-Garrison — survive, grow, and uncover the truth.\n\n"
+                "Tag me (@Kronikle) anywhere and I'll respond."
+            ),
+            color=0x8B0000
+        )
+        embed.set_footer(text="Solis-Grave · AI Dungeon Master powered by DeepSeek v4-flash")
         await interaction.followup.send(embed=embed)
 
 
