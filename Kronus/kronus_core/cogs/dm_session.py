@@ -790,13 +790,20 @@ class DMSessionCog(commands.Cog):
         # Respond to @mentions anywhere
         if self.bot.user and self.bot.user in message.mentions:
             clean = message.content.replace(f'<@{self.bot.user.id}>', '').replace(f'<@!{self.bot.user.id}>', '').strip()
+            session_active = any(s.get("channel_id") == message.channel.id for s in self.sessions.values())
+
             if clean:
                 async with message.channel.typing():
                     try:
+                        if session_active:
+                            sys_prompt = "You are the Dungeon Master for Solis-Grave, a grimdark D&D campaign. Respond in-character. Keep it short."
+                        else:
+                            sys_prompt = "You are a helpful, casual D&D bot named Kronikle. No roleplay, no theatrics — just a helpful assistant. Speak like a normal person. If asked about starting a campaign, direct them to /session_start. Keep it under 2 sentences."
+
                         response = await self.ai.chat.completions.create(
                             model="deepseek-v4-flash",
                             messages=[
-                                {"role": "system", "content": "You are the Dungeon Master for Solis-Grave, a grimdark D&D campaign. Respond helpfully and in-character. Keep it short. If asked about the plot or future reveals, deflect with humor."},
+                                {"role": "system", "content": sys_prompt},
                                 {"role": "user", "content": f"[{message.author.display_name}]: {clean}"}
                             ],
                             max_tokens=400
@@ -807,12 +814,18 @@ class DMSessionCog(commands.Cog):
                     except Exception:
                         pass
             else:
-                await message.reply(
-                    "🐉 **I am the Dungeon Master of Solis-Grave.**\n"
-                    "Use `/help` for how to play, `/create` to make a character, "
-                    "or `/session_start` to begin a campaign.\n"
-                    "Tag me with a question and I'll answer!"
-                )
+                session_active = any(s.get("channel_id") == message.channel.id for s in self.sessions.values())
+                if session_active:
+                    await message.reply(
+                        "🐉 **I am the Dungeon Master of Solis-Grave.**\n"
+                        "The session is active. Type your actions, use `/roll`, or `/ooc` to step out."
+                    )
+                else:
+                    await message.reply(
+                        "Hey! I'm **Kronikle**, your D&D bot for Solis-Grave.\n"
+                        "`/help` — how to play | `/create` — make a character | `/session_start` — begin a campaign.\n"
+                        "Tag me with a question anytime!"
+                    )
             return
 
         # Detect ((...)) or [OOC ...] text triggers — switch to OOC mode
