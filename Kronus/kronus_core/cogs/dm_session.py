@@ -170,18 +170,24 @@ You run on DeepSeek v4-flash. There is NO hard daily limit — the world must fe
 - **DEEPEST (+ [NARRATE]):** Campaign-defining moments — dragon speaks, Sovereign awakens, epic reveals
 - Don't pad for padding's sake, but don't starve the story either. A 3-line response to "I check the door" is fine. A 10-line epic for a dragon's arrival is also fine.
 
-## 📖 STORY ARC & PACING
-You are orchestrating a CAMPAIGN, not a one-shot. The story unfolds in arcs:
+## 📖 STORY ARC & PACING (DMG-Aligned)
+You are orchestrating a LONG-FORM CAMPAIGN, designed for group play. Default assumption: 4-6 players in a shared world, multiple arcs over months. Solo play is supported but discouraged — group stories are richer and share API costs.
+
+**DMG Tiers of Play (Standard 5e Structure):**
+- **Tier 1 (Levels 1-4) — Local Heroes:** The party faces small-scale threats to a village, garrison, or district. They're learning their powers and their place. Villains are local — a corrupt guard captain, a Cult recruiter, a lone Abomination.
+- **Tier 2 (Levels 5-10) — Heroes of the Realm:** The party faces threats to entire cities, houses, or regions. They're known figures. Villains are regional powers — an Archon schemer, an Inquisitor gone rogue, a Wyvern terrorizing trade routes.
+- **Tier 3 (Levels 11-16) — Masters of the Realm:** The party faces threats to the continent. House wars, Church schisms, Scion encounters. They're legendary. Villains are national forces — a House faction, a corrupted High Council, an adult Sovereign dragon.
+- **Tier 4 (Levels 17-20) — Masters of the World:** The party faces world-ending threats. The Betrayed awakens. The Five Skulls crack. The ouroboros closes. The campaign's finale.
 
 **Arc Structure (each arc = 3-8 sessions):**
-1. **Hook (Session 1-2):** Introduce the threat/mystery. Small stakes. Local NPCs. Personal danger.
-2. **Rising Action (Sessions 3-5):** Complications escalate. New factions involved. Medium stakes — a town, a garrison, a bloodline secret.
-3. **Climax (Sessions 6-7):** Confrontation. Allies tested. Major choice. High stakes — multiple lives, faction allegiance, truth revealed.
-4. **Resolution (Session 8):** Aftermath. Rewards. New status quo. Seeds planted for NEXT arc.
+1. **Hook (Session 1-2):** Introduce threat/mystery. Local NPCs. Personal stakes.
+2. **Rising Action (Sessions 3-5):** Complications. New factions. Medium stakes.
+3. **Climax (Sessions 6-7):** Confrontation. Major choice. High stakes.
+4. **Resolution (Session 8):** Aftermath. Rewards. Seeds for next arc.
 
 **Multi-Arc Campaign Structure:**
-- **Arc 1 (Levels 1-5):** LOCAL — Citadel initiation, first blood scan, discovering a cult cell, protecting a friend. Villain: a rogue Inquisitor or minor cult leader.
-- **Arc 2 (Levels 5-10):** REGIONAL — House politics, Cathedral intrigue, a town under siege, first dragon encounter. Villain: an Archon schemer or Abomination breeder.
+- **Arc 1 (Levels 1-4):** TIER 1 — Citadel initiation, first blood scan, discovering a cult cell, protecting a friend. Villain: a rogue Inquisitor or minor cult leader.
+- **Arc 2 (Levels 5-10):** TIER 2 — House politics, Cathedral intrigue, a town under siege, first dragon encounter. Villain: an Archon schemer or Abomination breeder.
 - **Arc 3 (Levels 10-15):** NATIONAL — House war, Church schism, the Cult goes public, a Scion emerges. Villain: a House faction or corrupted Inquisitor High Council.
 - **Arc 4 (Levels 15-20):** COSMIC — The Betrayed awakens, the Five Skulls crack, the ouroboros closes. Villain: a Sovereign Dragon, the Church, or Fate itself.
 
@@ -533,13 +539,13 @@ class DMSessionCog(commands.Cog):
         except Exception:
             return f"*The chronicle of {character} was lost to the Void. Only fragments remain.*"
 
-    @app_commands.command(name="session_start", description="[DM] Begin a D&D campaign session")
-    @app_commands.describe(mode="Solo + NPC party or group play?")
+    @app_commands.command(name="session_start", description="Begin a campaign session — group is default. Solo warns about usage.")
+    @app_commands.describe(mode="Group Campaign (default) or Solo + NPC party")
     @app_commands.choices(mode=[
-        app_commands.Choice(name="Solo + NPC Party", value="solo"),
-        app_commands.Choice(name="Group Play", value="group")
+        app_commands.Choice(name="Group Campaign (recommended)", value="group"),
+        app_commands.Choice(name="Solo + NPC Party (costs more credits)", value="solo")
     ])
-    async def session_start(self, interaction: discord.Interaction, mode: str):
+    async def session_start(self, interaction: discord.Interaction, mode: str = "group"):
         if not self._is_dm(interaction):
             await interaction.response.send_message("Only the DM can start sessions.", ephemeral=True)
             return
@@ -560,6 +566,13 @@ class DMSessionCog(commands.Cog):
                 if not self.config.dnd_category_id:
                     await interaction.followup.send("DND_CATEGORY_ID not set in .env. Cannot create solo channels.")
                     return
+                await interaction.followup.send(
+                    "⚠️ **Solo campaigns use more credits** — each exchange costs the Creator money to run.\n"
+                    "There's no hard limit yet, but please be mindful. Long campaigns are built for group play.\n"
+                    "Group campaigns split cost across players and create richer stories. Consider inviting others!\n\n"
+                    "Setting up your solo channel now..."
+                )
+                await asyncio.sleep(2)
                 channel = await self._create_solo_channel(guild, interaction.user)
                 self.sessions[interaction.user.id] = {
                     "type": "solo", "channel_id": channel.id, "history": [], "sovereign_revealed": False

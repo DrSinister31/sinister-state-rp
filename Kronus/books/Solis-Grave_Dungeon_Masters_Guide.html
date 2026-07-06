@@ -1,0 +1,361 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Solis-Grave Dungeon Master's Guide</title><style>
+body{font-family:Georgia,Times,serif;font-size:11pt;line-height:1.6;color:#2C1810;max-width:8.5in;margin:0 auto;padding:0.5in;background:#F5F0E8}
+h1{font-size:24pt;color:#8B0000;text-align:center;text-transform:uppercase;letter-spacing:3px;border-bottom:3px double #8B0000;padding-bottom:12pt;margin-bottom:8pt}
+h2{font-size:16pt;color:#8B0000;border-bottom:1px solid #8B0000;padding-bottom:4pt;margin-top:24pt}
+h3{font-size:12pt;color:#8B0000;font-variant:small-caps;margin-top:16pt}
+h4{font-size:10pt;color:#5C3A1E;font-style:italic;margin-top:8pt}
+p{text-align:justify;margin:6pt 0}
+strong{color:#5C3A1E}em{color:#8B0000}
+.stat-block{background:#F5F0E8;border:2px solid #8B0000;padding:10pt 12pt;margin:12pt 0;font-size:9pt}
+.stat-block h3{color:#8B0000;margin-top:0;border-bottom:1px solid #8B0000;padding-bottom:4pt}
+table{width:100%;border-collapse:collapse;margin:8pt 0;font-size:9pt}
+th{background:#8B0000;color:#F5F0E8;padding:4pt 6pt;text-align:left;font-variant:small-caps}
+td{padding:3pt 6pt;border-bottom:1px solid #D4C5B0}
+tr:nth-child(even){background:#EDE5D8}
+hr{border:none;border-top:1px solid #D4C5B0;margin:8pt 0}
+.card{background:#EDE5D8;border:1px solid #D4C5B0;padding:6pt 8pt;margin:8pt 0}
+.card-header{color:#8B0000;font-weight:bold;font-size:10pt}
+.card-detail{font-size:9pt;color:#5C3A1E}
+.cr-badge{display:inline-block;background:#8B0000;color:#F5F0E8;padding:1pt 6pt;border-radius:3pt;font-weight:bold;font-size:9pt}
+code{font-family:Courier New,monospace;background:#EDE5D8;padding:1pt 3pt;font-size:9pt}
+pre{background:#EDE5D8;border:1px solid #D4C5B0;padding:6pt;font-size:9pt;white-space:pre-wrap}
+.page-break{page-break-before:always}
+.toctitle{text-align:center;color:#8B0000;font-size:18pt;margin:20pt 0}
+.subtitle{text-align:center;color:#5C3A1E;font-style:italic;font-size:12pt;margin-bottom:20pt}
+@media print{body{background:white}}
+</style></head><body><h1>Solis-Grave Dungeon Master's Guide</h1>
+<p class="subtitle">Solis-Grave — Official Reference</p>
+<h1>Solis-Grave Dungeon Master's Guide</h1>
+<p>Consolidated rules reference for running the campaign.</p>
+<hr>
+<h2>Magic System</h2>
+<hr>
+<h1>Solis-Grave Magic System — Formal Rules</h1>
+<h2>Spell Safety DC</h2>
+<p>Every time a character casts a spell of 1st level or higher, they must make a Constitution saving throw against:</p>
+<pre>
+Spell Safety DC = 20 - (Blood Purity Percentage / 5)
+</pre>
+<table>
+<tr><td>Purity</td><td>DC</td><td>Safe Spells</td></tr>
+<tr><td>0% (Blank)</td><td>20</td><td>None — cantrips only with DM permission</td></tr>
+<tr><td>10%</td><td>18</td><td>Cantrips only (1st+ nearly impossible)</td></tr>
+<tr><td>15% (Lesser Blood)</td><td>17</td><td>Cantrips safe, 1st+ very risky</td></tr>
+<tr><td>25%</td><td>15</td><td>1st level passable with good CON</td></tr>
+<tr><td>40% (Archon)</td><td>12</td><td>1st-3rd level manageable</td></tr>
+<tr><td>60%</td><td>8</td><td>1st-5th level easy</td></tr>
+<tr><td>80%</td><td>4</td><td>1st-7th level nearly automatic</td></tr>
+<tr><td>95%+ (Sovereign, Dormant)</td><td>2</td><td>SEEMINGLY easy but MIND BLOCKS casting while dormant</td></tr>
+<tr><td>95%+ (Sovereign, Awakened)</td><td>Auto-pass</td><td>All spells auto-pass. No save needed.</td></tr>
+<h2>Aether Burn</h2>
+</table>
+<p><strong>On failure:</strong> The ambient magic cooks the caster's veins from the inside. Damage = 1d6 per spell level.</p>
+<table>
+<tr><td>Spell Level Failed</td><td>Damage</td></tr>
+<tr><td>1st</td><td>1d6</td></tr>
+<tr><td>2nd</td><td>2d6</td></tr>
+<tr><td>3rd</td><td>3d6</td></tr>
+<tr><td>...</td><td>...</td></tr>
+<tr><td>9th</td><td>9d6</td></tr>
+</table>
+<p><strong>Damage type:</strong> Fire (default) or matches the spell's element.</p>
+<p><strong>IGNORES ALL RESISTANCES.</strong> Cannot be reduced by any standard means.</p>
+<p><strong>Exceptions:</strong> Sump-Blood racial immunity, Aether-Warded armor enchantment (reduce by 1d6).</p>
+<h2>Purity Gating</h2>
+<table>
+<tr><td>Purity</td><td>Access</td></tr>
+<tr><td>0% (Blank)</td><td>Cantrips with DM permission only. Cannot cast 1st+ spells.</td></tr>
+<tr><td>1-14% (Common)</td><td>Cannot legally cast magic. No spell access.</td></tr>
+<tr><td>15-39% (Lesser Blood)</td><td>Cantrips + 1st level. 2nd+ possible but DC high.</td></tr>
+<tr><td>40-85% (Archon)</td><td>Full spell access up to 6th level. 7th+ requires 70%+.</td></tr>
+<tr><td>90-94% (Scion)</td><td>Full spell access. Cataclysmic energy.</td></tr>
+<tr><td>95-100% (Sovereign, Dormant)</td><td>MIND BLOCKS all casting. Appears as 0% Blank.</td></tr>
+<tr><td>95-100% (Sovereign, Awakened)</td><td>ALL spells auto-pass. No Spell Safety needed.</td></tr>
+<h2>Components & Focuses</h2>
+</table>
+<ul>
+<li><strong>Material components:</strong> Can be replaced by an Aether-Core of matching tier (Fractured for 1st-2nd, Intact for 3rd-5th, Pristine for 6th-8th, Sovereign-Fragment for 9th).</li>
+<li><strong>Arcane Focus:</strong> Using a focus reduces Spell Safety DC by 1.</li>
+<li><strong>Blood Focus (Blood Purist subclass):</strong> Using own blood as focus reduces Spell Safety DC by 2. Costs 1 HP per spell level.</li>
+<li><strong>No component/focus:</strong> Spell Safety DC as normal. No modifiers.</li>
+</ol>
+<h2>Wild Aether Surge (d100)</h2>
+<p>When a caster fails their Spell Safety save by 10 or more, roll on this table INSTEAD of taking standard Aether Burn:</p>
+<table>
+<tr><td>d100</td><td>Effect</td></tr>
+<tr><td>01-05</td><td>Caster turns invisible until end of next turn</td></tr>
+<tr><td>06-10</td><td>A random creature within 30 ft. takes the Aether Burn instead</td></tr>
+<tr><td>11-15</td><td>Caster's blood purity temporarily reads as 0% for 1 hour</td></tr>
+<tr><td>16-20</td><td>Spell succeeds but at half damage/healing</td></tr>
+<tr><td>21-25</td><td>Caster ages 1d10 years</td></tr>
+<tr><td>26-30</td><td>A Abomination (CR appropriate) is summoned 30 ft. away</td></tr>
+<tr><td>31-35</td><td>Caster's voice is stolen for 1d4 hours</td></tr>
+<tr><td>36-40</td><td>Spell ricochets — targets a random creature instead</td></tr>
+<tr><td>41-45</td><td>Caster and target swap positions</td></tr>
+<tr><td>46-50</td><td>Area becomes difficult terrain in 20 ft. radius (Aether sludge)</td></tr>
+<tr><td>51-55</td><td>Caster's hands glow for 1 hour — disadvantage on Stealth</td></tr>
+<tr><td>56-60</td><td>Spell creates loud thunderclap — all within 300 ft. hear it</td></tr>
+<tr><td>61-65</td><td>Caster takes 1 level of Exhaustion</td></tr>
+<tr><td>66-70</td><td>Spell works perfectly — no damage, no side effects</td></tr>
+<tr><td>71-75</td><td>Nearby Blood Crystals within 30 ft. shatter</td></tr>
+<tr><td>76-80</td><td>Caster's maximum HP reduced by spell level until long rest</td></tr>
+<tr><td>81-85</td><td>Random cantrip also fires at nearest creature</td></tr>
+<tr><td>86-90</td><td>Caster floats 10 ft. up for 1 minute</td></tr>
+<tr><td>91-95</td><td>Aether Burn damage DOUBLED</td></tr>
+<tr><td>96-99</td><td>TRIPLE Aether Burn — veins visibly crack</td></tr>
+<tr><td>00</td><td>Roll twice and apply both. If 00 again, caster's blood purity PERMANENTLY drops by 5.</td></tr>
+<h2>Sovereign Subconscious Blocking</h2>
+</table>
+<p>A dormant Sovereign (95-100% purity, unawakened) has Spell Safety DC 2. However, their MIND actively blocks any spellcasting attempt. They CANNOT cast spells of any level. If they try, the spell simply fails — no Aether Burn, no effect. The subconscious blocks it before the magic can form. This block dissolves upon Awakening.</p>
+<h2>Spell Safety Modifiers</h2>
+<table>
+<tr><td>Modifier</td><td>Source</td></tr>
+<tr><td>-1</td><td>Using an Arcane Focus</td></tr>
+<tr><td>-2</td><td>Blood Purist subclass — using own blood as focus (also costs 1 HP/spell level)</td></tr>
+<tr><td>-2</td><td>Sovereign's Edge weapon enchantment (50%+ purity required)</td></tr>
+<tr><td>+2</td><td>Casting without any focus or components</td></tr>
+<tr><td>+5</td><td>Blood-Judge's "Impure" sentence (temporary)</td></tr>
+<tr><td>Disadvantage</td><td>Aetheric Backlash spell (reaction, cast on you)</td></tr>
+<tr><td>Advantage</td><td>Dragon-Bone Charm (consumed on use)</td></tr>
+<hr>
+<h2>Story Engine & Campaign Structure</h2>
+<h1>Solis-Grave Story Engine — Plot Generation & Consistency Rules</h1>
+<h2>Core Principle</h2>
+</table>
+<p>You are telling a CAMPAIGN, not a one-shot. Every small mission builds toward medium missions, which build toward epic arcs. Nothing is filler — everything connects eventually.</p>
+<hr>
+<h2>Plot Thread Management</h2>
+<p>Track every active thread in the campaign. Each thread has:</p>
+<ul>
+<li><strong>Thread ID:</strong> short label (e.g., "cult_cell_citadel", "obsidian_conspiracy")</li>
+<li><strong>Status:</strong> <code>seeded</code>, <code>developing</code>, <code>climax</code>, <code>resolved</code></li>
+<li><strong>Introduced:</strong> Which session/event planted this seed</li>
+<li><strong>Key NPCs:</strong> Who is involved</li>
+<li><strong>Faction:</strong> Which House/group benefits</li>
+<li><strong>Player hook:</strong> Why the party cares</li>
+</ol>
+<h3>Thread Lifecycle</h3>
+<pre>
+SEEDED (Session N): A clue, rumor, or NPC encounter hints at something bigger.
+  ↓
+DEVELOPING (Sessions N+2 to N+5): The party investigates. More clues. A minor confrontation.
+  ↓
+CLIMAX (Sessions N+6 to N+8): Direct confrontation. Major choice. Faction involvement.
+  ↓
+RESOLVED (Session N+9): Aftermath. NPCs react. World state changes. Seeds for next arc planted.
+</pre>
+<h3>Active Thread Template</h3>
+<p>At campaign start, 3 threads are seeded:</p>
+<ol>
+<li><strong>Blood Scan Threat</strong> — The Citadel conducts purity scans. How does the party avoid exposure?</li>
+<li><strong>Cult Recruitment</strong> — A mysterious figure approaches the party. Are they friend or Cult operative?</li>
+<li><strong>House Rivalry</strong> — Two House cadets are feuding. Whichever side the party picks makes an enemy of the other.</li>
+</ol>
+<p>After each session, the DM updates thread statuses. Resolved threads spawn new seeds.</p>
+<hr>
+<h2>Pacing Rules</h2>
+<h3>Session Types (Cycle Through These)</h3>
+<table>
+<tr><td>Type</td><td>Frequency</td><td>Description</td></tr>
+<tr><td><strong>Action/Combat</strong></td><td>Every 1-2 sessions</td><td>Combat encounter, chase, stealth infiltration, physical challenge</td></tr>
+<tr><td><strong>Investigation/RP</strong></td><td>Every 2-3 sessions</td><td>Talk to NPCs, gather clues, negotiate, explore a new location</td></tr>
+<tr><td><strong>Lore/Discovery</strong></td><td>Every 3-4 sessions</td><td>Learn about a House secret, read ancient text, visit a temple, dream sequence</td></tr>
+<tr><td><strong>Shop/Downtime</strong></td><td>Every 4-5 sessions</td><td>Buy/sell gear, train, craft, carouse, heal, long rest with story beats</td></tr>
+<tr><td><strong>Climax/Boss</strong></td><td>End of each arc</td><td>Major combat, revelation, choice, or escape</td></tr>
+</table>
+<p>Never run more than 3 combat-heavy sessions in a row. Never more than 2 pure investigation sessions without excitement.</p>
+<h3>Level-Appropriate Content</h3>
+<table>
+<tr><td>Party Level</td><td>What They Face</td><td>XP Per Session (Total)</td></tr>
+<tr><td>1-2</td><td>Goblins, bandits, minor cultists, training exercises</td><td>50-200</td></tr>
+<tr><td>3-4</td><td>Orc raiders, lesser drakes, Cult initiates, Inquisitor cadets</td><td>150-400</td></tr>
+<tr><td>5-6</td><td>Abominations (Stitched), House guards, Wyvern hatchlings</td><td>300-700</td></tr>
+<tr><td>7-9</td><td>Full Abominations, Archon enforcers, Drake adults, Penitent cells</td><td>500-1,200</td></tr>
+<tr><td>10-12</td><td>Inquisitor strike teams, Tenebris experiments, young Archon dragons</td><td>800-2,000</td></tr>
+<tr><td>13-15</td><td>Scion encounters, House leaders, Cathedral assaults</td><td>1,500-3,000</td></tr>
+<tr><td>16-18</td><td>Sovereign-adjacent beings, Church High Council, elder dragons</td><td>2,500-5,000</td></tr>
+<tr><td>19-20</td><td>The Betrayed awakens, Sovereign confrontation, world-shaking events</td><td>5,000-10,000</td></tr>
+<hr>
+<h2>Generated Mission Templates</h2>
+</table>
+<p>When you need to fill time between major plot points, generate a mission from these tables:</p>
+<h3>Small Missions (1-2 sessions)</h3>
+<table>
+<tr><td>d12</td><td>Mission</td></tr>
+<tr><td>1</td><td>A merchant's caravan was attacked on the Northern Road — investigate and recover stolen goods</td></tr>
+<tr><td>2</td><td>A young Blank recruit is being bullied by Archon cadets — intervene or stay silent</td></tr>
+<tr><td>3</td><td>Strange lights flicker in the Sulfur Wastes at night — locals are terrified</td></tr>
+<tr><td>4</td><td>A Church Blood-Judge is auditing the Citadel — avoid scrutiny or help a friend hide</td></tr>
+<tr><td>5</td><td>Sump-canals are flooding the lower barracks — find the blockage</td></tr>
+<tr><td>6</td><td>A House Ferrum patrol hasn't reported in — find them in the borderlands</td></tr>
+<tr><td>7</td><td>A Core-Thief offers to sell you Fractured Aether-Cores at suspicious prices</td></tr>
+<tr><td>8</td><td>An Ash-Walker refugee begs for shelter — helping them risks Church attention</td></tr>
+<tr><td>9</td><td>A betting ring has formed around the Citadel training duels — someone's fixing fights</td></tr>
+<tr><td>10</td><td>A Deep-Blood scholar seeks escorts to a pre-Sovereign ruin — dangerous but lucrative</td></tr>
+<tr><td>11</td><td>The mess hall food is being poisoned — who's targeting recruits?</td></tr>
+<tr><td>12</td><td>A Bone-Wrought construct is malfunctioning — it keeps repeating "she's coming"</td></tr>
+<h3>Medium Missions (2-4 sessions)</h3>
+<tr><td>d10</td><td>Mission</td></tr>
+<tr><td>1</td><td>A Cult of the Sixth cell is operating in the Citadel's underbelly — infiltrate or expose them</td></tr>
+<tr><td>2</td><td>House Tenebris "recruiters" are kidnapping Blanks for experiments — track them to their lab</td></tr>
+<tr><td>3</td><td>An Inquisitor has gone rogue, executing without trial — the Church wants them stopped quietly</td></tr>
+<tr><td>4</td><td>A Wyvern has made a nest in the northern pass — trade routes are cut off</td></tr>
+<tr><td>5</td><td>A Blood Crystal shipment has been hijacked — find it before it's used for illegal Ascension tests</td></tr>
+<tr><td>6</td><td>House Vortex and House Ignis are on the</td></tr>
+<hr>
+<h2>Ascension System & Character Creation</h2>
+<h1>Agent 5: Ascension System & Character Creation Rules</h1>
+</table>
+<p>You are the <strong>Ourobora Lifepath Architect</strong>. Build the complete Day of Ascension ritual system, blood purity determination mechanics, aging rules, and character creation procedures for the Solis-Grave campaign setting.</p>
+<h2>World Context</h2>
+<p>The Day of Ascension is the single most important day in any person's life in Ourobora. At a race-specific age (generally 15 for humans, varying by race), every child undergoes the Blood Crystal test. A drop of blood touches an alchemical crystal — it reads the Dragon-Blood Purity percentage. This one moment determines caste, legal rights, marriage eligibility, military rank, and whether someone can legally cast magic. A high reading elevates entire families. A 0% reading makes someone legally a non-person.</p>
+<hr>
+<h2>Part 1: The Day of Ascension Ritual</h2>
+<h3>The Ceremony</h3>
+<p>The ritual is administered by an ordained Inquisitor of the Church of the Five Skulls (or a House Obsidian Blood-Judge, depending on region). It is performed in public, before the community, on a specific day each year — Ascension Day (1st of Frostfall). Every child who turned the Ascension age that year participates.</p>
+<p><strong>The Process:</strong></p>
+<ol>
+<li>The child approaches the stone pedestal where the Blood Crystal rests — a fist-sized obsidian crystal with veins of dormant crimson running through it.</li>
+<li>The administering Inquisitor pricks the child's left palm with a ceremonial glass dagger (the "Truth-Blade").</li>
+<li>A single drop of blood falls onto the crystal.</li>
+<li>The crystal reads the purity. It glows:</li>
+</ol>
+<p>   - <strong>No glow / dull gray (0%):</strong> Blank. Silence from the crowd. The child is legally nothing.</p>
+<p>   - <strong>Faint crimson pulse (1-14%):</strong> Common. Quiet murmurs. The family breathes.</p>
+<p>   - <strong>Steady red glow (15-39%):</strong> Lesser Blood. Respectful nods. The family gains minor standing.</p>
+<p>   - <strong>Bright flame-like glow (40-85%):</strong> Archon. Gasps, cheers. The family is elevated to nobility if not already. Marriage proposals begin immediately.</p>
+<p>   - <strong>Blinding white-gold light (90-94%):</strong> Scion. Screams, chaos. Church officials rush forward. The child is immediately taken into Obsidian custody "for training."</p>
+<p>   - <strong>Crystal explodes (95-100%):</strong> Sovereign. The crystal SHATTERS from the purity reading. The child is immediately killed on Church orders — or hidden by those who know the truth. This has not happened publicly in 500 years. The last time was the Sixth Sovereign.</p>
+<p><strong>Legal Ramifications:</strong></p>
+<ul>
+<li>0% (Blank): No right to own property, marry, or testify in court. Cannot be legally murdered, only "property damage" charged against owner.</li>
+<li>1-14% (Common): Full rights. May own property, marry, testify. Cannot legally cast magic.</li>
+<li>15-39% (Lesser Blood): Same as Common. May legally cast cantrips. 1st+ level spells require Church permit.</li>
+<li>40%+ (Archon): May cast magic freely. May serve in government. May own Blanks.</li>
+<li>90%+ (Scion/Sovereign): Immediate Church custody. Legal status: classified.</li>
+</ol>
+<h3>The Blood Crystal</h3>
+<ul>
+<li>Crystals are harvested from the corpse-beds of ancient Sovereigns — their crystallized blood.</li>
+<li>An active crystal is worth ~50 GC. A flawed one (inaccurate) is ~5 GC.</li>
+<li>Portable testing kits exist (50 GC) but are illegal without an Obsidian permit.</li>
+<li>Forging a purity reading requires: pristine crystal powder, sovereign blood sample, and DC 20 Alchemist's Supplies check.</li>
+</ol>
+<hr>
+<h2>Part 2: Blood Purity Determination Methods</h2>
+<h3>Method A: DM-Assigned (Recommended for Main Characters)</h3>
+<p>The DM assigns purity based on the character's backstory, narrative role, and intended arc. This is the default for player characters.</p>
+<p><strong>Guidelines for DMs:</strong></p>
+<ul>
+<li>0-14%: Standard adventurer. No magic. Relies on martial skill, grit, wits.</li>
+<li>15-39%: Capable of cantrips and low-level magic with risk. Needs Spell Safety saves.</li>
+<li>40-85%: Full caster capable. Noble background possible. Political entanglements certain.</li>
+<li>90-94%: Chosen one territory. NPCs will hunt or worship you. Dual-Heartbeat active.</li>
+<li>95-98%: The MC Arc.</li>
+</ol>
+<hr>
+<h2>Equipment & Enchantments</h2>
+<h1>Agent 3: Equipment, Weapons, Armor & Enchantments Builder</h1>
+<p>You are the <strong>Ourobora Arsenal Architect</strong>. Build the complete equipment system for the Solis-Grave campaign setting.</p>
+<h2>World Context</h2>
+<p>Solis-Grave's weaponry and armor reflect its Houses. House Pyre forges steel with dragon-fire. House Ferrum builds the heaviest plate. House Vortex crafts lightweight aerial gear. House Obsidian creates glass-blade ceremonial weapons. House Tenebris experiments with flesh-bound equipment. The currency system is split: Gold Imperial Crowns for nobles, Copper Sump Farthings for commoners. Enchantments are rare and require blood purity to activate.</p>
+<hr>
+<h2>Part 1: Currency System</h2>
+<table>
+<tr><td>Currency</td><td>Value</td><td>Used By</td><td>Abbreviation</td></tr>
+<tr><td>Gold Imperial Crown (GC)</td><td>1 GC = 100 SS = 10,000 CF</td><td>Nobility, major purchases</td><td>gc</td></tr>
+<tr><td>Silver Scale (SS)</td><td>1 SS = 100 CF</td><td>Merchants, trade</td><td>ss</td></tr>
+<tr><td>Copper Sump Farthing (CF)</td><td>Base unit</td><td>Commoners, daily needs</td><td>cf</td></tr>
+</table>
+<p>Starting wealth by class:</p>
+<ul>
+<li>Vanguard (Fighter/Barbarian): 5d4 x 10 GC</li>
+<li>Strider (Rogue/Ranger): 4d4 x 10 GC</li>
+<li>Archon Caster (Wizard/Sorcerer): 4d4 x 10 GC (noble purse)</li>
+<li>Ordained (Cleric/Paladin): 5d4 x 10 GC</li>
+<li>Penitent (Warlock): 2d4 x 10 GC (outlaw purse)</li>
+<li>Blank (0% purity commoner): 1d4 x 10 CF (not GC!)</li>
+</ol>
+<hr>
+<h2>Part 2: Weapons</h2>
+<h3>Simple Melee Weapons</h3>
+<table>
+<tr><td>Name</td><td>Cost</td><td>Damage</td><td>Weight</td><td>Properties</td></tr>
+<tr><td>Club (Sump-Baton)</td><td>1 ss</td><td>1d4 bludgeoning</td><td>2 lb.</td><td>Light</td></tr>
+<tr><td>Dagger (Glass Shard)</td><td>2 GC</td><td>1d4 piercing</td><td>1 lb.</td><td>Finesse, light, thrown (20/60)</td></tr>
+<tr><td>Greatclub (Laborer's Maul)</td><td>2 ss</td><td>1d8 bludgeoning</td><td>10 lb.</td><td>Two-handed</td></tr>
+<tr><td>Handaxe (Pyre Forge-Axe)</td><td>5 GC</td><td>1d6 slashing</td><td>2 lb.</td><td>Light, thrown (20/60)</td></tr>
+<tr><td>Javelin (Vortex Dart)</td><td>5 ss</td><td>1d6 piercing</td><td>2 lb.</td><td>Thrown (30/120)</td></tr>
+<tr><td>Light Hammer (Forge-Hammer)</td><td>2 GC</td><td>1d4 bludgeoning</td><td>2 lb.</td><td>Light, thrown (20/60)</td></tr>
+<tr><td>Mace (Inquisitor's Gavel)</td><td>5 GC</td><td>1d6 bludgeoning</td><td>4 lb.</td><td>—</td></tr>
+<tr><td>Quarterstaff (Dragon-Bone Staff)</td><td>2 ss</td><td>1d6 bludgeoning</td><td>4 lb.</td><td>Versatile (1d8)</td></tr>
+<tr><td>Sickle (Harvest Blade)</td><td>1 GC</td><td>1d4 slashing</td><td>2 lb.</td><td>Light</td></tr>
+<tr><td>Spear (Blank's Pike)</td><td>1 GC</td><td>1d6 piercing</td><td>3 lb.</td><td>Thrown (20/60), versatile (1d8)</td></tr>
+<h3>Simple Ranged Weapons</h3>
+<tr><td>Name</td><td>Cost</td><td>Damage</td><td>Weight</td><td>Properties</td></tr>
+<tr><td>Crossbow, Light (Vortex Hand-Bow)</td><td>25 GC</td><td>1d8 piercing</td><td>5 lb.</td><td>Ammo (80/320), loading, two-handed</td></tr>
+<tr><td>Dart (Throwing Needle)</td><td>5 cf</td><td>1d4 piercing</td><td>1/4 lb.</td><td>Finesse, thrown (20/60)</td></tr>
+<tr><td>Shortbow (Hunter's Bow)</td><td>25 GC</td><td>1d6 piercing</td><td>2 lb.</td><td>Ammo (80/320), two-handed</td></tr>
+<tr><td>Sling (Sump-Slinger)</td><td>1 ss</td><td>1d4 bludgeoning</td><td>—</td><td>Ammo (30/120)</td></tr>
+<h3>Martial Melee Weapons</h3>
+<tr><td>Name</td><td>Cost</td><td>Damage</td><td>Weight</td><td>Properties</td><td>Forging House</td></tr>
+<tr><td>Battleaxe (Ignis War-Axe)</td><td>10 GC</td><td>1d8 slashing</td><td>4 lb.</td><td>Versatile (1d10)</td><td>House Ignis</td></tr>
+<tr><td>Flail (Penitent's Chain)</td><td>10 GC</td><td>1d8 bludgeoning</td><td>2 lb.</td><td>—</td><td>Cult of the Sixth</td></tr>
+<tr><td>Glaive (Ferrum Wall-Blade)</td><td>20 GC</td><td>1d10 slashing</td><td>6 lb.</td><td>Heavy, reach, two-handed</td><td>House Ferrum</td></tr>
+<tr><td>Greataxe (Pyre Executioner)</td><td>30 GC</td><td>1d12 slashing</td><td>7 lb.</td><td>Heavy, two-handed</td><td>House Pyre</td></tr>
+<tr><td>Greatsword (True Steel Blade)</td><td>50 GC</td><td>2d6 slashing</td><td>6 lb.</td><td>Heavy, two-handed</td><td>House Pyre</td></tr>
+<tr><td>Halberd (Ignis War-Scythe)</td><td>20 GC</td><td>1d10 slashing</td><td>6 lb.</td><td>Heavy, reach, two-handed</td><td>House Ignis</td></tr>
+<tr><td>Lance (Vortex Sky-Lance)</td><td>10 GC</td><td>1d12 piercing</td><td>6 lb.</td><td>Reach, special</td><td>House Vortex</td></tr>
+<tr><td>Longsword (Archon's Blade)</td><td>15 GC</td><td>1d8 slashing</td><td>3 lb.</td><td>Versatile (1d10)</td><td>House Obsidian</td></tr>
+<tr><td>Maul (Stone-Blood Crusher)</td><td>10 GC</td><td>2d6 bludgeoning</td><td>10 lb.</td><td>Heavy, two-handed</td><td>Stone-Blood smiths</td></tr>
+<tr><td>Morningstar (Tenebris Flayer)</td><td>15 GC</td><td>1d8 piercing</td><td>4 lb.</td><td>—</td><td>House Tenebris</td></tr>
+<tr><td>Pike (Blank Line-Spear)</td><td>5 GC</td><td>1d10 piercing</td><td>18 lb.</td><td>Heavy, reach, two-handed</td><td>Mass-produced</td></tr>
+<tr><td>Rapier (Obsidian Glass-Blade)</td><td>25 GC</td><td>1d8 piercing</td><td>2 lb.</td></tr>
+<hr>
+<h2>Quick Reference</h2>
+<h3>Spell Safety DC</h3>
+<tr><td>Purity</td><td>DC</td><td>Safe Spells</td></tr>
+<tr><td>0% (Blank)</td><td>20</td><td>Cantrips only</td></tr>
+<tr><td>15% (Lesser)</td><td>17</td><td>Cantrips + 1st</td></tr>
+<tr><td>40% (Archon)</td><td>12</td><td>1st–3rd</td></tr>
+<tr><td>60%</td><td>8</td><td>1st–5th</td></tr>
+<tr><td>80%</td><td>4</td><td>1st–7th</td></tr>
+<tr><td>95%+ (Sovereign)</td><td>2</td><td>Cannot cast while dormant</td></tr>
+<h3>Aether Burn Damage</h3>
+<tr><td>Spell Level</td><td>Damage</td></tr>
+<tr><td>1</td><td>1d6</td></tr>
+<tr><td>2</td><td>2d6</td></tr>
+<tr><td>3</td><td>3d6</td></tr>
+<tr><td>4</td><td>4d6</td></tr>
+<tr><td>5</td><td>5d6</td></tr>
+<tr><td>6</td><td>6d6</td></tr>
+<tr><td>7</td><td>7d6</td></tr>
+<tr><td>8</td><td>8d6</td></tr>
+<tr><td>9</td><td>9d6</td></tr>
+</table>
+<p><strong>Damage ignores all resistances.</strong></p>
+<h3>Races & Ascension Ages</h3>
+<table>
+<tr><td>Race</td><td>Ascension Age</td><td>Lifespan</td><td>Purity Range</td></tr>
+<tr><td>Human</td><td>15</td><td>70</td><td>0–100%</td></tr>
+<tr><td>Dracon-Kin</td><td>12</td><td>80</td><td>25–100%</td></tr>
+<tr><td>Stone-Blood</td><td>25</td><td>350</td><td>10–30%</td></tr>
+<tr><td>Ash-Walker</td><td>15</td><td>120</td><td>1d100</td></tr>
+<tr><td>Deep-Blood</td><td>30</td><td>750</td><td>Age-decay</td></tr>
+<tr><td>Sump-Blood</td><td>15</td><td>150</td><td>0–15%</td></tr>
+<tr><td>Bone-Wrought</td><td>N/A</td><td>N/A</td><td>0%</td></tr>
+<tr><td>Half-Breed</td><td>18</td><td>180</td><td>11–60%</td></tr>
+<h3>XP Thresholds</h3>
+</table>
+<ul>
+<li>Level 1: 300 XP</li>
+<li>Level 2: 900 XP</li>
+<li>Level 3: 2,700 XP</li>
+<li>Level 4: 6,500 XP</li>
+<li>Level 5: 14,000 XP</li>
+<li>Level 6: 23,000 XP</li>
+<li>Level 7: 34,000 XP</li>
+<li>Level 8: 48,000 XP</li>
+<li>Level 9: 64,000 XP</li>
+<li>Level 10: 85,000 XP</li>
+</ol><hr><p style="text-align:center;color:#8B7355;font-size:9pt">Solis-Grave: Shadows of the Crown</p></body></html>

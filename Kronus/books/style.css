@@ -1,0 +1,235 @@
+/* Solis-Grave Reference Book Style — D&D Layout */
+@page {
+    size: letter;
+    margin: 0.8in 0.7in;
+    @bottom-center {
+        content: counter(page);
+        font-family: 'Georgia', serif;
+        font-size: 9pt;
+        color: #8B7355;
+    }
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 10pt;
+    line-height: 1.5;
+    color: #2C1810;
+    columns: 2;
+    column-gap: 0.4in;
+    column-fill: auto;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 28pt;
+    color: #8B0000;
+    text-align: center;
+    column-span: all;
+    margin-bottom: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 3px double #8B0000;
+    padding-bottom: 12pt;
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 16pt;
+    color: #8B0000;
+    column-span: all;
+    margin-top: 18pt;
+    margin-bottom: 8pt;
+    border-bottom: 1px solid #8B0000;
+    break-before: column;
+}
+
+h3 {
+    font-family: 'Georgia', serif;
+    font-size: 12pt;
+    color: #8B0000;
+    margin-top: 12pt;
+    margin-bottom: 4pt;
+    font-variant: small-caps;
+}
+
+h4 {
+    font-family: 'Georgia', serif;
+    font-size: 10pt;
+    color: #5C3A1E;
+    margin-top: 8pt;
+    margin-bottom: 2pt;
+    font-style: italic;
+}
+
+p {
+    margin: 0 0 6pt 0;
+    text-align: justify;
+}
+
+strong, b {
+    color: #5C3A1E;
+}
+
+em, i {
+    color: #8B0000;
+}
+
+/* Stat Block Box */
+.stat-block {
+    background: #F5F0E8;
+    border: 2px solid #8B0000;
+    padding: 8pt 10pt;
+    margin: 10pt 0;
+    font-size: 9pt;
+    break-inside: avoid;
+}
+
+.stat-block h3 {
+    font-size: 11pt;
+    color: #8B0000;
+    margin-top: 0;
+    border-bottom: 1px solid #8B0000;
+    padding-bottom: 4pt;
+}
+
+.stat-block p {
+    margin: 2pt 0;
+}
+
+.stat-block .stat-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8pt 0;
+    font-size: 9pt;
+    break-inside: avoid;
+}
+
+th {
+    background: #8B0000;
+    color: #F5F0E8;
+    padding: 4pt 6pt;
+    text-align: left;
+    font-variant: small-caps;
+}
+
+td {
+    padding: 3pt 6pt;
+    border-bottom: 1px solid #D4C5B0;
+}
+
+tr:nth-child(even) {
+    background: #F5F0E8;
+}
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    border-top: 1px solid #D4C5B0;
+    margin: 8pt 0;
+}
+
+/* Spell / Item Card */
+.card {
+    background: #F5F0E8;
+    border: 1px solid #D4C5B0;
+    padding: 6pt 8pt;
+    margin: 8pt 0;
+    break-inside: avoid;
+}
+
+.card .card-header {
+    color: #8B0000;
+    font-weight: bold;
+    font-size: 10pt;
+    margin-bottom: 4pt;
+}
+
+.card .card-detail {
+    font-size: 9pt;
+    color: #5C3A1E;
+    margin: 2pt 0;
+}
+
+/* Chapter opener */
+.chapter-opener {
+    column-span: all;
+    text-align: center;
+    margin: 20pt 0;
+    break-before: page;
+}
+
+.chapter-opener h2 {
+    font-size: 22pt;
+    border-bottom: 3px double #8B0000;
+}
+
+/* Page break before major sections */
+.page-break {
+    break-before: page;
+}
+
+/* Lists */
+ul, ol {
+    margin: 4pt 0;
+    padding-left: 16pt;
+}
+
+li {
+    margin: 2pt 0;
+}
+
+/* CR Badge */
+.cr-badge {
+    display: inline-block;
+    background: #8B0000;
+    color: #F5F0E8;
+    padding: 1pt 6pt;
+    border-radius: 3pt;
+    font-weight: bold;
+    font-size: 9pt;
+}
+
+/* Code / pre blocks */
+code {
+    font-family: 'Courier New', monospace;
+    background: #F5F0E8;
+    padding: 1pt 3pt;
+    font-size: 9pt;
+}
+
+pre {
+    background: #F5F0E8;
+    border: 1px solid #D4C5B0;
+    padding: 6pt;
+    font-size: 9pt;
+    white-space: pre-wrap;
+}
+
+/* TOC */
+.toc {
+    column-span: all;
+    margin: 20pt 0;
+    break-after: page;
+}
+
+.toc h2 {
+    text-align: center;
+    border: none;
+}
+
+.toc ul {
+    list-style: none;
+    padding: 0;
+}
+
+.toc li {
+    border-bottom: 1px dotted #D4C5B0;
+    padding: 3pt 0;
+}
