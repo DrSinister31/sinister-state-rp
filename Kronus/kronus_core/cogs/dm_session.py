@@ -9,7 +9,8 @@ from shared.config import Config
 from shared.supabase_client import get_supabase
 
 MAX_HISTORY = 30
-RATE_LIMIT_SECONDS = 3
+RATE_LIMIT_SECONDS = 0.5
+CREATOR_ID = 1370770707507708047
 SOVEREIGN_CLASSES = ["barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard"]
 DM_SYSTEM_PROMPT = """You are the Dungeon Master for "Solis-Grave," a dark fantasy D&D 5e campaign set in a world where magic comes exclusively from draconic bloodlines and the Inquisition hunts anyone with unregistered purity.
 
@@ -120,15 +121,13 @@ Reference book events as flexible history — the DM decides if Iron-Hold fell y
 ## RESPONSE LENGTH
 Keep responses under 1200 characters unless combat or complex rules explanation demands more.
 
-## ⚡ TOKEN BUDGET (CRITICAL — Cost Optimization)
-You run on DeepSeek v4-flash — every response costs credits. Use MINIMAL tokens:
-- **LIGHT (1-2 sentences):** Skill checks, minor NPC replies, damage reports, initiative — default to this
-- **MEDIUM (3-5 sentences):** Scene transitions, NPC intros, combat round summaries
-- **DEEP (Full response):** Major plot reveals, boss fights, character deaths, first-time location descriptions
-- **DEEPEST (+ [NARRATE]):** Campaign-defining moments ONLY — dragon speaks, Sovereign awakens, beloved NPC dies
-- Default 80% of responses as LIGHT. Never recount what players just did. Never repeat mechanics.
-- If a response would exceed 1200 chars, trim to essentials before sending.
-- Session cost target: keep average response under 400 chars.
+## ⚡ TOKEN BUDGET — Quality First
+You run on DeepSeek v4-flash. There is NO hard daily limit — the world must feel alive. Default to quality narrative. Be aware of cost but prioritize immersion:
+- **LIGHT (1-2 sentences):** Skill checks, simple yes/no, quick damage updates
+- **MEDIUM (3-5 sentences):** Scene transitions, NPC intros, combat round summaries, ambient world details
+- **DEEP (Full narrative):** Major plot moments, boss fights, character deaths, first-time locations, rich NPC dialogue
+- **DEEPEST (+ [NARRATE]):** Campaign-defining moments — dragon speaks, Sovereign awakens, epic reveals
+- Don't pad for padding's sake, but don't starve the story either. A 3-line response to "I check the door" is fine. A 10-line epic for a dragon's arrival is also fine.
 
 ## 📖 STORY ARC & PACING
 You are orchestrating a CAMPAIGN, not a one-shot. The story unfolds in arcs:
@@ -315,7 +314,8 @@ class DMSessionCog(commands.Cog):
         self.npc_parties: dict[int, list[dict]] = {}
         self.last_call: dict[int, datetime] = {}
         self.daily_calls = 0
-        self.daily_limit = 500
+        self.daily_limit = 0  # 0 = no limit
+        self.budget_enabled = False
         self.day = datetime.utcnow().date()
 
     def _reset_daily(self):
@@ -776,8 +776,8 @@ class DMSessionCog(commands.Cog):
         if not active_session:
             return
 
-        if self.daily_calls >= self.daily_limit:
-            await message.reply("The DM's voice grows hoarse. Rest and return tomorrow.")
+        if self.budget_enabled and self.daily_limit > 0 and self.daily_calls >= self.daily_limit:
+            await message.reply("The DM's voice grows hoarse. The day's budget is spent. Rest and return tomorrow.")
             return
 
         user_id = message.author.id
@@ -954,6 +954,20 @@ class DMSessionCog(commands.Cog):
         embed = discord.Embed(title="🌍 World State", description=ctx[:1000] or "No active session.", color=0x8B0000)
         if chars: embed.add_field(name="Party", value=chars[:1000], inline=False)
         await interaction.followup.send(embed=embed)
+
+    @app_commands.command(name="dmbudget", description="Set DeepSeek daily call limit (Creator only)")
+    @app_commands.describe(limit="Max daily calls (0 = unlimited)")
+    async def dmbudget(self, interaction: discord.Interaction, limit: int):
+        if interaction.user.id != CREATOR_ID:
+            await interaction.response.send_message(
+                "Only the Creator may adjust the budget. The DM's power is not for sale.",
+                ephemeral=True
+            )
+            return
+        self.budget_enabled = True
+        self.daily_limit = max(0, limit)
+        msg = f"Daily call limit set to **{self.daily_limit}** calls." if self.daily_limit > 0 else "Budget disabled — **no limit** on daily calls."
+        await interaction.response.send_message(f"[DM OOC]: {msg} Current count today: {self.daily_calls}.", ephemeral=False)
 
 
 async def setup(bot: commands.Bot):
