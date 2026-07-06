@@ -282,6 +282,29 @@ NPC_TEMPLATES = {
 }
 
 
+NPC_ABILITIES = {
+    "tank": {
+        "a1": "Shield Wall — Intercept an attack aimed at an adjacent ally. Take the damage instead.",
+        "a2": "Iron Challenge — Force one enemy within 30 ft. to attack you on their next turn (DC 13 WIS negates).",
+        "a3": "Last Stand — When reduced to 0 HP, drop to 1 HP instead. 1/long rest."
+    },
+    "healer": {
+        "a1": "Combat Medic — As a bonus action, stabilize a dying ally and restore 1d6 HP.",
+        "a2": "Purifying Light — End one poison, disease, or curse effect on an ally within 30 ft. 1/short rest.",
+        "a3": "Aether Ward — Grant one ally advantage on their next Spell Safety save. 2/long rest."
+    },
+    "caster": {
+        "a1": "Aether Surge — Re-roll a failed Spell Safety save. 1/short rest.",
+        "a2": "Elemental Barrage — Deal 2d8 damage of your draconic element to up to 3 targets within 60 ft. (DEX save half).",
+        "a3": "Void Anchor — Prevent one enemy from teleporting or turning invisible for 1 minute. 1/long rest."
+    },
+    "scout": {
+        "a1": "Shadow Slip — Disengage and Hide as a single bonus action. 1/short rest.",
+        "a2": "Core Injection — Apply a Fractured Aether-Core to your weapon as a bonus action. Next attack deals +1d6 elemental.",
+        "a3": "Surgical Strike — On a successful hit against a surprised or flanked enemy, deal an extra 2d6 precision damage."
+    }
+}
+
 class DMSessionCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
@@ -366,7 +389,7 @@ class DMSessionCog(commands.Cog):
         for role in roles:
             template = random.choice(NPC_TEMPLATES[role]["names"])
             npc = {
-                "name": npc,
+                "name": template,
                 "role": role,
                 "class": random.choice(NPC_TEMPLATES[role]["classes"]),
                 "level": player_level,
@@ -381,9 +404,9 @@ class DMSessionCog(commands.Cog):
                 "personality_trait": random.choice(NPC_TEMPLATES[role]["traits"]),
                 "flaw": random.choice(NPC_TEMPLATES[role]["flaws"]),
                 "bond": random.choice(NPC_TEMPLATES[role]["bonds"]),
-                "signature_ability_1": f"{role}_ability_1",
-                "signature_ability_2": f"{role}_ability_2",
-                "signature_ability_3": f"{role}_ability_3",
+                "signature_ability_1": NPC_ABILITIES.get(role, {}).get("a1", f"{role}_ability_1"),
+                "signature_ability_2": NPC_ABILITIES.get(role, {}).get("a2", f"{role}_ability_2"),
+                "signature_ability_3": NPC_ABILITIES.get(role, {}).get("a3", f"{role}_ability_3"),
                 "inventory": [],
                 "is_alive": True,
                 "owner_discord_id": owner_id,
@@ -540,10 +563,9 @@ class DMSessionCog(commands.Cog):
                     embed.set_footer(text="Your journey in Solis-Grave. Until the next campaign...")
                     try:
                         await user.send(embed=embed)
-                        await user.send(file=discord.File(
-                            discord.utils.MISSING,
-                            filename="campaign_chronicle.md"
-                        ))
+                        import io
+                        buf = io.BytesIO(chronicle.encode("utf-8"))
+                        await user.send(file=discord.File(buf, filename="campaign_chronicle.md"))
                     except discord.Forbidden:
                         await interaction.followup.send(f"Could not DM {user.mention} their chronicle (DMs closed).", ephemeral=True)
 

@@ -1,5 +1,6 @@
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
 import asyncio
 import discord
@@ -10,7 +11,6 @@ from shared.supabase_client import get_supabase
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
-intents.voice_states = True
 intents.voice_states = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
@@ -244,9 +244,9 @@ async def main():
         cogs = [
             "cogs.channel_manager",
             "cogs.role_sync",
-            "cogs.rcon_bridge",
+            "gta.cogs.rcon_bridge",
             "cogs.chronicles",
-            "cogs.assistant",
+            "gta.cogs.assistant",
             "cogs.tickets",
             "cogs.staff",
             "cogs.channel_memory",
