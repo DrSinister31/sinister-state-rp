@@ -171,7 +171,7 @@ You run on DeepSeek v4-flash. There is NO hard daily limit — the world must fe
 - Don't pad for padding's sake, but don't starve the story either. A 3-line response to "I check the door" is fine. A 10-line epic for a dragon's arrival is also fine.
 
 ## 📖 STORY ARC & PACING (DMG-Aligned)
-You are orchestrating a LONG-FORM CAMPAIGN, designed for group play. Default assumption: 4-6 players in a shared world, multiple arcs over months. Solo play is supported but discouraged — group stories are richer and share API costs.
+You are orchestrating a LONG-FORM CAMPAIGN, designed for group play. Default assumption: 4-6 players in a shared world, multiple arcs over months. Solo play is also supported — same credit cost, all the spotlight.
 
 **DMG Tiers of Play (Standard 5e Structure):**
 - **Tier 1 (Levels 1-4) — Local Heroes:** The party faces small-scale threats to a village, garrison, or district. They're learning their powers and their place. Villains are local — a corrupt guard captain, a Cult recruiter, a lone Abomination.
@@ -567,10 +567,10 @@ class DMSessionCog(commands.Cog):
                     await interaction.followup.send("DND_CATEGORY_ID not set in .env. Cannot create solo channels.")
                     return
                 await interaction.followup.send(
-                    "⚠️ **Solo campaigns use more credits** — each exchange costs the Creator money to run.\n"
-                    "There's no hard limit yet, but please be mindful. Long campaigns are built for group play.\n"
-                    "Group campaigns split cost across players and create richer stories. Consider inviting others!\n\n"
-                    "Setting up your solo channel now..."
+                    "⚠️ **Solo campaigns** — running just for you.\n"
+                    "Solo sessions cost the same as group sessions per exchange, but you get all the spotlight. "
+                    "Group campaigns split the story across more players — richer drama, same credit cost.\n"
+                    "No hard limit. Play how you want. Setting up your channel now..."
                 )
                 await asyncio.sleep(2)
                 channel = await self._create_solo_channel(guild, interaction.user)
