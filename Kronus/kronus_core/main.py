@@ -228,6 +228,33 @@ async def on_ready():
             except Exception as e:
                 print(f"  Guide post skipped: {e}")
 
+    # Post intro in campaign-stories forum
+    story_forum = guild.get_channel(1523806143070343270)
+    if story_forum:
+        try:
+            existing = [t.name async for t in story_forum.archived_threads()]
+            existing += [t.name for t in story_forum.threads]
+            if not any("Welcome" in n for n in existing):
+                await story_forum.create_thread(
+                    name="📖 Welcome — Campaign Stories",
+                    content=(
+                        "**Welcome to the Campaign Stories archive!**\n\n"
+                        "This is where finished Solis-Grave campaigns live forever.\n\n"
+                        "When a campaign ends, the DM bot:\n"
+                        "🖋️ Generates a **narrative story** from your real gameplay and dialogue\n"
+                        "🎭 Edits it for theatrics while keeping your actual choices intact\n"
+                        "📥 Attaches an **HTML file** for you to download and keep\n"
+                        "👥 Mentions all participants\n\n"
+                        "Every post here is a completed adventure — solo or group — "
+                        "turned into a story you can share, revisit, or use as backstory "
+                        "for your next campaign.\n\n"
+                        "**The Citadel remembers. So will we.**"
+                    )
+                )
+                print("  Posted campaign-stories intro")
+        except Exception as e:
+            print(f"  Story forum intro skipped: {e}")
+
 
 async def main():
     dm_mode = os.getenv("DM_MODE", "1") == "1"  # DM mode is DEFAULT
