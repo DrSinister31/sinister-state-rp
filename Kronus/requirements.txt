@@ -10,3 +10,4 @@ edge-tts>=6.1.0
 pynacl>=1.5.0
 psycopg2-binary>=2.9.0
 openai-whisper>=20240930
+faster-whisper>=1.0.0

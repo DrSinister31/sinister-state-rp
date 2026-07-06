@@ -13,3 +13,4 @@ name = "kronus-core"
 DM_MODE = "1"
 DM_WHISPER_ENABLED = "1"
 DM_WHISPER_MODEL = "tiny.en"
+# WHISPER_SERVER_URL = "http://localhost:8787"  # Uncomment if running separate whisper server

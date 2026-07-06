@@ -10,6 +10,7 @@ from shared.config import Config
 DM_VOICE = os.getenv("DM_TTS_VOICE", "en-US-EricNeural")
 WHISPER_ENABLED = os.getenv("DM_WHISPER_ENABLED", "1") == "1"
 WHISPER_MODEL = os.getenv("DM_WHISPER_MODEL", "tiny.en")
+WHISPER_SERVER = os.getenv("WHISPER_SERVER_URL", "")  # e.g. http://localhost:8787
 SILENCE_THRESHOLD = 2.0      # seconds of silence to end utterance
 MAX_UTTERANCE_SECS = 45       # max seconds before forcing a cut
 SPEECH_RMS_FLOOR = 200        # RMS below this = silence
@@ -42,6 +43,9 @@ class DMVoiceCog(commands.Cog):
             self._init_whisper()
 
     def _init_whisper(self):
+        if WHISPER_SERVER:
+            print(f"[dm-voice] Using Whisper server: {WHISPER_SERVER}")
+            return
         try:
             import whisper
             print(f"[dm-voice] Loading Whisper {WHISPER_MODEL}...")
@@ -58,7 +62,7 @@ class DMVoiceCog(commands.Cog):
         try:
             self.voice_client = await channel.connect()
             self.consumer_task = asyncio.create_task(self._narration_consumer())
-            if WHISPER_ENABLED and self._whisper_model:
+            if WHISPER_ENABLED and (self._whisper_model or WHISPER_SERVER):
                 self._listen_enabled = True
                 self.listen_task = asyncio.create_task(self._voice_listener_loop())
             if self.idle_task: self.idle_task.cancel(); self.idle_task = None
@@ -200,6 +204,8 @@ class DMVoiceCog(commands.Cog):
                 await asyncio.sleep(0.5)
 
     async def _transcribe_async(self, wav_bytes: bytes) -> str | None:
+        if WHISPER_SERVER:
+            return await self._transcribe_http(wav_bytes)
         if not self._whisper_model: return None
         try:
             tmp = tempfile.NamedTemporaryFile(suffix=".wav", delete=False)
@@ -212,6 +218,20 @@ class DMVoiceCog(commands.Cog):
             return result["text"].strip() or None
         except Exception as e:
             return None
+
+    async def _transcribe_http(self, wav_bytes: bytes) -> str | None:
+        try:
+            import aiohttp
+            async with aiohttp.ClientSession() as session:
+                data = aiohttp.FormData()
+                data.add_field('audio', wav_bytes, filename='audio.wav', content_type='audio/wav')
+                async with session.post(f"{WHISPER_SERVER}/transcribe", data=data, timeout=15) as resp:
+                    if resp.status == 200:
+                        result = await resp.json()
+                        return result.get("text", "").strip() or None
+        except Exception as e:
+            print(f"[dm-voice] Whisper server error: {e}")
+        return None
 
     @staticmethod
     def _calc_rms(data: bytes) -> float:
@@ -275,8 +295,8 @@ class DMVoiceCog(commands.Cog):
     async def dm_listen(self, interaction: discord.Interaction):
         if not WHISPER_ENABLED:
             await interaction.response.send_message("Set DM_WHISPER_ENABLED=1 in env.", ephemeral=True); return
-        if not self._whisper_model:
-            await interaction.response.send_message("Whisper model not loaded. Check logs.", ephemeral=True); return
+        if not self._whisper_model and not WHISPER_SERVER:
+            await interaction.response.send_message("Whisper model not loaded and no WHISPER_SERVER_URL set. Check logs.", ephemeral=True); return
         if not self.voice_client or not self.voice_client.is_connected():
             await interaction.response.send_message("Not in VC. Use /dm_join first.", ephemeral=True); return
         self._listen_enabled = not self._listen_enabled
@@ -285,7 +305,8 @@ class DMVoiceCog(commands.Cog):
                 self.listen_task = asyncio.create_task(self._voice_listener_loop())
         else:
             if self.listen_task: self.listen_task.cancel(); self.listen_task = None
-        await interaction.response.send_message(f"🎙️ Voice listening: **{'ON' if self._listen_enabled else 'OFF'}**", ephemeral=True)
+        mode = "server" if WHISPER_SERVER else "local"
+        await interaction.response.send_message(f"🎙️ Voice listening: **{'ON' if self._listen_enabled else 'OFF'}** ({mode} Whisper)", ephemeral=True)
 
 
 async def setup(bot: commands.Bot):
