@@ -1090,16 +1090,62 @@ class DMSessionCog(commands.Cog):
             parts.append(f"Session cost: ${self.session_cost:.4f}")
         await interaction.response.send_message(f"[DM OOC]: {' | '.join(parts)}.", ephemeral=False)
 
-    @app_commands.command(name="create", description="Start character creation for an active campaign")
+    @app_commands.command(name="create", description="Character creation — bot-guided or self-read")
     async def create_command(self, interaction: discord.Interaction):
         await interaction.response.send_message(
-            "🧬 **Character creation costs credits to run.**\n\n"
-            "Are you starting a Solis-Grave campaign? If so, use `/session_start solo` or `/session_start group` first, "
-            "then I'll guide you through character creation as part of your campaign.\n\n"
-            "If you're NOT starting a campaign, please use free online tools like D&D Beyond to create your character. "
-            "I only create characters for active campaign players.",
+            "🧬 **Character Creation for Solis-Grave**\n\n"
+            "Two options:\n\n"
+            "**1. I'll guide you** — Reply `guide` and I'll walk you through step by step: "
+            "race → age → purity → faith → class → stats → background → name.\n"
+            "*(Requires an active session. Use `/session_start` first.)*"
+            "\n\n"
+            "**2. Read on your own** — Reply `book` and I'll show you the reference materials. "
+            "Our Player's Handbook has all 8 races, classes, the magic system, and character creation rules.\n"
+            "Use `/books` anytime to see all available reference books.",
             ephemeral=False
         )
+
+    @app_commands.command(name="books", description="View all Solis-Grave reference books and where to find them")
+    async def books_command(self, interaction: discord.Interaction):
+        embed = discord.Embed(
+            title="📚 Solis-Grave Reference Library",
+            description="All official reference books for the campaign. Open the HTML files → Ctrl+P → Save as PDF.",
+            color=0x8B0000
+        )
+        embed.add_field(
+            name="🎭 Player's Handbook",
+            value="Races, classes, magic system, equipment, combat rules.\n`/books phb` for a quick rules lookup.",
+            inline=False
+        )
+        embed.add_field(
+            name="🐉 Monster Manual",
+            value="115 creatures with full stat blocks, organized by CR.\n`/bestiary <name>` to search in-game.",
+            inline=False
+        )
+        embed.add_field(
+            name="✨ Spell Grimoire",
+            value="229 spells organized by level with casting details.\n`/lore <spell>` to search in-game.",
+            inline=False
+        )
+        embed.add_field(
+            name="🛡️ Dungeon Master's Guide",
+            value="Campaign structure, world-building, encounter balance, treasure.\n`/lore <rule>` for rules queries.",
+            inline=False
+        )
+        embed.add_field(
+            name="⚔️ Item Catalog",
+            value="35 items — weapons, armor, enchantments, potions, gear.\n`/lore <item>` to search in-game.",
+            inline=False
+        )
+        embed.add_field(
+            name="📂 Where to Find Them",
+            value="All books are in the GitHub repo: `Kronus/books/` as `.html` files.\n"
+                  "Open in browser → Print → Save as PDF for offline reading.\n"
+                  "Tag me with `/books` anytime to see this list again.",
+            inline=False
+        )
+        embed.set_footer(text="Solis-Grave: Shadows of the Crown · Official Reference Library")
+        await interaction.response.send_message(embed=embed, ephemeral=False)
 
     @app_commands.command(name="welcome", description="Post the campaign welcome embed with house lore and rules")
     @app_commands.describe(campaign_name="Name of your campaign")
