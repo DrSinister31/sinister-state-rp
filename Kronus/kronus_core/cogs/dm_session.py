@@ -424,11 +424,12 @@ class DMSessionCog(commands.Cog):
         try:
             r = self.supabase.table("compendium_monsters").select("name, type, cr").limit(10).execute()
             spells_r = self.supabase.table("compendium_spells").select("name, level").limit(10).execute()
-            parts = ["**Available compendium entries:**"]
+            parts = ["**Compendium:**"]
             if r.data:
-                parts.append(f"Monsters: {len(r.data)} total (sample: {', '.join(m['name'] for m in r.data[:10])})")
+                parts.append(f"Monsters: {len(r.data)} total. Use /bestiary to search.")
             if spells_r.data:
-                parts.append(f"Spells: {len(spells_r.data)} total")
+                parts.append(f"Spells: {len(spells_r.data)} total. Use /lore to search.")
+            parts.append("Reference books: monster_manual.md, spell_grimoire.md, dm_guide.md, item_catalog.md, players_handbook.md. All use D&D 5e SRD as MECHANICAL ENGINE — NEVER import SRD names without re-skinning for Solis-Grave.")
             return "\n".join(parts)
         except Exception:
             return ""
