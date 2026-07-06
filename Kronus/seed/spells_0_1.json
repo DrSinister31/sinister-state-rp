@@ -1,0 +1,1022 @@
+[
+  {
+    "name": "Void-Spark",
+    "level": 0,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You summon a mote of pure void from the space between worlds. It streaks toward a target, dealing 1d4 necrotic damage and leaving a chilling absence of light. The light within 5 feet of the target is dimmed until the start of your next turn.",
+    "higher_levels": "At 5th level, the damage increases by 1d4. At 11th level, it increases by another 1d4 (total 3d4). At 17th level, it increases by another 1d4 (total 4d4).",
+    "classes": "sorcerer, warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Blood-Sense",
+    "level": 0,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Self (30-foot radius)",
+    "components": "V, S",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You taste the blood in the air, sensing the location of any creature with blood within 30 feet that is not behind total cover. You instinctively know whether the blood is pure (dragon-blood) or tainted, and if the creature is currently bleeding. Hissing voids and Cinderblessed give no reading.",
+    "higher_levels": "",
+    "classes": "cleric, sorcerer, wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Dragon-Whisper",
+    "level": 0,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V",
+    "duration": "Instantaneous",
+    "description": "You attune to the residual essence of the Sovereign Dragons, hearing a faint whisper of ancient draconic knowledge. You gain advantage on your next Intelligence check regarding dragons, the Blood, or the history of Ourobora. The whisper may come as a cryptic phrase or a vision of ash and scale.",
+    "higher_levels": "",
+    "classes": "sorcerer, warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 40,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Aether-Touch",
+    "level": 0,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "S",
+    "duration": "Instantaneous",
+    "description": "Your hand glows with raw aether energy, letting you gently push or pull unattended objects weighing up to 5 pounds within 30 feet. You can also cause a faint shimmer in the air to distract a creature, giving it disadvantage on the next perception check it makes before the end of its next turn.",
+    "higher_levels": "",
+    "classes": "sorcerer, wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Forge-Heat",
+    "level": 0,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You heat a small metal object (like a coin, blade, or chain) to glowing red-hot for a moment. If you touch a creature with the object, it takes 1 fire damage. Otherwise, the heat can ignite flammable materials (paper, cloth) that come into contact with it.",
+    "higher_levels": "",
+    "classes": "cleric, sorcerer",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Storm-Snap",
+    "level": 0,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "S",
+    "duration": "Instantaneous",
+    "description": "You snap your fingers, releasing a small bolt of lightning that arcs to a creature within 30 feet, dealing 1d4 lightning damage. The crack of thunder is audible up to 100 feet away. If the target is wearing metal armor, you have advantage on the attack roll.",
+    "higher_levels": "At 5th level, the damage increases by 1d4. At 11th level, it increases by another 1d4 (total 3d4). At 17th level, it increases by another 1d4 (total 4d4).",
+    "classes": "sorcerer, wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Flesh-Knit",
+    "level": 0,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You weave flesh together with aether, closing a superficial wound. You restore 1 hit point to a living creature you touch. This cannot stabilize a dying creature or repair major injuries, but it stops minor bleeding and gives a faint scar.",
+    "higher_levels": "",
+    "classes": "cleric, druid",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Bone-Rattle",
+    "level": 0,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You cause the bones of a creature within 60 feet to shudder and ache. The target must make a Constitution saving throw or take 1d4 necrotic damage and have disadvantage on the next attack roll it makes before the end of its next turn. The feeling is akin to a deep, jarring chill.",
+    "higher_levels": "At 5th level, the damage increases by 1d4. At 11th level, it increases by another 1d4 (total 3d4). At 17th level, it increases by another 1d4 (total 4d4).",
+    "classes": "cleric, warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Ash-Cloud",
+    "level": 0,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S, M (a pinch of ash)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You conjure a small cloud of ash and soot in a 5-foot cube within range. It lightly obscures the area and causes a choking sensation. Creatures that breathe in the area must succeed on a Constitution saving throw or be unable to speak for 1 round. The cloud is dissipated by a moderate wind.",
+    "higher_levels": "",
+    "classes": "sorcerer, wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Crystal-Glint",
+    "level": 0,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "S",
+    "duration": "1 minute",
+    "description": "You cause a Blood Crystal or other crystalline object to gleam with a faint inner light. For the duration, you can see through the crystal as if it were a window, perceiving the faint aetheric patterns of the area. This reveals invisible aetheric residues left by magic cast within the last minute, but not creatures.",
+    "higher_levels": "",
+    "classes": "cleric, wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Sump-Mist",
+    "level": 0,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You exhale a mist of toxic fumes reminiscent of the Sump. The mist fills a 10-foot cube within range, lightly obscuring it for the duration. Creatures that start their turn in the mist must succeed on a Constitution saving throw or be poisoned until the end of their next turn.",
+    "higher_levels": "",
+    "classes": "warlock, wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Iron-Rust",
+    "level": 0,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You cause a metal object you touch to rapidly corrode. A nonmagical metal object up to 1 foot in diameter crumbles to rust. If the object is worn or carried, the creature holding it must make a Dexterity saving throw or the object is ruined. Precious metals like gold and silver are immune.",
+    "higher_levels": "",
+    "classes": "wizard, druid",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Obsidian-Shard",
+    "level": 0,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "S, M (a small piece of obsidian)",
+    "duration": "Instantaneous",
+    "description": "You shape a shard of obsidian from the ground or from a piece of rock and hurl it at a target. Make a ranged spell attack; on a hit, it deals 1d8 piercing damage. The shard shatters on impact, leaving sharp fragments that deal 1 slashing damage to any creature within 5 feet of the target.",
+    "higher_levels": "At 5th level, the damage increases by 1d8. At 11th level, it increases by another 1d8 (total 3d8). At 17th level, it increases by another 1d8 (total 4d8).",
+    "classes": "sorcerer, wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Cult-Chant",
+    "level": 0,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "Self (30-foot radius)",
+    "components": "V",
+    "duration": "Instantaneous",
+    "description": "You intone a low, resonant chant that unsettles your enemies. All creatures of your choice within 30 feet that can hear you must succeed on a Wisdom saving throw or be frightened of you until the end of your next turn. The chant is obviously magical and draws attention.",
+    "higher_levels": "",
+    "classes": "cleric, warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Blanks-Resolve",
+    "level": 0,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "1 minute",
+    "description": "A flicker of defiant will empowers you against purity-based magic. For the duration, you gain advantage on saving throws against spells and effects that rely on blood purity or dragon-origin (such as many Solis-Grave spells). Additionally, you can sense the purity level of any creature within 30 feet as if using the Blood-Sense cantrip.",
+    "higher_levels": "",
+    "classes": "cleric, paladin",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Bloodlight",
+    "level": 0,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "S",
+    "duration": "1 hour",
+    "description": "You touch a surface and leave a glowing crimson mark that sheds dim light in a 10-foot radius. The mark is only visible to creatures with blood. It lasts for 1 hour or until dismissed.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Inquisitor's Eye",
+    "level": 0,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You focus on a creature you can see within 30 feet and mentally probe its blood. You learn its blood purity as a rough percentage (within 5%). If the creature's purity is above 50%, you take 1 psychic damage from the recoil of sensing high power.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Void Whisper",
+    "level": 0,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You listen to the void between sounds. For the duration, you can understand the literal meaning of any spoken language you hear, but you also hear faint whispers of the dead in the background that can be distracting.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Wilt",
+    "level": 0,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "10 feet",
+    "components": "S",
+    "duration": "Instantaneous",
+    "description": "You cause a non-magical plant within 10 feet to instantly wither and crumble to dust. This can destroy crops, erase evidence, or create a small area of barren ground.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Ash Step",
+    "level": 0,
+    "school": "Transmutation",
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "components": "S, M (a pinch of ash)",
+    "duration": "1 hour",
+    "description": "For the duration, your footsteps leave no tracks and instead leave a thin layer of ash that obscures your path. You cannot be tracked by mundane means, and creatures using scent to track you have disadvantage.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Skullflame",
+    "level": 0,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a skull or large bone)",
+    "duration": "1 hour",
+    "description": "You ignite a cold, blue flame on the brow of a skull or bone you hold. It sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The flame does not produce heat and cannot ignite objects.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Bleeding Edge",
+    "level": 0,
+    "school": "Transmutation",
+    "casting_time": "1 bonus action",
+    "range": "Touch",
+    "components": "S, M (a drop of your own blood)",
+    "duration": "1 minute",
+    "description": "You touch a bladed weapon you hold or that is within reach. For 1 minute, the blade is slick with your blood, dealing an extra 1 necrotic damage on the next successful hit. The blood then coagulates and the effect ends.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Carrion Scent",
+    "level": 0,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Self (60-foot cone)",
+    "components": "V, S",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "You enhance your sense of smell to detect decay. For the duration, you can sense the presence of corpses or undead creatures within 60 feet. You know the direction and distance of the nearest source, but not exact numbers.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Soul Anchor",
+    "level": 0,
+    "school": "Necromancy",
+    "casting_time": "1 reaction, which you take when a creature you can see dies",
+    "range": "30 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "As a creature dies within 30 feet of you, you anchor its departing soul for a fleeting moment. You may ask it one question, which it answers in a whisper in a language you understand before fading. The answer is brief and truthful.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Bloody Handprint",
+    "level": 0,
+    "school": "Illusion",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S, M (a trace of blood)",
+    "duration": "24 hours",
+    "description": "You create a magically appearing bloody handprint on a surface within range. It is faintly warm and smells of copper. Creatures can determine it is magical with a successful Intelligence (Arcana) check against your spell save DC.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Chains of Habit",
+    "level": 0,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S",
+    "duration": "1 hour",
+    "description": "You target a willing creature within 30 feet. For the duration, they feel a mild compulsion to follow a routine they performed within the last day (such as sharpening a blade, pacing a certain path, or lighting a candle). This does not override their free will but makes the action feel natural.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Fever Dream",
+    "level": 0,
+    "school": "Illusion",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You fill a 5-foot cube within range with a swirling miasma of shadows and whispers. Creatures in the area have disadvantage on Perception checks and feel a sense of unease. The miasma is faintly visible as a heat shimmer.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Unmake",
+    "level": 0,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You touch a non-magical object weighing 1 pound or less. The object crumbles into dust. This can destroy locks, fasteners, small tools, or items of evidence. A creature holding the object can make a Dexterity saving throw to keep it intact.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Sanguine Sight",
+    "level": 0,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "Your eyes glow faintly red and you perceive the pulsing flow of blood in living creatures within 30 feet. You can see heartbeats as rhythmic flashes and detect if a creature is injured, poisoned, or diseased. You have advantage on Wisdom (Medicine) checks to stabilize a creature.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Aether Tracer",
+    "level": 0,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a drop of blood from the creature to be tracked)",
+    "duration": "1 hour",
+    "description": "You enchant a sample of blood or other bodily fluid from a creature. For the duration, you know the general direction and approximate distance to that creature, as long as it is on the same plane. The link breaks if the creature dies or the sample is destroyed.",
+    "higher_levels": "",
+    "classes": "All",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 0,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Blood Lance",
+    "level": 1,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "S, M (a drop of the caster's blood)",
+    "duration": "Instantaneous",
+    "description": "A lance of congealed blood erupts from your palm and streaks toward a creature you can see within range. Make a ranged spell attack. On a hit, the target takes 2d8 piercing damage. You regain hit points equal to half the damage dealt, rounded down.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
+    "classes": "Sorcerer, Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Void Grasp",
+    "level": 1,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S, M (a fragment of obsidian)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "Shadowy tendrils from the Void erupt from the ground in a 10-foot square centered on a point you choose within range. Each creature in that area must succeed on a Strength saving throw or be restrained for the duration. A restrained creature can use its action to make a Strength check against your spell save DC, ending the effect on itself on a success.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the area increases by 5 feet for each slot level above 1st.",
+    "classes": "Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Aether Bolt",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "components": "V, S, M (a shard of aether-cracked crystal)",
+    "duration": "Instantaneous",
+    "description": "You hurl a bolt of raw aether energy at a creature or object within range. Make a ranged spell attack. On a hit, the target takes 2d8 force damage. If the target is a construct or undead, it takes an additional 1d8 force damage.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st (the bonus against constructs/undead increases by 1d8 at 3rd and 5th level).",
+    "classes": "Sorcerer, Wizard, Artificer",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Cinder Whip",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "A whip of smoldering dragonfire lances from your hand toward a creature you can see within range. Make a melee spell attack. On a hit, the target takes 2d6 fire damage and must succeed on a Strength saving throw or be pulled up to 10 feet toward you.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the fire damage increases by 1d6 for each slot level above 1st.",
+    "classes": "Sorcerer, Warlock, Cleric (Fire domain)",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": -2
+  },
+  {
+    "name": "Chains of Penitence",
+    "level": 1,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a broken chain link from a cathedral)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "Spectral iron chains spring forth from the ground and wrap around a creature you can see within range. The target must succeed on a Dexterity saving throw or be restrained for the duration. While restrained, the creature takes 1d4 radiant damage at the start of each of its turns. A restrained creature can use its action to make a Strength check against your spell save DC, ending the effect on a success.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the radiant damage increases by 1d4 for each slot level above 1st.",
+    "classes": "Cleric, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 25,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Flesh Mend",
+    "level": 1,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a bandage soaked in blood)",
+    "duration": "Instantaneous",
+    "description": "You channel necrotic energy to knit flesh and sinew. A creature you touch regains hit points equal to 1d8 + your spellcasting ability modifier. If the creature is a construct or undead, it regains no hit points. Instead, the spell fails, and you must make a Spell Safety saving throw (DC equal to your spell save DC) or suffer 1d4 necrotic damage.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st.",
+    "classes": "Cleric, Druid, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Desecrate",
+    "level": 1,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S, M (a handful of grave dirt)",
+    "duration": "Concentration, up to 1 hour",
+    "description": "You corrupt a 20-foot-radius sphere of ground centered on a point you choose within range. The area becomes difficult terrain for creatures of the Church or of good alignment. Undead creatures in the area have advantage on attack rolls and saving throws. Any creature that dies in the area must succeed on a Charisma saving throw or have its spirit bound to the location, preventing resurrection unless the caster allows it.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the radius increases by 10 feet for each slot level above 1st.",
+    "classes": "Cleric (Death domain), Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 20,
+    "spell_safety_modifier": -1
+  },
+  {
+    "name": "Scales of Judgment",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "Concentration, up to 1 minute",
+    "description": "Spectral scales of justice form around you. For the duration, you gain a +2 bonus to AC and resistance to radiant damage. Whenever a creature within 30 feet of you receives healing, you may reduce that healing by half (rounded down) as a reaction, transferring the absorbed energy to yourself as temporary hit points equal to the amount reduced.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the AC bonus increases by 1 for each two slot levels above 1st.",
+    "classes": "Cleric, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 25,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Whisper of the Skull",
+    "level": 1,
+    "school": "Divination",
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "components": "V, S, M (a humanoid skull)",
+    "duration": "Instantaneous",
+    "description": "You place your hand upon a skull and command the spirit within to answer one question. The skull speaks a short phrase or shows a vision. The answer is limited to what the creature knew in life. If the skull has been cleaned or tampered with, the answer may be corrupted or silent. This spell cannot contact a soul that has been resurrected or destroyed.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, you may ask one additional question for each slot level above 1st, up to 5 questions total.",
+    "classes": "Cleric, Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 20,
+    "spell_safety_modifier": -2
+  },
+  {
+    "name": "Sanguine Shield",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "components": "V, S, M (a drop of the caster's blood)",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "Blood seeps from your skin and coagulates into a shimmering crimson barrier. You gain a +2 bonus to AC and resistance to necrotic damage. The shield is visible and counts as a light source (dim light in a 5-foot radius). At the end of each of your turns, if you have taken damage since your last turn, the shield steals 1 hit point from you (this damage cannot be reduced).",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the AC bonus increases by 1 for each slot level above 1st (max +5).",
+    "classes": "Sorcerer, Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Void Step",
+    "level": 1,
+    "school": "Conjuration",
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "components": "V",
+    "duration": "Instantaneous",
+    "description": "You step through the Void, instantly teleporting to an unoccupied space you can see within 30 feet. A trail of shadowy afterimages marks your passage. Until the start of your next turn, you have advantage on the first attack roll you make against a creature that was within 5 feet of your starting position.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the teleportation distance increases by 10 feet for each slot level above 1st.",
+    "classes": "Sorcerer, Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 25,
+    "spell_safety_modifier": -1
+  },
+  {
+    "name": "Burning Brand",
+    "level": 1,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a holy symbol of the Church)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You touch a creature and sear a holy symbol into its flesh. The target must succeed on a Constitution saving throw or take 2d6 fire damage and be branded for the duration. The brand sheds dim light in a 5-foot radius and glows brightly when within 30 feet of a desecrated object or creature. While branded, the target cannot hide from you and you have advantage on Perception checks to locate it.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the fire damage increases by 1d6 for each slot level above 1st.",
+    "classes": "Cleric, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 25,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Aether Sight",
+    "level": 1,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V, S, M (a tiny prism)",
+    "duration": "Concentration, up to 1 hour",
+    "description": "Your eyes shimmer with aetherial light. For the duration, you can see invisible creatures and objects, and you gain the ability to perceive aetheric residue and magical trails. You have advantage on Wisdom (Perception) checks to detect hidden or disguised magical effects. The spell does not allow you to see through solid objects.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the duration increases by 1 hour for each slot level above 1st (max 4 hours).",
+    "classes": "Artificer, Sorcerer, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Corrupting Touch",
+    "level": 1,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "Your hand becomes wreathed in dark, rotting energy. Make a melee spell attack against a creature you touch. On a hit, the target takes 2d8 necrotic damage and must succeed on a Constitution saving throw or have its hit point maximum reduced by the damage dealt. The reduction lasts until the target finishes a long rest or receives a greater restoration spell.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the necrotic damage increases by 1d8 for each slot level above 1st, and the hit point maximum reduction increases by an equal amount.",
+    "classes": "Cleric (Death domain), Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 20,
+    "spell_safety_modifier": -2
+  },
+  {
+    "name": "Rite of Binding",
+    "level": 1,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a iron collar worth 10 gp)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You attempt to bind the will of a creature with low blood purity. Choose a humanoid you can see within range. If the target's blood purity percentage is 14% or lower, it must succeed on a Wisdom saving throw or be charmed by you for the duration. While charmed, the target obeys your verbal commands to the best of its ability, but will not obey commands that are obviously suicidal or directly harmful to itself. If the target's blood purity is 0%, it has disadvantage on the saving throw.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st, provided each target has blood purity 14% or lower.",
+    "classes": "Cleric, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 30,
+    "spell_safety_modifier": -3
+  },
+  {
+    "name": "Sanguine Mend",
+    "level": 1,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a drop of the caster's own blood)",
+    "duration": "Instantaneous",
+    "description": "You press a bleeding hand to the wound of a creature you touch. The target's blood surges, knitting flesh with a feverish warmth. They regain 1d8 + your spellcasting ability modifier hit points, but take 1 point of necrotic damage as the cost of stolen vitality.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st, and the self-damage increases by 1 per die.",
+    "classes": "Cleric, Ichor Sorcerer, Blood Domain Cleric",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Aether Ward",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a shard of obsidian)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You trace a rune of protection on the target's skin. A shimmering film of raw aether envelops them. Until the spell ends, the target gains a +2 bonus to AC and has resistance to force damage. Each time they are hit by a melee attack, the ward flashes with crimson light and you can choose to end the spell early to deal 1d4 force damage to the attacker.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the bonus to AC increases by +1 for every two slot levels above 1st.",
+    "classes": "Cleric, Paladin, Abjurer",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 20,
+    "spell_safety_modifier": 1
+  },
+  {
+    "name": "Corrupting Touch",
+    "level": 1,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "Your hand crackles with void-tainted energy. Make a melee spell attack against a creature. On a hit, the target's flesh withers and blackens, taking 2d8 necrotic damage. If the target is a living creature (not undead or construct), it must succeed on a Constitution saving throw or be poisoned until the end of its next turn as the corruption seeps into its blood.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
+    "classes": "Cleric, Warlock, Sorcerer",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 2
+  },
+  {
+    "name": "Void Echo",
+    "level": 1,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You whisper a fragment of the Betrayed's name into the aether, and the sound rebounds inside the target's mind. Choose one creature within range. It must succeed on a Wisdom saving throw or be haunted by phantom whispers, suffering disadvantage on its next attack roll before the end of its next turn. While the spell lasts, the target can repeat the saving throw at the end of each of its turns, ending the effect on a success.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.",
+    "classes": "Warlock, Bard, Void-Touched Sorcerer",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 25,
+    "spell_safety_modifier": 3
+  },
+  {
+    "name": "Brand of Submission",
+    "level": 1,
+    "school": "Enchantment",
+    "casting_time": "1 bonus action",
+    "range": "30 feet",
+    "components": "V, S, M (a small iron brand heated in dragonfire)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You sear the mark of obedience into the target's flesh. Choose one creature you can see within range. It must make a Charisma saving throw. On a failure, it is unable to willingly move closer to you and has disadvantage on attack rolls against you. On a success, the spell ends. The brand glows with a dull red heat for the duration, dealing 1 fire damage to the target at the start of each of its turns.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the damage per turn increases by 1 for each slot level above 1st.",
+    "classes": "Cleric (Inquisition Domain), Paladin (Oath of Conquest)",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 30,
+    "spell_safety_modifier": 2
+  },
+  {
+    "name": "Cinder Skin",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a handful of ash from a defeated enemy)",
+    "duration": "1 hour",
+    "description": "You coat the target's skin with a layer of smoldering embers, granting them resistance to fire damage. Additionally, any creature that hits them with a melee attack takes 1d4 fire damage. The embers shed dim light in a 5-foot radius.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the melee retaliation damage increases by 1d4 for each slot level above 1st.",
+    "classes": "Druid, Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Fleshbind",
+    "level": 1,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a strip of dried sinew)",
+    "duration": "Instantaneous",
+    "description": "You force torn flesh to reknit with a painful snap. The target regains 1d8 + your spellcasting ability modifier hit points, but must succeed on a Constitution saving throw or be incapacitated until the end of its next turn from the agony of reconnecting nerves.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 per slot level above 1st, and the incapacitation save DC increases by 1.",
+    "classes": "Cleric, Druid, Blood Domain Cleric",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 20,
+    "spell_safety_modifier": 1
+  },
+  {
+    "name": "Oath of Iron",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "You recite a binding oath from the Iron Codex, and your skin takes on a metallic sheen. Until the spell ends, you gain a +2 bonus to AC against attacks from creatures that have dealt damage to you within the last minute. Additionally, you have advantage on saving throws against being frightened.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the AC bonus increases by +1 for each slot level above 1st.",
+    "classes": "Paladin, Cleric (War Domain)",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 25,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Shadow Leech",
+    "level": 1,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a leech preserved in brine)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You summon a wisp of shadow that latches onto a creature you can see within range. The target must make a Constitution saving throw. On a failure, it takes 1d6 necrotic damage at the start of each of its turns, and you regain hit points equal to half the damage dealt. The target can use its action to tear the shadow off, ending the spell, but takes 1d6 necrotic damage as it does so.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the initial and subsequent damage increases by 1d6 for each slot level above 1st.",
+    "classes": "Warlock, Sorcerer, Death Domain Cleric",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 20,
+    "spell_safety_modifier": 2
+  },
+  {
+    "name": "Blighted Breath",
+    "level": 1,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "Self (15-foot cone)",
+    "components": "V, S, M (a rotten tooth)",
+    "duration": "Instantaneous",
+    "description": "You exhale a cloud of greenish, foul-smelling vapor that reeks of decay. Each creature in a 15-foot cone must make a Constitution saving throw. On a failure, it takes 2d6 poison damage and is poisoned for 1 minute. On a success, it takes half damage and is not poisoned. A poisoned creature can repeat the saving throw at the end of each of its turns, ending the effect on a success.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
+    "classes": "Druid, Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Ward of Skulls",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a miniature skull carved from bone)",
+    "duration": "8 hours",
+    "description": "You bless a door, window, or other entryway with the warding of the Five Skulls. For the duration, the first creature that attempts to open or pass through the warded portal without your permission must make a Wisdom saving throw. On a failure, it takes 2d8 psychic damage and is frightened of the portal for 1 minute. On a success, it takes half damage and is not frightened. The ward glows with a faint malevolent light.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the psychic damage increases by 1d8 for each slot level above 1st.",
+    "classes": "Cleric, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 20,
+    "spell_safety_modifier": 1
+  },
+  {
+    "name": "Bloodletting",
+    "level": 1,
+    "school": "Necromancy",
+    "casting_time": "1 bonus action",
+    "range": "60 feet",
+    "components": "V, S",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You cause a wound on a creature you can see within range to hemorrhage profusely. The target must make a Constitution saving throw. On a failure, it takes 1d4 slashing damage at the start of each of its turns as blood seeps from its body. Additionally, any critical hit against the target while the spell is active deals an extra 1d6 damage of the attack's type. The target can use its action to staunch the bleeding, ending the spell.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the initial and recurring damage increases by 1d4 for each slot level above 1st.",
+    "classes": "Cleric, Warlock, Sorcerer",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 25,
+    "spell_safety_modifier": 2
+  },
+  {
+    "name": "Aether Siphon",
+    "level": 1,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S, M (a hollow glass tube)",
+    "duration": "Instantaneous",
+    "description": "You drain ambient aether from a living creature to restore your own vitality. Choose one creature within range. It takes 2d6 necrotic damage. You then regain hit points equal to half the damage dealt. If this healing exceeds your hit point maximum, you gain temporary hit points equal to the excess.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
+    "classes": "Warlock, Sorcerer, Necromancer Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 20,
+    "spell_safety_modifier": 2
+  },
+  {
+    "name": "Grave Dampen",
+    "level": 1,
+    "school": "Abjuration",
+    "casting_time": "1 reaction, which you take when you or a creature within 30 feet is subjected to a necrotic damage effect",
+    "range": "30 feet",
+    "components": "V",
+    "duration": "Instantaneous",
+    "description": "You intone a prayer to the Five Skulls, dulling the hunger of necrotic energy. Choose one creature within range (including yourself). The necrotic damage it takes from the triggering effect is reduced by 2d6 + your spellcasting ability modifier. At higher levels, the reduction increases.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, the reduction increases by 1d6 for each slot level above 1st.",
+    "classes": "Cleric, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 15,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Purge the Weak",
+    "level": 1,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a broken chain link)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You fill a creature with the certainty that it is unworthy. Choose one creature within range. It must make a Charisma saving throw. On a failure, it has disadvantage on attack rolls and ability checks for the duration. Additionally, if it tries to take the Attack action, it must first succeed on a Wisdom saving throw or instead use its action to do nothing, paralyzed by self-doubt. The target can repeat the Charisma saving throw at the end of each of its turns, ending the spell on a success.",
+    "higher_levels": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.",
+    "classes": "Cleric (Inquisition Domain), Warlock (Archfey, reskinned as Archfiend of Doubt)",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 30,
+    "spell_safety_modifier": 2
+  }
+]

@@ -1,0 +1,937 @@
+[
+  {
+    "name": "Aether Overload",
+    "level": 4,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (30-foot radius)",
+    "components": "V, S, M (a fragment of a Blood Crystal worth 100 gp)",
+    "duration": "Instantaneous",
+    "description": "You unleash a devastating pulse of raw aether from your core. Each creature of your choice within range must make a Constitution saving throw. On a failure, they take 8d6 force damage and gain one level of exhaustion. On a success, they take half damage and no exhaustion. This damage ignores resistance and immunity to force damage.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d6 for each slot level above 4th.",
+    "classes": "Sorcerer, Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 2
+  },
+  {
+    "name": "Bloodfire Lance",
+    "level": 4,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "components": "V, S, M (a drop of the caster's blood)",
+    "duration": "Instantaneous",
+    "description": "A lance of searing bloodfire erupts from your palm and streaks toward a creature you can see within range. Make a ranged spell attack. On a hit, the target takes 6d6 fire damage and 6d6 necrotic damage. The fire damage ignores resistance and immunity to fire. The necrotic damage reduces the target's hit point maximum by an amount equal to the necrotic damage taken. This reduction lasts until the target finishes a long rest.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, each damage die increases by 1d6 (e.g., 7d6 fire and 7d6 necrotic at 5th level).",
+    "classes": "Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 1
+  },
+  {
+    "name": "Void Bolt",
+    "level": 4,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You hurl a bolt of crystallized void energy at a creature within range. Make a ranged spell attack. On a hit, the target takes 8d8 cold damage and must succeed on a Charisma saving throw or be banished to a harmless demiplane for 1 minute. The banishment ends if the target takes any damage while banished. If the target is native to another plane, the banishment lasts for 1 minute regardless of damage.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the cold damage increases by 2d8 for each slot level above 4th.",
+    "classes": "Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 3
+  },
+  {
+    "name": "Dragon's Wrath",
+    "level": 4,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (60-foot cone)",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You exhale a torrent of dragonfire infused with the essence of the Five Skulls. Each creature in a 60-foot cone must make a Dexterity saving throw. A creature takes 9d6 fire damage on a failed save, or half as much on a successful one. Creatures that fail the save also catch fire, taking 2d6 fire damage at the start of each of their turns until they or an ally uses an action to extinguish the flames.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the initial damage increases by 2d6 for each slot level above 4th.",
+    "classes": "Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Soul Rend",
+    "level": 4,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You tear at the very soul of a creature you can see within range. The target must make a Constitution saving throw. On a failure, they take 8d6 necrotic damage and their hit point maximum is reduced by the same amount. You regain hit points equal to half the damage dealt. This reduction lasts until the target finishes a long rest. A creature reduced to 0 hit points by this spell dies instantly, its soul consumed.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 2d6 for each slot level above 4th.",
+    "classes": "Warlock, Wizard, Cleric (Death domain)",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 2
+  },
+  {
+    "name": "Crown of Thorns",
+    "level": 4,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a circlet of twisted iron)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You force a cursed crown of psychic thorns onto the mind of a creature you can see. The target must make a Wisdom saving throw. On a failure, it takes 6d8 psychic damage and gains a short-term madness effect (roll on the Short-Term Madness table). For the duration, at the start of each of its turns, it takes 1d8 psychic damage and must repeat the saving throw or the madness persists and the damage continues. On a success, the creature takes half damage and the spell ends.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the initial damage increases by 2d8 for each slot level above 4th.",
+    "classes": "Sorcerer, Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 1
+  },
+  {
+    "name": "Aetherial Chains",
+    "level": 4,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "90 feet",
+    "components": "V, S, M (a length of silver chain worth 50 gp)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You summon chains of solid aether that erupt from the ground and wrap around a creature you can see within range. The target must make a Dexterity saving throw. On a failure, it is restrained for the duration. While restrained, the creature takes 2d8 force damage at the start of each of its turns. The restrained creature can use its action to make a Strength (Athletics) check against your spell save DC, breaking the chains on a success. If the creature is an archon or sovereignblood, the damage increases to 3d8 and the check is made with disadvantage.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.",
+    "classes": "Cleric, Paladin, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Cremation of Betrayal",
+    "level": 4,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a pinch of ash from one convicted of treachery)",
+    "duration": "Instantaneous",
+    "description": "You ignite the blood of a creature you can see, causing their body to combust from within. The target must make a Constitution saving throw. On a failure, they take 6d10 fire damage. If this damage reduces the target to 20 hit points or fewer, the creature is instantly reduced to a pile of ash (no death saves). A creature killed this way cannot be resurrected by any spell less than true resurrection or wish. On a success, the target takes half damage and is not reduced to ash.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 2d10 for each slot level above 4th, and the ash threshold increases by 5 (e.g., 25 hit points at 5th level).",
+    "classes": "Cleric, Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 3
+  },
+  {
+    "name": "Bloodstorm",
+    "level": 4,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "150 feet",
+    "components": "V, S, M (a vial of blood from a slain enemy)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You call down a storm of crimson blood in a 40-foot-radius cylinder centered on a point you can see within range. The area becomes heavily obscured. Each creature that starts its turn in the storm or enters it for the first time on a turn must make a Constitution saving throw. On a failure, they take 3d8 necrotic damage and are blinded until the end of their next turn. On a success, they take half damage and are not blinded. The blood also coats the ground, making it difficult terrain.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.",
+    "classes": "Druid, Sorcerer, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 1
+  },
+  {
+    "name": "Mark of the Sovereign",
+    "level": 4,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a scale from a dragon)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You place a visible brand of draconic sigils upon a creature you can see. The mark glows with the color of a dragon\u2019s eye. For the duration, the target cannot benefit from invisibility, and whenever it casts a spell, it takes 2d8 psychic damage. Additionally, you always know the target\u2019s exact location as long as you are on the same plane. If the target is a spellcaster, it has disadvantage on concentration checks while marked.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the psychic damage increases by 1d8 for each slot level above 4th.",
+    "classes": "Cleric, Paladin, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Infernal Geyser",
+    "level": 4,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You cause a geyser of molten rock and dragonfire to erupt from the ground at a point you can see within range. Each creature in a 10-foot radius, 30-foot tall cylinder centered on that point must make a Dexterity saving throw. On a failure, they take 6d8 fire damage and 4d8 bludgeoning damage and are pushed 15 feet upward, falling prone upon landing. On a success, they take half damage and are not pushed. The geyser leaves a patch of molten rock that remains for 1 minute, dealing 2d8 fire damage to any creature that ends its turn in that space.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the fire damage increases by 2d8 for each slot level above 4th.",
+    "classes": "Druid, Sorcerer, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 1
+  },
+  {
+    "name": "Shadow of the Flesh-Shaper",
+    "level": 4,
+    "school": "Illusion",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a scrap of flesh from a corpse)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You animate the shadow of a creature you can see within range. The shadow tears itself free from its owner and becomes a hostile, independent creature with the statistics of a shadow (MM) but with 40 hit points and resistance to nonmagical weapons. The shadow acts on your turn, obeying your verbal commands. It can make a Strength drain attack dealing 2d8+3 necrotic damage. If the original creature dies while the shadow is active, the shadow gains 20 temporary hit points. The shadow dissipates when the spell ends or when reduced to 0 hit points.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the shadow's hit points increase by 10 for each slot level above 4th.",
+    "classes": "Sorcerer, Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 2
+  },
+  {
+    "name": "Murder of Crows",
+    "level": 4,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a crow's feather dipped in blood)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You summon a swarm of aether-infused crows that fill a 20-foot-radius sphere centered on a point within range. The area is heavily obscured. Each creature in the sphere when it appears must make a Dexterity saving throw. On a failure, they take 6d6 piercing damage and 4d6 psychic damage, and are blinded until the end of their next turn. On a success, they take half damage and are not blinded. The crows remain for the duration, dealing 3d6 psychic damage to any creature that ends its turn inside the sphere. Creatures with blood purity 40% or higher take an additional 1d6 psychic damage from the crows' scornful cries.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the initial damage increases by 2d6 piercing and 1d6 psychic for each slot level above 4th.",
+    "classes": "Druid, Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 1
+  },
+  {
+    "name": "Voidstep",
+    "level": 4,
+    "school": "Conjuration",
+    "casting_time": "1 bonus action",
+    "range": "Self (60 feet teleport)",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You step through a rift in the void, reappearing in an unoccupied space you can see within 60 feet. When you disappear, each creature within 10 feet of your starting space must make a Constitution saving throw. On a failure, they take 5d10 cold damage and are frightened until the end of their next turn. On a success, they take half damage and are not frightened. When you reappear, each creature within 10 feet of your destination must make a similar saving throw or take 5d10 psychic damage and be stunned until the end of their next turn (half damage, no stun on success).",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage dice each increase by 1d10 for each slot level above 4th.",
+    "classes": "Sorcerer, Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 3
+  },
+  {
+    "name": "Scales of the Betrayed",
+    "level": 4,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V, S, M (a dragon scale worth at least 200 gp)",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "You shroud yourself in spectral draconic scales that reflect the colors of the Five Skulls. For the duration, you gain resistance to fire, cold, lightning, and poison damage. Additionally, when a creature hits you with a melee attack, you can use your reaction to deal 3d8 psychic damage to that creature. This damage also reduces the attacker's blood purity by 1% for 24 hours (no effect on creatures with 0% purity). The scales grant you advantage on saving throws against being frightened.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the psychic damage from your reaction increases by 1d8 for each slot level above 4th.",
+    "classes": "Cleric, Paladin, Sorcerer",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Blood Boil",
+    "level": 4,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a drop of the caster's blood)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You cause the blood of a creature you can see within range to boil in their veins. The target must make a Constitution saving throw. On a failure, they take 8d6 fire damage and are poisoned for the duration. On a success, they take half damage and are not poisoned. At the end of each of its turns, the target can repeat the saving throw, ending the effect on a success.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 2d6 for each slot level above 4th.",
+    "classes": "Sorcerer, Warlock, Wizard",
+    "purity_requirement": 40,
+    "spell_safety_modifier": -2,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Void Rend",
+    "level": 4,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "Self (30-foot cone)",
+    "components": "V, S, M (a shard of obsidian from the Sulfur Wastes)",
+    "duration": "Instantaneous",
+    "description": "You tear open a rift to the Void, unleashing a cone of absolute blackness. Each creature in the area must make a Dexterity saving throw. On a failure, they take 8d8 necrotic damage and are blinded until the end of your next turn. On a success, they take half damage and are not blinded. The rift closes immediately after, leaving a faint smell of ozone and ash.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 2d8 for each slot level above 4th.",
+    "classes": "Warlock, Wizard",
+    "purity_requirement": 40,
+    "spell_safety_modifier": -4,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Aether Whip",
+    "level": 4,
+    "school": "Evocation",
+    "casting_time": "1 bonus action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You conjure a whip of crackling aether energy in your free hand. For the duration, you can make a melee spell attack against a creature within 15 feet. On a hit, the target takes 6d6 lightning damage and must succeed on a Strength saving throw or be pulled up to 10 feet toward you. The whip sheds dim light in a 5-foot radius and can be used to interact with objects or pull levers.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 2d6 for each slot level above 4th.",
+    "classes": "Sorcerer, Wizard",
+    "purity_requirement": 40,
+    "spell_safety_modifier": 0,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Soul Brand",
+    "level": 4,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a branding iron heated in dragon fire)",
+    "duration": "Permanent until dispelled",
+    "description": "You press a searing mark onto a willing or incapacitated creature's flesh. The brand glows with a sickly red light for a moment before scarring into a permanent symbol. For as long as the brand remains, you can sense the creature's location as long as you are on the same plane, and you can use an action to inflict 4d6 psychic damage on it, causing it to relive the branding pain. The brand can be removed only by a Greater Restoration spell or similar magic.",
+    "higher_levels": "",
+    "classes": "Cleric, Warlock",
+    "purity_requirement": 40,
+    "spell_safety_modifier": 0,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Flesh Weave",
+    "level": 4,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a needle and sinew from a dead creature)",
+    "duration": "Instantaneous",
+    "description": "You reshape the flesh of a willing or unconscious creature you touch. You can seal wounds (restoring up to 6d8 hit points), close a gaping injury, or even reattach a severed limb if applied within 1 minute of the amputation. Alternatively, you can cause grotesque growths\u2014bone spurs, extra eyes, or nonfunctional limbs\u2014on an unwilling creature, which must succeed on a Constitution saving throw or be stunned for 1 minute as its body writhes.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the healing increases by 2d8 for each slot level above 4th.",
+    "classes": "Cleric, Druid, Wizard",
+    "purity_requirement": 40,
+    "spell_safety_modifier": -2,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Inquisitor's Gaze",
+    "level": 4,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V, S, M (the eye of a heretic, preserved in brine)",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "Your eyes turn pitch black, and you gain the ability to see the truth. For the duration, you have truesight out to a range of 60 feet. Additionally, you can automatically detect lies spoken by creatures you can see, and you know if a creature is hiding its true intentions (as per the Insight skill with advantage). The Inquisitor's Gaze is painful\u2014you have disadvantage on Perception checks relying on sight due to the strain.",
+    "higher_levels": "",
+    "classes": "Cleric, Paladin",
+    "purity_requirement": 40,
+    "spell_safety_modifier": 0,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Black Candle",
+    "level": 4,
+    "school": "Necromancy",
+    "casting_time": "1 minute",
+    "range": "Touch",
+    "components": "V, S, M (a candle made of human fat and a pinch of grave dust)",
+    "duration": "Special",
+    "description": "You craft a sinister candle that, when lit, allows you to see and communicate with a specific dead creature whose soul has not moved on. While the candle burns (up to 1 hour per spell slot level), you can ask the spirit up to five questions. The spirit answers truthfully to the best of its knowledge, but its memory may be flawed or biased. The candle emits a faint, sickly light and smells of decay. If the candle is extinguished before the hour is up, the spirit departs and cannot be summoned again until the next dawn.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the candle burns for an additional hour per slot level above 4th.",
+    "classes": "Cleric, Warlock, Wizard",
+    "purity_requirement": 40,
+    "spell_safety_modifier": -4,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Martyr's Sacrifice",
+    "level": 4,
+    "school": "Abjuration",
+    "casting_time": "1 reaction, which you take when an ally within 60 feet is hit by an attack or fails a saving throw",
+    "range": "60 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You intercept the harm meant for an ally, taking the damage yourself. The ally takes no damage from the triggering attack or effect, and you take the full damage instead. This damage cannot be reduced or redirected in any way. Additionally, you gain temporary hit points equal to your spellcasting ability modifier (minimum 1) for 1 minute as your devotion shields you from despair.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, you gain additional temporary hit points equal to the slot level.",
+    "classes": "Cleric, Paladin",
+    "purity_requirement": 40,
+    "spell_safety_modifier": 2,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Dragon's Descent",
+    "level": 4,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "120 feet",
+    "components": "V, S, M (the scale of a dragon)",
+    "duration": "Instantaneous",
+    "description": "You call down a column of searing dragon fire from the sky at a point you can see within range. Each creature in a 20-foot-radius, 40-foot-tall cylinder must make a Dexterity saving throw. On a failure, they take 10d6 fire damage and are knocked prone. On a success, they take half damage and are not knocked prone. The ground in the area becomes scorched and difficult terrain for 1 minute.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 2d6 for each slot level above 4th.",
+    "classes": "Sorcerer, Wizard",
+    "purity_requirement": 40,
+    "spell_safety_modifier": 0,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Sever Purity",
+    "level": 4,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a sliver of Blood Crystal from a condemned heretic)",
+    "duration": "Instantaneous",
+    "description": "You touch a creature and attempt to drain its dragon blood. The target must make a Constitution saving throw. On a failure, it loses 2d6 of its Blood Purity percentage (if using the percentile system; otherwise, its bloodline is weakened, granting disadvantage on Constitution saves related to magic for 1 hour). A creature reduced to 0% purity becomes a Blank and may die from the shock. This spell is considered a heresy by the Church and is punishable by death.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the purity loss increases by 1d6 for each slot level above 4th.",
+    "classes": "Warlock, Wizard",
+    "purity_requirement": 60,
+    "spell_safety_modifier": -6,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Crimson Barrier",
+    "level": 4,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Self (15-foot-radius sphere)",
+    "components": "V, S, M (a vial of the caster's own blood, which is consumed)",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "You draw a circle of your own blood around you, which erupts into a shimmering crimson barrier. The barrier is a 15-foot-radius sphere centered on you. Any creature of your choice that enters the barrier or starts its turn inside it must make a Charisma saving throw. On a failure, it is repelled to the nearest unoccupied space outside the barrier and takes 4d6 psychic damage from the violation. The barrier also grants you half cover (+2 AC) against attacks from outside.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 2d6 for each slot level above 4th.",
+    "classes": "Cleric, Sorcerer",
+    "purity_requirement": 40,
+    "spell_safety_modifier": -2,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Summon Ashen Thrall",
+    "level": 4,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a handful of ash from a burned corpse)",
+    "duration": "Concentration, up to 1 hour",
+    "description": "You call forth an ashen thrall\u2014a shambling creature of soot and bone\u2014in an unoccupied space you can see. The thrall uses the stats of a **Spirit of the Dead** (see Monster Manual, reskinned). It obeys your commands, has a fly speed of 30 feet, and deals necrotic damage. It crumbles to dust when reduced to 0 hit points or when the spell ends. The thrall is immune to poison and exhaustion.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, you summon one additional thrall for each slot level above 4th.",
+    "classes": "Cleric, Warlock, Wizard",
+    "purity_requirement": 40,
+    "spell_safety_modifier": 0,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Church's Wrath",
+    "level": 4,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (60-foot line)",
+    "components": "V, S, M (a holy symbol of the Church of the Five Skulls)",
+    "duration": "Instantaneous",
+    "description": "You unleash a line of brilliant, searing white fire 60 feet long and 5 feet wide. Each creature in the line must make a Dexterity saving throw. On a failure, they take 8d6 radiant damage and are blinded until the end of your next turn. On a success, they take half damage and are not blinded. Undead and fiends have disadvantage on this saving throw.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 2d6 for each slot level above 4th.",
+    "classes": "Cleric, Paladin",
+    "purity_requirement": 40,
+    "spell_safety_modifier": 2,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Cultist's Embrace",
+    "level": 4,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S, M (a drop of ink from a forbidden cult tome)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You whisper forbidden truths into the mind of a creature you can see. The target must make a Wisdom saving throw. On a failure, it is charmed by you for the duration. While charmed, it regards you as its revered leader and will follow your commands except those that would cause direct harm to itself. Additionally, the target's alignment shifts one step toward evil for the duration. On a success, the target is immune to this spell for 24 hours.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th.",
+    "classes": "Bard, Warlock",
+    "purity_requirement": 60,
+    "spell_safety_modifier": -4,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Blood Crystal Shards",
+    "level": 4,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (30-foot cone)",
+    "components": "V, S, M (a shard of Blood Crystal taken from a willing donor)",
+    "duration": "Instantaneous",
+    "description": "You summon a storm of razor-sharp Blood Crystal shards that erupt from your body in a 30-foot cone. Each creature in the area must make a Dexterity saving throw. On a failure, they take 6d10 piercing damage and begin bleeding, losing 1d4 hit points at the start of each of their turns for 1 minute or until a successful DC 15 Medicine check or any magical healing. On a success, they take half damage and do not bleed.",
+    "higher_levels": "When you cast this spell using a spell slot of 5th level or higher, the initial damage increases by 2d10 for each slot level above 4th.",
+    "classes": "Sorcerer, Wizard",
+    "purity_requirement": 60,
+    "spell_safety_modifier": -2,
+    "source_tags": [
+      "solis-grave"
+    ]
+  },
+  {
+    "name": "Ignivar's Wrath",
+    "level": 5,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (60-foot radius)",
+    "components": "V, S, M (a pinch of ash from a conquered city)",
+    "duration": "Instantaneous",
+    "description": "You unleash a cataclysmic wave of dragonfire that consumes everything in its path. All creatures of your choice within a 60-foot radius must make a Dexterity saving throw. On a failure, they take 10d6 fire damage and are ignited for 1d4 rounds, taking 2d6 fire damage at the start of each of their turns. On a success, they take half damage and are not ignited. The ground in the area becomes superheated, dealing 1d6 fire damage to any creature that ends its turn there for the next minute. This spell is a favored weapon of the Ignis Inquisition, often used to purge entire city blocks.",
+    "higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 2d6 for each slot level above 5th.",
+    "classes": "Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 40,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Void Lash",
+    "level": 5,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You draw upon the raw, forbidden essence of the Betrayed God Nyx, lashing out with a tendril of nothingness that erases matter. Make a ranged spell attack against one creature. On a hit, the target takes 8d10 force damage and must succeed on a Constitution saving throw or have its maximum hit points reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest or receives a greater restoration spell. If a creature is reduced to 0 hit points by this spell, its body is utterly destroyed, leaving only a fine gray dust. Using this spell is considered blasphemy by the Church of the Five Skulls and may attract divine retribution if witnessed.",
+    "higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th.",
+    "classes": "Warlock, Sorcerer",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 60,
+    "spell_safety_modifier": 4
+  },
+  {
+    "name": "Ashen Legion",
+    "level": 5,
+    "school": "Conjuration",
+    "casting_time": "1 minute",
+    "range": "60 feet",
+    "components": "V, S, M (a handful of ash mixed with powdered obsidian worth 300 gp)",
+    "duration": "Concentration, up to 1 hour",
+    "description": "You call forth a legion of six skeletal soldiers from the ash of the Sulfur Wastes. Each soldier uses the statistics of a Skeletal Knight (AC 16, hp 45, multiattack with longsword and shield). They obey your orders without question, acting on your turn as a group. They are immune to fire damage and vulnerable to radiant. While you maintain concentration, they fight with unwavering discipline, and any creature that starts its turn within 10 feet of two or more of them must succeed on a Wisdom saving throw or be frightened until the start of your next turn. The soldiers crumble to ash when the spell ends.",
+    "higher_levels": "When you cast this spell using a 7th-level spell slot, you summon eight skeletal knights. With an 8th-level slot, you summon ten, and with a 9th-level slot, twelve.",
+    "classes": "Wizard, Sorcerer",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 50,
+    "spell_safety_modifier": 1
+  },
+  {
+    "name": "Blood Dominion",
+    "level": 5,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a drop of your own blood)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You seize control of the blood within a living creature's body. One creature you can see must succeed on a Constitution saving throw or be restrained for the duration. At the start of each of its turns, the target takes 4d8 necrotic damage as its blood is forcibly manipulated. On your turn, you can use a bonus action to force the target to move up to half its speed in a direction of your choice. If the target is reduced to 0 hit points while under this effect, its blood erupts in a 15-foot-radius geyser, dealing 6d8 necrotic damage to all creatures in the area (yourself excluded). This spell is often used by House Tenebris blood-mages to humiliate and execute rivals.",
+    "higher_levels": "When you cast this spell using a 6th-level or higher slot, the damage at the start of each turn increases by 1d8 for each slot level above 5th.",
+    "classes": "Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 55,
+    "spell_safety_modifier": 2
+  },
+  {
+    "name": "Crown of the Scion",
+    "level": 5,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V, S, M (a crown of twisted obsidian worth 500 gp, which the spell consumes)",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "You channel the sovereign dignity of your bloodline, manifesting a blazing crown of crimson energy above your head. For the duration, you have resistance to all damage, and any creature that hits you with a melee attack takes 2d8 fire or necrotic damage (your choice) from the crown's backlash. Additionally, you gain advantage on Charisma checks and saving throws against being frightened or charmed. The crown sheds bright light in a 30-foot radius and dim light for an additional 30 feet. This spell is a sacred rite for Archon- and Scion-rank mages, signifying their right to rule.",
+    "higher_levels": "When you cast this spell using a 7th-level or higher slot, the backlash damage increases by 1d8 for every two slot levels above 5th.",
+    "classes": "Sorcerer, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Sovereign's Decree",
+    "level": 5,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "Self (30-foot radius)",
+    "components": "V",
+    "duration": "Instantaneous",
+    "description": "You speak a single word of draconic authority that mortals were never meant to hear. Each creature of your choice within 30 feet must make a Wisdom saving throw. On a failure, they are frightened for 1 minute. While frightened in this way, they are also paralyzed. At the end of each of your turns, a frightened creature can repeat the saving throw, ending the effect on itself on a success. Creatures with a purity rating of 40% or higher have advantage on this save, as their blood recognizes the command. The word itself is forbidden knowledge, said to be a fragment of the Sovereigns' original language of creation.",
+    "higher_levels": "When you cast this spell using a 6th-level or higher slot, the radius increases by 10 feet for each slot level above 5th.",
+    "classes": "Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 50,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Aether Storm",
+    "level": 5,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "300 feet",
+    "components": "V, S, M (a rod of pure aether-crystal worth 200 gp)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You tear open the sky, calling a storm of raw aetheric energy that crackles with lightning and burning motes of force. The area within a 60-foot-radius, 100-foot-tall cylinder centered on a point you choose becomes heavily obscured and difficult terrain. At the start of each of your turns, lightning arcs down, dealing 4d10 lightning damage and 4d10 force damage to all creatures in the area (your choice if you are inside). Structures take double damage. The storm scours the land, leaving behind a faintly glowing residue that counts as difficult terrain for 24 hours. This spell is often used in aerial combat against dragon riders.",
+    "higher_levels": "When you cast this spell using a 6th-level or higher slot, the lightning damage increases by 1d10 and the force damage by 1d10 for each slot level above 5th.",
+    "classes": "Sorcerer, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 45,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Flesh Weaver",
+    "level": 5,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S, M (a piece of preserved sinew)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You corrupt the flesh of up to three creatures within range. Each target must make a Constitution saving throw. On a failure, its body begins to warp uncontrollably: it gains a random mutation (choose from: extra limb that uselessly flails, skin turning to thick scales giving +2 AC but reducing speed by 10 feet, eyes melting granting blindness, or bones softening causing disadvantage on Strength checks). The DM determines the exact effect, but it should be debilitating. At the start of each of its turns, the target takes 3d8 necrotic damage as its own flesh rebels. On a success, the target takes half damage and suffers no mutation. A creature that dies while affected explodes into a spray of gore, forcing all creatures within 10 feet to succeed on a Dexterity saving throw or take 4d8 necrotic damage. House Tenebris uses this spell to control slaves and enemies.",
+    "higher_levels": "When you cast this spell using a 6th-level or higher slot, you can target one additional creature for each slot level above 5th.",
+    "classes": "Warlock, Sorcerer",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 60,
+    "spell_safety_modifier": 3
+  },
+  {
+    "name": "Burning Truth",
+    "level": 5,
+    "school": "Divination",
+    "casting_time": "1 action",
+    "range": "Self (30-foot cone)",
+    "components": "V, S, M (a lit candle made from rendered heretic fat)",
+    "duration": "Instantaneous",
+    "description": "You channel the searing light of judgment, forcing truth through fire. All creatures in a 30-foot cone must make a Charisma saving throw. On a failure, they are wreathed in spectral flames that burn away lies: they cannot speak a deliberate falsehood for 1 minute, and they take 4d8 psychic damage if they attempt to lie. Additionally, any illusion or shapechanging effect of 5th level or lower on a creature that fails the save is dispelled, and the creature takes an additional 2d8 fire damage for each effect dispelled. On a success, a creature takes half damage and is not affected by the truth-binding. This spell is a tool of House Obsidian inquisitors used to extract confessions.",
+    "higher_levels": "When you cast this spell using a 6th-level or higher slot, the psychic damage increases by 1d8 and the fire damage per dispelled effect increases by 1d8 for each slot level above 5th.",
+    "classes": "Cleric, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 40,
+    "spell_safety_modifier": 1
+  },
+  {
+    "name": "Soul-Rend",
+    "level": 5,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You plunge your hand into the target's chest, tearing at the very fabric of its soul. Make a melee spell attack against a creature within reach. On a hit, the target takes 8d12 necrotic damage. If the target is a humanoid, it must succeed on a Constitution saving throw or have its soul partially ripped out. A creature whose soul is ripped loses all class features and the ability to cast spells for 1d4 rounds, and its movement speed is halved. At the end of each of its turns, it can repeat the saving throw, ending the effect on a success. This spell leaves a visible scar on the spiritual plane and marks the caster as a dangerous heretic.",
+    "higher_levels": "When you cast this spell using a 6th-level or higher slot, the damage increases by 2d12 for each slot level above 5th.",
+    "classes": "Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 65,
+    "spell_safety_modifier": 5
+  },
+  {
+    "name": "Tectonic Fury",
+    "level": 5,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (100-foot radius)",
+    "components": "V, S, M (a fist-sized chunk of obsidian)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You slam the earth, causing a localized earthquake that ravages the battlefield. The ground in a 100-foot radius centered on you becomes difficult terrain and heavily obscured by dust. At the start of each of your turns, you can choose a point within the area; the ground there erupts in a 20-foot-radius burst, forcing all creatures in that area to make a Dexterity saving throw or take 6d6 bludgeoning damage and be knocked prone. Structures take double damage. Additionally, the ground is churned to a depth of 10 feet, creating a permanent change to the landscape. This spell is a signature of House Obsidian earth-mages used in sieges.",
+    "higher_levels": "When you cast this spell using a 6th-level or higher slot, the burst damage increases by 1d6 for each slot level above 5th.",
+    "classes": "Sorcerer, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 50,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Shadow of the Betrayed",
+    "level": 5,
+    "school": "Illusion",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a shard of obsidian from the Temple of Nyx)",
+    "duration": "Concentration, up to 10 minutes",
+    "description": "You tear a hole in reality, conjuring a dark mirror of a creature you can see. The shadow copy appears within 30 feet of the target and uses the same statistics as the original, except it has only half the hit points and deals psychic damage instead of the original's damage types. The shadow obeys your commands and acts on your turn. It cannot speak or cast spells. If the original creature dies while the shadow exists, the shadow vanishes with a silent shriek, and the original's soul is trapped for 1 hour, preventing resurrection. This spell is forbidden by the Church, as it mimics the sundering of Nyx's essence.",
+    "higher_levels": "When you cast this spell using a 6th-level or higher slot, you can create an additional shadow copy of a different creature within range for each slot level above 5th, but each requires concentration as if they were a group.",
+    "classes": "Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 70,
+    "spell_safety_modifier": 4
+  },
+  {
+    "name": "Rite of the Unbroken",
+    "level": 5,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Self (30-foot radius)",
+    "components": "V, S, M (a vial of dragon blood worth at least 200 gp)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You intone an ancient hymn of the Five Skulls, blessing up to six creatures of your choice within 30 feet. For the duration, each blessed creature gains temporary hit points equal to 10 + your spellcasting ability modifier, and they have resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons. Additionally, when a blessed creature takes damage, it can use its reaction to deal 3d8 radiant damage to the attacker (no action required). This spell is often cast before battle by Church battle-priests leading crusades against heretics.",
+    "higher_levels": "When you cast this spell using a 6th-level or higher slot, the temporary hit points increase by 5 for each slot level above 5th, and the radiant damage increases by 1d8.",
+    "classes": "Cleric, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 40,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Cataclysmic Amalgamation",
+    "level": 5,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V, S, M (a scale from a living Sovereign dragon, which the spell consumes)",
+    "duration": "Concentration, up to 1 hour",
+    "description": "You transform into a draconic avatar of destruction. For the duration, you gain the following benefits: your size becomes Large, your natural weapons deal 2d8 damage of a type matching your bloodline (fire, necrotic, lightning, etc.), you gain a flying speed of 60 feet, and you gain resistance to the damage type associated with your bloodline. Additionally, once per turn, you can exhale a 30-foot cone or 60-foot line that forces creatures in the area to make a Dexterity saving throw or take 10d6 damage of your bloodline type (half on successful save). Your gear melds into your new form. While transformed, you cannot cast other spells, but you can use your breath weapon. This spell is the pinnacle of Sovereign bloodline magic, known only to those with purity above 80%.",
+    "higher_levels": "When you cast this spell using a 6th-level or higher slot, the breath weapon damage increases by 2d6 for each slot level above 5th.",
+    "classes": "Sorcerer",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 80,
+    "spell_safety_modifier": 2
+  },
+  {
+    "name": "Tenebris's Mercy",
+    "level": 5,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (a velvet pouch sewn from the shroud of a stillborn infant)",
+    "duration": "Instantaneous",
+    "description": "You draw upon the forbidden mercy of the Flesh-Shaper, knitting wounds with stolen life. One creature you touch regains 8d8 + 15 hit points. If the target is a construct or undead, it instead takes 8d8 + 15 necrotic damage (no save). After the healing, you can transfer any ongoing disease or poison from the target to yourself, suffering its effects for 1 minute before being cleansed. The spell leaves a faint, black scar on the recipient's skin that weeps a thin, oily fluid for 1d4 days. House Tenebris uses this as a form of cruel charity, demanding blood debts from those healed.",
+    "higher_levels": "When you cast this spell using a 6th-level or higher slot, the healing amount increases by 1d8 for each slot level above 5th, and the self-inflicted disease/poison duration increases by 1 minute.",
+    "classes": "Cleric, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 55,
+    "spell_safety_modifier": 2
+  },
+  {
+    "name": "Ritual of the Crimson Pyre",
+    "level": 5,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (30-foot radius)",
+    "components": "V, S, M (a shard of obsidian etched with the mark of Ignivar)",
+    "duration": "Instantaneous",
+    "description": "You channel the wrath of the Fire-Heart, causing the blood of all enemies within range to ignite from within. Each creature in the area must make a Constitution saving throw. On a failure, they take 8d6 fire damage and begin to burn, taking an additional 2d6 fire damage at the start of each of their turns for 1 minute, or until they or an ally uses an action to douse the flames. On a success, they take half damage and do not burn.",
+    "higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the initial damage increases by 1d6 for each slot level above 5th.",
+    "classes": "Sorcerer, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 40,
+    "spell_safety_modifier": -2
+  },
+  {
+    "name": "Void Vortex",
+    "level": 5,
+    "school": "Conjuration",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a fragment of a shattered Blood Crystal)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You tear open a miniature rift to the Void at a point you can see within range. The vortex pulls at the fabric of reality. Each creature within a 20-foot radius sphere centered on that point must make a Strength saving throw. On a failure, they are pulled to the center, take 4d6 force damage, and are restrained for the duration. On a success, they take half damage and are not restrained. At the start of each of your turns, the vortex deals an additional 2d6 necrotic damage to all restrained creatures.",
+    "higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the initial force damage increases by 1d6 for each slot level above 5th.",
+    "classes": "Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 50,
+    "spell_safety_modifier": -3
+  },
+  {
+    "name": "Inquisitor's Brand",
+    "level": 5,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "Touch",
+    "components": "V, S, M (the iron brand of an Inquisitor, heated in dragon fire)",
+    "duration": "Instantaneous",
+    "description": "You mark a creature with a searing brand that reveals its sin and weakness. The target must make a Charisma saving throw. On a failure, it is branded visibly for 24 hours, and you learn its alignment, its damage resistances, and one vulnerability (if any) of your choice. Additionally, for the duration, the brand glows when the creature tells a lie, giving you advantage on Insight checks against it. On a success, the creature resists the brand and is immune to this spell for 24 hours.",
+    "higher_levels": "",
+    "classes": "Cleric, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 30,
+    "spell_safety_modifier": -1
+  },
+  {
+    "name": "Aetheric Bloodbath",
+    "level": 5,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "Self (20-foot radius)",
+    "components": "V, S, M (a drop of the caster's own blood, costing 1 hit die worth of health)",
+    "duration": "Instantaneous",
+    "description": "You sacrifice a portion of your own vitality to unleash a wave of aether-infused blood. All creatures of your choice within range must make a Constitution saving throw. On a failure, they take 6d8 necrotic damage and are stunned until the end of your next turn as their own blood tries to tear free from their veins. On a success, they take half damage and are not stunned. For each creature that fails, you regain hit points equal to the necrotic damage dealt (minimum 1 per creature).",
+    "higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
+    "classes": "Sorcerer, Warlock",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 45,
+    "spell_safety_modifier": -2
+  },
+  {
+    "name": "Flesh-Shaper's Curse",
+    "level": 5,
+    "school": "Transmutation",
+    "casting_time": "1 action",
+    "range": "30 feet",
+    "components": "V, S, M (a vial of mutated blood from a Tenebris cultist)",
+    "duration": "Concentration, up to 1 hour",
+    "description": "You corrupt the flesh of a creature you can see within range. The target must make a Constitution saving throw. On a failure, its body begins to warp uncontrollably. For the duration, the target has disadvantage on attack rolls and ability checks, and its speed is halved. At the start of each of your turns, the target takes 3d6 acid damage as its flesh roils and splits. If the target reaches 0 hit points while under this curse, it explodes in a spray of gore, dealing 4d6 acid damage to all creatures within 10 feet.",
+    "higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the initial and persistent damage increases by 1d6 for each slot level above 5th.",
+    "classes": "Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 40,
+    "spell_safety_modifier": -2
+  },
+  {
+    "name": "Dragon's Scorn",
+    "level": 5,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (60-foot line)",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You spew a torrent of aetherial flame mixed with the essence of a Sovereign's wrath. Each creature in a 60-foot long, 5-foot wide line must make a Dexterity saving throw. On a failure, they take 6d10 fire damage and are marked by the dragon's scorn for 1 minute. While marked, whenever the creature deals damage to you, it takes 1d10 fire damage. On a success, they take half damage and are not marked.",
+    "higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th.",
+    "classes": "Sorcerer, Draconic Bloodline",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 55,
+    "spell_safety_modifier": -3
+  },
+  {
+    "name": "Blood of the Betrayed",
+    "level": 5,
+    "school": "Abjuration",
+    "casting_time": "1 action",
+    "range": "Self",
+    "components": "V, S, M (a tear of obsidian, symbolizing the tears of Obsidrath after the Betrayal)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You call upon the guilt of the Sovereigns to shield yourself. For the duration, you gain resistance to all damage from spells and magical effects. Additionally, whenever a creature within 30 feet of you casts a spell of 1st level or higher, you may use your reaction to force that creature to make a Wisdom saving throw. On a failure, the caster takes psychic damage equal to the spell's level (minimum 1) as the memory of the Betrayal floods its mind.",
+    "higher_levels": "",
+    "classes": "Cleric, Paladin",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 35,
+    "spell_safety_modifier": -1
+  },
+  {
+    "name": "Soul-Searing Channel",
+    "level": 5,
+    "school": "Evocation",
+    "casting_time": "1 action",
+    "range": "Self (120-foot line)",
+    "components": "V, S, M (a shard of a Blood Crystal from a Blank executed for attempting magic)",
+    "duration": "Instantaneous",
+    "description": "You unleash a beam of pure aetheric judgment, burning through flesh and soul. Each creature in a 120-foot long, 5-foot wide line must make a Constitution saving throw. On a failure, they take 7d8 radiant damage and are seared with the mark of the Church, revealing their true blood purity percentage to all who see them for 1 hour. On a success, they take half damage and are not marked. Blanks and those of Common purity (1-14%) have disadvantage on this saving throw.",
+    "higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
+    "classes": "Cleric",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 50,
+    "spell_safety_modifier": -3
+  },
+  {
+    "name": "Cult of the Fifth's Command",
+    "level": 5,
+    "school": "Enchantment",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a torch lit from the perpetual flame in a Church of the Five Skulls)",
+    "duration": "Concentration, up to 1 minute",
+    "description": "You whisper the dogma of the Fifth Skull into the mind of a creature you can see within range. The target must make a Wisdom saving throw. On a failure, it becomes charmed by you for the duration. While charmed, the target obeys your commands as long as those commands do not directly harm itself or its allies. The target regards you as its spiritual leader and will protect you. At the end of each of its turns, it may repeat the saving throw, ending the effect on a success. Creatures of Archon purity or higher have advantage on the initial save, as their proud blood resents submission.",
+    "higher_levels": "When you cast this spell using a spell slot of 6th level or higher, you can target one additional creature for each slot level above 5th.",
+    "classes": "Bard, Cleric",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 25,
+    "spell_safety_modifier": 0
+  },
+  {
+    "name": "Void Reclamation",
+    "level": 5,
+    "school": "Necromancy",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a crushed Black Lotus petal and a drop of the caster's blood)",
+    "duration": "Instantaneous",
+    "description": "You tear at the boundary between life and the Void, unraveling a creature's existence in a desperate attempt to reclaim what was lost. Choose one creature within range. It must make a Charisma saving throw. On a failure, it takes 8d10 necrotic damage, and you regain hit points equal to half the damage dealt. Additionally, you can choose to resurrect one creature that has died within the last minute (including the target if it dies from this spell) as a deathless servant under your control for 1 hour. The servant has the statistics of a zombie but retains its appearance and can speak in broken phrases. On a success, the target takes half damage and is not resurrected.",
+    "higher_levels": "When you cast this spell using a spell slot of 6th level or higher, the necrotic damage increases by 1d10 for each slot level above 5th.",
+    "classes": "Warlock, Wizard",
+    "source_tags": [
+      "solis-grave"
+    ],
+    "purity_requirement": 55,
+    "spell_safety_modifier": -3
+  }
+]
