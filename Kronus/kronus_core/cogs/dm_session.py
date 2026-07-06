@@ -18,8 +18,13 @@ TOKEN_COST_OUTPUT = 0.28 / 1_000_000
 # Session cost thresholds (disabled by default)
 SESSION_WARN_USD = 2.00    # Warn at $2
 SESSION_CAP_USD = 5.00     # Hard cap at $5
-COST_TRACKING_ENABLED = False  # Toggle via /dmbudget
-SOVEREIGN_CLASSES = ["barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard"]
+COST_TRACKING_ENABLED = False
+DICE_CHANNEL_ID = 1514245057350209597
+DEFAULT_GROUP_CHANNEL = 1514245022663315557
+STORY_THREAD_NAME = "campaign-stories"
+ACTIVE_TURN_MINUTES = 15
+ASYNC_TURN_HOURS = 12
+SOVEREIGN_CLASSES = ["barbarian","bard","cleric","druid","fighter","monk","paladin","ranger","rogue","sorcerer","warlock","wizard"]
 DM_SYSTEM_PROMPT = """You are the Dungeon Master for "Solis-Grave," a dark fantasy D&D 5e campaign set in a world where magic comes exclusively from draconic bloodlines and the Inquisition hunts anyone with unregistered purity.
 
 ## ⚠️ CRITICAL: ADAPTATION OVER IMPORTATION
@@ -602,22 +607,53 @@ class DMSessionCog(commands.Cog):
                 await interaction.followup.send(f"Solo campaign started in {channel.mention}. You are the Sovereign — your bloodline awaits.")
 
             else:
-                self.sessions[interaction.channel_id] = {
-                    "type": "group", "channel_id": interaction.channel_id, "history": [],
-                    "sovereign_assigned": False, "sovereign_user_id": None, "players": []
+                # Group session — create channel under DND category if not already
+                group_channel = interaction.channel
+                guild = interaction.guild
+                dnd_cat = guild.get_channel(1514244931324088461) if guild else None
+
+                if dnd_cat and interaction.channel.category_id != dnd_cat.id:
+                    await interaction.followup.send(
+                        f"**New group campaign!** Reply with a name for your campaign channel "
+                        f"(or type `here` to use this channel).\nFirst response sets the name. 30 seconds..."
+                    )
+                    try:
+                        name_msg = await self.bot.wait_for(
+                            'message',
+                            check=lambda m: m.channel.id == interaction.channel_id and not m.author.bot,
+                            timeout=30.0
+                        )
+                        ch_name = name_msg.content.strip()[:30].lower().replace(' ', '-')
+                        if ch_name and ch_name != "here" and not any(w in ch_name for w in ['fuck','shit','nigger']):
+                            group_channel = await guild.create_text_channel(name=ch_name, category=dnd_cat)
+                            await interaction.followup.send(f"Created {group_channel.mention} — let's move there!")
+                            await group_channel.send(embed=discord.Embed(title=f"Campaign: {name_msg.content[:50]}", description=f"Group campaign started by {interaction.user.mention}. All game actions go here.\nUse `/turn` to see whose turn it is.", color=0x8B0000))
+                    except asyncio.TimeoutError:
+                        await interaction.followup.send("No response — using this channel.")
+
+                turn_minutes = ACTIVE_TURN_MINUTES if "active" in mode else ASYNC_TURN_HOURS * 60
+                mode_label = "active" if "active" in mode else "async"
+
+                self.sessions[group_channel.id] = {
+                    "type": mode_label, "channel_id": group_channel.id, "history": [],
+                    "sovereign_assigned": False, "sovereign_user_id": None, "players": [],
+                    "turn_window": turn_minutes, "turn_queue": [], "current_turn": -1
                 }
                 self.supabase.table("dm_game_state").update({
-                    "session_active": True, "session_channel_id": interaction.channel_id,
-                    "session_type": "group", "campaign_status": "active"
+                    "session_active": True, "session_channel_id": group_channel.id,
+                    "session_type": f"group_{mode_label}", "campaign_status": "active"
                 }).eq("id", 1).execute()
 
-                embed = discord.Embed(
-                    title="Solis-Grave — Group Campaign Begins",
-                    description="Your party gathers before the Citadel of the Dragon-Garrison. One among you carries a dormant bloodline — a Sovereign, hidden and unknown. The Inquisition watches. The Old Tongue whispers. Your journey starts now.",
-                    color=0x8B0000
-                )
-                embed.set_footer(text="Type your actions. The DM narrates for all.")
-                await interaction.followup.send(embed=embed)
+                turn_label = f"{ACTIVE_TURN_MINUTES}min turns" if mode_label == "active" else f"{ASYNC_TURN_HOURS}hr play-by-post"
+                embed = discord.Embed(title=f"Group Campaign — {mode_label.title()}", description=f"**{turn_label}**. Use `/turn` to check the queue. `/ooc` to step out of character.", color=0x8B0000)
+                embed.set_footer(text="The Citadel awaits.")
+                await group_channel.send(embed=embed)
+                if group_channel.id != interaction.channel_id:
+                    await interaction.followup.send(f"Campaign ready in {group_channel.mention}.")
+                else:
+                    await interaction.followup.send(embed=embed)
+                await asyncio.sleep(1)
+                await group_channel.send("The iron gates of the Citadel groan shut behind you. Torchlight flickers against wet stone. The barracks buzz with news: Ferrum border patrol wounded, Ignis black banners sighted in the northern valleys. An Inquisitorial audit is rumored for the coming moon. Who acts first?")
 
         except Exception as e:
             await interaction.followup.send(f"Error starting session: {e}", ephemeral=True)
@@ -803,6 +839,10 @@ class DMSessionCog(commands.Cog):
         if message.author.bot:
             return
         self._reset_daily()
+
+        # Never write in the dice channel — read-only
+        if message.channel.id == DICE_CHANNEL_ID:
+            return
 
         # Respond to @mentions anywhere
         if self.bot.user and self.bot.user in message.mentions:
@@ -1182,6 +1222,20 @@ class DMSessionCog(commands.Cog):
                 "☠️ **Stream-safe mode OFF.**\n"
                 "Full grimdark restored. Foul language, graphic combat, and caste cruelty re-enabled."
             )
+
+    @app_commands.command(name="howto", description="Guide on how to use the DM bot properly")
+    async def howto_command(self, interaction: discord.Interaction):
+        embed = discord.Embed(title="📖 How to Use the DM Bot", color=0x006400)
+        embed.add_field(name="🎭 Starting a Campaign", value=f"`/session_start active` — Real-time group (15min turns)\n`/session_start async` — Play-by-post (12hr turns)\n`/session_start solo` — Solo campaign\nNew group channels are created under the D&D category and players name them.", inline=False)
+        embed.add_field(name="🧬 Creating a Character", value="`/create` — Choose guided creation or read the Player's Handbook.\n`/books` — View all reference books.\n`/character_mine` — Your sheet in DMs.", inline=False)
+        embed.add_field(name="🎲 Rolling Dice", value=f"<#{DICE_CHANNEL_ID}> is the dice channel. The bot reads rolls here but **never writes in it**. Use your dice bot in that channel — the DM reads the results silently.", inline=False)
+        embed.add_field(name="🗣️ In vs Out of Character", value="Type naturally for IC roleplay.\n`((OOC question))` or `/ooc` to ask the DM directly.\n`/ic` to return to roleplay.", inline=False)
+        embed.add_field(name="📊 Tracking Progress", value="`/xp` — Your level and XP.\n`/character_view <name>` — Any public sheet.\n`/recap` — Current session state.\n`/worldstate` — Full mechanical dump.", inline=False)
+        embed.add_field(name="📚 Reference", value="`/lore <query>` — Compendium search.\n`/bestiary <monster>` — Monster lookup.\n`/books` — All 5 reference books.\n`/help` — Command list.", inline=False)
+        embed.add_field(name="🎙️ Voice & Stream", value="`/dm_join` — Bot joins VC for TTS narration.\n`/stream on` / `off` — Stream-safe mode.\nGo Live auto-enables stream-safe.", inline=False)
+        embed.add_field(name="📝 After Sessions", value="I write session recaps for players.\nAfter a campaign ends, I generate a full story from real gameplay and post it in the `#campaign-stories` thread channel.", inline=False)
+        embed.set_footer(text="Tag me (@Kronikle) anywhere and I'll respond.")
+        await interaction.response.send_message(embed=embed, ephemeral=False)
 
 
 async def setup(bot: commands.Bot):

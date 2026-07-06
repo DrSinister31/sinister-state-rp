@@ -35,9 +35,12 @@ pre{background:#EDE5D8;border:1px solid #D4C5B0;padding:6pt;font-size:9pt;white-
 """
 
 def md_to_html(text: str, title: str) -> str:
-    """Convert markdown to a standalone HTML document."""
+    """Convert markdown to a standalone HTML document with auto-generated TOC."""
     lines = text.split('\n')
-    out = ['<h1>' + title + '</h1>', '<p class="subtitle">Solis-Grave — Official Reference</p>']
+    out = [f'<h1>{title}</h1>', '<p class="subtitle">Solis-Grave — Official Reference</p>']
+    
+    # Collect headings for TOC
+    toc = []
     in_list = False; in_table = False; in_code = False; first_h2 = True
     
     for line in lines:
@@ -51,10 +54,16 @@ def md_to_html(text: str, title: str) -> str:
         
         if s.startswith('# '): out.append(f'<h1>{_fmt(s[2:])}</h1>'); continue
         if s.startswith('## '):
-            out.append(f'<h2>{_fmt(s[3:])}</h2>')
-            if first_h2: out.append('<hr>'); first_h2 = False
+            anchor = _fmt(s[3:]).replace(' ','_').replace("'",'').lower()
+            toc.append(f'<li><a href="#{anchor}">{_fmt(s[3:])}</a></li>')
+            out.append(f'<h2 id="{anchor}">{_fmt(s[3:])}</h2>')
+            if first_h2: first_h2 = False
             continue
-        if s.startswith('### '): out.append(f'<h3>{_fmt(s[4:])}</h3>'); continue
+        if s.startswith('### '):
+            anchor = _fmt(s[4:]).replace(' ','_').replace("'",'').lower()
+            toc.append(f'<li style="padding-left:20px;"><a href="#{anchor}">{_fmt(s[4:])}</a></li>')
+            out.append(f'<h3 id="{anchor}">{_fmt(s[4:])}</h3>')
+            continue
         if s.startswith('#### '): out.append(f'<h4>{_fmt(s[5:])}</h4>'); continue
         
         if s == '---': out.append('<hr>'); continue
@@ -75,7 +84,7 @@ def md_to_html(text: str, title: str) -> str:
             out.append(f'<li>{_fmt(s[2:])}</li>'); continue
         elif s[0].isdigit() and '. ' in s[:4]:
             if not in_list: out.append('<ol>'); in_list = True
-            out.append(f'<li>{_fmt(s[s.index(". ")+2:])}</li>'); continue
+            out.append(f'<li>{_fmt(s[s.index('. ')+2:])}</li>'); continue
         elif in_list: out.append('</ul>' if '<ul>' in out[-5:] else '</ol>'); in_list = False
         
         out.append(f'<p>{_fmt(s)}</p>')
@@ -85,7 +94,12 @@ def md_to_html(text: str, title: str) -> str:
     if in_code: out.append('</pre>')
     
     body = '\n'.join(out)
-    return f'<!DOCTYPE html><html><head><meta charset="utf-8"><title>{title}</title><style>{STYLE}</style></head><body>{body}<hr><p style="text-align:center;color:#8B7355;font-size:9pt">Solis-Grave: Shadows of the Crown</p></body></html>'
+    
+    # Insert TOC after subtitle
+    toc_html = '<div class="toc"><h2 class="toctitle">Table of Contents</h2><ul>' + ''.join(toc[:50]) + '</ul></div>'
+    body = body.replace('<p class="subtitle">', f'<p class="subtitle">{toc_html}')
+    
+    return f'<!DOCTYPE html><html><head><meta charset="utf-8"><title>{title}</title><style>{STYLE}\n.toc{{background:#F5F0E8;border:1px solid #D4C5B0;padding:10pt;margin:10pt 0;font-size:10pt}}.toc ul{{list-style:none;padding:0}}.toc li{{padding:2pt 0;border-bottom:1px dotted #D4C5B0}}.toc a{{color:#8B0000;text-decoration:none}}.toc a:hover{{text-decoration:underline}}\n</style></head><body>{body}<hr><p style="text-align:center;color:#8B7355;font-size:9pt">Solis-Grave: Shadows of the Crown</p></body></html>'
 
 def _fmt(s: str) -> str:
     s = re.sub(r'\*\*\*(.+?)\*\*\*', r'<strong><em>\1</em></strong>', s)
