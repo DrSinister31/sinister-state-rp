@@ -11,3 +11,5 @@ name = "kronus-core"
 
 [variables]
 DM_MODE = "1"
+DM_WHISPER_ENABLED = "1"
+DM_WHISPER_MODEL = "tiny.en"
