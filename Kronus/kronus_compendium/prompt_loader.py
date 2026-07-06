@@ -3,7 +3,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from pathlib import Path
 
-PROMPT_DIR = Path(__file__).resolve().parent.parent.parent / "prompts" / "solis_grave"
+PROMPT_DIR = Path(__file__).resolve().parent.parent / "prompts" / "solis_grave"
 
 
 def load_prompt(name: str) -> str:
