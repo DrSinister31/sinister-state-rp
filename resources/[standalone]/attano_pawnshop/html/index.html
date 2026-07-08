@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pawn Shop</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="app" class="hidden">
+        <div class="panel">
+            <div class="topbar">
+                <div class="brand">
+                    <div class="brand-badge">💵</div>
+                    <div class="brand-text">
+                        <strong>Pawn Shop</strong>
+                        <span>Dashboard</span>
+                    </div>
+                </div>
+
+                <div class="window-actions">
+                    <div class="header-chip">24/7</div>
+                    <button id="closeBtn" class="close-btn">×</button>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div class="summary-bar">
+                    <div class="summary-card">
+                        <div class="label">Market</div>
+                        <div class="value">Pawn Shop</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="label">Category</div>
+                        <div class="value">All Items</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="label">Payout Mode</div>
+                        <div class="value">Cash</div>
+                    </div>
+                </div>
+
+                <div class="section-title">
+                    <div>
+                        <h2>Sell Inventory</h2>
+                        <p>Select an item type to instantly sell everything you’re carrying.</p>
+                    </div>
+                </div>
+
+                <div id="fishList" class="fish-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

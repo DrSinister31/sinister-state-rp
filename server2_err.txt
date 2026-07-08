@@ -1,0 +1,29 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8360
+ * Running on http://192.168.1.154:8360
+Press CTRL+C to quit
+127.0.0.1 - - [07/Jul/2026 14:24:31] "GET /socket.io/?EIO=4&transport=polling&t=Py-2W58 HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:24:31] "POST /socket.io/?EIO=4&transport=polling&t=Py-2WA8&sid=6mmIClT5oQOZi_lQAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:24:31] "GET /socket.io/?EIO=4&transport=polling&t=Py-2WA9&sid=6mmIClT5oQOZi_lQAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:24:31] "GET /socket.io/?EIO=4&transport=polling&t=Py-2WEv&sid=6mmIClT5oQOZi_lQAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:24:57] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:24:57] "GET /socket.io/?EIO=4&transport=websocket&sid=6mmIClT5oQOZi_lQAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:27:38] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:27:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:34:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:34:12] "GET /api/games HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:34:12] "GET /socket.io/?EIO=4&transport=polling&t=Py-4kAS HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:34:13] "GET /api/character/user_mrb1s4gr4m8m HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:34:13] "GET /socket.io/?EIO=4&transport=polling&t=Py-4kAb&sid=1zkoOUYrQa3v2F-oAAAC HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:34:13] "POST /socket.io/?EIO=4&transport=polling&t=Py-4kAa&sid=1zkoOUYrQa3v2F-oAAAC HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:36:32] "POST /api/character/create HTTP/1.1" 400 -
+C:\Users\Dilla\OneDrive\Desktop\Sinister_Project_Master\solis_grave_web\multiplayer_server.py:150: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "created": datetime.utcnow().isoformat()
+127.0.0.1 - - [07/Jul/2026 14:36:36] "POST /api/games HTTP/1.1" 200 -
+C:\Users\Dilla\OneDrive\Desktop\Sinister_Project_Master\solis_grave_web\multiplayer_server.py:226: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  socketio.emit('game_output', {"user": "dm", "text": f"*The Citadel gates groan open. Welcome, {name}.*", "time": datetime.utcnow().isoformat()}, room=gid)
+C:\Users\Dilla\OneDrive\Desktop\Sinister_Project_Master\solis_grave_web\multiplayer_server.py:204: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  entry = {"user": name or user_id, "text": text, "time": datetime.utcnow().isoformat()}
+C:\Users\Dilla\OneDrive\Desktop\Sinister_Project_Master\solis_grave_web\multiplayer_server.py:237: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  socketio.emit('game_output', {"user": "dm", "text": reply, "time": datetime.utcnow().isoformat()}, room=gid)

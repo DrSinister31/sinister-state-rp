@@ -42,7 +42,7 @@ RegisterNetEvent("sinister_clockin:receiveNodes", function(nodes)
     end
 end)
 
-AddEventHandler("QBCore:Client:OnPlayerLoaded", function()
+AddEventHandler("ox_lib:playerLoaded", function()
     TriggerServerEvent("sinister_clockin:requestNodes")
 end)
 

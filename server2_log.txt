@@ -1,0 +1,10 @@
+Solis-Grave Multiplayer Server
+  Discord Bot:  running on Railway
+  Web UI:       http://localhost:8360
+  Auth:         Supabase (email) + Discord (coming)
+  DM Engine:    DeepSeek v4-flash + local Mistral
+
+ * Serving Flask app 'multiplayer_server'
+ * Debug mode: off
+Client connected: g76VZJh6-ZonBkGcAAAB
+Client connected: 8fuSJsJDY-0qYU07AAAD

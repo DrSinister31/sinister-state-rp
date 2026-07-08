@@ -1,0 +1,210 @@
+.container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.75) 100%);
+  pointer-events: none;
+}
+
+.panel {
+  position: relative;
+  background: rgba(15, 15, 18, 0.945);
+  border: 0.0625rem solid #1e1e24;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.6), 0 0 0 0.0625rem rgba(255, 255, 255, 0.02);
+  padding: 1rem 1.1rem 0.95rem;
+  animation: panelIn 0.2s ease;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4.5rem;
+    background: radial-gradient(ellipse 90% 120% at 50% -20%, rgba(99, 102, 241, 0.12) 0%, transparent 65%);
+    pointer-events: none;
+  }
+}
+
+.head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #818cf8;
+  background: rgba(99, 102, 241, 0.1);
+  border: 0.0625rem solid rgba(99, 102, 241, 0.25);
+  padding: 0.25rem 0.6875rem;
+  border-radius: 3.125rem;
+}
+
+.diff {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+
+.card {
+  position: relative;
+  background: #0f0f12;
+  border: 0.0625rem solid #1e1e24;
+  border-radius: 0.625rem;
+  padding: 0.8rem;
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.barRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+}
+
+.barHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.barLabel {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #71717a;
+}
+
+.barValue {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #a5b4fc;
+  font-variant-numeric: tabular-nums;
+
+  &.danger {
+    color: #fca5a5;
+  }
+}
+
+.bar {
+  height: 0.3rem;
+  border-radius: 0.625rem;
+  background: #27272a;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 0.625rem;
+  background: #6366f1;
+  transition: width 0.12s linear, background 0.2s ease;
+}
+
+
+.hints {
+  display: flex; align-items: center;
+  justify-content: center; gap: .9rem;
+  margin-top: .75rem;
+  font-size: .66rem; font-weight: 500; color: #52525b;
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  white-space: nowrap;
+}
+
+.hintKey {
+  font-size: .6rem;
+  font-weight: 600;
+  color: #a1a1aa;
+  background: #18181b;
+  border: .0625rem solid #27272a;
+  border-radius: .375rem;
+  padding: 0.1rem 0.4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.resultOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(9, 9, 11, 0.9);
+  border-radius: 1rem;
+  z-index: 10;
+  animation: fadeIn 0.25s ease;
+}
+
+.resultCard {
+  text-align: center;
+}
+
+.resultTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+
+  &.ok {
+    color: #4ade80;
+  }
+
+  &.bad {
+    color: #fca5a5;
+  }
+}
+
+.resultSub {
+  margin-top: .3rem; font-size: .74rem; font-weight: 500; color: #71717a;
+}
+
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(0.4rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -383,6 +383,8 @@ end
 
 if GetResourceState('es_extended') == 'started' then
 	ESX = exports['es_extended']:getSharedObject()
+elseif GetResourceState('qbx_core') == 'started' then
+	QBCORE = { Functions = { GetPlayer = function(src) return exports['qbx_core']:GetPlayer(src) end, GetPlayerData = function() local p = exports['qbx_core']:GetPlayer(GetPlayerServerId(PlayerId())); return p and p.PlayerData or {} end, GetPlayerByCitizenId = function(id) return exports['qbx_core']:GetPlayerByCitizenId(id) or exports['qbx_core']:GetOfflinePlayer(id) end } }
 elseif GetResourceState('qb-core') == 'started' then
 	QBCORE = exports['qb-core']:GetCoreObject()
 end

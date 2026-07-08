@@ -971,7 +971,7 @@ RegisterNetEvent('renzu_motels:MessageOwner', function(data)
 end)
 
 Citizen.CreateThread(function()
-	while GlobalState.Motels == nil do Wait(1) end
+	local motelWait = 0; while GlobalState.Motels == nil and motelWait < 100 do Wait(100); motelWait = motelWait + 1; end; if GlobalState.Motels == nil then print('^1[sinister_motels] GlobalState.Motels timeout') end
     for motel, data in pairs(config.motels) do
         MotelZone(data)
     end

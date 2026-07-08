@@ -143,7 +143,10 @@ AddEventHandler("onResourceStart", function(resource)
     end
 end)
 
-AddEventHandler("QBCore:Server:PlayerUnloaded", function(player)
+AddEventHandler("playerDropped", function()
+    local src = source
+    local player = exports['qbx_core']:GetPlayer(src)
+    if not player then return end
     local cid = player.PlayerData.citizenid
     if rigWorkers[cid] then
         rigWorkers[cid] = nil

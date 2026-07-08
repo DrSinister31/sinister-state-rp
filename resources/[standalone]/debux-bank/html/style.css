@@ -1,0 +1,900 @@
+@font-face {
+  font-family: "Gilroy-Bold";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Gilroy-Bold"),
+    url(./font/Gilroy-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "agency_fb";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("agency_fb"),
+    url(./font/agency_fb.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Gilroy-Heavy";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Gilroy-Heavy"),
+    url(./font/Gilroy-Heavy.woff) format("woff");
+}
+@font-face {
+  font-family: "Gilroy-Light";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Gilroy-Light"),
+    url(./font/Gilroy-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Gilroy-Medium"),
+    url(./font/Gilroy-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Gilroy-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Gilroy-Regular"),
+    url(./font/Gilroy-Regular.woff) format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 56.25vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  user-select: none;
+}
+.bgLines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./img/bg-lines.png);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.topTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 1.25vw;
+  background: rgb(0 0 0 / 0.27);
+}
+.topTitle h2 {
+  color: #fff;
+  text-align: center;
+  font-family: "agency_fb";
+  font-size: 0.625vw;
+  font-weight: 700;
+  letter-spacing: 0.375vw;
+}
+.container {
+  width: 100vw;
+  height: 56.25vw;
+  z-index: -20;
+  animation: Opacity 0.5s ease-in-out;
+  background: linear-gradient(180deg, rgb(29 33 40 / 0.88) 0%, #13161b 100%);
+}
+.bankBoxMenu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.secondPage {
+  display: flex;
+  width: 62.8646vw;
+  height: 44.8958vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cardBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7292vw;
+}
+.cardLines {
+  position: absolute;
+  width: 19.2708vw;
+  height: 11.6146vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./img/card-lines.png);
+}
+.bankMenu {
+  display: flex;
+  animation: BottomSide 1s ease-in-out;
+  width: 63.8646vw;
+  height: 39.5vw;
+}
+.bankingCardBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 19.2708vw;
+  height: 11.6146vw;
+  border-radius: 0.2083vw;
+  background: rgb(255 255 255 / 0.05);
+}
+.bankingTopMenu {
+  display: flex;
+  gap: 1.2917vw;
+}
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+}
+.bankingCardTitle {
+  color: #fff;
+  font-family: Gilroy-Bold;
+  font-size: 1.0417vw;
+  font-weight: 700;
+  letter-spacing: 0.1042vw;
+}
+.userTitle {
+  color: #fff;
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+  letter-spacing: 0.0729vw;
+}
+.boxLine {
+  width: 3.125vw;
+  height: 2.3438vw;
+}
+.cardNumber {
+  width: 100%;
+  margin: 1.7188vw 0;
+  color: #fff;
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+  letter-spacing: 0.5031vw;
+}
+.userBankNumber {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.4063vw;
+}
+.balanceTitle {
+  color: #fff;
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+  letter-spacing: 0.0729vw;
+}
+.banksNumber {
+  color: #94e158;
+  font-family: Gilroy-Regular;
+  font-size: 1.0417vw;
+  font-weight: 500;
+  letter-spacing: 0.1042vw;
+}
+.cardLine {
+  position: relative;
+  width: 100%;
+  height: 0.1563vw;
+  top: 1.2938vw;
+  background: #94e158;
+  box-shadow: 0vw -0.0521vw 1.5469vw 0vw #94e158;
+}
+.depositBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375vw;
+  width: 19.3vw;
+  height: 7.5vw;
+  margin: 0.6771vw 0;
+}
+.depositMenuOne {
+  display: flex;
+  gap: 0.9375vw;
+  flex-wrap: wrap;
+}
+.depositMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 9.1667vw;
+  height: 3.0208vw;
+  padding: 0.5729vw 0vw;
+  border-radius: 0.2083vw;
+  background: rgb(255 255 255 / 0.05);
+  transition: 0.3s all;
+  cursor: pointer;
+}
+.depositMenu:hover {
+  transform: scale(1.03);
+}
+.depositNumber {
+  color: #fff;
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.8333vw;
+  font-weight: 500;
+}
+.depositTitle {
+  color: #94e158;
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+}
+.withdrawBox {
+  display: flex;
+  gap: 0.9375vw;
+}
+.withdrawMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 9.1667vw;
+  height: 3.0208vw;
+  padding: 0.5729vw 0vw;
+  border-radius: 0.2083vw;
+  background: rgb(255 255 255 / 0.05);
+  transition: 0.3s all;
+  cursor: pointer;
+}
+.withdrawMenu:hover {
+  transform: scale(1.03);
+}
+.withdrawNumber {
+  color: #fff;
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.8333vw;
+  font-weight: 500;
+}
+.withdrawTitle {
+  color: #e15858;
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+}
+.homeBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9375vw;
+  width: 19.4708vw;
+  height: 19.2188vw;
+  margin-top: -0.6771vw;
+}
+.homeMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 9vw;
+  height: 8.6vw;
+  border-radius: 0.2083vw;
+  background: rgb(255 255 255 / 0.05);
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.homeMenu:hover {
+  transform: scale(1.03);
+}
+.homeImg {
+  width: 4.1667vw;
+  height: 4.1667vw;
+  margin-top: -0.1458vw;
+  background-image: url(./img/home.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.homeTitle {
+  margin-top: 1vw;
+  color: #fff;
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.8333vw;
+  font-weight: 500;
+}
+.homeTitle span {
+  color: rgb(255 255 255 / 0.55);
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+}
+.withdrawMenuOne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 9.2vw;
+  height: 8.6vw;
+  border-radius: 0.2083vw;
+  background: rgb(255 255 255 / 0.05);
+  cursor: pointer;
+  transition: 0.3s all;
+  text-align: center;
+}
+.withdrawMenuOne:hover {
+  transform: scale(1.03);
+}
+.withdrawImg {
+  width: 5.3125vw;
+  height: 5.3125vw;
+  margin-top: -0.4813vw;
+  background-image: url(./img/withdraw.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.withdrawTitleOne {
+  color: #fff;
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.8333vw;
+  font-weight: 500;
+}
+.withdrawTitleOne span {
+  color: rgb(255 255 255 / 0.55);
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+}
+.depositMenuTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 9.2vw;
+  height: 8.6vw;
+  border-radius: 0.2083vw;
+  background: rgb(255 255 255 / 0.05);
+  cursor: pointer;
+  transition: 0.3s all;
+  text-align: center;
+}
+.depositMenuTwo:hover {
+  transform: scale(1.03);
+}
+.depositImg {
+  width: 5.7813vw;
+  height: 5.7813vw;
+  background-image: url(img/deposit.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.depositTitleOne {
+  color: #fff;
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.8333vw;
+  font-weight: 500;
+}
+.depositTitleOne span {
+  color: rgb(255 255 255 / 0.55);
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+}
+.transferMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 9.2vw;
+  height: 8.6vw;
+  border-radius: 0.2083vw;
+  background: rgb(255 255 255 / 0.05);
+  cursor: pointer;
+  transition: 0.3s all;
+  text-align: center;
+}
+.transferMenu:hover {
+  transform: scale(1.03);
+}
+.transferImg {
+  width: 4.9479vw;
+  height: 4.9479vw;
+  background-image: url(img/transfer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.transferTitle {
+  color: #fff;
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.8333vw;
+  font-weight: 500;
+}
+.transferTitle span {
+  color: rgb(255 255 255 / 0.55);
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+}
+.rightBox {
+  width: 41.4063vw;
+  height: 38.9063vw;
+  margin: 0 2.2917vw;
+}
+.rightTopMenu {
+  display: flex;
+  gap: 0.5729vw;
+}
+.bankingBalanceBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 13.4375vw;
+  height: 16.0938vw;
+  border-radius: 0.2083vw;
+  border: 0.0521vw solid rgb(255 255 255 / 0.15);
+  background: radial-gradient(
+    85.46% 113.8% at 50% 50%,
+    rgb(255 255 255 / 0.1) 0%,
+    #fff0 100%
+  );
+}
+.statisticsBox {
+  width: 27.3958vw;
+  height: 16.0938vw;
+  border-radius: 0.2083vw;
+  border: 0.0521vw solid rgb(255 255 255 / 0.15);
+  background: radial-gradient(
+    85.46% 113.8% at 50% 50%,
+    rgb(255 255 255 / 0.1) 0%,
+    #fff0 100%
+  );
+}
+.bankingBalanceTitle {
+  margin-top: 0.5333vw;
+  color: #fff;
+  font-family: Gilroy-Light;
+  font-size: 0.8333vw;
+  font-weight: 600;
+}
+.bankingBalanceNumber {
+  margin: 2.1875vw 0;
+  color: #94e158;
+  font-family: Gilroy-Medium;
+  font-size: 1.6667vw;
+  font-weight: 500;
+}
+.bankingBalanceImg {
+  position: absolute;
+  width: 13.4375vw;
+  height: 16.0938vw;
+  background-image: url(img/pngwing2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.statisticsTitle {
+  padding: 0.8333vw 1.0417vw;
+  color: #fff;
+  font-family: Gilroy-Light;
+  font-size: 0.8333vw;
+  font-weight: 600;
+}
+.transactionBox {
+  width: 41.3542vw;
+  height: 21.875vw;
+  margin-top: 0.9375vw;
+  border-radius: 0.2083vw;
+  background: rgb(255 255 255 / 0.05);
+}
+.transactionTitle {
+  padding: 0.8854vw 1.0417vw;
+  color: #fff;
+  font-family: Gilroy-Light;
+  font-size: 0.8333vw;
+  font-weight: 600;
+}
+.amountBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5729vw;
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 39.375vw;
+  height: 17.3958vw;
+  margin: -0.1vw 0.9375vw;
+}
+.typeDepositBox {
+  width: 100%;
+  min-height: 3.0208vw;
+  padding: 0.2083vw;
+  border-radius: 0.1042vw;
+  background: linear-gradient(
+    90deg,
+    rgb(255 255 255 / 0.1) 0%,
+    rgb(255 255 255 / 0.02) 100%
+  );
+}
+.box {
+  width: 0.2604vw;
+  height: 0.2604vw;
+  background: #94e158;
+  box-shadow: 0vw 0vw 0.4531vw 0vw #94e158;
+}
+.typeMenu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.35vw;
+}
+.depositBoxOne {
+  display: flex;
+  gap: 1.0417vw;
+}
+.depositImgTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.4729vw;
+  width: 1.875vw;
+  height: 1.875vw;
+  border-radius: 0.1042vw;
+  background: rgb(0 0 0 / 0.13);
+}
+.typeImg {
+  width: 0.8333vw;
+  height: 0.8333vw;
+  background-image: url(img/Frame47.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.depositTitleTwo {
+  color: rgb(255 255 255 / 0.55);
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+}
+.depositTitleTwo span {
+  color: #fff;
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+}
+.timeTitle {
+  color: rgb(255 255 255 / 0.55);
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+}
+.timeTitle span {
+  color: #fff;
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+}
+.amountTitle {
+  color: rgb(255 255 255 / 0.55);
+  text-align: right;
+  margin-right: 0.5vw;
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+}
+.amountTitle span {
+  color: #fff;
+  text-align: right;
+  font-family: Gilroy-Medium;
+  font-size: 0.7292vw;
+  font-weight: 500;
+}
+.muchBoxMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.muchBox {
+  width: 30.2083vw;
+  height: 49.7917vw;
+  background: linear-gradient(180deg, rgb(148 225 88 / 0.15) 0%, #fff0 100%);
+}
+.muchMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.depositTopBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2604vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deposittitle {
+  color: #fff;
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 1.6667vw;
+  font-weight: 500;
+}
+.moneyBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.4375vw;
+  height: 1.3021vw;
+  border-radius: 0.9896vw;
+  background: #94e158;
+}
+.moneyBox span {
+  color: rgb(0 0 0 / 0.49);
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.625vw;
+  font-weight: 500;
+}
+.moneyLorem {
+  width: 17.8125vw;
+  margin: 0.5729vw 0;
+}
+.moneyLorem p {
+  color: rgb(255 255 255 / 0.55);
+  text-align: center;
+  font-family: Gilroy-Light;
+  font-size: 0.625vw;
+  font-weight: 400;
+  line-height: 1.0938vw;
+}
+.howeMuchBtnBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375vw;
+}
+.howeMuchInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17.2917vw;
+  height: 4.2188vw;
+  border-radius: 0.1563vw;
+  border: 0.0521vw solid rgb(255 255 255 / 0.24);
+  background: rgb(255 255 255 / 0.12);
+}
+.howeMuchInput input {
+  background-color: #fff0;
+  border: none;
+  outline: none;
+  color: #fff;
+  text-align: center;
+  font-family: Gilroy-Light;
+  font-size: 0.625vw;
+  font-weight: 400;
+  line-height: 1.0938vw;
+}
+::placeholder {
+  color: #fff;
+}
+.depositBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17.2917vw;
+  height: 2.6042vw;
+  border-radius: 0.1563vw;
+  background: #94e158;
+  cursor: pointer;
+}
+.depositBtn span {
+  color: rgb(0 0 0 / 0.49);
+  text-align: center;
+  font-family: Gilroy-Bold;
+  font-size: 0.625vw;
+  font-weight: 500;
+}
+.backBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17.2917vw;
+  height: 2.6042vw;
+  border-radius: 0.1563vw;
+  background: #ffffff5d;
+  cursor: pointer;
+}
+.backBtn span {
+  color: rgb(0 0 0 / 0.49);
+  text-align: center;
+  font-family: Gilroy-Bold;
+  font-size: 0.625vw;
+  font-weight: 500;
+}
+.withdrawBox {
+  width: 30.2083vw;
+  height: 49.7917vw;
+}
+.withdrawMuchMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.withdrawTitleBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.4375vw;
+  height: 1.3021vw;
+  border-radius: 0.9896vw;
+  background: #e15858;
+}
+.withdrawtitle {
+  color: #fff;
+  text-align: center;
+  font-family: Gilroy-Light;
+  font-size: 1.6667vw;
+  font-weight: 500;
+}
+.withdrawTitleBox span {
+  color: rgb(0 0 0 / 0.49);
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.625vw;
+  font-weight: 500;
+}
+.withdrawBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17.2917vw;
+  height: 2.6042vw;
+  border-radius: 0.1563vw;
+  background: #e15858;
+  cursor: pointer;
+}
+.withdrawBtn span {
+  color: rgb(0 0 0 / 0.49);
+  text-align: center;
+  font-family: Gilroy-Bold;
+  font-size: 0.625vw;
+  font-weight: 500;
+}
+.withdrawBoxOne {
+  width: 30.2083vw;
+  height: 49.7917vw;
+  background: linear-gradient(180deg, rgb(88 102 225 / 0.15) 0%, #fff0 100%);
+}
+.withdrawTransferBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17.2917vw;
+  height: 2.6042vw;
+  border-radius: 0.1563vw;
+  background: #5866e1;
+  cursor: pointer;
+}
+.withdrawTransferBtn span {
+  color: rgb(0 0 0 / 0.49);
+  text-align: center;
+  font-family: Gilroy-Bold;
+  font-size: 0.625vw;
+  font-weight: 500;
+}
+.withdrawTitleBoxOne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.4375vw;
+  height: 1.3021vw;
+  border-radius: 0.9896vw;
+  background: #5866e1;
+}
+.withdrawTitleBoxOne span {
+  color: rgb(0 0 0 / 0.49);
+  text-align: center;
+  font-family: Gilroy-Light;
+  font-size: 0.625vw;
+  font-weight: 500;
+}
+.withdrawpage {
+  background: linear-gradient(180deg, #e1585815 0%, #fff0 100%);
+}
+.StaticsMenu {
+  width: 98%;
+  height: 78%;
+  margin-left: 7.2%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(./img/statics.svg);
+}
+.Statics {
+  width: 88%;
+  height: 87%;
+  display: flex;
+}
+.Static {
+  width: 1.85vw;
+  height: 98.6%;
+  margin-left: 2.395vw;
+  background: linear-gradient(180deg, #fff0 0%, rgb(255 255 255 / 0.14) 100%);
+}
+.Static:nth-child(1) {
+  margin-left: 0.18vw;
+}
+.Static:nth-child(3) {
+  margin-left: 2.405vw;
+}
+.Static:nth-child(5) {
+  margin-left: 2.355vw;
+}
+.StaticText {
+  color: #fff;
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 0.45114583333333334vw;
+  font-style: normal;
+  line-height: normal;
+  overflow: hidden;
+  margin-top: 5vw;
+  width: 180%;
+  margin-left: -0.75vw;
+}
+.StaticText p {
+  background: #fff;
+  box-shadow: 0 0 0.2vw 0 #fff;
+  width: 0.35vw;
+  height: 0.35vw;
+  margin-left: 1.5vw;
+  margin-top: 0.19vw;
+}
+@keyframes BottomSide {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes Opacity {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

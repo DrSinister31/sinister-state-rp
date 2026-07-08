@@ -1,0 +1,133 @@
+.statusRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.circuits {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.circuitDot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: #3f3f46;
+  transition: background 0.2s ease;
+
+  &.circuitActive {
+    background: #818cf8;
+  }
+
+  &.circuitDone {
+    background: #22c55e;
+  }
+}
+
+.circuitLabel {
+  margin-left: 0.3rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  color: #a5b4fc;
+  font-variant-numeric: tabular-nums;
+}
+
+.fuses {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.fuse {
+  width: 0.85rem;
+  height: 0.4rem;
+  border-radius: 0.2rem;
+  background: #6366f1;
+  transition: background 0.25s ease, border-color 0.25s ease;
+  border: 0.0625rem solid transparent;
+
+  &.fuseBlown {
+    background: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.35);
+  }
+}
+
+.track {
+  position: relative;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background: #18181b;
+  border: 0.0625rem solid #27272a;
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 0.18rem;
+    background: #3f3f46;
+  }
+
+  &.bridged {
+    border-color: rgba(74, 222, 128, 0.6);
+  }
+}
+
+.zone {
+  position: absolute;
+  top: 0.26rem;
+  bottom: 0.26rem;
+  border-radius: 0.3rem;
+  background: rgba(99, 102, 241, 0.28);
+  border: 0.0625rem solid rgba(99, 102, 241, 0.6);
+}
+
+.cursor {
+  position: absolute;
+  top: 0.14rem;
+  bottom: 0.14rem;
+  width: 0.24rem;
+  transform: translateX(-50%);
+  border-radius: 0.12rem;
+  background: #f8fafc;
+  z-index: 2;
+}
+
+.spark {
+  position: absolute;
+  top: 50%;
+  width: 1.3rem;
+  height: 1.3rem;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(254, 226, 226, 0.9) 0%, rgba(239, 68, 68, 0.5) 40%, transparent 70%);
+  animation: sparkBurst 0.35s ease-out forwards;
+  pointer-events: none;
+  z-index: 3;
+}
+
+@keyframes sparkBurst {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+
+  60% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.7);
+  }
+}

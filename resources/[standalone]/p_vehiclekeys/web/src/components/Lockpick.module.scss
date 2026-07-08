@@ -1,0 +1,150 @@
+.shake {
+  animation: lockShake 0.28s ease-in-out;
+}
+
+.chamberArea {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.chambers {
+  display: flex;
+  gap: .55rem;
+}
+
+.shearLine {
+  position: absolute;
+  left: -.45rem;
+  right: -.45rem;
+  height: 0;
+  border-top: .0938rem dashed #52525b;
+  z-index: 3;
+  pointer-events: none;
+  transition: border-color 0.1s ease;
+
+  &.shearAligned {
+    border-color: #4ade80;
+  }
+}
+
+.chamber {
+  position: relative;
+  width: 2.3rem;
+  height: 9.5rem;
+  background: #18181b;
+  border: .0625rem solid #27272a;
+  border-radius: .4375rem;
+  opacity: 0.45;
+  transition: opacity 0.2s ease, border-color 0.15s ease, background 0.15s ease;
+
+  &.active {
+    opacity: 1;
+    border-color: rgba(99, 102, 241, 0.5);
+  }
+
+  &.nearZone {
+    border-color: rgba(251, 191, 36, 0.6);
+    background: rgba(251, 191, 36, 0.04);
+  }
+
+  &.inZone {
+    border-color: rgba(74, 222, 128, 0.65);
+    background: rgba(74, 222, 128, 0.05);
+  }
+
+  &.set {
+    opacity: 0.75;
+    border-color: rgba(34, 197, 94, 0.35);
+  }
+}
+
+.spring {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.05rem;
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent 0 0.16rem,
+    #3f3f46 0.16rem 0.27rem
+  );
+  border-radius: 0.125rem;
+}
+
+.driverPin {
+  position: absolute;
+  left: .26rem;
+  right: .26rem;
+  background: #52525b;
+  border-radius: .125rem .125rem .0625rem .0625rem;
+}
+
+.keyPin {
+  position: absolute;
+  left: .26rem;
+  right: .26rem;
+  background: #6366f1;
+  border-radius: .0625rem .0625rem .125rem .125rem;
+  transition: background 0.15s ease;
+
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 100%, 0 78%);
+
+  &.keyPinZone {
+    background: #4ade80;
+  }
+
+  &.keyPinSet {
+    background: #22c55e;
+  }
+}
+
+.pickShaft {
+  position: absolute;
+  left: -.8rem;
+  bottom: -.65rem;
+  height: .2rem;
+  background: #71717a;
+  border-radius: .1rem;
+  transition: width .25s ease;
+}
+
+.pickTip {
+  position: absolute;
+  bottom: -.65rem;
+  width: .2rem;
+  background: #71717a;
+  border-radius: .1rem .1rem 0 0;
+  transition: left .25s ease;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: .45rem;
+  margin-top: .85rem;
+}
+
+.dot {
+  width: .4rem;
+  height: .4rem;
+  border-radius: 50%;
+  background: #3f3f46;
+  transition: background 0.2s ease;
+
+  &.dotActive {
+    background: #818cf8;
+  }
+
+  &.dotSet {
+    background: #22c55e;
+  }
+}
+
+@keyframes lockShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-0.28rem); }
+  40% { transform: translateX(0.22rem); }
+  60% { transform: translateX(-0.16rem); }
+  80% { transform: translateX(0.1rem); }
+}

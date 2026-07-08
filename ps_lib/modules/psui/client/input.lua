@@ -7,6 +7,7 @@ RegisterNUICallback('submitForm', function(data, cb)
         p = nil
         isBusy = false
     end
+    cb('ok')
 end)
 
 -- @param type string

@@ -57,15 +57,16 @@ local function pullCommands()
     end
 end
 
-RegisterNetEvent("QBCore:Server:PlayerLoaded", function(player)
+AddEventHandler("playerJoining", function()
     local src = source
+    Wait(1000)
     local ply = exports["qbx_core"]:GetPlayer(src)
     if ply then
         pushPlayerData(ply.PlayerData.citizenid)
     end
 end)
 
-RegisterNetEvent("QBCore:Server:PlayerUnloaded", function(player)
+AddEventHandler("playerDropped", function()
     local src = source
     local ply = exports["qbx_core"]:GetPlayer(src)
     if ply then

@@ -1,0 +1,15 @@
+RegisterServerEvent("phormalist_superheroes:setEntityInvisible")
+AddEventHandler("phormalist_superheroes:setEntityInvisible", function(playerPedId)
+    TriggerClientEvent("phormalist_superheroes:getEntityInvisible", -1, playerPedId)
+end)
+
+RegisterServerEvent("phormalist_superheroes:sendWaveParticles")
+AddEventHandler("phormalist_superheroes:sendWaveParticles", function(ped)
+    TriggerClientEvent("phormalist_superheroes:syncParticles", -1, ped)
+    TriggerClientEvent("phormalist_superheroes:superun", source, ped)
+end)
+
+RegisterServerEvent("phormalist_superheroes:quitEntityInvisible")
+AddEventHandler("phormalist_superheroes:quitEntityInvisible", function(ped)
+    TriggerClientEvent("phormalist_superheroes:quitEntityInvisibleC", -1, ped)
+end)

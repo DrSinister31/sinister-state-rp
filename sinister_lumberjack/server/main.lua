@@ -181,9 +181,11 @@ RegisterNetEvent("sinister_lumberjack:shareXPSync", function(leaderId, xpAmount)
     end
 end)
 
-AddEventHandler("QBCore:Server:PlayerUnloaded", function(player)
+AddEventHandler("playerDropped", function()
+    local src = source
+    local player = exports['qbx_core']:GetPlayer(src)
+    if not player then return end
     local cid = player.PlayerData.citizenid
-    local src = player.PlayerData.source
     for leader, crew in pairs(activeCrews) do
         for i, mid in ipairs(crew) do
             if mid == src then table.remove(crew, i); break end

@@ -59,16 +59,20 @@ end
 exports('openCrafter', openCrafter)
 
 RegisterNUICallback('craftItem', function(data, cb)
+    local ok = true
     if data.minigame then
-        if not ps.minigame(data.minigame.type, data.minigame.data) then
-           return
-        end
+        ok = ps.minigame(data.minigame.type, data.minigame.data)
     end
-    if not ps.progressbar('Crafting ' .. ps.getLabel(data.item), data.time, data.anim) then return end
-    TriggerServerEvent('ps_lib:craftItem',  data, {script = script, location = location, zone = zoned})
+    if ok then
+        ok = ps.progressbar('Crafting ' .. ps.getLabel(data.item), data.time, data.anim)
+    end
+    if ok then
+        TriggerServerEvent('ps_lib:craftItem', data, {script = script, location = location, zone = zoned})
+    end
     zoned = nil
     location = nil
     script = nil
+    cb(ok and 'ok' or 'cancel')
 end)
 
 local function canInteract(checkData)

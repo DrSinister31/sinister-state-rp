@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="display: none">
+    <div class="bgLines"></div>
+    <div class="container">
+      <div class="topTitle"><h2>LOS SANTOS BANKING SYSTEM</h2></div>
+      <div class="bankBoxMenu" style="display: none">
+        <div class="bankBox">
+          <div class="bankMenu">
+            <div class="leftBox">
+              <div class="bankingCardBox">
+                <div class="bankingCardMenu">
+                  <div class="bankingTopMenu">
+                    <div class="cardTitle">
+                      <div class="bankingCardTitle">BANKING CARD #1</div>
+                      <div class="userTitle">Romario Richardson</div>
+                    </div>
+                    <div class="boxLine"></div>
+                  </div>
+                  <div class="cardNumber">3333 3333 6666 6666</div>
+                  <div class="userBankNumber">
+                    <div class="balanceTitle">Balance</div>
+                    <div class="banksNumber">$987.547.000</div>
+                  </div>
+                </div>
+                <div class="cardLines"></div>
+                <div class="cardLine"></div>
+              </div>
+              <div class="depositBox">
+                <div class="depositMenuOne">
+                  <div class="depositMenu" onclick="First(`deposit`, 100)">
+                    <div class="depositNumber">$100</div>
+                    <div class="depositTitle">Deposit</div>
+                  </div>
+                  <div class="depositMenu" onclick="First(`deposit`, 1000)">
+                    <div class="depositNumber">$1000</div>
+                    <div class="depositTitle">Deposit</div>
+                  </div>
+                </div>
+                <div class="withdrawBox">
+                  <div class="withdrawMenu" onclick="First(`withdraw`, 100)">
+                    <div class="withdrawNumber">$100</div>
+                    <div class="withdrawTitle">Withdraw</div>
+                  </div>
+                  <div class="withdrawMenu" onclick="First(`withdraw`, 1000)">
+                    <div class="withdrawNumber">$1000</div>
+                    <div class="withdrawTitle">Withdraw</div>
+                  </div>
+                </div>
+              </div>
+              <div class="homeBox">
+                <div class="homeMenu">
+                  <div class="homeImg"></div>
+                  <div class="homeTitle">
+                    HOME <br />
+                    <span>Page</span>
+                  </div>
+                </div>
+                <div class="withdrawMenuOne" onclick="OpenMenu(`Withdraw`)">
+                  <div class="withdrawImg"></div>
+                  <div class="withdrawTitleOne">
+                    WITHDRAW <br />
+                    <span>Page</span>
+                  </div>
+                </div>
+                <div class="depositMenuTwo" onclick="OpenMenu(`Deposit`)">
+                  <div class="depositImg"></div>
+                  <div class="depositTitleOne">
+                    DEPOSIT <br />
+                    <span>Page</span>
+                  </div>
+                </div>
+                <div class="transferMenu" onclick="OpenMenu(`Transfer`)">
+                  <div class="transferImg"></div>
+                  <div class="transferTitle">
+                    TRANSFER <br />
+                    <span>Page</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rightBox">
+              <div class="rightTopMenu">
+                <div class="bankingBalanceBox">
+                  <div class="bankingBalanceTitle">TOTAL BANKING BALANCE</div>
+                  <div class="bankingBalanceNumber">$987.547.000</div>
+                  <div class="bankingBalanceImg"></div>
+                </div>
+                <div class="statisticsBox">
+                  <div class="statisticsTitle">STATISTICS</div>
+                  <div class="StaticsMenu">
+                    <div class="Statics">
+                      <div class="Static number1">
+                        <div class="StaticText">
+                          $45000
+                          <p></p>
+                        </div>
+                      </div>
+                      <div class="Static number2">
+                        <div class="StaticText">
+                          $45000
+                          <p></p>
+                        </div>
+                      </div>
+                      <div class="Static number3">
+                        <div class="StaticText">
+                          $45000
+                          <p></p>
+                        </div>
+                      </div>
+                      <div class="Static number4">
+                        <div class="StaticText">
+                          $45000
+                          <p></p>
+                        </div>
+                      </div>
+                      <div class="Static number5">
+                        <div class="StaticText">
+                          $45000
+                          <p></p>
+                        </div>
+                      </div>
+                      <div class="Static number6">
+                        <div class="StaticText">
+                          $45000
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="transactionBox">
+                <div class="transactionTitle">TRANSACTIONS <br />HISTORY</div>
+                <div class="amountBox"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="muchBoxMenu">
+        <div class="muchBox depositpage" style="display: none">
+          <div class="muchMenu">
+            <div class="depositTopBox">
+              <div class="deposittitle">DEPOSIT</div>
+              <div class="moneyBox"><span>MONEY</span></div>
+            </div>
+            <div class="moneyLorem">
+              <p>
+                Jorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
+                interdum tellus elit sed risus. Maecenas
+              </p>
+            </div>
+            <div class="howeMuchBtnBox">
+              <div class="howeMuchInput">
+                <input id="depositCount" type="number" placeholder="How much" />
+              </div>
+              <div class="depositBtn" onclick="Process(`deposit`)">
+                <span>Deposit</span>
+              </div>
+              <div class="backBtn" onclick="OpenMenu(`Main`)">
+                <span>Back</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="withdrawBox withdrawpage" style="display: none">
+          <div class="withdrawMuchMenu">
+            <div class="depositTopBox">
+              <div class="withdrawtitle">WITHDRAW</div>
+              <div class="withdrawTitleBox"><span>MONEY</span></div>
+            </div>
+            <div class="moneyLorem">
+              <p>
+                Jorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
+                interdum tellus elit sed risus. Maecenas
+              </p>
+            </div>
+            <div class="howeMuchBtnBox">
+              <div class="howeMuchInput">
+                <input
+                  id="withdrawCount"
+                  type="number"
+                  placeholder="How much"
+                />
+              </div>
+              <div class="withdrawBtn" onclick="Process(`withdraw`)">
+                <span>Withdraw</span>
+              </div>
+              <div class="backBtn" onclick="OpenMenu(`Main`)">
+                <span>Back</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="withdrawBoxOne transferpage" style="display: none">
+          <div class="withdrawMuchMenu">
+            <div class="depositTopBox">
+              <div class="withdrawtitle">TRANSFER</div>
+              <div class="withdrawTitleBoxOne"><span>MONEY</span></div>
+            </div>
+            <div class="moneyLorem">
+              <p>
+                Jorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
+                interdum tellus elit sed risus. Maecenas
+              </p>
+            </div>
+            <div class="howeMuchBtnBox">
+              <div class="howeMuchInput">
+                <input
+                  id="CountTransfer"
+                  type="number"
+                  placeholder="How much"
+                />
+              </div>
+              <div class="howeMuchInput">
+                <input
+                  id="idTransfer"
+                  type="number"
+                  placeholder="Who will receive"
+                />
+              </div>
+              <div class="withdrawTransferBtn" onclick="Process(`transfer`)">
+                <span>Transfer</span>
+              </div>
+              <div class="backBtn" onclick="OpenMenu(`Main`)">
+                <span>Back</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+  <script src="./js.js"></script>
+</html>

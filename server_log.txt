@@ -1,0 +1,42 @@
+Solis-Grave Multiplayer Server
+  Discord Bot:  running on Railway
+  Web UI:       http://localhost:8360
+  Auth:         Supabase (email) + Discord (coming)
+  DM Engine:    DeepSeek v4-flash + local Mistral
+
+ * Serving Flask app 'multiplayer_server'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8360
+ * Running on http://192.168.1.154:8360
+Press CTRL+C to quit
+127.0.0.1 - - [07/Jul/2026 14:22:32] "GET /socket.io/?EIO=4&transport=polling&t=Py-22df HTTP/1.1" 200 -
+Client connected: aLvMVSQhEwBDBwVkAAAB
+127.0.0.1 - - [07/Jul/2026 14:22:32] "POST /socket.io/?EIO=4&transport=polling&t=Py-238g&sid=LTnT82a8arGRy4-sAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:22:32] "GET /socket.io/?EIO=4&transport=polling&t=Py-238g.0&sid=LTnT82a8arGRy4-sAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:22:32] "GET /socket.io/?EIO=4&transport=polling&t=Py-23DV&sid=LTnT82a8arGRy4-sAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:22:35] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Jul/2026 14:22:35] "GET /socket.io/?EIO=4&transport=websocket&sid=LTnT82a8arGRy4-sAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:22:40] "GET /socket.io/?EIO=4&transport=polling&t=Py-253y HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:22:40] "GET /api/character/user_mrb1da0rrt3f HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:22:40] "GET /api/games HTTP/1.1" 200 -
+Client connected: jTZEbtDmFceZQFiHAAAD
+127.0.0.1 - - [07/Jul/2026 14:22:40] "POST /socket.io/?EIO=4&transport=polling&t=Py-2540&sid=bTszm2QfztDrQ9gnAAAC HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:22:40] "GET /socket.io/?EIO=4&transport=polling&t=Py-2540.0&sid=bTszm2QfztDrQ9gnAAAC HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:22:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:23:12] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [07/Jul/2026 14:23:12] "GET /socket.io/?EIO=4&transport=websocket&sid=bTszm2QfztDrQ9gnAAAC HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:23:17] "GET /api/character/user_mrb1e2svn429 HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:23:17] "GET /socket.io/?EIO=4&transport=polling&t=Py-2EAm HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:23:17] "GET /api/games HTTP/1.1" 200 -
+Client connected: LIdcs4ZUgAZ3k5eBAAAF
+127.0.0.1 - - [07/Jul/2026 14:23:17] "POST /socket.io/?EIO=4&transport=polling&t=Py-2EAu&sid=y9z84FMz08g4fs_1AAAE HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:23:17] "GET /socket.io/?EIO=4&transport=polling&t=Py-2EAu.0&sid=y9z84FMz08g4fs_1AAAE HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:23:18] "GET /socket.io/?EIO=4&transport=polling&t=Py-2EFf&sid=y9z84FMz08g4fs_1AAAE HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jul/2026 14:23:34] "POST /api/character/create HTTP/1.1" 400 -
+C:\Users\Dilla\OneDrive\Desktop\Sinister_Project_Master\solis_grave_web\multiplayer_server.py:139: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "created": datetime.utcnow().isoformat()
+127.0.0.1 - - [07/Jul/2026 14:23:41] "POST /api/games HTTP/1.1" 200 -
+C:\Users\Dilla\OneDrive\Desktop\Sinister_Project_Master\solis_grave_web\multiplayer_server.py:215: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  socketio.emit('game_output', {"user": "dm", "text": f"*The Citadel gates groan open. Welcome, {name}.*", "time": datetime.utcnow().isoformat()}, room=gid)

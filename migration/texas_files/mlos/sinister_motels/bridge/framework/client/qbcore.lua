@@ -26,8 +26,10 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     local data = json.decode(login)
     LocalPlayer.state:set('inshell',true,true)
     LocalPlayer.state:set('lastloc',data.lastloc,false)
-    DoScreenFadeOut(0)
-	EnterShell(data,true)
+    if data and data.coords then
+        DoScreenFadeOut(0)
+        EnterShell(data,true)
+    end
 end)
 
 RegisterNetEvent('QBCore:Client:OnJobUpdate', function(job)
