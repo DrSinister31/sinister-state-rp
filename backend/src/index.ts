@@ -672,6 +672,13 @@ client.on('interactionCreate', async (interaction) => {
       const val = interaction.options.getNumber('value', true);
       const steamId = await resolveTarget(targetInput);
       if (!steamId) return interaction.followUp(`❌ Could not resolve target: \`${targetInput}\`.`);
+      
+      const survivalStats = ['health', 'stamina', 'hunger', 'thirst', 'bleed', 'blood'];
+      if (survivalStats.includes(stat.toLowerCase())) {
+        const res = await runRcon(`heal ${steamId}`);
+        return interaction.followUp(`RCON: \`heal ${steamId}\` -> \`${res}\` (Note: Evrima RCON doesn't support individual stat setting; full stats refilled via heal).`);
+      }
+      
       const res = await runRcon(`Set ${steamId} ${stat} ${val}`);
       return interaction.followUp(`RCON: \`Set ${steamId} ${stat} ${val}\` -> \`${res}\``);
     }
