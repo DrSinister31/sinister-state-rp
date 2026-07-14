@@ -643,8 +643,8 @@ client.on('interactionCreate', async (interaction) => {
       const val = interaction.options.getNumber('value', true);
       const steamId = await resolveTarget(targetInput);
       if (!steamId) return interaction.followUp(`❌ Could not resolve target: \`${targetInput}\`.`);
-      const res = await runRcon(`setgrowth ${steamId} ${val}`);
-      return interaction.followUp(`RCON: \`setgrowth ${steamId} ${val}\` -> \`${res}\``);
+      const res = await runRcon(`Set ${steamId} Growth ${val}`);
+      return interaction.followUp(`RCON: \`Set ${steamId} Growth ${val}\` -> \`${res}\``);
     }
 
     // 27. Pause Growth
@@ -652,8 +652,8 @@ client.on('interactionCreate', async (interaction) => {
       const targetInput = interaction.options.getString('target', true);
       const steamId = await resolveTarget(targetInput);
       if (!steamId) return interaction.followUp(`❌ Could not resolve target: \`${targetInput}\`.`);
-      const res = await runRcon(`pausegrowth ${steamId}`);
-      return interaction.followUp(`RCON: \`pausegrowth ${steamId}\` -> \`${res}\``);
+      const res = await runRcon(`Set ${steamId} GrowthPause 1`);
+      return interaction.followUp(`RCON: \`Set ${steamId} GrowthPause 1\` -> \`${res}\``);
     }
 
     // 28. Resume Growth
@@ -661,8 +661,8 @@ client.on('interactionCreate', async (interaction) => {
       const targetInput = interaction.options.getString('target', true);
       const steamId = await resolveTarget(targetInput);
       if (!steamId) return interaction.followUp(`❌ Could not resolve target: \`${targetInput}\`.`);
-      const res = await runRcon(`resumegrowth ${steamId}`);
-      return interaction.followUp(`RCON: \`resumegrowth ${steamId}\` -> \`${res}\``);
+      const res = await runRcon(`Set ${steamId} GrowthPause 0`);
+      return interaction.followUp(`RCON: \`Set ${steamId} GrowthPause 0\` -> \`${res}\``);
     }
 
     // 29. Set Stat
