@@ -1,0 +1,26 @@
+# Cloudflare Pages Environment Variables
+# Copy this to the Cloudflare Pages dashboard under:
+#   Settings > Environment variables > Production / Preview
+#
+# ⚠️  NEVER commit the real values to Git.
+# Set secrets via the Cloudflare dashboard or:
+#   wrangler secret put NEXTAUTH_SECRET
+
+NEXTAUTH_URL=https://your-project.pages.dev
+NEXTAUTH_SECRET=your-secret-here
+
+DISCORD_CLIENT_ID=
+DISCORD_CLIENT_SECRET=
+
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_KEY=
+SUPABASE_URL=https://your-project.supabase.co
+
+RCON_HOST=
+RCON_PORT=
+RCON_PASSWORD=
+
+STEAM_API_KEY=
+BACKEND_URL=
+FRONTEND_URL=

@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+.next/
+.open-next/
+out/
+
+# Environment / secrets — NEVER commit these
+.env
+.env.local
+.env.production
+.env.vercel
+.dev.vars
+
+# Cloudflare / Vercel
+.vercel/
+.wrangler/
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db

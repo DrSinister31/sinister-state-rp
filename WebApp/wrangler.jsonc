@@ -1,0 +1,14 @@
+{
+  // Cloudflare Pages / Workers config for Sinister Park WebApp
+  // Deployed via @opennextjs/cloudflare (OpenNext adapter)
+  "name": "sinister-park-web",
+  "compatibility_date": "2024-09-23",
+  "compatibility_flags": ["nodejs_compat"],
+  "pages_build_output_dir": ".open-next/assets",
+
+  // Environment variables — set secrets via `wrangler secret put` or the
+  // Cloudflare Pages dashboard (Settings > Environment variables)
+  "vars": {
+    "NODE_ENV": "production"
+  }
+}
