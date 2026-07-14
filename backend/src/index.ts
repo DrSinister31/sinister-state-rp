@@ -672,8 +672,8 @@ client.on('interactionCreate', async (interaction) => {
       const val = interaction.options.getNumber('value', true);
       const steamId = await resolveTarget(targetInput);
       if (!steamId) return interaction.followUp(`❌ Could not resolve target: \`${targetInput}\`.`);
-      const res = await runRcon(`setstat ${steamId} ${stat} ${val}`);
-      return interaction.followUp(`RCON: \`setstat ${steamId} ${stat} ${val}\` -> \`${res}\``);
+      const res = await runRcon(`Set ${steamId} ${stat} ${val}`);
+      return interaction.followUp(`RCON: \`Set ${steamId} ${stat} ${val}\` -> \`${res}\``);
     }
 
     // 30. Direct Console Passthrough
